@@ -3,11 +3,11 @@ package {{.PackageName}}
 import "time"
 
 {{ range $j,$item := .ScatteredAPIModel}}
-// {{$item.StructNamePrefix}}Request {{$item.APIStrandardModel.Desc}}
+/* {{$item.StructNamePrefix}}Request {{$item.APIStrandardModel.Desc}} */
 type {{$item.StructNamePrefix}}Request struct {
     {{ range $j,$prop := $item.APIStrandardModel.Request}}
-    /* {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{$prop.Required}}{{$prop.Desc}} */
-    {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    /* {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Required}}{{$prop.Desc}} */
+    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
 
@@ -15,11 +15,11 @@ func (req *{{$item.StructNamePrefix}}Request) GetAPIName() string {
 	return "{{$item.APIStrandardModel.Name}}"
 }
 
-// {{$item.StructNamePrefix}}Response {{$item.APIStrandardModel.Desc}}
+/* {{$item.StructNamePrefix}}Response {{$item.APIStrandardModel.Desc}} */
 type {{$item.StructNamePrefix}}Response struct {
     {{ range $j,$prop := $item.APIStrandardModel.Response}}
-    /* {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{$prop.Level}}{{$prop.Desc}} */
-    {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    /* {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Level}}{{$prop.Desc}} */
+    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
 {{end}}

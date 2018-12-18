@@ -33,6 +33,8 @@ type Prop struct {
 	Type  string `xml:"type"`
 	Level string `xml:"level"`
 	Desc  string `xml:"desc"`
+
+	GoName string `xml:"-"`
 }
 
 //API 淘宝api结构
@@ -49,14 +51,16 @@ type RequestParam struct {
 	Type     string `xml:"type"`
 	Required string `xml:"required"`
 	Desc     string `xml:"desc"`
+	GoName   string `xml:"-"`
 }
 
 //ResponseParam 淘宝api返回结果结构
 type ResponseParam struct {
-	Name  string `xml:"name"`
-	Type  string `xml:"type"`
-	Level string `xml:"level"`
-	Desc  string `xml:"desc"`
+	Name   string `xml:"name"`
+	Type   string `xml:"type"`
+	Level  string `xml:"level"`
+	Desc   string `xml:"desc"`
+	GoName string `xml:"-"`
 }
 
 type ScatteredAPIModel struct {
@@ -177,6 +181,32 @@ func GetMetadata() *metadata {
 	ErrHandler(err)
 	err = ioutil.WriteFile("./ApiMetadata2.xml", writeBytes, 0666)
 	ErrHandler(err)
+
+	for i, item := range metadata.APIS {
+		for j, api := range item.Request {
+			metadata.APIS[i].Request[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			// if api.GoName != api.Name {
+			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
+			// }
+			// if api.GoName == "" {
+			// 	fmt.Println("Empty:" + api.Name)
+			// }
+		}
+		for j, api := range item.Response {
+			metadata.APIS[i].Response[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			// if api.GoName != api.Name {
+			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
+			// }
+			// if api.GoName == "" {
+			// 	fmt.Println("Empty:" + api.Name)
+			// }
+		}
+	}
+	for i, item := range metadata.Structs {
+		for j, prop := range item.Props {
+			metadata.Structs[i].Props[j].GoName = strings.Replace(prop.Name, ".", "_", -1)
+		}
+	}
 	return metadata
 }
 func GetCount(inBytes []byte) ([]byte, int) {

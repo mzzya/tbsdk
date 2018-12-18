@@ -3,7 +3,7 @@ package tbsdk
 import "time"
 
 
-// TaobaoRegionPriceManageRequest 编辑区域价格
+/* TaobaoRegionPriceManageRequest 编辑区域价格 */
 type TaobaoRegionPriceManageRequest struct {
     
     /* is_full optionaltrue:全量, false:增量 */
@@ -24,7 +24,7 @@ func (req *TaobaoRegionPriceManageRequest) GetAPIName() string {
 	return "taobao.region.price.manage"
 }
 
-// TaobaoRegionPriceManageResponse 编辑区域价格
+/* TaobaoRegionPriceManageResponse 编辑区域价格 */
 type TaobaoRegionPriceManageResponse struct {
     
     /* is_success Basicsuccess */
@@ -32,7 +32,7 @@ type TaobaoRegionPriceManageResponse struct {
     
 }
 
-// TaobaoTmcQueueGetRequest 根据appkey和groupName获取消息队列积压情况
+/* TaobaoTmcQueueGetRequest 根据appkey和groupName获取消息队列积压情况 */
 type TaobaoTmcQueueGetRequest struct {
     
     /* group_name requiredTMC组名 */
@@ -44,7 +44,7 @@ func (req *TaobaoTmcQueueGetRequest) GetAPIName() string {
 	return "taobao.tmc.queue.get"
 }
 
-// TaobaoTmcQueueGetResponse 根据appkey和groupName获取消息队列积压情况
+/* TaobaoTmcQueueGetResponse 根据appkey和groupName获取消息队列积压情况 */
 type TaobaoTmcQueueGetResponse struct {
     
     /* datas Object Array队列详细信息 */
@@ -52,7 +52,7 @@ type TaobaoTmcQueueGetResponse struct {
     
 }
 
-// TaobaoWlbWmsReturnOrderNotifyRequest 销售退货通知
+/* TaobaoWlbWmsReturnOrderNotifyRequest 销售退货通知 */
 type TaobaoWlbWmsReturnOrderNotifyRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -115,7 +115,7 @@ func (req *TaobaoWlbWmsReturnOrderNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.return.order.notify"
 }
 
-// TaobaoWlbWmsReturnOrderNotifyResponse 销售退货通知
+/* TaobaoWlbWmsReturnOrderNotifyResponse 销售退货通知 */
 type TaobaoWlbWmsReturnOrderNotifyResponse struct {
     
     /* create_time Basic订单创建时间 */
@@ -135,7 +135,7 @@ type TaobaoWlbWmsReturnOrderNotifyResponse struct {
     
 }
 
-// TaobaoRegionPriceQueryRequest 区域价格查询
+/* TaobaoRegionPriceQueryRequest 区域价格查询 */
 type TaobaoRegionPriceQueryRequest struct {
     
     /* item_id required商品id */
@@ -153,7 +153,7 @@ func (req *TaobaoRegionPriceQueryRequest) GetAPIName() string {
 	return "taobao.region.price.query"
 }
 
-// TaobaoRegionPriceQueryResponse 区域价格查询
+/* TaobaoRegionPriceQueryResponse 区域价格查询 */
 type TaobaoRegionPriceQueryResponse struct {
     
     /* result Objectresult */
@@ -161,7 +161,7 @@ type TaobaoRegionPriceQueryResponse struct {
     
 }
 
-// TaobaoJdsTradeTracesGetRequest 获取聚石塔数据共享的交易全链路信息
+/* TaobaoJdsTradeTracesGetRequest 获取聚石塔数据共享的交易全链路信息 */
 type TaobaoJdsTradeTracesGetRequest struct {
     
     /* return_user_status optional是否返回用户的状态(是否存在) */
@@ -176,7 +176,7 @@ func (req *TaobaoJdsTradeTracesGetRequest) GetAPIName() string {
 	return "taobao.jds.trade.traces.get"
 }
 
-// TaobaoJdsTradeTracesGetResponse 获取聚石塔数据共享的交易全链路信息
+/* TaobaoJdsTradeTracesGetResponse 获取聚石塔数据共享的交易全链路信息 */
 type TaobaoJdsTradeTracesGetResponse struct {
     
     /* traces Object Array跟踪信息列表 */
@@ -187,7 +187,7 @@ type TaobaoJdsTradeTracesGetResponse struct {
     
 }
 
-// TaobaoTmcUserTopicsGetRequest 获取用户开通的topic列表
+/* TaobaoTmcUserTopicsGetRequest 获取用户开通的topic列表 */
 type TaobaoTmcUserTopicsGetRequest struct {
     
     /* nick optional卖家nick */
@@ -199,7 +199,7 @@ func (req *TaobaoTmcUserTopicsGetRequest) GetAPIName() string {
 	return "taobao.tmc.user.topics.get"
 }
 
-// TaobaoTmcUserTopicsGetResponse 获取用户开通的topic列表
+/* TaobaoTmcUserTopicsGetResponse 获取用户开通的topic列表 */
 type TaobaoTmcUserTopicsGetResponse struct {
     
     /* result_code Basic错误码 */
@@ -213,7 +213,7 @@ type TaobaoTmcUserTopicsGetResponse struct {
     
 }
 
-// TaobaoWlbWmsSkuGetRequest 商品信息查询
+/* TaobaoWlbWmsSkuGetRequest 商品信息查询 */
 type TaobaoWlbWmsSkuGetRequest struct {
     
     /* item_code optional菜鸟商品ID,与itemcode必须有一个值不为空 */
@@ -231,7 +231,7 @@ func (req *TaobaoWlbWmsSkuGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.sku.get"
 }
 
-// TaobaoWlbWmsSkuGetResponse 商品信息查询
+/* TaobaoWlbWmsSkuGetResponse 商品信息查询 */
 type TaobaoWlbWmsSkuGetResponse struct {
     
     /* advent_lifecycle Basic保质期预警天数 */
@@ -356,7 +356,7 @@ type TaobaoWlbWmsSkuGetResponse struct {
     
 }
 
-// TaobaoQimenInventoryReportRequest WMS调用奇门的接口,将库存盘点情况回传ERP
+/* TaobaoQimenInventoryReportRequest WMS调用奇门的接口,将库存盘点情况回传ERP */
 type TaobaoQimenInventoryReportRequest struct {
     
     /* adjustType required变动类型：CHECK=盘点 ADJUST=调整 */
@@ -407,7 +407,7 @@ func (req *TaobaoQimenInventoryReportRequest) GetAPIName() string {
 	return "taobao.qimen.inventory.report"
 }
 
-// TaobaoQimenInventoryReportResponse WMS调用奇门的接口,将库存盘点情况回传ERP
+/* TaobaoQimenInventoryReportResponse WMS调用奇门的接口,将库存盘点情况回传ERP */
 type TaobaoQimenInventoryReportResponse struct {
     
     /* code Basic响应码 */
@@ -421,7 +421,7 @@ type TaobaoQimenInventoryReportResponse struct {
     
 }
 
-// TaobaoQimenInventorycheckQueryRequest ERP调用奇门的接口,查询库存盘点情况
+/* TaobaoQimenInventorycheckQueryRequest ERP调用奇门的接口,查询库存盘点情况 */
 type TaobaoQimenInventorycheckQueryRequest struct {
     
     /* checkOrderCode required盘点单编码 */
@@ -451,7 +451,7 @@ func (req *TaobaoQimenInventorycheckQueryRequest) GetAPIName() string {
 	return "taobao.qimen.inventorycheck.query"
 }
 
-// TaobaoQimenInventorycheckQueryResponse ERP调用奇门的接口,查询库存盘点情况
+/* TaobaoQimenInventorycheckQueryResponse ERP调用奇门的接口,查询库存盘点情况 */
 type TaobaoQimenInventorycheckQueryResponse struct {
     
     /* checkOrderCode Basic盘点单编码 */
@@ -489,7 +489,7 @@ type TaobaoQimenInventorycheckQueryResponse struct {
     
 }
 
-// TaobaoQimenItemsSynchronizeRequest ERP调用奇门的接口,批量同步商品信息给WMS
+/* TaobaoQimenItemsSynchronizeRequest ERP调用奇门的接口,批量同步商品信息给WMS */
 type TaobaoQimenItemsSynchronizeRequest struct {
     
     /* actionType required操作类型(两种类型：add|update) */
@@ -513,7 +513,7 @@ func (req *TaobaoQimenItemsSynchronizeRequest) GetAPIName() string {
 	return "taobao.qimen.items.synchronize"
 }
 
-// TaobaoQimenItemsSynchronizeResponse ERP调用奇门的接口,批量同步商品信息给WMS
+/* TaobaoQimenItemsSynchronizeResponse ERP调用奇门的接口,批量同步商品信息给WMS */
 type TaobaoQimenItemsSynchronizeResponse struct {
     
     /* code Basic响应码 */
@@ -530,7 +530,7 @@ type TaobaoQimenItemsSynchronizeResponse struct {
     
 }
 
-// TaobaoQimenWavenumReportRequest WMS调用奇门的接口,该接口用来给ERP或者OMS回传波次号及对应的发货单号，以支持商家货票同行、波次内包裹的处理等需求
+/* TaobaoQimenWavenumReportRequest WMS调用奇门的接口,该接口用来给ERP或者OMS回传波次号及对应的发货单号，以支持商家货票同行、波次内包裹的处理等需求 */
 type TaobaoQimenWavenumReportRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -548,7 +548,7 @@ func (req *TaobaoQimenWavenumReportRequest) GetAPIName() string {
 	return "taobao.qimen.wavenum.report"
 }
 
-// TaobaoQimenWavenumReportResponse WMS调用奇门的接口,该接口用来给ERP或者OMS回传波次号及对应的发货单号，以支持商家货票同行、波次内包裹的处理等需求
+/* TaobaoQimenWavenumReportResponse WMS调用奇门的接口,该接口用来给ERP或者OMS回传波次号及对应的发货单号，以支持商家货票同行、波次内包裹的处理等需求 */
 type TaobaoQimenWavenumReportResponse struct {
     
     /* code Basic响应码 */
@@ -562,7 +562,7 @@ type TaobaoQimenWavenumReportResponse struct {
     
 }
 
-// TaobaoLogisticsOrderCreateRequest 用户调用该接口可以创建物流订单。目前仅支持手工订单的创建，创建完毕后默认自动使用“自己联系”的方式发货并且初始状态为”已发货“。也可以通过可选参数选择是否发货以及何种方式进行发货。
+/* TaobaoLogisticsOrderCreateRequest 用户调用该接口可以创建物流订单。目前仅支持手工订单的创建，创建完毕后默认自动使用“自己联系”的方式发货并且初始状态为”已发货“。也可以通过可选参数选择是否发货以及何种方式进行发货。 */
 type TaobaoLogisticsOrderCreateRequest struct {
     
     /* goods_names required运送的货物名称列表，用|号隔开 */
@@ -605,7 +605,7 @@ func (req *TaobaoLogisticsOrderCreateRequest) GetAPIName() string {
 	return "taobao.logistics.order.create"
 }
 
-// TaobaoLogisticsOrderCreateResponse 用户调用该接口可以创建物流订单。目前仅支持手工订单的创建，创建完毕后默认自动使用“自己联系”的方式发货并且初始状态为”已发货“。也可以通过可选参数选择是否发货以及何种方式进行发货。
+/* TaobaoLogisticsOrderCreateResponse 用户调用该接口可以创建物流订单。目前仅支持手工订单的创建，创建完毕后默认自动使用“自己联系”的方式发货并且初始状态为”已发货“。也可以通过可选参数选择是否发货以及何种方式进行发货。 */
 type TaobaoLogisticsOrderCreateResponse struct {
     
     /* trade_id Basic淘宝物流订单交易号，如返回-1则表示错误。如果在新建订单时传入trade_id,此处会返回此id，如果未传入trade_id，此处会返回淘宝物流分配的交易号码。 */
@@ -613,7 +613,7 @@ type TaobaoLogisticsOrderCreateResponse struct {
     
 }
 
-// TaobaoItempropvaluesGetRequest 获取标准类目属性值
+/* TaobaoItempropvaluesGetRequest 获取标准类目属性值 */
 type TaobaoItempropvaluesGetRequest struct {
     
     /* attr_keys optional属性的Key，支持多条，以“,”分隔 */
@@ -640,7 +640,7 @@ func (req *TaobaoItempropvaluesGetRequest) GetAPIName() string {
 	return "taobao.itempropvalues.get"
 }
 
-// TaobaoItempropvaluesGetResponse 获取标准类目属性值
+/* TaobaoItempropvaluesGetResponse 获取标准类目属性值 */
 type TaobaoItempropvaluesGetResponse struct {
     
     /* last_modified Basic最近修改时间。格式:yyyy-MM-dd HH:mm:ss */
@@ -651,7 +651,7 @@ type TaobaoItempropvaluesGetResponse struct {
     
 }
 
-// Gfq1qp4287ShopexAreaInfoGetRequest 地区编码同步
+/* Gfq1qp4287ShopexAreaInfoGetRequest 地区编码同步 */
 type Gfq1qp4287ShopexAreaInfoGetRequest struct {
     
     /* qimen_body optional请求参数 */
@@ -663,7 +663,7 @@ func (req *Gfq1qp4287ShopexAreaInfoGetRequest) GetAPIName() string {
 	return "gfq1qp4287.shopex.area.info.get"
 }
 
-// Gfq1qp4287ShopexAreaInfoGetResponse 地区编码同步
+/* Gfq1qp4287ShopexAreaInfoGetResponse 地区编码同步 */
 type Gfq1qp4287ShopexAreaInfoGetResponse struct {
     
     /* data Basic返回内容 */
@@ -680,7 +680,7 @@ type Gfq1qp4287ShopexAreaInfoGetResponse struct {
     
 }
 
-// TaobaoTmcMessagesConfirmRequest 确认消费消息的状态
+/* TaobaoTmcMessagesConfirmRequest 确认消费消息的状态 */
 type TaobaoTmcMessagesConfirmRequest struct {
     
     /* f_message_ids optional处理失败的消息ID列表--已废弃，无需传此字段 */
@@ -698,7 +698,7 @@ func (req *TaobaoTmcMessagesConfirmRequest) GetAPIName() string {
 	return "taobao.tmc.messages.confirm"
 }
 
-// TaobaoTmcMessagesConfirmResponse 确认消费消息的状态
+/* TaobaoTmcMessagesConfirmResponse 确认消费消息的状态 */
 type TaobaoTmcMessagesConfirmResponse struct {
     
     /* is_success Basic是否成功 */
@@ -706,7 +706,7 @@ type TaobaoTmcMessagesConfirmResponse struct {
     
 }
 
-// TaobaoTmcMessagesConsumeRequest 消费多条消息。消费时如果没有返回消息，建议做控制，不要一直调api，浪费应用的流量。如对程序做好优化，若没有消息则，sleep 100ms 等。
+/* TaobaoTmcMessagesConsumeRequest 消费多条消息。消费时如果没有返回消息，建议做控制，不要一直调api，浪费应用的流量。如对程序做好优化，若没有消息则，sleep 100ms 等。 */
 type TaobaoTmcMessagesConsumeRequest struct {
     
     /* group_name optional用户分组名称，不传表示消费默认分组，如果应用没有设置用户分组，传入分组名称将会返回错误 */
@@ -721,7 +721,7 @@ func (req *TaobaoTmcMessagesConsumeRequest) GetAPIName() string {
 	return "taobao.tmc.messages.consume"
 }
 
-// TaobaoTmcMessagesConsumeResponse 消费多条消息。消费时如果没有返回消息，建议做控制，不要一直调api，浪费应用的流量。如对程序做好优化，若没有消息则，sleep 100ms 等。
+/* TaobaoTmcMessagesConsumeResponse 消费多条消息。消费时如果没有返回消息，建议做控制，不要一直调api，浪费应用的流量。如对程序做好优化，若没有消息则，sleep 100ms 等。 */
 type TaobaoTmcMessagesConsumeResponse struct {
     
     /* messages Object Array消息列表 */
@@ -729,7 +729,7 @@ type TaobaoTmcMessagesConsumeResponse struct {
     
 }
 
-// TaobaoTmcMessageProduceRequest 发布单条消息
+/* TaobaoTmcMessageProduceRequest 发布单条消息 */
 type TaobaoTmcMessageProduceRequest struct {
     
     /* content required消息内容的JSON表述，必须按照topic的定义来填充 */
@@ -739,19 +739,19 @@ type TaobaoTmcMessageProduceRequest struct {
     ex_content string `json:"ex_content";xml:"ex_content"`
     
     /* media_content optional回传的文件内容，目前仅支持jpg,png,bmp,gif,pdf类型的文件，文件最大1M。只有消息中有byte[]类型的数据时，才需要传此字段; 否则不需要传此字段。 */
-    media_content byte[] `json:"media_content";xml:"media_content"`
+    media_content []byte `json:"media_content";xml:"media_content"`
     
     /* media_content2 optional回传的文件内容，目前仅支持jpg,png,bmp,gif,pdf类型的文件，文件最大1M。只有消息中有byte[]类型的数据时，才需要传此字段; 否则不需要传此字段。具体对应到沙体中的什么值，请参考消息字段说明。 */
-    media_content2 byte[] `json:"media_content2";xml:"media_content2"`
+    media_content2 []byte `json:"media_content2";xml:"media_content2"`
     
     /* media_content3 optional回传的文件内容，目前仅支持jpg,png,bmp,gif,pdf类型的文件，文件最大1M。只有消息中有byte[]类型的数据时，才需要传此字段; 否则不需要传此字段。具体对应到沙体中的什么值，请参考消息字段说明。 */
-    media_content3 byte[] `json:"media_content3";xml:"media_content3"`
+    media_content3 []byte `json:"media_content3";xml:"media_content3"`
     
     /* media_content4 optional回传的文件内容，目前仅支持jpg,png,bmp,gif,pdf类型的文件，文件最大1M。只有消息中有byte[]类型的数据时，才需要传此字段; 否则不需要传此字段。具体对应到沙体中的什么值，请参考消息字段说明。 */
-    media_content4 byte[] `json:"media_content4";xml:"media_content4"`
+    media_content4 []byte `json:"media_content4";xml:"media_content4"`
     
     /* media_content5 optional回传的文件内容，目前仅支持jpg,png,bmp,gif,pdf类型的文件，文件最大1M。只有消息中有byte[]类型的数据时，才需要传此字段; 否则不需要传此字段。具体对应到沙体中的什么值，请参考消息字段说明。 */
-    media_content5 byte[] `json:"media_content5";xml:"media_content5"`
+    media_content5 []byte `json:"media_content5";xml:"media_content5"`
     
     /* target_appkey optional直发消息需要传入目标appkey */
     target_appkey string `json:"target_appkey";xml:"target_appkey"`
@@ -768,7 +768,7 @@ func (req *TaobaoTmcMessageProduceRequest) GetAPIName() string {
 	return "taobao.tmc.message.produce"
 }
 
-// TaobaoTmcMessageProduceResponse 发布单条消息
+/* TaobaoTmcMessageProduceResponse 发布单条消息 */
 type TaobaoTmcMessageProduceResponse struct {
     
     /* is_success Basic是否成功 */
@@ -782,8 +782,8 @@ type TaobaoTmcMessageProduceResponse struct {
     
 }
 
-// TaobaoItemsOnsaleGetRequest 获取当前用户作为卖家的出售中的商品列表，并能根据传入的搜索条件对出售中的商品列表进行过滤 
-只能获得商品的部分信息，商品的详细信息请通过taobao.item.get获取
+/* TaobaoItemsOnsaleGetRequest 获取当前用户作为卖家的出售中的商品列表，并能根据传入的搜索条件对出售中的商品列表进行过滤 
+只能获得商品的部分信息，商品的详细信息请通过taobao.item.get获取 */
 type TaobaoItemsOnsaleGetRequest struct {
     
     /* auction_type optional商品类型：a-拍卖,b-一口价 */
@@ -840,8 +840,8 @@ func (req *TaobaoItemsOnsaleGetRequest) GetAPIName() string {
 	return "taobao.items.onsale.get"
 }
 
-// TaobaoItemsOnsaleGetResponse 获取当前用户作为卖家的出售中的商品列表，并能根据传入的搜索条件对出售中的商品列表进行过滤 
-只能获得商品的部分信息，商品的详细信息请通过taobao.item.get获取
+/* TaobaoItemsOnsaleGetResponse 获取当前用户作为卖家的出售中的商品列表，并能根据传入的搜索条件对出售中的商品列表进行过滤 
+只能获得商品的部分信息，商品的详细信息请通过taobao.item.get获取 */
 type TaobaoItemsOnsaleGetResponse struct {
     
     /* items Object Array搜索到的商品列表，具体字段根据设定的fields决定，不包括desc字段 */
@@ -852,7 +852,7 @@ type TaobaoItemsOnsaleGetResponse struct {
     
 }
 
-// CainiaoCrmOmsRuleSyncRequest 将商家ERP订单处理规则同步到菜鸟CRM系统
+/* CainiaoCrmOmsRuleSyncRequest 将商家ERP订单处理规则同步到菜鸟CRM系统 */
 type CainiaoCrmOmsRuleSyncRequest struct {
     
     /* check_rule_msg optional人工审单规则描述 */
@@ -882,7 +882,7 @@ func (req *CainiaoCrmOmsRuleSyncRequest) GetAPIName() string {
 	return "cainiao.crm.oms.rule.sync"
 }
 
-// CainiaoCrmOmsRuleSyncResponse 将商家ERP订单处理规则同步到菜鸟CRM系统
+/* CainiaoCrmOmsRuleSyncResponse 将商家ERP订单处理规则同步到菜鸟CRM系统 */
 type CainiaoCrmOmsRuleSyncResponse struct {
     
     /* wl_error_code BasicerrorCode */
@@ -896,11 +896,11 @@ type CainiaoCrmOmsRuleSyncResponse struct {
     
 }
 
-// TaobaoItemUpdateRequest 根据传入的num_iid更新对应的商品的数据 
+/* TaobaoItemUpdateRequest 根据传入的num_iid更新对应的商品的数据 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 商品的属性和sku的属性有包含的关系，商品的价格要位于sku的价格区间之中（例如，sku价格有5元、10元两种，那么商品的价格就需要大于等于5元，小于等于10元，否则更新商品会失败） 
 商品的类目和商品的价格、sku的价格都有一定的相关性（具体的关系要通过类目属性查询接口获得） 
-当关键属性值更新为“其他”的时候，需要输入input_pids和input_str商品才能更新成功。该接口不支持产品属性修改。
+当关键属性值更新为“其他”的时候，需要输入input_pids和input_str商品才能更新成功。该接口不支持产品属性修改。 */
 type TaobaoItemUpdateRequest struct {
     
     /* after_sale_id optional售后说明模板id */
@@ -936,14 +936,14 @@ type TaobaoItemUpdateRequest struct {
     /* cpv_memo optional针对当前商品的标准属性值的补充说明，让买家更加了解商品信息减少交易纠纷 */
     cpv_memo string `json:"cpv_memo";xml:"cpv_memo"`
     
-    /* delivery_time.delivery_time optional商品级别设置的发货时间。设置了商品级别的发货时间，相对发货时间，则填写相对发货时间的天数（大于3）；绝对发货时间，则填写yyyy-mm-dd格式，如2013-11-11 */
-    delivery_time.delivery_time string `json:"delivery_time.delivery_time";xml:"delivery_time.delivery_time"`
+    /* delivery_time_delivery_time optional商品级别设置的发货时间。设置了商品级别的发货时间，相对发货时间，则填写相对发货时间的天数（大于3）；绝对发货时间，则填写yyyy-mm-dd格式，如2013-11-11 */
+    delivery_time_delivery_time string `json:"delivery_time.delivery_time";xml:"delivery_time.delivery_time"`
     
-    /* delivery_time.delivery_time_type optional发货时间类型：绝对发货时间或者相对发货时间 */
-    delivery_time.delivery_time_type string `json:"delivery_time.delivery_time_type";xml:"delivery_time.delivery_time_type"`
+    /* delivery_time_delivery_time_type optional发货时间类型：绝对发货时间或者相对发货时间 */
+    delivery_time_delivery_time_type string `json:"delivery_time.delivery_time_type";xml:"delivery_time.delivery_time_type"`
     
-    /* delivery_time.need_delivery_time optional设置是否使用发货时间，商品级别，sku级别 */
-    delivery_time.need_delivery_time string `json:"delivery_time.need_delivery_time";xml:"delivery_time.need_delivery_time"`
+    /* delivery_time_need_delivery_time optional设置是否使用发货时间，商品级别，sku级别 */
+    delivery_time_need_delivery_time string `json:"delivery_time.need_delivery_time";xml:"delivery_time.need_delivery_time"`
     
     /* desc optional商品描述. 字数要大于5个字符，小于25000个字符 ，受违禁词控制 */
     desc string `json:"desc";xml:"desc"`
@@ -963,50 +963,50 @@ type TaobaoItemUpdateRequest struct {
     /* features optional宝贝特征值，格式为：【key1:value1;key2:value2;key3:value3;】，key和value用【:】分隔，key&value之间用【;】分隔，只有在Top支持的特征值才能保存到宝贝上，目前支持的Key列表为：mysize_tp */
     features string `json:"features";xml:"features"`
     
-    /* food_security.contact optional厂家联系方式 */
-    food_security.contact string `json:"food_security.contact";xml:"food_security.contact"`
+    /* food_security_contact optional厂家联系方式 */
+    food_security_contact string `json:"food_security.contact";xml:"food_security.contact"`
     
-    /* food_security.design_code optional产品标准号 */
-    food_security.design_code string `json:"food_security.design_code";xml:"food_security.design_code"`
+    /* food_security_design_code optional产品标准号 */
+    food_security_design_code string `json:"food_security.design_code";xml:"food_security.design_code"`
     
-    /* food_security.factory optional厂名 */
-    food_security.factory string `json:"food_security.factory";xml:"food_security.factory"`
+    /* food_security_factory optional厂名 */
+    food_security_factory string `json:"food_security.factory";xml:"food_security.factory"`
     
-    /* food_security.factory_site optional厂址 */
-    food_security.factory_site string `json:"food_security.factory_site";xml:"food_security.factory_site"`
+    /* food_security_factory_site optional厂址 */
+    food_security_factory_site string `json:"food_security.factory_site";xml:"food_security.factory_site"`
     
-    /* food_security.food_additive optional食品添加剂 */
-    food_security.food_additive string `json:"food_security.food_additive";xml:"food_security.food_additive"`
+    /* food_security_food_additive optional食品添加剂 */
+    food_security_food_additive string `json:"food_security.food_additive";xml:"food_security.food_additive"`
     
-    /* food_security.health_product_no optional健字号，保健品/膳食营养补充剂 这个类目下特有的信息，此类目下无需填写生产许可证编号（QS），如果填写了生产许可证编号（QS）将被忽略不保存；保存宝贝时，标题前会自动加上健字号产品名称一起作为宝贝标题； */
-    food_security.health_product_no string `json:"food_security.health_product_no";xml:"food_security.health_product_no"`
+    /* food_security_health_product_no optional健字号，保健品/膳食营养补充剂 这个类目下特有的信息，此类目下无需填写生产许可证编号（QS），如果填写了生产许可证编号（QS）将被忽略不保存；保存宝贝时，标题前会自动加上健字号产品名称一起作为宝贝标题； */
+    food_security_health_product_no string `json:"food_security.health_product_no";xml:"food_security.health_product_no"`
     
-    /* food_security.mix optional配料表 */
-    food_security.mix string `json:"food_security.mix";xml:"food_security.mix"`
+    /* food_security_mix optional配料表 */
+    food_security_mix string `json:"food_security.mix";xml:"food_security.mix"`
     
-    /* food_security.period optional保质期 */
-    food_security.period string `json:"food_security.period";xml:"food_security.period"`
+    /* food_security_period optional保质期 */
+    food_security_period string `json:"food_security.period";xml:"food_security.period"`
     
-    /* food_security.plan_storage optional储藏方法 */
-    food_security.plan_storage string `json:"food_security.plan_storage";xml:"food_security.plan_storage"`
+    /* food_security_plan_storage optional储藏方法 */
+    food_security_plan_storage string `json:"food_security.plan_storage";xml:"food_security.plan_storage"`
     
-    /* food_security.prd_license_no optional生产许可证号 */
-    food_security.prd_license_no string `json:"food_security.prd_license_no";xml:"food_security.prd_license_no"`
+    /* food_security_prd_license_no optional生产许可证号 */
+    food_security_prd_license_no string `json:"food_security.prd_license_no";xml:"food_security.prd_license_no"`
     
-    /* food_security.product_date_end optional生产结束日期,格式必须为yyyy-MM-dd */
-    food_security.product_date_end string `json:"food_security.product_date_end";xml:"food_security.product_date_end"`
+    /* food_security_product_date_end optional生产结束日期,格式必须为yyyy-MM-dd */
+    food_security_product_date_end string `json:"food_security.product_date_end";xml:"food_security.product_date_end"`
     
-    /* food_security.product_date_start optional生产开始日期，格式必须为yyyy-MM-dd */
-    food_security.product_date_start string `json:"food_security.product_date_start";xml:"food_security.product_date_start"`
+    /* food_security_product_date_start optional生产开始日期，格式必须为yyyy-MM-dd */
+    food_security_product_date_start string `json:"food_security.product_date_start";xml:"food_security.product_date_start"`
     
-    /* food_security.stock_date_end optional进货结束日期，要在生产日期之后，格式必须为yyyy-MM-dd */
-    food_security.stock_date_end string `json:"food_security.stock_date_end";xml:"food_security.stock_date_end"`
+    /* food_security_stock_date_end optional进货结束日期，要在生产日期之后，格式必须为yyyy-MM-dd */
+    food_security_stock_date_end string `json:"food_security.stock_date_end";xml:"food_security.stock_date_end"`
     
-    /* food_security.stock_date_start optional进货开始日期，要在生产日期之后，格式必须为yyyy-MM-dd */
-    food_security.stock_date_start string `json:"food_security.stock_date_start";xml:"food_security.stock_date_start"`
+    /* food_security_stock_date_start optional进货开始日期，要在生产日期之后，格式必须为yyyy-MM-dd */
+    food_security_stock_date_start string `json:"food_security.stock_date_start";xml:"food_security.stock_date_start"`
     
-    /* food_security.supplier optional供货商 */
-    food_security.supplier string `json:"food_security.supplier";xml:"food_security.supplier"`
+    /* food_security_supplier optional供货商 */
+    food_security_supplier string `json:"food_security.supplier";xml:"food_security.supplier"`
     
     /* freight_payer optional运费承担方式。运费承担方式。可选值:seller（卖家承担）,buyer(买家承担); */
     freight_payer string `json:"freight_payer";xml:"freight_payer"`
@@ -1039,7 +1039,7 @@ type TaobaoItemUpdateRequest struct {
     ignorewarning string `json:"ignorewarning";xml:"ignorewarning"`
     
     /* image optional商品图片。类型:JPG,GIF;最大长度:3M */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* increment optional加价(降价)幅度。如果为0，代表系统代理幅度。对于增价拍和荷兰拍来说是加价幅度，对于降价拍来说是降价幅度。 */
     increment Price `json:"increment";xml:"increment"`
@@ -1092,56 +1092,56 @@ type TaobaoItemUpdateRequest struct {
     /* list_time optional上架时间。大于当前时间则宝贝会下架进入定时上架的宝贝中。 */
     list_time time.Time `json:"list_time";xml:"list_time"`
     
-    /* locality_life.choose_logis optional编辑电子凭证宝贝时候表示是否使用邮寄0: 代表不使用邮寄；1：代表使用邮寄；如果不设置这个值，代表不使用邮寄 */
-    locality_life.choose_logis string `json:"locality_life.choose_logis";xml:"locality_life.choose_logis"`
+    /* locality_life_choose_logis optional编辑电子凭证宝贝时候表示是否使用邮寄0: 代表不使用邮寄；1：代表使用邮寄；如果不设置这个值，代表不使用邮寄 */
+    locality_life_choose_logis string `json:"locality_life.choose_logis";xml:"locality_life.choose_logis"`
     
-    /* locality_life.eticket optional电子凭证业务属性，数据字典是: 1、is_card:1 (暂时不用) 2、consume_way:4 （1 串码 ，4 身份证）3、consume_midmnick ：(核销放行账号:用户id-用户名，支持多个，用逗号分隔,例如 1234-测试账号35,1345-测试账号56）4、market:eticket (电子凭证商品标记) 5、has_pos:1 (1 表示商品配置线下门店，在detail上进行展示 ，没有或者其他值只不展示)格式是: k1:v2;k2:v2;........ 如：has_pos:1;market:eticket;consume_midmnick:901409638-OPPO;consume_way:4 */
-    locality_life.eticket string `json:"locality_life.eticket";xml:"locality_life.eticket"`
+    /* locality_life_eticket optional电子凭证业务属性，数据字典是: 1、is_card:1 (暂时不用) 2、consume_way:4 （1 串码 ，4 身份证）3、consume_midmnick ：(核销放行账号:用户id-用户名，支持多个，用逗号分隔,例如 1234-测试账号35,1345-测试账号56）4、market:eticket (电子凭证商品标记) 5、has_pos:1 (1 表示商品配置线下门店，在detail上进行展示 ，没有或者其他值只不展示)格式是: k1:v2;k2:v2;........ 如：has_pos:1;market:eticket;consume_midmnick:901409638-OPPO;consume_way:4 */
+    locality_life_eticket string `json:"locality_life.eticket";xml:"locality_life.eticket"`
     
-    /* locality_life.expirydate optional本地生活电子交易凭证业务，目前此字段只涉及到的信息为有效期;如果有效期为起止日期类型，此值为2012-08-06,2012-08-16如果有效期为【购买成功日 至】类型则格式为2012-08-16如果有效期为天数类型则格式为15 */
-    locality_life.expirydate string `json:"locality_life.expirydate";xml:"locality_life.expirydate"`
+    /* locality_life_expirydate optional本地生活电子交易凭证业务，目前此字段只涉及到的信息为有效期;如果有效期为起止日期类型，此值为2012-08-06,2012-08-16如果有效期为【购买成功日 至】类型则格式为2012-08-16如果有效期为天数类型则格式为15 */
+    locality_life_expirydate string `json:"locality_life.expirydate";xml:"locality_life.expirydate"`
     
-    /* locality_life.merchant optional码商信息，格式为 码商id:nick */
-    locality_life.merchant string `json:"locality_life.merchant";xml:"locality_life.merchant"`
+    /* locality_life_merchant optional码商信息，格式为 码商id:nick */
+    locality_life_merchant string `json:"locality_life.merchant";xml:"locality_life.merchant"`
     
-    /* locality_life.network_id optional网点ID,在参数empty_fields里设置locality_life.network_id可删除网点ID */
-    locality_life.network_id string `json:"locality_life.network_id";xml:"locality_life.network_id"`
+    /* locality_life_network_id optional网点ID,在参数empty_fields里设置locality_life.network_id可删除网点ID */
+    locality_life_network_id string `json:"locality_life.network_id";xml:"locality_life.network_id"`
     
-    /* locality_life.obs optional预约门店是否支持门店自提,1:是 */
-    locality_life.obs string `json:"locality_life.obs";xml:"locality_life.obs"`
+    /* locality_life_obs optional预约门店是否支持门店自提,1:是 */
+    locality_life_obs string `json:"locality_life.obs";xml:"locality_life.obs"`
     
-    /* locality_life.onsale_auto_refund_ratio optional电子凭证售中自动退款比例，百分比%前的数字，介于1-100之间的整数 */
-    locality_life.onsale_auto_refund_ratio int64 `json:"locality_life.onsale_auto_refund_ratio";xml:"locality_life.onsale_auto_refund_ratio"`
+    /* locality_life_onsale_auto_refund_ratio optional电子凭证售中自动退款比例，百分比%前的数字，介于1-100之间的整数 */
+    locality_life_onsale_auto_refund_ratio int64 `json:"locality_life.onsale_auto_refund_ratio";xml:"locality_life.onsale_auto_refund_ratio"`
     
-    /* locality_life.packageid optional新版电子凭证包id */
-    locality_life.packageid string `json:"locality_life.packageid";xml:"locality_life.packageid"`
+    /* locality_life_packageid optional新版电子凭证包id */
+    locality_life_packageid string `json:"locality_life.packageid";xml:"locality_life.packageid"`
     
-    /* locality_life.refund_ratio optional退款比例，百分比%前的数字,1-100的正整数值; 在参数empty_fields里设置locality_life.refund_ratio可删除退款比例 */
-    locality_life.refund_ratio int64 `json:"locality_life.refund_ratio";xml:"locality_life.refund_ratio"`
+    /* locality_life_refund_ratio optional退款比例，百分比%前的数字,1-100的正整数值; 在参数empty_fields里设置locality_life.refund_ratio可删除退款比例 */
+    locality_life_refund_ratio int64 `json:"locality_life.refund_ratio";xml:"locality_life.refund_ratio"`
     
-    /* locality_life.refundmafee optional退款码费承担方。发布电子凭证宝贝的时候会增加“退款码费承担方”配置项，可选填：(1)s（卖家承担） (2)b(买家承担) */
-    locality_life.refundmafee string `json:"locality_life.refundmafee";xml:"locality_life.refundmafee"`
+    /* locality_life_refundmafee optional退款码费承担方。发布电子凭证宝贝的时候会增加“退款码费承担方”配置项，可选填：(1)s（卖家承担） (2)b(买家承担) */
+    locality_life_refundmafee string `json:"locality_life.refundmafee";xml:"locality_life.refundmafee"`
     
-    /* locality_life.verification optional核销打款,1代表核销打款 0代表非核销打款; 在参数empty_fields里设置locality_life.verification可删除核销打款 */
-    locality_life.verification string `json:"locality_life.verification";xml:"locality_life.verification"`
+    /* locality_life_verification optional核销打款,1代表核销打款 0代表非核销打款; 在参数empty_fields里设置locality_life.verification可删除核销打款 */
+    locality_life_verification string `json:"locality_life.verification";xml:"locality_life.verification"`
     
-    /* locality_life.version optional电子凭证版本 新版电子凭证值:1 */
-    locality_life.version string `json:"locality_life.version";xml:"locality_life.version"`
+    /* locality_life_version optional电子凭证版本 新版电子凭证值:1 */
+    locality_life_version string `json:"locality_life.version";xml:"locality_life.version"`
     
-    /* location.city optional所在地城市。如杭州 */
-    location.city string `json:"location.city";xml:"location.city"`
+    /* location_city optional所在地城市。如杭州 */
+    location_city string `json:"location.city";xml:"location.city"`
     
-    /* location.state optional所在地省份。如浙江 */
-    location.state string `json:"location.state";xml:"location.state"`
+    /* location_state optional所在地省份。如浙江 */
+    location_state string `json:"location.state";xml:"location.state"`
     
-    /* ms_payment.price optional订金 */
-    ms_payment.price string `json:"ms_payment.price";xml:"ms_payment.price"`
+    /* ms_payment_price optional订金 */
+    ms_payment_price string `json:"ms_payment.price";xml:"ms_payment.price"`
     
-    /* ms_payment.reference_price optional参考价 */
-    ms_payment.reference_price string `json:"ms_payment.reference_price";xml:"ms_payment.reference_price"`
+    /* ms_payment_reference_price optional参考价 */
+    ms_payment_reference_price string `json:"ms_payment.reference_price";xml:"ms_payment.reference_price"`
     
-    /* ms_payment.voucher_price optional尾款可抵扣金额 */
-    ms_payment.voucher_price string `json:"ms_payment.voucher_price";xml:"ms_payment.voucher_price"`
+    /* ms_payment_voucher_price optional尾款可抵扣金额 */
+    ms_payment_voucher_price string `json:"ms_payment.voucher_price";xml:"ms_payment.voucher_price"`
     
     /* newprepay optional该宝贝是否支持【7天无理由退货】，卖家选择的值只是一个因素，最终以类目和选择的属性条件来确定是否支持7天。填入字符0，表示不支持；未填写或填人字符1，表示支持7天无理由退货；<br>注意：使用该API修改商品其它属性如标题title时，如需保持商品不支持7天无理由退货状态，该字段需传入0 。 */
     newprepay string `json:"newprepay";xml:"newprepay"`
@@ -1158,23 +1158,23 @@ type TaobaoItemUpdateRequest struct {
     /* outer_id optional商家编码 */
     outer_id string `json:"outer_id";xml:"outer_id"`
     
-    /* paimai_info.deposit optional拍卖宝贝的保证金。对于增价拍和荷兰拍来说保证金有两种模式：淘宝默认模式（首次出价金额的10%），自定义固定保证金（固定冻结金额只能输入不超过30万的正整数），并且保证金只冻结1次。对于降价拍来说保证金只有淘宝默认的（竞拍价格的10% * 竞拍数量），并且每次出价都需要冻结保证金。对于拍卖宝贝来说，保证金是必须的，但是默认使用淘宝默认保证金模式，只有用户需要使用自定义固定保证金的时候才需要使用到这个参数。如果该参数不传或传入0则代表使用默认。 */
-    paimai_info.deposit int64 `json:"paimai_info.deposit";xml:"paimai_info.deposit"`
+    /* paimai_info_deposit optional拍卖宝贝的保证金。对于增价拍和荷兰拍来说保证金有两种模式：淘宝默认模式（首次出价金额的10%），自定义固定保证金（固定冻结金额只能输入不超过30万的正整数），并且保证金只冻结1次。对于降价拍来说保证金只有淘宝默认的（竞拍价格的10% * 竞拍数量），并且每次出价都需要冻结保证金。对于拍卖宝贝来说，保证金是必须的，但是默认使用淘宝默认保证金模式，只有用户需要使用自定义固定保证金的时候才需要使用到这个参数。如果该参数不传或传入0则代表使用默认。 */
+    paimai_info_deposit int64 `json:"paimai_info.deposit";xml:"paimai_info.deposit"`
     
-    /* paimai_info.interval optional降价拍宝贝的降价周期(分钟)。降价拍宝贝的价格每隔paimai_info.interval时间会下降一次increment。 */
-    paimai_info.interval int64 `json:"paimai_info.interval";xml:"paimai_info.interval"`
+    /* paimai_info_interval optional降价拍宝贝的降价周期(分钟)。降价拍宝贝的价格每隔paimai_info.interval时间会下降一次increment。 */
+    paimai_info_interval int64 `json:"paimai_info.interval";xml:"paimai_info.interval"`
     
-    /* paimai_info.mode optional拍卖商品选择的拍卖类型，拍卖类型包括三种：增价拍(1)，荷兰拍(2)和降价拍(3)。 */
-    paimai_info.mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
+    /* paimai_info_mode optional拍卖商品选择的拍卖类型，拍卖类型包括三种：增价拍(1)，荷兰拍(2)和降价拍(3)。 */
+    paimai_info_mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
     
-    /* paimai_info.reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
-    paimai_info.reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
+    /* paimai_info_reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
+    paimai_info_reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
     
-    /* paimai_info.valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
-    paimai_info.valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
+    /* paimai_info_valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
+    paimai_info_valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
     
-    /* paimai_info.valid_minute optional自定义销售周期的分钟数。拍卖宝贝可以自定义销售周期，这里是指定销售周期的分钟数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
-    paimai_info.valid_minute int64 `json:"paimai_info.valid_minute";xml:"paimai_info.valid_minute"`
+    /* paimai_info_valid_minute optional自定义销售周期的分钟数。拍卖宝贝可以自定义销售周期，这里是指定销售周期的分钟数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
+    paimai_info_valid_minute int64 `json:"paimai_info.valid_minute";xml:"paimai_info.valid_minute"`
     
     /* pic_path optional商品主图需要关联的图片空间的相对url。这个url所对应的图片必须要属于当前用户。pic_path和image只需要传入一个,如果两个都传，默认选择pic_path */
     pic_path string `json:"pic_path";xml:"pic_path"`
@@ -1278,11 +1278,11 @@ func (req *TaobaoItemUpdateRequest) GetAPIName() string {
 	return "taobao.item.update"
 }
 
-// TaobaoItemUpdateResponse 根据传入的num_iid更新对应的商品的数据 
+/* TaobaoItemUpdateResponse 根据传入的num_iid更新对应的商品的数据 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 商品的属性和sku的属性有包含的关系，商品的价格要位于sku的价格区间之中（例如，sku价格有5元、10元两种，那么商品的价格就需要大于等于5元，小于等于10元，否则更新商品会失败） 
 商品的类目和商品的价格、sku的价格都有一定的相关性（具体的关系要通过类目属性查询接口获得） 
-当关键属性值更新为“其他”的时候，需要输入input_pids和input_str商品才能更新成功。该接口不支持产品属性修改。
+当关键属性值更新为“其他”的时候，需要输入input_pids和input_str商品才能更新成功。该接口不支持产品属性修改。 */
 type TaobaoItemUpdateResponse struct {
     
     /* item Object商品结构里的num_iid，modified */
@@ -1290,7 +1290,7 @@ type TaobaoItemUpdateResponse struct {
     
 }
 
-// TaobaoTmcUserCancelRequest 取消用户的消息服务
+/* TaobaoTmcUserCancelRequest 取消用户的消息服务 */
 type TaobaoTmcUserCancelRequest struct {
     
     /* nick required用户昵称 */
@@ -1305,7 +1305,7 @@ func (req *TaobaoTmcUserCancelRequest) GetAPIName() string {
 	return "taobao.tmc.user.cancel"
 }
 
-// TaobaoTmcUserCancelResponse 取消用户的消息服务
+/* TaobaoTmcUserCancelResponse 取消用户的消息服务 */
 type TaobaoTmcUserCancelResponse struct {
     
     /* is_success Basic是否成功,如果为false并且没有错误码，表示删除的用户不存在。 */
@@ -1313,7 +1313,7 @@ type TaobaoTmcUserCancelResponse struct {
     
 }
 
-// TaobaoNextoneLogisticsWarehouseUpdateRequest 商家上传退货入仓状态给ag
+/* TaobaoNextoneLogisticsWarehouseUpdateRequest 商家上传退货入仓状态给ag */
 type TaobaoNextoneLogisticsWarehouseUpdateRequest struct {
     
     /* refund_id required退款编号 */
@@ -1328,7 +1328,7 @@ func (req *TaobaoNextoneLogisticsWarehouseUpdateRequest) GetAPIName() string {
 	return "taobao.nextone.logistics.warehouse.update"
 }
 
-// TaobaoNextoneLogisticsWarehouseUpdateResponse 商家上传退货入仓状态给ag
+/* TaobaoNextoneLogisticsWarehouseUpdateResponse 商家上传退货入仓状态给ag */
 type TaobaoNextoneLogisticsWarehouseUpdateResponse struct {
     
     /* err_code BasicerrorCode */
@@ -1345,18 +1345,18 @@ type TaobaoNextoneLogisticsWarehouseUpdateResponse struct {
     
 }
 
-// TaobaoItemImgUploadRequest 添加一张商品图片到num_iid指定的商品中 
+/* TaobaoItemImgUploadRequest 添加一张商品图片到num_iid指定的商品中 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 如果更新图片需要设置itemimg_id，且该itemimg_id的图片记录需要属于传入的num_iid对应的商品。如果新增图片则不用设置 。
 使用taobao.item.seller.get中返回的item_imgs字段获取图片id。
-商品图片有数量和大小上的限制，根据卖家享有的服务（如：卖家订购了多图服务等），商品图片数量限制不同。
+商品图片有数量和大小上的限制，根据卖家享有的服务（如：卖家订购了多图服务等），商品图片数量限制不同。 */
 type TaobaoItemImgUploadRequest struct {
     
     /* id optional商品图片id(如果是更新图片，则需要传该参数) */
     id int64 `json:"id";xml:"id"`
     
     /* image optional商品图片内容类型:JPG,GIF;最大:3M 。支持的文件类型：gif,jpg,jpeg,png */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* is_major optional是否将该图片设为主图,可选值:true,false;默认值:false(非主图) */
     is_major bool `json:"is_major";xml:"is_major"`
@@ -1376,11 +1376,11 @@ func (req *TaobaoItemImgUploadRequest) GetAPIName() string {
 	return "taobao.item.img.upload"
 }
 
-// TaobaoItemImgUploadResponse 添加一张商品图片到num_iid指定的商品中 
+/* TaobaoItemImgUploadResponse 添加一张商品图片到num_iid指定的商品中 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 如果更新图片需要设置itemimg_id，且该itemimg_id的图片记录需要属于传入的num_iid对应的商品。如果新增图片则不用设置 。
 使用taobao.item.seller.get中返回的item_imgs字段获取图片id。
-商品图片有数量和大小上的限制，根据卖家享有的服务（如：卖家订购了多图服务等），商品图片数量限制不同。
+商品图片有数量和大小上的限制，根据卖家享有的服务（如：卖家订购了多图服务等），商品图片数量限制不同。 */
 type TaobaoItemImgUploadResponse struct {
     
     /* item_img Object商品图片结构 */
@@ -1388,7 +1388,7 @@ type TaobaoItemImgUploadResponse struct {
     
 }
 
-// TaobaoTmcUserPermitRequest 为已授权的用户开通消息服务
+/* TaobaoTmcUserPermitRequest 为已授权的用户开通消息服务 */
 type TaobaoTmcUserPermitRequest struct {
     
     /* topics optional消息主题列表，用半角逗号分隔。当用户订阅的topic是应用订阅的子集时才需要设置，不设置表示继承应用所订阅的所有topic，一般情况建议不要设置。 */
@@ -1400,7 +1400,7 @@ func (req *TaobaoTmcUserPermitRequest) GetAPIName() string {
 	return "taobao.tmc.user.permit"
 }
 
-// TaobaoTmcUserPermitResponse 为已授权的用户开通消息服务
+/* TaobaoTmcUserPermitResponse 为已授权的用户开通消息服务 */
 type TaobaoTmcUserPermitResponse struct {
     
     /* is_success Basic是否成功 */
@@ -1408,7 +1408,7 @@ type TaobaoTmcUserPermitResponse struct {
     
 }
 
-// TmallChannelProductsGetRequest 查询供应商的产品数据。 
+/* TmallChannelProductsGetRequest 查询供应商的产品数据。 
 
 * 入参传入pids将优先查询，即只按这个条件查询。 
 *入参传入sku_number将优先查询(没有传入pids)，即只按这个条件查询(最多显示50条) 
@@ -1416,7 +1416,7 @@ type TaobaoTmcUserPermitResponse struct {
 * 入参fields传入images将查询多图数据，不传只返回主图数据。 
 * 入参fields仅对传入pids生效（只有按ID查询时，才能查询额外的数据） 
 * 查询结果按照产品发布时间倒序，即时间近的数据在前。
-* 传入channel 渠道，会只返回相应渠道的产品
+* 传入channel 渠道，会只返回相应渠道的产品 */
 type TmallChannelProductsGetRequest struct {
     
     /* top_query_product_d_o optionaltop_query_product_d_o */
@@ -1428,7 +1428,7 @@ func (req *TmallChannelProductsGetRequest) GetAPIName() string {
 	return "tmall.channel.products.get"
 }
 
-// TmallChannelProductsGetResponse 查询供应商的产品数据。 
+/* TmallChannelProductsGetResponse 查询供应商的产品数据。 
 
 * 入参传入pids将优先查询，即只按这个条件查询。 
 *入参传入sku_number将优先查询(没有传入pids)，即只按这个条件查询(最多显示50条) 
@@ -1436,7 +1436,7 @@ func (req *TmallChannelProductsGetRequest) GetAPIName() string {
 * 入参fields传入images将查询多图数据，不传只返回主图数据。 
 * 入参fields仅对传入pids生效（只有按ID查询时，才能查询额外的数据） 
 * 查询结果按照产品发布时间倒序，即时间近的数据在前。
-* 传入channel 渠道，会只返回相应渠道的产品
+* 传入channel 渠道，会只返回相应渠道的产品 */
 type TmallChannelProductsGetResponse struct {
     
     /* products Object Array产品对象记录集 */
@@ -1447,12 +1447,12 @@ type TmallChannelProductsGetResponse struct {
     
 }
 
-// TaobaoItemAddRequest 此接口用于新增一个商品 
+/* TaobaoItemAddRequest 此接口用于新增一个商品 
 商品所属的卖家是当前会话的用户 
 商品的属性和sku的属性有包含的关系，商品的价格要位于sku的价格区间之中（例如，sku价格有5元、10元两种，那么商品的价格就需要大于等于5元，小于等于10元，否则新增商品会失败） 
 商品的类目和商品的价格、sku的价格都有一定的相关性（具体的关系要通过类目属性查询接口获得） 
 商品的运费承担方式和邮费设置有相关性，卖家承担运费不用设置邮费，买家承担运费需要设置邮费 
-当关键属性值选择了“其他”的时候，需要输入input_pids和input_str商品才能添加成功。
+当关键属性值选择了“其他”的时候，需要输入input_pids和input_str商品才能添加成功。 */
 type TaobaoItemAddRequest struct {
     
     /* after_sale_id optional售后说明模板id */
@@ -1491,14 +1491,14 @@ type TaobaoItemAddRequest struct {
     /* custom_made_type_id optional定制工具Id如果支持定制市场，这个值不填写，就用之前的定制工具Id，之前的定制工具Id没有值就默认为-1 */
     custom_made_type_id string `json:"custom_made_type_id";xml:"custom_made_type_id"`
     
-    /* delivery_time.delivery_time optional商品级别设置的发货时间。设置了商品级别的发货时间，相对发货时间，则填写相对发货时间的天数（大于3）；绝对发货时间，则填写yyyy-mm-dd格式，如2013-11-11 */
-    delivery_time.delivery_time string `json:"delivery_time.delivery_time";xml:"delivery_time.delivery_time"`
+    /* delivery_time_delivery_time optional商品级别设置的发货时间。设置了商品级别的发货时间，相对发货时间，则填写相对发货时间的天数（大于3）；绝对发货时间，则填写yyyy-mm-dd格式，如2013-11-11 */
+    delivery_time_delivery_time string `json:"delivery_time.delivery_time";xml:"delivery_time.delivery_time"`
     
-    /* delivery_time.delivery_time_type optional发货时间类型：绝对发货时间或者相对发货时间 */
-    delivery_time.delivery_time_type string `json:"delivery_time.delivery_time_type";xml:"delivery_time.delivery_time_type"`
+    /* delivery_time_delivery_time_type optional发货时间类型：绝对发货时间或者相对发货时间 */
+    delivery_time_delivery_time_type string `json:"delivery_time.delivery_time_type";xml:"delivery_time.delivery_time_type"`
     
-    /* delivery_time.need_delivery_time optional设置是否使用发货时间，商品级别，sku级别 */
-    delivery_time.need_delivery_time string `json:"delivery_time.need_delivery_time";xml:"delivery_time.need_delivery_time"`
+    /* delivery_time_need_delivery_time optional设置是否使用发货时间，商品级别，sku级别 */
+    delivery_time_need_delivery_time string `json:"delivery_time.need_delivery_time";xml:"delivery_time.need_delivery_time"`
     
     /* desc required宝贝描述。字数要大于5个字符，小于25000个字符，受违禁词控制 */
     desc string `json:"desc";xml:"desc"`
@@ -1515,50 +1515,50 @@ type TaobaoItemAddRequest struct {
     /* features optional宝贝特征值，格式为：【key1:value1;key2:value2;key3:value3;】，key和value用【:】分隔，key&value之间用【;】分隔，只有在Top支持的特征值才能保存到宝贝上，目前支持的Key列表为：mysize_tp */
     features string `json:"features";xml:"features"`
     
-    /* food_security.contact optional厂家联系方式 */
-    food_security.contact string `json:"food_security.contact";xml:"food_security.contact"`
+    /* food_security_contact optional厂家联系方式 */
+    food_security_contact string `json:"food_security.contact";xml:"food_security.contact"`
     
-    /* food_security.design_code optional产品标准号 */
-    food_security.design_code string `json:"food_security.design_code";xml:"food_security.design_code"`
+    /* food_security_design_code optional产品标准号 */
+    food_security_design_code string `json:"food_security.design_code";xml:"food_security.design_code"`
     
-    /* food_security.factory optional厂名 */
-    food_security.factory string `json:"food_security.factory";xml:"food_security.factory"`
+    /* food_security_factory optional厂名 */
+    food_security_factory string `json:"food_security.factory";xml:"food_security.factory"`
     
-    /* food_security.factory_site optional厂址 */
-    food_security.factory_site string `json:"food_security.factory_site";xml:"food_security.factory_site"`
+    /* food_security_factory_site optional厂址 */
+    food_security_factory_site string `json:"food_security.factory_site";xml:"food_security.factory_site"`
     
-    /* food_security.food_additive optional食品添加剂 */
-    food_security.food_additive string `json:"food_security.food_additive";xml:"food_security.food_additive"`
+    /* food_security_food_additive optional食品添加剂 */
+    food_security_food_additive string `json:"food_security.food_additive";xml:"food_security.food_additive"`
     
-    /* food_security.health_product_no optional健字号，保健品/膳食营养补充剂 这个类目下特有的信息，此类目下无需填写生产许可证编号（QS），如果填写了生产许可证编号（QS）将被忽略不保存；保存宝贝时，标题前会自动加上健字号产品名称一起作为宝贝标题； */
-    food_security.health_product_no string `json:"food_security.health_product_no";xml:"food_security.health_product_no"`
+    /* food_security_health_product_no optional健字号，保健品/膳食营养补充剂 这个类目下特有的信息，此类目下无需填写生产许可证编号（QS），如果填写了生产许可证编号（QS）将被忽略不保存；保存宝贝时，标题前会自动加上健字号产品名称一起作为宝贝标题； */
+    food_security_health_product_no string `json:"food_security.health_product_no";xml:"food_security.health_product_no"`
     
-    /* food_security.mix optional配料表 */
-    food_security.mix string `json:"food_security.mix";xml:"food_security.mix"`
+    /* food_security_mix optional配料表 */
+    food_security_mix string `json:"food_security.mix";xml:"food_security.mix"`
     
-    /* food_security.period optional保质期 */
-    food_security.period string `json:"food_security.period";xml:"food_security.period"`
+    /* food_security_period optional保质期 */
+    food_security_period string `json:"food_security.period";xml:"food_security.period"`
     
-    /* food_security.plan_storage optional储藏方法 */
-    food_security.plan_storage string `json:"food_security.plan_storage";xml:"food_security.plan_storage"`
+    /* food_security_plan_storage optional储藏方法 */
+    food_security_plan_storage string `json:"food_security.plan_storage";xml:"food_security.plan_storage"`
     
-    /* food_security.prd_license_no optional生产许可证号 */
-    food_security.prd_license_no string `json:"food_security.prd_license_no";xml:"food_security.prd_license_no"`
+    /* food_security_prd_license_no optional生产许可证号 */
+    food_security_prd_license_no string `json:"food_security.prd_license_no";xml:"food_security.prd_license_no"`
     
-    /* food_security.product_date_end optional生产结束日期,格式必须为yyyy-MM-dd */
-    food_security.product_date_end string `json:"food_security.product_date_end";xml:"food_security.product_date_end"`
+    /* food_security_product_date_end optional生产结束日期,格式必须为yyyy-MM-dd */
+    food_security_product_date_end string `json:"food_security.product_date_end";xml:"food_security.product_date_end"`
     
-    /* food_security.product_date_start optional生产开始日期，格式必须为yyyy-MM-dd */
-    food_security.product_date_start string `json:"food_security.product_date_start";xml:"food_security.product_date_start"`
+    /* food_security_product_date_start optional生产开始日期，格式必须为yyyy-MM-dd */
+    food_security_product_date_start string `json:"food_security.product_date_start";xml:"food_security.product_date_start"`
     
-    /* food_security.stock_date_end optional进货结束日期，要在生产日期之后，格式必须为yyyy-MM-dd */
-    food_security.stock_date_end string `json:"food_security.stock_date_end";xml:"food_security.stock_date_end"`
+    /* food_security_stock_date_end optional进货结束日期，要在生产日期之后，格式必须为yyyy-MM-dd */
+    food_security_stock_date_end string `json:"food_security.stock_date_end";xml:"food_security.stock_date_end"`
     
-    /* food_security.stock_date_start optional进货开始日期，要在生产日期之后，格式必须为yyyy-MM-dd */
-    food_security.stock_date_start string `json:"food_security.stock_date_start";xml:"food_security.stock_date_start"`
+    /* food_security_stock_date_start optional进货开始日期，要在生产日期之后，格式必须为yyyy-MM-dd */
+    food_security_stock_date_start string `json:"food_security.stock_date_start";xml:"food_security.stock_date_start"`
     
-    /* food_security.supplier optional供货商 */
-    food_security.supplier string `json:"food_security.supplier";xml:"food_security.supplier"`
+    /* food_security_supplier optional供货商 */
+    food_security_supplier string `json:"food_security.supplier";xml:"food_security.supplier"`
     
     /* freight_payer optional运费承担方式。可选值:seller（卖家承担）,buyer(买家承担);默认值:seller。卖家承担不用设置邮费和postage_id.买家承担的时候，必填邮费和postage_id 如果用户设置了运费模板会优先使用运费模板，否则要同步设置邮费（post_fee,express_fee,ems_fee） */
     freight_payer string `json:"freight_payer";xml:"freight_payer"`
@@ -1591,7 +1591,7 @@ type TaobaoItemAddRequest struct {
     ignorewarning string `json:"ignorewarning";xml:"ignorewarning"`
     
     /* image optional商品主图片。类型:JPG,GIF;最大长度:3M。（推荐使用pic_path字段，先把图片上传到卖家图片空间） */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* increment optional加价(降价)幅度。如果为0，代表系统代理幅度。对于增价拍和荷兰拍来说是加价幅度，对于降价拍来说是降价幅度。 */
     increment Price `json:"increment";xml:"increment"`
@@ -1641,56 +1641,56 @@ type TaobaoItemAddRequest struct {
     /* list_time optional定时上架时间。(时间格式：yyyy-MM-dd HH:mm:ss) */
     list_time time.Time `json:"list_time";xml:"list_time"`
     
-    /* locality_life.choose_logis optional发布电子凭证宝贝时候表示是否使用邮寄 0: 代表不使用邮寄； 1：代表使用邮寄；如果不设置这个值，代表不使用邮寄 */
-    locality_life.choose_logis string `json:"locality_life.choose_logis";xml:"locality_life.choose_logis"`
+    /* locality_life_choose_logis optional发布电子凭证宝贝时候表示是否使用邮寄 0: 代表不使用邮寄； 1：代表使用邮寄；如果不设置这个值，代表不使用邮寄 */
+    locality_life_choose_logis string `json:"locality_life.choose_logis";xml:"locality_life.choose_logis"`
     
-    /* locality_life.eticket optional电子凭证业务属性，数据字典是: 1、is_card:1 (暂时不用) 2、consume_way:4 （1 串码 ，4 身份证）3、consume_midmnick ：(核销放行账号:用户id-用户名，支持多个，用逗号分隔,例如 1234-测试账号35,1345-测试账号56）4、market:eticket (电子凭证商品标记) 5、has_pos:1 (1 表示商品配置线下门店，在detail上进行展示 ，没有或者其他值只不展示)格式是: k1:v2;k2:v2;........ 如：has_pos:1;market:eticket;consume_midmnick:901409638-OPPO;consume_way:4 */
-    locality_life.eticket string `json:"locality_life.eticket";xml:"locality_life.eticket"`
+    /* locality_life_eticket optional电子凭证业务属性，数据字典是: 1、is_card:1 (暂时不用) 2、consume_way:4 （1 串码 ，4 身份证）3、consume_midmnick ：(核销放行账号:用户id-用户名，支持多个，用逗号分隔,例如 1234-测试账号35,1345-测试账号56）4、market:eticket (电子凭证商品标记) 5、has_pos:1 (1 表示商品配置线下门店，在detail上进行展示 ，没有或者其他值只不展示)格式是: k1:v2;k2:v2;........ 如：has_pos:1;market:eticket;consume_midmnick:901409638-OPPO;consume_way:4 */
+    locality_life_eticket string `json:"locality_life.eticket";xml:"locality_life.eticket"`
     
-    /* locality_life.expirydate optional本地生活电子交易凭证业务，目前此字段只涉及到的信息为有效期;如果有效期为起止日期类型，此值为2012-08-06,2012-08-16如果有效期为【购买成功日 至】类型则格式为2012-08-16如果有效期为天数类型则格式为15 */
-    locality_life.expirydate string `json:"locality_life.expirydate";xml:"locality_life.expirydate"`
+    /* locality_life_expirydate optional本地生活电子交易凭证业务，目前此字段只涉及到的信息为有效期;如果有效期为起止日期类型，此值为2012-08-06,2012-08-16如果有效期为【购买成功日 至】类型则格式为2012-08-16如果有效期为天数类型则格式为15 */
+    locality_life_expirydate string `json:"locality_life.expirydate";xml:"locality_life.expirydate"`
     
-    /* locality_life.merchant optional码商信息，格式为 码商id:nick */
-    locality_life.merchant string `json:"locality_life.merchant";xml:"locality_life.merchant"`
+    /* locality_life_merchant optional码商信息，格式为 码商id:nick */
+    locality_life_merchant string `json:"locality_life.merchant";xml:"locality_life.merchant"`
     
-    /* locality_life.network_id optional网点ID */
-    locality_life.network_id string `json:"locality_life.network_id";xml:"locality_life.network_id"`
+    /* locality_life_network_id optional网点ID */
+    locality_life_network_id string `json:"locality_life.network_id";xml:"locality_life.network_id"`
     
-    /* locality_life.obs optional预约门店是否支持门店自提,1:是 */
-    locality_life.obs string `json:"locality_life.obs";xml:"locality_life.obs"`
+    /* locality_life_obs optional预约门店是否支持门店自提,1:是 */
+    locality_life_obs string `json:"locality_life.obs";xml:"locality_life.obs"`
     
-    /* locality_life.onsale_auto_refund_ratio optional电子凭证售中自动退款比例，百分比%前的数字，介于1-100之间的整数 */
-    locality_life.onsale_auto_refund_ratio int64 `json:"locality_life.onsale_auto_refund_ratio";xml:"locality_life.onsale_auto_refund_ratio"`
+    /* locality_life_onsale_auto_refund_ratio optional电子凭证售中自动退款比例，百分比%前的数字，介于1-100之间的整数 */
+    locality_life_onsale_auto_refund_ratio int64 `json:"locality_life.onsale_auto_refund_ratio";xml:"locality_life.onsale_auto_refund_ratio"`
     
-    /* locality_life.packageid optional新版电子凭证包 id */
-    locality_life.packageid string `json:"locality_life.packageid";xml:"locality_life.packageid"`
+    /* locality_life_packageid optional新版电子凭证包 id */
+    locality_life_packageid string `json:"locality_life.packageid";xml:"locality_life.packageid"`
     
-    /* locality_life.refund_ratio optional退款比例，百分比%前的数字,1-100的正整数值 */
-    locality_life.refund_ratio int64 `json:"locality_life.refund_ratio";xml:"locality_life.refund_ratio"`
+    /* locality_life_refund_ratio optional退款比例，百分比%前的数字,1-100的正整数值 */
+    locality_life_refund_ratio int64 `json:"locality_life.refund_ratio";xml:"locality_life.refund_ratio"`
     
-    /* locality_life.refundmafee optional退款码费承担方。发布电子凭证宝贝的时候会增加“退款码费承担方”配置项，可选填：(1)s（卖家承担） (2)b(买家承担) */
-    locality_life.refundmafee string `json:"locality_life.refundmafee";xml:"locality_life.refundmafee"`
+    /* locality_life_refundmafee optional退款码费承担方。发布电子凭证宝贝的时候会增加“退款码费承担方”配置项，可选填：(1)s（卖家承担） (2)b(买家承担) */
+    locality_life_refundmafee string `json:"locality_life.refundmafee";xml:"locality_life.refundmafee"`
     
-    /* locality_life.verification optional核销打款 1代表核销打款 0代表非核销打款 */
-    locality_life.verification string `json:"locality_life.verification";xml:"locality_life.verification"`
+    /* locality_life_verification optional核销打款 1代表核销打款 0代表非核销打款 */
+    locality_life_verification string `json:"locality_life.verification";xml:"locality_life.verification"`
     
-    /* locality_life.version optional新版电子凭证字段 */
-    locality_life.version string `json:"locality_life.version";xml:"locality_life.version"`
+    /* locality_life_version optional新版电子凭证字段 */
+    locality_life_version string `json:"locality_life.version";xml:"locality_life.version"`
     
-    /* location.city required所在地城市。如杭州 。 */
-    location.city string `json:"location.city";xml:"location.city"`
+    /* location_city required所在地城市。如杭州 。 */
+    location_city string `json:"location.city";xml:"location.city"`
     
-    /* location.state required所在地省份。如浙江 */
-    location.state string `json:"location.state";xml:"location.state"`
+    /* location_state required所在地省份。如浙江 */
+    location_state string `json:"location.state";xml:"location.state"`
     
-    /* ms_payment.price optional订金。在“线上付订金线下付尾款”模式中，有订金、尾款可抵扣金额和参考价，三者需要同时填写。该商品订单首次支付价格为 订金 价格，用户可根据 参考价 估算全款。该模式有别于“一口价”付款方式，针对一个商品，只能选择两种付款方式中的一种，其适用于家装、二手车等场景。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
-    ms_payment.price string `json:"ms_payment.price";xml:"ms_payment.price"`
+    /* ms_payment_price optional订金。在“线上付订金线下付尾款”模式中，有订金、尾款可抵扣金额和参考价，三者需要同时填写。该商品订单首次支付价格为 订金 价格，用户可根据 参考价 估算全款。该模式有别于“一口价”付款方式，针对一个商品，只能选择两种付款方式中的一种，其适用于家装、二手车等场景。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
+    ms_payment_price string `json:"ms_payment.price";xml:"ms_payment.price"`
     
-    /* ms_payment.reference_price optional参考价。该商品订单首次支付价格为 订金 价格，用户可根据 参考价 估算全款。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
-    ms_payment.reference_price string `json:"ms_payment.reference_price";xml:"ms_payment.reference_price"`
+    /* ms_payment_reference_price optional参考价。该商品订单首次支付价格为 订金 价格，用户可根据 参考价 估算全款。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
+    ms_payment_reference_price string `json:"ms_payment.reference_price";xml:"ms_payment.reference_price"`
     
-    /* ms_payment.voucher_price optional尾款可抵扣金额。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
-    ms_payment.voucher_price string `json:"ms_payment.voucher_price";xml:"ms_payment.voucher_price"`
+    /* ms_payment_voucher_price optional尾款可抵扣金额。详见说明：http://bangpai.taobao.com/group/thread/15031186-303287205.htm */
+    ms_payment_voucher_price string `json:"ms_payment.voucher_price";xml:"ms_payment.voucher_price"`
     
     /* newprepay optional该宝贝是否支持【7天无理由退货】，卖家选择的值只是一个因素，最终以类目和选择的属性条件来确定是否支持7天。填入字符0，表示不支持；未填写或填人字符1，表示支持7天无理由退货； */
     newprepay string `json:"newprepay";xml:"newprepay"`
@@ -1704,23 +1704,23 @@ type TaobaoItemAddRequest struct {
     /* outer_id optional商品外部编码，该字段的最大长度是64个字节 */
     outer_id string `json:"outer_id";xml:"outer_id"`
     
-    /* paimai_info.deposit optional拍卖宝贝的保证金。对于增价拍和荷兰拍来说保证金有两种模式：淘宝默认模式（首次出价金额的10%），自定义固定保证金（固定冻结金额只能输入不超过30万的正整数），并且保证金只冻结1次。对于降价拍来说保证金只有淘宝默认的（竞拍价格的10% * 竞拍数量），并且每次出价都需要冻结保证金。对于拍卖宝贝来说，保证金是必须的，但是默认使用淘宝默认保证金模式，只有用户需要使用自定义固定保证金的时候才需要使用到这个参数，如果该参数不传或传入0则代表使用默认。 */
-    paimai_info.deposit int64 `json:"paimai_info.deposit";xml:"paimai_info.deposit"`
+    /* paimai_info_deposit optional拍卖宝贝的保证金。对于增价拍和荷兰拍来说保证金有两种模式：淘宝默认模式（首次出价金额的10%），自定义固定保证金（固定冻结金额只能输入不超过30万的正整数），并且保证金只冻结1次。对于降价拍来说保证金只有淘宝默认的（竞拍价格的10% * 竞拍数量），并且每次出价都需要冻结保证金。对于拍卖宝贝来说，保证金是必须的，但是默认使用淘宝默认保证金模式，只有用户需要使用自定义固定保证金的时候才需要使用到这个参数，如果该参数不传或传入0则代表使用默认。 */
+    paimai_info_deposit int64 `json:"paimai_info.deposit";xml:"paimai_info.deposit"`
     
-    /* paimai_info.interval optional降价拍宝贝的降价周期(分钟)。降价拍宝贝的价格每隔paimai_info.interval时间会下降一次increment。 */
-    paimai_info.interval int64 `json:"paimai_info.interval";xml:"paimai_info.interval"`
+    /* paimai_info_interval optional降价拍宝贝的降价周期(分钟)。降价拍宝贝的价格每隔paimai_info.interval时间会下降一次increment。 */
+    paimai_info_interval int64 `json:"paimai_info.interval";xml:"paimai_info.interval"`
     
-    /* paimai_info.mode optional拍卖商品选择的拍卖类型，拍卖类型包括三种：增价拍(1)，荷兰拍(2)和降价拍(3)。 */
-    paimai_info.mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
+    /* paimai_info_mode optional拍卖商品选择的拍卖类型，拍卖类型包括三种：增价拍(1)，荷兰拍(2)和降价拍(3)。 */
+    paimai_info_mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
     
-    /* paimai_info.reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
-    paimai_info.reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
+    /* paimai_info_reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
+    paimai_info_reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
     
-    /* paimai_info.valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
-    paimai_info.valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
+    /* paimai_info_valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
+    paimai_info_valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
     
-    /* paimai_info.valid_minute optional自定义销售周期的分钟数。拍卖宝贝可以自定义销售周期，这里是指定销售周期的分钟数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
-    paimai_info.valid_minute int64 `json:"paimai_info.valid_minute";xml:"paimai_info.valid_minute"`
+    /* paimai_info_valid_minute optional自定义销售周期的分钟数。拍卖宝贝可以自定义销售周期，这里是指定销售周期的分钟数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
+    paimai_info_valid_minute int64 `json:"paimai_info.valid_minute";xml:"paimai_info.valid_minute"`
     
     /* pic_path optional（推荐）商品主图需要关联的图片空间的相对url。这个url所对应的图片必须要属于当前用户。pic_path和image只需要传入一个,如果两个都传，默认选择pic_path */
     pic_path string `json:"pic_path";xml:"pic_path"`
@@ -1830,12 +1830,12 @@ func (req *TaobaoItemAddRequest) GetAPIName() string {
 	return "taobao.item.add"
 }
 
-// TaobaoItemAddResponse 此接口用于新增一个商品 
+/* TaobaoItemAddResponse 此接口用于新增一个商品 
 商品所属的卖家是当前会话的用户 
 商品的属性和sku的属性有包含的关系，商品的价格要位于sku的价格区间之中（例如，sku价格有5元、10元两种，那么商品的价格就需要大于等于5元，小于等于10元，否则新增商品会失败） 
 商品的类目和商品的价格、sku的价格都有一定的相关性（具体的关系要通过类目属性查询接口获得） 
 商品的运费承担方式和邮费设置有相关性，卖家承担运费不用设置邮费，买家承担运费需要设置邮费 
-当关键属性值选择了“其他”的时候，需要输入input_pids和input_str商品才能添加成功。
+当关键属性值选择了“其他”的时候，需要输入input_pids和input_str商品才能添加成功。 */
 type TaobaoItemAddResponse struct {
     
     /* item Object商品结构,仅有numIid和created返回 */
@@ -1843,9 +1843,9 @@ type TaobaoItemAddResponse struct {
     
 }
 
-// TaobaoItemPropimgDeleteRequest 删除propimg_id 所指定的商品属性图片 
+/* TaobaoItemPropimgDeleteRequest 删除propimg_id 所指定的商品属性图片 
 传入的num_iid所对应的商品必须属于当前会话的用户 
-propimg_id对应的属性图片需要属于num_iid对应的商品
+propimg_id对应的属性图片需要属于num_iid对应的商品 */
 type TaobaoItemPropimgDeleteRequest struct {
     
     /* id required商品属性图片ID */
@@ -1860,9 +1860,9 @@ func (req *TaobaoItemPropimgDeleteRequest) GetAPIName() string {
 	return "taobao.item.propimg.delete"
 }
 
-// TaobaoItemPropimgDeleteResponse 删除propimg_id 所指定的商品属性图片 
+/* TaobaoItemPropimgDeleteResponse 删除propimg_id 所指定的商品属性图片 
 传入的num_iid所对应的商品必须属于当前会话的用户 
-propimg_id对应的属性图片需要属于num_iid对应的商品
+propimg_id对应的属性图片需要属于num_iid对应的商品 */
 type TaobaoItemPropimgDeleteResponse struct {
     
     /* prop_img Object属性图片结构 */
@@ -1870,7 +1870,7 @@ type TaobaoItemPropimgDeleteResponse struct {
     
 }
 
-// TaobaoItemImgDeleteRequest 删除商品图片
+/* TaobaoItemImgDeleteRequest 删除商品图片 */
 type TaobaoItemImgDeleteRequest struct {
     
     /* id required商品图片ID；如果是竖图，请将id的值设置为1 */
@@ -1888,7 +1888,7 @@ func (req *TaobaoItemImgDeleteRequest) GetAPIName() string {
 	return "taobao.item.img.delete"
 }
 
-// TaobaoItemImgDeleteResponse 删除商品图片
+/* TaobaoItemImgDeleteResponse 删除商品图片 */
 type TaobaoItemImgDeleteResponse struct {
     
     /* item_img Object商品图片结构 */
@@ -1896,8 +1896,8 @@ type TaobaoItemImgDeleteResponse struct {
     
 }
 
-// TaobaoItemSkuAddRequest 新增一个sku到num_iid指定的商品中 
-传入的iid所对应的商品必须属于当前会话的用户
+/* TaobaoItemSkuAddRequest 新增一个sku到num_iid指定的商品中 
+传入的iid所对应的商品必须属于当前会话的用户 */
 type TaobaoItemSkuAddRequest struct {
     
     /* ignorewarning optional忽略警告提示. */
@@ -1930,8 +1930,8 @@ func (req *TaobaoItemSkuAddRequest) GetAPIName() string {
 	return "taobao.item.sku.add"
 }
 
-// TaobaoItemSkuAddResponse 新增一个sku到num_iid指定的商品中 
-传入的iid所对应的商品必须属于当前会话的用户
+/* TaobaoItemSkuAddResponse 新增一个sku到num_iid指定的商品中 
+传入的iid所对应的商品必须属于当前会话的用户 */
 type TaobaoItemSkuAddResponse struct {
     
     /* sku Objectsku */
@@ -1939,18 +1939,18 @@ type TaobaoItemSkuAddResponse struct {
     
 }
 
-// TaobaoItemPropimgUploadRequest 添加一张商品属性图片到num_iid指定的商品中 
+/* TaobaoItemPropimgUploadRequest 添加一张商品属性图片到num_iid指定的商品中 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 图片的属性必须要是颜色的属性，这个在前台显示的时候需要和sku进行关联的 
 商品属性图片只有享有服务的卖家（如：淘宝大卖家、订购了淘宝多图服务的卖家）才能上传 
-商品属性图片有数量和大小上的限制，最多不能超过24张（每个颜色属性都有一张）。
+商品属性图片有数量和大小上的限制，最多不能超过24张（每个颜色属性都有一张）。 */
 type TaobaoItemPropimgUploadRequest struct {
     
     /* id optional属性图片ID。如果是新增不需要填写 */
     id int64 `json:"id";xml:"id"`
     
     /* image optional属性图片内容。类型:JPG,GIF;图片大小不超过:3M */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* num_iid required商品数字ID，必选 */
     num_iid int64 `json:"num_iid";xml:"num_iid"`
@@ -1967,11 +1967,11 @@ func (req *TaobaoItemPropimgUploadRequest) GetAPIName() string {
 	return "taobao.item.propimg.upload"
 }
 
-// TaobaoItemPropimgUploadResponse 添加一张商品属性图片到num_iid指定的商品中 
+/* TaobaoItemPropimgUploadResponse 添加一张商品属性图片到num_iid指定的商品中 
 传入的num_iid所对应的商品必须属于当前会话的用户 
 图片的属性必须要是颜色的属性，这个在前台显示的时候需要和sku进行关联的 
 商品属性图片只有享有服务的卖家（如：淘宝大卖家、订购了淘宝多图服务的卖家）才能上传 
-商品属性图片有数量和大小上的限制，最多不能超过24张（每个颜色属性都有一张）。
+商品属性图片有数量和大小上的限制，最多不能超过24张（每个颜色属性都有一张）。 */
 type TaobaoItemPropimgUploadResponse struct {
     
     /* prop_img ObjectPropImg属性图片结构 */
@@ -1979,11 +1979,11 @@ type TaobaoItemPropimgUploadResponse struct {
     
 }
 
-// TaobaoItemSkuUpdateRequest *更新一个sku的数据 
+/* TaobaoItemSkuUpdateRequest *更新一个sku的数据 
 *需要更新的sku通过属性properties进行匹配查找 
 *商品的数量和价格必须大于等于0 
 *sku记录会更新到指定的num_iid对应的商品中 
-*num_iid对应的商品必须属于当前的会话用户
+*num_iid对应的商品必须属于当前的会话用户 */
 type TaobaoItemSkuUpdateRequest struct {
     
     /* ignorewarning optional忽略警告提示. */
@@ -2017,11 +2017,11 @@ func (req *TaobaoItemSkuUpdateRequest) GetAPIName() string {
 	return "taobao.item.sku.update"
 }
 
-// TaobaoItemSkuUpdateResponse *更新一个sku的数据 
+/* TaobaoItemSkuUpdateResponse *更新一个sku的数据 
 *需要更新的sku通过属性properties进行匹配查找 
 *商品的数量和价格必须大于等于0 
 *sku记录会更新到指定的num_iid对应的商品中 
-*num_iid对应的商品必须属于当前的会话用户
+*num_iid对应的商品必须属于当前的会话用户 */
 type TaobaoItemSkuUpdateResponse struct {
     
     /* sku Object商品Sku */
@@ -2029,8 +2029,8 @@ type TaobaoItemSkuUpdateResponse struct {
     
 }
 
-// TaobaoItemSkuGetRequest 获取sku_id所对应的sku数据 
-sku_id对应的sku要属于传入的nick对应的卖家
+/* TaobaoItemSkuGetRequest 获取sku_id所对应的sku数据 
+sku_id对应的sku要属于传入的nick对应的卖家 */
 type TaobaoItemSkuGetRequest struct {
     
     /* fields required需返回的字段列表。可选值：Sku结构体中的所有字段；字段之间用“,”分隔。 */
@@ -2051,8 +2051,8 @@ func (req *TaobaoItemSkuGetRequest) GetAPIName() string {
 	return "taobao.item.sku.get"
 }
 
-// TaobaoItemSkuGetResponse 获取sku_id所对应的sku数据 
-sku_id对应的sku要属于传入的nick对应的卖家
+/* TaobaoItemSkuGetResponse 获取sku_id所对应的sku数据 
+sku_id对应的sku要属于传入的nick对应的卖家 */
 type TaobaoItemSkuGetResponse struct {
     
     /* sku ObjectSku */
@@ -2060,8 +2060,8 @@ type TaobaoItemSkuGetResponse struct {
     
 }
 
-// TaobaoItemUpdateDelistingRequest * 单个商品下架
-    * 输入的num_iid必须属于当前会话用户
+/* TaobaoItemUpdateDelistingRequest * 单个商品下架
+    * 输入的num_iid必须属于当前会话用户 */
 type TaobaoItemUpdateDelistingRequest struct {
     
     /* num_iid required商品数字ID，该参数必须 */
@@ -2073,8 +2073,8 @@ func (req *TaobaoItemUpdateDelistingRequest) GetAPIName() string {
 	return "taobao.item.update.delisting"
 }
 
-// TaobaoItemUpdateDelistingResponse * 单个商品下架
-    * 输入的num_iid必须属于当前会话用户
+/* TaobaoItemUpdateDelistingResponse * 单个商品下架
+    * 输入的num_iid必须属于当前会话用户 */
 type TaobaoItemUpdateDelistingResponse struct {
     
     /* item Object返回商品更新信息：返回的结果是:num_iid和modified */
@@ -2082,7 +2082,7 @@ type TaobaoItemUpdateDelistingResponse struct {
     
 }
 
-// TaobaoFenxiaoProductToChannelImportRequest 支持供应商将已有产品导入到某个渠道销售
+/* TaobaoFenxiaoProductToChannelImportRequest 支持供应商将已有产品导入到某个渠道销售 */
 type TaobaoFenxiaoProductToChannelImportRequest struct {
     
     /* channel required要导入的渠道[21 零售PLUS]目前仅支持此渠道 */
@@ -2097,12 +2097,12 @@ func (req *TaobaoFenxiaoProductToChannelImportRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.to.channel.import"
 }
 
-// TaobaoFenxiaoProductToChannelImportResponse 支持供应商将已有产品导入到某个渠道销售
+/* TaobaoFenxiaoProductToChannelImportResponse 支持供应商将已有产品导入到某个渠道销售 */
 type TaobaoFenxiaoProductToChannelImportResponse struct {
     
 }
 
-// TaobaoItemSkusGetRequest * 获取多个商品下的所有sku
+/* TaobaoItemSkusGetRequest * 获取多个商品下的所有sku */
 type TaobaoItemSkusGetRequest struct {
     
     /* fields required需返回的字段列表。可选值：Sku结构体中的所有字段；字段之间用“,”分隔。 */
@@ -2117,7 +2117,7 @@ func (req *TaobaoItemSkusGetRequest) GetAPIName() string {
 	return "taobao.item.skus.get"
 }
 
-// TaobaoItemSkusGetResponse * 获取多个商品下的所有sku
+/* TaobaoItemSkusGetResponse * 获取多个商品下的所有sku */
 type TaobaoItemSkusGetResponse struct {
     
     /* skus Object ArraySku列表 */
@@ -2125,7 +2125,7 @@ type TaobaoItemSkusGetResponse struct {
     
 }
 
-// TaobaoWlbItemBatchQueryRequest 根据用户id，item id list和store code来查询商品库存信息和批次信息
+/* TaobaoWlbItemBatchQueryRequest 根据用户id，item id list和store code来查询商品库存信息和批次信息 */
 type TaobaoWlbItemBatchQueryRequest struct {
     
     /* item_ids required需要查询的商品ID列表，以字符串表示，ID间以;隔开 */
@@ -2146,7 +2146,7 @@ func (req *TaobaoWlbItemBatchQueryRequest) GetAPIName() string {
 	return "taobao.wlb.item.batch.query"
 }
 
-// TaobaoWlbItemBatchQueryResponse 根据用户id，item id list和store code来查询商品库存信息和批次信息
+/* TaobaoWlbItemBatchQueryResponse 根据用户id，item id list和store code来查询商品库存信息和批次信息 */
 type TaobaoWlbItemBatchQueryResponse struct {
     
     /* item_inventory_batch_list Object Array商品库存及批次信息查询结果 */
@@ -2157,7 +2157,7 @@ type TaobaoWlbItemBatchQueryResponse struct {
     
 }
 
-// TaobaoStreetestSessionGetRequest 根据正常用户sessionKey获取对应压测用户的sessionKey，该sessionKey只能用户服务商全链路压测
+/* TaobaoStreetestSessionGetRequest 根据正常用户sessionKey获取对应压测用户的sessionKey，该sessionKey只能用户服务商全链路压测 */
 type TaobaoStreetestSessionGetRequest struct {
     
 }
@@ -2166,7 +2166,7 @@ func (req *TaobaoStreetestSessionGetRequest) GetAPIName() string {
 	return "taobao.streetest.session.get"
 }
 
-// TaobaoStreetestSessionGetResponse 根据正常用户sessionKey获取对应压测用户的sessionKey，该sessionKey只能用户服务商全链路压测
+/* TaobaoStreetestSessionGetResponse 根据正常用户sessionKey获取对应压测用户的sessionKey，该sessionKey只能用户服务商全链路压测 */
 type TaobaoStreetestSessionGetResponse struct {
     
     /* stree_test_session_key Basic压测账号对应的sessionKey */
@@ -2174,8 +2174,8 @@ type TaobaoStreetestSessionGetResponse struct {
     
 }
 
-// TaobaoItemUpdateListingRequest * 单个商品上架
-* 输入的num_iid必须属于当前会话用户
+/* TaobaoItemUpdateListingRequest * 单个商品上架
+* 输入的num_iid必须属于当前会话用户 */
 type TaobaoItemUpdateListingRequest struct {
     
     /* num required需要上架的商品的数量。取值范围:大于零的整数。如果商品有sku，则上架数量默认为所有sku数量总和，不可修改。否则商品数量根据设置数量调整为num */
@@ -2190,8 +2190,8 @@ func (req *TaobaoItemUpdateListingRequest) GetAPIName() string {
 	return "taobao.item.update.listing"
 }
 
-// TaobaoItemUpdateListingResponse * 单个商品上架
-* 输入的num_iid必须属于当前会话用户
+/* TaobaoItemUpdateListingResponse * 单个商品上架
+* 输入的num_iid必须属于当前会话用户 */
 type TaobaoItemUpdateListingResponse struct {
     
     /* item Object上架后返回的商品信息：返回的结果就是:num_iid和modified */
@@ -2199,7 +2199,7 @@ type TaobaoItemUpdateListingResponse struct {
     
 }
 
-// CainiaoBimTradeorderConsignRequest 驱动保税交易订单发货
+/* CainiaoBimTradeorderConsignRequest 驱动保税交易订单发货 */
 type CainiaoBimTradeorderConsignRequest struct {
     
     /* res_id optional选择的线路ID非必填字段 */
@@ -2217,7 +2217,7 @@ func (req *CainiaoBimTradeorderConsignRequest) GetAPIName() string {
 	return "cainiao.bim.tradeorder.consign"
 }
 
-// CainiaoBimTradeorderConsignResponse 驱动保税交易订单发货
+/* CainiaoBimTradeorderConsignResponse 驱动保税交易订单发货 */
 type CainiaoBimTradeorderConsignResponse struct {
     
     /* lg_order_code Basic菜鸟物流订单号,格式为LP开头 */
@@ -2228,7 +2228,7 @@ type CainiaoBimTradeorderConsignResponse struct {
     
 }
 
-// TaobaoRpRefundReviewRequest 审核退款单，标志是否可用于批量退款，目前仅支持天猫订单。
+/* TaobaoRpRefundReviewRequest 审核退款单，标志是否可用于批量退款，目前仅支持天猫订单。 */
 type TaobaoRpRefundReviewRequest struct {
     
     /* message required审核留言 */
@@ -2255,7 +2255,7 @@ func (req *TaobaoRpRefundReviewRequest) GetAPIName() string {
 	return "taobao.rp.refund.review"
 }
 
-// TaobaoRpRefundReviewResponse 审核退款单，标志是否可用于批量退款，目前仅支持天猫订单。
+/* TaobaoRpRefundReviewResponse 审核退款单，标志是否可用于批量退款，目前仅支持天猫订单。 */
 type TaobaoRpRefundReviewResponse struct {
     
     /* is_success Basicsuccess */
@@ -2263,7 +2263,7 @@ type TaobaoRpRefundReviewResponse struct {
     
 }
 
-// TaobaoWlbWaybillICancelRequest 面单号有误需要取消的时候，调用该接口取消获取的电子面单。
+/* TaobaoWlbWaybillICancelRequest 面单号有误需要取消的时候，调用该接口取消获取的电子面单。 */
 type TaobaoWlbWaybillICancelRequest struct {
     
     /* waybill_apply_cancel_request required取消接口入参 */
@@ -2275,7 +2275,7 @@ func (req *TaobaoWlbWaybillICancelRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.cancel"
 }
 
-// TaobaoWlbWaybillICancelResponse 面单号有误需要取消的时候，调用该接口取消获取的电子面单。
+/* TaobaoWlbWaybillICancelResponse 面单号有误需要取消的时候，调用该接口取消获取的电子面单。 */
 type TaobaoWlbWaybillICancelResponse struct {
     
     /* cancel_result Basic调用取消是否成功 */
@@ -2283,7 +2283,7 @@ type TaobaoWlbWaybillICancelResponse struct {
     
 }
 
-// TaobaoWlbWaybillIQuerydetailRequest 查看面单号的当前状态，如签收、发货、失效等。
+/* TaobaoWlbWaybillIQuerydetailRequest 查看面单号的当前状态，如签收、发货、失效等。 */
 type TaobaoWlbWaybillIQuerydetailRequest struct {
     
     /* waybill_detail_query_request required面单查询请求 */
@@ -2295,7 +2295,7 @@ func (req *TaobaoWlbWaybillIQuerydetailRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.querydetail"
 }
 
-// TaobaoWlbWaybillIQuerydetailResponse 查看面单号的当前状态，如签收、发货、失效等。
+/* TaobaoWlbWaybillIQuerydetailResponse 查看面单号的当前状态，如签收、发货、失效等。 */
 type TaobaoWlbWaybillIQuerydetailResponse struct {
     
     /* error_codes Basic Array面单查询错误编码 */
@@ -2312,7 +2312,7 @@ type TaobaoWlbWaybillIQuerydetailResponse struct {
     
 }
 
-// TaobaoWlbWaybillIPrintRequest 打印面单前的校验接口，判断面单号信息与订单信息是否匹配。
+/* TaobaoWlbWaybillIPrintRequest 打印面单前的校验接口，判断面单号信息与订单信息是否匹配。 */
 type TaobaoWlbWaybillIPrintRequest struct {
     
     /* waybill_apply_print_check_request required打印请求 */
@@ -2324,7 +2324,7 @@ func (req *TaobaoWlbWaybillIPrintRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.print"
 }
 
-// TaobaoWlbWaybillIPrintResponse 打印面单前的校验接口，判断面单号信息与订单信息是否匹配。
+/* TaobaoWlbWaybillIPrintResponse 打印面单前的校验接口，判断面单号信息与订单信息是否匹配。 */
 type TaobaoWlbWaybillIPrintResponse struct {
     
     /* waybill_apply_print_check_infos Object Array面单打印信息 */
@@ -2332,7 +2332,7 @@ type TaobaoWlbWaybillIPrintResponse struct {
     
 }
 
-// TaobaoTmcGroupAddRequest 为已开通用户添加用户分组
+/* TaobaoTmcGroupAddRequest 为已开通用户添加用户分组 */
 type TaobaoTmcGroupAddRequest struct {
     
     /* group_name required分组名称，同一个应用下需要保证唯一性，最长32个字符。添加分组后，消息通道会为用户的消息分配独立分组，但之前的消息还是存储于默认分组中。不能以default开头，default开头为系统默认组。 */
@@ -2350,7 +2350,7 @@ func (req *TaobaoTmcGroupAddRequest) GetAPIName() string {
 	return "taobao.tmc.group.add"
 }
 
-// TaobaoTmcGroupAddResponse 为已开通用户添加用户分组
+/* TaobaoTmcGroupAddResponse 为已开通用户添加用户分组 */
 type TaobaoTmcGroupAddResponse struct {
     
     /* created Basic创建时间 */
@@ -2361,10 +2361,10 @@ type TaobaoTmcGroupAddResponse struct {
     
 }
 
-// TaobaoTradesSoldGetRequest 搜索当前会话用户作为卖家已卖出的交易数据（只能获取到三个月以内的交易信息）
+/* TaobaoTradesSoldGetRequest 搜索当前会话用户作为卖家已卖出的交易数据（只能获取到三个月以内的交易信息）
 <br/>1. 返回的数据结果是以订单的创建时间倒序排列的。
 <br/>2. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。
-<br/> <span style="color:red">注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）</span>
+<br/> <span style="color:red">注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）</span> */
 type TaobaoTradesSoldGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -2409,10 +2409,10 @@ func (req *TaobaoTradesSoldGetRequest) GetAPIName() string {
 	return "taobao.trades.sold.get"
 }
 
-// TaobaoTradesSoldGetResponse 搜索当前会话用户作为卖家已卖出的交易数据（只能获取到三个月以内的交易信息）
+/* TaobaoTradesSoldGetResponse 搜索当前会话用户作为卖家已卖出的交易数据（只能获取到三个月以内的交易信息）
 <br/>1. 返回的数据结果是以订单的创建时间倒序排列的。
 <br/>2. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。
-<br/> <span style="color:red">注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）</span>
+<br/> <span style="color:red">注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）</span> */
 type TaobaoTradesSoldGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -2426,7 +2426,7 @@ type TaobaoTradesSoldGetResponse struct {
     
 }
 
-// TaobaoTmcGroupDeleteRequest 删除指定的分组或分组下的用户
+/* TaobaoTmcGroupDeleteRequest 删除指定的分组或分组下的用户 */
 type TaobaoTmcGroupDeleteRequest struct {
     
     /* group_name required分组名称，分组删除后，用户的消息将会存储于默认分组中。警告：由于分组已经删除，用户之前未消费的消息将无法再获取。不能以default开头，default开头为系统默认组。 */
@@ -2444,7 +2444,7 @@ func (req *TaobaoTmcGroupDeleteRequest) GetAPIName() string {
 	return "taobao.tmc.group.delete"
 }
 
-// TaobaoTmcGroupDeleteResponse 删除指定的分组或分组下的用户
+/* TaobaoTmcGroupDeleteResponse 删除指定的分组或分组下的用户 */
 type TaobaoTmcGroupDeleteResponse struct {
     
     /* is_success Basic是否成功 */
@@ -2452,7 +2452,7 @@ type TaobaoTmcGroupDeleteResponse struct {
     
 }
 
-// TaobaoTmcGroupsGetRequest 获取自定义用户分组列表
+/* TaobaoTmcGroupsGetRequest 获取自定义用户分组列表 */
 type TaobaoTmcGroupsGetRequest struct {
     
     /* group_names optional要查询分组的名称，多个分组用半角逗号分隔，不传代表查询所有分组信息，但不会返回组下面的用户信息。如果应用没有设置分组则返回空。组名不能以default开头，default开头是系统默认的组。 */
@@ -2470,7 +2470,7 @@ func (req *TaobaoTmcGroupsGetRequest) GetAPIName() string {
 	return "taobao.tmc.groups.get"
 }
 
-// TaobaoTmcGroupsGetResponse 获取自定义用户分组列表
+/* TaobaoTmcGroupsGetResponse 获取自定义用户分组列表 */
 type TaobaoTmcGroupsGetResponse struct {
     
     /* groups Object Arraydasdasd */
@@ -2481,7 +2481,7 @@ type TaobaoTmcGroupsGetResponse struct {
     
 }
 
-// TaobaoRpReturngoodsRefuseRequest 卖家拒绝退货，目前仅支持天猫退货。
+/* TaobaoRpReturngoodsRefuseRequest 卖家拒绝退货，目前仅支持天猫退货。 */
 type TaobaoRpReturngoodsRefuseRequest struct {
     
     /* refund_id required退款编号 */
@@ -2494,7 +2494,7 @@ type TaobaoRpReturngoodsRefuseRequest struct {
     refund_version int64 `json:"refund_version";xml:"refund_version"`
     
     /* refuse_proof required拒绝退货凭证图片，必须图片格式，大小不能超过5M */
-    refuse_proof byte[] `json:"refuse_proof";xml:"refuse_proof"`
+    refuse_proof []byte `json:"refuse_proof";xml:"refuse_proof"`
     
     /* refuse_reason_id optional拒绝原因编号，会提供拒绝原因列表供选择 */
     refuse_reason_id int64 `json:"refuse_reason_id";xml:"refuse_reason_id"`
@@ -2505,7 +2505,7 @@ func (req *TaobaoRpReturngoodsRefuseRequest) GetAPIName() string {
 	return "taobao.rp.returngoods.refuse"
 }
 
-// TaobaoRpReturngoodsRefuseResponse 卖家拒绝退货，目前仅支持天猫退货。
+/* TaobaoRpReturngoodsRefuseResponse 卖家拒绝退货，目前仅支持天猫退货。 */
 type TaobaoRpReturngoodsRefuseResponse struct {
     
     /* result Basicasdf */
@@ -2513,7 +2513,7 @@ type TaobaoRpReturngoodsRefuseResponse struct {
     
 }
 
-// TaobaoRpReturngoodsRefillRequest 卖家收到货物回填物流信息，如果买家已经回填物流信息，则接口报错，目前仅支持天猫订单。
+/* TaobaoRpReturngoodsRefillRequest 卖家收到货物回填物流信息，如果买家已经回填物流信息，则接口报错，目前仅支持天猫订单。 */
 type TaobaoRpReturngoodsRefillRequest struct {
     
     /* logistics_company_code required物流公司编号 */
@@ -2534,7 +2534,7 @@ func (req *TaobaoRpReturngoodsRefillRequest) GetAPIName() string {
 	return "taobao.rp.returngoods.refill"
 }
 
-// TaobaoRpReturngoodsRefillResponse 卖家收到货物回填物流信息，如果买家已经回填物流信息，则接口报错，目前仅支持天猫订单。
+/* TaobaoRpReturngoodsRefillResponse 卖家收到货物回填物流信息，如果买家已经回填物流信息，则接口报错，目前仅支持天猫订单。 */
 type TaobaoRpReturngoodsRefillResponse struct {
     
     /* is_success Basic验货操作是否成功 */
@@ -2542,7 +2542,7 @@ type TaobaoRpReturngoodsRefillResponse struct {
     
 }
 
-// TaobaoRefundsApplyGetRequest 查询买家申请的退款列表，且查询外店的退款列表时需要指定交易类型
+/* TaobaoRefundsApplyGetRequest 查询买家申请的退款列表，且查询外店的退款列表时需要指定交易类型 */
 type TaobaoRefundsApplyGetRequest struct {
     
     /* fields required需要返回的字段。目前支持有：refund_id, tid, title, buyer_nick, seller_nick, total_fee, status, created, refund_fee */
@@ -2588,7 +2588,7 @@ func (req *TaobaoRefundsApplyGetRequest) GetAPIName() string {
 	return "taobao.refunds.apply.get"
 }
 
-// TaobaoRefundsApplyGetResponse 查询买家申请的退款列表，且查询外店的退款列表时需要指定交易类型
+/* TaobaoRefundsApplyGetResponse 查询买家申请的退款列表，且查询外店的退款列表时需要指定交易类型 */
 type TaobaoRefundsApplyGetResponse struct {
     
     /* refunds Object Array搜索到的退款信息列表 */
@@ -2599,7 +2599,7 @@ type TaobaoRefundsApplyGetResponse struct {
     
 }
 
-// TaobaoTradeMemoUpdateRequest 需要商家或以上权限才可调用此接口，可重复调用本接口更新交易备注，本接口同时具有添加备注的功能
+/* TaobaoTradeMemoUpdateRequest 需要商家或以上权限才可调用此接口，可重复调用本接口更新交易备注，本接口同时具有添加备注的功能 */
 type TaobaoTradeMemoUpdateRequest struct {
     
     /* flag optional卖家交易备注旗帜，可选值为：0(灰色), 1(红色), 2(黄色), 3(绿色), 4(蓝色), 5(粉红色)，默认值为0 */
@@ -2620,7 +2620,7 @@ func (req *TaobaoTradeMemoUpdateRequest) GetAPIName() string {
 	return "taobao.trade.memo.update"
 }
 
-// TaobaoTradeMemoUpdateResponse 需要商家或以上权限才可调用此接口，可重复调用本接口更新交易备注，本接口同时具有添加备注的功能
+/* TaobaoTradeMemoUpdateResponse 需要商家或以上权限才可调用此接口，可重复调用本接口更新交易备注，本接口同时具有添加备注的功能 */
 type TaobaoTradeMemoUpdateResponse struct {
     
     /* trade Object更新交易的备注信息后返回的Trade，其中可用字段为tid和modified */
@@ -2628,7 +2628,7 @@ type TaobaoTradeMemoUpdateResponse struct {
     
 }
 
-// TaobaoTradeMemoAddRequest 根据登录用户的身份（买家或卖家），自动添加相应的交易备注,不能重复调用些接口添加备注，需要更新备注请用taobao.trade.memo.update
+/* TaobaoTradeMemoAddRequest 根据登录用户的身份（买家或卖家），自动添加相应的交易备注,不能重复调用些接口添加备注，需要更新备注请用taobao.trade.memo.update */
 type TaobaoTradeMemoAddRequest struct {
     
     /* flag optional交易备注旗帜，可选值为：0(灰色), 1(红色), 2(黄色), 3(绿色), 4(蓝色), 5(粉红色)，默认值为0 */
@@ -2646,7 +2646,7 @@ func (req *TaobaoTradeMemoAddRequest) GetAPIName() string {
 	return "taobao.trade.memo.add"
 }
 
-// TaobaoTradeMemoAddResponse 根据登录用户的身份（买家或卖家），自动添加相应的交易备注,不能重复调用些接口添加备注，需要更新备注请用taobao.trade.memo.update
+/* TaobaoTradeMemoAddResponse 根据登录用户的身份（买家或卖家），自动添加相应的交易备注,不能重复调用些接口添加备注，需要更新备注请用taobao.trade.memo.update */
 type TaobaoTradeMemoAddResponse struct {
     
     /* trade Object对一笔交易添加备注后返回其对应的Trade，Trade中可用的返回字段有tid和created */
@@ -2654,7 +2654,7 @@ type TaobaoTradeMemoAddResponse struct {
     
 }
 
-// TaobaoTraderatesGetRequest 搜索评价信息，只能获取距今180天内的评价记录(只支持查询卖家给出或得到的评价)。
+/* TaobaoTraderatesGetRequest 搜索评价信息，只能获取距今180天内的评价记录(只支持查询卖家给出或得到的评价)。 */
 type TaobaoTraderatesGetRequest struct {
     
     /* end_date optional评价结束时间。如果只输入结束时间，那么全部返回所有评价数据。 */
@@ -2699,7 +2699,7 @@ func (req *TaobaoTraderatesGetRequest) GetAPIName() string {
 	return "taobao.traderates.get"
 }
 
-// TaobaoTraderatesGetResponse 搜索评价信息，只能获取距今180天内的评价记录(只支持查询卖家给出或得到的评价)。
+/* TaobaoTraderatesGetResponse 搜索评价信息，只能获取距今180天内的评价记录(只支持查询卖家给出或得到的评价)。 */
 type TaobaoTraderatesGetResponse struct {
     
     /* has_next Basic当使用use_has_next时返回信息，如果还有下一页则返回true */
@@ -2713,12 +2713,12 @@ type TaobaoTraderatesGetResponse struct {
     
 }
 
-// TaobaoTradeFullinfoGetRequest 获取单笔交易的详细信息
+/* TaobaoTradeFullinfoGetRequest 获取单笔交易的详细信息
 <br/>1. 只有在交易成功的状态下才能取到交易佣金，其它状态下取到的都是零或空值 
 <br/>2. 只有单笔订单的情况下Trade数据结构中才包含商品相关的信息 
 <br/>3. 获取到的Order中的payment字段在单笔子订单时包含物流费用，多笔子订单时不包含物流费用
 <br/>4. 获取红包优惠金额可以使用字段 coupon_fee
-<br/>5. 请按需获取字段，减少TOP系统的压力
+<br/>5. 请按需获取字段，减少TOP系统的压力 */
 type TaobaoTradeFullinfoGetRequest struct {
     
     /* fields required需要返回的字段列表，多个字段用半角逗号分隔，可选值为返回示例中能看到的所有字段。 */
@@ -2733,12 +2733,12 @@ func (req *TaobaoTradeFullinfoGetRequest) GetAPIName() string {
 	return "taobao.trade.fullinfo.get"
 }
 
-// TaobaoTradeFullinfoGetResponse 获取单笔交易的详细信息
+/* TaobaoTradeFullinfoGetResponse 获取单笔交易的详细信息
 <br/>1. 只有在交易成功的状态下才能取到交易佣金，其它状态下取到的都是零或空值 
 <br/>2. 只有单笔订单的情况下Trade数据结构中才包含商品相关的信息 
 <br/>3. 获取到的Order中的payment字段在单笔子订单时包含物流费用，多笔子订单时不包含物流费用
 <br/>4. 获取红包优惠金额可以使用字段 coupon_fee
-<br/>5. 请按需获取字段，减少TOP系统的压力
+<br/>5. 请按需获取字段，减少TOP系统的压力 */
 type TaobaoTradeFullinfoGetResponse struct {
     
     /* trade Object交易主订单信息 */
@@ -2746,7 +2746,7 @@ type TaobaoTradeFullinfoGetResponse struct {
     
 }
 
-// AlibabaProviderEinvoiceQueryRequest 开票服务商提供的对已开电子发票的查询功能，此接口是可选实现。只有部分电子发票支持通过此接口查询
+/* AlibabaProviderEinvoiceQueryRequest 开票服务商提供的对已开电子发票的查询功能，此接口是可选实现。只有部分电子发票支持通过此接口查询 */
 type AlibabaProviderEinvoiceQueryRequest struct {
     
     /* payee_register_no required收款方税务登记证号 */
@@ -2767,7 +2767,7 @@ func (req *AlibabaProviderEinvoiceQueryRequest) GetAPIName() string {
 	return "alibaba.provider.einvoice.query"
 }
 
-// AlibabaProviderEinvoiceQueryResponse 开票服务商提供的对已开电子发票的查询功能，此接口是可选实现。只有部分电子发票支持通过此接口查询
+/* AlibabaProviderEinvoiceQueryResponse 开票服务商提供的对已开电子发票的查询功能，此接口是可选实现。只有部分电子发票支持通过此接口查询 */
 type AlibabaProviderEinvoiceQueryResponse struct {
     
     /* einvoice_list Object Array电子发票列表 */
@@ -2775,7 +2775,7 @@ type AlibabaProviderEinvoiceQueryResponse struct {
     
 }
 
-// TaobaoRefundGetRequest 获取单笔退款详情
+/* TaobaoRefundGetRequest 获取单笔退款详情 */
 type TaobaoRefundGetRequest struct {
     
     /* fields required需要返回的字段。目前支持有：refund_id, alipay_no, tid, oid, buyer_nick, seller_nick, total_fee, status, created, refund_fee, good_status, has_good_return, payment, reason, desc, num_iid, title, price, num, good_return_time, company_name, sid, address, shipping_type, refund_remind_timeout, refund_phase, refund_version, operation_contraint, attribute, outer_id, sku */
@@ -2790,7 +2790,7 @@ func (req *TaobaoRefundGetRequest) GetAPIName() string {
 	return "taobao.refund.get"
 }
 
-// TaobaoRefundGetResponse 获取单笔退款详情
+/* TaobaoRefundGetResponse 获取单笔退款详情 */
 type TaobaoRefundGetResponse struct {
     
     /* refund Object退款详情 */
@@ -2798,7 +2798,7 @@ type TaobaoRefundGetResponse struct {
     
 }
 
-// TaobaoRefundsReceiveGetRequest 查询卖家收到的退款列表
+/* TaobaoRefundsReceiveGetRequest 查询卖家收到的退款列表 */
 type TaobaoRefundsReceiveGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -2834,7 +2834,7 @@ func (req *TaobaoRefundsReceiveGetRequest) GetAPIName() string {
 	return "taobao.refunds.receive.get"
 }
 
-// TaobaoRefundsReceiveGetResponse 查询卖家收到的退款列表
+/* TaobaoRefundsReceiveGetResponse 查询卖家收到的退款列表 */
 type TaobaoRefundsReceiveGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -2848,8 +2848,8 @@ type TaobaoRefundsReceiveGetResponse struct {
     
 }
 
-// TaobaoAreasGetRequest 查询标准地址区域代码信息。可以直接参考最新的行政区域代码：
-<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html">http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html</a>
+/* TaobaoAreasGetRequest 查询标准地址区域代码信息。可以直接参考最新的行政区域代码：
+<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html">http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html</a> */
 type TaobaoAreasGetRequest struct {
     
     /* fields required需返回的字段列表.可选值:Area 结构中的所有字段;多个字段之间用","分隔.如:id,type,name,parent_id,zip. */
@@ -2861,8 +2861,8 @@ func (req *TaobaoAreasGetRequest) GetAPIName() string {
 	return "taobao.areas.get"
 }
 
-// TaobaoAreasGetResponse 查询标准地址区域代码信息。可以直接参考最新的行政区域代码：
-<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html">http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html</a>
+/* TaobaoAreasGetResponse 查询标准地址区域代码信息。可以直接参考最新的行政区域代码：
+<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html">http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html</a> */
 type TaobaoAreasGetResponse struct {
     
     /* areas Object Array地址区域信息列表.返回的Area包含的具体信息为入参fields请求的字段信息 。 */
@@ -2870,7 +2870,7 @@ type TaobaoAreasGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductSkusGetRequest 产品sku查询
+/* TaobaoFenxiaoProductSkusGetRequest 产品sku查询 */
 type TaobaoFenxiaoProductSkusGetRequest struct {
     
     /* product_id required产品ID */
@@ -2882,7 +2882,7 @@ func (req *TaobaoFenxiaoProductSkusGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.skus.get"
 }
 
-// TaobaoFenxiaoProductSkusGetResponse 产品sku查询
+/* TaobaoFenxiaoProductSkusGetResponse 产品sku查询 */
 type TaobaoFenxiaoProductSkusGetResponse struct {
     
     /* skus Object Arraysku信息 */
@@ -2893,7 +2893,7 @@ type TaobaoFenxiaoProductSkusGetResponse struct {
     
 }
 
-// CainiaoBmsOrderCreateRequest 通过接口，在菜鸟商家工作台创建订单，并通过商家工作台进行发货管理。
+/* CainiaoBmsOrderCreateRequest 通过接口，在菜鸟商家工作台创建订单，并通过商家工作台进行发货管理。 */
 type CainiaoBmsOrderCreateRequest struct {
     
     /* buyer_message optional买家留言 */
@@ -2992,12 +2992,12 @@ func (req *CainiaoBmsOrderCreateRequest) GetAPIName() string {
 	return "cainiao.bms.order.create"
 }
 
-// CainiaoBmsOrderCreateResponse 通过接口，在菜鸟商家工作台创建订单，并通过商家工作台进行发货管理。
+/* CainiaoBmsOrderCreateResponse 通过接口，在菜鸟商家工作台创建订单，并通过商家工作台进行发货管理。 */
 type CainiaoBmsOrderCreateResponse struct {
     
 }
 
-// TaobaoFenxiaoProductSkuUpdateRequest 产品SKU信息更新
+/* TaobaoFenxiaoProductSkuUpdateRequest 产品SKU信息更新 */
 type TaobaoFenxiaoProductSkuUpdateRequest struct {
     
     /* agent_cost_price optional代销采购价 */
@@ -3027,7 +3027,7 @@ func (req *TaobaoFenxiaoProductSkuUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.sku.update"
 }
 
-// TaobaoFenxiaoProductSkuUpdateResponse 产品SKU信息更新
+/* TaobaoFenxiaoProductSkuUpdateResponse 产品SKU信息更新 */
 type TaobaoFenxiaoProductSkuUpdateResponse struct {
     
     /* created Basic操作时间 */
@@ -3038,7 +3038,7 @@ type TaobaoFenxiaoProductSkuUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoProductSkuAddRequest 添加产品SKU信息
+/* TaobaoFenxiaoProductSkuAddRequest 添加产品SKU信息 */
 type TaobaoFenxiaoProductSkuAddRequest struct {
     
     /* agent_cost_price special代销采购价 */
@@ -3068,7 +3068,7 @@ func (req *TaobaoFenxiaoProductSkuAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.sku.add"
 }
 
-// TaobaoFenxiaoProductSkuAddResponse 添加产品SKU信息
+/* TaobaoFenxiaoProductSkuAddResponse 添加产品SKU信息 */
 type TaobaoFenxiaoProductSkuAddResponse struct {
     
     /* created Basic操作时间 */
@@ -3079,7 +3079,7 @@ type TaobaoFenxiaoProductSkuAddResponse struct {
     
 }
 
-// TaobaoFenxiaoProductSkuDeleteRequest 根据sku properties删除sku数据
+/* TaobaoFenxiaoProductSkuDeleteRequest 根据sku properties删除sku数据 */
 type TaobaoFenxiaoProductSkuDeleteRequest struct {
     
     /* product_id required产品id */
@@ -3094,7 +3094,7 @@ func (req *TaobaoFenxiaoProductSkuDeleteRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.sku.delete"
 }
 
-// TaobaoFenxiaoProductSkuDeleteResponse 根据sku properties删除sku数据
+/* TaobaoFenxiaoProductSkuDeleteResponse 根据sku properties删除sku数据 */
 type TaobaoFenxiaoProductSkuDeleteResponse struct {
     
     /* created Basic操作时间 */
@@ -3105,7 +3105,7 @@ type TaobaoFenxiaoProductSkuDeleteResponse struct {
     
 }
 
-// QimenTaobaoAutoReturnorderConfirmRequest 菜鸟自动创建销退单的入库确认回传
+/* QimenTaobaoAutoReturnorderConfirmRequest 菜鸟自动创建销退单的入库确认回传 */
 type QimenTaobaoAutoReturnorderConfirmRequest struct {
     
     /* customerId requiredcustomerId */
@@ -3120,7 +3120,7 @@ func (req *QimenTaobaoAutoReturnorderConfirmRequest) GetAPIName() string {
 	return "qimen.taobao.auto.returnorder.confirm"
 }
 
-// QimenTaobaoAutoReturnorderConfirmResponse 菜鸟自动创建销退单的入库确认回传
+/* QimenTaobaoAutoReturnorderConfirmResponse 菜鸟自动创建销退单的入库确认回传 */
 type QimenTaobaoAutoReturnorderConfirmResponse struct {
     
     /* response Objectresponse */
@@ -3128,7 +3128,7 @@ type QimenTaobaoAutoReturnorderConfirmResponse struct {
     
 }
 
-// TaobaoFenxiaoProductImageDeleteRequest 产品图片删除，只删除图片信息，不真正删除图片
+/* TaobaoFenxiaoProductImageDeleteRequest 产品图片删除，只删除图片信息，不真正删除图片 */
 type TaobaoFenxiaoProductImageDeleteRequest struct {
     
     /* position required图片位置 */
@@ -3146,7 +3146,7 @@ func (req *TaobaoFenxiaoProductImageDeleteRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.image.delete"
 }
 
-// TaobaoFenxiaoProductImageDeleteResponse 产品图片删除，只删除图片信息，不真正删除图片
+/* TaobaoFenxiaoProductImageDeleteResponse 产品图片删除，只删除图片信息，不真正删除图片 */
 type TaobaoFenxiaoProductImageDeleteResponse struct {
     
     /* created Basic操作时间 */
@@ -3157,7 +3157,7 @@ type TaobaoFenxiaoProductImageDeleteResponse struct {
     
 }
 
-// TaobaoWlbWaybillIProductRequest 商家可以查询物流商的产品类型和服务能力。
+/* TaobaoWlbWaybillIProductRequest 商家可以查询物流商的产品类型和服务能力。 */
 type TaobaoWlbWaybillIProductRequest struct {
     
     /* waybill_product_type_request required查询物流商电子面单产品类型入参 */
@@ -3169,7 +3169,7 @@ func (req *TaobaoWlbWaybillIProductRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.product"
 }
 
-// TaobaoWlbWaybillIProductResponse 商家可以查询物流商的产品类型和服务能力。
+/* TaobaoWlbWaybillIProductResponse 商家可以查询物流商的产品类型和服务能力。 */
 type TaobaoWlbWaybillIProductResponse struct {
     
     /* product_types Object Array产品类型返回 */
@@ -3177,11 +3177,11 @@ type TaobaoWlbWaybillIProductResponse struct {
     
 }
 
-// TaobaoFenxiaoProductImageUploadRequest 产品主图图片空间相对路径或绝对路径添加或更新，或者是图片上传。如果指定位置的图片已存在，则覆盖原有信息。如果位置为1,自动设为主图；如果位置为0，表示属性图片
+/* TaobaoFenxiaoProductImageUploadRequest 产品主图图片空间相对路径或绝对路径添加或更新，或者是图片上传。如果指定位置的图片已存在，则覆盖原有信息。如果位置为1,自动设为主图；如果位置为0，表示属性图片 */
 type TaobaoFenxiaoProductImageUploadRequest struct {
     
     /* image special产品图片 */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* pic_path special产品主图图片空间相对路径或绝对路径 */
     pic_path string `json:"pic_path";xml:"pic_path"`
@@ -3201,7 +3201,7 @@ func (req *TaobaoFenxiaoProductImageUploadRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.image.upload"
 }
 
-// TaobaoFenxiaoProductImageUploadResponse 产品主图图片空间相对路径或绝对路径添加或更新，或者是图片上传。如果指定位置的图片已存在，则覆盖原有信息。如果位置为1,自动设为主图；如果位置为0，表示属性图片
+/* TaobaoFenxiaoProductImageUploadResponse 产品主图图片空间相对路径或绝对路径添加或更新，或者是图片上传。如果指定位置的图片已存在，则覆盖原有信息。如果位置为1,自动设为主图；如果位置为0，表示属性图片 */
 type TaobaoFenxiaoProductImageUploadResponse struct {
     
     /* created Basic操作时间 */
@@ -3212,7 +3212,7 @@ type TaobaoFenxiaoProductImageUploadResponse struct {
     
 }
 
-// TaobaoShopGetRequest 获取卖家店铺的基本信息
+/* TaobaoShopGetRequest 获取卖家店铺的基本信息 */
 type TaobaoShopGetRequest struct {
     
     /* fields required需返回的字段列表。可选值：Shop 结构中的所有字段；多个字段之间用逗号(,)分隔 */
@@ -3227,7 +3227,7 @@ func (req *TaobaoShopGetRequest) GetAPIName() string {
 	return "taobao.shop.get"
 }
 
-// TaobaoShopGetResponse 获取卖家店铺的基本信息
+/* TaobaoShopGetResponse 获取卖家店铺的基本信息 */
 type TaobaoShopGetResponse struct {
     
     /* shop Object店铺信息 */
@@ -3235,7 +3235,7 @@ type TaobaoShopGetResponse struct {
     
 }
 
-// TaobaoJdsTradesStatisticsDiffRequest 订单全链路状态统计差异比较
+/* TaobaoJdsTradesStatisticsDiffRequest 订单全链路状态统计差异比较 */
 type TaobaoJdsTradesStatisticsDiffRequest struct {
     
     /* date required查询的日期，格式如YYYYMMDD的日期对应的数字 */
@@ -3256,7 +3256,7 @@ func (req *TaobaoJdsTradesStatisticsDiffRequest) GetAPIName() string {
 	return "taobao.jds.trades.statistics.diff"
 }
 
-// TaobaoJdsTradesStatisticsDiffResponse 订单全链路状态统计差异比较
+/* TaobaoJdsTradesStatisticsDiffResponse 订单全链路状态统计差异比较 */
 type TaobaoJdsTradesStatisticsDiffResponse struct {
     
     /* tids Basic Arraypre_status比post_status多的tid列表 */
@@ -3267,7 +3267,7 @@ type TaobaoJdsTradesStatisticsDiffResponse struct {
     
 }
 
-// TaobaoShopcatsListGetRequest 获取淘宝面向买家的浏览导航类目（跟后台卖家商品管理的类目有差异）
+/* TaobaoShopcatsListGetRequest 获取淘宝面向买家的浏览导航类目（跟后台卖家商品管理的类目有差异） */
 type TaobaoShopcatsListGetRequest struct {
     
     /* fields optional需要返回的字段列表，见ShopCat，默认返回：cid,parent_cid,name,is_parent */
@@ -3279,7 +3279,7 @@ func (req *TaobaoShopcatsListGetRequest) GetAPIName() string {
 	return "taobao.shopcats.list.get"
 }
 
-// TaobaoShopcatsListGetResponse 获取淘宝面向买家的浏览导航类目（跟后台卖家商品管理的类目有差异）
+/* TaobaoShopcatsListGetResponse 获取淘宝面向买家的浏览导航类目（跟后台卖家商品管理的类目有差异） */
 type TaobaoShopcatsListGetResponse struct {
     
     /* shop_cats Object Array店铺类目列表信息 */
@@ -3287,7 +3287,7 @@ type TaobaoShopcatsListGetResponse struct {
     
 }
 
-// TaobaoJdsTradesStatisticsGetRequest 获取订单数量统计结果
+/* TaobaoJdsTradesStatisticsGetRequest 获取订单数量统计结果 */
 type TaobaoJdsTradesStatisticsGetRequest struct {
     
     /* date required查询的日期，格式如YYYYMMDD的日期对应的数字 */
@@ -3299,7 +3299,7 @@ func (req *TaobaoJdsTradesStatisticsGetRequest) GetAPIName() string {
 	return "taobao.jds.trades.statistics.get"
 }
 
-// TaobaoJdsTradesStatisticsGetResponse 获取订单数量统计结果
+/* TaobaoJdsTradesStatisticsGetResponse 获取订单数量统计结果 */
 type TaobaoJdsTradesStatisticsGetResponse struct {
     
     /* status_infos Object Array订单状态计数值 */
@@ -3307,7 +3307,7 @@ type TaobaoJdsTradesStatisticsGetResponse struct {
     
 }
 
-// TaobaoSellercatsListGetRequest 此API获取当前卖家店铺在淘宝前端被展示的浏览导航类目（面向买家）
+/* TaobaoSellercatsListGetRequest 此API获取当前卖家店铺在淘宝前端被展示的浏览导航类目（面向买家） */
 type TaobaoSellercatsListGetRequest struct {
     
     /* fields optionalfields参数 */
@@ -3322,7 +3322,7 @@ func (req *TaobaoSellercatsListGetRequest) GetAPIName() string {
 	return "taobao.sellercats.list.get"
 }
 
-// TaobaoSellercatsListGetResponse 此API获取当前卖家店铺在淘宝前端被展示的浏览导航类目（面向买家）
+/* TaobaoSellercatsListGetResponse 此API获取当前卖家店铺在淘宝前端被展示的浏览导航类目（面向买家） */
 type TaobaoSellercatsListGetResponse struct {
     
     /* seller_cats Object Array卖家自定义类目 */
@@ -3330,7 +3330,7 @@ type TaobaoSellercatsListGetResponse struct {
     
 }
 
-// TmallItemHscodeDetailGetRequest 通过hscode获取计量单位和销售单位
+/* TmallItemHscodeDetailGetRequest 通过hscode获取计量单位和销售单位 */
 type TmallItemHscodeDetailGetRequest struct {
     
     /* hscode requiredhscode */
@@ -3342,7 +3342,7 @@ func (req *TmallItemHscodeDetailGetRequest) GetAPIName() string {
 	return "tmall.item.hscode.detail.get"
 }
 
-// TmallItemHscodeDetailGetResponse 通过hscode获取计量单位和销售单位
+/* TmallItemHscodeDetailGetResponse 通过hscode获取计量单位和销售单位 */
 type TmallItemHscodeDetailGetResponse struct {
     
     /* results Basic Array返回的计量单位和销售单位 */
@@ -3350,7 +3350,7 @@ type TmallItemHscodeDetailGetResponse struct {
     
 }
 
-// TaobaoJdsRefundTracesGetRequest 获取聚石塔数据共享的交易全链路的退款信息
+/* TaobaoJdsRefundTracesGetRequest 获取聚石塔数据共享的交易全链路的退款信息 */
 type TaobaoJdsRefundTracesGetRequest struct {
     
     /* refund_id required淘宝的退款编号 */
@@ -3365,7 +3365,7 @@ func (req *TaobaoJdsRefundTracesGetRequest) GetAPIName() string {
 	return "taobao.jds.refund.traces.get"
 }
 
-// TaobaoJdsRefundTracesGetResponse 获取聚石塔数据共享的交易全链路的退款信息
+/* TaobaoJdsRefundTracesGetResponse 获取聚石塔数据共享的交易全链路的退款信息 */
 type TaobaoJdsRefundTracesGetResponse struct {
     
     /* traces Object Array退款跟踪列表 */
@@ -3376,7 +3376,7 @@ type TaobaoJdsRefundTracesGetResponse struct {
     
 }
 
-// TaobaoJdsHluserGetRequest 订单全链路用户信息获取
+/* TaobaoJdsHluserGetRequest 订单全链路用户信息获取 */
 type TaobaoJdsHluserGetRequest struct {
     
 }
@@ -3385,7 +3385,7 @@ func (req *TaobaoJdsHluserGetRequest) GetAPIName() string {
 	return "taobao.jds.hluser.get"
 }
 
-// TaobaoJdsHluserGetResponse 订单全链路用户信息获取
+/* TaobaoJdsHluserGetResponse 订单全链路用户信息获取 */
 type TaobaoJdsHluserGetResponse struct {
     
     /* hl_user Object回流用户信息 */
@@ -3393,7 +3393,7 @@ type TaobaoJdsHluserGetResponse struct {
     
 }
 
-// TaobaoItemSkuPriceUpdateRequest 更新商品SKU的价格
+/* TaobaoItemSkuPriceUpdateRequest 更新商品SKU的价格 */
 type TaobaoItemSkuPriceUpdateRequest struct {
     
     /* ignorewarning optional忽略警告提示. */
@@ -3426,7 +3426,7 @@ func (req *TaobaoItemSkuPriceUpdateRequest) GetAPIName() string {
 	return "taobao.item.sku.price.update"
 }
 
-// TaobaoItemSkuPriceUpdateResponse 更新商品SKU的价格
+/* TaobaoItemSkuPriceUpdateResponse 更新商品SKU的价格 */
 type TaobaoItemSkuPriceUpdateResponse struct {
     
     /* sku Object商品SKU信息（只包含num_iid和modified） */
@@ -3434,7 +3434,7 @@ type TaobaoItemSkuPriceUpdateResponse struct {
     
 }
 
-// TaobaoJdsHluserUpdateRequest 订单全链路用户信息修改，比如是否开放买家端展示
+/* TaobaoJdsHluserUpdateRequest 订单全链路用户信息修改，比如是否开放买家端展示 */
 type TaobaoJdsHluserUpdateRequest struct {
     
     /* open_for_buyer optional回流信息是否开通买家端展示,可选值open,close */
@@ -3449,7 +3449,7 @@ func (req *TaobaoJdsHluserUpdateRequest) GetAPIName() string {
 	return "taobao.jds.hluser.update"
 }
 
-// TaobaoJdsHluserUpdateResponse 订单全链路用户信息修改，比如是否开放买家端展示
+/* TaobaoJdsHluserUpdateResponse 订单全链路用户信息修改，比如是否开放买家端展示 */
 type TaobaoJdsHluserUpdateResponse struct {
     
     /* result Basic是否成功 */
@@ -3457,7 +3457,7 @@ type TaobaoJdsHluserUpdateResponse struct {
     
 }
 
-// TaobaoItemBarcodeUpdateRequest 通过该接口，将商品以及SKU上得条形码信息补全
+/* TaobaoItemBarcodeUpdateRequest 通过该接口，将商品以及SKU上得条形码信息补全 */
 type TaobaoItemBarcodeUpdateRequest struct {
     
     /* isforce optional是否强制保存商品条码。
@@ -3487,7 +3487,7 @@ func (req *TaobaoItemBarcodeUpdateRequest) GetAPIName() string {
 	return "taobao.item.barcode.update"
 }
 
-// TaobaoItemBarcodeUpdateResponse 通过该接口，将商品以及SKU上得条形码信息补全
+/* TaobaoItemBarcodeUpdateResponse 通过该接口，将商品以及SKU上得条形码信息补全 */
 type TaobaoItemBarcodeUpdateResponse struct {
     
     /* item Object商品结构里的num_iid，modified */
@@ -3495,7 +3495,7 @@ type TaobaoItemBarcodeUpdateResponse struct {
     
 }
 
-// TaobaoWlbWaybillIGetRequest 商家根据订单信息，实时、批量获取指定物流服务商的电子面单号。
+/* TaobaoWlbWaybillIGetRequest 商家根据订单信息，实时、批量获取指定物流服务商的电子面单号。 */
 type TaobaoWlbWaybillIGetRequest struct {
     
     /* waybill_apply_new_request required面单申请 */
@@ -3507,7 +3507,7 @@ func (req *TaobaoWlbWaybillIGetRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.get"
 }
 
-// TaobaoWlbWaybillIGetResponse 商家根据订单信息，实时、批量获取指定物流服务商的电子面单号。
+/* TaobaoWlbWaybillIGetResponse 商家根据订单信息，实时、批量获取指定物流服务商的电子面单号。 */
 type TaobaoWlbWaybillIGetResponse struct {
     
     /* waybill_apply_new_cols Object Array面单申请接口返回信息 */
@@ -3515,7 +3515,7 @@ type TaobaoWlbWaybillIGetResponse struct {
     
 }
 
-// TaobaoWlbWaybillISearchRequest 获取发货地&CP开通状态&账户的使用情况
+/* TaobaoWlbWaybillISearchRequest 获取发货地&CP开通状态&账户的使用情况 */
 type TaobaoWlbWaybillISearchRequest struct {
     
     /* waybill_apply_request required查询网点信息 */
@@ -3527,7 +3527,7 @@ func (req *TaobaoWlbWaybillISearchRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.search"
 }
 
-// TaobaoWlbWaybillISearchResponse 获取发货地&CP开通状态&账户的使用情况
+/* TaobaoWlbWaybillISearchResponse 获取发货地&CP开通状态&账户的使用情况 */
 type TaobaoWlbWaybillISearchResponse struct {
     
     /* subscribtions Object Array订购关系 */
@@ -3535,7 +3535,7 @@ type TaobaoWlbWaybillISearchResponse struct {
     
 }
 
-// TaobaoRegionWarehouseManageRequest 编辑仓库覆盖范围
+/* TaobaoRegionWarehouseManageRequest 编辑仓库覆盖范围 */
 type TaobaoRegionWarehouseManageRequest struct {
     
     /* regions required可映射三级地址,例: 广东省 */
@@ -3550,7 +3550,7 @@ func (req *TaobaoRegionWarehouseManageRequest) GetAPIName() string {
 	return "taobao.region.warehouse.manage"
 }
 
-// TaobaoRegionWarehouseManageResponse 编辑仓库覆盖范围
+/* TaobaoRegionWarehouseManageResponse 编辑仓库覆盖范围 */
 type TaobaoRegionWarehouseManageResponse struct {
     
     /* result Object返回结果 */
@@ -3558,9 +3558,9 @@ type TaobaoRegionWarehouseManageResponse struct {
     
 }
 
-// TaobaoWlbWaybillIFullupdateRequest 商家更新电子面单号对应的订单信息。
+/* TaobaoWlbWaybillIFullupdateRequest 商家更新电子面单号对应的订单信息。
 <br/>a.涉及到订单信息（如拆/合单、取消订单等）、修改发货地的逻辑时候，需要使用CANCEL+GET组合操作。一般的面单信息更新使用该接口；
-<br/>b.该接口是全量修改接口，对于不做更新的字段也要把原有的字段值传进去，否则做为修改为空处理。
+<br/>b.该接口是全量修改接口，对于不做更新的字段也要把原有的字段值传进去，否则做为修改为空处理。 */
 type TaobaoWlbWaybillIFullupdateRequest struct {
     
     /* waybill_apply_full_update_request required更新面单信息请求 */
@@ -3572,9 +3572,9 @@ func (req *TaobaoWlbWaybillIFullupdateRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.i.fullupdate"
 }
 
-// TaobaoWlbWaybillIFullupdateResponse 商家更新电子面单号对应的订单信息。
+/* TaobaoWlbWaybillIFullupdateResponse 商家更新电子面单号对应的订单信息。
 <br/>a.涉及到订单信息（如拆/合单、取消订单等）、修改发货地的逻辑时候，需要使用CANCEL+GET组合操作。一般的面单信息更新使用该接口；
-<br/>b.该接口是全量修改接口，对于不做更新的字段也要把原有的字段值传进去，否则做为修改为空处理。
+<br/>b.该接口是全量修改接口，对于不做更新的字段也要把原有的字段值传进去，否则做为修改为空处理。 */
 type TaobaoWlbWaybillIFullupdateResponse struct {
     
     /* waybill_apply_update_info Object更新接口出参 */
@@ -3582,7 +3582,7 @@ type TaobaoWlbWaybillIFullupdateResponse struct {
     
 }
 
-// TaobaoRegionSaleQueryRequest 查询商品销售区域
+/* TaobaoRegionSaleQueryRequest 查询商品销售区域 */
 type TaobaoRegionSaleQueryRequest struct {
     
     /* item_id required商品id */
@@ -3600,7 +3600,7 @@ func (req *TaobaoRegionSaleQueryRequest) GetAPIName() string {
 	return "taobao.region.sale.query"
 }
 
-// TaobaoRegionSaleQueryResponse 查询商品销售区域
+/* TaobaoRegionSaleQueryResponse 查询商品销售区域 */
 type TaobaoRegionSaleQueryResponse struct {
     
     /* result Objectresult */
@@ -3608,7 +3608,7 @@ type TaobaoRegionSaleQueryResponse struct {
     
 }
 
-// TaobaoPictureIsreferencedGetRequest 查询图片是否被引用，被引用返回true，未被引用返回false
+/* TaobaoPictureIsreferencedGetRequest 查询图片是否被引用，被引用返回true，未被引用返回false */
 type TaobaoPictureIsreferencedGetRequest struct {
     
     /* picture_id required图片id */
@@ -3620,7 +3620,7 @@ func (req *TaobaoPictureIsreferencedGetRequest) GetAPIName() string {
 	return "taobao.picture.isreferenced.get"
 }
 
-// TaobaoPictureIsreferencedGetResponse 查询图片是否被引用，被引用返回true，未被引用返回false
+/* TaobaoPictureIsreferencedGetResponse 查询图片是否被引用，被引用返回true，未被引用返回false */
 type TaobaoPictureIsreferencedGetResponse struct {
     
     /* is_referenced Basic图片是否被引用 */
@@ -3628,7 +3628,7 @@ type TaobaoPictureIsreferencedGetResponse struct {
     
 }
 
-// TaobaoRegionWarehouseQueryRequest 查询仓库覆盖范围
+/* TaobaoRegionWarehouseQueryRequest 查询仓库覆盖范围 */
 type TaobaoRegionWarehouseQueryRequest struct {
     
     /* store_code required仓库编码 */
@@ -3640,7 +3640,7 @@ func (req *TaobaoRegionWarehouseQueryRequest) GetAPIName() string {
 	return "taobao.region.warehouse.query"
 }
 
-// TaobaoRegionWarehouseQueryResponse 查询仓库覆盖范围
+/* TaobaoRegionWarehouseQueryResponse 查询仓库覆盖范围 */
 type TaobaoRegionWarehouseQueryResponse struct {
     
     /* result Objectresult */
@@ -3648,7 +3648,7 @@ type TaobaoRegionWarehouseQueryResponse struct {
     
 }
 
-// TaobaoDeliveryTemplateDeleteRequest 根据用户指定的模板ID删除指定的模板
+/* TaobaoDeliveryTemplateDeleteRequest 根据用户指定的模板ID删除指定的模板 */
 type TaobaoDeliveryTemplateDeleteRequest struct {
     
     /* template_id required运费模板ID */
@@ -3660,7 +3660,7 @@ func (req *TaobaoDeliveryTemplateDeleteRequest) GetAPIName() string {
 	return "taobao.delivery.template.delete"
 }
 
-// TaobaoDeliveryTemplateDeleteResponse 根据用户指定的模板ID删除指定的模板
+/* TaobaoDeliveryTemplateDeleteResponse 根据用户指定的模板ID删除指定的模板 */
 type TaobaoDeliveryTemplateDeleteResponse struct {
     
     /* complete Basic表示删除成功还是失败 */
@@ -3668,7 +3668,7 @@ type TaobaoDeliveryTemplateDeleteResponse struct {
     
 }
 
-// TaobaoDeliveryTemplatesGetRequest 根据用户ID获取用户下所有模板
+/* TaobaoDeliveryTemplatesGetRequest 根据用户ID获取用户下所有模板 */
 type TaobaoDeliveryTemplatesGetRequest struct {
     
     /* fields required需返回的字段列表。 <br/> 
@@ -3707,7 +3707,7 @@ func (req *TaobaoDeliveryTemplatesGetRequest) GetAPIName() string {
 	return "taobao.delivery.templates.get"
 }
 
-// TaobaoDeliveryTemplatesGetResponse 根据用户ID获取用户下所有模板
+/* TaobaoDeliveryTemplatesGetResponse 根据用户ID获取用户下所有模板 */
 type TaobaoDeliveryTemplatesGetResponse struct {
     
     /* delivery_templates Object Array运费模板列表 */
@@ -3718,7 +3718,7 @@ type TaobaoDeliveryTemplatesGetResponse struct {
     
 }
 
-// TaobaoDeliveryTemplateUpdateRequest 修改运费模板
+/* TaobaoDeliveryTemplateUpdateRequest 修改运费模板 */
 type TaobaoDeliveryTemplateUpdateRequest struct {
     
     /* assumer optional可选值：0,1 <br>  说明<br>0:表示买家承担服务费;<br>1:表示卖家承担服务费 */
@@ -3773,7 +3773,7 @@ func (req *TaobaoDeliveryTemplateUpdateRequest) GetAPIName() string {
 	return "taobao.delivery.template.update"
 }
 
-// TaobaoDeliveryTemplateUpdateResponse 修改运费模板
+/* TaobaoDeliveryTemplateUpdateResponse 修改运费模板 */
 type TaobaoDeliveryTemplateUpdateResponse struct {
     
     /* complete Basic表示修改是否成功 */
@@ -3781,7 +3781,7 @@ type TaobaoDeliveryTemplateUpdateResponse struct {
     
 }
 
-// TaobaoDeliveryTemplateAddRequest 增加运费模板的外部接口
+/* TaobaoDeliveryTemplateAddRequest 增加运费模板的外部接口 */
 type TaobaoDeliveryTemplateAddRequest struct {
     
     /* assumer required可选值：0、1 ，说明如下<br>0:表示买家承担服务费;<br>1:表示卖家承担服务费 */
@@ -3859,7 +3859,7 @@ func (req *TaobaoDeliveryTemplateAddRequest) GetAPIName() string {
 	return "taobao.delivery.template.add"
 }
 
-// TaobaoDeliveryTemplateAddResponse 增加运费模板的外部接口
+/* TaobaoDeliveryTemplateAddResponse 增加运费模板的外部接口 */
 type TaobaoDeliveryTemplateAddResponse struct {
     
     /* delivery_template Object模板对象 */
@@ -3867,7 +3867,7 @@ type TaobaoDeliveryTemplateAddResponse struct {
     
 }
 
-// TaobaoPictureUpdateRequest 修改指定图片的图片名
+/* TaobaoPictureUpdateRequest 修改指定图片的图片名 */
 type TaobaoPictureUpdateRequest struct {
     
     /* new_name required新的图片名，最大长度50字符，不能为空 */
@@ -3882,7 +3882,7 @@ func (req *TaobaoPictureUpdateRequest) GetAPIName() string {
 	return "taobao.picture.update"
 }
 
-// TaobaoPictureUpdateResponse 修改指定图片的图片名
+/* TaobaoPictureUpdateResponse 修改指定图片的图片名 */
 type TaobaoPictureUpdateResponse struct {
     
     /* done Basic更新是否成功 */
@@ -3890,7 +3890,7 @@ type TaobaoPictureUpdateResponse struct {
     
 }
 
-// TaobaoOmniorderStoreSdtstatusRequest 提供给商家查询运力单的状态。
+/* TaobaoOmniorderStoreSdtstatusRequest 提供给商家查询运力单的状态。 */
 type TaobaoOmniorderStoreSdtstatusRequest struct {
     
     /* package_id optional菜鸟裹裹的包裹ID */
@@ -3902,7 +3902,7 @@ func (req *TaobaoOmniorderStoreSdtstatusRequest) GetAPIName() string {
 	return "taobao.omniorder.store.sdtstatus"
 }
 
-// TaobaoOmniorderStoreSdtstatusResponse 提供给商家查询运力单的状态。
+/* TaobaoOmniorderStoreSdtstatusResponse 提供给商家查询运力单的状态。 */
 type TaobaoOmniorderStoreSdtstatusResponse struct {
     
     /* result Objectresult */
@@ -3910,7 +3910,7 @@ type TaobaoOmniorderStoreSdtstatusResponse struct {
     
 }
 
-// TaobaoDeliveryTemplateGetRequest 获取用户指定运费模板信息
+/* TaobaoDeliveryTemplateGetRequest 获取用户指定运费模板信息 */
 type TaobaoDeliveryTemplateGetRequest struct {
     
     /* fields required需返回的字段列表。 <br/> 
@@ -3955,7 +3955,7 @@ func (req *TaobaoDeliveryTemplateGetRequest) GetAPIName() string {
 	return "taobao.delivery.template.get"
 }
 
-// TaobaoDeliveryTemplateGetResponse 获取用户指定运费模板信息
+/* TaobaoDeliveryTemplateGetResponse 获取用户指定运费模板信息 */
 type TaobaoDeliveryTemplateGetResponse struct {
     
     /* delivery_templates Object Array运费模板列表 */
@@ -3966,7 +3966,7 @@ type TaobaoDeliveryTemplateGetResponse struct {
     
 }
 
-// TaobaoPictureUserinfoGetRequest 查询用户的图片空间使用信息，包括：订购量，已使用容量，免费容量，总的可使用容量，订购有效期，剩余容量
+/* TaobaoPictureUserinfoGetRequest 查询用户的图片空间使用信息，包括：订购量，已使用容量，免费容量，总的可使用容量，订购有效期，剩余容量 */
 type TaobaoPictureUserinfoGetRequest struct {
     
 }
@@ -3975,7 +3975,7 @@ func (req *TaobaoPictureUserinfoGetRequest) GetAPIName() string {
 	return "taobao.picture.userinfo.get"
 }
 
-// TaobaoPictureUserinfoGetResponse 查询用户的图片空间使用信息，包括：订购量，已使用容量，免费容量，总的可使用容量，订购有效期，剩余容量
+/* TaobaoPictureUserinfoGetResponse 查询用户的图片空间使用信息，包括：订购量，已使用容量，免费容量，总的可使用容量，订购有效期，剩余容量 */
 type TaobaoPictureUserinfoGetResponse struct {
     
     /* user_info Object用户使用图片空间的信息 */
@@ -3983,11 +3983,11 @@ type TaobaoPictureUserinfoGetResponse struct {
     
 }
 
-// TaobaoPictureReplaceRequest 替换一张图片，只替换图片数据，图片名称，图片分类等保持不变。
+/* TaobaoPictureReplaceRequest 替换一张图片，只替换图片数据，图片名称，图片分类等保持不变。 */
 type TaobaoPictureReplaceRequest struct {
     
     /* image_data required图片二进制文件流,不能为空,允许png、jpg、gif图片格式 */
-    image_data byte[] `json:"image_data";xml:"image_data"`
+    image_data []byte `json:"image_data";xml:"image_data"`
     
     /* picture_id required要替换的图片的id，必须大于0 */
     picture_id int64 `json:"picture_id";xml:"picture_id"`
@@ -3998,7 +3998,7 @@ func (req *TaobaoPictureReplaceRequest) GetAPIName() string {
 	return "taobao.picture.replace"
 }
 
-// TaobaoPictureReplaceResponse 替换一张图片，只替换图片数据，图片名称，图片分类等保持不变。
+/* TaobaoPictureReplaceResponse 替换一张图片，只替换图片数据，图片名称，图片分类等保持不变。 */
 type TaobaoPictureReplaceResponse struct {
     
     /* done Basic图片替换是否成功 */
@@ -4006,7 +4006,7 @@ type TaobaoPictureReplaceResponse struct {
     
 }
 
-// TaobaoQimenItemsMarkingRequest 调用该接口，对商品进行XXXX标的打标、去标的动作。
+/* TaobaoQimenItemsMarkingRequest 调用该接口，对商品进行XXXX标的打标、去标的动作。 */
 type TaobaoQimenItemsMarkingRequest struct {
     
     /* action_type required操作类型，string（50），ADD=打标，DELETE=去标，必填 */
@@ -4027,7 +4027,7 @@ func (req *TaobaoQimenItemsMarkingRequest) GetAPIName() string {
 	return "taobao.qimen.items.marking"
 }
 
-// TaobaoQimenItemsMarkingResponse 调用该接口，对商品进行XXXX标的打标、去标的动作。
+/* TaobaoQimenItemsMarkingResponse 调用该接口，对商品进行XXXX标的打标、去标的动作。 */
 type TaobaoQimenItemsMarkingResponse struct {
     
     /* flag Basicflag */
@@ -4038,7 +4038,7 @@ type TaobaoQimenItemsMarkingResponse struct {
     
 }
 
-// TaobaoQimenTagItemsQueryRequest 调用该接口，查询打了某个标的商品列表。说明：该接口调用后，返回值的时间较长，建议不要经常调用。
+/* TaobaoQimenTagItemsQueryRequest 调用该接口，查询打了某个标的商品列表。说明：该接口调用后，返回值的时间较长，建议不要经常调用。 */
 type TaobaoQimenTagItemsQueryRequest struct {
     
     /* remark optional备注，string（500） */
@@ -4053,7 +4053,7 @@ func (req *TaobaoQimenTagItemsQueryRequest) GetAPIName() string {
 	return "taobao.qimen.tag.items.query"
 }
 
-// TaobaoQimenTagItemsQueryResponse 调用该接口，查询打了某个标的商品列表。说明：该接口调用后，返回值的时间较长，建议不要经常调用。
+/* TaobaoQimenTagItemsQueryResponse 调用该接口，查询打了某个标的商品列表。说明：该接口调用后，返回值的时间较长，建议不要经常调用。 */
 type TaobaoQimenTagItemsQueryResponse struct {
     
     /* flag Basicflag */
@@ -4070,7 +4070,7 @@ type TaobaoQimenTagItemsQueryResponse struct {
     
 }
 
-// TaobaoPictureCategoryUpdateRequest 更新图片分类的名字，或者更新图片分类的父分类（即分类移动）。只能移动2级分类到非2级分类，默认分类和1级分类不可移动。
+/* TaobaoPictureCategoryUpdateRequest 更新图片分类的名字，或者更新图片分类的父分类（即分类移动）。只能移动2级分类到非2级分类，默认分类和1级分类不可移动。 */
 type TaobaoPictureCategoryUpdateRequest struct {
     
     /* category_id required要更新的图片分类的id */
@@ -4088,7 +4088,7 @@ func (req *TaobaoPictureCategoryUpdateRequest) GetAPIName() string {
 	return "taobao.picture.category.update"
 }
 
-// TaobaoPictureCategoryUpdateResponse 更新图片分类的名字，或者更新图片分类的父分类（即分类移动）。只能移动2级分类到非2级分类，默认分类和1级分类不可移动。
+/* TaobaoPictureCategoryUpdateResponse 更新图片分类的名字，或者更新图片分类的父分类（即分类移动）。只能移动2级分类到非2级分类，默认分类和1级分类不可移动。 */
 type TaobaoPictureCategoryUpdateResponse struct {
     
     /* done Basic更新图片分类是否成功 */
@@ -4096,7 +4096,7 @@ type TaobaoPictureCategoryUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderCreateRequest 创建经销采购申请
+/* TaobaoFenxiaoDealerRequisitionorderCreateRequest 创建经销采购申请 */
 type TaobaoFenxiaoDealerRequisitionorderCreateRequest struct {
     
     /* address required收货人所在街道地址 */
@@ -4138,7 +4138,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderCreateRequest) GetAPIName() string
 	return "taobao.fenxiao.dealer.requisitionorder.create"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderCreateResponse 创建经销采购申请
+/* TaobaoFenxiaoDealerRequisitionorderCreateResponse 创建经销采购申请 */
 type TaobaoFenxiaoDealerRequisitionorderCreateResponse struct {
     
     /* dealer_order_id Basic经销采购申请编号 */
@@ -4146,7 +4146,7 @@ type TaobaoFenxiaoDealerRequisitionorderCreateResponse struct {
     
 }
 
-// TaobaoQimenItemsTagQueryRequest 调用该接口，查询某个/某批商品上的标
+/* TaobaoQimenItemsTagQueryRequest 调用该接口，查询某个/某批商品上的标 */
 type TaobaoQimenItemsTagQueryRequest struct {
     
     /* item_ids required线上淘宝商品ID，long，必填 */
@@ -4158,7 +4158,7 @@ func (req *TaobaoQimenItemsTagQueryRequest) GetAPIName() string {
 	return "taobao.qimen.items.tag.query"
 }
 
-// TaobaoQimenItemsTagQueryResponse 调用该接口，查询某个/某批商品上的标
+/* TaobaoQimenItemsTagQueryResponse 调用该接口，查询某个/某批商品上的标 */
 type TaobaoQimenItemsTagQueryResponse struct {
     
     /* flag Basicflag */
@@ -4172,7 +4172,7 @@ type TaobaoQimenItemsTagQueryResponse struct {
     
 }
 
-// TaobaoInventoryWarehouseManageRequest 创建商家仓或者更新商家仓信息
+/* TaobaoInventoryWarehouseManageRequest 创建商家仓或者更新商家仓信息 */
 type TaobaoInventoryWarehouseManageRequest struct {
     
     /* ware_house_dto required仓库信息 */
@@ -4184,7 +4184,7 @@ func (req *TaobaoInventoryWarehouseManageRequest) GetAPIName() string {
 	return "taobao.inventory.warehouse.manage"
 }
 
-// TaobaoInventoryWarehouseManageResponse 创建商家仓或者更新商家仓信息
+/* TaobaoInventoryWarehouseManageResponse 创建商家仓或者更新商家仓信息 */
 type TaobaoInventoryWarehouseManageResponse struct {
     
     /* result Objectresult */
@@ -4192,7 +4192,7 @@ type TaobaoInventoryWarehouseManageResponse struct {
     
 }
 
-// TaobaoInventoryWarehouseGetRequest 获取商家仓信息
+/* TaobaoInventoryWarehouseGetRequest 获取商家仓信息 */
 type TaobaoInventoryWarehouseGetRequest struct {
     
     /* store_code required仓库编码 */
@@ -4204,7 +4204,7 @@ func (req *TaobaoInventoryWarehouseGetRequest) GetAPIName() string {
 	return "taobao.inventory.warehouse.get"
 }
 
-// TaobaoInventoryWarehouseGetResponse 获取商家仓信息
+/* TaobaoInventoryWarehouseGetResponse 获取商家仓信息 */
 type TaobaoInventoryWarehouseGetResponse struct {
     
     /* result Objectresult */
@@ -4212,7 +4212,7 @@ type TaobaoInventoryWarehouseGetResponse struct {
     
 }
 
-// TaobaoWlbOutInventoryChangeNotifyRequest 拥有自有仓的企业物流用户通过该接口把自有仓的库存通知到物流宝，由物流宝维护该库存，控制前台显示库存的准确性。
+/* TaobaoWlbOutInventoryChangeNotifyRequest 拥有自有仓的企业物流用户通过该接口把自有仓的库存通知到物流宝，由物流宝维护该库存，控制前台显示库存的准确性。 */
 type TaobaoWlbOutInventoryChangeNotifyRequest struct {
     
     /* change_count required库存变化数量 */
@@ -4248,7 +4248,7 @@ func (req *TaobaoWlbOutInventoryChangeNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.out.inventory.change.notify"
 }
 
-// TaobaoWlbOutInventoryChangeNotifyResponse 拥有自有仓的企业物流用户通过该接口把自有仓的库存通知到物流宝，由物流宝维护该库存，控制前台显示库存的准确性。
+/* TaobaoWlbOutInventoryChangeNotifyResponse 拥有自有仓的企业物流用户通过该接口把自有仓的库存通知到物流宝，由物流宝维护该库存，控制前台显示库存的准确性。 */
 type TaobaoWlbOutInventoryChangeNotifyResponse struct {
     
     /* gmt_modified Basic库存变化通知成功时间 */
@@ -4256,7 +4256,7 @@ type TaobaoWlbOutInventoryChangeNotifyResponse struct {
     
 }
 
-// TaobaoInventoryWarehouseQueryRequest 分页查询商家仓信息
+/* TaobaoInventoryWarehouseQueryRequest 分页查询商家仓信息 */
 type TaobaoInventoryWarehouseQueryRequest struct {
     
     /* page_no required页码 */
@@ -4271,7 +4271,7 @@ func (req *TaobaoInventoryWarehouseQueryRequest) GetAPIName() string {
 	return "taobao.inventory.warehouse.query"
 }
 
-// TaobaoInventoryWarehouseQueryResponse 分页查询商家仓信息
+/* TaobaoInventoryWarehouseQueryResponse 分页查询商家仓信息 */
 type TaobaoInventoryWarehouseQueryResponse struct {
     
     /* result Objectresult */
@@ -4279,8 +4279,8 @@ type TaobaoInventoryWarehouseQueryResponse struct {
     
 }
 
-// TaobaoTradePostageUpdateRequest 修改订单邮费接口，通过传入订单编号和邮费价格，修改订单的邮费，返回修改时间modified,邮费post_fee,总费用total_fee。
-<br/> <span style="color:red"> API取消加邮费功能通知：http://open.taobao.com/support/announcement_detail.htm?tid=24750</span>
+/* TaobaoTradePostageUpdateRequest 修改订单邮费接口，通过传入订单编号和邮费价格，修改订单的邮费，返回修改时间modified,邮费post_fee,总费用total_fee。
+<br/> <span style="color:red"> API取消加邮费功能通知：http://open.taobao.com/support/announcement_detail.htm?tid=24750</span> */
 type TaobaoTradePostageUpdateRequest struct {
     
     /* post_fee required邮费价格(邮费单位是元） */
@@ -4295,8 +4295,8 @@ func (req *TaobaoTradePostageUpdateRequest) GetAPIName() string {
 	return "taobao.trade.postage.update"
 }
 
-// TaobaoTradePostageUpdateResponse 修改订单邮费接口，通过传入订单编号和邮费价格，修改订单的邮费，返回修改时间modified,邮费post_fee,总费用total_fee。
-<br/> <span style="color:red"> API取消加邮费功能通知：http://open.taobao.com/support/announcement_detail.htm?tid=24750</span>
+/* TaobaoTradePostageUpdateResponse 修改订单邮费接口，通过传入订单编号和邮费价格，修改订单的邮费，返回修改时间modified,邮费post_fee,总费用total_fee。
+<br/> <span style="color:red"> API取消加邮费功能通知：http://open.taobao.com/support/announcement_detail.htm?tid=24750</span> */
 type TaobaoTradePostageUpdateResponse struct {
     
     /* trade Object返回trade类型，其中包含修改时间modified，修改邮费post_fee，修改后的总费用total_fee和买家实付款payment */
@@ -4304,7 +4304,7 @@ type TaobaoTradePostageUpdateResponse struct {
     
 }
 
-// TaobaoQimenStockoutConfirmRequest 货品出库后，WMS将状态回传给ERP
+/* TaobaoQimenStockoutConfirmRequest 货品出库后，WMS将状态回传给ERP */
 type TaobaoQimenStockoutConfirmRequest struct {
     
     /* deliveryOrder optionaldeliveryOrder */
@@ -4325,7 +4325,7 @@ func (req *TaobaoQimenStockoutConfirmRequest) GetAPIName() string {
 	return "taobao.qimen.stockout.confirm"
 }
 
-// TaobaoQimenStockoutConfirmResponse 货品出库后，WMS将状态回传给ERP
+/* TaobaoQimenStockoutConfirmResponse 货品出库后，WMS将状态回传给ERP */
 type TaobaoQimenStockoutConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -4339,7 +4339,7 @@ type TaobaoQimenStockoutConfirmResponse struct {
     
 }
 
-// TaobaoItemDeleteRequest 删除单条商品
+/* TaobaoItemDeleteRequest 删除单条商品 */
 type TaobaoItemDeleteRequest struct {
     
     /* num_iid required商品数字ID，该参数必须 */
@@ -4351,7 +4351,7 @@ func (req *TaobaoItemDeleteRequest) GetAPIName() string {
 	return "taobao.item.delete"
 }
 
-// TaobaoItemDeleteResponse 删除单条商品
+/* TaobaoItemDeleteResponse 删除单条商品 */
 type TaobaoItemDeleteResponse struct {
     
     /* item Object被删除商品的相关信息 */
@@ -4359,7 +4359,7 @@ type TaobaoItemDeleteResponse struct {
     
 }
 
-// TaobaoOmniorderStoreSwitchstatusGetRequest 查询门店发货、门店自提状态
+/* TaobaoOmniorderStoreSwitchstatusGetRequest 查询门店发货、门店自提状态 */
 type TaobaoOmniorderStoreSwitchstatusGetRequest struct {
     
     /* seller_id required卖家ID */
@@ -4374,7 +4374,7 @@ func (req *TaobaoOmniorderStoreSwitchstatusGetRequest) GetAPIName() string {
 	return "taobao.omniorder.store.switchstatus.get"
 }
 
-// TaobaoOmniorderStoreSwitchstatusGetResponse 查询门店发货、门店自提状态
+/* TaobaoOmniorderStoreSwitchstatusGetResponse 查询门店发货、门店自提状态 */
 type TaobaoOmniorderStoreSwitchstatusGetResponse struct {
     
     /* result Objectresult */
@@ -4382,7 +4382,7 @@ type TaobaoOmniorderStoreSwitchstatusGetResponse struct {
     
 }
 
-// CainiaoSmartdeliveryStrategyIUpdateRequest 更新智能发货引擎发货策略设置
+/* CainiaoSmartdeliveryStrategyIUpdateRequest 更新智能发货引擎发货策略设置 */
 type CainiaoSmartdeliveryStrategyIUpdateRequest struct {
     
     /* delivery_strategy_info required发货策略信息 */
@@ -4394,7 +4394,7 @@ func (req *CainiaoSmartdeliveryStrategyIUpdateRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.strategy.i.update"
 }
 
-// CainiaoSmartdeliveryStrategyIUpdateResponse 更新智能发货引擎发货策略设置
+/* CainiaoSmartdeliveryStrategyIUpdateResponse 更新智能发货引擎发货策略设置 */
 type CainiaoSmartdeliveryStrategyIUpdateResponse struct {
     
     /* successful Basic设置是否成功 */
@@ -4402,7 +4402,7 @@ type CainiaoSmartdeliveryStrategyIUpdateResponse struct {
     
 }
 
-// CainiaoSmartdeliveryPriceofferIQueryRequest 查询智能发货引擎商家价格信息
+/* CainiaoSmartdeliveryPriceofferIQueryRequest 查询智能发货引擎商家价格信息 */
 type CainiaoSmartdeliveryPriceofferIQueryRequest struct {
     
     /* query_cp_price_info_request required请求参数 */
@@ -4414,7 +4414,7 @@ func (req *CainiaoSmartdeliveryPriceofferIQueryRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.priceoffer.i.query"
 }
 
-// CainiaoSmartdeliveryPriceofferIQueryResponse 查询智能发货引擎商家价格信息
+/* CainiaoSmartdeliveryPriceofferIQueryResponse 查询智能发货引擎商家价格信息 */
 type CainiaoSmartdeliveryPriceofferIQueryResponse struct {
     
     /* cp_price_info_list Object Array返回结果列表 */
@@ -4422,11 +4422,11 @@ type CainiaoSmartdeliveryPriceofferIQueryResponse struct {
     
 }
 
-// TaobaoOpenuidChangeRequest 将当前应用所属的openUId 转换为对应targetAppkey的openUid
+/* TaobaoOpenuidChangeRequest 将当前应用所属的openUId 转换为对应targetAppkey的openUid
 规则：
 1.如果两个appkey是应用前后台关系，可以直接转换；
 2.如果appkey和targetAppkey都属于同一个开发者，不允许互相转换。
-3.如果appkey和targetAppkey不属于同一个开发者，不允许互相转换。
+3.如果appkey和targetAppkey不属于同一个开发者，不允许互相转换。 */
 type TaobaoOpenuidChangeRequest struct {
     
     /* open_uid requiredopenUid */
@@ -4441,11 +4441,11 @@ func (req *TaobaoOpenuidChangeRequest) GetAPIName() string {
 	return "taobao.openuid.change"
 }
 
-// TaobaoOpenuidChangeResponse 将当前应用所属的openUId 转换为对应targetAppkey的openUid
+/* TaobaoOpenuidChangeResponse 将当前应用所属的openUId 转换为对应targetAppkey的openUid
 规则：
 1.如果两个appkey是应用前后台关系，可以直接转换；
 2.如果appkey和targetAppkey都属于同一个开发者，不允许互相转换。
-3.如果appkey和targetAppkey不属于同一个开发者，不允许互相转换。
+3.如果appkey和targetAppkey不属于同一个开发者，不允许互相转换。 */
 type TaobaoOpenuidChangeResponse struct {
     
     /* new_open_uid Basic转换到新的openUId */
@@ -4453,7 +4453,7 @@ type TaobaoOpenuidChangeResponse struct {
     
 }
 
-// AlibabaElectronicInvoiceGetRequest 查询已回传淘宝的电子发票,根据主订单id查询
+/* AlibabaElectronicInvoiceGetRequest 查询已回传淘宝的电子发票,根据主订单id查询 */
 type AlibabaElectronicInvoiceGetRequest struct {
     
     /* tid required淘宝主订单号 */
@@ -4465,7 +4465,7 @@ func (req *AlibabaElectronicInvoiceGetRequest) GetAPIName() string {
 	return "alibaba.electronic.invoice.get"
 }
 
-// AlibabaElectronicInvoiceGetResponse 查询已回传淘宝的电子发票,根据主订单id查询
+/* AlibabaElectronicInvoiceGetResponse 查询已回传淘宝的电子发票,根据主订单id查询 */
 type AlibabaElectronicInvoiceGetResponse struct {
     
     /* invoice_detail Object电子发票详细信息 */
@@ -4473,14 +4473,14 @@ type AlibabaElectronicInvoiceGetResponse struct {
     
 }
 
-// TaobaoRefundMessageAddRequest 创建退款留言/凭证
+/* TaobaoRefundMessageAddRequest 创建退款留言/凭证 */
 type TaobaoRefundMessageAddRequest struct {
     
     /* content required留言内容。最大长度: 400个字节 */
     content string `json:"content";xml:"content"`
     
     /* image required图片（凭证）。类型: JPG,GIF,PNG;最大为: 500K */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* refund_id required退款编号。 */
     refund_id int64 `json:"refund_id";xml:"refund_id"`
@@ -4491,7 +4491,7 @@ func (req *TaobaoRefundMessageAddRequest) GetAPIName() string {
 	return "taobao.refund.message.add"
 }
 
-// TaobaoRefundMessageAddResponse 创建退款留言/凭证
+/* TaobaoRefundMessageAddResponse 创建退款留言/凭证 */
 type TaobaoRefundMessageAddResponse struct {
     
     /* refund_message Object退款信息。包含id和created */
@@ -4499,7 +4499,7 @@ type TaobaoRefundMessageAddResponse struct {
     
 }
 
-// TaobaoRefundMessagesGetRequest 查询退款留言/凭证列表
+/* TaobaoRefundMessagesGetRequest 查询退款留言/凭证列表 */
 type TaobaoRefundMessagesGetRequest struct {
     
     /* fields required需返回的字段列表。可选值：RefundMessage结构体中的所有字段，以半角逗号(,)分隔。 */
@@ -4523,7 +4523,7 @@ func (req *TaobaoRefundMessagesGetRequest) GetAPIName() string {
 	return "taobao.refund.messages.get"
 }
 
-// TaobaoRefundMessagesGetResponse 查询退款留言/凭证列表
+/* TaobaoRefundMessagesGetResponse 查询退款留言/凭证列表 */
 type TaobaoRefundMessagesGetResponse struct {
     
     /* refund_messages Object Array查询到的退款留言/凭证列表 */
@@ -4534,7 +4534,7 @@ type TaobaoRefundMessagesGetResponse struct {
     
 }
 
-// CainiaoSmartdeliveryPriceofferIUpdateRequest 智能发货引擎更新价格信息模板
+/* CainiaoSmartdeliveryPriceofferIUpdateRequest 智能发货引擎更新价格信息模板 */
 type CainiaoSmartdeliveryPriceofferIUpdateRequest struct {
     
     /* cp_price_info required物流公司价格信息 */
@@ -4546,7 +4546,7 @@ func (req *CainiaoSmartdeliveryPriceofferIUpdateRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.priceoffer.i.update"
 }
 
-// CainiaoSmartdeliveryPriceofferIUpdateResponse 智能发货引擎更新价格信息模板
+/* CainiaoSmartdeliveryPriceofferIUpdateResponse 智能发货引擎更新价格信息模板 */
 type CainiaoSmartdeliveryPriceofferIUpdateResponse struct {
     
     /* successful Basic设置是否成功 */
@@ -4554,7 +4554,7 @@ type CainiaoSmartdeliveryPriceofferIUpdateResponse struct {
     
 }
 
-// CainiaoSmartdeliveryCocpsIQueryRequest 获取电子面单订购关系中智能发货引擎支持的合作物流公司
+/* CainiaoSmartdeliveryCocpsIQueryRequest 获取电子面单订购关系中智能发货引擎支持的合作物流公司 */
 type CainiaoSmartdeliveryCocpsIQueryRequest struct {
     
     /* send_address optional发货地址 */
@@ -4566,7 +4566,7 @@ func (req *CainiaoSmartdeliveryCocpsIQueryRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.cocps.i.query"
 }
 
-// CainiaoSmartdeliveryCocpsIQueryResponse 获取电子面单订购关系中智能发货引擎支持的合作物流公司
+/* CainiaoSmartdeliveryCocpsIQueryResponse 获取电子面单订购关系中智能发货引擎支持的合作物流公司 */
 type CainiaoSmartdeliveryCocpsIQueryResponse struct {
     
     /* smart_delivery_collaborate_cps_info_list Object Array返回结果 */
@@ -4574,7 +4574,7 @@ type CainiaoSmartdeliveryCocpsIQueryResponse struct {
     
 }
 
-// TaobaoTraderateImprImprwordsGetRequest 根据淘宝后台类目的一级类目和叶子类目
+/* TaobaoTraderateImprImprwordsGetRequest 根据淘宝后台类目的一级类目和叶子类目 */
 type TaobaoTraderateImprImprwordsGetRequest struct {
     
     /* cat_leaf_id optional淘宝叶子类目id */
@@ -4589,7 +4589,7 @@ func (req *TaobaoTraderateImprImprwordsGetRequest) GetAPIName() string {
 	return "taobao.traderate.impr.imprwords.get"
 }
 
-// TaobaoTraderateImprImprwordsGetResponse 根据淘宝后台类目的一级类目和叶子类目
+/* TaobaoTraderateImprImprwordsGetResponse 根据淘宝后台类目的一级类目和叶子类目 */
 type TaobaoTraderateImprImprwordsGetResponse struct {
     
     /* impr_words Basic Array返回类目下所有大家印象的标签 */
@@ -4597,7 +4597,7 @@ type TaobaoTraderateImprImprwordsGetResponse struct {
     
 }
 
-// TaobaoItemcatsGetRequest 获取后台供卖家发布商品的标准商品类目。
+/* TaobaoItemcatsGetRequest 获取后台供卖家发布商品的标准商品类目。 */
 type TaobaoItemcatsGetRequest struct {
     
     /* cids special商品所属类目ID列表，用半角逗号(,)分隔 例如:(18957,19562,) (cids、parent_cid至少传一个) */
@@ -4618,7 +4618,7 @@ func (req *TaobaoItemcatsGetRequest) GetAPIName() string {
 	return "taobao.itemcats.get"
 }
 
-// TaobaoItemcatsGetResponse 获取后台供卖家发布商品的标准商品类目。
+/* TaobaoItemcatsGetResponse 获取后台供卖家发布商品的标准商品类目。 */
 type TaobaoItemcatsGetResponse struct {
     
     /* item_cats Object Array增量类目信息,根据fields传入的参数返回相应的结果；增量类目信息,根据fields传入的参数返回相应的结果。 features字段： 1、如果存在attr_key=freeze表示该类目被冻结了，attr_value=0,5，value可能存在2个值（也可能只有1个），用逗号分割，0表示禁编辑，5表示禁止发布 */
@@ -4629,7 +4629,7 @@ type TaobaoItemcatsGetResponse struct {
     
 }
 
-// TaobaoItempropsGetRequest 通过设置必要的参数，来获取商品后台标准类目属性，以及这些属性里面详细的属性值prop_values。
+/* TaobaoItempropsGetRequest 通过设置必要的参数，来获取商品后台标准类目属性，以及这些属性里面详细的属性值prop_values。 */
 type TaobaoItempropsGetRequest struct {
     
     /* attr_keys optional属性的Key，支持多条，以“,”分隔 */
@@ -4680,7 +4680,7 @@ func (req *TaobaoItempropsGetRequest) GetAPIName() string {
 	return "taobao.itemprops.get"
 }
 
-// TaobaoItempropsGetResponse 通过设置必要的参数，来获取商品后台标准类目属性，以及这些属性里面详细的属性值prop_values。
+/* TaobaoItempropsGetResponse 通过设置必要的参数，来获取商品后台标准类目属性，以及这些属性里面详细的属性值prop_values。 */
 type TaobaoItempropsGetResponse struct {
     
     /* item_props Object Array类目属性信息(如果是取全量或者增量，不包括属性值),根据fields传入的参数返回相应的结果 */
@@ -4691,7 +4691,7 @@ type TaobaoItempropsGetResponse struct {
     
 }
 
-// CainiaoSmartdeliveryStrategyIQueryRequest 查询智能发货引擎发货策略设置
+/* CainiaoSmartdeliveryStrategyIQueryRequest 查询智能发货引擎发货策略设置 */
 type CainiaoSmartdeliveryStrategyIQueryRequest struct {
     
     /* send_address optional发货地址 */
@@ -4703,7 +4703,7 @@ func (req *CainiaoSmartdeliveryStrategyIQueryRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.strategy.i.query"
 }
 
-// CainiaoSmartdeliveryStrategyIQueryResponse 查询智能发货引擎发货策略设置
+/* CainiaoSmartdeliveryStrategyIQueryResponse 查询智能发货引擎发货策略设置 */
 type CainiaoSmartdeliveryStrategyIQueryResponse struct {
     
     /* delivery_strategy_info_list Object Array返回结果列表 */
@@ -4711,7 +4711,7 @@ type CainiaoSmartdeliveryStrategyIQueryResponse struct {
     
 }
 
-// TaobaoTraderateImprImprwordByfeedidGetRequest 根据卖家nick和交易id（如果是子订单，输入子订单id），查询到该条评价的大家印象标签
+/* TaobaoTraderateImprImprwordByfeedidGetRequest 根据卖家nick和交易id（如果是子订单，输入子订单id），查询到该条评价的大家印象标签 */
 type TaobaoTraderateImprImprwordByfeedidGetRequest struct {
     
     /* child_trade_id required交易订单id号（如果包含子订单，请使用子订单id号） */
@@ -4723,7 +4723,7 @@ func (req *TaobaoTraderateImprImprwordByfeedidGetRequest) GetAPIName() string {
 	return "taobao.traderate.impr.imprword.byfeedid.get"
 }
 
-// TaobaoTraderateImprImprwordByfeedidGetResponse 根据卖家nick和交易id（如果是子订单，输入子订单id），查询到该条评价的大家印象标签
+/* TaobaoTraderateImprImprwordByfeedidGetResponse 根据卖家nick和交易id（如果是子订单，输入子订单id），查询到该条评价的大家印象标签 */
 type TaobaoTraderateImprImprwordByfeedidGetResponse struct {
     
     /* impr_feed Object根据子订单和买家昵称找到的评价和印象词结果 */
@@ -4731,7 +4731,7 @@ type TaobaoTraderateImprImprwordByfeedidGetResponse struct {
     
 }
 
-// TaobaoTimeGetRequest 获取淘宝系统当前时间
+/* TaobaoTimeGetRequest 获取淘宝系统当前时间 */
 type TaobaoTimeGetRequest struct {
     
 }
@@ -4740,7 +4740,7 @@ func (req *TaobaoTimeGetRequest) GetAPIName() string {
 	return "taobao.time.get"
 }
 
-// TaobaoTimeGetResponse 获取淘宝系统当前时间
+/* TaobaoTimeGetResponse 获取淘宝系统当前时间 */
 type TaobaoTimeGetResponse struct {
     
     /* time Basic淘宝系统当前时间。格式:yyyy-MM-dd HH:mm:ss */
@@ -4748,7 +4748,7 @@ type TaobaoTimeGetResponse struct {
     
 }
 
-// TaobaoPictureCategoryGetRequest 获取图片分类信息
+/* TaobaoPictureCategoryGetRequest 获取图片分类信息 */
 type TaobaoPictureCategoryGetRequest struct {
     
     /* modified_time optional图片分类的修改时间点，格式:yyyy-MM-dd HH:mm:ss。查询此修改时间点之后到目前的图片分类。 */
@@ -4774,7 +4774,7 @@ func (req *TaobaoPictureCategoryGetRequest) GetAPIName() string {
 	return "taobao.picture.category.get"
 }
 
-// TaobaoPictureCategoryGetResponse 获取图片分类信息
+/* TaobaoPictureCategoryGetResponse 获取图片分类信息 */
 type TaobaoPictureCategoryGetResponse struct {
     
     /* picture_categories Object Array图片分类 */
@@ -4782,7 +4782,7 @@ type TaobaoPictureCategoryGetResponse struct {
     
 }
 
-// TaobaoOmniorderStoreAccpetedRequest ISV Pos端门店接单，通知星盘
+/* TaobaoOmniorderStoreAccpetedRequest ISV Pos端门店接单，通知星盘 */
 type TaobaoOmniorderStoreAccpetedRequest struct {
     
     /* report_timestamp requiredISV系统上报时间 */
@@ -4803,7 +4803,7 @@ func (req *TaobaoOmniorderStoreAccpetedRequest) GetAPIName() string {
 	return "taobao.omniorder.store.accpeted"
 }
 
-// TaobaoOmniorderStoreAccpetedResponse ISV Pos端门店接单，通知星盘
+/* TaobaoOmniorderStoreAccpetedResponse ISV Pos端门店接单，通知星盘 */
 type TaobaoOmniorderStoreAccpetedResponse struct {
     
     /* err_code Basic错误码 */
@@ -4814,7 +4814,7 @@ type TaobaoOmniorderStoreAccpetedResponse struct {
     
 }
 
-// TaobaoPictureDeleteRequest 删除图片空间图片
+/* TaobaoPictureDeleteRequest 删除图片空间图片 */
 type TaobaoPictureDeleteRequest struct {
     
     /* picture_ids required图片ID字符串,可以一个也可以一组,用英文逗号间隔,如450,120,155.限制数量是100 */
@@ -4826,7 +4826,7 @@ func (req *TaobaoPictureDeleteRequest) GetAPIName() string {
 	return "taobao.picture.delete"
 }
 
-// TaobaoPictureDeleteResponse 删除图片空间图片
+/* TaobaoPictureDeleteResponse 删除图片空间图片 */
 type TaobaoPictureDeleteResponse struct {
     
     /* success Basic是否删除 */
@@ -4834,7 +4834,7 @@ type TaobaoPictureDeleteResponse struct {
     
 }
 
-// TaobaoOmniorderStoreRefusedRequest ISV Pos端门店拒单，通知星盘
+/* TaobaoOmniorderStoreRefusedRequest ISV Pos端门店拒单，通知星盘 */
 type TaobaoOmniorderStoreRefusedRequest struct {
     
     /* report_timestamp requiredISV的系统时间 */
@@ -4855,7 +4855,7 @@ func (req *TaobaoOmniorderStoreRefusedRequest) GetAPIName() string {
 	return "taobao.omniorder.store.refused"
 }
 
-// TaobaoOmniorderStoreRefusedResponse ISV Pos端门店拒单，通知星盘
+/* TaobaoOmniorderStoreRefusedResponse ISV Pos端门店拒单，通知星盘 */
 type TaobaoOmniorderStoreRefusedResponse struct {
     
     /* err_code Basic正常为0,其他表示异常 */
@@ -4866,7 +4866,7 @@ type TaobaoOmniorderStoreRefusedResponse struct {
     
 }
 
-// TaobaoPictureGetRequest 获取图片信息
+/* TaobaoPictureGetRequest 获取图片信息 */
 type TaobaoPictureGetRequest struct {
     
     /* client_type optional图片使用，如果是pc宝贝detail使用，设置为client:computer，查询出来的图片是符合pc的宝贝detail显示的如果是手机宝贝detail使用，设置为client:phone，查询出来的图片是符合手机的宝贝detail显示的,默认值是全部 */
@@ -4914,7 +4914,7 @@ func (req *TaobaoPictureGetRequest) GetAPIName() string {
 	return "taobao.picture.get"
 }
 
-// TaobaoPictureGetResponse 获取图片信息
+/* TaobaoPictureGetResponse 获取图片信息 */
 type TaobaoPictureGetResponse struct {
     
     /* pictures Object Array图片信息列表 */
@@ -4925,7 +4925,7 @@ type TaobaoPictureGetResponse struct {
     
 }
 
-// TaobaoOmniorderStoreConsignedRequest ISV Pos端门店发货，通知星盘
+/* TaobaoOmniorderStoreConsignedRequest ISV Pos端门店发货，通知星盘 */
 type TaobaoOmniorderStoreConsignedRequest struct {
     
     /* report_timestamp requiredISV系统上报时间 */
@@ -4946,7 +4946,7 @@ func (req *TaobaoOmniorderStoreConsignedRequest) GetAPIName() string {
 	return "taobao.omniorder.store.consigned"
 }
 
-// TaobaoOmniorderStoreConsignedResponse ISV Pos端门店发货，通知星盘
+/* TaobaoOmniorderStoreConsignedResponse ISV Pos端门店发货，通知星盘 */
 type TaobaoOmniorderStoreConsignedResponse struct {
     
     /* data Objectdata */
@@ -4960,7 +4960,7 @@ type TaobaoOmniorderStoreConsignedResponse struct {
     
 }
 
-// TaobaoPictureUploadRequest 图片空间上传接口
+/* TaobaoPictureUploadRequest 图片空间上传接口 */
 type TaobaoPictureUploadRequest struct {
     
     /* client_type optional图片上传的来源，有电脑版本宝贝发布，手机版本宝贝发布client:computer电脑版本宝贝使用，client:phone手机版本宝贝使用。注意：当client:phone时，图片限制为宽度在480-620之间，长度不能超过960，否则会报错。 */
@@ -4970,7 +4970,7 @@ type TaobaoPictureUploadRequest struct {
     image_input_title string `json:"image_input_title";xml:"image_input_title"`
     
     /* img required图片二进制文件流,不能为空,允许png、jpg、gif图片格式,3M以内。 */
-    img byte[] `json:"img";xml:"img"`
+    img []byte `json:"img";xml:"img"`
     
     /* is_https optional是否获取https连接 */
     is_https bool `json:"is_https";xml:"is_https"`
@@ -4990,7 +4990,7 @@ func (req *TaobaoPictureUploadRequest) GetAPIName() string {
 	return "taobao.picture.upload"
 }
 
-// TaobaoPictureUploadResponse 图片空间上传接口
+/* TaobaoPictureUploadResponse 图片空间上传接口 */
 type TaobaoPictureUploadResponse struct {
     
     /* picture Object当前上传的一张图片信息 */
@@ -4998,7 +4998,7 @@ type TaobaoPictureUploadResponse struct {
     
 }
 
-// TaobaoTopSecretRegisterRequest 提供给isv注册非淘系账号秘钥，isv依赖sdk自主加、解密
+/* TaobaoTopSecretRegisterRequest 提供给isv注册非淘系账号秘钥，isv依赖sdk自主加、解密 */
 type TaobaoTopSecretRegisterRequest struct {
     
     /* user_id optional用户id，保证唯一 */
@@ -5010,7 +5010,7 @@ func (req *TaobaoTopSecretRegisterRequest) GetAPIName() string {
 	return "taobao.top.secret.register"
 }
 
-// TaobaoTopSecretRegisterResponse 提供给isv注册非淘系账号秘钥，isv依赖sdk自主加、解密
+/* TaobaoTopSecretRegisterResponse 提供给isv注册非淘系账号秘钥，isv依赖sdk自主加、解密 */
 type TaobaoTopSecretRegisterResponse struct {
     
     /* result Basic返回操作是否成功 */
@@ -5018,7 +5018,7 @@ type TaobaoTopSecretRegisterResponse struct {
     
 }
 
-// TaobaoMediaCategoryUpdateRequest 更新媒体文件分类
+/* TaobaoMediaCategoryUpdateRequest 更新媒体文件分类 */
 type TaobaoMediaCategoryUpdateRequest struct {
     
     /* media_category_id required文件分类ID,不能为空 */
@@ -5033,7 +5033,7 @@ func (req *TaobaoMediaCategoryUpdateRequest) GetAPIName() string {
 	return "taobao.media.category.update"
 }
 
-// TaobaoMediaCategoryUpdateResponse 更新媒体文件分类
+/* TaobaoMediaCategoryUpdateResponse 更新媒体文件分类 */
 type TaobaoMediaCategoryUpdateResponse struct {
     
     /* success Basic更新是否成功标志 */
@@ -5041,7 +5041,7 @@ type TaobaoMediaCategoryUpdateResponse struct {
     
 }
 
-// TaobaoOmniorderAllocatedinfoSyncRequest ISV分单完成，将分单结果同步给星盘
+/* TaobaoOmniorderAllocatedinfoSyncRequest ISV分单完成，将分单结果同步给星盘 */
 type TaobaoOmniorderAllocatedinfoSyncRequest struct {
     
     /* message optional分单结果消息, 如果status为AllocateFail, 则表示失败的理由. */
@@ -5068,7 +5068,7 @@ func (req *TaobaoOmniorderAllocatedinfoSyncRequest) GetAPIName() string {
 	return "taobao.omniorder.allocatedinfo.sync"
 }
 
-// TaobaoOmniorderAllocatedinfoSyncResponse ISV分单完成，将分单结果同步给星盘
+/* TaobaoOmniorderAllocatedinfoSyncResponse ISV分单完成，将分单结果同步给星盘 */
 type TaobaoOmniorderAllocatedinfoSyncResponse struct {
     
     /* err_code Basic错误码 */
@@ -5079,7 +5079,7 @@ type TaobaoOmniorderAllocatedinfoSyncResponse struct {
     
 }
 
-// TaobaoQimenOrderexceptionReportRequest WMS调用奇门的接口,当WMS接收到ERP的发货指令时，由于种种原因（5.1.5说明了各种异常场景）可能无法完成发货。WMS通过调用此接口，通知ERP具体异常情况
+/* TaobaoQimenOrderexceptionReportRequest WMS调用奇门的接口,当WMS接收到ERP的发货指令时，由于种种原因（5.1.5说明了各种异常场景）可能无法完成发货。WMS通过调用此接口，通知ERP具体异常情况 */
 type TaobaoQimenOrderexceptionReportRequest struct {
     
     /* createTime optional奇门仓储字段 */
@@ -5127,7 +5127,7 @@ func (req *TaobaoQimenOrderexceptionReportRequest) GetAPIName() string {
 	return "taobao.qimen.orderexception.report"
 }
 
-// TaobaoQimenOrderexceptionReportResponse WMS调用奇门的接口,当WMS接收到ERP的发货指令时，由于种种原因（5.1.5说明了各种异常场景）可能无法完成发货。WMS通过调用此接口，通知ERP具体异常情况
+/* TaobaoQimenOrderexceptionReportResponse WMS调用奇门的接口,当WMS接收到ERP的发货指令时，由于种种原因（5.1.5说明了各种异常场景）可能无法完成发货。WMS通过调用此接口，通知ERP具体异常情况 */
 type TaobaoQimenOrderexceptionReportResponse struct {
     
     /* code Basic响应码 */
@@ -5141,12 +5141,12 @@ type TaobaoQimenOrderexceptionReportResponse struct {
     
 }
 
-// TaobaoTradesSoldIncrementGetRequest 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息）
+/* TaobaoTradesSoldIncrementGetRequest 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息）
 <br/>1. 一次请求只能查询时间跨度为一天的增量交易记录，即end_modified - start_modified <= 1天。
 <br/>2. 返回的数据结果是以订单的修改时间倒序排列的，通过从后往前翻页的方式可以避免漏单问题。
 <br/>3. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。
 <br/>4. <span style="color:red">使用<a href="http://open.taobao.com/doc/detail.htm?spm=0.0.0.0.F9TTxy&id=101744">消息服务</a>监听订单变更事件，可以实时获取订单更新数据。</span>
-<br/>注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）
+<br/>注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type） */
 type TaobaoTradesSoldIncrementGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -5191,12 +5191,12 @@ func (req *TaobaoTradesSoldIncrementGetRequest) GetAPIName() string {
 	return "taobao.trades.sold.increment.get"
 }
 
-// TaobaoTradesSoldIncrementGetResponse 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息）
+/* TaobaoTradesSoldIncrementGetResponse 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息）
 <br/>1. 一次请求只能查询时间跨度为一天的增量交易记录，即end_modified - start_modified <= 1天。
 <br/>2. 返回的数据结果是以订单的修改时间倒序排列的，通过从后往前翻页的方式可以避免漏单问题。
 <br/>3. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。
 <br/>4. <span style="color:red">使用<a href="http://open.taobao.com/doc/detail.htm?spm=0.0.0.0.F9TTxy&id=101744">消息服务</a>监听订单变更事件，可以实时获取订单更新数据。</span>
-<br/>注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type）
+<br/>注意：type字段的说明，如果该字段不传，接口默认只查4种类型订单，非默认查询的订单是不返回。遇到订单查不到的情况的，通常都是这个原因造成。解决办法就是type加上订单类型就可正常返回了。用taobao.trade.fullinfo.get 查订单fields返回type 很容易的能知道订单的类型（type） */
 type TaobaoTradesSoldIncrementGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -5210,7 +5210,7 @@ type TaobaoTradesSoldIncrementGetResponse struct {
     
 }
 
-// TaobaoFenxiaoRefundGetRequest 分销商或供应商可以查询某子单的退款信息，以及下游订单的退款信息
+/* TaobaoFenxiaoRefundGetRequest 分销商或供应商可以查询某子单的退款信息，以及下游订单的退款信息 */
 type TaobaoFenxiaoRefundGetRequest struct {
     
     /* query_seller_refund optional是否查询下游买家的退款信息 */
@@ -5225,7 +5225,7 @@ func (req *TaobaoFenxiaoRefundGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.refund.get"
 }
 
-// TaobaoFenxiaoRefundGetResponse 分销商或供应商可以查询某子单的退款信息，以及下游订单的退款信息
+/* TaobaoFenxiaoRefundGetResponse 分销商或供应商可以查询某子单的退款信息，以及下游订单的退款信息 */
 type TaobaoFenxiaoRefundGetResponse struct {
     
     /* refund_detail Object退款详情 */
@@ -5233,7 +5233,7 @@ type TaobaoFenxiaoRefundGetResponse struct {
     
 }
 
-// TaobaoQimenInventoryreserveCancelRequest 库存预占取消
+/* TaobaoQimenInventoryreserveCancelRequest 库存预占取消 */
 type TaobaoQimenInventoryreserveCancelRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -5257,7 +5257,7 @@ func (req *TaobaoQimenInventoryreserveCancelRequest) GetAPIName() string {
 	return "taobao.qimen.inventoryreserve.cancel"
 }
 
-// TaobaoQimenInventoryreserveCancelResponse 库存预占取消
+/* TaobaoQimenInventoryreserveCancelResponse 库存预占取消 */
 type TaobaoQimenInventoryreserveCancelResponse struct {
     
     /* code Basic响应码 */
@@ -5280,7 +5280,7 @@ type TaobaoQimenInventoryreserveCancelResponse struct {
     
 }
 
-// TaobaoQimenInventoryreserveCreateRequest ERP调用奇门的接口,查询发货库存预占用信息
+/* TaobaoQimenInventoryreserveCreateRequest ERP调用奇门的接口,查询发货库存预占用信息 */
 type TaobaoQimenInventoryreserveCreateRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -5313,7 +5313,7 @@ func (req *TaobaoQimenInventoryreserveCreateRequest) GetAPIName() string {
 	return "taobao.qimen.inventoryreserve.create"
 }
 
-// TaobaoQimenInventoryreserveCreateResponse ERP调用奇门的接口,查询发货库存预占用信息
+/* TaobaoQimenInventoryreserveCreateResponse ERP调用奇门的接口,查询发货库存预占用信息 */
 type TaobaoQimenInventoryreserveCreateResponse struct {
     
     /* code Basic响应码 */
@@ -5336,7 +5336,7 @@ type TaobaoQimenInventoryreserveCreateResponse struct {
     
 }
 
-// TaobaoFenxiaoDistributorProductsGetRequest 分销商查询供应商产品信息
+/* TaobaoFenxiaoDistributorProductsGetRequest 分销商查询供应商产品信息 */
 type TaobaoFenxiaoDistributorProductsGetRequest struct {
     
     /* download_status optionaldownload_status */
@@ -5384,7 +5384,7 @@ func (req *TaobaoFenxiaoDistributorProductsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.distributor.products.get"
 }
 
-// TaobaoFenxiaoDistributorProductsGetResponse 分销商查询供应商产品信息
+/* TaobaoFenxiaoDistributorProductsGetResponse 分销商查询供应商产品信息 */
 type TaobaoFenxiaoDistributorProductsGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -5395,7 +5395,7 @@ type TaobaoFenxiaoDistributorProductsGetResponse struct {
     
 }
 
-// TaobaoWlbOrderJzpartnerQueryRequest 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发根据服务类型查询所有的服务商列表的接口
+/* TaobaoWlbOrderJzpartnerQueryRequest 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发根据服务类型查询所有的服务商列表的接口 */
 type TaobaoWlbOrderJzpartnerQueryRequest struct {
     
     /* service_type optionalserviceType表示查询所有的支持服务类型的服务商。 家装干线服务     11 家装干支服务     12 家装干支装服务   13 卫浴大件干线     14 卫浴大件干支     15 卫浴大件安装     16 地板干线         17 地板干支         18 地板安装         19 灯具安装         20 卫浴小件安装     21 （注：同一个服务商针对不同类型的serviceType是具有不同的tpCode的） */
@@ -5410,7 +5410,7 @@ func (req *TaobaoWlbOrderJzpartnerQueryRequest) GetAPIName() string {
 	return "taobao.wlb.order.jzpartner.query"
 }
 
-// TaobaoWlbOrderJzpartnerQueryResponse 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发根据服务类型查询所有的服务商列表的接口
+/* TaobaoWlbOrderJzpartnerQueryResponse 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发根据服务类型查询所有的服务商列表的接口 */
 type TaobaoWlbOrderJzpartnerQueryResponse struct {
     
     /* install_list Object Array安装服务商列表 */
@@ -5427,7 +5427,7 @@ type TaobaoWlbOrderJzpartnerQueryResponse struct {
     
 }
 
-// TaobaoWlbOrderJzwithinsConsignRequest 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发带安装服务商的发货接口
+/* TaobaoWlbOrderJzwithinsConsignRequest 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发带安装服务商的发货接口 */
 type TaobaoWlbOrderJzwithinsConsignRequest struct {
     
     /* ins_partner optional物流服务商信息 */
@@ -5448,7 +5448,7 @@ func (req *TaobaoWlbOrderJzwithinsConsignRequest) GetAPIName() string {
 	return "taobao.wlb.order.jzwithins.consign"
 }
 
-// TaobaoWlbOrderJzwithinsConsignResponse 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发带安装服务商的发货接口
+/* TaobaoWlbOrderJzwithinsConsignResponse 为支持家装类目的商家，对绑定家装物流服务的订单可以在商家的ERP中发货、批量发货，因此开发带安装服务商的发货接口 */
 type TaobaoWlbOrderJzwithinsConsignResponse struct {
     
     /* is_success Basic发货成功或者失败 */
@@ -5459,7 +5459,7 @@ type TaobaoWlbOrderJzwithinsConsignResponse struct {
     
 }
 
-// TaobaoTradeConfirmfeeGetRequest 获取交易确认收货费用，可以获取主订单或子订单的确认收货费用
+/* TaobaoTradeConfirmfeeGetRequest 获取交易确认收货费用，可以获取主订单或子订单的确认收货费用 */
 type TaobaoTradeConfirmfeeGetRequest struct {
     
     /* tid required交易主订单或子订单ID */
@@ -5471,7 +5471,7 @@ func (req *TaobaoTradeConfirmfeeGetRequest) GetAPIName() string {
 	return "taobao.trade.confirmfee.get"
 }
 
-// TaobaoTradeConfirmfeeGetResponse 获取交易确认收货费用，可以获取主订单或子订单的确认收货费用
+/* TaobaoTradeConfirmfeeGetResponse 获取交易确认收货费用，可以获取主订单或子订单的确认收货费用 */
 type TaobaoTradeConfirmfeeGetResponse struct {
     
     /* trade_confirm_fee Object获取到的交易确认收货费用 */
@@ -5479,10 +5479,10 @@ type TaobaoTradeConfirmfeeGetResponse struct {
     
 }
 
-// TaobaoItemJointImgRequest * 关联一张商品图片到num_iid指定的商品中
+/* TaobaoItemJointImgRequest * 关联一张商品图片到num_iid指定的商品中
     * 传入的num_iid所对应的商品必须属于当前会话的用户
     * 商品图片关联在卖家身份和图片来源上的限制，卖家要是B卖家或订购了多图服务才能关联图片，并且图片要来自于卖家自己的图片空间才行
-    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额
+    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额 */
 type TaobaoItemJointImgRequest struct {
     
     /* id optional商品图片id(如果是更新图片，则需要传该参数) */
@@ -5509,10 +5509,10 @@ func (req *TaobaoItemJointImgRequest) GetAPIName() string {
 	return "taobao.item.joint.img"
 }
 
-// TaobaoItemJointImgResponse * 关联一张商品图片到num_iid指定的商品中
+/* TaobaoItemJointImgResponse * 关联一张商品图片到num_iid指定的商品中
     * 传入的num_iid所对应的商品必须属于当前会话的用户
     * 商品图片关联在卖家身份和图片来源上的限制，卖家要是B卖家或订购了多图服务才能关联图片，并且图片要来自于卖家自己的图片空间才行
-    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额
+    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额 */
 type TaobaoItemJointImgResponse struct {
     
     /* item_img Object商品图片信息 */
@@ -5520,11 +5520,11 @@ type TaobaoItemJointImgResponse struct {
     
 }
 
-// TaobaoItemJointPropimgRequest * 关联一张商品属性图片到num_iid指定的商品中
+/* TaobaoItemJointPropimgRequest * 关联一张商品属性图片到num_iid指定的商品中
     * 传入的num_iid所对应的商品必须属于当前会话的用户
     * 图片的属性必须要是颜色的属性，这个在前台显示的时候需要和sku进行关联的
     * 商品图片关联在卖家身份和图片来源上的限制，卖家要是B卖家或订购了多图服务才能关联图片，并且图片要来自于卖家自己的图片空间才行
-    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额，最多不能超过24张（每个颜色属性都有一张）
+    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额，最多不能超过24张（每个颜色属性都有一张） */
 type TaobaoItemJointPropimgRequest struct {
     
     /* id optional属性图片ID。如果是新增不需要填写 */
@@ -5548,11 +5548,11 @@ func (req *TaobaoItemJointPropimgRequest) GetAPIName() string {
 	return "taobao.item.joint.propimg"
 }
 
-// TaobaoItemJointPropimgResponse * 关联一张商品属性图片到num_iid指定的商品中
+/* TaobaoItemJointPropimgResponse * 关联一张商品属性图片到num_iid指定的商品中
     * 传入的num_iid所对应的商品必须属于当前会话的用户
     * 图片的属性必须要是颜色的属性，这个在前台显示的时候需要和sku进行关联的
     * 商品图片关联在卖家身份和图片来源上的限制，卖家要是B卖家或订购了多图服务才能关联图片，并且图片要来自于卖家自己的图片空间才行
-    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额，最多不能超过24张（每个颜色属性都有一张）
+    * 商品图片数量有限制。不管是上传的图片还是关联的图片，他们的总数不能超过一定限额，最多不能超过24张（每个颜色属性都有一张） */
 type TaobaoItemJointPropimgResponse struct {
     
     /* prop_img Object属性图片对象信息 */
@@ -5560,8 +5560,8 @@ type TaobaoItemJointPropimgResponse struct {
     
 }
 
-// TaobaoItemsCustomGetRequest 跟据卖家设定的商品外部id获取商品 
-这个商品对应卖家从传入的session中获取，需要session绑定
+/* TaobaoItemsCustomGetRequest 跟据卖家设定的商品外部id获取商品 
+这个商品对应卖家从传入的session中获取，需要session绑定 */
 type TaobaoItemsCustomGetRequest struct {
     
     /* fields required需返回的字段列表，参考：Item商品结构体说明，其中barcode、sku.barcode等条形码字段暂不支持；多个字段之间用“,”分隔。 */
@@ -5576,8 +5576,8 @@ func (req *TaobaoItemsCustomGetRequest) GetAPIName() string {
 	return "taobao.items.custom.get"
 }
 
-// TaobaoItemsCustomGetResponse 跟据卖家设定的商品外部id获取商品 
-这个商品对应卖家从传入的session中获取，需要session绑定
+/* TaobaoItemsCustomGetResponse 跟据卖家设定的商品外部id获取商品 
+这个商品对应卖家从传入的session中获取，需要session绑定 */
 type TaobaoItemsCustomGetResponse struct {
     
     /* items Object Array商品列表，具体返回字段以fields决定 */
@@ -5585,8 +5585,8 @@ type TaobaoItemsCustomGetResponse struct {
     
 }
 
-// TaobaoItemsInventoryGetRequest 获取当前用户作为卖家的仓库中的商品列表，并能根据传入的搜索条件对仓库中的商品列表进行过滤 
-只能获得商品的部分信息，商品的详细信息请通过taobao.item.seller.get获取
+/* TaobaoItemsInventoryGetRequest 获取当前用户作为卖家的仓库中的商品列表，并能根据传入的搜索条件对仓库中的商品列表进行过滤 
+只能获得商品的部分信息，商品的详细信息请通过taobao.item.seller.get获取 */
 type TaobaoItemsInventoryGetRequest struct {
     
     /* auction_type optional商品类型：a-拍卖,b-一口价 */
@@ -5647,8 +5647,8 @@ func (req *TaobaoItemsInventoryGetRequest) GetAPIName() string {
 	return "taobao.items.inventory.get"
 }
 
-// TaobaoItemsInventoryGetResponse 获取当前用户作为卖家的仓库中的商品列表，并能根据传入的搜索条件对仓库中的商品列表进行过滤 
-只能获得商品的部分信息，商品的详细信息请通过taobao.item.seller.get获取
+/* TaobaoItemsInventoryGetResponse 获取当前用户作为卖家的仓库中的商品列表，并能根据传入的搜索条件对仓库中的商品列表进行过滤 
+只能获得商品的部分信息，商品的详细信息请通过taobao.item.seller.get获取 */
 type TaobaoItemsInventoryGetResponse struct {
     
     /* items Object Array搜索到底商品列表，具体字段根据设定的fields决定，不包括desc,stuff_status字段 */
@@ -5659,7 +5659,7 @@ type TaobaoItemsInventoryGetResponse struct {
     
 }
 
-// TaobaoItemcatsAuthorizeGetRequest 查询B商家被授权品牌列表、类目列表和 c 商家新品类目列表
+/* TaobaoItemcatsAuthorizeGetRequest 查询B商家被授权品牌列表、类目列表和 c 商家新品类目列表 */
 type TaobaoItemcatsAuthorizeGetRequest struct {
     
     /* fields required需要返回的字段。目前支持有：
@@ -5679,7 +5679,7 @@ func (req *TaobaoItemcatsAuthorizeGetRequest) GetAPIName() string {
 	return "taobao.itemcats.authorize.get"
 }
 
-// TaobaoItemcatsAuthorizeGetResponse 查询B商家被授权品牌列表、类目列表和 c 商家新品类目列表
+/* TaobaoItemcatsAuthorizeGetResponse 查询B商家被授权品牌列表、类目列表和 c 商家新品类目列表 */
 type TaobaoItemcatsAuthorizeGetResponse struct {
     
     /* seller_authorize Object里面有3个数组：
@@ -5690,7 +5690,7 @@ XinpinItemCat[] 针对于C卖家新品类目列表 */
     
 }
 
-// Gfq1qp4287ShopexMatrixDatapushRequest 订单转发
+/* Gfq1qp4287ShopexMatrixDatapushRequest 订单转发 */
 type Gfq1qp4287ShopexMatrixDatapushRequest struct {
     
     /* p optional数据内容 */
@@ -5702,7 +5702,7 @@ func (req *Gfq1qp4287ShopexMatrixDatapushRequest) GetAPIName() string {
 	return "gfq1qp4287.shopex.matrix.datapush"
 }
 
-// Gfq1qp4287ShopexMatrixDatapushResponse 订单转发
+/* Gfq1qp4287ShopexMatrixDatapushResponse 订单转发 */
 type Gfq1qp4287ShopexMatrixDatapushResponse struct {
     
     /* data Basicdata */
@@ -5713,8 +5713,8 @@ type Gfq1qp4287ShopexMatrixDatapushResponse struct {
     
 }
 
-// TaobaoSkusCustomGetRequest 跟据卖家设定的Sku的外部id获取商品，如果一个outer_id对应多个Sku会返回所有符合条件的sku 
-这个Sku所属卖家从传入的session中获取，需要session绑定(注：iid标签里是num_iid的值，可以用作num_iid使用)
+/* TaobaoSkusCustomGetRequest 跟据卖家设定的Sku的外部id获取商品，如果一个outer_id对应多个Sku会返回所有符合条件的sku 
+这个Sku所属卖家从传入的session中获取，需要session绑定(注：iid标签里是num_iid的值，可以用作num_iid使用) */
 type TaobaoSkusCustomGetRequest struct {
     
     /* fields required需返回的字段列表。可选值：Sku结构体中的所有字段；字段之间用“,”隔开 */
@@ -5729,8 +5729,8 @@ func (req *TaobaoSkusCustomGetRequest) GetAPIName() string {
 	return "taobao.skus.custom.get"
 }
 
-// TaobaoSkusCustomGetResponse 跟据卖家设定的Sku的外部id获取商品，如果一个outer_id对应多个Sku会返回所有符合条件的sku 
-这个Sku所属卖家从传入的session中获取，需要session绑定(注：iid标签里是num_iid的值，可以用作num_iid使用)
+/* TaobaoSkusCustomGetResponse 跟据卖家设定的Sku的外部id获取商品，如果一个outer_id对应多个Sku会返回所有符合条件的sku 
+这个Sku所属卖家从传入的session中获取，需要session绑定(注：iid标签里是num_iid的值，可以用作num_iid使用) */
 type TaobaoSkusCustomGetResponse struct {
     
     /* skus Object ArraySku对象，具体字段以fields决定 */
@@ -5738,7 +5738,7 @@ type TaobaoSkusCustomGetResponse struct {
     
 }
 
-// TaobaoSellercenterRolesGetRequest 获取指定卖家的角色列表，只能获取属于登陆者自己的信息。
+/* TaobaoSellercenterRolesGetRequest 获取指定卖家的角色列表，只能获取属于登陆者自己的信息。 */
 type TaobaoSellercenterRolesGetRequest struct {
     
     /* nick required卖家昵称(只允许查询自己的信息：当前登陆者) */
@@ -5750,7 +5750,7 @@ func (req *TaobaoSellercenterRolesGetRequest) GetAPIName() string {
 	return "taobao.sellercenter.roles.get"
 }
 
-// TaobaoSellercenterRolesGetResponse 获取指定卖家的角色列表，只能获取属于登陆者自己的信息。
+/* TaobaoSellercenterRolesGetResponse 获取指定卖家的角色列表，只能获取属于登陆者自己的信息。 */
 type TaobaoSellercenterRolesGetResponse struct {
     
     /* roles Object Array卖家子账号角色列表。<br/>返回对象为 role数据对象中的role_id，role_name，description，seller_id，create_time，modified_time。不包含permissions(权限点) */
@@ -5758,7 +5758,7 @@ type TaobaoSellercenterRolesGetResponse struct {
     
 }
 
-// TaobaoSellercenterRoleInfoGetRequest 获取指定角色的信息。只能查询属于自己的角色信息 (主账号或者某个主账号的子账号登陆，只能查询属于该主账号的角色信息)
+/* TaobaoSellercenterRoleInfoGetRequest 获取指定角色的信息。只能查询属于自己的角色信息 (主账号或者某个主账号的子账号登陆，只能查询属于该主账号的角色信息) */
 type TaobaoSellercenterRoleInfoGetRequest struct {
     
     /* role_id required角色id */
@@ -5770,7 +5770,7 @@ func (req *TaobaoSellercenterRoleInfoGetRequest) GetAPIName() string {
 	return "taobao.sellercenter.role.info.get"
 }
 
-// TaobaoSellercenterRoleInfoGetResponse 获取指定角色的信息。只能查询属于自己的角色信息 (主账号或者某个主账号的子账号登陆，只能查询属于该主账号的角色信息)
+/* TaobaoSellercenterRoleInfoGetResponse 获取指定角色的信息。只能查询属于自己的角色信息 (主账号或者某个主账号的子账号登陆，只能查询属于该主账号的角色信息) */
 type TaobaoSellercenterRoleInfoGetResponse struct {
     
     /* role Object角色具体信息 */
@@ -5778,7 +5778,7 @@ type TaobaoSellercenterRoleInfoGetResponse struct {
     
 }
 
-// TaobaoSellercenterRoleAddRequest 给指定的卖家创建新的子账号角色<br/>
+/* TaobaoSellercenterRoleAddRequest 给指定的卖家创建新的子账号角色<br/>
 如果需要授权的权限点有下级权限点或上级权限点，把该权限点的父权限点和该权限点的所有子权限都一并做赋权操作，并递归处理<br/>例如：权限点列表如下<br/>
 code=sell 宝贝管理<br/>
 ---------|code=sm 店铺管理<br/>
@@ -5791,7 +5791,7 @@ code=sell 宝贝管理<br/>
 ---------|code=sm 店铺管理<br/>
 ---------|---------|code=sm-design 如店铺装修<br/>
 ---------|---------|---------|code=sm-tbd-visit内店装修入口<br/>
----------|---------|---------|code=sm-tbd-publish内店装修发布<br/>
+---------|---------|---------|code=sm-tbd-publish内店装修发布<br/> */
 type TaobaoSellercenterRoleAddRequest struct {
     
     /* description optional角色描述 */
@@ -5812,7 +5812,7 @@ func (req *TaobaoSellercenterRoleAddRequest) GetAPIName() string {
 	return "taobao.sellercenter.role.add"
 }
 
-// TaobaoSellercenterRoleAddResponse 给指定的卖家创建新的子账号角色<br/>
+/* TaobaoSellercenterRoleAddResponse 给指定的卖家创建新的子账号角色<br/>
 如果需要授权的权限点有下级权限点或上级权限点，把该权限点的父权限点和该权限点的所有子权限都一并做赋权操作，并递归处理<br/>例如：权限点列表如下<br/>
 code=sell 宝贝管理<br/>
 ---------|code=sm 店铺管理<br/>
@@ -5825,7 +5825,7 @@ code=sell 宝贝管理<br/>
 ---------|code=sm 店铺管理<br/>
 ---------|---------|code=sm-design 如店铺装修<br/>
 ---------|---------|---------|code=sm-tbd-visit内店装修入口<br/>
----------|---------|---------|code=sm-tbd-publish内店装修发布<br/>
+---------|---------|---------|code=sm-tbd-publish内店装修发布<br/> */
 type TaobaoSellercenterRoleAddResponse struct {
     
     /* role Object子账号角色 */
@@ -5833,7 +5833,7 @@ type TaobaoSellercenterRoleAddResponse struct {
     
 }
 
-// CainiaoSmartdeliveryCpIModifyRequest 商家修改智能发货引擎推荐的cp
+/* CainiaoSmartdeliveryCpIModifyRequest 商家修改智能发货引擎推荐的cp */
 type CainiaoSmartdeliveryCpIModifyRequest struct {
     
     /* modify_smart_delivery_cp_request required修改智选CP请求 */
@@ -5845,7 +5845,7 @@ func (req *CainiaoSmartdeliveryCpIModifyRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.cp.i.modify"
 }
 
-// CainiaoSmartdeliveryCpIModifyResponse 商家修改智能发货引擎推荐的cp
+/* CainiaoSmartdeliveryCpIModifyResponse 商家修改智能发货引擎推荐的cp */
 type CainiaoSmartdeliveryCpIModifyResponse struct {
     
     /* modify_smart_delivery_cp_response Object更新智能发货智选cp返回结果 */
@@ -5853,7 +5853,7 @@ type CainiaoSmartdeliveryCpIModifyResponse struct {
     
 }
 
-// TaobaoTmcMessagesProduceRequest 批量发送消息
+/* TaobaoTmcMessagesProduceRequest 批量发送消息 */
 type TaobaoTmcMessagesProduceRequest struct {
     
     /* messages requiredtmc消息列表, 最多50条，元素结构与taobao.tmc.message.produce一致，用json表示的消息列表。例如：[{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"},{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"}] */
@@ -5865,7 +5865,7 @@ func (req *TaobaoTmcMessagesProduceRequest) GetAPIName() string {
 	return "taobao.tmc.messages.produce"
 }
 
-// TaobaoTmcMessagesProduceResponse 批量发送消息
+/* TaobaoTmcMessagesProduceResponse 批量发送消息 */
 type TaobaoTmcMessagesProduceResponse struct {
     
     /* is_all_success Basic是否全部成功 */
@@ -5876,7 +5876,7 @@ type TaobaoTmcMessagesProduceResponse struct {
     
 }
 
-// CainiaoSmartdeliveryIGetRequest 获取智选cp和电子面单信息
+/* CainiaoSmartdeliveryIGetRequest 获取智选cp和电子面单信息 */
 type CainiaoSmartdeliveryIGetRequest struct {
     
     /* smart_delivery_batch_request required<a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>批量请求参数 */
@@ -5888,7 +5888,7 @@ func (req *CainiaoSmartdeliveryIGetRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.i.get"
 }
 
-// CainiaoSmartdeliveryIGetResponse 获取智选cp和电子面单信息
+/* CainiaoSmartdeliveryIGetResponse 获取智选cp和电子面单信息 */
 type CainiaoSmartdeliveryIGetResponse struct {
     
     /* smart_delivery_response_wrapper_list Object Array<a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>结果包装类 */
@@ -5896,7 +5896,7 @@ type CainiaoSmartdeliveryIGetResponse struct {
     
 }
 
-// TaobaoFenxiaoOrdersGetRequest 分销商或供应商均可用此接口查询采购单信息（代销）； (发货请调用物流API中的发货接口taobao.logistics.offline.send 进行发货，需要注意的是这里是供应商发货，因此调发货接口时需要传人供应商账号对应的sessionkey，tid 需传入供销平台的采购单（即fenxiao_id  分销流水号）)。
+/* TaobaoFenxiaoOrdersGetRequest 分销商或供应商均可用此接口查询采购单信息（代销）； (发货请调用物流API中的发货接口taobao.logistics.offline.send 进行发货，需要注意的是这里是供应商发货，因此调发货接口时需要传人供应商账号对应的sessionkey，tid 需传入供销平台的采购单（即fenxiao_id  分销流水号）)。 */
 type TaobaoFenxiaoOrdersGetRequest struct {
     
     /* end_created optional结束时间 格式 yyyy-MM-dd HH:mm:ss.支持到秒的查询。若不传时分秒，默认为0时0分0秒。若purchase_order_id没传，则此参数必传。 */
@@ -5932,7 +5932,7 @@ func (req *TaobaoFenxiaoOrdersGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.orders.get"
 }
 
-// TaobaoFenxiaoOrdersGetResponse 分销商或供应商均可用此接口查询采购单信息（代销）； (发货请调用物流API中的发货接口taobao.logistics.offline.send 进行发货，需要注意的是这里是供应商发货，因此调发货接口时需要传人供应商账号对应的sessionkey，tid 需传入供销平台的采购单（即fenxiao_id  分销流水号）)。
+/* TaobaoFenxiaoOrdersGetResponse 分销商或供应商均可用此接口查询采购单信息（代销）； (发货请调用物流API中的发货接口taobao.logistics.offline.send 进行发货，需要注意的是这里是供应商发货，因此调发货接口时需要传人供应商账号对应的sessionkey，tid 需传入供销平台的采购单（即fenxiao_id  分销流水号）)。 */
 type TaobaoFenxiaoOrdersGetResponse struct {
     
     /* purchase_orders Object Array采购单及子采购单信息。返回 PurchaseOrder 包含的字段信息。 */
@@ -5943,7 +5943,7 @@ type TaobaoFenxiaoOrdersGetResponse struct {
     
 }
 
-// AlibabaEinvoiceSerialnoGenerateRequest erp调用开票请求时需要一个开票流水号，此接口就提供了统一的开票流水号，避免了不同系统的冲突
+/* AlibabaEinvoiceSerialnoGenerateRequest erp调用开票请求时需要一个开票流水号，此接口就提供了统一的开票流水号，避免了不同系统的冲突 */
 type AlibabaEinvoiceSerialnoGenerateRequest struct {
     
 }
@@ -5952,7 +5952,7 @@ func (req *AlibabaEinvoiceSerialnoGenerateRequest) GetAPIName() string {
 	return "alibaba.einvoice.serialno.generate"
 }
 
-// AlibabaEinvoiceSerialnoGenerateResponse erp调用开票请求时需要一个开票流水号，此接口就提供了统一的开票流水号，避免了不同系统的冲突
+/* AlibabaEinvoiceSerialnoGenerateResponse erp调用开票请求时需要一个开票流水号，此接口就提供了统一的开票流水号，避免了不同系统的冲突 */
 type AlibabaEinvoiceSerialnoGenerateResponse struct {
     
     /* serial_no Basicresult */
@@ -5960,8 +5960,8 @@ type AlibabaEinvoiceSerialnoGenerateResponse struct {
     
 }
 
-// AlibabaEinvoiceSerialnoBatchGenerateRequest 批量获取开票流水号接口。此接口1次返回1000条开票流水号，每个应用每天限流1000次调用。
-优先使用alibaba.einvoice.serial.generate。
+/* AlibabaEinvoiceSerialnoBatchGenerateRequest 批量获取开票流水号接口。此接口1次返回1000条开票流水号，每个应用每天限流1000次调用。
+优先使用alibaba.einvoice.serial.generate。 */
 type AlibabaEinvoiceSerialnoBatchGenerateRequest struct {
     
 }
@@ -5970,8 +5970,8 @@ func (req *AlibabaEinvoiceSerialnoBatchGenerateRequest) GetAPIName() string {
 	return "alibaba.einvoice.serialno.batch.generate"
 }
 
-// AlibabaEinvoiceSerialnoBatchGenerateResponse 批量获取开票流水号接口。此接口1次返回1000条开票流水号，每个应用每天限流1000次调用。
-优先使用alibaba.einvoice.serial.generate。
+/* AlibabaEinvoiceSerialnoBatchGenerateResponse 批量获取开票流水号接口。此接口1次返回1000条开票流水号，每个应用每天限流1000次调用。
+优先使用alibaba.einvoice.serial.generate。 */
 type AlibabaEinvoiceSerialnoBatchGenerateResponse struct {
     
     /* serial_no_list Basic Arrayresult */
@@ -5979,7 +5979,7 @@ type AlibabaEinvoiceSerialnoBatchGenerateResponse struct {
     
 }
 
-// TaobaoSellercenterRolemembersGetRequest 获取指定卖家的角色下属员工列表，只能获取属于登陆者自己的信息。
+/* TaobaoSellercenterRolemembersGetRequest 获取指定卖家的角色下属员工列表，只能获取属于登陆者自己的信息。 */
 type TaobaoSellercenterRolemembersGetRequest struct {
     
     /* role_id required角色id */
@@ -5991,7 +5991,7 @@ func (req *TaobaoSellercenterRolemembersGetRequest) GetAPIName() string {
 	return "taobao.sellercenter.rolemembers.get"
 }
 
-// TaobaoSellercenterRolemembersGetResponse 获取指定卖家的角色下属员工列表，只能获取属于登陆者自己的信息。
+/* TaobaoSellercenterRolemembersGetResponse 获取指定卖家的角色下属员工列表，只能获取属于登陆者自己的信息。 */
 type TaobaoSellercenterRolemembersGetResponse struct {
     
     /* subusers Object Array子账号基本信息列表。具体信息为id、子账号用户名、主账号id、主账号昵称、当前状态值、是否分流 */
@@ -5999,7 +5999,7 @@ type TaobaoSellercenterRolemembersGetResponse struct {
     
 }
 
-// TaobaoSellercenterSubuserPermissionsRolesGetRequest 查询指定的子账号的被直接赋予的权限信息和角色信息。<br/>返回对象中包括直接赋予子账号的权限点信息、被赋予的角色以及角色的对应权限点信息。
+/* TaobaoSellercenterSubuserPermissionsRolesGetRequest 查询指定的子账号的被直接赋予的权限信息和角色信息。<br/>返回对象中包括直接赋予子账号的权限点信息、被赋予的角色以及角色的对应权限点信息。 */
 type TaobaoSellercenterSubuserPermissionsRolesGetRequest struct {
     
     /* nick required子账号昵称(子账号标识) */
@@ -6011,7 +6011,7 @@ func (req *TaobaoSellercenterSubuserPermissionsRolesGetRequest) GetAPIName() str
 	return "taobao.sellercenter.subuser.permissions.roles.get"
 }
 
-// TaobaoSellercenterSubuserPermissionsRolesGetResponse 查询指定的子账号的被直接赋予的权限信息和角色信息。<br/>返回对象中包括直接赋予子账号的权限点信息、被赋予的角色以及角色的对应权限点信息。
+/* TaobaoSellercenterSubuserPermissionsRolesGetResponse 查询指定的子账号的被直接赋予的权限信息和角色信息。<br/>返回对象中包括直接赋予子账号的权限点信息、被赋予的角色以及角色的对应权限点信息。 */
 type TaobaoSellercenterSubuserPermissionsRolesGetResponse struct {
     
     /* subuser_permission Object子账号被所拥有的权限 */
@@ -6019,7 +6019,7 @@ type TaobaoSellercenterSubuserPermissionsRolesGetResponse struct {
     
 }
 
-// TaobaoWangwangAbstractInitializeRequest 模糊查询服务初始化，只支持json返回
+/* TaobaoWangwangAbstractInitializeRequest 模糊查询服务初始化，只支持json返回 */
 type TaobaoWangwangAbstractInitializeRequest struct {
     
     /* charset optional传入参数的字符集 */
@@ -6031,7 +6031,7 @@ func (req *TaobaoWangwangAbstractInitializeRequest) GetAPIName() string {
 	return "taobao.wangwang.abstract.initialize"
 }
 
-// TaobaoWangwangAbstractInitializeResponse 模糊查询服务初始化，只支持json返回
+/* TaobaoWangwangAbstractInitializeResponse 模糊查询服务初始化，只支持json返回 */
 type TaobaoWangwangAbstractInitializeResponse struct {
     
     /* error_msg Basic当ret_code=-1时这个变量才有 */
@@ -6042,7 +6042,7 @@ type TaobaoWangwangAbstractInitializeResponse struct {
     
 }
 
-// TaobaoWangwangAbstractGetwordlistRequest 获取关键词列表，只支持json返回
+/* TaobaoWangwangAbstractGetwordlistRequest 获取关键词列表，只支持json返回 */
 type TaobaoWangwangAbstractGetwordlistRequest struct {
     
     /* charset optional传入参数的字符集 */
@@ -6054,7 +6054,7 @@ func (req *TaobaoWangwangAbstractGetwordlistRequest) GetAPIName() string {
 	return "taobao.wangwang.abstract.getwordlist"
 }
 
-// TaobaoWangwangAbstractGetwordlistResponse 获取关键词列表，只支持json返回
+/* TaobaoWangwangAbstractGetwordlistResponse 获取关键词列表，只支持json返回 */
 type TaobaoWangwangAbstractGetwordlistResponse struct {
     
     /* error_msg Basic例如单词长度太长等，ret_code=-1才有 */
@@ -6068,7 +6068,7 @@ type TaobaoWangwangAbstractGetwordlistResponse struct {
     
 }
 
-// TaobaoOpenuidGetBymixnickRequest 通过mixnick转换openuid
+/* TaobaoOpenuidGetBymixnickRequest 通过mixnick转换openuid */
 type TaobaoOpenuidGetBymixnickRequest struct {
     
     /* mix_nick required无线类应用获取到的混淆的nick */
@@ -6080,7 +6080,7 @@ func (req *TaobaoOpenuidGetBymixnickRequest) GetAPIName() string {
 	return "taobao.openuid.get.bymixnick"
 }
 
-// TaobaoOpenuidGetBymixnickResponse 通过mixnick转换openuid
+/* TaobaoOpenuidGetBymixnickResponse 通过mixnick转换openuid */
 type TaobaoOpenuidGetBymixnickResponse struct {
     
     /* open_uid BasicOpenUID */
@@ -6088,7 +6088,7 @@ type TaobaoOpenuidGetBymixnickResponse struct {
     
 }
 
-// TaobaoWangwangAbstractLogqueryRequest 模糊聊天记录查询
+/* TaobaoWangwangAbstractLogqueryRequest 模糊聊天记录查询 */
 type TaobaoWangwangAbstractLogqueryRequest struct {
     
     /* charset optional传入参数的字符集 */
@@ -6118,7 +6118,7 @@ func (req *TaobaoWangwangAbstractLogqueryRequest) GetAPIName() string {
 	return "taobao.wangwang.abstract.logquery"
 }
 
-// TaobaoWangwangAbstractLogqueryResponse 模糊聊天记录查询
+/* TaobaoWangwangAbstractLogqueryResponse 模糊聊天记录查询 */
 type TaobaoWangwangAbstractLogqueryResponse struct {
     
     /* error_msg Basic例如单词长度太长等。
@@ -6150,7 +6150,7 @@ type TaobaoWangwangAbstractLogqueryResponse struct {
     
 }
 
-// TaobaoWangwangAbstractAddwordRequest 增加关键词，只支持json返回
+/* TaobaoWangwangAbstractAddwordRequest 增加关键词，只支持json返回 */
 type TaobaoWangwangAbstractAddwordRequest struct {
     
     /* charset optional传入参数的字符集 */
@@ -6165,7 +6165,7 @@ func (req *TaobaoWangwangAbstractAddwordRequest) GetAPIName() string {
 	return "taobao.wangwang.abstract.addword"
 }
 
-// TaobaoWangwangAbstractAddwordResponse 增加关键词，只支持json返回
+/* TaobaoWangwangAbstractAddwordResponse 增加关键词，只支持json返回 */
 type TaobaoWangwangAbstractAddwordResponse struct {
     
     /* error_msg Basic例如单词长度太长等，当ret_code=-1时才有这项 */
@@ -6176,7 +6176,7 @@ type TaobaoWangwangAbstractAddwordResponse struct {
     
 }
 
-// TaobaoOpenuidGetBytradeRequest 通过订单获取对应买家的openUID,需要卖家授权
+/* TaobaoOpenuidGetBytradeRequest 通过订单获取对应买家的openUID,需要卖家授权 */
 type TaobaoOpenuidGetBytradeRequest struct {
     
     /* tid required订单ID */
@@ -6188,7 +6188,7 @@ func (req *TaobaoOpenuidGetBytradeRequest) GetAPIName() string {
 	return "taobao.openuid.get.bytrade"
 }
 
-// TaobaoOpenuidGetBytradeResponse 通过订单获取对应买家的openUID,需要卖家授权
+/* TaobaoOpenuidGetBytradeResponse 通过订单获取对应买家的openUID,需要卖家授权 */
 type TaobaoOpenuidGetBytradeResponse struct {
     
     /* open_uid Basic当前交易tid对应买家的openuid */
@@ -6196,7 +6196,7 @@ type TaobaoOpenuidGetBytradeResponse struct {
     
 }
 
-// TaobaoWangwangAbstractDeletewordRequest 删除关键词，只支持json返回
+/* TaobaoWangwangAbstractDeletewordRequest 删除关键词，只支持json返回 */
 type TaobaoWangwangAbstractDeletewordRequest struct {
     
     /* charset optional传入参数的字符集 */
@@ -6211,7 +6211,7 @@ func (req *TaobaoWangwangAbstractDeletewordRequest) GetAPIName() string {
 	return "taobao.wangwang.abstract.deleteword"
 }
 
-// TaobaoWangwangAbstractDeletewordResponse 删除关键词，只支持json返回
+/* TaobaoWangwangAbstractDeletewordResponse 删除关键词，只支持json返回 */
 type TaobaoWangwangAbstractDeletewordResponse struct {
     
     /* error_msg Basic例如单词长度太长等 */
@@ -6222,7 +6222,7 @@ type TaobaoWangwangAbstractDeletewordResponse struct {
     
 }
 
-// TaobaoOpenuidGetRequest 获取授权账号对应的OpenUid
+/* TaobaoOpenuidGetRequest 获取授权账号对应的OpenUid */
 type TaobaoOpenuidGetRequest struct {
     
 }
@@ -6231,7 +6231,7 @@ func (req *TaobaoOpenuidGetRequest) GetAPIName() string {
 	return "taobao.openuid.get"
 }
 
-// TaobaoOpenuidGetResponse 获取授权账号对应的OpenUid
+/* TaobaoOpenuidGetResponse 获取授权账号对应的OpenUid */
 type TaobaoOpenuidGetResponse struct {
     
     /* open_uid BasicOpenUID */
@@ -6239,7 +6239,7 @@ type TaobaoOpenuidGetResponse struct {
     
 }
 
-// TaobaoLogisticsOrderShengxianConfirmRequest 优鲜送，生鲜业务使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。
+/* TaobaoLogisticsOrderShengxianConfirmRequest 优鲜送，生鲜业务使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。 */
 type TaobaoLogisticsOrderShengxianConfirmRequest struct {
     
     /* cancel_id optional卖家联系人地址库ID，可以通过taobao.logistics.address.search接口查询到地址库ID。<br><font color='red'>如果为空，取的卖家的默认退货地址</font><br> */
@@ -6272,7 +6272,7 @@ func (req *TaobaoLogisticsOrderShengxianConfirmRequest) GetAPIName() string {
 	return "taobao.logistics.order.shengxian.confirm"
 }
 
-// TaobaoLogisticsOrderShengxianConfirmResponse 优鲜送，生鲜业务使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。
+/* TaobaoLogisticsOrderShengxianConfirmResponse 优鲜送，生鲜业务使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。 */
 type TaobaoLogisticsOrderShengxianConfirmResponse struct {
     
     /* is_success Basic是否成功 */
@@ -6283,9 +6283,9 @@ type TaobaoLogisticsOrderShengxianConfirmResponse struct {
     
 }
 
-// TaobaoLogisticsConsignTcConfirmRequest 下述业务场景可以使用此接口通知相关的交易订单发货：
+/* TaobaoLogisticsConsignTcConfirmRequest 下述业务场景可以使用此接口通知相关的交易订单发货：
 1、发货过程分为多段操作，在确定发货之前，不需要通知交易，当货确认已发出之后，才通知交易发货。
-2、发货过程涉及到多个订单，其中一个订单是跟实操的发货操作同步的，剩下的订单，需要在实操的订单发货之后，一并通知交易发货。
+2、发货过程涉及到多个订单，其中一个订单是跟实操的发货操作同步的，剩下的订单，需要在实操的订单发货之后，一并通知交易发货。 */
 type TaobaoLogisticsConsignTcConfirmRequest struct {
     
     /* app_name requiredERP的名称 */
@@ -6315,9 +6315,9 @@ func (req *TaobaoLogisticsConsignTcConfirmRequest) GetAPIName() string {
 	return "taobao.logistics.consign.tc.confirm"
 }
 
-// TaobaoLogisticsConsignTcConfirmResponse 下述业务场景可以使用此接口通知相关的交易订单发货：
+/* TaobaoLogisticsConsignTcConfirmResponse 下述业务场景可以使用此接口通知相关的交易订单发货：
 1、发货过程分为多段操作，在确定发货之前，不需要通知交易，当货确认已发出之后，才通知交易发货。
-2、发货过程涉及到多个订单，其中一个订单是跟实操的发货操作同步的，剩下的订单，需要在实操的订单发货之后，一并通知交易发货。
+2、发货过程涉及到多个订单，其中一个订单是跟实操的发货操作同步的，剩下的订单，需要在实操的订单发货之后，一并通知交易发货。 */
 type TaobaoLogisticsConsignTcConfirmResponse struct {
     
     /* order_consign_code Basic菜鸟发货单据 */
@@ -6331,7 +6331,7 @@ type TaobaoLogisticsConsignTcConfirmResponse struct {
     
 }
 
-// TaobaoLogisticsOrdersGetRequest 批量查询物流订单。
+/* TaobaoLogisticsOrdersGetRequest 批量查询物流订单。 */
 type TaobaoLogisticsOrdersGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -6377,7 +6377,7 @@ func (req *TaobaoLogisticsOrdersGetRequest) GetAPIName() string {
 	return "taobao.logistics.orders.get"
 }
 
-// TaobaoLogisticsOrdersGetResponse 批量查询物流订单。
+/* TaobaoLogisticsOrdersGetResponse 批量查询物流订单。 */
 type TaobaoLogisticsOrdersGetResponse struct {
     
     /* shippings Object Array获取的物流订单详情列表 
@@ -6389,7 +6389,7 @@ type TaobaoLogisticsOrdersGetResponse struct {
     
 }
 
-// TaobaoLogisticsOrdersDetailGetRequest 查询物流订单的详细信息，涉及用户隐私字段。
+/* TaobaoLogisticsOrdersDetailGetRequest 查询物流订单的详细信息，涉及用户隐私字段。 */
 type TaobaoLogisticsOrdersDetailGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -6434,7 +6434,7 @@ func (req *TaobaoLogisticsOrdersDetailGetRequest) GetAPIName() string {
 	return "taobao.logistics.orders.detail.get"
 }
 
-// TaobaoLogisticsOrdersDetailGetResponse 查询物流订单的详细信息，涉及用户隐私字段。
+/* TaobaoLogisticsOrdersDetailGetResponse 查询物流订单的详细信息，涉及用户隐私字段。 */
 type TaobaoLogisticsOrdersDetailGetResponse struct {
     
     /* shippings Object Array获取的物流订单详情列表.返回的Shipping包含的具体信息为入参fields请求的字段信息. */
@@ -6445,7 +6445,7 @@ type TaobaoLogisticsOrdersDetailGetResponse struct {
     
 }
 
-// TaobaoLogisticsCompaniesGetRequest 查询淘宝网合作的物流公司信息，用于发货接口。
+/* TaobaoLogisticsCompaniesGetRequest 查询淘宝网合作的物流公司信息，用于发货接口。 */
 type TaobaoLogisticsCompaniesGetRequest struct {
     
     /* fields required需返回的字段列表。可选值:LogisticCompany 结构中的所有字段;多个字段间用","逗号隔开.
@@ -6469,7 +6469,7 @@ func (req *TaobaoLogisticsCompaniesGetRequest) GetAPIName() string {
 	return "taobao.logistics.companies.get"
 }
 
-// TaobaoLogisticsCompaniesGetResponse 查询淘宝网合作的物流公司信息，用于发货接口。
+/* TaobaoLogisticsCompaniesGetResponse 查询淘宝网合作的物流公司信息，用于发货接口。 */
 type TaobaoLogisticsCompaniesGetResponse struct {
     
     /* logistics_companies Object Array物流公司信息。返回的LogisticCompany包含的具体信息为入参fields请求的字段信息。 */
@@ -6477,7 +6477,7 @@ type TaobaoLogisticsCompaniesGetResponse struct {
     
 }
 
-// TaobaoAppipGetRequest 获取ISV发起请求服务器IP
+/* TaobaoAppipGetRequest 获取ISV发起请求服务器IP */
 type TaobaoAppipGetRequest struct {
     
 }
@@ -6486,7 +6486,7 @@ func (req *TaobaoAppipGetRequest) GetAPIName() string {
 	return "taobao.appip.get"
 }
 
-// TaobaoAppipGetResponse 获取ISV发起请求服务器IP
+/* TaobaoAppipGetResponse 获取ISV发起请求服务器IP */
 type TaobaoAppipGetResponse struct {
     
     /* ip BasicISV发起请求服务器IP */
@@ -6494,7 +6494,7 @@ type TaobaoAppipGetResponse struct {
     
 }
 
-// QimenTaobaoQimenEntryorderCallbackRequest ERP通过该接口回传预约入库单对应的商家仓出库单状态
+/* QimenTaobaoQimenEntryorderCallbackRequest ERP通过该接口回传预约入库单对应的商家仓出库单状态 */
 type QimenTaobaoQimenEntryorderCallbackRequest struct {
     
     /* appkey required应用在奇门申请的appkey */
@@ -6512,7 +6512,7 @@ func (req *QimenTaobaoQimenEntryorderCallbackRequest) GetAPIName() string {
 	return "qimen.taobao.qimen.entryorder.callback"
 }
 
-// QimenTaobaoQimenEntryorderCallbackResponse ERP通过该接口回传预约入库单对应的商家仓出库单状态
+/* QimenTaobaoQimenEntryorderCallbackResponse ERP通过该接口回传预约入库单对应的商家仓出库单状态 */
 type QimenTaobaoQimenEntryorderCallbackResponse struct {
     
     /* code Basic错误码:CD001 */
@@ -6526,7 +6526,7 @@ type QimenTaobaoQimenEntryorderCallbackResponse struct {
     
 }
 
-// TaobaoFenxiaoLoginUserGetRequest 获取用户登录信息
+/* TaobaoFenxiaoLoginUserGetRequest 获取用户登录信息 */
 type TaobaoFenxiaoLoginUserGetRequest struct {
     
 }
@@ -6535,7 +6535,7 @@ func (req *TaobaoFenxiaoLoginUserGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.login.user.get"
 }
 
-// TaobaoFenxiaoLoginUserGetResponse 获取用户登录信息
+/* TaobaoFenxiaoLoginUserGetResponse 获取用户登录信息 */
 type TaobaoFenxiaoLoginUserGetResponse struct {
     
     /* login_user Object登录用户信息 */
@@ -6543,7 +6543,7 @@ type TaobaoFenxiaoLoginUserGetResponse struct {
     
 }
 
-// TaobaoRdcAligeniusOrdermsgUpdateRequest 用于订单消息处理状态回传
+/* TaobaoRdcAligeniusOrdermsgUpdateRequest 用于订单消息处理状态回传 */
 type TaobaoRdcAligeniusOrdermsgUpdateRequest struct {
     
     /* oid required子订单（消息中传的子订单） */
@@ -6561,7 +6561,7 @@ func (req *TaobaoRdcAligeniusOrdermsgUpdateRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.ordermsg.update"
 }
 
-// TaobaoRdcAligeniusOrdermsgUpdateResponse 用于订单消息处理状态回传
+/* TaobaoRdcAligeniusOrdermsgUpdateResponse 用于订单消息处理状态回传 */
 type TaobaoRdcAligeniusOrdermsgUpdateResponse struct {
     
     /* result Objectresult */
@@ -6569,7 +6569,7 @@ type TaobaoRdcAligeniusOrdermsgUpdateResponse struct {
     
 }
 
-// TmallItemQuantityUpdateRequest 天猫商品/SKU库存更新接口；支持商品库存更新；支持同一商品下的SKU批量更新。
+/* TmallItemQuantityUpdateRequest 天猫商品/SKU库存更新接口；支持商品库存更新；支持同一商品下的SKU批量更新。 */
 type TmallItemQuantityUpdateRequest struct {
     
     /* item_id required商品id */
@@ -6590,7 +6590,7 @@ func (req *TmallItemQuantityUpdateRequest) GetAPIName() string {
 	return "tmall.item.quantity.update"
 }
 
-// TmallItemQuantityUpdateResponse 天猫商品/SKU库存更新接口；支持商品库存更新；支持同一商品下的SKU批量更新。
+/* TmallItemQuantityUpdateResponse 天猫商品/SKU库存更新接口；支持商品库存更新；支持同一商品下的SKU批量更新。 */
 type TmallItemQuantityUpdateResponse struct {
     
     /* quantity_update_result Basic库存更新结果，商品id */
@@ -6598,7 +6598,7 @@ type TmallItemQuantityUpdateResponse struct {
     
 }
 
-// TaobaoPictureCategoryAddRequest 同一卖家最多添加500个图片分类，图片分类名称长度最大为20个字符
+/* TaobaoPictureCategoryAddRequest 同一卖家最多添加500个图片分类，图片分类名称长度最大为20个字符 */
 type TaobaoPictureCategoryAddRequest struct {
     
     /* parent_id optional图片分类的父分类,一级分类的parent_id为0,二级分类的则为其父分类的picture_category_id */
@@ -6613,7 +6613,7 @@ func (req *TaobaoPictureCategoryAddRequest) GetAPIName() string {
 	return "taobao.picture.category.add"
 }
 
-// TaobaoPictureCategoryAddResponse 同一卖家最多添加500个图片分类，图片分类名称长度最大为20个字符
+/* TaobaoPictureCategoryAddResponse 同一卖家最多添加500个图片分类，图片分类名称长度最大为20个字符 */
 type TaobaoPictureCategoryAddResponse struct {
     
     /* picture_category Object图片分类信息 */
@@ -6621,7 +6621,7 @@ type TaobaoPictureCategoryAddResponse struct {
     
 }
 
-// TaobaoRegionPriceCancleRequest 取消区域价格
+/* TaobaoRegionPriceCancleRequest 取消区域价格 */
 type TaobaoRegionPriceCancleRequest struct {
     
     /* item_id required商品 */
@@ -6636,7 +6636,7 @@ func (req *TaobaoRegionPriceCancleRequest) GetAPIName() string {
 	return "taobao.region.price.cancle"
 }
 
-// TaobaoRegionPriceCancleResponse 取消区域价格
+/* TaobaoRegionPriceCancleResponse 取消区域价格 */
 type TaobaoRegionPriceCancleResponse struct {
     
     /* result Objectresult */
@@ -6644,7 +6644,7 @@ type TaobaoRegionPriceCancleResponse struct {
     
 }
 
-// TaobaoQimenItemlackReportRequest WMS调用奇门的接口,将商家在库某商品缺货的信息回传给ERP
+/* TaobaoQimenItemlackReportRequest WMS调用奇门的接口,将商家在库某商品缺货的信息回传给ERP */
 type TaobaoQimenItemlackReportRequest struct {
     
     /* createTime required缺货回告创建时间(YYYY-MM-DD HH:mm:ss) */
@@ -6677,7 +6677,7 @@ func (req *TaobaoQimenItemlackReportRequest) GetAPIName() string {
 	return "taobao.qimen.itemlack.report"
 }
 
-// TaobaoQimenItemlackReportResponse WMS调用奇门的接口,将商家在库某商品缺货的信息回传给ERP
+/* TaobaoQimenItemlackReportResponse WMS调用奇门的接口,将商家在库某商品缺货的信息回传给ERP */
 type TaobaoQimenItemlackReportResponse struct {
     
     /* code Basic响应码 */
@@ -6691,7 +6691,7 @@ type TaobaoQimenItemlackReportResponse struct {
     
 }
 
-// TaobaoQimenOrderprocessQueryRequest ERP调用订单流水查询接口
+/* TaobaoQimenOrderprocessQueryRequest ERP调用订单流水查询接口 */
 type TaobaoQimenOrderprocessQueryRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -6724,7 +6724,7 @@ func (req *TaobaoQimenOrderprocessQueryRequest) GetAPIName() string {
 	return "taobao.qimen.orderprocess.query"
 }
 
-// TaobaoQimenOrderprocessQueryResponse ERP调用订单流水查询接口
+/* TaobaoQimenOrderprocessQueryResponse ERP调用订单流水查询接口 */
 type TaobaoQimenOrderprocessQueryResponse struct {
     
     /* code Basic响应码 */
@@ -6741,7 +6741,7 @@ type TaobaoQimenOrderprocessQueryResponse struct {
     
 }
 
-// TaobaoFenxiaoRefundQueryRequest 供应商按查询条件批量查询代销采购退款
+/* TaobaoFenxiaoRefundQueryRequest 供应商按查询条件批量查询代销采购退款 */
 type TaobaoFenxiaoRefundQueryRequest struct {
     
     /* end_date required代销采购退款最迟修改时间。与start_date的最大时间间隔不能超过30天 */
@@ -6765,7 +6765,7 @@ func (req *TaobaoFenxiaoRefundQueryRequest) GetAPIName() string {
 	return "taobao.fenxiao.refund.query"
 }
 
-// TaobaoFenxiaoRefundQueryResponse 供应商按查询条件批量查询代销采购退款
+/* TaobaoFenxiaoRefundQueryResponse 供应商按查询条件批量查询代销采购退款 */
 type TaobaoFenxiaoRefundQueryResponse struct {
     
     /* refund_list Object Array代销采购退款列表 */
@@ -6776,7 +6776,7 @@ type TaobaoFenxiaoRefundQueryResponse struct {
     
 }
 
-// TaobaoRefundRefusereasonGetRequest 获取商家拒绝原因列表
+/* TaobaoRefundRefusereasonGetRequest 获取商家拒绝原因列表 */
 type TaobaoRefundRefusereasonGetRequest struct {
     
     /* fields required返回参数 */
@@ -6794,7 +6794,7 @@ func (req *TaobaoRefundRefusereasonGetRequest) GetAPIName() string {
 	return "taobao.refund.refusereason.get"
 }
 
-// TaobaoRefundRefusereasonGetResponse 获取商家拒绝原因列表
+/* TaobaoRefundRefusereasonGetResponse 获取商家拒绝原因列表 */
 type TaobaoRefundRefusereasonGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -6808,7 +6808,7 @@ type TaobaoRefundRefusereasonGetResponse struct {
     
 }
 
-// TaobaoQimenReturnorderQueryRequest ERP调用奇门的接口，查询退货入库信息
+/* TaobaoQimenReturnorderQueryRequest ERP调用奇门的接口，查询退货入库信息 */
 type TaobaoQimenReturnorderQueryRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -6838,7 +6838,7 @@ func (req *TaobaoQimenReturnorderQueryRequest) GetAPIName() string {
 	return "taobao.qimen.returnorder.query"
 }
 
-// TaobaoQimenReturnorderQueryResponse ERP调用奇门的接口，查询退货入库信息
+/* TaobaoQimenReturnorderQueryResponse ERP调用奇门的接口，查询退货入库信息 */
 type TaobaoQimenReturnorderQueryResponse struct {
     
     /* code Basic响应码 */
@@ -6858,7 +6858,7 @@ type TaobaoQimenReturnorderQueryResponse struct {
     
 }
 
-// TaobaoQimenOrderstatusBatchqueryRequest ERP调用奇门的接口,查询订单在仓库的状态
+/* TaobaoQimenOrderstatusBatchqueryRequest ERP调用奇门的接口,查询订单在仓库的状态 */
 type TaobaoQimenOrderstatusBatchqueryRequest struct {
     
     /* currentPage required当前第几页(从1开始) */
@@ -6891,7 +6891,7 @@ func (req *TaobaoQimenOrderstatusBatchqueryRequest) GetAPIName() string {
 	return "taobao.qimen.orderstatus.batchquery"
 }
 
-// TaobaoQimenOrderstatusBatchqueryResponse ERP调用奇门的接口,查询订单在仓库的状态
+/* TaobaoQimenOrderstatusBatchqueryResponse ERP调用奇门的接口,查询订单在仓库的状态 */
 type TaobaoQimenOrderstatusBatchqueryResponse struct {
     
     /* code Basic响应码 */
@@ -6911,7 +6911,7 @@ type TaobaoQimenOrderstatusBatchqueryResponse struct {
     
 }
 
-// TaobaoQimenItemlackQueryRequest ERP调用奇门的接口,查询库存商品缺货情况
+/* TaobaoQimenItemlackQueryRequest ERP调用奇门的接口,查询库存商品缺货情况 */
 type TaobaoQimenItemlackQueryRequest struct {
     
     /* deliveryOrderCode required出库单号 */
@@ -6941,7 +6941,7 @@ func (req *TaobaoQimenItemlackQueryRequest) GetAPIName() string {
 	return "taobao.qimen.itemlack.query"
 }
 
-// TaobaoQimenItemlackQueryResponse ERP调用奇门的接口,查询库存商品缺货情况
+/* TaobaoQimenItemlackQueryResponse ERP调用奇门的接口,查询库存商品缺货情况 */
 type TaobaoQimenItemlackQueryResponse struct {
     
     /* code Basic响应码 */
@@ -6973,7 +6973,7 @@ type TaobaoQimenItemlackQueryResponse struct {
     
 }
 
-// TaobaoQimenOrderPendingRequest ERP调用奇门的接口,挂起某些创建的单据;场景介绍：ERP主动发起挂起（恢复）某些创建的单据，如入库单、出库单、退货单等
+/* TaobaoQimenOrderPendingRequest ERP调用奇门的接口,挂起某些创建的单据;场景介绍：ERP主动发起挂起（恢复）某些创建的单据，如入库单、出库单、退货单等 */
 type TaobaoQimenOrderPendingRequest struct {
     
     /* actionType required操作类型(pending=挂起;restore=恢复) */
@@ -7006,7 +7006,7 @@ func (req *TaobaoQimenOrderPendingRequest) GetAPIName() string {
 	return "taobao.qimen.order.pending"
 }
 
-// TaobaoQimenOrderPendingResponse ERP调用奇门的接口,挂起某些创建的单据;场景介绍：ERP主动发起挂起（恢复）某些创建的单据，如入库单、出库单、退货单等
+/* TaobaoQimenOrderPendingResponse ERP调用奇门的接口,挂起某些创建的单据;场景介绍：ERP主动发起挂起（恢复）某些创建的单据，如入库单、出库单、退货单等 */
 type TaobaoQimenOrderPendingResponse struct {
     
     /* code Basic响应码 */
@@ -7020,7 +7020,7 @@ type TaobaoQimenOrderPendingResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderBatchcreateAnswerRequest WMS调用接口，用于异步化的批量发货单创建结果通知。（如菜鸟发货单批量创建结果的返回）
+/* TaobaoQimenDeliveryorderBatchcreateAnswerRequest WMS调用接口，用于异步化的批量发货单创建结果通知。（如菜鸟发货单批量创建结果的返回） */
 type TaobaoQimenDeliveryorderBatchcreateAnswerRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -7035,7 +7035,7 @@ func (req *TaobaoQimenDeliveryorderBatchcreateAnswerRequest) GetAPIName() string
 	return "taobao.qimen.deliveryorder.batchcreate.answer"
 }
 
-// TaobaoQimenDeliveryorderBatchcreateAnswerResponse WMS调用接口，用于异步化的批量发货单创建结果通知。（如菜鸟发货单批量创建结果的返回）
+/* TaobaoQimenDeliveryorderBatchcreateAnswerResponse WMS调用接口，用于异步化的批量发货单创建结果通知。（如菜鸟发货单批量创建结果的返回） */
 type TaobaoQimenDeliveryorderBatchcreateAnswerResponse struct {
     
     /* code Basic响应码 */
@@ -7049,7 +7049,7 @@ type TaobaoQimenDeliveryorderBatchcreateAnswerResponse struct {
     
 }
 
-// TaobaoQimenCombineitemSynchronizeRequest ERP调用奇门的接口,将商品信息同步给WMS
+/* TaobaoQimenCombineitemSynchronizeRequest ERP调用奇门的接口,将商品信息同步给WMS */
 type TaobaoQimenCombineitemSynchronizeRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -7076,7 +7076,7 @@ func (req *TaobaoQimenCombineitemSynchronizeRequest) GetAPIName() string {
 	return "taobao.qimen.combineitem.synchronize"
 }
 
-// TaobaoQimenCombineitemSynchronizeResponse ERP调用奇门的接口,将商品信息同步给WMS
+/* TaobaoQimenCombineitemSynchronizeResponse ERP调用奇门的接口,将商品信息同步给WMS */
 type TaobaoQimenCombineitemSynchronizeResponse struct {
     
     /* code Basic响应码 */
@@ -7090,7 +7090,7 @@ type TaobaoQimenCombineitemSynchronizeResponse struct {
     
 }
 
-// TaobaoSellercenterSubusersGetRequest 根据主账号nick查询该账号下所有的子账号列表，只能查询属于自己的账号信息 (主账号以及所属子账号)
+/* TaobaoSellercenterSubusersGetRequest 根据主账号nick查询该账号下所有的子账号列表，只能查询属于自己的账号信息 (主账号以及所属子账号) */
 type TaobaoSellercenterSubusersGetRequest struct {
     
     /* nick required表示卖家昵称 */
@@ -7102,7 +7102,7 @@ func (req *TaobaoSellercenterSubusersGetRequest) GetAPIName() string {
 	return "taobao.sellercenter.subusers.get"
 }
 
-// TaobaoSellercenterSubusersGetResponse 根据主账号nick查询该账号下所有的子账号列表，只能查询属于自己的账号信息 (主账号以及所属子账号)
+/* TaobaoSellercenterSubusersGetResponse 根据主账号nick查询该账号下所有的子账号列表，只能查询属于自己的账号信息 (主账号以及所属子账号) */
 type TaobaoSellercenterSubusersGetResponse struct {
     
     /* subusers Object Array子账号基本信息列表。具体信息为id、子账号用户名、主账号id、主账号昵称、当前状态值、是否分流 */
@@ -7110,7 +7110,7 @@ type TaobaoSellercenterSubusersGetResponse struct {
     
 }
 
-// TaobaoQimenStockQueryRequest ERP调用奇门的接口,查询商品的库存量
+/* TaobaoQimenStockQueryRequest ERP调用奇门的接口,查询商品的库存量 */
 type TaobaoQimenStockQueryRequest struct {
     
     /* batchCode optional批次编码 */
@@ -7155,7 +7155,7 @@ func (req *TaobaoQimenStockQueryRequest) GetAPIName() string {
 	return "taobao.qimen.stock.query"
 }
 
-// TaobaoQimenStockQueryResponse ERP调用奇门的接口,查询商品的库存量
+/* TaobaoQimenStockQueryResponse ERP调用奇门的接口,查询商品的库存量 */
 type TaobaoQimenStockQueryResponse struct {
     
     /* code Basic响应码 */
@@ -7175,7 +7175,7 @@ type TaobaoQimenStockQueryResponse struct {
     
 }
 
-// TaobaoSellercenterUserPermissionsGetRequest 获取指定用户的权限集合，并不组装成树。如果是主账号，返回所有的权限列表；如果是子账号，返回所有已授权的权限。只能查询属于自己的账号信息 (如果是主账号，则是主账号以及所属子账号，如果是子账号则是对应主账号以及所属子账号)
+/* TaobaoSellercenterUserPermissionsGetRequest 获取指定用户的权限集合，并不组装成树。如果是主账号，返回所有的权限列表；如果是子账号，返回所有已授权的权限。只能查询属于自己的账号信息 (如果是主账号，则是主账号以及所属子账号，如果是子账号则是对应主账号以及所属子账号) */
 type TaobaoSellercenterUserPermissionsGetRequest struct {
     
     /* nick required用户标识，次入参必须为子账号比如zhangsan:cool。如果只输入主账号zhangsan，将报错。 */
@@ -7187,7 +7187,7 @@ func (req *TaobaoSellercenterUserPermissionsGetRequest) GetAPIName() string {
 	return "taobao.sellercenter.user.permissions.get"
 }
 
-// TaobaoSellercenterUserPermissionsGetResponse 获取指定用户的权限集合，并不组装成树。如果是主账号，返回所有的权限列表；如果是子账号，返回所有已授权的权限。只能查询属于自己的账号信息 (如果是主账号，则是主账号以及所属子账号，如果是子账号则是对应主账号以及所属子账号)
+/* TaobaoSellercenterUserPermissionsGetResponse 获取指定用户的权限集合，并不组装成树。如果是主账号，返回所有的权限列表；如果是子账号，返回所有已授权的权限。只能查询属于自己的账号信息 (如果是主账号，则是主账号以及所属子账号，如果是子账号则是对应主账号以及所属子账号) */
 type TaobaoSellercenterUserPermissionsGetResponse struct {
     
     /* permissions Object Array权限列表 */
@@ -7195,7 +7195,7 @@ type TaobaoSellercenterUserPermissionsGetResponse struct {
     
 }
 
-// TaobaoQimenStoreprocessConfirmRequest WMS调用奇门的接口,回传仓内加工单创建情况
+/* TaobaoQimenStoreprocessConfirmRequest WMS调用奇门的接口,回传仓内加工单创建情况 */
 type TaobaoQimenStoreprocessConfirmRequest struct {
     
     /* actualQty optional实际作业总数量 */
@@ -7237,7 +7237,7 @@ func (req *TaobaoQimenStoreprocessConfirmRequest) GetAPIName() string {
 	return "taobao.qimen.storeprocess.confirm"
 }
 
-// TaobaoQimenStoreprocessConfirmResponse WMS调用奇门的接口,回传仓内加工单创建情况
+/* TaobaoQimenStoreprocessConfirmResponse WMS调用奇门的接口,回传仓内加工单创建情况 */
 type TaobaoQimenStoreprocessConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -7251,9 +7251,9 @@ type TaobaoQimenStoreprocessConfirmResponse struct {
     
 }
 
-// TaobaoTradeOrderskuUpdateRequest 只能更新发货前子订单的销售属性 
+/* TaobaoTradeOrderskuUpdateRequest 只能更新发货前子订单的销售属性 
 只能更新价格相同的销售属性。对于拍下减库存的交易会同步更新销售属性的库存量。对于旺店的交易，要使用商品扩展信息中的SKU价格来比较。 
-必须使用sku_id或sku_props中的一个参数来更新，如果两个都传的话，sku_id优先
+必须使用sku_id或sku_props中的一个参数来更新，如果两个都传的话，sku_id优先 */
 type TaobaoTradeOrderskuUpdateRequest struct {
     
     /* oid required子订单编号（对于单笔订单的交易可以传交易编号）。 */
@@ -7271,9 +7271,9 @@ func (req *TaobaoTradeOrderskuUpdateRequest) GetAPIName() string {
 	return "taobao.trade.ordersku.update"
 }
 
-// TaobaoTradeOrderskuUpdateResponse 只能更新发货前子订单的销售属性 
+/* TaobaoTradeOrderskuUpdateResponse 只能更新发货前子订单的销售属性 
 只能更新价格相同的销售属性。对于拍下减库存的交易会同步更新销售属性的库存量。对于旺店的交易，要使用商品扩展信息中的SKU价格来比较。 
-必须使用sku_id或sku_props中的一个参数来更新，如果两个都传的话，sku_id优先
+必须使用sku_id或sku_props中的一个参数来更新，如果两个都传的话，sku_id优先 */
 type TaobaoTradeOrderskuUpdateResponse struct {
     
     /* order Object只返回oid和modified */
@@ -7281,7 +7281,7 @@ type TaobaoTradeOrderskuUpdateResponse struct {
     
 }
 
-// TaobaoQimenStoreprocessCreateRequest ERP调用奇门的接口,创建仓内加工单
+/* TaobaoQimenStoreprocessCreateRequest ERP调用奇门的接口,创建仓内加工单 */
 type TaobaoQimenStoreprocessCreateRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -7323,7 +7323,7 @@ func (req *TaobaoQimenStoreprocessCreateRequest) GetAPIName() string {
 	return "taobao.qimen.storeprocess.create"
 }
 
-// TaobaoQimenStoreprocessCreateResponse ERP调用奇门的接口,创建仓内加工单
+/* TaobaoQimenStoreprocessCreateResponse ERP调用奇门的接口,创建仓内加工单 */
 type TaobaoQimenStoreprocessCreateResponse struct {
     
     /* code Basic响应码 */
@@ -7340,10 +7340,10 @@ type TaobaoQimenStoreprocessCreateResponse struct {
     
 }
 
-// TaobaoTradeShippingaddressUpdateRequest 只能更新一笔交易里面的买家收货地址 
+/* TaobaoTradeShippingaddressUpdateRequest 只能更新一笔交易里面的买家收货地址 
 只能更新发货前（即买家已付款，等待卖家发货状态）的交易的买家收货地址 
 更新后的发货地址可以通过taobao.trade.fullinfo.get查到 
-参数中所说的字节为GBK编码的（英文和数字占1字节，中文占2字节）
+参数中所说的字节为GBK编码的（英文和数字占1字节，中文占2字节） */
 type TaobaoTradeShippingaddressUpdateRequest struct {
     
     /* receiver_address optional收货地址。最大长度为228个字节。 */
@@ -7379,10 +7379,10 @@ func (req *TaobaoTradeShippingaddressUpdateRequest) GetAPIName() string {
 	return "taobao.trade.shippingaddress.update"
 }
 
-// TaobaoTradeShippingaddressUpdateResponse 只能更新一笔交易里面的买家收货地址 
+/* TaobaoTradeShippingaddressUpdateResponse 只能更新一笔交易里面的买家收货地址 
 只能更新发货前（即买家已付款，等待卖家发货状态）的交易的买家收货地址 
 更新后的发货地址可以通过taobao.trade.fullinfo.get查到 
-参数中所说的字节为GBK编码的（英文和数字占1字节，中文占2字节）
+参数中所说的字节为GBK编码的（英文和数字占1字节，中文占2字节） */
 type TaobaoTradeShippingaddressUpdateResponse struct {
     
     /* trade Object交易结构 */
@@ -7390,7 +7390,7 @@ type TaobaoTradeShippingaddressUpdateResponse struct {
     
 }
 
-// TaobaoQimenStockoutQueryRequest 查询出库单详情
+/* TaobaoQimenStockoutQueryRequest 查询出库单详情 */
 type TaobaoQimenStockoutQueryRequest struct {
     
     /* deliveryOrderCode required出库单号 */
@@ -7420,7 +7420,7 @@ func (req *TaobaoQimenStockoutQueryRequest) GetAPIName() string {
 	return "taobao.qimen.stockout.query"
 }
 
-// TaobaoQimenStockoutQueryResponse 查询出库单详情
+/* TaobaoQimenStockoutQueryResponse 查询出库单详情 */
 type TaobaoQimenStockoutQueryResponse struct {
     
     /* code Basic响应码 */
@@ -7446,7 +7446,7 @@ type TaobaoQimenStockoutQueryResponse struct {
     
 }
 
-// TaobaoInventoryInitialItemRequest 商家仓商品初始化在各个仓中库存
+/* TaobaoInventoryInitialItemRequest 商家仓商品初始化在各个仓中库存 */
 type TaobaoInventoryInitialItemRequest struct {
     
     /* sc_item_id required后端商品id */
@@ -7461,7 +7461,7 @@ func (req *TaobaoInventoryInitialItemRequest) GetAPIName() string {
 	return "taobao.inventory.initial.item"
 }
 
-// TaobaoInventoryInitialItemResponse 商家仓商品初始化在各个仓中库存
+/* TaobaoInventoryInitialItemResponse 商家仓商品初始化在各个仓中库存 */
 type TaobaoInventoryInitialItemResponse struct {
     
     /* tip_infos Object Array提示信息 */
@@ -7469,7 +7469,7 @@ type TaobaoInventoryInitialItemResponse struct {
     
 }
 
-// TaobaoPicturePicturesCountRequest 图片总数查询
+/* TaobaoPicturePicturesCountRequest 图片总数查询 */
 type TaobaoPicturePicturesCountRequest struct {
     
     /* client_type optional图片使用，如果是pc宝贝detail使用，设置为client:computer，查询出来的图片是符合pc的宝贝detail显示的如果是手机宝贝detail使用，设置为client:phone，查询出来的图片是符合手机的宝贝detail显示的,默认值是全部 */
@@ -7502,7 +7502,7 @@ func (req *TaobaoPicturePicturesCountRequest) GetAPIName() string {
 	return "taobao.picture.pictures.count"
 }
 
-// TaobaoPicturePicturesCountResponse 图片总数查询
+/* TaobaoPicturePicturesCountResponse 图片总数查询 */
 type TaobaoPicturePicturesCountResponse struct {
     
     /* totals Basic查询的文件总数 */
@@ -7510,7 +7510,7 @@ type TaobaoPicturePicturesCountResponse struct {
     
 }
 
-// TaobaoJushitaJdpUserDeleteRequest 删除应用的数据推送用户，用户被删除后，重新添加时会重新同步历史数据。
+/* TaobaoJushitaJdpUserDeleteRequest 删除应用的数据推送用户，用户被删除后，重新添加时会重新同步历史数据。 */
 type TaobaoJushitaJdpUserDeleteRequest struct {
     
     /* nick special要删除用户的昵称 */
@@ -7525,7 +7525,7 @@ func (req *TaobaoJushitaJdpUserDeleteRequest) GetAPIName() string {
 	return "taobao.jushita.jdp.user.delete"
 }
 
-// TaobaoJushitaJdpUserDeleteResponse 删除应用的数据推送用户，用户被删除后，重新添加时会重新同步历史数据。
+/* TaobaoJushitaJdpUserDeleteResponse 删除应用的数据推送用户，用户被删除后，重新添加时会重新同步历史数据。 */
 type TaobaoJushitaJdpUserDeleteResponse struct {
     
     /* is_success Basic是否删除成功 */
@@ -7533,7 +7533,7 @@ type TaobaoJushitaJdpUserDeleteResponse struct {
     
 }
 
-// TaobaoPicturePicturesGetRequest 图片空间对外的图片获取接口，该接口只针对分页获取，获取某一页的图片，该接口不支持总数的查询asd
+/* TaobaoPicturePicturesGetRequest 图片空间对外的图片获取接口，该接口只针对分页获取，获取某一页的图片，该接口不支持总数的查询asd */
 type TaobaoPicturePicturesGetRequest struct {
     
     /* client_type optional图片使用，如果是pc宝贝detail使用，设置为client:computer，查询出来的图片是符合pc的宝贝detail显示的如果是手机宝贝detail使用，设置为client:phone，查询出来的图片是符合手机的宝贝detail显示的,默认值是全部 */
@@ -7581,7 +7581,7 @@ func (req *TaobaoPicturePicturesGetRequest) GetAPIName() string {
 	return "taobao.picture.pictures.get"
 }
 
-// TaobaoPicturePicturesGetResponse 图片空间对外的图片获取接口，该接口只针对分页获取，获取某一页的图片，该接口不支持总数的查询asd
+/* TaobaoPicturePicturesGetResponse 图片空间对外的图片获取接口，该接口只针对分页获取，获取某一页的图片，该接口不支持总数的查询asd */
 type TaobaoPicturePicturesGetResponse struct {
     
     /* pictures Object Array图片空间图片数据对象 */
@@ -7589,7 +7589,7 @@ type TaobaoPicturePicturesGetResponse struct {
     
 }
 
-// TaobaoJushitaJdpUserAddRequest 提供给接入数据推送的应用添加数据推送服务的用户
+/* TaobaoJushitaJdpUserAddRequest 提供给接入数据推送的应用添加数据推送服务的用户 */
 type TaobaoJushitaJdpUserAddRequest struct {
     
     /* history_days optional推送历史数据天数，只能为90天内，包含90天。当此参数不填时，表示以页面中应用配置的历史天数为准；如果为0表示这个用户不推送历史数据；其它表示推送的历史天数。 */
@@ -7613,7 +7613,7 @@ func (req *TaobaoJushitaJdpUserAddRequest) GetAPIName() string {
 	return "taobao.jushita.jdp.user.add"
 }
 
-// TaobaoJushitaJdpUserAddResponse 提供给接入数据推送的应用添加数据推送服务的用户
+/* TaobaoJushitaJdpUserAddResponse 提供给接入数据推送的应用添加数据推送服务的用户 */
 type TaobaoJushitaJdpUserAddResponse struct {
     
     /* is_success Basic是否添加成功 */
@@ -7621,7 +7621,7 @@ type TaobaoJushitaJdpUserAddResponse struct {
     
 }
 
-// CainiaoCloudprintTemplatesMigrateRequest 云打印模板迁移接口
+/* CainiaoCloudprintTemplatesMigrateRequest 云打印模板迁移接口 */
 type CainiaoCloudprintTemplatesMigrateRequest struct {
     
     /* custom_area_content optional自定义区内容 */
@@ -7639,7 +7639,7 @@ func (req *CainiaoCloudprintTemplatesMigrateRequest) GetAPIName() string {
 	return "cainiao.cloudprint.templates.migrate"
 }
 
-// CainiaoCloudprintTemplatesMigrateResponse 云打印模板迁移接口
+/* CainiaoCloudprintTemplatesMigrateResponse 云打印模板迁移接口 */
 type CainiaoCloudprintTemplatesMigrateResponse struct {
     
     /* result Objectresult */
@@ -7647,7 +7647,7 @@ type CainiaoCloudprintTemplatesMigrateResponse struct {
     
 }
 
-// AlipayXiaodaiUserPermitRequest 阿里金融为用户开通消息通道接口
+/* AlipayXiaodaiUserPermitRequest 阿里金融为用户开通消息通道接口 */
 type AlipayXiaodaiUserPermitRequest struct {
     
     /* user_id required用户数字ID */
@@ -7659,7 +7659,7 @@ func (req *AlipayXiaodaiUserPermitRequest) GetAPIName() string {
 	return "alipay.xiaodai.user.permit"
 }
 
-// AlipayXiaodaiUserPermitResponse 阿里金融为用户开通消息通道接口
+/* AlipayXiaodaiUserPermitResponse 阿里金融为用户开通消息通道接口 */
 type AlipayXiaodaiUserPermitResponse struct {
     
     /* is_success Basic是否成功 */
@@ -7667,7 +7667,7 @@ type AlipayXiaodaiUserPermitResponse struct {
     
 }
 
-// TaobaoAppstoreSubscribeGetRequest 查询appstore应用订购关系(对于新上架的多版本应用，建议使用taobao.vas.subscribe.get)
+/* TaobaoAppstoreSubscribeGetRequest 查询appstore应用订购关系(对于新上架的多版本应用，建议使用taobao.vas.subscribe.get) */
 type TaobaoAppstoreSubscribeGetRequest struct {
     
     /* lease_id optional插件实例ID */
@@ -7682,7 +7682,7 @@ func (req *TaobaoAppstoreSubscribeGetRequest) GetAPIName() string {
 	return "taobao.appstore.subscribe.get"
 }
 
-// TaobaoAppstoreSubscribeGetResponse 查询appstore应用订购关系(对于新上架的多版本应用，建议使用taobao.vas.subscribe.get)
+/* TaobaoAppstoreSubscribeGetResponse 查询appstore应用订购关系(对于新上架的多版本应用，建议使用taobao.vas.subscribe.get) */
 type TaobaoAppstoreSubscribeGetResponse struct {
     
     /* user_subscribe Object用户订购信息 */
@@ -7690,7 +7690,7 @@ type TaobaoAppstoreSubscribeGetResponse struct {
     
 }
 
-// TaobaoQimenReplenishplanCreateRequest ERP调用奇门的接口,通知WMS创建补货计划
+/* TaobaoQimenReplenishplanCreateRequest ERP调用奇门的接口,通知WMS创建补货计划 */
 type TaobaoQimenReplenishplanCreateRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -7717,7 +7717,7 @@ func (req *TaobaoQimenReplenishplanCreateRequest) GetAPIName() string {
 	return "taobao.qimen.replenishplan.create"
 }
 
-// TaobaoQimenReplenishplanCreateResponse ERP调用奇门的接口,通知WMS创建补货计划
+/* TaobaoQimenReplenishplanCreateResponse ERP调用奇门的接口,通知WMS创建补货计划 */
 type TaobaoQimenReplenishplanCreateResponse struct {
     
     /* code Basic响应码 */
@@ -7731,7 +7731,7 @@ type TaobaoQimenReplenishplanCreateResponse struct {
     
 }
 
-// TmallDisputeReceiveGetRequest 展示商家所有退款信息
+/* TmallDisputeReceiveGetRequest 展示商家所有退款信息 */
 type TmallDisputeReceiveGetRequest struct {
     
     /* buyer_nick optional买家昵称 */
@@ -7770,7 +7770,7 @@ func (req *TmallDisputeReceiveGetRequest) GetAPIName() string {
 	return "tmall.dispute.receive.get"
 }
 
-// TmallDisputeReceiveGetResponse 展示商家所有退款信息
+/* TmallDisputeReceiveGetResponse 展示商家所有退款信息 */
 type TmallDisputeReceiveGetResponse struct {
     
     /* result Objectresult */
@@ -7778,7 +7778,7 @@ type TmallDisputeReceiveGetResponse struct {
     
 }
 
-// TaobaoLogisticsPartnersGetRequest 查询物流公司信息（可以查询目的地可不可达情况）
+/* TaobaoLogisticsPartnersGetRequest 查询物流公司信息（可以查询目的地可不可达情况） */
 type TaobaoLogisticsPartnersGetRequest struct {
     
     /* goods_value optional货物价格.只有当选择货到付款此参数才会有效 */
@@ -7802,7 +7802,7 @@ func (req *TaobaoLogisticsPartnersGetRequest) GetAPIName() string {
 	return "taobao.logistics.partners.get"
 }
 
-// TaobaoLogisticsPartnersGetResponse 查询物流公司信息（可以查询目的地可不可达情况）
+/* TaobaoLogisticsPartnersGetResponse 查询物流公司信息（可以查询目的地可不可达情况） */
 type TaobaoLogisticsPartnersGetResponse struct {
     
     /* logistics_partners Object Array查询揽送范围之内的物流公司信息 */
@@ -7810,7 +7810,7 @@ type TaobaoLogisticsPartnersGetResponse struct {
     
 }
 
-// TaobaoTopSdkFeedbackUploadRequest sdk回调客户端基本信息到开放平台，用于做监控之类，有助于帮助isv监控系统稳定性
+/* TaobaoTopSdkFeedbackUploadRequest sdk回调客户端基本信息到开放平台，用于做监控之类，有助于帮助isv监控系统稳定性 */
 type TaobaoTopSdkFeedbackUploadRequest struct {
     
     /* content optional具体内容，json形式 */
@@ -7825,7 +7825,7 @@ func (req *TaobaoTopSdkFeedbackUploadRequest) GetAPIName() string {
 	return "taobao.top.sdk.feedback.upload"
 }
 
-// TaobaoTopSdkFeedbackUploadResponse sdk回调客户端基本信息到开放平台，用于做监控之类，有助于帮助isv监控系统稳定性
+/* TaobaoTopSdkFeedbackUploadResponse sdk回调客户端基本信息到开放平台，用于做监控之类，有助于帮助isv监控系统稳定性 */
 type TaobaoTopSdkFeedbackUploadResponse struct {
     
     /* upload_interval Basic控制回传间隔（单位：秒） */
@@ -7833,7 +7833,7 @@ type TaobaoTopSdkFeedbackUploadResponse struct {
     
 }
 
-// TaobaoSubuserDutysGetRequest 通过主账号Nick获取该账户下的所有职务信息，职务信息中包括职务ID、职务名称以及职务等级（通过主账号登陆只能获取属于该主账号下的职务信息）
+/* TaobaoSubuserDutysGetRequest 通过主账号Nick获取该账户下的所有职务信息，职务信息中包括职务ID、职务名称以及职务等级（通过主账号登陆只能获取属于该主账号下的职务信息） */
 type TaobaoSubuserDutysGetRequest struct {
     
     /* user_nick required主账号用户名 */
@@ -7845,7 +7845,7 @@ func (req *TaobaoSubuserDutysGetRequest) GetAPIName() string {
 	return "taobao.subuser.dutys.get"
 }
 
-// TaobaoSubuserDutysGetResponse 通过主账号Nick获取该账户下的所有职务信息，职务信息中包括职务ID、职务名称以及职务等级（通过主账号登陆只能获取属于该主账号下的职务信息）
+/* TaobaoSubuserDutysGetResponse 通过主账号Nick获取该账户下的所有职务信息，职务信息中包括职务ID、职务名称以及职务等级（通过主账号登陆只能获取属于该主账号下的职务信息） */
 type TaobaoSubuserDutysGetResponse struct {
     
     /* dutys Object Array职务信息 */
@@ -7853,7 +7853,7 @@ type TaobaoSubuserDutysGetResponse struct {
     
 }
 
-// TaobaoSubuserEmployeeAddRequest 给指定子账号新增一个员工信息（通过主账号登陆只能新建属于该主账号的员工信息）
+/* TaobaoSubuserEmployeeAddRequest 给指定子账号新增一个员工信息（通过主账号登陆只能新建属于该主账号的员工信息） */
 type TaobaoSubuserEmployeeAddRequest struct {
     
     /* department_id required当前员工所属部门ID */
@@ -7904,7 +7904,7 @@ func (req *TaobaoSubuserEmployeeAddRequest) GetAPIName() string {
 	return "taobao.subuser.employee.add"
 }
 
-// TaobaoSubuserEmployeeAddResponse 给指定子账号新增一个员工信息（通过主账号登陆只能新建属于该主账号的员工信息）
+/* TaobaoSubuserEmployeeAddResponse 给指定子账号新增一个员工信息（通过主账号登陆只能新建属于该主账号的员工信息） */
 type TaobaoSubuserEmployeeAddResponse struct {
     
     /* is_success Basic操作是否成功 true:操作成功; false:操作失败 */
@@ -7912,7 +7912,7 @@ type TaobaoSubuserEmployeeAddResponse struct {
     
 }
 
-// TaobaoSubuserInfoUpdateRequest 修改指定账户子账号的基本信息（通过主账号登陆只能修改属于该主账号的子账号基本信息）
+/* TaobaoSubuserInfoUpdateRequest 修改指定账户子账号的基本信息（通过主账号登陆只能修改属于该主账号的子账号基本信息） */
 type TaobaoSubuserInfoUpdateRequest struct {
     
     /* is_disable_subaccount optional是否停用子账号 true:表示停用该子账号false:表示开启该子账号 */
@@ -7930,7 +7930,7 @@ func (req *TaobaoSubuserInfoUpdateRequest) GetAPIName() string {
 	return "taobao.subuser.info.update"
 }
 
-// TaobaoSubuserInfoUpdateResponse 修改指定账户子账号的基本信息（通过主账号登陆只能修改属于该主账号的子账号基本信息）
+/* TaobaoSubuserInfoUpdateResponse 修改指定账户子账号的基本信息（通过主账号登陆只能修改属于该主账号的子账号基本信息） */
 type TaobaoSubuserInfoUpdateResponse struct {
     
     /* is_success Basic操作是否成功 true:操作成功; false:操作失败 */
@@ -7938,7 +7938,7 @@ type TaobaoSubuserInfoUpdateResponse struct {
     
 }
 
-// Gfq1qp4287ShopexMatrxiOfflineSendRequest 商派矩阵线下发货接口
+/* Gfq1qp4287ShopexMatrxiOfflineSendRequest 商派矩阵线下发货接口 */
 type Gfq1qp4287ShopexMatrxiOfflineSendRequest struct {
     
     /* params optional参数 */
@@ -7950,7 +7950,7 @@ func (req *Gfq1qp4287ShopexMatrxiOfflineSendRequest) GetAPIName() string {
 	return "gfq1qp4287.shopex.matrxi.offline.send"
 }
 
-// Gfq1qp4287ShopexMatrxiOfflineSendResponse 商派矩阵线下发货接口
+/* Gfq1qp4287ShopexMatrxiOfflineSendResponse 商派矩阵线下发货接口 */
 type Gfq1qp4287ShopexMatrxiOfflineSendResponse struct {
     
     /* msg_id Basic任务id */
@@ -7958,7 +7958,7 @@ type Gfq1qp4287ShopexMatrxiOfflineSendResponse struct {
     
 }
 
-// TaobaoUopTobOrderCreateRequest ToB仓储发货
+/* TaobaoUopTobOrderCreateRequest ToB仓储发货 */
 type TaobaoUopTobOrderCreateRequest struct {
     
     /* delivery_order optionalERP出库对象 */
@@ -7970,7 +7970,7 @@ func (req *TaobaoUopTobOrderCreateRequest) GetAPIName() string {
 	return "taobao.uop.tob.order.create"
 }
 
-// TaobaoUopTobOrderCreateResponse ToB仓储发货
+/* TaobaoUopTobOrderCreateResponse ToB仓储发货 */
 type TaobaoUopTobOrderCreateResponse struct {
     
     /* delivery_orders Object Array订单 */
@@ -7984,7 +7984,7 @@ type TaobaoUopTobOrderCreateResponse struct {
     
 }
 
-// QimenTaobaoUopTmsupdatemessagetoerpRequest ERP配消息回告（拒签、签收、揽收等）
+/* QimenTaobaoUopTmsupdatemessagetoerpRequest ERP配消息回告（拒签、签收、揽收等） */
 type QimenTaobaoUopTmsupdatemessagetoerpRequest struct {
     
     /* request optional */
@@ -7996,7 +7996,7 @@ func (req *QimenTaobaoUopTmsupdatemessagetoerpRequest) GetAPIName() string {
 	return "qimen.taobao.uop.tmsupdatemessagetoerp"
 }
 
-// QimenTaobaoUopTmsupdatemessagetoerpResponse ERP配消息回告（拒签、签收、揽收等）
+/* QimenTaobaoUopTmsupdatemessagetoerpResponse ERP配消息回告（拒签、签收、揽收等） */
 type QimenTaobaoUopTmsupdatemessagetoerpResponse struct {
     
     /* response Objectresponse */
@@ -8004,7 +8004,7 @@ type QimenTaobaoUopTmsupdatemessagetoerpResponse struct {
     
 }
 
-// QimenTaobaoIcpOrderStockoutordermessagetoerpRequest 出库单信息推送接口
+/* QimenTaobaoIcpOrderStockoutordermessagetoerpRequest 出库单信息推送接口 */
 type QimenTaobaoIcpOrderStockoutordermessagetoerpRequest struct {
     
     /* customerId required货主ID */
@@ -8019,7 +8019,7 @@ func (req *QimenTaobaoIcpOrderStockoutordermessagetoerpRequest) GetAPIName() str
 	return "qimen.taobao.icp.order.stockoutordermessagetoerp"
 }
 
-// QimenTaobaoIcpOrderStockoutordermessagetoerpResponse 出库单信息推送接口
+/* QimenTaobaoIcpOrderStockoutordermessagetoerpResponse 出库单信息推送接口 */
 type QimenTaobaoIcpOrderStockoutordermessagetoerpResponse struct {
     
     /* result Object返回结果 */
@@ -8027,8 +8027,8 @@ type QimenTaobaoIcpOrderStockoutordermessagetoerpResponse struct {
     
 }
 
-// TaobaoItemSkuDeleteRequest 删除一个sku的数据
-需要删除的sku通过属性properties进行匹配查找
+/* TaobaoItemSkuDeleteRequest 删除一个sku的数据
+需要删除的sku通过属性properties进行匹配查找 */
 type TaobaoItemSkuDeleteRequest struct {
     
     /* ignorewarning optional忽略警告提示. */
@@ -8055,8 +8055,8 @@ func (req *TaobaoItemSkuDeleteRequest) GetAPIName() string {
 	return "taobao.item.sku.delete"
 }
 
-// TaobaoItemSkuDeleteResponse 删除一个sku的数据
-需要删除的sku通过属性properties进行匹配查找
+/* TaobaoItemSkuDeleteResponse 删除一个sku的数据
+需要删除的sku通过属性properties进行匹配查找 */
 type TaobaoItemSkuDeleteResponse struct {
     
     /* sku ObjectSku结构 */
@@ -8064,7 +8064,7 @@ type TaobaoItemSkuDeleteResponse struct {
     
 }
 
-// AlibabaEinvoiceProviderlistGetRequest 获取能提供电子发票开票服务的开票服务商
+/* AlibabaEinvoiceProviderlistGetRequest 获取能提供电子发票开票服务的开票服务商 */
 type AlibabaEinvoiceProviderlistGetRequest struct {
     
 }
@@ -8073,7 +8073,7 @@ func (req *AlibabaEinvoiceProviderlistGetRequest) GetAPIName() string {
 	return "alibaba.einvoice.providerlist.get"
 }
 
-// AlibabaEinvoiceProviderlistGetResponse 获取能提供电子发票开票服务的开票服务商
+/* AlibabaEinvoiceProviderlistGetResponse 获取能提供电子发票开票服务的开票服务商 */
 type AlibabaEinvoiceProviderlistGetResponse struct {
     
     /* result Object查询结果集 */
@@ -8081,7 +8081,7 @@ type AlibabaEinvoiceProviderlistGetResponse struct {
     
 }
 
-// TaobaoTmcUserGetRequest 查询指定用户开通的消息通道和组
+/* TaobaoTmcUserGetRequest 查询指定用户开通的消息通道和组 */
 type TaobaoTmcUserGetRequest struct {
     
     /* fields required需返回的字段列表，多个字段以半角逗号分隔。可选值：TmcUser结构体中的所有字段，一定要返回topic。 */
@@ -8099,7 +8099,7 @@ func (req *TaobaoTmcUserGetRequest) GetAPIName() string {
 	return "taobao.tmc.user.get"
 }
 
-// TaobaoTmcUserGetResponse 查询指定用户开通的消息通道和组
+/* TaobaoTmcUserGetResponse 查询指定用户开通的消息通道和组 */
 type TaobaoTmcUserGetResponse struct {
     
     /* tmc_user Object开通的用户数据 */
@@ -8107,7 +8107,7 @@ type TaobaoTmcUserGetResponse struct {
     
 }
 
-// CainiaoWaybillprintClientupdateGetconfigRequest 获取客户端更新配置信息
+/* CainiaoWaybillprintClientupdateGetconfigRequest 获取客户端更新配置信息 */
 type CainiaoWaybillprintClientupdateGetconfigRequest struct {
     
     /* lan_ip required服务发起机器局域网ip */
@@ -8128,7 +8128,7 @@ func (req *CainiaoWaybillprintClientupdateGetconfigRequest) GetAPIName() string 
 	return "cainiao.waybillprint.clientupdate.getconfig"
 }
 
-// CainiaoWaybillprintClientupdateGetconfigResponse 获取客户端更新配置信息
+/* CainiaoWaybillprintClientupdateGetconfigResponse 获取客户端更新配置信息 */
 type CainiaoWaybillprintClientupdateGetconfigResponse struct {
     
     /* result Objectresult */
@@ -8136,7 +8136,7 @@ type CainiaoWaybillprintClientupdateGetconfigResponse struct {
     
 }
 
-// TmallTraderateItemtagsGetRequest 通过商品ID获取标签详细信息
+/* TmallTraderateItemtagsGetRequest 通过商品ID获取标签详细信息 */
 type TmallTraderateItemtagsGetRequest struct {
     
     /* item_id required商品ID */
@@ -8148,7 +8148,7 @@ func (req *TmallTraderateItemtagsGetRequest) GetAPIName() string {
 	return "tmall.traderate.itemtags.get"
 }
 
-// TmallTraderateItemtagsGetResponse 通过商品ID获取标签详细信息
+/* TmallTraderateItemtagsGetResponse 通过商品ID获取标签详细信息 */
 type TmallTraderateItemtagsGetResponse struct {
     
     /* tags Object Array标签列表 */
@@ -8156,7 +8156,7 @@ type TmallTraderateItemtagsGetResponse struct {
     
 }
 
-// TmallTraderateFeedsGetRequest 通过子订单ID获取天猫订单对应的评价，追评，以及对应的语义标签
+/* TmallTraderateFeedsGetRequest 通过子订单ID获取天猫订单对应的评价，追评，以及对应的语义标签 */
 type TmallTraderateFeedsGetRequest struct {
     
     /* child_trade_id required交易子订单ID */
@@ -8168,7 +8168,7 @@ func (req *TmallTraderateFeedsGetRequest) GetAPIName() string {
 	return "tmall.traderate.feeds.get"
 }
 
-// TmallTraderateFeedsGetResponse 通过子订单ID获取天猫订单对应的评价，追评，以及对应的语义标签
+/* TmallTraderateFeedsGetResponse 通过子订单ID获取天猫订单对应的评价，追评，以及对应的语义标签 */
 type TmallTraderateFeedsGetResponse struct {
     
     /* tmall_rate_info Object返回评价信息 */
@@ -8176,7 +8176,7 @@ type TmallTraderateFeedsGetResponse struct {
     
 }
 
-// TaobaoFilesGetRequest 获取业务方暂存给ISV的文件列表
+/* TaobaoFilesGetRequest 获取业务方暂存给ISV的文件列表 */
 type TaobaoFilesGetRequest struct {
     
     /* end_date required搜索结束时间 */
@@ -8194,7 +8194,7 @@ func (req *TaobaoFilesGetRequest) GetAPIName() string {
 	return "taobao.files.get"
 }
 
-// TaobaoFilesGetResponse 获取业务方暂存给ISV的文件列表
+/* TaobaoFilesGetResponse 获取业务方暂存给ISV的文件列表 */
 type TaobaoFilesGetResponse struct {
     
     /* results Object Arrayresults */
@@ -8202,7 +8202,7 @@ type TaobaoFilesGetResponse struct {
     
 }
 
-// TaobaoWlbWaybillShengxianGetRequest 商家通过交易订单号获取电子面单接口
+/* TaobaoWlbWaybillShengxianGetRequest 商家通过交易订单号获取电子面单接口 */
 type TaobaoWlbWaybillShengxianGetRequest struct {
     
     /* biz_code required物流服务方代码，生鲜配送：YXSR */
@@ -8232,7 +8232,7 @@ func (req *TaobaoWlbWaybillShengxianGetRequest) GetAPIName() string {
 	return "taobao.wlb.waybill.shengxian.get"
 }
 
-// TaobaoWlbWaybillShengxianGetResponse 商家通过交易订单号获取电子面单接口
+/* TaobaoWlbWaybillShengxianGetResponse 商家通过交易订单号获取电子面单接口 */
 type TaobaoWlbWaybillShengxianGetResponse struct {
     
     /* fresh_waybill Object成功后返回的生鲜电子面单信息 */
@@ -8243,7 +8243,7 @@ type TaobaoWlbWaybillShengxianGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductQuantityUpdateRequest 修改产品库存信息，支持全量修改以及增量修改两种方式
+/* TaobaoFenxiaoProductQuantityUpdateRequest 修改产品库存信息，支持全量修改以及增量修改两种方式 */
 type TaobaoFenxiaoProductQuantityUpdateRequest struct {
     
     /* product_id required产品ID */
@@ -8265,7 +8265,7 @@ func (req *TaobaoFenxiaoProductQuantityUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.quantity.update"
 }
 
-// TaobaoFenxiaoProductQuantityUpdateResponse 修改产品库存信息，支持全量修改以及增量修改两种方式
+/* TaobaoFenxiaoProductQuantityUpdateResponse 修改产品库存信息，支持全量修改以及增量修改两种方式 */
 type TaobaoFenxiaoProductQuantityUpdateResponse struct {
     
     /* created Basic操作时间 */
@@ -8276,7 +8276,7 @@ type TaobaoFenxiaoProductQuantityUpdateResponse struct {
     
 }
 
-// CainiaoOpenstorageSellerResourceCreateRequest 商家资源创建接口(云打印开源存储)
+/* CainiaoOpenstorageSellerResourceCreateRequest 商家资源创建接口(云打印开源存储) */
 type CainiaoOpenstorageSellerResourceCreateRequest struct {
     
     /* param_create_seller_resource_request optional商家创建资源参数 */
@@ -8288,7 +8288,7 @@ func (req *CainiaoOpenstorageSellerResourceCreateRequest) GetAPIName() string {
 	return "cainiao.openstorage.seller.resource.create"
 }
 
-// CainiaoOpenstorageSellerResourceCreateResponse 商家资源创建接口(云打印开源存储)
+/* CainiaoOpenstorageSellerResourceCreateResponse 商家资源创建接口(云打印开源存储) */
 type CainiaoOpenstorageSellerResourceCreateResponse struct {
     
     /* result Objectresult */
@@ -8296,7 +8296,7 @@ type CainiaoOpenstorageSellerResourceCreateResponse struct {
     
 }
 
-// CainiaoOpenstorageResourcePublishRequest isv和商家资源发布接口(云打印开源存储)
+/* CainiaoOpenstorageResourcePublishRequest isv和商家资源发布接口(云打印开源存储) */
 type CainiaoOpenstorageResourcePublishRequest struct {
     
     /* param_publish_resource_request optional资源发布参数 */
@@ -8308,7 +8308,7 @@ func (req *CainiaoOpenstorageResourcePublishRequest) GetAPIName() string {
 	return "cainiao.openstorage.resource.publish"
 }
 
-// CainiaoOpenstorageResourcePublishResponse isv和商家资源发布接口(云打印开源存储)
+/* CainiaoOpenstorageResourcePublishResponse isv和商家资源发布接口(云打印开源存储) */
 type CainiaoOpenstorageResourcePublishResponse struct {
     
     /* result Objectresult */
@@ -8316,13 +8316,13 @@ type CainiaoOpenstorageResourcePublishResponse struct {
     
 }
 
-// AlipayPointBudgetGetRequest 查询已采购的集分宝余额，操作流程如下：
+/* AlipayPointBudgetGetRequest 查询已采购的集分宝余额，操作流程如下：
 1、申请支付宝增值包。
 2、申请支付宝应用上线时选择集分宝API。
 3、引导商家签约支付宝集分宝服务，地址为https://openapi.alipay.com/subscribe.htm?id=应用ID。
 4、引导商家对授予支付宝集分宝发放权限，地址为https://openauth.alipay.com/oauth2/authorize.htm?scope=p&client_id=应用ID
 5、引导授权的商家采购集分宝，地址为https://jf.alipay.com/aop/purchase.htm，进行集分宝采购。
-6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。
+6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。 */
 type AlipayPointBudgetGetRequest struct {
     
     /* auth_token special支付宝给用户的授权。如果没有top的授权，这个字段是必填项 */
@@ -8334,13 +8334,13 @@ func (req *AlipayPointBudgetGetRequest) GetAPIName() string {
 	return "alipay.point.budget.get"
 }
 
-// AlipayPointBudgetGetResponse 查询已采购的集分宝余额，操作流程如下：
+/* AlipayPointBudgetGetResponse 查询已采购的集分宝余额，操作流程如下：
 1、申请支付宝增值包。
 2、申请支付宝应用上线时选择集分宝API。
 3、引导商家签约支付宝集分宝服务，地址为https://openapi.alipay.com/subscribe.htm?id=应用ID。
 4、引导商家对授予支付宝集分宝发放权限，地址为https://openauth.alipay.com/oauth2/authorize.htm?scope=p&client_id=应用ID
 5、引导授权的商家采购集分宝，地址为https://jf.alipay.com/aop/purchase.htm，进行集分宝采购。
-6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。
+6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。 */
 type AlipayPointBudgetGetResponse struct {
     
     /* budget_amount Basic还可以发放的集分宝个数 */
@@ -8348,7 +8348,7 @@ type AlipayPointBudgetGetResponse struct {
     
 }
 
-// CainiaoOpenstorageResourceUpdateRequest isv和商家的资源获取接口（云打印开源存储）
+/* CainiaoOpenstorageResourceUpdateRequest isv和商家的资源获取接口（云打印开源存储） */
 type CainiaoOpenstorageResourceUpdateRequest struct {
     
     /* param_update_resource_request required入参 */
@@ -8360,7 +8360,7 @@ func (req *CainiaoOpenstorageResourceUpdateRequest) GetAPIName() string {
 	return "cainiao.openstorage.resource.update"
 }
 
-// CainiaoOpenstorageResourceUpdateResponse isv和商家的资源获取接口（云打印开源存储）
+/* CainiaoOpenstorageResourceUpdateResponse isv和商家的资源获取接口（云打印开源存储） */
 type CainiaoOpenstorageResourceUpdateResponse struct {
     
     /* result Objectresult */
@@ -8368,7 +8368,7 @@ type CainiaoOpenstorageResourceUpdateResponse struct {
     
 }
 
-// CainiaoOpenstorageIsvResourcesGetRequest isv资源列表查询（云打印开源存储）
+/* CainiaoOpenstorageIsvResourcesGetRequest isv资源列表查询（云打印开源存储） */
 type CainiaoOpenstorageIsvResourcesGetRequest struct {
     
     /* isv_resource_type requiredisv资源类型，分为：TEMPLATE（模板）和PRINT_ITEM（打印项） */
@@ -8380,7 +8380,7 @@ func (req *CainiaoOpenstorageIsvResourcesGetRequest) GetAPIName() string {
 	return "cainiao.openstorage.isv.resources.get"
 }
 
-// CainiaoOpenstorageIsvResourcesGetResponse isv资源列表查询（云打印开源存储）
+/* CainiaoOpenstorageIsvResourcesGetResponse isv资源列表查询（云打印开源存储） */
 type CainiaoOpenstorageIsvResourcesGetResponse struct {
     
     /* result Objectresult */
@@ -8388,14 +8388,14 @@ type CainiaoOpenstorageIsvResourcesGetResponse struct {
     
 }
 
-// AlipayPointOrderAddRequest 向用户发送集分宝，发放集分宝之前，操作流程如下：
+/* AlipayPointOrderAddRequest 向用户发送集分宝，发放集分宝之前，操作流程如下：
 1、申请支付宝增值包。
 2、申请支付宝应用上线时选择集分宝API。
 3、引导商家签约支付宝集分宝服务，地址为https://openapi.alipay.com/subscribe.htm?id=应用ID。
 4、引导商家对授予支付宝集分宝发放权限，地址为https://openauth.alipay.com/oauth2/authorize.htm?scope=p&client_id=应用ID
 5、引导授权的商家采购集分宝，地址为https://jf.alipay.com/aop/purchase.htm，进行集分宝采购。
 6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。
-7、调用发放API（alipay.point.order.add）发放集分宝。
+7、调用发放API（alipay.point.order.add）发放集分宝。 */
 type AlipayPointOrderAddRequest struct {
     
     /* auth_token special支付宝用户给应用发放集分宝的授权。 */
@@ -8425,14 +8425,14 @@ func (req *AlipayPointOrderAddRequest) GetAPIName() string {
 	return "alipay.point.order.add"
 }
 
-// AlipayPointOrderAddResponse 向用户发送集分宝，发放集分宝之前，操作流程如下：
+/* AlipayPointOrderAddResponse 向用户发送集分宝，发放集分宝之前，操作流程如下：
 1、申请支付宝增值包。
 2、申请支付宝应用上线时选择集分宝API。
 3、引导商家签约支付宝集分宝服务，地址为https://openapi.alipay.com/subscribe.htm?id=应用ID。
 4、引导商家对授予支付宝集分宝发放权限，地址为https://openauth.alipay.com/oauth2/authorize.htm?scope=p&client_id=应用ID
 5、引导授权的商家采购集分宝，地址为https://jf.alipay.com/aop/purchase.htm，进行集分宝采购。
 6、商家采购之后可以通过集分宝余额API（alipay.point.budget.get）查询商家的集分宝数量。
-7、调用发放API（alipay.point.order.add）发放集分宝。
+7、调用发放API（alipay.point.order.add）发放集分宝。 */
 type AlipayPointOrderAddResponse struct {
     
     /* alipay_order_no Basic支付宝集分宝发放流水号 */
@@ -8443,8 +8443,8 @@ type AlipayPointOrderAddResponse struct {
     
 }
 
-// TaobaoFenxiaoProductUpdateRequest 更新分销平台产品数据，不传更新数据返回失败<br>
-1. 对sku进行增、删操作时，原有的sku_ids字段会被忽略，请使用sku_properties和sku_properties_del。<br>
+/* TaobaoFenxiaoProductUpdateRequest 更新分销平台产品数据，不传更新数据返回失败<br>
+1. 对sku进行增、删操作时，原有的sku_ids字段会被忽略，请使用sku_properties和sku_properties_del。<br> */
 type TaobaoFenxiaoProductUpdateRequest struct {
     
     /* category_id optional所属类目id，参考Taobao.itemcats.get，不支持成人等类目，输入成人类目id保存提示类目属性错误。 */
@@ -8472,7 +8472,7 @@ type TaobaoFenxiaoProductUpdateRequest struct {
     have_quarantee string `json:"have_quarantee";xml:"have_quarantee"`
     
     /* image optional主图图片，如果pic_path参数不空，则优先使用pic_path，忽略该参数 */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* input_properties optional自定义属性。格式为pid:value;pid:value */
     input_properties string `json:"input_properties";xml:"input_properties"`
@@ -8567,8 +8567,8 @@ func (req *TaobaoFenxiaoProductUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.update"
 }
 
-// TaobaoFenxiaoProductUpdateResponse 更新分销平台产品数据，不传更新数据返回失败<br>
-1. 对sku进行增、删操作时，原有的sku_ids字段会被忽略，请使用sku_properties和sku_properties_del。<br>
+/* TaobaoFenxiaoProductUpdateResponse 更新分销平台产品数据，不传更新数据返回失败<br>
+1. 对sku进行增、删操作时，原有的sku_ids字段会被忽略，请使用sku_properties和sku_properties_del。<br> */
 type TaobaoFenxiaoProductUpdateResponse struct {
     
     /* modified Basic更新时间，时间格式：yyyy-MM-dd HH:mm:ss */
@@ -8579,7 +8579,7 @@ type TaobaoFenxiaoProductUpdateResponse struct {
     
 }
 
-// TaobaoSubuserFullinfoGetRequest 获取指定账户子账号的详细信息，其中包括子账号的账号信息以及员工、部门、职务信息（只能通过主账号登陆并查询属于该主账号下的某个子账号详细信息）
+/* TaobaoSubuserFullinfoGetRequest 获取指定账户子账号的详细信息，其中包括子账号的账号信息以及员工、部门、职务信息（只能通过主账号登陆并查询属于该主账号下的某个子账号详细信息） */
 type TaobaoSubuserFullinfoGetRequest struct {
     
     /* fields optional传入所需要的参数信息（若不需要获取子账号或主账号的企业邮箱地址，则无需传入该参数；若需要获取子账号或主账号的企业邮箱地址，则需要传入fields；可选参数值为subuser_email和user_email，传入其他参数值均无效；两个参数都需要则以逗号隔开传入即可，例如：subuser_email,user_email） */
@@ -8597,7 +8597,7 @@ func (req *TaobaoSubuserFullinfoGetRequest) GetAPIName() string {
 	return "taobao.subuser.fullinfo.get"
 }
 
-// TaobaoSubuserFullinfoGetResponse 获取指定账户子账号的详细信息，其中包括子账号的账号信息以及员工、部门、职务信息（只能通过主账号登陆并查询属于该主账号下的某个子账号详细信息）
+/* TaobaoSubuserFullinfoGetResponse 获取指定账户子账号的详细信息，其中包括子账号的账号信息以及员工、部门、职务信息（只能通过主账号登陆并查询属于该主账号下的某个子账号详细信息） */
 type TaobaoSubuserFullinfoGetResponse struct {
     
     /* sub_fullinfo Object子账号详细信息，其中包括账号基本信息、员工信息和部门职务信息 */
@@ -8605,7 +8605,7 @@ type TaobaoSubuserFullinfoGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductcatsGetRequest 查询供应商的所有产品线数据。根据登陆用户来查询，不需要其他入参
+/* TaobaoFenxiaoProductcatsGetRequest 查询供应商的所有产品线数据。根据登陆用户来查询，不需要其他入参 */
 type TaobaoFenxiaoProductcatsGetRequest struct {
     
     /* fields optional返回字段列表 */
@@ -8617,7 +8617,7 @@ func (req *TaobaoFenxiaoProductcatsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.productcats.get"
 }
 
-// TaobaoFenxiaoProductcatsGetResponse 查询供应商的所有产品线数据。根据登陆用户来查询，不需要其他入参
+/* TaobaoFenxiaoProductcatsGetResponse 查询供应商的所有产品线数据。根据登陆用户来查询，不需要其他入参 */
 type TaobaoFenxiaoProductcatsGetResponse struct {
     
     /* productcats Object Array产品线列表。返回 ProductCat 包含的字段信息。 */
@@ -8628,7 +8628,7 @@ type TaobaoFenxiaoProductcatsGetResponse struct {
     
 }
 
-// TaobaoSubusersGetRequest 获取主账号下的子账号简易账号信息集合。（只能通过主账号登陆并且查询该属于主账号的子账号信息）
+/* TaobaoSubusersGetRequest 获取主账号下的子账号简易账号信息集合。（只能通过主账号登陆并且查询该属于主账号的子账号信息） */
 type TaobaoSubusersGetRequest struct {
     
     /* user_nick required主账号用户名 */
@@ -8640,7 +8640,7 @@ func (req *TaobaoSubusersGetRequest) GetAPIName() string {
 	return "taobao.subusers.get"
 }
 
-// TaobaoSubusersGetResponse 获取主账号下的子账号简易账号信息集合。（只能通过主账号登陆并且查询该属于主账号的子账号信息）
+/* TaobaoSubusersGetResponse 获取主账号下的子账号简易账号信息集合。（只能通过主账号登陆并且查询该属于主账号的子账号信息） */
 type TaobaoSubusersGetResponse struct {
     
     /* subaccounts Object Array子账号基本信息 */
@@ -8648,10 +8648,10 @@ type TaobaoSubusersGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductAddRequest 添加分销平台产品数据。业务逻辑与分销系统前台页面一致。
+/* TaobaoFenxiaoProductAddRequest 添加分销平台产品数据。业务逻辑与分销系统前台页面一致。
 
     * 产品图片默认为空
-    * 产品发布后默认为下架状态
+    * 产品发布后默认为下架状态 */
 type TaobaoFenxiaoProductAddRequest struct {
     
     /* category_id required所属类目id，参考Taobao.itemcats.get，不支持成人等类目，输入成人类目id保存提示类目属性错误。 */
@@ -8679,7 +8679,7 @@ type TaobaoFenxiaoProductAddRequest struct {
     have_quarantee string `json:"have_quarantee";xml:"have_quarantee"`
     
     /* image optional产品主图，大小不超过500k，格式为gif,jpg,jpeg,png,bmp等图片 */
-    image byte[] `json:"image";xml:"image"`
+    image []byte `json:"image";xml:"image"`
     
     /* input_properties optional自定义属性。格式为pid:value;pid:value */
     input_properties string `json:"input_properties";xml:"input_properties"`
@@ -8774,10 +8774,10 @@ func (req *TaobaoFenxiaoProductAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.add"
 }
 
-// TaobaoFenxiaoProductAddResponse 添加分销平台产品数据。业务逻辑与分销系统前台页面一致。
+/* TaobaoFenxiaoProductAddResponse 添加分销平台产品数据。业务逻辑与分销系统前台页面一致。
 
     * 产品图片默认为空
-    * 产品发布后默认为下架状态
+    * 产品发布后默认为下架状态 */
 type TaobaoFenxiaoProductAddResponse struct {
     
     /* created Basic产品创建时间 时间格式：yyyy-MM-dd HH:mm:ss */
@@ -8788,7 +8788,7 @@ type TaobaoFenxiaoProductAddResponse struct {
     
 }
 
-// TaobaoTmcMsgSendrecordRequest 查询单条消息发送记录，只返回返回条数和时间。
+/* TaobaoTmcMsgSendrecordRequest 查询单条消息发送记录，只返回返回条数和时间。 */
 type TaobaoTmcMsgSendrecordRequest struct {
     
     /* data_id required消息主键ID */
@@ -8806,7 +8806,7 @@ func (req *TaobaoTmcMsgSendrecordRequest) GetAPIName() string {
 	return "taobao.tmc.msg.sendrecord"
 }
 
-// TaobaoTmcMsgSendrecordResponse 查询单条消息发送记录，只返回返回条数和时间。
+/* TaobaoTmcMsgSendrecordResponse 查询单条消息发送记录，只返回返回条数和时间。 */
 type TaobaoTmcMsgSendrecordResponse struct {
     
     /* tb_send_list Basic淘宝发送时间 */
@@ -8823,7 +8823,7 @@ type TaobaoTmcMsgSendrecordResponse struct {
     
 }
 
-// TaobaoWangwangEserviceChatpeersGetRequest 获取聊天对象列表，只能获取最近1个月内的数据且查询时间段<=7天,只支持xml返回 。
+/* TaobaoWangwangEserviceChatpeersGetRequest 获取聊天对象列表，只能获取最近1个月内的数据且查询时间段<=7天,只支持xml返回 。 */
 type TaobaoWangwangEserviceChatpeersGetRequest struct {
     
 }
@@ -8832,7 +8832,7 @@ func (req *TaobaoWangwangEserviceChatpeersGetRequest) GetAPIName() string {
 	return "taobao.wangwang.eservice.chatpeers.get"
 }
 
-// TaobaoWangwangEserviceChatpeersGetResponse 获取聊天对象列表，只能获取最近1个月内的数据且查询时间段<=7天,只支持xml返回 。
+/* TaobaoWangwangEserviceChatpeersGetResponse 获取聊天对象列表，只能获取最近1个月内的数据且查询时间段<=7天,只支持xml返回 。 */
 type TaobaoWangwangEserviceChatpeersGetResponse struct {
     
     /* chatpeers Object Array聊天对象ID列表 */
@@ -8853,14 +8853,14 @@ type TaobaoWangwangEserviceChatpeersGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductsGetRequest 查询供应商的产品数据。
+/* TaobaoFenxiaoProductsGetRequest 查询供应商的产品数据。
 
     * 入参传入pids将优先查询，即只按这个条件查询。
     *入参传入sku_number将优先查询(没有传入pids)，即只按这个条件查询(最多显示50条)
     * 入参fields传skus将查询sku的数据，不传该参数默认不查询，返回产品的其它信息。
     * 入参fields传入images将查询多图数据，不传只返回主图数据。
     * 入参fields仅对传入pids生效（只有按ID查询时，才能查询额外的数据）
-    * 查询结果按照产品发布时间倒序，即时间近的数据在前。
+    * 查询结果按照产品发布时间倒序，即时间近的数据在前。 */
 type TaobaoFenxiaoProductsGetRequest struct {
     
     /* end_modified optional结束修改时间 */
@@ -8904,14 +8904,14 @@ func (req *TaobaoFenxiaoProductsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.products.get"
 }
 
-// TaobaoFenxiaoProductsGetResponse 查询供应商的产品数据。
+/* TaobaoFenxiaoProductsGetResponse 查询供应商的产品数据。
 
     * 入参传入pids将优先查询，即只按这个条件查询。
     *入参传入sku_number将优先查询(没有传入pids)，即只按这个条件查询(最多显示50条)
     * 入参fields传skus将查询sku的数据，不传该参数默认不查询，返回产品的其它信息。
     * 入参fields传入images将查询多图数据，不传只返回主图数据。
     * 入参fields仅对传入pids生效（只有按ID查询时，才能查询额外的数据）
-    * 查询结果按照产品发布时间倒序，即时间近的数据在前。
+    * 查询结果按照产品发布时间倒序，即时间近的数据在前。 */
 type TaobaoFenxiaoProductsGetResponse struct {
     
     /* products Object Array产品对象记录集。返回 FenxiaoProduct 包含的字段信息。 */
@@ -8922,7 +8922,7 @@ type TaobaoFenxiaoProductsGetResponse struct {
     
 }
 
-// TaobaoSubuserDepartmentsGetRequest 获取指定账户的所有部门列表，其实包括有每个部门的ID、父部门ID、部门名称（通过主账号登陆只能查询属于该主账号下的所有部门信息）。
+/* TaobaoSubuserDepartmentsGetRequest 获取指定账户的所有部门列表，其实包括有每个部门的ID、父部门ID、部门名称（通过主账号登陆只能查询属于该主账号下的所有部门信息）。 */
 type TaobaoSubuserDepartmentsGetRequest struct {
     
     /* user_nick required主账号用户名 */
@@ -8934,7 +8934,7 @@ func (req *TaobaoSubuserDepartmentsGetRequest) GetAPIName() string {
 	return "taobao.subuser.departments.get"
 }
 
-// TaobaoSubuserDepartmentsGetResponse 获取指定账户的所有部门列表，其实包括有每个部门的ID、父部门ID、部门名称（通过主账号登陆只能查询属于该主账号下的所有部门信息）。
+/* TaobaoSubuserDepartmentsGetResponse 获取指定账户的所有部门列表，其实包括有每个部门的ID、父部门ID、部门名称（通过主账号登陆只能查询属于该主账号下的所有部门信息）。 */
 type TaobaoSubuserDepartmentsGetResponse struct {
     
     /* departments Object Array部门信息 */
@@ -8942,7 +8942,7 @@ type TaobaoSubuserDepartmentsGetResponse struct {
     
 }
 
-// AlipayUserAccountreportGetRequest 获取支付宝余额明细记录，不包含用户通过银行卡快捷支付进行交易的交易明细
+/* AlipayUserAccountreportGetRequest 获取支付宝余额明细记录，不包含用户通过银行卡快捷支付进行交易的交易明细 */
 type AlipayUserAccountreportGetRequest struct {
     
     /* end_time required对账单结束时间，其中end_time - start_time <= 1天，对于对账记录比较多的情况，强烈建议按天查询，否则会出现超时的情况。 */
@@ -8969,7 +8969,7 @@ func (req *AlipayUserAccountreportGetRequest) GetAPIName() string {
 	return "alipay.user.accountreport.get"
 }
 
-// AlipayUserAccountreportGetResponse 获取支付宝余额明细记录，不包含用户通过银行卡快捷支付进行交易的交易明细
+/* AlipayUserAccountreportGetResponse 获取支付宝余额明细记录，不包含用户通过银行卡快捷支付进行交易的交易明细 */
 type AlipayUserAccountreportGetResponse struct {
     
     /* alipay_records Object Array对账记录列表 */
@@ -8983,8 +8983,8 @@ type AlipayUserAccountreportGetResponse struct {
     
 }
 
-// TaobaoFuwuSaleLinkGenRequest 服务商通过使用该接口来产生营销链接，通过把这种链接发送给商家来做自定义人群的服务营销<br>
-注：session是param_str这个参数串创建者生成的session，这个创建者与入参中的nick是不一致的。例如：A开发者创建了一个param_str的字符串，要为B商家生成一个营销链接，session必须是A开发者创建的session。
+/* TaobaoFuwuSaleLinkGenRequest 服务商通过使用该接口来产生营销链接，通过把这种链接发送给商家来做自定义人群的服务营销<br>
+注：session是param_str这个参数串创建者生成的session，这个创建者与入参中的nick是不一致的。例如：A开发者创建了一个param_str的字符串，要为B商家生成一个营销链接，session必须是A开发者创建的session。 */
 type TaobaoFuwuSaleLinkGenRequest struct {
     
     /* nick optional用户需要营销的目标人群中的用户nick */
@@ -8999,8 +8999,8 @@ func (req *TaobaoFuwuSaleLinkGenRequest) GetAPIName() string {
 	return "taobao.fuwu.sale.link.gen"
 }
 
-// TaobaoFuwuSaleLinkGenResponse 服务商通过使用该接口来产生营销链接，通过把这种链接发送给商家来做自定义人群的服务营销<br>
-注：session是param_str这个参数串创建者生成的session，这个创建者与入参中的nick是不一致的。例如：A开发者创建了一个param_str的字符串，要为B商家生成一个营销链接，session必须是A开发者创建的session。
+/* TaobaoFuwuSaleLinkGenResponse 服务商通过使用该接口来产生营销链接，通过把这种链接发送给商家来做自定义人群的服务营销<br>
+注：session是param_str这个参数串创建者生成的session，这个创建者与入参中的nick是不一致的。例如：A开发者创建了一个param_str的字符串，要为B商家生成一个营销链接，session必须是A开发者创建的session。 */
 type TaobaoFuwuSaleLinkGenResponse struct {
     
     /* url Basic通过营销链接接口生成的营销链接短地址 */
@@ -9008,7 +9008,7 @@ type TaobaoFuwuSaleLinkGenResponse struct {
     
 }
 
-// TmallProductSchemaGetRequest 产品信息获取接口schema形式返回
+/* TmallProductSchemaGetRequest 产品信息获取接口schema形式返回 */
 type TmallProductSchemaGetRequest struct {
     
     /* product_id required产品编号 */
@@ -9020,7 +9020,7 @@ func (req *TmallProductSchemaGetRequest) GetAPIName() string {
 	return "tmall.product.schema.get"
 }
 
-// TmallProductSchemaGetResponse 产品信息获取接口schema形式返回
+/* TmallProductSchemaGetResponse 产品信息获取接口schema形式返回 */
 type TmallProductSchemaGetResponse struct {
     
     /* get_product_result Basic产品信息数据。schema形式 */
@@ -9028,7 +9028,7 @@ type TmallProductSchemaGetResponse struct {
     
 }
 
-// CainiaoCloudprintIsvResourcesGetRequest isv资源查询，包括isv模板、打印项、预设的自定义区等
+/* CainiaoCloudprintIsvResourcesGetRequest isv资源查询，包括isv模板、打印项、预设的自定义区等 */
 type CainiaoCloudprintIsvResourcesGetRequest struct {
     
     /* isv_resource_type requiredisv资源类型，分为：TEMPLATE（表示模板），PRINT_ITEM（打印项），CUSTOM_AREA（预设自定义区） */
@@ -9040,7 +9040,7 @@ func (req *CainiaoCloudprintIsvResourcesGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.isv.resources.get"
 }
 
-// CainiaoCloudprintIsvResourcesGetResponse isv资源查询，包括isv模板、打印项、预设的自定义区等
+/* CainiaoCloudprintIsvResourcesGetResponse isv资源查询，包括isv模板、打印项、预设的自定义区等 */
 type CainiaoCloudprintIsvResourcesGetResponse struct {
     
     /* result Objectresult */
@@ -9048,7 +9048,7 @@ type CainiaoCloudprintIsvResourcesGetResponse struct {
     
 }
 
-// CainiaoOpenstorageIsvResourceCreateRequest isv资源创建接口（云打印开源存储）
+/* CainiaoOpenstorageIsvResourceCreateRequest isv资源创建接口（云打印开源存储） */
 type CainiaoOpenstorageIsvResourceCreateRequest struct {
     
     /* param_create_isv_resource_request optionalisv创建资源的参数 */
@@ -9060,7 +9060,7 @@ func (req *CainiaoOpenstorageIsvResourceCreateRequest) GetAPIName() string {
 	return "cainiao.openstorage.isv.resource.create"
 }
 
-// CainiaoOpenstorageIsvResourceCreateResponse isv资源创建接口（云打印开源存储）
+/* CainiaoOpenstorageIsvResourceCreateResponse isv资源创建接口（云打印开源存储） */
 type CainiaoOpenstorageIsvResourceCreateResponse struct {
     
     /* err_code Basic错误码 */
@@ -9071,7 +9071,7 @@ type CainiaoOpenstorageIsvResourceCreateResponse struct {
     
 }
 
-// TaobaoTopSecretGetRequest top sdk通过api获取对应解密秘钥
+/* TaobaoTopSecretGetRequest top sdk通过api获取对应解密秘钥 */
 type TaobaoTopSecretGetRequest struct {
     
     /* customer_user_id optional自定义用户id */
@@ -9089,7 +9089,7 @@ func (req *TaobaoTopSecretGetRequest) GetAPIName() string {
 	return "taobao.top.secret.get"
 }
 
-// TaobaoTopSecretGetResponse top sdk通过api获取对应解密秘钥
+/* TaobaoTopSecretGetResponse top sdk通过api获取对应解密秘钥 */
 type TaobaoTopSecretGetResponse struct {
     
     /* app_config Basicapp配置信息 */
@@ -9109,7 +9109,7 @@ type TaobaoTopSecretGetResponse struct {
     
 }
 
-// TaobaoLogisticsAddressReachablebatchGetRequest 批量判定服务是否可达
+/* TaobaoLogisticsAddressReachablebatchGetRequest 批量判定服务是否可达 */
 type TaobaoLogisticsAddressReachablebatchGetRequest struct {
     
     /* address_list optional筛单用户输入地址结构 */
@@ -9121,7 +9121,7 @@ func (req *TaobaoLogisticsAddressReachablebatchGetRequest) GetAPIName() string {
 	return "taobao.logistics.address.reachablebatch.get"
 }
 
-// TaobaoLogisticsAddressReachablebatchGetResponse 批量判定服务是否可达
+/* TaobaoLogisticsAddressReachablebatchGetResponse 批量判定服务是否可达 */
 type TaobaoLogisticsAddressReachablebatchGetResponse struct {
     
     /* reachable_results Object Array物流是否可达结果列表 */
@@ -9129,7 +9129,7 @@ type TaobaoLogisticsAddressReachablebatchGetResponse struct {
     
 }
 
-// TaobaoOmniorderStoreReallocateRequest 门店发货提供改派接口
+/* TaobaoOmniorderStoreReallocateRequest 门店发货提供改派接口 */
 type TaobaoOmniorderStoreReallocateRequest struct {
     
     /* main_order_id required主订单号 */
@@ -9150,7 +9150,7 @@ func (req *TaobaoOmniorderStoreReallocateRequest) GetAPIName() string {
 	return "taobao.omniorder.store.reallocate"
 }
 
-// TaobaoOmniorderStoreReallocateResponse 门店发货提供改派接口
+/* TaobaoOmniorderStoreReallocateResponse 门店发货提供改派接口 */
 type TaobaoOmniorderStoreReallocateResponse struct {
     
     /* result Objectresult */
@@ -9158,7 +9158,7 @@ type TaobaoOmniorderStoreReallocateResponse struct {
     
 }
 
-// TaobaoQimenSingleitemQueryRequest 商品查询接口
+/* TaobaoQimenSingleitemQueryRequest 商品查询接口 */
 type TaobaoQimenSingleitemQueryRequest struct {
     
     /* itemCode optional商品编码,S1234,string(50),必填, */
@@ -9176,7 +9176,7 @@ func (req *TaobaoQimenSingleitemQueryRequest) GetAPIName() string {
 	return "taobao.qimen.singleitem.query"
 }
 
-// TaobaoQimenSingleitemQueryResponse 商品查询接口
+/* TaobaoQimenSingleitemQueryResponse 商品查询接口 */
 type TaobaoQimenSingleitemQueryResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -9193,7 +9193,7 @@ type TaobaoQimenSingleitemQueryResponse struct {
     
 }
 
-// TaobaoQimenItemmappingCreateRequest 前后端商品映射
+/* TaobaoQimenItemmappingCreateRequest 前后端商品映射 */
 type TaobaoQimenItemmappingCreateRequest struct {
     
     /* actionType optional奇门仓储字段,C123,string(50),必填, */
@@ -9223,7 +9223,7 @@ func (req *TaobaoQimenItemmappingCreateRequest) GetAPIName() string {
 	return "taobao.qimen.itemmapping.create"
 }
 
-// TaobaoQimenItemmappingCreateResponse 前后端商品映射
+/* TaobaoQimenItemmappingCreateResponse 前后端商品映射 */
 type TaobaoQimenItemmappingCreateResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -9237,7 +9237,7 @@ type TaobaoQimenItemmappingCreateResponse struct {
     
 }
 
-// TaobaoQimenInventoryruleCreateRequest 渠道间库存规则设置
+/* TaobaoQimenInventoryruleCreateRequest 渠道间库存规则设置 */
 type TaobaoQimenInventoryruleCreateRequest struct {
     
     /* inventoryRules optionalinventoryRules */
@@ -9252,7 +9252,7 @@ func (req *TaobaoQimenInventoryruleCreateRequest) GetAPIName() string {
 	return "taobao.qimen.inventoryrule.create"
 }
 
-// TaobaoQimenInventoryruleCreateResponse 渠道间库存规则设置
+/* TaobaoQimenInventoryruleCreateResponse 渠道间库存规则设置 */
 type TaobaoQimenInventoryruleCreateResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -9266,7 +9266,7 @@ type TaobaoQimenInventoryruleCreateResponse struct {
     
 }
 
-// TaobaoQimenCombineitemDeleteRequest 组合货品删除
+/* TaobaoQimenCombineitemDeleteRequest 组合货品删除 */
 type TaobaoQimenCombineitemDeleteRequest struct {
     
     /* itemId optional奇门仓储字段,C123,string(50),, */
@@ -9281,7 +9281,7 @@ func (req *TaobaoQimenCombineitemDeleteRequest) GetAPIName() string {
 	return "taobao.qimen.combineitem.delete"
 }
 
-// TaobaoQimenCombineitemDeleteResponse 组合货品删除
+/* TaobaoQimenCombineitemDeleteResponse 组合货品删除 */
 type TaobaoQimenCombineitemDeleteResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -9295,7 +9295,7 @@ type TaobaoQimenCombineitemDeleteResponse struct {
     
 }
 
-// TmallItemCalculateHscodeGetRequest 算法获取hscode
+/* TmallItemCalculateHscodeGetRequest 算法获取hscode */
 type TmallItemCalculateHscodeGetRequest struct {
     
     /* item_id optional商品id */
@@ -9307,7 +9307,7 @@ func (req *TmallItemCalculateHscodeGetRequest) GetAPIName() string {
 	return "tmall.item.calculate.hscode.get"
 }
 
-// TmallItemCalculateHscodeGetResponse 算法获取hscode
+/* TmallItemCalculateHscodeGetResponse 算法获取hscode */
 type TmallItemCalculateHscodeGetResponse struct {
     
     /* results Basic Array算法返回预测的hscode数据 */
@@ -9315,7 +9315,7 @@ type TmallItemCalculateHscodeGetResponse struct {
     
 }
 
-// TaobaoQimenChannelinventoryQueryRequest 渠道库存查询
+/* TaobaoQimenChannelinventoryQueryRequest 渠道库存查询 */
 type TaobaoQimenChannelinventoryQueryRequest struct {
     
     /* channelCodes optional奇门仓储字段 */
@@ -9336,7 +9336,7 @@ func (req *TaobaoQimenChannelinventoryQueryRequest) GetAPIName() string {
 	return "taobao.qimen.channelinventory.query"
 }
 
-// TaobaoQimenChannelinventoryQueryResponse 渠道库存查询
+/* TaobaoQimenChannelinventoryQueryResponse 渠道库存查询 */
 type TaobaoQimenChannelinventoryQueryResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -9353,7 +9353,7 @@ type TaobaoQimenChannelinventoryQueryResponse struct {
     
 }
 
-// TaobaoFenxiaoOrderRemarkUpdateRequest 供应商修改采购单备注
+/* TaobaoFenxiaoOrderRemarkUpdateRequest 供应商修改采购单备注 */
 type TaobaoFenxiaoOrderRemarkUpdateRequest struct {
     
     /* purchase_order_id required采购单编号 */
@@ -9376,7 +9376,7 @@ func (req *TaobaoFenxiaoOrderRemarkUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.order.remark.update"
 }
 
-// TaobaoFenxiaoOrderRemarkUpdateResponse 供应商修改采购单备注
+/* TaobaoFenxiaoOrderRemarkUpdateResponse 供应商修改采购单备注 */
 type TaobaoFenxiaoOrderRemarkUpdateResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9384,7 +9384,7 @@ type TaobaoFenxiaoOrderRemarkUpdateResponse struct {
     
 }
 
-// TaobaoInventoryAdjustExternalRequest 商家非交易调整库存，调拨出库、盘点等时调用
+/* TaobaoInventoryAdjustExternalRequest 商家非交易调整库存，调拨出库、盘点等时调用 */
 type TaobaoInventoryAdjustExternalRequest struct {
     
     /* biz_type optional外部订单类型, BALANCE:盘点、NON_TAOBAO_TRADE:非淘宝交易、ALLOCATE:调拨、OTHERS:其他 */
@@ -9417,7 +9417,7 @@ func (req *TaobaoInventoryAdjustExternalRequest) GetAPIName() string {
 	return "taobao.inventory.adjust.external"
 }
 
-// TaobaoInventoryAdjustExternalResponse 商家非交易调整库存，调拨出库、盘点等时调用
+/* TaobaoInventoryAdjustExternalResponse 商家非交易调整库存，调拨出库、盘点等时调用 */
 type TaobaoInventoryAdjustExternalResponse struct {
     
     /* operate_code Basic操作返回码 */
@@ -9428,7 +9428,7 @@ type TaobaoInventoryAdjustExternalResponse struct {
     
 }
 
-// TaobaoInventoryQueryRequest 商家查询商品总体库存信息
+/* TaobaoInventoryQueryRequest 商家查询商品总体库存信息 */
 type TaobaoInventoryQueryRequest struct {
     
     /* sc_item_codes optional后端商品的商家编码列表，控制到50个 */
@@ -9449,7 +9449,7 @@ func (req *TaobaoInventoryQueryRequest) GetAPIName() string {
 	return "taobao.inventory.query"
 }
 
-// TaobaoInventoryQueryResponse 商家查询商品总体库存信息
+/* TaobaoInventoryQueryResponse 商家查询商品总体库存信息 */
 type TaobaoInventoryQueryResponse struct {
     
     /* item_inventorys Object Array商品总体库存信息 */
@@ -9460,7 +9460,7 @@ type TaobaoInventoryQueryResponse struct {
     
 }
 
-// TaobaoInventoryInitialRequest 商家仓库存初始化接口，直接按照商家指定的商品库存数进行填充，没有单据核对，不参与库存对账
+/* TaobaoInventoryInitialRequest 商家仓库存初始化接口，直接按照商家指定的商品库存数进行填充，没有单据核对，不参与库存对账 */
 type TaobaoInventoryInitialRequest struct {
     
     /* items required商品初始库存信息： [{"scItemId":"商品后端ID，如果有传scItemCode,参数可以为0","scItemCode":"商品商家编码","inventoryType":"库存类型  1：正常,2：损坏,3：冻结,10：质押,11-20:用户自定义","quantity":"数量"}] */
@@ -9475,7 +9475,7 @@ func (req *TaobaoInventoryInitialRequest) GetAPIName() string {
 	return "taobao.inventory.initial"
 }
 
-// TaobaoInventoryInitialResponse 商家仓库存初始化接口，直接按照商家指定的商品库存数进行填充，没有单据核对，不参与库存对账
+/* TaobaoInventoryInitialResponse 商家仓库存初始化接口，直接按照商家指定的商品库存数进行填充，没有单据核对，不参与库存对账 */
 type TaobaoInventoryInitialResponse struct {
     
     /* tip_infos Object Array提示信息 */
@@ -9483,7 +9483,7 @@ type TaobaoInventoryInitialResponse struct {
     
 }
 
-// TmallItemAddSimpleschemaGetRequest 通过商家信息获取商品发布字段和规则。
+/* TmallItemAddSimpleschemaGetRequest 通过商家信息获取商品发布字段和规则。 */
 type TmallItemAddSimpleschemaGetRequest struct {
     
 }
@@ -9492,7 +9492,7 @@ func (req *TmallItemAddSimpleschemaGetRequest) GetAPIName() string {
 	return "tmall.item.add.simpleschema.get"
 }
 
-// TmallItemAddSimpleschemaGetResponse 通过商家信息获取商品发布字段和规则。
+/* TmallItemAddSimpleschemaGetResponse 通过商家信息获取商品发布字段和规则。 */
 type TmallItemAddSimpleschemaGetResponse struct {
     
     /* result Basic返回发布商品的规则文档 */
@@ -9500,7 +9500,7 @@ type TmallItemAddSimpleschemaGetResponse struct {
     
 }
 
-// TaobaoScitemMapAddRequest 创建IC商品或分销商品与后端商品的映射关系
+/* TaobaoScitemMapAddRequest 创建IC商品或分销商品与后端商品的映射关系 */
 type TaobaoScitemMapAddRequest struct {
     
     /* item_id required前台ic商品id */
@@ -9526,7 +9526,7 @@ func (req *TaobaoScitemMapAddRequest) GetAPIName() string {
 	return "taobao.scitem.map.add"
 }
 
-// TaobaoScitemMapAddResponse 创建IC商品或分销商品与后端商品的映射关系
+/* TaobaoScitemMapAddResponse 创建IC商品或分销商品与后端商品的映射关系 */
 type TaobaoScitemMapAddResponse struct {
     
     /* outer_code Basic接口调用返回结果信息：商家编码 */
@@ -9534,7 +9534,7 @@ type TaobaoScitemMapAddResponse struct {
     
 }
 
-// TaobaoInventoryAdjustTradeRequest 商家交易调整库存，淘宝交易、B2B经销等
+/* TaobaoInventoryAdjustTradeRequest 商家交易调整库存，淘宝交易、B2B经销等 */
 type TaobaoInventoryAdjustTradeRequest struct {
     
     /* biz_unique_code required商家外部定单号 */
@@ -9555,7 +9555,7 @@ func (req *TaobaoInventoryAdjustTradeRequest) GetAPIName() string {
 	return "taobao.inventory.adjust.trade"
 }
 
-// TaobaoInventoryAdjustTradeResponse 商家交易调整库存，淘宝交易、B2B经销等
+/* TaobaoInventoryAdjustTradeResponse 商家交易调整库存，淘宝交易、B2B经销等 */
 type TaobaoInventoryAdjustTradeResponse struct {
     
     /* operate_code Basic操作返回码 */
@@ -9566,7 +9566,7 @@ type TaobaoInventoryAdjustTradeResponse struct {
     
 }
 
-// TaobaoFenxiaoProductcatUpdateRequest 修改产品线
+/* TaobaoFenxiaoProductcatUpdateRequest 修改产品线 */
 type TaobaoFenxiaoProductcatUpdateRequest struct {
     
     /* agent_cost_percent optional代销默认采购价比例，注意：100.00%，则输入为10000 */
@@ -9593,7 +9593,7 @@ func (req *TaobaoFenxiaoProductcatUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.productcat.update"
 }
 
-// TaobaoFenxiaoProductcatUpdateResponse 修改产品线
+/* TaobaoFenxiaoProductcatUpdateResponse 修改产品线 */
 type TaobaoFenxiaoProductcatUpdateResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9601,7 +9601,7 @@ type TaobaoFenxiaoProductcatUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoProductcatAddRequest 新增产品线
+/* TaobaoFenxiaoProductcatAddRequest 新增产品线 */
 type TaobaoFenxiaoProductcatAddRequest struct {
     
     /* agent_cost_percent required代销默认采购价比例，注意：100.00%，则输入为10000 */
@@ -9625,7 +9625,7 @@ func (req *TaobaoFenxiaoProductcatAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.productcat.add"
 }
 
-// TaobaoFenxiaoProductcatAddResponse 新增产品线
+/* TaobaoFenxiaoProductcatAddResponse 新增产品线 */
 type TaobaoFenxiaoProductcatAddResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9636,7 +9636,7 @@ type TaobaoFenxiaoProductcatAddResponse struct {
     
 }
 
-// TaobaoFenxiaoGradeAddRequest 新建等级
+/* TaobaoFenxiaoGradeAddRequest 新建等级 */
 type TaobaoFenxiaoGradeAddRequest struct {
     
     /* name required等级名称，等级名称不可重复 */
@@ -9648,7 +9648,7 @@ func (req *TaobaoFenxiaoGradeAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.grade.add"
 }
 
-// TaobaoFenxiaoGradeAddResponse 新建等级
+/* TaobaoFenxiaoGradeAddResponse 新建等级 */
 type TaobaoFenxiaoGradeAddResponse struct {
     
     /* grade_id Basic等级ID */
@@ -9659,7 +9659,7 @@ type TaobaoFenxiaoGradeAddResponse struct {
     
 }
 
-// TaobaoFenxiaoProductcatDeleteRequest 删除产品线
+/* TaobaoFenxiaoProductcatDeleteRequest 删除产品线 */
 type TaobaoFenxiaoProductcatDeleteRequest struct {
     
     /* product_line_id required产品线ID */
@@ -9671,7 +9671,7 @@ func (req *TaobaoFenxiaoProductcatDeleteRequest) GetAPIName() string {
 	return "taobao.fenxiao.productcat.delete"
 }
 
-// TaobaoFenxiaoProductcatDeleteResponse 删除产品线
+/* TaobaoFenxiaoProductcatDeleteResponse 删除产品线 */
 type TaobaoFenxiaoProductcatDeleteResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9679,7 +9679,7 @@ type TaobaoFenxiaoProductcatDeleteResponse struct {
     
 }
 
-// TmallItemSchemaIncrementUpdateRequest 增量方式修改天猫商品的API。只要是此接口支持增量修改的字段，可以同时更新。（感谢爱慕旗舰店提供API命名）
+/* TmallItemSchemaIncrementUpdateRequest 增量方式修改天猫商品的API。只要是此接口支持增量修改的字段，可以同时更新。（感谢爱慕旗舰店提供API命名） */
 type TmallItemSchemaIncrementUpdateRequest struct {
     
     /* item_id required需要编辑的商品ID */
@@ -9694,7 +9694,7 @@ func (req *TmallItemSchemaIncrementUpdateRequest) GetAPIName() string {
 	return "tmall.item.schema.increment.update"
 }
 
-// TmallItemSchemaIncrementUpdateResponse 增量方式修改天猫商品的API。只要是此接口支持增量修改的字段，可以同时更新。（感谢爱慕旗舰店提供API命名）
+/* TmallItemSchemaIncrementUpdateResponse 增量方式修改天猫商品的API。只要是此接口支持增量修改的字段，可以同时更新。（感谢爱慕旗舰店提供API命名） */
 type TmallItemSchemaIncrementUpdateResponse struct {
     
     /* gmt_modified Basic商品更新操作成功时间 */
@@ -9705,7 +9705,7 @@ type TmallItemSchemaIncrementUpdateResponse struct {
     
 }
 
-// TaobaoTopIpoutGetRequest 获取开放平台出口IP段
+/* TaobaoTopIpoutGetRequest 获取开放平台出口IP段 */
 type TaobaoTopIpoutGetRequest struct {
     
 }
@@ -9714,7 +9714,7 @@ func (req *TaobaoTopIpoutGetRequest) GetAPIName() string {
 	return "taobao.top.ipout.get"
 }
 
-// TaobaoTopIpoutGetResponse 获取开放平台出口IP段
+/* TaobaoTopIpoutGetResponse 获取开放平台出口IP段 */
 type TaobaoTopIpoutGetResponse struct {
     
     /* ip_list BasicTOP网关出口IP列表 */
@@ -9722,12 +9722,12 @@ type TaobaoTopIpoutGetResponse struct {
     
 }
 
-// TmallItemIncrementUpdateSchemaGetRequest 增量方式修改天猫商品的规则获取的API。
+/* TmallItemIncrementUpdateSchemaGetRequest 增量方式修改天猫商品的规则获取的API。
 1.接口返回支持增量修改的字段以及相应字段的规则。
 2.如果入参xml_data指定了更新的字段，则只返回指定字段的规则（ISV如果功能性很强，如明确更新Title，请拼装好次字段以提升API整体性能）；
 3.ISV初次接入，开发阶段，此字段不填可以看到所有支持增量的字段；但是如果上线功能明确，请尽量遵守第2条
 4.如果ISV对字段规则非常清晰，可以直接组装入参数据提交到tmall.item.schema.increment.update进行数据更新。但是最好不要写死，比如每天还是有对此接口功能的一次比对。
----（感谢爱慕旗舰店提供API命名）
+---（感谢爱慕旗舰店提供API命名） */
 type TmallItemIncrementUpdateSchemaGetRequest struct {
     
     /* item_id required需要编辑的商品ID */
@@ -9742,12 +9742,12 @@ func (req *TmallItemIncrementUpdateSchemaGetRequest) GetAPIName() string {
 	return "tmall.item.increment.update.schema.get"
 }
 
-// TmallItemIncrementUpdateSchemaGetResponse 增量方式修改天猫商品的规则获取的API。
+/* TmallItemIncrementUpdateSchemaGetResponse 增量方式修改天猫商品的规则获取的API。
 1.接口返回支持增量修改的字段以及相应字段的规则。
 2.如果入参xml_data指定了更新的字段，则只返回指定字段的规则（ISV如果功能性很强，如明确更新Title，请拼装好次字段以提升API整体性能）；
 3.ISV初次接入，开发阶段，此字段不填可以看到所有支持增量的字段；但是如果上线功能明确，请尽量遵守第2条
 4.如果ISV对字段规则非常清晰，可以直接组装入参数据提交到tmall.item.schema.increment.update进行数据更新。但是最好不要写死，比如每天还是有对此接口功能的一次比对。
----（感谢爱慕旗舰店提供API命名）
+---（感谢爱慕旗舰店提供API命名） */
 type TmallItemIncrementUpdateSchemaGetResponse struct {
     
     /* update_item_result Basic返回增量更新商品的规则文档 */
@@ -9755,7 +9755,7 @@ type TmallItemIncrementUpdateSchemaGetResponse struct {
     
 }
 
-// TaobaoFenxiaoCooperationProductcatAddRequest 追加授权产品线
+/* TaobaoFenxiaoCooperationProductcatAddRequest 追加授权产品线 */
 type TaobaoFenxiaoCooperationProductcatAddRequest struct {
     
     /* cooperate_id required合作关系id */
@@ -9773,7 +9773,7 @@ func (req *TaobaoFenxiaoCooperationProductcatAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.cooperation.productcat.add"
 }
 
-// TaobaoFenxiaoCooperationProductcatAddResponse 追加授权产品线
+/* TaobaoFenxiaoCooperationProductcatAddResponse 追加授权产品线 */
 type TaobaoFenxiaoCooperationProductcatAddResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9781,7 +9781,7 @@ type TaobaoFenxiaoCooperationProductcatAddResponse struct {
     
 }
 
-// TmallItemSimpleschemaAddRequest 天猫简化版schema发布商品。
+/* TmallItemSimpleschemaAddRequest 天猫简化版schema发布商品。 */
 type TmallItemSimpleschemaAddRequest struct {
     
     /* schema_xml_fields required根据tmall.item.add.simpleschema.get生成的商品发布规则入参数据 */
@@ -9793,7 +9793,7 @@ func (req *TmallItemSimpleschemaAddRequest) GetAPIName() string {
 	return "tmall.item.simpleschema.add"
 }
 
-// TmallItemSimpleschemaAddResponse 天猫简化版schema发布商品。
+/* TmallItemSimpleschemaAddResponse 天猫简化版schema发布商品。 */
 type TmallItemSimpleschemaAddResponse struct {
     
     /* gmt_modified Basic商品最后发布时间。 */
@@ -9804,7 +9804,7 @@ type TmallItemSimpleschemaAddResponse struct {
     
 }
 
-// TaobaoFenxiaoCooperationAuditRequest 合作授权审批
+/* TaobaoFenxiaoCooperationAuditRequest 合作授权审批 */
 type TaobaoFenxiaoCooperationAuditRequest struct {
     
     /* audit_result required1:审批通过，审批通过后要加入授权产品线列表；
@@ -9829,7 +9829,7 @@ func (req *TaobaoFenxiaoCooperationAuditRequest) GetAPIName() string {
 	return "taobao.fenxiao.cooperation.audit"
 }
 
-// TaobaoFenxiaoCooperationAuditResponse 合作授权审批
+/* TaobaoFenxiaoCooperationAuditResponse 合作授权审批 */
 type TaobaoFenxiaoCooperationAuditResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9837,7 +9837,7 @@ type TaobaoFenxiaoCooperationAuditResponse struct {
     
 }
 
-// TaobaoFenxiaoRequisitionsGetRequest 合作申请查询
+/* TaobaoFenxiaoRequisitionsGetRequest 合作申请查询 */
 type TaobaoFenxiaoRequisitionsGetRequest struct {
     
     /* apply_end optional申请结束时间yyyy-MM-dd */
@@ -9861,7 +9861,7 @@ func (req *TaobaoFenxiaoRequisitionsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.requisitions.get"
 }
 
-// TaobaoFenxiaoRequisitionsGetResponse 合作申请查询
+/* TaobaoFenxiaoRequisitionsGetResponse 合作申请查询 */
 type TaobaoFenxiaoRequisitionsGetResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9875,8 +9875,8 @@ type TaobaoFenxiaoRequisitionsGetResponse struct {
     
 }
 
-// TaobaoLogisticsAddressReachableRequest 根据输入的目标地址，判断服务是否可达。
-现已支持筛单的快递公司共15家：中国邮政、EMS、国通、汇通、快捷、全峰、优速、圆通、宅急送、中通、顺丰、天天、韵达、德邦快递、申通
+/* TaobaoLogisticsAddressReachableRequest 根据输入的目标地址，判断服务是否可达。
+现已支持筛单的快递公司共15家：中国邮政、EMS、国通、汇通、快捷、全峰、优速、圆通、宅急送、中通、顺丰、天天、韵达、德邦快递、申通 */
 type TaobaoLogisticsAddressReachableRequest struct {
     
     /* address optional详细地址 */
@@ -9900,8 +9900,8 @@ func (req *TaobaoLogisticsAddressReachableRequest) GetAPIName() string {
 	return "taobao.logistics.address.reachable"
 }
 
-// TaobaoLogisticsAddressReachableResponse 根据输入的目标地址，判断服务是否可达。
-现已支持筛单的快递公司共15家：中国邮政、EMS、国通、汇通、快捷、全峰、优速、圆通、宅急送、中通、顺丰、天天、韵达、德邦快递、申通
+/* TaobaoLogisticsAddressReachableResponse 根据输入的目标地址，判断服务是否可达。
+现已支持筛单的快递公司共15家：中国邮政、EMS、国通、汇通、快捷、全峰、优速、圆通、宅急送、中通、顺丰、天天、韵达、德邦快递、申通 */
 type TaobaoLogisticsAddressReachableResponse struct {
     
     /* reachable_result_list Object Array地址可达返回结果，每个TP对应一个 */
@@ -9909,7 +9909,7 @@ type TaobaoLogisticsAddressReachableResponse struct {
     
 }
 
-// TaobaoFenxiaoCooperationTerminateRequest 终止与分销商的合作关系
+/* TaobaoFenxiaoCooperationTerminateRequest 终止与分销商的合作关系 */
 type TaobaoFenxiaoCooperationTerminateRequest struct {
     
     /* cooperate_id required合作编号 */
@@ -9927,7 +9927,7 @@ func (req *TaobaoFenxiaoCooperationTerminateRequest) GetAPIName() string {
 	return "taobao.fenxiao.cooperation.terminate"
 }
 
-// TaobaoFenxiaoCooperationTerminateResponse 终止与分销商的合作关系
+/* TaobaoFenxiaoCooperationTerminateResponse 终止与分销商的合作关系 */
 type TaobaoFenxiaoCooperationTerminateResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -9935,7 +9935,7 @@ type TaobaoFenxiaoCooperationTerminateResponse struct {
     
 }
 
-// TaobaoFenxiaoProductGradepriceGetRequest 等级折扣查询
+/* TaobaoFenxiaoProductGradepriceGetRequest 等级折扣查询 */
 type TaobaoFenxiaoProductGradepriceGetRequest struct {
     
     /* product_id required产品id */
@@ -9953,7 +9953,7 @@ func (req *TaobaoFenxiaoProductGradepriceGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.gradeprice.get"
 }
 
-// TaobaoFenxiaoProductGradepriceGetResponse 等级折扣查询
+/* TaobaoFenxiaoProductGradepriceGetResponse 等级折扣查询 */
 type TaobaoFenxiaoProductGradepriceGetResponse struct {
     
     /* grade_discounts Object Array等级折扣列表 */
@@ -9964,7 +9964,7 @@ type TaobaoFenxiaoProductGradepriceGetResponse struct {
     
 }
 
-// TaobaoOmniorderStorecollectConsumeRequest 全渠道门店自提核销订单
+/* TaobaoOmniorderStorecollectConsumeRequest 全渠道门店自提核销订单 */
 type TaobaoOmniorderStorecollectConsumeRequest struct {
     
     /* code required核销码 */
@@ -9982,7 +9982,7 @@ func (req *TaobaoOmniorderStorecollectConsumeRequest) GetAPIName() string {
 	return "taobao.omniorder.storecollect.consume"
 }
 
-// TaobaoOmniorderStorecollectConsumeResponse 全渠道门店自提核销订单
+/* TaobaoOmniorderStorecollectConsumeResponse 全渠道门店自提核销订单 */
 type TaobaoOmniorderStorecollectConsumeResponse struct {
     
     /* err_code Basic0表示成功 */
@@ -9993,7 +9993,7 @@ type TaobaoOmniorderStorecollectConsumeResponse struct {
     
 }
 
-// TaobaoOmniorderStorecollectQueryRequest 全渠道门店自提根据核销码查询订单
+/* TaobaoOmniorderStorecollectQueryRequest 全渠道门店自提根据核销码查询订单 */
 type TaobaoOmniorderStorecollectQueryRequest struct {
     
     /* code required核销码 */
@@ -10005,7 +10005,7 @@ func (req *TaobaoOmniorderStorecollectQueryRequest) GetAPIName() string {
 	return "taobao.omniorder.storecollect.query"
 }
 
-// TaobaoOmniorderStorecollectQueryResponse 全渠道门店自提根据核销码查询订单
+/* TaobaoOmniorderStorecollectQueryResponse 全渠道门店自提根据核销码查询订单 */
 type TaobaoOmniorderStorecollectQueryResponse struct {
     
     /* result Objectresult */
@@ -10013,7 +10013,7 @@ type TaobaoOmniorderStorecollectQueryResponse struct {
     
 }
 
-// TaobaoQianniuKefuevalGetRequest 获取买家对客服的服务评价
+/* TaobaoQianniuKefuevalGetRequest 获取买家对客服的服务评价 */
 type TaobaoQianniuKefuevalGetRequest struct {
     
     /* btime required开始时间，格式yyyyMMddHHmmss */
@@ -10031,7 +10031,7 @@ func (req *TaobaoQianniuKefuevalGetRequest) GetAPIName() string {
 	return "taobao.qianniu.kefueval.get"
 }
 
-// TaobaoQianniuKefuevalGetResponse 获取买家对客服的服务评价
+/* TaobaoQianniuKefuevalGetResponse 获取买家对客服的服务评价 */
 type TaobaoQianniuKefuevalGetResponse struct {
     
     /* result_count BasicresultCount */
@@ -10042,7 +10042,7 @@ type TaobaoQianniuKefuevalGetResponse struct {
     
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIQueryRequest 智能发货引擎仓维度策略查询
+/* CainiaoSmartdeliveryStrategyWarehouseIQueryRequest 智能发货引擎仓维度策略查询 */
 type CainiaoSmartdeliveryStrategyWarehouseIQueryRequest struct {
     
     /* param_query_delivery_strategy_request optional查询请求参数 */
@@ -10054,7 +10054,7 @@ func (req *CainiaoSmartdeliveryStrategyWarehouseIQueryRequest) GetAPIName() stri
 	return "cainiao.smartdelivery.strategy.warehouse.i.query"
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIQueryResponse 智能发货引擎仓维度策略查询
+/* CainiaoSmartdeliveryStrategyWarehouseIQueryResponse 智能发货引擎仓维度策略查询 */
 type CainiaoSmartdeliveryStrategyWarehouseIQueryResponse struct {
     
     /* delivery_strategy_info_list Object Array返回结果列表 */
@@ -10062,7 +10062,7 @@ type CainiaoSmartdeliveryStrategyWarehouseIQueryResponse struct {
     
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIUpdateRequest 智能发货引擎发货策略设置仓维度
+/* CainiaoSmartdeliveryStrategyWarehouseIUpdateRequest 智能发货引擎发货策略设置仓维度 */
 type CainiaoSmartdeliveryStrategyWarehouseIUpdateRequest struct {
     
     /* delivery_strategy_set_request required智能发货设置请求参数 */
@@ -10074,7 +10074,7 @@ func (req *CainiaoSmartdeliveryStrategyWarehouseIUpdateRequest) GetAPIName() str
 	return "cainiao.smartdelivery.strategy.warehouse.i.update"
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIUpdateResponse 智能发货引擎发货策略设置仓维度
+/* CainiaoSmartdeliveryStrategyWarehouseIUpdateResponse 智能发货引擎发货策略设置仓维度 */
 type CainiaoSmartdeliveryStrategyWarehouseIUpdateResponse struct {
     
     /* warehouse_info Object仓信息 */
@@ -10082,7 +10082,7 @@ type CainiaoSmartdeliveryStrategyWarehouseIUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoProductImportFromAuctionRequest 供应商选择关联店铺的前台宝贝，导入生成产品
+/* TaobaoFenxiaoProductImportFromAuctionRequest 供应商选择关联店铺的前台宝贝，导入生成产品 */
 type TaobaoFenxiaoProductImportFromAuctionRequest struct {
     
     /* auction_id required店铺宝贝id */
@@ -10100,7 +10100,7 @@ func (req *TaobaoFenxiaoProductImportFromAuctionRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.import.from.auction"
 }
 
-// TaobaoFenxiaoProductImportFromAuctionResponse 供应商选择关联店铺的前台宝贝，导入生成产品
+/* TaobaoFenxiaoProductImportFromAuctionResponse 供应商选择关联店铺的前台宝贝，导入生成产品 */
 type TaobaoFenxiaoProductImportFromAuctionResponse struct {
     
     /* opt_time Basic操作时间 */
@@ -10111,7 +10111,7 @@ type TaobaoFenxiaoProductImportFromAuctionResponse struct {
     
 }
 
-// TaobaoScitemOutercodeGetRequest 根据outerCode查询商品
+/* TaobaoScitemOutercodeGetRequest 根据outerCode查询商品 */
 type TaobaoScitemOutercodeGetRequest struct {
     
     /* outer_code required商品编码 */
@@ -10123,7 +10123,7 @@ func (req *TaobaoScitemOutercodeGetRequest) GetAPIName() string {
 	return "taobao.scitem.outercode.get"
 }
 
-// TaobaoScitemOutercodeGetResponse 根据outerCode查询商品
+/* TaobaoScitemOutercodeGetResponse 根据outerCode查询商品 */
 type TaobaoScitemOutercodeGetResponse struct {
     
     /* sc_item Object后台商品 */
@@ -10131,7 +10131,7 @@ type TaobaoScitemOutercodeGetResponse struct {
     
 }
 
-// TaobaoHttpdnsGetRequest 获取TOP DNS配置
+/* TaobaoHttpdnsGetRequest 获取TOP DNS配置 */
 type TaobaoHttpdnsGetRequest struct {
     
 }
@@ -10140,7 +10140,7 @@ func (req *TaobaoHttpdnsGetRequest) GetAPIName() string {
 	return "taobao.httpdns.get"
 }
 
-// TaobaoHttpdnsGetResponse 获取TOP DNS配置
+/* TaobaoHttpdnsGetResponse 获取TOP DNS配置 */
 type TaobaoHttpdnsGetResponse struct {
     
     /* result BasicHTTP DNS配置信息 */
@@ -10148,7 +10148,7 @@ type TaobaoHttpdnsGetResponse struct {
     
 }
 
-// TaobaoScitemGetRequest 根据id查询商品
+/* TaobaoScitemGetRequest 根据id查询商品 */
 type TaobaoScitemGetRequest struct {
     
     /* item_id required商品id */
@@ -10160,7 +10160,7 @@ func (req *TaobaoScitemGetRequest) GetAPIName() string {
 	return "taobao.scitem.get"
 }
 
-// TaobaoScitemGetResponse 根据id查询商品
+/* TaobaoScitemGetResponse 根据id查询商品 */
 type TaobaoScitemGetResponse struct {
     
     /* sc_item Object后端商品 */
@@ -10168,7 +10168,7 @@ type TaobaoScitemGetResponse struct {
     
 }
 
-// TaobaoScitemQueryRequest 查询后端商品
+/* TaobaoScitemQueryRequest 查询后端商品 */
 type TaobaoScitemQueryRequest struct {
     
     /* bar_code optional条形码 */
@@ -10198,7 +10198,7 @@ func (req *TaobaoScitemQueryRequest) GetAPIName() string {
 	return "taobao.scitem.query"
 }
 
-// TaobaoScitemQueryResponse 查询后端商品
+/* TaobaoScitemQueryResponse 查询后端商品 */
 type TaobaoScitemQueryResponse struct {
     
     /* query_pagination Object分页 */
@@ -10212,7 +10212,7 @@ type TaobaoScitemQueryResponse struct {
     
 }
 
-// TaobaoScitemUpdateRequest 根据商品ID或商家编码修改后端商品
+/* TaobaoScitemUpdateRequest 根据商品ID或商家编码修改后端商品 */
 type TaobaoScitemUpdateRequest struct {
     
     /* bar_code optional条形码 */
@@ -10293,7 +10293,7 @@ func (req *TaobaoScitemUpdateRequest) GetAPIName() string {
 	return "taobao.scitem.update"
 }
 
-// TaobaoScitemUpdateResponse 根据商品ID或商家编码修改后端商品
+/* TaobaoScitemUpdateResponse 根据商品ID或商家编码修改后端商品 */
 type TaobaoScitemUpdateResponse struct {
     
     /* update_rows Basic更新商品数量,1表示成功更新了一条数据，0：表示未找到匹配的数据 */
@@ -10301,7 +10301,7 @@ type TaobaoScitemUpdateResponse struct {
     
 }
 
-// TaobaoScitemAddRequest 发布后端商品
+/* TaobaoScitemAddRequest 发布后端商品 */
 type TaobaoScitemAddRequest struct {
     
     /* bar_code optional条形码 */
@@ -10376,7 +10376,7 @@ func (req *TaobaoScitemAddRequest) GetAPIName() string {
 	return "taobao.scitem.add"
 }
 
-// TaobaoScitemAddResponse 发布后端商品
+/* TaobaoScitemAddResponse 发布后端商品 */
 type TaobaoScitemAddResponse struct {
     
     /* sc_item Object后台商品信息 */
@@ -10384,7 +10384,7 @@ type TaobaoScitemAddResponse struct {
     
 }
 
-// TaobaoScitemMapDeleteRequest 根据后端商品Id，失效指定用户的商品与后端商品的映射关系
+/* TaobaoScitemMapDeleteRequest 根据后端商品Id，失效指定用户的商品与后端商品的映射关系 */
 type TaobaoScitemMapDeleteRequest struct {
     
     /* sc_item_id required后台商品ID */
@@ -10399,7 +10399,7 @@ func (req *TaobaoScitemMapDeleteRequest) GetAPIName() string {
 	return "taobao.scitem.map.delete"
 }
 
-// TaobaoScitemMapDeleteResponse 根据后端商品Id，失效指定用户的商品与后端商品的映射关系
+/* TaobaoScitemMapDeleteResponse 根据后端商品Id，失效指定用户的商品与后端商品的映射关系 */
 type TaobaoScitemMapDeleteResponse struct {
     
     /* module Basic失效条数 */
@@ -10407,7 +10407,7 @@ type TaobaoScitemMapDeleteResponse struct {
     
 }
 
-// TaobaoScitemMapQueryRequest 查找IC商品或分销商品与后端商品的关联信息。skuId如果不传就查找该itemId下所有的sku
+/* TaobaoScitemMapQueryRequest 查找IC商品或分销商品与后端商品的关联信息。skuId如果不传就查找该itemId下所有的sku */
 type TaobaoScitemMapQueryRequest struct {
     
     /* item_id requiredmap_type为1：前台ic商品id
@@ -10424,7 +10424,7 @@ func (req *TaobaoScitemMapQueryRequest) GetAPIName() string {
 	return "taobao.scitem.map.query"
 }
 
-// TaobaoScitemMapQueryResponse 查找IC商品或分销商品与后端商品的关联信息。skuId如果不传就查找该itemId下所有的sku
+/* TaobaoScitemMapQueryResponse 查找IC商品或分销商品与后端商品的关联信息。skuId如果不传就查找该itemId下所有的sku */
 type TaobaoScitemMapQueryResponse struct {
     
     /* sc_item_maps Object Array后端商品映射列表 */
@@ -10432,7 +10432,7 @@ type TaobaoScitemMapQueryResponse struct {
     
 }
 
-// AlipayUserAccountFreezeGetRequest 查询支付宝账户冻结类型的冻结金额。
+/* AlipayUserAccountFreezeGetRequest 查询支付宝账户冻结类型的冻结金额。 */
 type AlipayUserAccountFreezeGetRequest struct {
     
     /* freeze_type optional冻结类型，多个用,分隔。不传返回所有类型的冻结金额。
@@ -10452,7 +10452,7 @@ func (req *AlipayUserAccountFreezeGetRequest) GetAPIName() string {
 	return "alipay.user.account.freeze.get"
 }
 
-// AlipayUserAccountFreezeGetResponse 查询支付宝账户冻结类型的冻结金额。
+/* AlipayUserAccountFreezeGetResponse 查询支付宝账户冻结类型的冻结金额。 */
 type AlipayUserAccountFreezeGetResponse struct {
     
     /* freeze_items Object Array冻结金额列表 */
@@ -10463,7 +10463,7 @@ type AlipayUserAccountFreezeGetResponse struct {
     
 }
 
-// AlipayUserAccountGetRequest 查询支付宝账户余额
+/* AlipayUserAccountGetRequest 查询支付宝账户余额 */
 type AlipayUserAccountGetRequest struct {
     
 }
@@ -10472,7 +10472,7 @@ func (req *AlipayUserAccountGetRequest) GetAPIName() string {
 	return "alipay.user.account.get"
 }
 
-// AlipayUserAccountGetResponse 查询支付宝账户余额
+/* AlipayUserAccountGetResponse 查询支付宝账户余额 */
 type AlipayUserAccountGetResponse struct {
     
     /* alipay_account Object支付宝用户账户信息 */
@@ -10480,7 +10480,7 @@ type AlipayUserAccountGetResponse struct {
     
 }
 
-// TaobaoRdcAligeniusSendgoodsCancelRequest 提供商家在仅退款中发送取消发货状态
+/* TaobaoRdcAligeniusSendgoodsCancelRequest 提供商家在仅退款中发送取消发货状态 */
 type TaobaoRdcAligeniusSendgoodsCancelRequest struct {
     
     /* param required请求参数 */
@@ -10492,7 +10492,7 @@ func (req *TaobaoRdcAligeniusSendgoodsCancelRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.sendgoods.cancel"
 }
 
-// TaobaoRdcAligeniusSendgoodsCancelResponse 提供商家在仅退款中发送取消发货状态
+/* TaobaoRdcAligeniusSendgoodsCancelResponse 提供商家在仅退款中发送取消发货状态 */
 type TaobaoRdcAligeniusSendgoodsCancelResponse struct {
     
     /* result Objectresult */
@@ -10500,7 +10500,7 @@ type TaobaoRdcAligeniusSendgoodsCancelResponse struct {
     
 }
 
-// TaobaoFenxiaoProductMapAddRequest 创建分销和供应链商品映射关系。
+/* TaobaoFenxiaoProductMapAddRequest 创建分销和供应链商品映射关系。 */
 type TaobaoFenxiaoProductMapAddRequest struct {
     
     /* not_check_outer_code optional是否需要校验商家编码，true不校验，false校验。 */
@@ -10524,7 +10524,7 @@ func (req *TaobaoFenxiaoProductMapAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.map.add"
 }
 
-// TaobaoFenxiaoProductMapAddResponse 创建分销和供应链商品映射关系。
+/* TaobaoFenxiaoProductMapAddResponse 创建分销和供应链商品映射关系。 */
 type TaobaoFenxiaoProductMapAddResponse struct {
     
     /* is_success Basic操作结果 */
@@ -10532,7 +10532,7 @@ type TaobaoFenxiaoProductMapAddResponse struct {
     
 }
 
-// AlipayUserTradeSearchRequest 查询支付宝账户交易记录
+/* AlipayUserTradeSearchRequest 查询支付宝账户交易记录 */
 type AlipayUserTradeSearchRequest struct {
     
     /* alipay_order_no optional支付宝订单号，为空查询所有记录 */
@@ -10568,7 +10568,7 @@ func (req *AlipayUserTradeSearchRequest) GetAPIName() string {
 	return "alipay.user.trade.search"
 }
 
-// AlipayUserTradeSearchResponse 查询支付宝账户交易记录
+/* AlipayUserTradeSearchResponse 查询支付宝账户交易记录 */
 type AlipayUserTradeSearchResponse struct {
     
     /* total_pages Basic总页数 */
@@ -10582,7 +10582,7 @@ type AlipayUserTradeSearchResponse struct {
     
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIDeleteRequest 删除智能发货引擎仓策略
+/* CainiaoSmartdeliveryStrategyWarehouseIDeleteRequest 删除智能发货引擎仓策略 */
 type CainiaoSmartdeliveryStrategyWarehouseIDeleteRequest struct {
     
     /* warehouse_id optional仓id */
@@ -10594,7 +10594,7 @@ func (req *CainiaoSmartdeliveryStrategyWarehouseIDeleteRequest) GetAPIName() str
 	return "cainiao.smartdelivery.strategy.warehouse.i.delete"
 }
 
-// CainiaoSmartdeliveryStrategyWarehouseIDeleteResponse 删除智能发货引擎仓策略
+/* CainiaoSmartdeliveryStrategyWarehouseIDeleteResponse 删除智能发货引擎仓策略 */
 type CainiaoSmartdeliveryStrategyWarehouseIDeleteResponse struct {
     
     /* is_delete_success Basicdata */
@@ -10602,7 +10602,7 @@ type CainiaoSmartdeliveryStrategyWarehouseIDeleteResponse struct {
     
 }
 
-// TmallItemShiptimeUpdateRequest 增加更新删除商品/SKU发货时间(支持同一商品下的SKU同时批量更新)
+/* TmallItemShiptimeUpdateRequest 增加更新删除商品/SKU发货时间(支持同一商品下的SKU同时批量更新)
 1.
     {
         "shipTimeType": 2,  ----相对发货时间（值为1则为绝对发货时间）
@@ -10632,7 +10632,7 @@ type CainiaoSmartdeliveryStrategyWarehouseIDeleteResponse struct {
         "shipTimeType": 0, -- 删除发货时间
         "updateType": 1 --更新商品
     },
-    删除商品级的发货时间，如果原本是SKU级发货时间，清空所有SKU上的发货时间
+    删除商品级的发货时间，如果原本是SKU级发货时间，清空所有SKU上的发货时间 */
 type TmallItemShiptimeUpdateRequest struct {
     
     /* item_id required商品ID */
@@ -10653,7 +10653,7 @@ func (req *TmallItemShiptimeUpdateRequest) GetAPIName() string {
 	return "tmall.item.shiptime.update"
 }
 
-// TmallItemShiptimeUpdateResponse 增加更新删除商品/SKU发货时间(支持同一商品下的SKU同时批量更新)
+/* TmallItemShiptimeUpdateResponse 增加更新删除商品/SKU发货时间(支持同一商品下的SKU同时批量更新)
 1.
     {
         "shipTimeType": 2,  ----相对发货时间（值为1则为绝对发货时间）
@@ -10683,7 +10683,7 @@ func (req *TmallItemShiptimeUpdateRequest) GetAPIName() string {
         "shipTimeType": 0, -- 删除发货时间
         "updateType": 1 --更新商品
     },
-    删除商品级的发货时间，如果原本是SKU级发货时间，清空所有SKU上的发货时间
+    删除商品级的发货时间，如果原本是SKU级发货时间，清空所有SKU上的发货时间 */
 type TmallItemShiptimeUpdateResponse struct {
     
     /* shiptime_update_result Basic被更新商品ID */
@@ -10691,7 +10691,7 @@ type TmallItemShiptimeUpdateResponse struct {
     
 }
 
-// TmallInventoryQueryForstoreRequest 商家查询后端商品仓库库存
+/* TmallInventoryQueryForstoreRequest 商家查询后端商品仓库库存 */
 type TmallInventoryQueryForstoreRequest struct {
     
     /* param_list required查询列表 */
@@ -10703,7 +10703,7 @@ func (req *TmallInventoryQueryForstoreRequest) GetAPIName() string {
 	return "tmall.inventory.query.forstore"
 }
 
-// TmallInventoryQueryForstoreResponse 商家查询后端商品仓库库存
+/* TmallInventoryQueryForstoreResponse 商家查询后端商品仓库库存 */
 type TmallInventoryQueryForstoreResponse struct {
     
     /* errorcode Basic错误code */
@@ -10720,7 +10720,7 @@ type TmallInventoryQueryForstoreResponse struct {
     
 }
 
-// TaobaoTopAuthTokenRefreshRequest 根据refresh_token重新生成token
+/* TaobaoTopAuthTokenRefreshRequest 根据refresh_token重新生成token */
 type TaobaoTopAuthTokenRefreshRequest struct {
     
     /* refresh_token requiredgrantType==refresh_token 时需要 */
@@ -10732,7 +10732,7 @@ func (req *TaobaoTopAuthTokenRefreshRequest) GetAPIName() string {
 	return "taobao.top.auth.token.refresh"
 }
 
-// TaobaoTopAuthTokenRefreshResponse 根据refresh_token重新生成token
+/* TaobaoTopAuthTokenRefreshResponse 根据refresh_token重新生成token */
 type TaobaoTopAuthTokenRefreshResponse struct {
     
     /* token_result Basic返回的是json信息 */
@@ -10740,7 +10740,7 @@ type TaobaoTopAuthTokenRefreshResponse struct {
     
 }
 
-// TaobaoTopAuthTokenCreateRequest 用户通过code换获取access_token，https only
+/* TaobaoTopAuthTokenCreateRequest 用户通过code换获取access_token，https only */
 type TaobaoTopAuthTokenCreateRequest struct {
     
     /* code required授权code，grantType==authorization_code 时需要 */
@@ -10755,7 +10755,7 @@ func (req *TaobaoTopAuthTokenCreateRequest) GetAPIName() string {
 	return "taobao.top.auth.token.create"
 }
 
-// TaobaoTopAuthTokenCreateResponse 用户通过code换获取access_token，https only
+/* TaobaoTopAuthTokenCreateResponse 用户通过code换获取access_token，https only */
 type TaobaoTopAuthTokenCreateResponse struct {
     
     /* token_result Basic返回的是json信息，和之前调用https://oauth.taobao.com/tac/token https://oauth.alibaba.com/token 换token返回的字段信息一致 */
@@ -10763,7 +10763,7 @@ type TaobaoTopAuthTokenCreateResponse struct {
     
 }
 
-// AlibabaEinvoiceClosereqRequest 关闭失败开票请求，避免造成重复开票
+/* AlibabaEinvoiceClosereqRequest 关闭失败开票请求，避免造成重复开票 */
 type AlibabaEinvoiceClosereqRequest struct {
     
     /* payee_register_no required税号 */
@@ -10778,7 +10778,7 @@ func (req *AlibabaEinvoiceClosereqRequest) GetAPIName() string {
 	return "alibaba.einvoice.closereq"
 }
 
-// AlibabaEinvoiceClosereqResponse 关闭失败开票请求，避免造成重复开票
+/* AlibabaEinvoiceClosereqResponse 关闭失败开票请求，避免造成重复开票 */
 type AlibabaEinvoiceClosereqResponse struct {
     
     /* result Basic关闭是否成功 */
@@ -10786,7 +10786,7 @@ type AlibabaEinvoiceClosereqResponse struct {
     
 }
 
-// TaobaoQimenOrderCallbackRequest 配送拦截
+/* TaobaoQimenOrderCallbackRequest 配送拦截 */
 type TaobaoQimenOrderCallbackRequest struct {
     
     /* deliveryOrderCode optional奇门仓储字段,C123,string(50),, */
@@ -10810,7 +10810,7 @@ func (req *TaobaoQimenOrderCallbackRequest) GetAPIName() string {
 	return "taobao.qimen.order.callback"
 }
 
-// TaobaoQimenOrderCallbackResponse 配送拦截
+/* TaobaoQimenOrderCallbackResponse 配送拦截 */
 type TaobaoQimenOrderCallbackResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -10824,7 +10824,7 @@ type TaobaoQimenOrderCallbackResponse struct {
     
 }
 
-// TaobaoQimenWarehouseinfoQueryRequest 货主仓库资源查询
+/* TaobaoQimenWarehouseinfoQueryRequest 货主仓库资源查询 */
 type TaobaoQimenWarehouseinfoQueryRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -10839,7 +10839,7 @@ func (req *TaobaoQimenWarehouseinfoQueryRequest) GetAPIName() string {
 	return "taobao.qimen.warehouseinfo.query"
 }
 
-// TaobaoQimenWarehouseinfoQueryResponse 货主仓库资源查询
+/* TaobaoQimenWarehouseinfoQueryResponse 货主仓库资源查询 */
 type TaobaoQimenWarehouseinfoQueryResponse struct {
     
     /* code Basic响应码 */
@@ -10862,7 +10862,7 @@ type TaobaoQimenWarehouseinfoQueryResponse struct {
     
 }
 
-// TaobaoQimenExpressinfoQueryRequest 配送公司信息查询
+/* TaobaoQimenExpressinfoQueryRequest 配送公司信息查询 */
 type TaobaoQimenExpressinfoQueryRequest struct {
     
     /* expressCode optional奇门仓储字段 */
@@ -10880,7 +10880,7 @@ func (req *TaobaoQimenExpressinfoQueryRequest) GetAPIName() string {
 	return "taobao.qimen.expressinfo.query"
 }
 
-// TaobaoQimenExpressinfoQueryResponse 配送公司信息查询
+/* TaobaoQimenExpressinfoQueryResponse 配送公司信息查询 */
 type TaobaoQimenExpressinfoQueryResponse struct {
     
     /* code Basic响应码 */
@@ -10897,7 +10897,7 @@ type TaobaoQimenExpressinfoQueryResponse struct {
     
 }
 
-// TaobaoWlbWmsSnInfoQueryRequest 查询仓库作业的各类单据记录的Sn信息
+/* TaobaoWlbWmsSnInfoQueryRequest 查询仓库作业的各类单据记录的Sn信息 */
 type TaobaoWlbWmsSnInfoQueryRequest struct {
     
     /* order_code required订单编码 */
@@ -10915,7 +10915,7 @@ func (req *TaobaoWlbWmsSnInfoQueryRequest) GetAPIName() string {
 	return "taobao.wlb.wms.sn.info.query"
 }
 
-// TaobaoWlbWmsSnInfoQueryResponse 查询仓库作业的各类单据记录的Sn信息
+/* TaobaoWlbWmsSnInfoQueryResponse 查询仓库作业的各类单据记录的Sn信息 */
 type TaobaoWlbWmsSnInfoQueryResponse struct {
     
     /* result Object接口返回 */
@@ -10923,7 +10923,7 @@ type TaobaoWlbWmsSnInfoQueryResponse struct {
     
 }
 
-// CainiaoCloudprintCustomareaUpdateRequest 自定义区内容更新
+/* CainiaoCloudprintCustomareaUpdateRequest 自定义区内容更新 */
 type CainiaoCloudprintCustomareaUpdateRequest struct {
     
     /* custom_area_content required自定义区内容（可修改） */
@@ -10941,7 +10941,7 @@ func (req *CainiaoCloudprintCustomareaUpdateRequest) GetAPIName() string {
 	return "cainiao.cloudprint.customarea.update"
 }
 
-// CainiaoCloudprintCustomareaUpdateResponse 自定义区内容更新
+/* CainiaoCloudprintCustomareaUpdateResponse 自定义区内容更新 */
 type CainiaoCloudprintCustomareaUpdateResponse struct {
     
     /* result Objectresult */
@@ -10949,7 +10949,7 @@ type CainiaoCloudprintCustomareaUpdateResponse struct {
     
 }
 
-// TaobaoQimenTransferorderQueryRequest 调拨单查询
+/* TaobaoQimenTransferorderQueryRequest 调拨单查询 */
 type TaobaoQimenTransferorderQueryRequest struct {
     
     /* erpOrderCode optionalERP单号 */
@@ -10967,7 +10967,7 @@ func (req *TaobaoQimenTransferorderQueryRequest) GetAPIName() string {
 	return "taobao.qimen.transferorder.query"
 }
 
-// TaobaoQimenTransferorderQueryResponse 调拨单查询
+/* TaobaoQimenTransferorderQueryResponse 调拨单查询 */
 type TaobaoQimenTransferorderQueryResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -10984,7 +10984,7 @@ type TaobaoQimenTransferorderQueryResponse struct {
     
 }
 
-// TaobaoQimenTransferorderReportRequest 调拨单通知
+/* TaobaoQimenTransferorderReportRequest 调拨单通知 */
 type TaobaoQimenTransferorderReportRequest struct {
     
     /* confirmInTime optional确认入库时间 */
@@ -11029,7 +11029,7 @@ func (req *TaobaoQimenTransferorderReportRequest) GetAPIName() string {
 	return "taobao.qimen.transferorder.report"
 }
 
-// TaobaoQimenTransferorderReportResponse 调拨单通知
+/* TaobaoQimenTransferorderReportResponse 调拨单通知 */
 type TaobaoQimenTransferorderReportResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -11043,7 +11043,7 @@ type TaobaoQimenTransferorderReportResponse struct {
     
 }
 
-// TmallChannelProductsQueryRequest 渠道中心，供应商查询其产品数据，返回同时符合所有查询条件的产品信息
+/* TmallChannelProductsQueryRequest 渠道中心，供应商查询其产品数据，返回同时符合所有查询条件的产品信息 */
 type TmallChannelProductsQueryRequest struct {
     
     /* page_num required页码数，从1开始 */
@@ -11070,7 +11070,7 @@ func (req *TmallChannelProductsQueryRequest) GetAPIName() string {
 	return "tmall.channel.products.query"
 }
 
-// TmallChannelProductsQueryResponse 渠道中心，供应商查询其产品数据，返回同时符合所有查询条件的产品信息
+/* TmallChannelProductsQueryResponse 渠道中心，供应商查询其产品数据，返回同时符合所有查询条件的产品信息 */
 type TmallChannelProductsQueryResponse struct {
     
     /* result Objectresult */
@@ -11078,7 +11078,7 @@ type TmallChannelProductsQueryResponse struct {
     
 }
 
-// TaobaoQimenTransferorderCreateRequest 调拨单创建
+/* TaobaoQimenTransferorderCreateRequest 调拨单创建 */
 type TaobaoQimenTransferorderCreateRequest struct {
     
     /* attributes optional扩展属性,HZ1234,string(500),, */
@@ -11108,7 +11108,7 @@ func (req *TaobaoQimenTransferorderCreateRequest) GetAPIName() string {
 	return "taobao.qimen.transferorder.create"
 }
 
-// TaobaoQimenTransferorderCreateResponse 调拨单创建
+/* TaobaoQimenTransferorderCreateResponse 调拨单创建 */
 type TaobaoQimenTransferorderCreateResponse struct {
     
     /* code Basic响应码,0,string(50),, */
@@ -11125,7 +11125,7 @@ type TaobaoQimenTransferorderCreateResponse struct {
     
 }
 
-// CainiaoOpenstorageSellerResourcedetailGetRequest 商家资源详情获取（云打印开源存储）
+/* CainiaoOpenstorageSellerResourcedetailGetRequest 商家资源详情获取（云打印开源存储） */
 type CainiaoOpenstorageSellerResourcedetailGetRequest struct {
     
     /* seller_resource_id optional商家资源id */
@@ -11137,7 +11137,7 @@ func (req *CainiaoOpenstorageSellerResourcedetailGetRequest) GetAPIName() string
 	return "cainiao.openstorage.seller.resourcedetail.get"
 }
 
-// CainiaoOpenstorageSellerResourcedetailGetResponse 商家资源详情获取（云打印开源存储）
+/* CainiaoOpenstorageSellerResourcedetailGetResponse 商家资源详情获取（云打印开源存储） */
 type CainiaoOpenstorageSellerResourcedetailGetResponse struct {
     
     /* result Objectresult */
@@ -11145,7 +11145,7 @@ type CainiaoOpenstorageSellerResourcedetailGetResponse struct {
     
 }
 
-// CainiaoOpenstorageIsvResourcedetailGetRequest isv资源详情查询（云打印开源存储）
+/* CainiaoOpenstorageIsvResourcedetailGetRequest isv资源详情查询（云打印开源存储） */
 type CainiaoOpenstorageIsvResourcedetailGetRequest struct {
     
     /* isv_resource_id optionalisv资源id */
@@ -11157,7 +11157,7 @@ func (req *CainiaoOpenstorageIsvResourcedetailGetRequest) GetAPIName() string {
 	return "cainiao.openstorage.isv.resourcedetail.get"
 }
 
-// CainiaoOpenstorageIsvResourcedetailGetResponse isv资源详情查询（云打印开源存储）
+/* CainiaoOpenstorageIsvResourcedetailGetResponse isv资源详情查询（云打印开源存储） */
 type CainiaoOpenstorageIsvResourcedetailGetResponse struct {
     
     /* result Objectresult */
@@ -11165,7 +11165,7 @@ type CainiaoOpenstorageIsvResourcedetailGetResponse struct {
     
 }
 
-// QimenTaobaoIcpOrderStockinordermessagetoerpRequest 供应链创建的入库单推送商家ERP
+/* QimenTaobaoIcpOrderStockinordermessagetoerpRequest 供应链创建的入库单推送商家ERP */
 type QimenTaobaoIcpOrderStockinordermessagetoerpRequest struct {
     
     /* customerId required货主ID */
@@ -11180,7 +11180,7 @@ func (req *QimenTaobaoIcpOrderStockinordermessagetoerpRequest) GetAPIName() stri
 	return "qimen.taobao.icp.order.stockinordermessagetoerp"
 }
 
-// QimenTaobaoIcpOrderStockinordermessagetoerpResponse 供应链创建的入库单推送商家ERP
+/* QimenTaobaoIcpOrderStockinordermessagetoerpResponse 供应链创建的入库单推送商家ERP */
 type QimenTaobaoIcpOrderStockinordermessagetoerpResponse struct {
     
     /* result Object返回结果 */
@@ -11188,8 +11188,8 @@ type QimenTaobaoIcpOrderStockinordermessagetoerpResponse struct {
     
 }
 
-// TaobaoLogisticsTraceSearchRequest 用户根据淘宝交易号查询物流流转信息，如2010-8-10 15：23：00到达杭州集散地。
-此接口的返回信息都由物流公司提供。（备注：使用线下发货（offline.send）的运单，不支持运单状态的实时跟踪，只要一发货，状态就会变为<status>对方已签收</status>，该字段仅对线上发货（online.send）的运单有效。）
+/* TaobaoLogisticsTraceSearchRequest 用户根据淘宝交易号查询物流流转信息，如2010-8-10 15：23：00到达杭州集散地。
+此接口的返回信息都由物流公司提供。（备注：使用线下发货（offline.send）的运单，不支持运单状态的实时跟踪，只要一发货，状态就会变为<status>对方已签收</status>，该字段仅对线上发货（online.send）的运单有效。） */
 type TaobaoLogisticsTraceSearchRequest struct {
     
     /* is_split optional表明是否是拆单，默认值0，1表示拆单 */
@@ -11210,8 +11210,8 @@ func (req *TaobaoLogisticsTraceSearchRequest) GetAPIName() string {
 	return "taobao.logistics.trace.search"
 }
 
-// TaobaoLogisticsTraceSearchResponse 用户根据淘宝交易号查询物流流转信息，如2010-8-10 15：23：00到达杭州集散地。
-此接口的返回信息都由物流公司提供。（备注：使用线下发货（offline.send）的运单，不支持运单状态的实时跟踪，只要一发货，状态就会变为<status>对方已签收</status>，该字段仅对线上发货（online.send）的运单有效。）
+/* TaobaoLogisticsTraceSearchResponse 用户根据淘宝交易号查询物流流转信息，如2010-8-10 15：23：00到达杭州集散地。
+此接口的返回信息都由物流公司提供。（备注：使用线下发货（offline.send）的运单，不支持运单状态的实时跟踪，只要一发货，状态就会变为<status>对方已签收</status>，该字段仅对线上发货（online.send）的运单有效。） */
 type TaobaoLogisticsTraceSearchResponse struct {
     
     /* company_name Basic物流公司名称 */
@@ -11241,7 +11241,7 @@ type TaobaoLogisticsTraceSearchResponse struct {
     
 }
 
-// TaobaoRdcAligeniusDistributionLogisticsCancelRequest 截配状态回传接口
+/* TaobaoRdcAligeniusDistributionLogisticsCancelRequest 截配状态回传接口 */
 type TaobaoRdcAligeniusDistributionLogisticsCancelRequest struct {
     
     /* param0 optional参数 */
@@ -11253,7 +11253,7 @@ func (req *TaobaoRdcAligeniusDistributionLogisticsCancelRequest) GetAPIName() st
 	return "taobao.rdc.aligenius.distribution.logistics.cancel"
 }
 
-// TaobaoRdcAligeniusDistributionLogisticsCancelResponse 截配状态回传接口
+/* TaobaoRdcAligeniusDistributionLogisticsCancelResponse 截配状态回传接口 */
 type TaobaoRdcAligeniusDistributionLogisticsCancelResponse struct {
     
     /* result Objectresult */
@@ -11261,7 +11261,7 @@ type TaobaoRdcAligeniusDistributionLogisticsCancelResponse struct {
     
 }
 
-// QimenTaobaoIcpOrderStockinordecanceltoerpRequest 一盘货入库单取消消息通知
+/* QimenTaobaoIcpOrderStockinordecanceltoerpRequest 一盘货入库单取消消息通知 */
 type QimenTaobaoIcpOrderStockinordecanceltoerpRequest struct {
     
     /* customerId required货主ID */
@@ -11276,7 +11276,7 @@ func (req *QimenTaobaoIcpOrderStockinordecanceltoerpRequest) GetAPIName() string
 	return "qimen.taobao.icp.order.stockinordecanceltoerp"
 }
 
-// QimenTaobaoIcpOrderStockinordecanceltoerpResponse 一盘货入库单取消消息通知
+/* QimenTaobaoIcpOrderStockinordecanceltoerpResponse 一盘货入库单取消消息通知 */
 type QimenTaobaoIcpOrderStockinordecanceltoerpResponse struct {
     
     /* response Object */
@@ -11284,7 +11284,7 @@ type QimenTaobaoIcpOrderStockinordecanceltoerpResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopStationAddorupdateRequest 新增或者修改代收点相关信息
+/* CainiaoEndpointLockerTopStationAddorupdateRequest 新增或者修改代收点相关信息 */
 type CainiaoEndpointLockerTopStationAddorupdateRequest struct {
     
     /* station_info optional站点信息 */
@@ -11296,7 +11296,7 @@ func (req *CainiaoEndpointLockerTopStationAddorupdateRequest) GetAPIName() strin
 	return "cainiao.endpoint.locker.top.station.addorupdate"
 }
 
-// CainiaoEndpointLockerTopStationAddorupdateResponse 新增或者修改代收点相关信息
+/* CainiaoEndpointLockerTopStationAddorupdateResponse 新增或者修改代收点相关信息 */
 type CainiaoEndpointLockerTopStationAddorupdateResponse struct {
     
     /* result Objectresult */
@@ -11304,7 +11304,7 @@ type CainiaoEndpointLockerTopStationAddorupdateResponse struct {
     
 }
 
-// TaobaoRdcAligeniusWarehouseReverseUpdateRequest 销退单状态回传
+/* TaobaoRdcAligeniusWarehouseReverseUpdateRequest 销退单状态回传 */
 type TaobaoRdcAligeniusWarehouseReverseUpdateRequest struct {
     
     /* param0 required参数 */
@@ -11316,7 +11316,7 @@ func (req *TaobaoRdcAligeniusWarehouseReverseUpdateRequest) GetAPIName() string 
 	return "taobao.rdc.aligenius.warehouse.reverse.update"
 }
 
-// TaobaoRdcAligeniusWarehouseReverseUpdateResponse 销退单状态回传
+/* TaobaoRdcAligeniusWarehouseReverseUpdateResponse 销退单状态回传 */
 type TaobaoRdcAligeniusWarehouseReverseUpdateResponse struct {
     
     /* result Objectresult */
@@ -11324,7 +11324,7 @@ type TaobaoRdcAligeniusWarehouseReverseUpdateResponse struct {
     
 }
 
-// AlibabaProviderEinvoiceCreateRequest 电子发票同步开票
+/* AlibabaProviderEinvoiceCreateRequest 电子发票同步开票 */
 type AlibabaProviderEinvoiceCreateRequest struct {
     
     /* biz_sign optional业务签名，用ca私钥做的业务签名 */
@@ -11420,7 +11420,7 @@ func (req *AlibabaProviderEinvoiceCreateRequest) GetAPIName() string {
 	return "alibaba.provider.einvoice.create"
 }
 
-// AlibabaProviderEinvoiceCreateResponse 电子发票同步开票
+/* AlibabaProviderEinvoiceCreateResponse 电子发票同步开票 */
 type AlibabaProviderEinvoiceCreateResponse struct {
     
     /* anti_fake_code Basic防伪码 */
@@ -11467,7 +11467,7 @@ type AlibabaProviderEinvoiceCreateResponse struct {
     
 }
 
-// TaobaoRdcAligeniusRefundsCheckRequest 根据退款信息，对退款单进行审核
+/* TaobaoRdcAligeniusRefundsCheckRequest 根据退款信息，对退款单进行审核 */
 type TaobaoRdcAligeniusRefundsCheckRequest struct {
     
     /* param required入参 */
@@ -11479,7 +11479,7 @@ func (req *TaobaoRdcAligeniusRefundsCheckRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.refunds.check"
 }
 
-// TaobaoRdcAligeniusRefundsCheckResponse 根据退款信息，对退款单进行审核
+/* TaobaoRdcAligeniusRefundsCheckResponse 根据退款信息，对退款单进行审核 */
 type TaobaoRdcAligeniusRefundsCheckResponse struct {
     
     /* result Objectresult */
@@ -11487,7 +11487,7 @@ type TaobaoRdcAligeniusRefundsCheckResponse struct {
     
 }
 
-// TaobaoRpReturngoodsAgreeRequest 卖家同意退货，支持淘宝和天猫的订单。
+/* TaobaoRpReturngoodsAgreeRequest 卖家同意退货，支持淘宝和天猫的订单。 */
 type TaobaoRpReturngoodsAgreeRequest struct {
     
     /* address optional卖家提供的退货地址，淘宝退款为必填项。 */
@@ -11529,7 +11529,7 @@ func (req *TaobaoRpReturngoodsAgreeRequest) GetAPIName() string {
 	return "taobao.rp.returngoods.agree"
 }
 
-// TaobaoRpReturngoodsAgreeResponse 卖家同意退货，支持淘宝和天猫的订单。
+/* TaobaoRpReturngoodsAgreeResponse 卖家同意退货，支持淘宝和天猫的订单。 */
 type TaobaoRpReturngoodsAgreeResponse struct {
     
     /* is_success Basic操作成功 */
@@ -11537,7 +11537,7 @@ type TaobaoRpReturngoodsAgreeResponse struct {
     
 }
 
-// TaobaoRdcAligeniusAutorefundsQueryRequest （此接口后期将不再维护，请勿使用）供第三方商家查询授权给自己的所有退款款订单的退款信息
+/* TaobaoRdcAligeniusAutorefundsQueryRequest （此接口后期将不再维护，请勿使用）供第三方商家查询授权给自己的所有退款款订单的退款信息 */
 type TaobaoRdcAligeniusAutorefundsQueryRequest struct {
     
     /* end_time required查询数据时间段结束时间 */
@@ -11558,7 +11558,7 @@ func (req *TaobaoRdcAligeniusAutorefundsQueryRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.autorefunds.query"
 }
 
-// TaobaoRdcAligeniusAutorefundsQueryResponse （此接口后期将不再维护，请勿使用）供第三方商家查询授权给自己的所有退款款订单的退款信息
+/* TaobaoRdcAligeniusAutorefundsQueryResponse （此接口后期将不再维护，请勿使用）供第三方商家查询授权给自己的所有退款款订单的退款信息 */
 type TaobaoRdcAligeniusAutorefundsQueryResponse struct {
     
     /* result Objectresult */
@@ -11566,7 +11566,7 @@ type TaobaoRdcAligeniusAutorefundsQueryResponse struct {
     
 }
 
-// TaobaoFenxiaoTrademonitorGetRequest 仅限供应商调用此接口查询经销商品监控信息
+/* TaobaoFenxiaoTrademonitorGetRequest 仅限供应商调用此接口查询经销商品监控信息 */
 type TaobaoFenxiaoTrademonitorGetRequest struct {
     
     /* distributor_nick optional经销商的淘宝账号 */
@@ -11596,7 +11596,7 @@ func (req *TaobaoFenxiaoTrademonitorGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.trademonitor.get"
 }
 
-// TaobaoFenxiaoTrademonitorGetResponse 仅限供应商调用此接口查询经销商品监控信息
+/* TaobaoFenxiaoTrademonitorGetResponse 仅限供应商调用此接口查询经销商品监控信息 */
 type TaobaoFenxiaoTrademonitorGetResponse struct {
     
     /* total_results Basic搜索到的经销商品订单数量 */
@@ -11607,7 +11607,7 @@ type TaobaoFenxiaoTrademonitorGetResponse struct {
     
 }
 
-// TaobaoRpRefundsAgreeRequest 卖家同意退款，支持批量退款，只允许子账号操作。淘宝退款一次最多能退20笔，总金额不超过6000元；天猫退款一次最多能退30笔，总金额不超过10000元。
+/* TaobaoRpRefundsAgreeRequest 卖家同意退款，支持批量退款，只允许子账号操作。淘宝退款一次最多能退20笔，总金额不超过6000元；天猫退款一次最多能退30笔，总金额不超过10000元。 */
 type TaobaoRpRefundsAgreeRequest struct {
     
     /* code optional短信验证码，如果退款金额达到一定的数量，后端会返回调用失败，并同时往卖家的手机发送一条短信验证码。接下来用收到的短信验证码再次发起API调用即可完成退款操作。 */
@@ -11622,7 +11622,7 @@ func (req *TaobaoRpRefundsAgreeRequest) GetAPIName() string {
 	return "taobao.rp.refunds.agree"
 }
 
-// TaobaoRpRefundsAgreeResponse 卖家同意退款，支持批量退款，只允许子账号操作。淘宝退款一次最多能退20笔，总金额不超过6000元；天猫退款一次最多能退30笔，总金额不超过10000元。
+/* TaobaoRpRefundsAgreeResponse 卖家同意退款，支持批量退款，只允许子账号操作。淘宝退款一次最多能退20笔，总金额不超过6000元；天猫退款一次最多能退30笔，总金额不超过10000元。 */
 type TaobaoRpRefundsAgreeResponse struct {
     
     /* message Basic信息 */
@@ -11639,7 +11639,7 @@ type TaobaoRpRefundsAgreeResponse struct {
     
 }
 
-// TaobaoItemAnchorGetRequest 根据类目id和宝贝描述规范化打标类型获取该类目可用的宝贝描述模块中的锚点
+/* TaobaoItemAnchorGetRequest 根据类目id和宝贝描述规范化打标类型获取该类目可用的宝贝描述模块中的锚点 */
 type TaobaoItemAnchorGetRequest struct {
     
     /* cat_id required对应类目编号 */
@@ -11654,7 +11654,7 @@ func (req *TaobaoItemAnchorGetRequest) GetAPIName() string {
 	return "taobao.item.anchor.get"
 }
 
-// TaobaoItemAnchorGetResponse 根据类目id和宝贝描述规范化打标类型获取该类目可用的宝贝描述模块中的锚点
+/* TaobaoItemAnchorGetResponse 根据类目id和宝贝描述规范化打标类型获取该类目可用的宝贝描述模块中的锚点 */
 type TaobaoItemAnchorGetResponse struct {
     
     /* anchor_modules Object Array宝贝描述规范化可使用打标模块的锚点信息 */
@@ -11665,11 +11665,11 @@ type TaobaoItemAnchorGetResponse struct {
     
 }
 
-// TaobaoRefundRefuseRequest 卖家拒绝单笔退款（包含退款和退款退货）交易，要求如下：
+/* TaobaoRefundRefuseRequest 卖家拒绝单笔退款（包含退款和退款退货）交易，要求如下：
 1. 传入的refund_id和相应的tid, oid必须匹配
 2. 如果一笔订单只有一笔子订单，则tid必须与oid相同
 3. 只有卖家才能执行拒绝退款操作
-4. 以下三种情况不能退款：卖家未发货；7天无理由退换货；网游订单
+4. 以下三种情况不能退款：卖家未发货；7天无理由退换货；网游订单 */
 type TaobaoRefundRefuseRequest struct {
     
     /* oid optional退款记录对应的交易子订单号 */
@@ -11688,7 +11688,7 @@ type TaobaoRefundRefuseRequest struct {
     refuse_message string `json:"refuse_message";xml:"refuse_message"`
     
     /* refuse_proof optional拒绝退款时的退款凭证，一般是卖家拒绝退款时使用的发货凭证，最大长度130000字节，支持的图片格式：GIF, JPG, PNG。天猫退款为必填项。 */
-    refuse_proof byte[] `json:"refuse_proof";xml:"refuse_proof"`
+    refuse_proof []byte `json:"refuse_proof";xml:"refuse_proof"`
     
     /* refuse_reason_id optional拒绝原因编号，会提供用户拒绝原因列表供选择 */
     refuse_reason_id int64 `json:"refuse_reason_id";xml:"refuse_reason_id"`
@@ -11702,11 +11702,11 @@ func (req *TaobaoRefundRefuseRequest) GetAPIName() string {
 	return "taobao.refund.refuse"
 }
 
-// TaobaoRefundRefuseResponse 卖家拒绝单笔退款（包含退款和退款退货）交易，要求如下：
+/* TaobaoRefundRefuseResponse 卖家拒绝单笔退款（包含退款和退款退货）交易，要求如下：
 1. 传入的refund_id和相应的tid, oid必须匹配
 2. 如果一笔订单只有一笔子订单，则tid必须与oid相同
 3. 只有卖家才能执行拒绝退款操作
-4. 以下三种情况不能退款：卖家未发货；7天无理由退换货；网游订单
+4. 以下三种情况不能退款：卖家未发货；7天无理由退换货；网游订单 */
 type TaobaoRefundRefuseResponse struct {
     
     /* is_success Basic拒绝退款操作是否成功 */
@@ -11717,9 +11717,9 @@ type TaobaoRefundRefuseResponse struct {
     
 }
 
-// TaobaoTradeAmountGetRequest 卖家查询该笔交易的资金帐务相关的数据；
+/* TaobaoTradeAmountGetRequest 卖家查询该笔交易的资金帐务相关的数据；
 1. 只供卖家使用，买家不可使用
-2. 可查询所有的状态的交易，但不同状态时交易的相关数据可能会有不同
+2. 可查询所有的状态的交易，但不同状态时交易的相关数据可能会有不同 */
 type TaobaoTradeAmountGetRequest struct {
     
     /* fields required订单帐务详情需要返回的字段信息，可选值如下：1. TradeAmount中可指定的fields：tid,alipay_no,created,pay_time,end_time,total_fee,payment,post_fee,cod_fee,commission_fee,buyer_obtain_point_fee2. OrderAmount中可指定的fields：order_amounts.oid,order_amounts.title,order_amounts.num_iid,order_amounts.sku_properties_name,order_amounts.sku_id,order_amounts.num,order_amounts.price,order_amounts.discount_fee,order_amounts.adjust_fee,order_amounts.payment,order_amounts.promotion_name3. order_amounts(返回OrderAmount的所有内容)4. promotion_details(指定该值会返回主订单的promotion_details中除id之外的所有字段) */
@@ -11734,9 +11734,9 @@ func (req *TaobaoTradeAmountGetRequest) GetAPIName() string {
 	return "taobao.trade.amount.get"
 }
 
-// TaobaoTradeAmountGetResponse 卖家查询该笔交易的资金帐务相关的数据；
+/* TaobaoTradeAmountGetResponse 卖家查询该笔交易的资金帐务相关的数据；
 1. 只供卖家使用，买家不可使用
-2. 可查询所有的状态的交易，但不同状态时交易的相关数据可能会有不同
+2. 可查询所有的状态的交易，但不同状态时交易的相关数据可能会有不同 */
 type TaobaoTradeAmountGetResponse struct {
     
     /* trade_amount Object主订单的财务信息详情 */
@@ -11744,7 +11744,7 @@ type TaobaoTradeAmountGetResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderRemarkUpdateRequest 供应商修改经销采购单备注
+/* TaobaoFenxiaoDealerRequisitionorderRemarkUpdateRequest 供应商修改经销采购单备注 */
 type TaobaoFenxiaoDealerRequisitionorderRemarkUpdateRequest struct {
     
     /* dealer_order_id required经销采购单ID */
@@ -11769,7 +11769,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderRemarkUpdateRequest) GetAPIName() 
 	return "taobao.fenxiao.dealer.requisitionorder.remark.update"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderRemarkUpdateResponse 供应商修改经销采购单备注
+/* TaobaoFenxiaoDealerRequisitionorderRemarkUpdateResponse 供应商修改经销采购单备注 */
 type TaobaoFenxiaoDealerRequisitionorderRemarkUpdateResponse struct {
     
     /* is_success Basic操作是否成功 */
@@ -11777,7 +11777,7 @@ type TaobaoFenxiaoDealerRequisitionorderRemarkUpdateResponse struct {
     
 }
 
-// TaobaoWlbWmsItemCombinationCreateRequest 创建组合商品与子商品关系
+/* TaobaoWlbWmsItemCombinationCreateRequest 创建组合商品与子商品关系 */
 type TaobaoWlbWmsItemCombinationCreateRequest struct {
     
     /* item_id required组合商品ID */
@@ -11792,7 +11792,7 @@ func (req *TaobaoWlbWmsItemCombinationCreateRequest) GetAPIName() string {
 	return "taobao.wlb.wms.item.combination.create"
 }
 
-// TaobaoWlbWmsItemCombinationCreateResponse 创建组合商品与子商品关系
+/* TaobaoWlbWmsItemCombinationCreateResponse 创建组合商品与子商品关系 */
 type TaobaoWlbWmsItemCombinationCreateResponse struct {
     
     /* wl_error_code Basic错误编码 */
@@ -11806,7 +11806,7 @@ type TaobaoWlbWmsItemCombinationCreateResponse struct {
     
 }
 
-// TaobaoWlbWmsItemCombinationDeleteRequest 删除货品组合关系
+/* TaobaoWlbWmsItemCombinationDeleteRequest 删除货品组合关系 */
 type TaobaoWlbWmsItemCombinationDeleteRequest struct {
     
     /* item_id optional组合货品ID */
@@ -11818,7 +11818,7 @@ func (req *TaobaoWlbWmsItemCombinationDeleteRequest) GetAPIName() string {
 	return "taobao.wlb.wms.item.combination.delete"
 }
 
-// TaobaoWlbWmsItemCombinationDeleteResponse 删除货品组合关系
+/* TaobaoWlbWmsItemCombinationDeleteResponse 删除货品组合关系 */
 type TaobaoWlbWmsItemCombinationDeleteResponse struct {
     
     /* wl_error_code Basic错误编码 */
@@ -11832,7 +11832,7 @@ type TaobaoWlbWmsItemCombinationDeleteResponse struct {
     
 }
 
-// TaobaoWlbWmsItemCombinationGetRequest 查询组合商品的组合关系
+/* TaobaoWlbWmsItemCombinationGetRequest 查询组合商品的组合关系 */
 type TaobaoWlbWmsItemCombinationGetRequest struct {
     
     /* itemid required货品Id */
@@ -11844,7 +11844,7 @@ func (req *TaobaoWlbWmsItemCombinationGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.item.combination.get"
 }
 
-// TaobaoWlbWmsItemCombinationGetResponse 查询组合商品的组合关系
+/* TaobaoWlbWmsItemCombinationGetResponse 查询组合商品的组合关系 */
 type TaobaoWlbWmsItemCombinationGetResponse struct {
     
     /* result Object接口返回结果 */
@@ -11852,7 +11852,7 @@ type TaobaoWlbWmsItemCombinationGetResponse struct {
     
 }
 
-// TaobaoFenxiaoProductGradepriceUpdateRequest 供应商可以针对产品不同的sku，指定对应交易类型（代销or经销）方式下，设定折扣方式（按等级or指定分销商）以及对应优惠后的采购价格
+/* TaobaoFenxiaoProductGradepriceUpdateRequest 供应商可以针对产品不同的sku，指定对应交易类型（代销or经销）方式下，设定折扣方式（按等级or指定分销商）以及对应优惠后的采购价格 */
 type TaobaoFenxiaoProductGradepriceUpdateRequest struct {
     
     /* ids required会员等级的id或者分销商id，例如：”1001,2001,1002” */
@@ -11879,7 +11879,7 @@ func (req *TaobaoFenxiaoProductGradepriceUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.product.gradeprice.update"
 }
 
-// TaobaoFenxiaoProductGradepriceUpdateResponse 供应商可以针对产品不同的sku，指定对应交易类型（代销or经销）方式下，设定折扣方式（按等级or指定分销商）以及对应优惠后的采购价格
+/* TaobaoFenxiaoProductGradepriceUpdateResponse 供应商可以针对产品不同的sku，指定对应交易类型（代销or经销）方式下，设定折扣方式（按等级or指定分销商）以及对应优惠后的采购价格 */
 type TaobaoFenxiaoProductGradepriceUpdateResponse struct {
     
     /* is_success Basic返回操作结果：成功或失败 */
@@ -11887,7 +11887,7 @@ type TaobaoFenxiaoProductGradepriceUpdateResponse struct {
     
 }
 
-// TaobaoRdcAligeniusOrderReturngoodsNotifyRequest 退货单创建结果反馈
+/* TaobaoRdcAligeniusOrderReturngoodsNotifyRequest 退货单创建结果反馈 */
 type TaobaoRdcAligeniusOrderReturngoodsNotifyRequest struct {
     
     /* parent_order_id optional主订单号 */
@@ -11902,7 +11902,7 @@ func (req *TaobaoRdcAligeniusOrderReturngoodsNotifyRequest) GetAPIName() string 
 	return "taobao.rdc.aligenius.order.returngoods.notify"
 }
 
-// TaobaoRdcAligeniusOrderReturngoodsNotifyResponse 退货单创建结果反馈
+/* TaobaoRdcAligeniusOrderReturngoodsNotifyResponse 退货单创建结果反馈 */
 type TaobaoRdcAligeniusOrderReturngoodsNotifyResponse struct {
     
     /* result Basicsuccess */
@@ -11916,7 +11916,7 @@ type TaobaoRdcAligeniusOrderReturngoodsNotifyResponse struct {
     
 }
 
-// TaobaoOmniorderStoreSdtcancelRequest 通知速店通取消取号
+/* TaobaoOmniorderStoreSdtcancelRequest 通知速店通取消取号 */
 type TaobaoOmniorderStoreSdtcancelRequest struct {
     
     /* package_id required取号返回的packageId */
@@ -11928,7 +11928,7 @@ func (req *TaobaoOmniorderStoreSdtcancelRequest) GetAPIName() string {
 	return "taobao.omniorder.store.sdtcancel"
 }
 
-// TaobaoOmniorderStoreSdtcancelResponse 通知速店通取消取号
+/* TaobaoOmniorderStoreSdtcancelResponse 通知速店通取消取号 */
 type TaobaoOmniorderStoreSdtcancelResponse struct {
     
     /* result Object返回结果 */
@@ -11936,7 +11936,7 @@ type TaobaoOmniorderStoreSdtcancelResponse struct {
     
 }
 
-// TaobaoOmniorderStoreSdtquerystationRequest 速店通查询站点信息
+/* TaobaoOmniorderStoreSdtquerystationRequest 速店通查询站点信息 */
 type TaobaoOmniorderStoreSdtquerystationRequest struct {
     
     /* param_long2 required取号时返回的packageId */
@@ -11948,7 +11948,7 @@ func (req *TaobaoOmniorderStoreSdtquerystationRequest) GetAPIName() string {
 	return "taobao.omniorder.store.sdtquerystation"
 }
 
-// TaobaoOmniorderStoreSdtquerystationResponse 速店通查询站点信息
+/* TaobaoOmniorderStoreSdtquerystationResponse 速店通查询站点信息 */
 type TaobaoOmniorderStoreSdtquerystationResponse struct {
     
     /* result Objectresult */
@@ -11956,7 +11956,7 @@ type TaobaoOmniorderStoreSdtquerystationResponse struct {
     
 }
 
-// QimenTaobaoQianniuCloudkefuAddressSelfModifyRequest 在自动化任务核对地址卡片中，透出修改地址选择器，让用户自己选择要修改的地址，然后同步到商家后台ERP系统
+/* QimenTaobaoQianniuCloudkefuAddressSelfModifyRequest 在自动化任务核对地址卡片中，透出修改地址选择器，让用户自己选择要修改的地址，然后同步到商家后台ERP系统 */
 type QimenTaobaoQianniuCloudkefuAddressSelfModifyRequest struct {
     
     /* bizOrderId required交易订单ID */
@@ -11980,7 +11980,7 @@ func (req *QimenTaobaoQianniuCloudkefuAddressSelfModifyRequest) GetAPIName() str
 	return "qimen.taobao.qianniu.cloudkefu.address.self.modify"
 }
 
-// QimenTaobaoQianniuCloudkefuAddressSelfModifyResponse 在自动化任务核对地址卡片中，透出修改地址选择器，让用户自己选择要修改的地址，然后同步到商家后台ERP系统
+/* QimenTaobaoQianniuCloudkefuAddressSelfModifyResponse 在自动化任务核对地址卡片中，透出修改地址选择器，让用户自己选择要修改的地址，然后同步到商家后台ERP系统 */
 type QimenTaobaoQianniuCloudkefuAddressSelfModifyResponse struct {
     
     /* result Object修改地址返回结果 */
@@ -11988,7 +11988,7 @@ type QimenTaobaoQianniuCloudkefuAddressSelfModifyResponse struct {
     
 }
 
-// TmallItemSizemappingTemplateCreateRequest 新增天猫商品尺码表模板
+/* TmallItemSizemappingTemplateCreateRequest 新增天猫商品尺码表模板
 
 男鞋、女鞋、运动鞋、户外鞋类目，尺码表维度为：
 脚长（cm） 必选
@@ -12095,7 +12095,7 @@ type QimenTaobaoQianniuCloudkefuAddressSelfModifyResponse struct {
 
 模板格式为：
 尺码值:维度名称:数值
-如：M:身高（cm）:160,L:身高（cm）:170
+如：M:身高（cm）:160,L:身高（cm）:170 */
 type TmallItemSizemappingTemplateCreateRequest struct {
     
     /* template_content required尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。尺码值，维度数据不能包含数字，特殊字符。数值为0-999.9的数字，且最多一位小数。 */
@@ -12110,7 +12110,7 @@ func (req *TmallItemSizemappingTemplateCreateRequest) GetAPIName() string {
 	return "tmall.item.sizemapping.template.create"
 }
 
-// TmallItemSizemappingTemplateCreateResponse 新增天猫商品尺码表模板
+/* TmallItemSizemappingTemplateCreateResponse 新增天猫商品尺码表模板
 
 男鞋、女鞋、运动鞋、户外鞋类目，尺码表维度为：
 脚长（cm） 必选
@@ -12217,7 +12217,7 @@ func (req *TmallItemSizemappingTemplateCreateRequest) GetAPIName() string {
 
 模板格式为：
 尺码值:维度名称:数值
-如：M:身高（cm）:160,L:身高（cm）:170
+如：M:身高（cm）:160,L:身高（cm）:170 */
 type TmallItemSizemappingTemplateCreateResponse struct {
     
     /* size_mapping_template Object尺码表模板 */
@@ -12225,7 +12225,7 @@ type TmallItemSizemappingTemplateCreateResponse struct {
     
 }
 
-// TaobaoOmniorderStoreGetconsignmailcodeRequest 用于ISV获取全渠道门店物流订单菜鸟裹裹门店的物流快递取号
+/* TaobaoOmniorderStoreGetconsignmailcodeRequest 用于ISV获取全渠道门店物流订单菜鸟裹裹门店的物流快递取号 */
 type TaobaoOmniorderStoreGetconsignmailcodeRequest struct {
     
     /* channel required淘宝(TB)、天猫(TM)、京东(JD)、当当(DD)、拍拍(PP)、易讯(YX)、ebay(EBAY)、QQ网购(QQ)      、亚马逊(AMAZON)、苏宁(SN)、国美(GM)、唯品会(WPH)、聚美(JM)、乐蜂(LF)、蘑菇街(MGJ)      、聚尚(JS)、拍鞋(PX)、银泰(YT)、1号店(YHD)、凡客(VANCL)、邮乐(YL)、优购(YG)、阿里      巴巴(1688)、其他(OTHERS) */
@@ -12252,7 +12252,7 @@ func (req *TaobaoOmniorderStoreGetconsignmailcodeRequest) GetAPIName() string {
 	return "taobao.omniorder.store.getconsignmailcode"
 }
 
-// TaobaoOmniorderStoreGetconsignmailcodeResponse 用于ISV获取全渠道门店物流订单菜鸟裹裹门店的物流快递取号
+/* TaobaoOmniorderStoreGetconsignmailcodeResponse 用于ISV获取全渠道门店物流订单菜鸟裹裹门店的物流快递取号 */
 type TaobaoOmniorderStoreGetconsignmailcodeResponse struct {
     
     /* result Objectresult */
@@ -12260,7 +12260,7 @@ type TaobaoOmniorderStoreGetconsignmailcodeResponse struct {
     
 }
 
-// AlibabaEinvoiceCreatereqRequest ERP发起开票请求
+/* AlibabaEinvoiceCreatereqRequest ERP发起开票请求 */
 type AlibabaEinvoiceCreatereqRequest struct {
     
     /* apply_id optional开票申请ID，接收了开票申请消息后，需要把apply_id带上 */
@@ -12365,7 +12365,7 @@ func (req *AlibabaEinvoiceCreatereqRequest) GetAPIName() string {
 	return "alibaba.einvoice.createreq"
 }
 
-// AlibabaEinvoiceCreatereqResponse ERP发起开票请求
+/* AlibabaEinvoiceCreatereqResponse ERP发起开票请求 */
 type AlibabaEinvoiceCreatereqResponse struct {
     
     /* is_success Basic开票信息是否成功接受 */
@@ -12373,7 +12373,7 @@ type AlibabaEinvoiceCreatereqResponse struct {
     
 }
 
-// TmallItemSizemappingTemplateUpdateRequest 更新天猫商品尺码表模板
+/* TmallItemSizemappingTemplateUpdateRequest 更新天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateUpdateRequest struct {
     
     /* template_content required尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。尺码值，维度数据不能包含数字，特殊字符。数值为0-999.9的数字，且最多一位小数。 */
@@ -12391,7 +12391,7 @@ func (req *TmallItemSizemappingTemplateUpdateRequest) GetAPIName() string {
 	return "tmall.item.sizemapping.template.update"
 }
 
-// TmallItemSizemappingTemplateUpdateResponse 更新天猫商品尺码表模板
+/* TmallItemSizemappingTemplateUpdateResponse 更新天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateUpdateResponse struct {
     
     /* size_mapping_template Object尺码表模板 */
@@ -12399,11 +12399,11 @@ type TmallItemSizemappingTemplateUpdateResponse struct {
     
 }
 
-// TaobaoTradesSoldIncrementvGetRequest 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息） 
+/* TaobaoTradesSoldIncrementvGetRequest 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息） 
 <br/>1. 一次请求只能查询时间跨度为一天的增量交易记录，即end_create - start_create <= 1天。 
 <br/>2. 返回的数据结果是以订单入库时间的倒序排列的(该时间和订单修改时间不同)，通过从后往前翻页的方式可以避免漏单问题。 
 <br/>3. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。 
-<br/>4. 使用主动通知监听订单变更事件，可以实时获取订单更新数据。
+<br/>4. 使用主动通知监听订单变更事件，可以实时获取订单更新数据。 */
 type TaobaoTradesSoldIncrementvGetRequest struct {
     
     /* end_create required查询入库结束时间，必须大于入库开始时间(修改时间跨度不能大于一天)，格式:yyyy-MM-dd HH:mm:ss。<span style="color:red;font-weight: bold;">建议使用30分钟以内的时间跨度，能大大提高响应速度和成功率</span>。 */
@@ -12442,11 +12442,11 @@ func (req *TaobaoTradesSoldIncrementvGetRequest) GetAPIName() string {
 	return "taobao.trades.sold.incrementv.get"
 }
 
-// TaobaoTradesSoldIncrementvGetResponse 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息） 
+/* TaobaoTradesSoldIncrementvGetResponse 搜索当前会话用户作为卖家已卖出的增量交易数据（只能获取到三个月以内的交易信息） 
 <br/>1. 一次请求只能查询时间跨度为一天的增量交易记录，即end_create - start_create <= 1天。 
 <br/>2. 返回的数据结果是以订单入库时间的倒序排列的(该时间和订单修改时间不同)，通过从后往前翻页的方式可以避免漏单问题。 
 <br/>3. 返回的数据结果只包含了订单的部分数据，可通过taobao.trade.fullinfo.get获取订单详情。 
-<br/>4. 使用主动通知监听订单变更事件，可以实时获取订单更新数据。
+<br/>4. 使用主动通知监听订单变更事件，可以实时获取订单更新数据。 */
 type TaobaoTradesSoldIncrementvGetResponse struct {
     
     /* has_next Basic是否存在下一页 */
@@ -12460,7 +12460,7 @@ type TaobaoTradesSoldIncrementvGetResponse struct {
     
 }
 
-// TaobaoOmniorderStoreWarehouseRequest 为了能够支持逆向到门店对应的区域仓，商家需要配置门店与区域仓的映射关系，这个接口可以给商家提供门店与区域仓映射关系的增删改查功能。
+/* TaobaoOmniorderStoreWarehouseRequest 为了能够支持逆向到门店对应的区域仓，商家需要配置门店与区域仓的映射关系，这个接口可以给商家提供门店与区域仓映射关系的增删改查功能。 */
 type TaobaoOmniorderStoreWarehouseRequest struct {
     
     /* operation required操作，1表示增加或者更新，2表示删除，3表示查询 */
@@ -12487,7 +12487,7 @@ func (req *TaobaoOmniorderStoreWarehouseRequest) GetAPIName() string {
 	return "taobao.omniorder.store.warehouse"
 }
 
-// TaobaoOmniorderStoreWarehouseResponse 为了能够支持逆向到门店对应的区域仓，商家需要配置门店与区域仓的映射关系，这个接口可以给商家提供门店与区域仓映射关系的增删改查功能。
+/* TaobaoOmniorderStoreWarehouseResponse 为了能够支持逆向到门店对应的区域仓，商家需要配置门店与区域仓的映射关系，这个接口可以给商家提供门店与区域仓映射关系的增删改查功能。 */
 type TaobaoOmniorderStoreWarehouseResponse struct {
     
     /* data Basic成功增加或者更新一条门店与区域仓的关联 */
@@ -12501,7 +12501,7 @@ type TaobaoOmniorderStoreWarehouseResponse struct {
     
 }
 
-// TmallItemSizemappingTemplateDeleteRequest 删除天猫商品尺码表模板
+/* TmallItemSizemappingTemplateDeleteRequest 删除天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateDeleteRequest struct {
     
     /* template_id required尺码表模板ID */
@@ -12513,7 +12513,7 @@ func (req *TmallItemSizemappingTemplateDeleteRequest) GetAPIName() string {
 	return "tmall.item.sizemapping.template.delete"
 }
 
-// TmallItemSizemappingTemplateDeleteResponse 删除天猫商品尺码表模板
+/* TmallItemSizemappingTemplateDeleteResponse 删除天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateDeleteResponse struct {
     
     /* template_id Basic尺码表模板ID */
@@ -12521,7 +12521,7 @@ type TmallItemSizemappingTemplateDeleteResponse struct {
     
 }
 
-// TmallItemSizemappingTemplateGetRequest 获取天猫商品尺码表模板
+/* TmallItemSizemappingTemplateGetRequest 获取天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateGetRequest struct {
     
     /* template_id required尺码表模板ID */
@@ -12533,7 +12533,7 @@ func (req *TmallItemSizemappingTemplateGetRequest) GetAPIName() string {
 	return "tmall.item.sizemapping.template.get"
 }
 
-// TmallItemSizemappingTemplateGetResponse 获取天猫商品尺码表模板
+/* TmallItemSizemappingTemplateGetResponse 获取天猫商品尺码表模板 */
 type TmallItemSizemappingTemplateGetResponse struct {
     
     /* size_mapping_template Object尺码表模板 */
@@ -12541,7 +12541,7 @@ type TmallItemSizemappingTemplateGetResponse struct {
     
 }
 
-// TaobaoOmniorderStoreSdtconsignRequest ISV取完单号后通知菜鸟裹裹发货
+/* TaobaoOmniorderStoreSdtconsignRequest ISV取完单号后通知菜鸟裹裹发货 */
 type TaobaoOmniorderStoreSdtconsignRequest struct {
     
     /* package_id required取号接口返回的包裹id */
@@ -12556,7 +12556,7 @@ func (req *TaobaoOmniorderStoreSdtconsignRequest) GetAPIName() string {
 	return "taobao.omniorder.store.sdtconsign"
 }
 
-// TaobaoOmniorderStoreSdtconsignResponse ISV取完单号后通知菜鸟裹裹发货
+/* TaobaoOmniorderStoreSdtconsignResponse ISV取完单号后通知菜鸟裹裹发货 */
 type TaobaoOmniorderStoreSdtconsignResponse struct {
     
     /* data Objectdata */
@@ -12570,7 +12570,7 @@ type TaobaoOmniorderStoreSdtconsignResponse struct {
     
 }
 
-// AlibabaEinvoiceCreateResultsIncrementGetRequest 增量开票结果获取
+/* AlibabaEinvoiceCreateResultsIncrementGetRequest 增量开票结果获取 */
 type AlibabaEinvoiceCreateResultsIncrementGetRequest struct {
     
     /* end_modified required终止查询时间 */
@@ -12597,7 +12597,7 @@ func (req *AlibabaEinvoiceCreateResultsIncrementGetRequest) GetAPIName() string 
 	return "alibaba.einvoice.create.results.increment.get"
 }
 
-// AlibabaEinvoiceCreateResultsIncrementGetResponse 增量开票结果获取
+/* AlibabaEinvoiceCreateResultsIncrementGetResponse 增量开票结果获取 */
 type AlibabaEinvoiceCreateResultsIncrementGetResponse struct {
     
     /* invoice_result_list Object Array开票结果返回列表 */
@@ -12608,7 +12608,7 @@ type AlibabaEinvoiceCreateResultsIncrementGetResponse struct {
     
 }
 
-// AlibabaEinvoiceCreateResultGetRequest ERP开票结果获取
+/* AlibabaEinvoiceCreateResultGetRequest ERP开票结果获取 */
 type AlibabaEinvoiceCreateResultGetRequest struct {
     
     /* out_shop_name optional外部平台店铺名称，需要在阿里发票平台配置，只有当platform_code不为TB和TM时，这个字段才生效。注意：后台配置的店铺平台必须和入参platform_code一致 */
@@ -12632,7 +12632,7 @@ func (req *AlibabaEinvoiceCreateResultGetRequest) GetAPIName() string {
 	return "alibaba.einvoice.create.result.get"
 }
 
-// AlibabaEinvoiceCreateResultGetResponse ERP开票结果获取
+/* AlibabaEinvoiceCreateResultGetResponse ERP开票结果获取 */
 type AlibabaEinvoiceCreateResultGetResponse struct {
     
     /* invoice_result_list Object Array开票返回结果数据列表 */
@@ -12640,7 +12640,7 @@ type AlibabaEinvoiceCreateResultGetResponse struct {
     
 }
 
-// TaobaoKfcKeywordSearchRequest 对输入的文本信息进行禁忌关键词匹配，返回匹配的结果
+/* TaobaoKfcKeywordSearchRequest 对输入的文本信息进行禁忌关键词匹配，返回匹配的结果 */
 type TaobaoKfcKeywordSearchRequest struct {
     
     /* apply optional应用点，分为一级应用点、二级应用点。其中一级应用点通常是指某一个系统或产品，比如淘宝的商品应用（taobao_auction）；二级应用点，是指一级应用点下的具体的分类，比如商品标题(title)、商品描述(content)。不同的二级应用可以设置不同关键词。
@@ -12663,7 +12663,7 @@ func (req *TaobaoKfcKeywordSearchRequest) GetAPIName() string {
 	return "taobao.kfc.keyword.search"
 }
 
-// TaobaoKfcKeywordSearchResponse 对输入的文本信息进行禁忌关键词匹配，返回匹配的结果
+/* TaobaoKfcKeywordSearchResponse 对输入的文本信息进行禁忌关键词匹配，返回匹配的结果 */
 type TaobaoKfcKeywordSearchResponse struct {
     
     /* kfc_search_result ObjectKFC 关键词过滤匹配结果 */
@@ -12671,7 +12671,7 @@ type TaobaoKfcKeywordSearchResponse struct {
     
 }
 
-// TaobaoQimenCombineitemQueryRequest 组合货品关系查询
+/* TaobaoQimenCombineitemQueryRequest 组合货品关系查询 */
 type TaobaoQimenCombineitemQueryRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -12689,7 +12689,7 @@ func (req *TaobaoQimenCombineitemQueryRequest) GetAPIName() string {
 	return "taobao.qimen.combineitem.query"
 }
 
-// TaobaoQimenCombineitemQueryResponse 组合货品关系查询
+/* TaobaoQimenCombineitemQueryResponse 组合货品关系查询 */
 type TaobaoQimenCombineitemQueryResponse struct {
     
     /* code Basic响应码 */
@@ -12706,7 +12706,7 @@ type TaobaoQimenCombineitemQueryResponse struct {
     
 }
 
-// TmallItemSizemappingTemplatesListRequest 获取所有尺码表模板列表。
+/* TmallItemSizemappingTemplatesListRequest 获取所有尺码表模板列表。 */
 type TmallItemSizemappingTemplatesListRequest struct {
     
 }
@@ -12715,7 +12715,7 @@ func (req *TmallItemSizemappingTemplatesListRequest) GetAPIName() string {
 	return "tmall.item.sizemapping.templates.list"
 }
 
-// TmallItemSizemappingTemplatesListResponse 获取所有尺码表模板列表。
+/* TmallItemSizemappingTemplatesListResponse 获取所有尺码表模板列表。 */
 type TmallItemSizemappingTemplatesListResponse struct {
     
     /* size_mapping_templates Object Array尺码表模板列表 */
@@ -12723,8 +12723,8 @@ type TmallItemSizemappingTemplatesListResponse struct {
     
 }
 
-// TaobaoTmcTopicGroupAddRequest 根据topic名称路由消息到不同的分组。（前提：发送方未指定分组名）
-如果是需要授权的消息，分组路由先判断用户分组路由(使用taobao.tmc.group.add添加的路由)，用户分组路由不存在时，才会判断topic分组路由
+/* TaobaoTmcTopicGroupAddRequest 根据topic名称路由消息到不同的分组。（前提：发送方未指定分组名）
+如果是需要授权的消息，分组路由先判断用户分组路由(使用taobao.tmc.group.add添加的路由)，用户分组路由不存在时，才会判断topic分组路由 */
 type TaobaoTmcTopicGroupAddRequest struct {
     
     /* group_name required消息分组名，如果不存在，会自动创建 */
@@ -12739,8 +12739,8 @@ func (req *TaobaoTmcTopicGroupAddRequest) GetAPIName() string {
 	return "taobao.tmc.topic.group.add"
 }
 
-// TaobaoTmcTopicGroupAddResponse 根据topic名称路由消息到不同的分组。（前提：发送方未指定分组名）
-如果是需要授权的消息，分组路由先判断用户分组路由(使用taobao.tmc.group.add添加的路由)，用户分组路由不存在时，才会判断topic分组路由
+/* TaobaoTmcTopicGroupAddResponse 根据topic名称路由消息到不同的分组。（前提：发送方未指定分组名）
+如果是需要授权的消息，分组路由先判断用户分组路由(使用taobao.tmc.group.add添加的路由)，用户分组路由不存在时，才会判断topic分组路由 */
 type TaobaoTmcTopicGroupAddResponse struct {
     
     /* result Basictrue */
@@ -12748,7 +12748,7 @@ type TaobaoTmcTopicGroupAddResponse struct {
     
 }
 
-// TmallChannelTradeOrderCreateRequest 创建渠道分销单
+/* TmallChannelTradeOrderCreateRequest 创建渠道分销单 */
 type TmallChannelTradeOrderCreateRequest struct {
     
     /* param0 required入参 */
@@ -12760,7 +12760,7 @@ func (req *TmallChannelTradeOrderCreateRequest) GetAPIName() string {
 	return "tmall.channel.trade.order.create"
 }
 
-// TmallChannelTradeOrderCreateResponse 创建渠道分销单
+/* TmallChannelTradeOrderCreateResponse 创建渠道分销单 */
 type TmallChannelTradeOrderCreateResponse struct {
     
     /* main_purchase_order_list Basic Array采购单号 */
@@ -12768,7 +12768,7 @@ type TmallChannelTradeOrderCreateResponse struct {
     
 }
 
-// TaobaoFenxiaoDistributorsGetRequest 查询和当前登录供应商有合作关系的分销商的信息
+/* TaobaoFenxiaoDistributorsGetRequest 查询和当前登录供应商有合作关系的分销商的信息 */
 type TaobaoFenxiaoDistributorsGetRequest struct {
     
     /* nicks required分销商用户名列表。多个之间以“,”分隔;最多支持50个分销商用户名。 */
@@ -12780,7 +12780,7 @@ func (req *TaobaoFenxiaoDistributorsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.distributors.get"
 }
 
-// TaobaoFenxiaoDistributorsGetResponse 查询和当前登录供应商有合作关系的分销商的信息
+/* TaobaoFenxiaoDistributorsGetResponse 查询和当前登录供应商有合作关系的分销商的信息 */
 type TaobaoFenxiaoDistributorsGetResponse struct {
     
     /* distributors Object Array分销商详细信息 */
@@ -12788,7 +12788,7 @@ type TaobaoFenxiaoDistributorsGetResponse struct {
     
 }
 
-// QimenTaobaoAutoEntryorderGiftitemcancelRequest 该接口一次只能回传一个主交易号的BMS增加的货品取消信息
+/* QimenTaobaoAutoEntryorderGiftitemcancelRequest 该接口一次只能回传一个主交易号的BMS增加的货品取消信息 */
 type QimenTaobaoAutoEntryorderGiftitemcancelRequest struct {
     
     /* customerId requiredcustomerId */
@@ -12803,7 +12803,7 @@ func (req *QimenTaobaoAutoEntryorderGiftitemcancelRequest) GetAPIName() string {
 	return "qimen.taobao.auto.entryorder.giftitemcancel"
 }
 
-// QimenTaobaoAutoEntryorderGiftitemcancelResponse 该接口一次只能回传一个主交易号的BMS增加的货品取消信息
+/* QimenTaobaoAutoEntryorderGiftitemcancelResponse 该接口一次只能回传一个主交易号的BMS增加的货品取消信息 */
 type QimenTaobaoAutoEntryorderGiftitemcancelResponse struct {
     
     /* response Objectresponse */
@@ -12811,7 +12811,7 @@ type QimenTaobaoAutoEntryorderGiftitemcancelResponse struct {
     
 }
 
-// QimenTaobaoBmsErptradeInterceptRequest 调用ERP接口，拦截订单
+/* QimenTaobaoBmsErptradeInterceptRequest 调用ERP接口，拦截订单 */
 type QimenTaobaoBmsErptradeInterceptRequest struct {
     
     /* customerId required货主ID */
@@ -12826,7 +12826,7 @@ func (req *QimenTaobaoBmsErptradeInterceptRequest) GetAPIName() string {
 	return "qimen.taobao.bms.erptrade.intercept"
 }
 
-// QimenTaobaoBmsErptradeInterceptResponse 调用ERP接口，拦截订单
+/* QimenTaobaoBmsErptradeInterceptResponse 调用ERP接口，拦截订单 */
 type QimenTaobaoBmsErptradeInterceptResponse struct {
     
     /* response ObjectResponse */
@@ -12834,7 +12834,7 @@ type QimenTaobaoBmsErptradeInterceptResponse struct {
     
 }
 
-// TmallStoredeliverAllocationAcceptRequest 商品通门店发货业务门店接单拒单接口
+/* TmallStoredeliverAllocationAcceptRequest 商品通门店发货业务门店接单拒单接口 */
 type TmallStoredeliverAllocationAcceptRequest struct {
     
     /* allocation_code required派单号 */
@@ -12852,7 +12852,7 @@ func (req *TmallStoredeliverAllocationAcceptRequest) GetAPIName() string {
 	return "tmall.storedeliver.allocation.accept"
 }
 
-// TmallStoredeliverAllocationAcceptResponse 商品通门店发货业务门店接单拒单接口
+/* TmallStoredeliverAllocationAcceptResponse 商品通门店发货业务门店接单拒单接口 */
 type TmallStoredeliverAllocationAcceptResponse struct {
     
     /* is_success Basic是否执行成功 */
@@ -12860,7 +12860,7 @@ type TmallStoredeliverAllocationAcceptResponse struct {
     
 }
 
-// QimenTaobaoBmsErptradeTransferconsignRequest BMS调用ERP订单菜鸟仓&商家仓互转接口
+/* QimenTaobaoBmsErptradeTransferconsignRequest BMS调用ERP订单菜鸟仓&商家仓互转接口 */
 type QimenTaobaoBmsErptradeTransferconsignRequest struct {
     
     /* customerId required货主ID */
@@ -12875,7 +12875,7 @@ func (req *QimenTaobaoBmsErptradeTransferconsignRequest) GetAPIName() string {
 	return "qimen.taobao.bms.erptrade.transferconsign"
 }
 
-// QimenTaobaoBmsErptradeTransferconsignResponse BMS调用ERP订单菜鸟仓&商家仓互转接口
+/* QimenTaobaoBmsErptradeTransferconsignResponse BMS调用ERP订单菜鸟仓&商家仓互转接口 */
 type QimenTaobaoBmsErptradeTransferconsignResponse struct {
     
     /* response Object */
@@ -12883,7 +12883,7 @@ type QimenTaobaoBmsErptradeTransferconsignResponse struct {
     
 }
 
-// QimenTaobaoBmsTradeConsignRequest BMS通知ERP交易单整单出库接口
+/* QimenTaobaoBmsTradeConsignRequest BMS通知ERP交易单整单出库接口 */
 type QimenTaobaoBmsTradeConsignRequest struct {
     
     /* customerId required货主ID */
@@ -12898,7 +12898,7 @@ func (req *QimenTaobaoBmsTradeConsignRequest) GetAPIName() string {
 	return "qimen.taobao.bms.trade.consign"
 }
 
-// QimenTaobaoBmsTradeConsignResponse BMS通知ERP交易单整单出库接口
+/* QimenTaobaoBmsTradeConsignResponse BMS通知ERP交易单整单出库接口 */
 type QimenTaobaoBmsTradeConsignResponse struct {
     
     /* response Object */
@@ -12906,7 +12906,7 @@ type QimenTaobaoBmsTradeConsignResponse struct {
     
 }
 
-// TaobaoLogisticsExpressModifyAppointRequest 商家通过此api操作修改物流单，交易单的收货人地址、收货人联系方式、预约配送日期
+/* TaobaoLogisticsExpressModifyAppointRequest 商家通过此api操作修改物流单，交易单的收货人地址、收货人联系方式、预约配送日期 */
 type TaobaoLogisticsExpressModifyAppointRequest struct {
     
     /* express_modify_appoint_top_request required改约请求对象 */
@@ -12918,7 +12918,7 @@ func (req *TaobaoLogisticsExpressModifyAppointRequest) GetAPIName() string {
 	return "taobao.logistics.express.modify.appoint"
 }
 
-// TaobaoLogisticsExpressModifyAppointResponse 商家通过此api操作修改物流单，交易单的收货人地址、收货人联系方式、预约配送日期
+/* TaobaoLogisticsExpressModifyAppointResponse 商家通过此api操作修改物流单，交易单的收货人地址、收货人联系方式、预约配送日期 */
 type TaobaoLogisticsExpressModifyAppointResponse struct {
     
     /* result Object调用结果 */
@@ -12926,9 +12926,9 @@ type TaobaoLogisticsExpressModifyAppointResponse struct {
     
 }
 
-// TaobaoLogisticsConsignResendRequest 支持卖家发货后修改运单号;支持在线下单和自己联系两种发货方式;使用条件：<br>
+/* TaobaoLogisticsConsignResendRequest 支持卖家发货后修改运单号;支持在线下单和自己联系两种发货方式;使用条件：<br>
 1、必须是已发货订单，自己联系发货的必须24小时内才可修改；在线下单的，必须下单后物流公司未揽收成功前才可修改；
-2、自己联系只能切换为自己联系的公司，在线下单也只能切换为在线下单的物流公司。
+2、自己联系只能切换为自己联系的公司，在线下单也只能切换为在线下单的物流公司。 */
 type TaobaoLogisticsConsignResendRequest struct {
     
     /* company_code required物流公司代码.如"POST"代表中国邮政,"ZJS"代表宅急送。调用 taobao.logistics.companies.get 获取。<br><font color='red'>如果是货到付款订单，选择的物流公司必须支持货到付款发货方式</font> */
@@ -12958,9 +12958,9 @@ func (req *TaobaoLogisticsConsignResendRequest) GetAPIName() string {
 	return "taobao.logistics.consign.resend"
 }
 
-// TaobaoLogisticsConsignResendResponse 支持卖家发货后修改运单号;支持在线下单和自己联系两种发货方式;使用条件：<br>
+/* TaobaoLogisticsConsignResendResponse 支持卖家发货后修改运单号;支持在线下单和自己联系两种发货方式;使用条件：<br>
 1、必须是已发货订单，自己联系发货的必须24小时内才可修改；在线下单的，必须下单后物流公司未揽收成功前才可修改；
-2、自己联系只能切换为自己联系的公司，在线下单也只能切换为在线下单的物流公司。
+2、自己联系只能切换为自己联系的公司，在线下单也只能切换为在线下单的物流公司。 */
 type TaobaoLogisticsConsignResendResponse struct {
     
     /* shipping Object返回发货是否成功is_success */
@@ -12968,7 +12968,7 @@ type TaobaoLogisticsConsignResendResponse struct {
     
 }
 
-// TaobaoRdcAligeniusOrderEventUpdateRequest 供erp回传订单变更状态事件
+/* TaobaoRdcAligeniusOrderEventUpdateRequest 供erp回传订单变更状态事件 */
 type TaobaoRdcAligeniusOrderEventUpdateRequest struct {
     
     /* param0 optional参数 */
@@ -12980,7 +12980,7 @@ func (req *TaobaoRdcAligeniusOrderEventUpdateRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.order.event.update"
 }
 
-// TaobaoRdcAligeniusOrderEventUpdateResponse 供erp回传订单变更状态事件
+/* TaobaoRdcAligeniusOrderEventUpdateResponse 供erp回传订单变更状态事件 */
 type TaobaoRdcAligeniusOrderEventUpdateResponse struct {
     
     /* fail_code Basic错误码 */
@@ -12994,7 +12994,7 @@ type TaobaoRdcAligeniusOrderEventUpdateResponse struct {
     
 }
 
-// TaobaoTmcTopicGroupDeleteRequest 删除根据topic名称路由消息到不同的分组关系
+/* TaobaoTmcTopicGroupDeleteRequest 删除根据topic名称路由消息到不同的分组关系 */
 type TaobaoTmcTopicGroupDeleteRequest struct {
     
     /* group_id optional消息分组Id，一般不用填写，如果分组已经被删除，则根据问题排查工具返回的ID删除路由关系 */
@@ -13012,7 +13012,7 @@ func (req *TaobaoTmcTopicGroupDeleteRequest) GetAPIName() string {
 	return "taobao.tmc.topic.group.delete"
 }
 
-// TaobaoTmcTopicGroupDeleteResponse 删除根据topic名称路由消息到不同的分组关系
+/* TaobaoTmcTopicGroupDeleteResponse 删除根据topic名称路由消息到不同的分组关系 */
 type TaobaoTmcTopicGroupDeleteResponse struct {
     
     /* result Basictrue */
@@ -13020,7 +13020,7 @@ type TaobaoTmcTopicGroupDeleteResponse struct {
     
 }
 
-// TmallItemSchemaUpdateRequest 天猫根据规则编辑商品
+/* TmallItemSchemaUpdateRequest 天猫根据规则编辑商品 */
 type TmallItemSchemaUpdateRequest struct {
     
     /* category_id optional商品发布的目标类目，必须是叶子类目。如果没有切换类目需求不需要填写 */
@@ -13041,7 +13041,7 @@ func (req *TmallItemSchemaUpdateRequest) GetAPIName() string {
 	return "tmall.item.schema.update"
 }
 
-// TmallItemSchemaUpdateResponse 天猫根据规则编辑商品
+/* TmallItemSchemaUpdateResponse 天猫根据规则编辑商品 */
 type TmallItemSchemaUpdateResponse struct {
     
     /* gmt_modified Basic商品更新操作成功时间 */
@@ -13052,7 +13052,7 @@ type TmallItemSchemaUpdateResponse struct {
     
 }
 
-// CainiaoSmartdeliveryIssubscribeIQueryRequest 查询商家时候订购智能发货引擎服务
+/* CainiaoSmartdeliveryIssubscribeIQueryRequest 查询商家时候订购智能发货引擎服务 */
 type CainiaoSmartdeliveryIssubscribeIQueryRequest struct {
     
 }
@@ -13061,7 +13061,7 @@ func (req *CainiaoSmartdeliveryIssubscribeIQueryRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.issubscribe.i.query"
 }
 
-// CainiaoSmartdeliveryIssubscribeIQueryResponse 查询商家时候订购智能发货引擎服务
+/* CainiaoSmartdeliveryIssubscribeIQueryResponse 查询商家时候订购智能发货引擎服务 */
 type CainiaoSmartdeliveryIssubscribeIQueryResponse struct {
     
     /* successful Basictrue:商家已订购智能发货引擎服务,false:商家还没有订购或订购已过期 */
@@ -13069,7 +13069,7 @@ type CainiaoSmartdeliveryIssubscribeIQueryResponse struct {
     
 }
 
-// TmallItemUpdateSchemaGetRequest Schema方式编辑天猫商品时，编辑商品规则获取
+/* TmallItemUpdateSchemaGetRequest Schema方式编辑天猫商品时，编辑商品规则获取 */
 type TmallItemUpdateSchemaGetRequest struct {
     
     /* category_id optional商品发布的目标类目，必须是叶子类目。如果没有切换类目需求，不需要填写。 */
@@ -13087,7 +13087,7 @@ func (req *TmallItemUpdateSchemaGetRequest) GetAPIName() string {
 	return "tmall.item.update.schema.get"
 }
 
-// TmallItemUpdateSchemaGetResponse Schema方式编辑天猫商品时，编辑商品规则获取
+/* TmallItemUpdateSchemaGetResponse Schema方式编辑天猫商品时，编辑商品规则获取 */
 type TmallItemUpdateSchemaGetResponse struct {
     
     /* update_item_result Basic返回发布商品的规则文档 */
@@ -13095,7 +13095,7 @@ type TmallItemUpdateSchemaGetResponse struct {
     
 }
 
-// TmallProductUpdateSchemaGetRequest 获取用户更新产品的规则
+/* TmallProductUpdateSchemaGetRequest 获取用户更新产品的规则 */
 type TmallProductUpdateSchemaGetRequest struct {
     
     /* product_id required产品编号 */
@@ -13107,7 +13107,7 @@ func (req *TmallProductUpdateSchemaGetRequest) GetAPIName() string {
 	return "tmall.product.update.schema.get"
 }
 
-// TmallProductUpdateSchemaGetResponse 获取用户更新产品的规则
+/* TmallProductUpdateSchemaGetResponse 获取用户更新产品的规则 */
 type TmallProductUpdateSchemaGetResponse struct {
     
     /* update_product_schema Basic参数产品ID对产品的更新规则 */
@@ -13115,7 +13115,7 @@ type TmallProductUpdateSchemaGetResponse struct {
     
 }
 
-// TmallProductSchemaUpdateRequest 产品更新接口
+/* TmallProductSchemaUpdateRequest 产品更新接口 */
 type TmallProductSchemaUpdateRequest struct {
     
     /* product_id required产品编号 */
@@ -13130,7 +13130,7 @@ func (req *TmallProductSchemaUpdateRequest) GetAPIName() string {
 	return "tmall.product.schema.update"
 }
 
-// TmallProductSchemaUpdateResponse 产品更新接口
+/* TmallProductSchemaUpdateResponse 产品更新接口 */
 type TmallProductSchemaUpdateResponse struct {
     
     /* update_product_result Basic产品数据，格式和入参xml_data一致，仅包含产品ID和更新时间 */
@@ -13138,7 +13138,7 @@ type TmallProductSchemaUpdateResponse struct {
     
 }
 
-// TmallExchangeRefusereasonGetRequest 获取拒绝换货原因列表
+/* TmallExchangeRefusereasonGetRequest 获取拒绝换货原因列表 */
 type TmallExchangeRefusereasonGetRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -13156,7 +13156,7 @@ func (req *TmallExchangeRefusereasonGetRequest) GetAPIName() string {
 	return "tmall.exchange.refusereason.get"
 }
 
-// TmallExchangeRefusereasonGetResponse 获取拒绝换货原因列表
+/* TmallExchangeRefusereasonGetResponse 获取拒绝换货原因列表 */
 type TmallExchangeRefusereasonGetResponse struct {
     
     /* result Object返回结果 */
@@ -13164,7 +13164,7 @@ type TmallExchangeRefusereasonGetResponse struct {
     
 }
 
-// TaobaoTaeBillGetRequest 查询单笔账单明细
+/* TaobaoTaeBillGetRequest 查询单笔账单明细 */
 type TaobaoTaeBillGetRequest struct {
     
     /* account_id required虚拟账户科目编号 */
@@ -13185,7 +13185,7 @@ func (req *TaobaoTaeBillGetRequest) GetAPIName() string {
 	return "taobao.tae.bill.get"
 }
 
-// TaobaoTaeBillGetResponse 查询单笔账单明细
+/* TaobaoTaeBillGetResponse 查询单笔账单明细 */
 type TaobaoTaeBillGetResponse struct {
     
     /* bill Object账单明细 */
@@ -13193,7 +13193,7 @@ type TaobaoTaeBillGetResponse struct {
     
 }
 
-// TaobaoOmniorderGuideDataGetRequest 获取全渠道导购产品，目前包括随心购、随身购扫码、加购和交易数据。
+/* TaobaoOmniorderGuideDataGetRequest 获取全渠道导购产品，目前包括随心购、随身购扫码、加购和交易数据。 */
 type TaobaoOmniorderGuideDataGetRequest struct {
     
     /* page_no required页码，从1开始 */
@@ -13214,7 +13214,7 @@ func (req *TaobaoOmniorderGuideDataGetRequest) GetAPIName() string {
 	return "taobao.omniorder.guide.data.get"
 }
 
-// TaobaoOmniorderGuideDataGetResponse 获取全渠道导购产品，目前包括随心购、随身购扫码、加购和交易数据。
+/* TaobaoOmniorderGuideDataGetResponse 获取全渠道导购产品，目前包括随心购、随身购扫码、加购和交易数据。 */
 type TaobaoOmniorderGuideDataGetResponse struct {
     
     /* data_list Basic Array拉取的数据数组，如果为空，表示数据拉取完毕。拉取的数据字段包括打点时间、商家id、商品id和门店id等，传入的类型不同，返回的字段有所不同，可以根据具体类型的返回结果具体处理 */
@@ -13222,7 +13222,7 @@ type TaobaoOmniorderGuideDataGetResponse struct {
     
 }
 
-// TaobaoTaeAccountsGetRequest tae查询费用科目信息
+/* TaobaoTaeAccountsGetRequest tae查询费用科目信息 */
 type TaobaoTaeAccountsGetRequest struct {
     
     /* aids optional需要获取的科目ID */
@@ -13237,7 +13237,7 @@ func (req *TaobaoTaeAccountsGetRequest) GetAPIName() string {
 	return "taobao.tae.accounts.get"
 }
 
-// TaobaoTaeAccountsGetResponse tae查询费用科目信息
+/* TaobaoTaeAccountsGetResponse tae查询费用科目信息 */
 type TaobaoTaeAccountsGetResponse struct {
     
     /* accounts Object Array返回的科目信息 */
@@ -13248,7 +13248,7 @@ type TaobaoTaeAccountsGetResponse struct {
     
 }
 
-// TaobaoTaeBillsGetRequest tae查询账单明细
+/* TaobaoTaeBillsGetRequest tae查询账单明细 */
 type TaobaoTaeBillsGetRequest struct {
     
     /* current_page optional页数,建议不要超过100页,越大性能越低,有可能会超时 */
@@ -13284,7 +13284,7 @@ func (req *TaobaoTaeBillsGetRequest) GetAPIName() string {
 	return "taobao.tae.bills.get"
 }
 
-// TaobaoTaeBillsGetResponse tae查询账单明细
+/* TaobaoTaeBillsGetResponse tae查询账单明细 */
 type TaobaoTaeBillsGetResponse struct {
     
     /* bills Object Array账单列表 */
@@ -13298,7 +13298,7 @@ type TaobaoTaeBillsGetResponse struct {
     
 }
 
-// TaobaoOmniorderItemTagOperateRequest 用于对全渠道商品进行打标、去标（门店发货标，门店自提标，前置拆单标）操作。另外还包括增加、删除、修改分单系统，接单系统配置。
+/* TaobaoOmniorderItemTagOperateRequest 用于对全渠道商品进行打标、去标（门店发货标，门店自提标，前置拆单标）操作。另外还包括增加、删除、修改分单系统，接单系统配置。 */
 type TaobaoOmniorderItemTagOperateRequest struct {
     
     /* item_id required商品ID */
@@ -13319,7 +13319,7 @@ func (req *TaobaoOmniorderItemTagOperateRequest) GetAPIName() string {
 	return "taobao.omniorder.item.tag.operate"
 }
 
-// TaobaoOmniorderItemTagOperateResponse 用于对全渠道商品进行打标、去标（门店发货标，门店自提标，前置拆单标）操作。另外还包括增加、删除、修改分单系统，接单系统配置。
+/* TaobaoOmniorderItemTagOperateResponse 用于对全渠道商品进行打标、去标（门店发货标，门店自提标，前置拆单标）操作。另外还包括增加、删除、修改分单系统，接单系统配置。 */
 type TaobaoOmniorderItemTagOperateResponse struct {
     
     /* code Basic0 正常，否则异常 */
@@ -13330,7 +13330,7 @@ type TaobaoOmniorderItemTagOperateResponse struct {
     
 }
 
-// TmallExchangeAgreeRequest 卖家同意换货申请
+/* TmallExchangeAgreeRequest 卖家同意换货申请 */
 type TmallExchangeAgreeRequest struct {
     
     /* address_id required收货地址id，如需获取请调用该top接口：taobao.logistics.address.search，对应属性为contact_id */
@@ -13349,7 +13349,7 @@ type TmallExchangeAgreeRequest struct {
     leave_message string `json:"leave_message";xml:"leave_message"`
     
     /* leave_message_pics optional上传图片举证 */
-    leave_message_pics byte[] `json:"leave_message_pics";xml:"leave_message_pics"`
+    leave_message_pics []byte `json:"leave_message_pics";xml:"leave_message_pics"`
     
     /* mobile optional收货人手机号 */
     mobile string `json:"mobile";xml:"mobile"`
@@ -13363,7 +13363,7 @@ func (req *TmallExchangeAgreeRequest) GetAPIName() string {
 	return "tmall.exchange.agree"
 }
 
-// TmallExchangeAgreeResponse 卖家同意换货申请
+/* TmallExchangeAgreeResponse 卖家同意换货申请 */
 type TmallExchangeAgreeResponse struct {
     
     /* result Object返回结果 */
@@ -13371,7 +13371,7 @@ type TmallExchangeAgreeResponse struct {
     
 }
 
-// TmallExchangeRefuseRequest 卖家拒绝换货申请
+/* TmallExchangeRefuseRequest 卖家拒绝换货申请 */
 type TmallExchangeRefuseRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -13384,7 +13384,7 @@ type TmallExchangeRefuseRequest struct {
     leave_message string `json:"leave_message";xml:"leave_message"`
     
     /* leave_message_pics optional凭证图片 */
-    leave_message_pics byte[] `json:"leave_message_pics";xml:"leave_message_pics"`
+    leave_message_pics []byte `json:"leave_message_pics";xml:"leave_message_pics"`
     
     /* seller_refuse_reason_id required换货原因对应ID */
     seller_refuse_reason_id int64 `json:"seller_refuse_reason_id";xml:"seller_refuse_reason_id"`
@@ -13395,7 +13395,7 @@ func (req *TmallExchangeRefuseRequest) GetAPIName() string {
 	return "tmall.exchange.refuse"
 }
 
-// TmallExchangeRefuseResponse 卖家拒绝换货申请
+/* TmallExchangeRefuseResponse 卖家拒绝换货申请 */
 type TmallExchangeRefuseResponse struct {
     
     /* result Object返回结果 */
@@ -13403,7 +13403,7 @@ type TmallExchangeRefuseResponse struct {
     
 }
 
-// TmallExchangeMessageAddRequest 卖家创建换货留言
+/* TmallExchangeMessageAddRequest 卖家创建换货留言 */
 type TmallExchangeMessageAddRequest struct {
     
     /* content required留言内容 */
@@ -13416,7 +13416,7 @@ type TmallExchangeMessageAddRequest struct {
     fields string `json:"fields";xml:"fields"`
     
     /* message_pics optional凭证图片列表 */
-    message_pics byte[] `json:"message_pics";xml:"message_pics"`
+    message_pics []byte `json:"message_pics";xml:"message_pics"`
     
 }
 
@@ -13424,7 +13424,7 @@ func (req *TmallExchangeMessageAddRequest) GetAPIName() string {
 	return "tmall.exchange.message.add"
 }
 
-// TmallExchangeMessageAddResponse 卖家创建换货留言
+/* TmallExchangeMessageAddResponse 卖家创建换货留言 */
 type TmallExchangeMessageAddResponse struct {
     
     /* result Object返回结果 */
@@ -13432,7 +13432,7 @@ type TmallExchangeMessageAddResponse struct {
     
 }
 
-// TmallExchangeMessagesGetRequest 查询换货订单留言列表
+/* TmallExchangeMessagesGetRequest 查询换货订单留言列表 */
 type TmallExchangeMessagesGetRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -13456,7 +13456,7 @@ func (req *TmallExchangeMessagesGetRequest) GetAPIName() string {
 	return "tmall.exchange.messages.get"
 }
 
-// TmallExchangeMessagesGetResponse 查询换货订单留言列表
+/* TmallExchangeMessagesGetResponse 查询换货订单留言列表 */
 type TmallExchangeMessagesGetResponse struct {
     
     /* result Object返回结果 */
@@ -13464,7 +13464,7 @@ type TmallExchangeMessagesGetResponse struct {
     
 }
 
-// TmallExchangeReturngoodsRefuseRequest 卖家拒绝买家换货申请
+/* TmallExchangeReturngoodsRefuseRequest 卖家拒绝买家换货申请 */
 type TmallExchangeReturngoodsRefuseRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -13474,7 +13474,7 @@ type TmallExchangeReturngoodsRefuseRequest struct {
     leave_message string `json:"leave_message";xml:"leave_message"`
     
     /* leave_message_pics optional凭证图片 */
-    leave_message_pics byte[] `json:"leave_message_pics";xml:"leave_message_pics"`
+    leave_message_pics []byte `json:"leave_message_pics";xml:"leave_message_pics"`
     
     /* seller_refuse_reason_id required拒绝原因ID */
     seller_refuse_reason_id int64 `json:"seller_refuse_reason_id";xml:"seller_refuse_reason_id"`
@@ -13485,7 +13485,7 @@ func (req *TmallExchangeReturngoodsRefuseRequest) GetAPIName() string {
 	return "tmall.exchange.returngoods.refuse"
 }
 
-// TmallExchangeReturngoodsRefuseResponse 卖家拒绝买家换货申请
+/* TmallExchangeReturngoodsRefuseResponse 卖家拒绝买家换货申请 */
 type TmallExchangeReturngoodsRefuseResponse struct {
     
     /* result Object返回结果 */
@@ -13493,7 +13493,7 @@ type TmallExchangeReturngoodsRefuseResponse struct {
     
 }
 
-// TaobaoQimenWmsReturnapplyReportRequest 退货异常包裹单通知接口
+/* TaobaoQimenWmsReturnapplyReportRequest 退货异常包裹单通知接口 */
 type TaobaoQimenWmsReturnapplyReportRequest struct {
     
     /* request optional请求对象 */
@@ -13505,7 +13505,7 @@ func (req *TaobaoQimenWmsReturnapplyReportRequest) GetAPIName() string {
 	return "taobao.qimen.wms.returnapply.report"
 }
 
-// TaobaoQimenWmsReturnapplyReportResponse 退货异常包裹单通知接口
+/* TaobaoQimenWmsReturnapplyReportResponse 退货异常包裹单通知接口 */
 type TaobaoQimenWmsReturnapplyReportResponse struct {
     
     /* response Object响应对象 */
@@ -13513,7 +13513,7 @@ type TaobaoQimenWmsReturnapplyReportResponse struct {
     
 }
 
-// CainiaoSmartdeliverySellerStatusIQueryRequest 查询智能发货引擎商家状态信息
+/* CainiaoSmartdeliverySellerStatusIQueryRequest 查询智能发货引擎商家状态信息 */
 type CainiaoSmartdeliverySellerStatusIQueryRequest struct {
     
 }
@@ -13522,7 +13522,7 @@ func (req *CainiaoSmartdeliverySellerStatusIQueryRequest) GetAPIName() string {
 	return "cainiao.smartdelivery.seller.status.i.query"
 }
 
-// CainiaoSmartdeliverySellerStatusIQueryResponse 查询智能发货引擎商家状态信息
+/* CainiaoSmartdeliverySellerStatusIQueryResponse 查询智能发货引擎商家状态信息 */
 type CainiaoSmartdeliverySellerStatusIQueryResponse struct {
     
     /* seller_status Object商家状态 */
@@ -13530,7 +13530,7 @@ type CainiaoSmartdeliverySellerStatusIQueryResponse struct {
     
 }
 
-// TmallExchangeConsigngoodsRequest 卖家发货
+/* TmallExchangeConsigngoodsRequest 卖家发货 */
 type TmallExchangeConsigngoodsRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -13554,7 +13554,7 @@ func (req *TmallExchangeConsigngoodsRequest) GetAPIName() string {
 	return "tmall.exchange.consigngoods"
 }
 
-// TmallExchangeConsigngoodsResponse 卖家发货
+/* TmallExchangeConsigngoodsResponse 卖家发货 */
 type TmallExchangeConsigngoodsResponse struct {
     
     /* result Objectresult */
@@ -13562,7 +13562,7 @@ type TmallExchangeConsigngoodsResponse struct {
     
 }
 
-// TaobaoTmcAuthGetRequest TMC连接授权Token
+/* TaobaoTmcAuthGetRequest TMC连接授权Token */
 type TaobaoTmcAuthGetRequest struct {
     
     /* group optionaltmc组名 */
@@ -13574,7 +13574,7 @@ func (req *TaobaoTmcAuthGetRequest) GetAPIName() string {
 	return "taobao.tmc.auth.get"
 }
 
-// TaobaoTmcAuthGetResponse TMC连接授权Token
+/* TaobaoTmcAuthGetResponse TMC连接授权Token */
 type TaobaoTmcAuthGetResponse struct {
     
     /* result Basicresult */
@@ -13582,7 +13582,7 @@ type TaobaoTmcAuthGetResponse struct {
     
 }
 
-// TaobaoInventoryMerchantAdjustRequest 货品库存商家端调整 ，入库，出库，盘点
+/* TaobaoInventoryMerchantAdjustRequest 货品库存商家端调整 ，入库，出库，盘点 */
 type TaobaoInventoryMerchantAdjustRequest struct {
     
     /* inventory_check required调整库存对象 */
@@ -13594,7 +13594,7 @@ func (req *TaobaoInventoryMerchantAdjustRequest) GetAPIName() string {
 	return "taobao.inventory.merchant.adjust"
 }
 
-// TaobaoInventoryMerchantAdjustResponse 货品库存商家端调整 ，入库，出库，盘点
+/* TaobaoInventoryMerchantAdjustResponse 货品库存商家端调整 ，入库，出库，盘点 */
 type TaobaoInventoryMerchantAdjustResponse struct {
     
     /* result Objectresult */
@@ -13602,7 +13602,7 @@ type TaobaoInventoryMerchantAdjustResponse struct {
     
 }
 
-// TaobaoWlbWmsSkuCreateRequest 商品同步
+/* TaobaoWlbWmsSkuCreateRequest 商品同步 */
 type TaobaoWlbWmsSkuCreateRequest struct {
     
     /* advent_lifecycle optional保质期预警天数 */
@@ -13725,7 +13725,7 @@ func (req *TaobaoWlbWmsSkuCreateRequest) GetAPIName() string {
 	return "taobao.wlb.wms.sku.create"
 }
 
-// TaobaoWlbWmsSkuCreateResponse 商品同步
+/* TaobaoWlbWmsSkuCreateResponse 商品同步 */
 type TaobaoWlbWmsSkuCreateResponse struct {
     
     /* item_id Basic系统自动生成 */
@@ -13742,7 +13742,7 @@ type TaobaoWlbWmsSkuCreateResponse struct {
     
 }
 
-// TaobaoWlbWmsSkuUpdateRequest 商品信息的更新
+/* TaobaoWlbWmsSkuUpdateRequest 商品信息的更新 */
 type TaobaoWlbWmsSkuUpdateRequest struct {
     
     /* advent_lifecycle optional保质期预警天数 */
@@ -13865,7 +13865,7 @@ func (req *TaobaoWlbWmsSkuUpdateRequest) GetAPIName() string {
 	return "taobao.wlb.wms.sku.update"
 }
 
-// TaobaoWlbWmsSkuUpdateResponse 商品信息的更新
+/* TaobaoWlbWmsSkuUpdateResponse 商品信息的更新 */
 type TaobaoWlbWmsSkuUpdateResponse struct {
     
     /* wl_error_code Basic错误编码 */
@@ -13879,7 +13879,7 @@ type TaobaoWlbWmsSkuUpdateResponse struct {
     
 }
 
-// TaobaoWlbWmsStockOutOrderNotifyRequest 出库单通知
+/* TaobaoWlbWmsStockOutOrderNotifyRequest 出库单通知 */
 type TaobaoWlbWmsStockOutOrderNotifyRequest struct {
     
     /* car_no optional车牌号 */
@@ -13942,7 +13942,7 @@ func (req *TaobaoWlbWmsStockOutOrderNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.stock.out.order.notify"
 }
 
-// TaobaoWlbWmsStockOutOrderNotifyResponse 出库单通知
+/* TaobaoWlbWmsStockOutOrderNotifyResponse 出库单通知 */
 type TaobaoWlbWmsStockOutOrderNotifyResponse struct {
     
     /* order_code Basic仓储订单编码 */
@@ -13959,7 +13959,7 @@ type TaobaoWlbWmsStockOutOrderNotifyResponse struct {
     
 }
 
-// CainiaoWaybillIiGetRequest 菜鸟电子面单的云打印申请电子面单号的方法
+/* CainiaoWaybillIiGetRequest 菜鸟电子面单的云打印申请电子面单号的方法 */
 type CainiaoWaybillIiGetRequest struct {
     
     /* param_waybill_cloud_print_apply_new_request required入参信息 */
@@ -13971,7 +13971,7 @@ func (req *CainiaoWaybillIiGetRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.get"
 }
 
-// CainiaoWaybillIiGetResponse 菜鸟电子面单的云打印申请电子面单号的方法
+/* CainiaoWaybillIiGetResponse 菜鸟电子面单的云打印申请电子面单号的方法 */
 type CainiaoWaybillIiGetResponse struct {
     
     /* modules Object Array系统自动生成 */
@@ -13979,7 +13979,7 @@ type CainiaoWaybillIiGetResponse struct {
     
 }
 
-// TaobaoWlbWmsConsignOrderNotifyRequest 发货订单通知
+/* TaobaoWlbWmsConsignOrderNotifyRequest 发货订单通知 */
 type TaobaoWlbWmsConsignOrderNotifyRequest struct {
     
     /* alipay_no optional废弃，支付宝交易号 */
@@ -14090,7 +14090,7 @@ func (req *TaobaoWlbWmsConsignOrderNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.consign.order.notify"
 }
 
-// TaobaoWlbWmsConsignOrderNotifyResponse 发货订单通知
+/* TaobaoWlbWmsConsignOrderNotifyResponse 发货订单通知 */
 type TaobaoWlbWmsConsignOrderNotifyResponse struct {
     
     /* consign_order_list Object Array系统自动生成 */
@@ -14110,7 +14110,7 @@ type TaobaoWlbWmsConsignOrderNotifyResponse struct {
     
 }
 
-// CainiaoWaybillIiUpdateRequest 商家更新电子面单号对应的面单信息。
+/* CainiaoWaybillIiUpdateRequest 商家更新电子面单号对应的面单信息。 */
 type CainiaoWaybillIiUpdateRequest struct {
     
     /* param_waybill_cloud_print_update_request required更新请求信息 */
@@ -14122,7 +14122,7 @@ func (req *CainiaoWaybillIiUpdateRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.update"
 }
 
-// CainiaoWaybillIiUpdateResponse 商家更新电子面单号对应的面单信息。
+/* CainiaoWaybillIiUpdateResponse 商家更新电子面单号对应的面单信息。 */
 type CainiaoWaybillIiUpdateResponse struct {
     
     /* print_data Basic模板内容 */
@@ -14133,7 +14133,7 @@ type CainiaoWaybillIiUpdateResponse struct {
     
 }
 
-// TaobaoWlbWmsOrderCancelNotifyRequest 单据取消接口
+/* TaobaoWlbWmsOrderCancelNotifyRequest 单据取消接口 */
 type TaobaoWlbWmsOrderCancelNotifyRequest struct {
     
     /* order_code required订单类型 */
@@ -14151,7 +14151,7 @@ func (req *TaobaoWlbWmsOrderCancelNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.order.cancel.notify"
 }
 
-// TaobaoWlbWmsOrderCancelNotifyResponse 单据取消接口
+/* TaobaoWlbWmsOrderCancelNotifyResponse 单据取消接口 */
 type TaobaoWlbWmsOrderCancelNotifyResponse struct {
     
     /* wl_error_code Basic错误编码 */
@@ -14165,7 +14165,7 @@ type TaobaoWlbWmsOrderCancelNotifyResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopOrderTrackingNewRequest 用于合作公司通知入站、出站信息到菜鸟，共定义了5个操作，1个投件操作，3个取件操作，1个超时提醒。
+/* CainiaoEndpointLockerTopOrderTrackingNewRequest 用于合作公司通知入站、出站信息到菜鸟，共定义了5个操作，1个投件操作，3个取件操作，1个超时提醒。 */
 type CainiaoEndpointLockerTopOrderTrackingNewRequest struct {
     
     /* track_info required回传信息 */
@@ -14177,7 +14177,7 @@ func (req *CainiaoEndpointLockerTopOrderTrackingNewRequest) GetAPIName() string 
 	return "cainiao.endpoint.locker.top.order.tracking.new"
 }
 
-// CainiaoEndpointLockerTopOrderTrackingNewResponse 用于合作公司通知入站、出站信息到菜鸟，共定义了5个操作，1个投件操作，3个取件操作，1个超时提醒。
+/* CainiaoEndpointLockerTopOrderTrackingNewResponse 用于合作公司通知入站、出站信息到菜鸟，共定义了5个操作，1个投件操作，3个取件操作，1个超时提醒。 */
 type CainiaoEndpointLockerTopOrderTrackingNewResponse struct {
     
     /* result Objectresult */
@@ -14185,7 +14185,7 @@ type CainiaoEndpointLockerTopOrderTrackingNewResponse struct {
     
 }
 
-// TaobaoQimenEntryorderQueryRequest ERP调用接口，查询入库单信息;
+/* TaobaoQimenEntryorderQueryRequest ERP调用接口，查询入库单信息; */
 type TaobaoQimenEntryorderQueryRequest struct {
     
     /* entryOrderCode required入库单编码 */
@@ -14224,7 +14224,7 @@ func (req *TaobaoQimenEntryorderQueryRequest) GetAPIName() string {
 	return "taobao.qimen.entryorder.query"
 }
 
-// TaobaoQimenEntryorderQueryResponse ERP调用接口，查询入库单信息;
+/* TaobaoQimenEntryorderQueryResponse ERP调用接口，查询入库单信息; */
 type TaobaoQimenEntryorderQueryResponse struct {
     
     /* code Basic响应码 */
@@ -14247,7 +14247,7 @@ type TaobaoQimenEntryorderQueryResponse struct {
     
 }
 
-// TmallExchangeGetRequest 获取单笔换货详情
+/* TmallExchangeGetRequest 获取单笔换货详情 */
 type TmallExchangeGetRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -14262,7 +14262,7 @@ func (req *TmallExchangeGetRequest) GetAPIName() string {
 	return "tmall.exchange.get"
 }
 
-// TmallExchangeGetResponse 获取单笔换货详情
+/* TmallExchangeGetResponse 获取单笔换货详情 */
 type TmallExchangeGetResponse struct {
     
     /* result Object返回结果 */
@@ -14270,7 +14270,7 @@ type TmallExchangeGetResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderQueryRequest ERP调用奇门的发货单查询接口，查询发货单详情
+/* TaobaoQimenDeliveryorderQueryRequest ERP调用奇门的发货单查询接口，查询发货单详情 */
 type TaobaoQimenDeliveryorderQueryRequest struct {
     
     /* deliveryOrderCode optional奇门仓储字段,说明,string(50),, */
@@ -14315,7 +14315,7 @@ func (req *TaobaoQimenDeliveryorderQueryRequest) GetAPIName() string {
 	return "taobao.qimen.deliveryorder.query"
 }
 
-// TaobaoQimenDeliveryorderQueryResponse ERP调用奇门的发货单查询接口，查询发货单详情
+/* TaobaoQimenDeliveryorderQueryResponse ERP调用奇门的发货单查询接口，查询发货单详情 */
 type TaobaoQimenDeliveryorderQueryResponse struct {
     
     /* code Basic响应码 */
@@ -14341,7 +14341,7 @@ type TaobaoQimenDeliveryorderQueryResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopOrderNoticeRequest 合作公司对订单手动触发短信，有次数限制
+/* CainiaoEndpointLockerTopOrderNoticeRequest 合作公司对订单手动触发短信，有次数限制 */
 type CainiaoEndpointLockerTopOrderNoticeRequest struct {
     
     /* mail_no required运单号 */
@@ -14362,7 +14362,7 @@ func (req *CainiaoEndpointLockerTopOrderNoticeRequest) GetAPIName() string {
 	return "cainiao.endpoint.locker.top.order.notice"
 }
 
-// CainiaoEndpointLockerTopOrderNoticeResponse 合作公司对订单手动触发短信，有次数限制
+/* CainiaoEndpointLockerTopOrderNoticeResponse 合作公司对订单手动触发短信，有次数限制 */
 type CainiaoEndpointLockerTopOrderNoticeResponse struct {
     
     /* result Objectresult */
@@ -14370,7 +14370,7 @@ type CainiaoEndpointLockerTopOrderNoticeResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopOrderNoticesendQueryRequest 合作公司查询消息发送的接口，判断是否裹裹发送消息
+/* CainiaoEndpointLockerTopOrderNoticesendQueryRequest 合作公司查询消息发送的接口，判断是否裹裹发送消息 */
 type CainiaoEndpointLockerTopOrderNoticesendQueryRequest struct {
     
     /* getter_phone optional收件人手机号 */
@@ -14388,7 +14388,7 @@ func (req *CainiaoEndpointLockerTopOrderNoticesendQueryRequest) GetAPIName() str
 	return "cainiao.endpoint.locker.top.order.noticesend.query"
 }
 
-// CainiaoEndpointLockerTopOrderNoticesendQueryResponse 合作公司查询消息发送的接口，判断是否裹裹发送消息
+/* CainiaoEndpointLockerTopOrderNoticesendQueryResponse 合作公司查询消息发送的接口，判断是否裹裹发送消息 */
 type CainiaoEndpointLockerTopOrderNoticesendQueryResponse struct {
     
     /* result Object返回结果 */
@@ -14396,7 +14396,7 @@ type CainiaoEndpointLockerTopOrderNoticesendQueryResponse struct {
     
 }
 
-// TmallExchangeReturngoodsAgreeRequest 卖家确认收货
+/* TmallExchangeReturngoodsAgreeRequest 卖家确认收货 */
 type TmallExchangeReturngoodsAgreeRequest struct {
     
     /* dispute_id required换货单号ID */
@@ -14411,7 +14411,7 @@ func (req *TmallExchangeReturngoodsAgreeRequest) GetAPIName() string {
 	return "tmall.exchange.returngoods.agree"
 }
 
-// TmallExchangeReturngoodsAgreeResponse 卖家确认收货
+/* TmallExchangeReturngoodsAgreeResponse 卖家确认收货 */
 type TmallExchangeReturngoodsAgreeResponse struct {
     
     /* result Object返回结果 */
@@ -14419,7 +14419,7 @@ type TmallExchangeReturngoodsAgreeResponse struct {
     
 }
 
-// CainiaoCntmsLogisticsOrderConsignRequest 商家包装打印面单结束后，通知菜鸟包裹要发货
+/* CainiaoCntmsLogisticsOrderConsignRequest 商家包装打印面单结束后，通知菜鸟包裹要发货 */
 type CainiaoCntmsLogisticsOrderConsignRequest struct {
     
     /* content optional配送发货信息 */
@@ -14431,7 +14431,7 @@ func (req *CainiaoCntmsLogisticsOrderConsignRequest) GetAPIName() string {
 	return "cainiao.cntms.logistics.order.consign"
 }
 
-// CainiaoCntmsLogisticsOrderConsignResponse 商家包装打印面单结束后，通知菜鸟包裹要发货
+/* CainiaoCntmsLogisticsOrderConsignResponse 商家包装打印面单结束后，通知菜鸟包裹要发货 */
 type CainiaoCntmsLogisticsOrderConsignResponse struct {
     
     /* logistics_order_code Basic物流单号 */
@@ -14439,7 +14439,7 @@ type CainiaoCntmsLogisticsOrderConsignResponse struct {
     
 }
 
-// TmallExchangeReceiveGetRequest 卖家查询换货列表
+/* TmallExchangeReceiveGetRequest 卖家查询换货列表 */
 type TmallExchangeReceiveGetRequest struct {
     
     /* biz_order_id optional正向订单号 */
@@ -14487,7 +14487,7 @@ func (req *TmallExchangeReceiveGetRequest) GetAPIName() string {
 	return "tmall.exchange.receive.get"
 }
 
-// TmallExchangeReceiveGetResponse 卖家查询换货列表
+/* TmallExchangeReceiveGetResponse 卖家查询换货列表 */
 type TmallExchangeReceiveGetResponse struct {
     
     /* error_codes Basic错误码 */
@@ -14513,7 +14513,7 @@ type TmallExchangeReceiveGetResponse struct {
     
 }
 
-// CainiaoCntmsMailnoGetRequest 打印面单时，通过此接口获取面单号及打打印信息
+/* CainiaoCntmsMailnoGetRequest 打印面单时，通过此接口获取面单号及打打印信息 */
 type CainiaoCntmsMailnoGetRequest struct {
     
     /* content optional获取菜鸟配送电子面单请求参数 */
@@ -14525,7 +14525,7 @@ func (req *CainiaoCntmsMailnoGetRequest) GetAPIName() string {
 	return "cainiao.cntms.mailno.get"
 }
 
-// CainiaoCntmsMailnoGetResponse 打印面单时，通过此接口获取面单号及打打印信息
+/* CainiaoCntmsMailnoGetResponse 打印面单时，通过此接口获取面单号及打打印信息 */
 type CainiaoCntmsMailnoGetResponse struct {
     
     /* allocator_code Basic揽货商（分拨中心）编码 */
@@ -14564,8 +14564,8 @@ type CainiaoCntmsMailnoGetResponse struct {
     
 }
 
-// TaobaoLocationRelationQueryRequest 地点关联关系查询 
-门店和仓库关联关系查询
+/* TaobaoLocationRelationQueryRequest 地点关联关系查询 
+门店和仓库关联关系查询 */
 type TaobaoLocationRelationQueryRequest struct {
     
     /* location_relation required关系查询 */
@@ -14577,8 +14577,8 @@ func (req *TaobaoLocationRelationQueryRequest) GetAPIName() string {
 	return "taobao.location.relation.query"
 }
 
-// TaobaoLocationRelationQueryResponse 地点关联关系查询 
-门店和仓库关联关系查询
+/* TaobaoLocationRelationQueryResponse 地点关联关系查询 
+门店和仓库关联关系查询 */
 type TaobaoLocationRelationQueryResponse struct {
     
     /* result Objectresult */
@@ -14586,7 +14586,7 @@ type TaobaoLocationRelationQueryResponse struct {
     
 }
 
-// TaobaoLocationRelationEditRequest 地点关联关系增量编辑
+/* TaobaoLocationRelationEditRequest 地点关联关系增量编辑 */
 type TaobaoLocationRelationEditRequest struct {
     
     /* location_relation_list required关系对象列表 */
@@ -14598,7 +14598,7 @@ func (req *TaobaoLocationRelationEditRequest) GetAPIName() string {
 	return "taobao.location.relation.edit"
 }
 
-// TaobaoLocationRelationEditResponse 地点关联关系增量编辑
+/* TaobaoLocationRelationEditResponse 地点关联关系增量编辑 */
 type TaobaoLocationRelationEditResponse struct {
     
     /* error_msg Basic错误信息 */
@@ -14612,7 +14612,7 @@ type TaobaoLocationRelationEditResponse struct {
     
 }
 
-// CainiaoCloudprintCmdprintRenderRequest isv 进行无线打印，需要将渲染数据传给打印机，通过生成打印机命令的方式能够最大限度的减少移动设备和打印机之间通信数据量。
+/* CainiaoCloudprintCmdprintRenderRequest isv 进行无线打印，需要将渲染数据传给打印机，通过生成打印机命令的方式能够最大限度的减少移动设备和打印机之间通信数据量。 */
 type CainiaoCloudprintCmdprintRenderRequest struct {
     
     /* params required参数对象 */
@@ -14624,7 +14624,7 @@ func (req *CainiaoCloudprintCmdprintRenderRequest) GetAPIName() string {
 	return "cainiao.cloudprint.cmdprint.render"
 }
 
-// CainiaoCloudprintCmdprintRenderResponse isv 进行无线打印，需要将渲染数据传给打印机，通过生成打印机命令的方式能够最大限度的减少移动设备和打印机之间通信数据量。
+/* CainiaoCloudprintCmdprintRenderResponse isv 进行无线打印，需要将渲染数据传给打印机，通过生成打印机命令的方式能够最大限度的减少移动设备和打印机之间通信数据量。 */
 type CainiaoCloudprintCmdprintRenderResponse struct {
     
     /* cmd_content Basic指令集内容串 */
@@ -14641,7 +14641,7 @@ type CainiaoCloudprintCmdprintRenderResponse struct {
     
 }
 
-// TaobaoWlbWmsReturnBillGetRequest 通过订单号获取单个销退单收货信息。
+/* TaobaoWlbWmsReturnBillGetRequest 通过订单号获取单个销退单收货信息。 */
 type TaobaoWlbWmsReturnBillGetRequest struct {
     
     /* cn_order_code special菜鸟订单编码，查询单个订单时orderCode与cnOrderCode必须有一个参数值不为空，两个参数都赋值时，以cnOrderCode值检索数据 */
@@ -14656,7 +14656,7 @@ func (req *TaobaoWlbWmsReturnBillGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.return.bill.get"
 }
 
-// TaobaoWlbWmsReturnBillGetResponse 通过订单号获取单个销退单收货信息。
+/* TaobaoWlbWmsReturnBillGetResponse 通过订单号获取单个销退单收货信息。 */
 type TaobaoWlbWmsReturnBillGetResponse struct {
     
     /* return_order_info Object回退订单信息 */
@@ -14664,7 +14664,7 @@ type TaobaoWlbWmsReturnBillGetResponse struct {
     
 }
 
-// TaobaoWlbWmsStockInBillGetRequest 获取入库单信息
+/* TaobaoWlbWmsStockInBillGetRequest 获取入库单信息 */
 type TaobaoWlbWmsStockInBillGetRequest struct {
     
     /* cn_order_code special菜鸟订单编码，查询单个订单时orderCode与cnOrderCode必须有一个参数值不为空，两个参数都赋值时，以cnOrderCode值检索数据 */
@@ -14679,7 +14679,7 @@ func (req *TaobaoWlbWmsStockInBillGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.stock.in.bill.get"
 }
 
-// TaobaoWlbWmsStockInBillGetResponse 获取入库单信息
+/* TaobaoWlbWmsStockInBillGetResponse 获取入库单信息 */
 type TaobaoWlbWmsStockInBillGetResponse struct {
     
     /* stock_in_info Object入库单信息 */
@@ -14687,7 +14687,7 @@ type TaobaoWlbWmsStockInBillGetResponse struct {
     
 }
 
-// TaobaoOcTradesBytagGetRequest 根据标签查询订单编号
+/* TaobaoOcTradesBytagGetRequest 根据标签查询订单编号 */
 type TaobaoOcTradesBytagGetRequest struct {
     
     /* page optional当前页 */
@@ -14708,7 +14708,7 @@ func (req *TaobaoOcTradesBytagGetRequest) GetAPIName() string {
 	return "taobao.oc.trades.bytag.get"
 }
 
-// TaobaoOcTradesBytagGetResponse 根据标签查询订单编号
+/* TaobaoOcTradesBytagGetResponse 根据标签查询订单编号 */
 type TaobaoOcTradesBytagGetResponse struct {
     
     /* tids Basic Array打了该标签的订单编号列表 */
@@ -14719,11 +14719,11 @@ type TaobaoOcTradesBytagGetResponse struct {
     
 }
 
-// TaobaoOcTradetagAttachRequest 对订单添加标签和更新标签。标签分为官方标签和自定义标签。
+/* TaobaoOcTradetagAttachRequest 对订单添加标签和更新标签。标签分为官方标签和自定义标签。
 官方标签目前有:赠品,电子发票,收货地址变更,预售。具体格式说明请看http://open.taobao.com/doc/detail.htm?id=102731
 自定义标签有2个通用属性:
     `show_str:给消费者显示的字符串（如果可以显示的话）
-    `pic_urls:图片url,地址必须是图片空间的url,最多5张
+    `pic_urls:图片url,地址必须是图片空间的url,最多5张 */
 type TaobaoOcTradetagAttachRequest struct {
     
     /* tag_name required标签名称 */
@@ -14747,11 +14747,11 @@ func (req *TaobaoOcTradetagAttachRequest) GetAPIName() string {
 	return "taobao.oc.tradetag.attach"
 }
 
-// TaobaoOcTradetagAttachResponse 对订单添加标签和更新标签。标签分为官方标签和自定义标签。
+/* TaobaoOcTradetagAttachResponse 对订单添加标签和更新标签。标签分为官方标签和自定义标签。
 官方标签目前有:赠品,电子发票,收货地址变更,预售。具体格式说明请看http://open.taobao.com/doc/detail.htm?id=102731
 自定义标签有2个通用属性:
     `show_str:给消费者显示的字符串（如果可以显示的话）
-    `pic_urls:图片url,地址必须是图片空间的url,最多5张
+    `pic_urls:图片url,地址必须是图片空间的url,最多5张 */
 type TaobaoOcTradetagAttachResponse struct {
     
     /* result Basic操作成功或者操作失败 */
@@ -14759,7 +14759,7 @@ type TaobaoOcTradetagAttachResponse struct {
     
 }
 
-// TaobaoWlbOrderdetailDateGetRequest 外部ERP可通过该接口查询一段时间内的物流宝订单，以及订单详情
+/* TaobaoWlbOrderdetailDateGetRequest 外部ERP可通过该接口查询一段时间内的物流宝订单，以及订单详情 */
 type TaobaoWlbOrderdetailDateGetRequest struct {
     
     /* end_time required创建时间结束 */
@@ -14780,7 +14780,7 @@ func (req *TaobaoWlbOrderdetailDateGetRequest) GetAPIName() string {
 	return "taobao.wlb.orderdetail.date.get"
 }
 
-// TaobaoWlbOrderdetailDateGetResponse 外部ERP可通过该接口查询一段时间内的物流宝订单，以及订单详情
+/* TaobaoWlbOrderdetailDateGetResponse 外部ERP可通过该接口查询一段时间内的物流宝订单，以及订单详情 */
 type TaobaoWlbOrderdetailDateGetResponse struct {
     
     /* order_detail_list Object Array物流宝订单，并且包含订单详情 */
@@ -14791,10 +14791,10 @@ type TaobaoWlbOrderdetailDateGetResponse struct {
     
 }
 
-// TaobaoOcTradetagsGetRequest 根据订单查询订单标签。<br/>
+/* TaobaoOcTradetagsGetRequest 根据订单查询订单标签。<br/>
 返回的tag说明:1为官方标，2为自定义标，3为主站只读标签。<br/>
 官方标签和自定义标签请看taobao.oc.tradetag.attach 接口说明<br/>
-主站只读标签请看:http://open.taobao.com/doc/detail.htm?id=102865<br/>
+主站只读标签请看:http://open.taobao.com/doc/detail.htm?id=102865<br/> */
 type TaobaoOcTradetagsGetRequest struct {
     
     /* history optional是否查询历史标签 */
@@ -14815,10 +14815,10 @@ func (req *TaobaoOcTradetagsGetRequest) GetAPIName() string {
 	return "taobao.oc.tradetags.get"
 }
 
-// TaobaoOcTradetagsGetResponse 根据订单查询订单标签。<br/>
+/* TaobaoOcTradetagsGetResponse 根据订单查询订单标签。<br/>
 返回的tag说明:1为官方标，2为自定义标，3为主站只读标签。<br/>
 官方标签和自定义标签请看taobao.oc.tradetag.attach 接口说明<br/>
-主站只读标签请看:http://open.taobao.com/doc/detail.htm?id=102865<br/>
+主站只读标签请看:http://open.taobao.com/doc/detail.htm?id=102865<br/> */
 type TaobaoOcTradetagsGetResponse struct {
     
     /* trade_tags Object Array返回结果 */
@@ -14826,7 +14826,7 @@ type TaobaoOcTradetagsGetResponse struct {
     
 }
 
-// QimenTaobaoCrmOrderSyncRequest CRM对于会员数据分析需要基于会员的购买行为，购买什么商品，价格，是否退换，使用什么优惠以及会员基础信息等等。这些信息通过销售订单数据来获取。
+/* QimenTaobaoCrmOrderSyncRequest CRM对于会员数据分析需要基于会员的购买行为，购买什么商品，价格，是否退换，使用什么优惠以及会员基础信息等等。这些信息通过销售订单数据来获取。 */
 type QimenTaobaoCrmOrderSyncRequest struct {
     
     /* customerid requiredcustomerid */
@@ -14853,7 +14853,7 @@ func (req *QimenTaobaoCrmOrderSyncRequest) GetAPIName() string {
 	return "qimen.taobao.crm.order.sync"
 }
 
-// QimenTaobaoCrmOrderSyncResponse CRM对于会员数据分析需要基于会员的购买行为，购买什么商品，价格，是否退换，使用什么优惠以及会员基础信息等等。这些信息通过销售订单数据来获取。
+/* QimenTaobaoCrmOrderSyncResponse CRM对于会员数据分析需要基于会员的购买行为，购买什么商品，价格，是否退换，使用什么优惠以及会员基础信息等等。这些信息通过销售订单数据来获取。 */
 type QimenTaobaoCrmOrderSyncResponse struct {
     
     /* code Basic0成功(其他失败) */
@@ -14867,7 +14867,7 @@ type QimenTaobaoCrmOrderSyncResponse struct {
     
 }
 
-// CainiaoMerchantInventoryAdjustRequest 商家仓库存调整接口，目前仅支持全量更新
+/* CainiaoMerchantInventoryAdjustRequest 商家仓库存调整接口，目前仅支持全量更新 */
 type CainiaoMerchantInventoryAdjustRequest struct {
     
     /* adjust_request required商家仓编辑库存 */
@@ -14885,7 +14885,7 @@ func (req *CainiaoMerchantInventoryAdjustRequest) GetAPIName() string {
 	return "cainiao.merchant.inventory.adjust"
 }
 
-// CainiaoMerchantInventoryAdjustResponse 商家仓库存调整接口，目前仅支持全量更新
+/* CainiaoMerchantInventoryAdjustResponse 商家仓库存调整接口，目前仅支持全量更新 */
 type CainiaoMerchantInventoryAdjustResponse struct {
     
     /* result Objectresult */
@@ -14893,7 +14893,7 @@ type CainiaoMerchantInventoryAdjustResponse struct {
     
 }
 
-// TaobaoWlbWmsCainiaoBillQueryRequest 查询单据列表
+/* TaobaoWlbWmsCainiaoBillQueryRequest 查询单据列表 */
 type TaobaoWlbWmsCainiaoBillQueryRequest struct {
     
     /* end_modified_time required起始时间，此字段检索订单最后修改时间， 格式 yyyy-MM-dd HH:mm:ss。 */
@@ -14917,7 +14917,7 @@ func (req *TaobaoWlbWmsCainiaoBillQueryRequest) GetAPIName() string {
 	return "taobao.wlb.wms.cainiao.bill.query"
 }
 
-// TaobaoWlbWmsCainiaoBillQueryResponse 查询单据列表
+/* TaobaoWlbWmsCainiaoBillQueryResponse 查询单据列表 */
 type TaobaoWlbWmsCainiaoBillQueryResponse struct {
     
     /* order_info_list Object Array订单列表信息 */
@@ -14928,7 +14928,7 @@ type TaobaoWlbWmsCainiaoBillQueryResponse struct {
     
 }
 
-// CainiaoWaybillIiCancelRequest 面单号有误需要取消的时候，调用该接口取消获取的电子面单。
+/* CainiaoWaybillIiCancelRequest 面单号有误需要取消的时候，调用该接口取消获取的电子面单。 */
 type CainiaoWaybillIiCancelRequest struct {
     
     /* cp_code required快递公司code */
@@ -14943,7 +14943,7 @@ func (req *CainiaoWaybillIiCancelRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.cancel"
 }
 
-// CainiaoWaybillIiCancelResponse 面单号有误需要取消的时候，调用该接口取消获取的电子面单。
+/* CainiaoWaybillIiCancelResponse 面单号有误需要取消的时候，调用该接口取消获取的电子面单。 */
 type CainiaoWaybillIiCancelResponse struct {
     
     /* cancel_result Basic调用取消是否成功 */
@@ -14951,7 +14951,7 @@ type CainiaoWaybillIiCancelResponse struct {
     
 }
 
-// CainiaoWaybillIiProductRequest 商家可以查询物流商的产品类型和服务能力。
+/* CainiaoWaybillIiProductRequest 商家可以查询物流商的产品类型和服务能力。 */
 type CainiaoWaybillIiProductRequest struct {
     
     /* cp_code required快递公司code */
@@ -14963,7 +14963,7 @@ func (req *CainiaoWaybillIiProductRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.product"
 }
 
-// CainiaoWaybillIiProductResponse 商家可以查询物流商的产品类型和服务能力。
+/* CainiaoWaybillIiProductResponse 商家可以查询物流商的产品类型和服务能力。 */
 type CainiaoWaybillIiProductResponse struct {
     
     /* product_types Object Array返回值 */
@@ -14971,7 +14971,7 @@ type CainiaoWaybillIiProductResponse struct {
     
 }
 
-// TaobaoRdcAligeniusAccountValidateRequest 提供应对接AG的erp系统查询其旗下的商家是否为AG商家
+/* TaobaoRdcAligeniusAccountValidateRequest 提供应对接AG的erp系统查询其旗下的商家是否为AG商家 */
 type TaobaoRdcAligeniusAccountValidateRequest struct {
     
 }
@@ -14980,7 +14980,7 @@ func (req *TaobaoRdcAligeniusAccountValidateRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.account.validate"
 }
 
-// TaobaoRdcAligeniusAccountValidateResponse 提供应对接AG的erp系统查询其旗下的商家是否为AG商家
+/* TaobaoRdcAligeniusAccountValidateResponse 提供应对接AG的erp系统查询其旗下的商家是否为AG商家 */
 type TaobaoRdcAligeniusAccountValidateResponse struct {
     
     /* result Objectresult */
@@ -14988,7 +14988,7 @@ type TaobaoRdcAligeniusAccountValidateResponse struct {
     
 }
 
-// TaobaoWlbWmsInventoryProfitlossGetRequest 通过订单列表批量获取库存损益单信息
+/* TaobaoWlbWmsInventoryProfitlossGetRequest 通过订单列表批量获取库存损益单信息 */
 type TaobaoWlbWmsInventoryProfitlossGetRequest struct {
     
     /* cn_order_code required菜鸟订单编码 */
@@ -15000,7 +15000,7 @@ func (req *TaobaoWlbWmsInventoryProfitlossGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.inventory.profitloss.get"
 }
 
-// TaobaoWlbWmsInventoryProfitlossGetResponse 通过订单列表批量获取库存损益单信息
+/* TaobaoWlbWmsInventoryProfitlossGetResponse 通过订单列表批量获取库存损益单信息 */
 type TaobaoWlbWmsInventoryProfitlossGetResponse struct {
     
     /* profit_loss_info Object损益信息 */
@@ -15008,7 +15008,7 @@ type TaobaoWlbWmsInventoryProfitlossGetResponse struct {
     
 }
 
-// CainiaoCloudprintMystdtemplatesGetRequest 获取用户使用的菜鸟电子面单
+/* CainiaoCloudprintMystdtemplatesGetRequest 获取用户使用的菜鸟电子面单 */
 type CainiaoCloudprintMystdtemplatesGetRequest struct {
     
 }
@@ -15017,7 +15017,7 @@ func (req *CainiaoCloudprintMystdtemplatesGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.mystdtemplates.get"
 }
 
-// CainiaoCloudprintMystdtemplatesGetResponse 获取用户使用的菜鸟电子面单
+/* CainiaoCloudprintMystdtemplatesGetResponse 获取用户使用的菜鸟电子面单 */
 type CainiaoCloudprintMystdtemplatesGetResponse struct {
     
     /* result Object返回结果 */
@@ -15025,7 +15025,7 @@ type CainiaoCloudprintMystdtemplatesGetResponse struct {
     
 }
 
-// TaobaoWlbWmsConsignBillGetRequest 获取销售订单发货信息
+/* TaobaoWlbWmsConsignBillGetRequest 获取销售订单发货信息 */
 type TaobaoWlbWmsConsignBillGetRequest struct {
     
     /* cn_order_code special菜鸟订单编码,cnOrderCode与orderCode必须有一个值不可为空 */
@@ -15040,7 +15040,7 @@ func (req *TaobaoWlbWmsConsignBillGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.consign.bill.get"
 }
 
-// TaobaoWlbWmsConsignBillGetResponse 获取销售订单发货信息
+/* TaobaoWlbWmsConsignBillGetResponse 获取销售订单发货信息 */
 type TaobaoWlbWmsConsignBillGetResponse struct {
     
     /* consign_send_info_list Object Array商品信息列表 */
@@ -15048,7 +15048,7 @@ type TaobaoWlbWmsConsignBillGetResponse struct {
     
 }
 
-// TaobaoWlbWmsStockOutBillGetRequest 通过订单号获取单个出库单发货信息
+/* TaobaoWlbWmsStockOutBillGetRequest 通过订单号获取单个出库单发货信息 */
 type TaobaoWlbWmsStockOutBillGetRequest struct {
     
     /* cn_order_code special菜鸟订单编码，查询单个订单时orderCode与cnOrderCode必须有一个参数值不为空，两个参数都赋值时，以cnOrderCode值检索数据 */
@@ -15063,7 +15063,7 @@ func (req *TaobaoWlbWmsStockOutBillGetRequest) GetAPIName() string {
 	return "taobao.wlb.wms.stock.out.bill.get"
 }
 
-// TaobaoWlbWmsStockOutBillGetResponse 通过订单号获取单个出库单发货信息
+/* TaobaoWlbWmsStockOutBillGetResponse 通过订单号获取单个出库单发货信息 */
 type TaobaoWlbWmsStockOutBillGetResponse struct {
     
     /* stock_out_info Object出库信息 */
@@ -15071,7 +15071,7 @@ type TaobaoWlbWmsStockOutBillGetResponse struct {
     
 }
 
-// CainiaoCloudprintStdtemplatesGetRequest 获取菜鸟标准电子面单模板
+/* CainiaoCloudprintStdtemplatesGetRequest 获取菜鸟标准电子面单模板 */
 type CainiaoCloudprintStdtemplatesGetRequest struct {
     
 }
@@ -15080,7 +15080,7 @@ func (req *CainiaoCloudprintStdtemplatesGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.stdtemplates.get"
 }
 
-// CainiaoCloudprintStdtemplatesGetResponse 获取菜鸟标准电子面单模板
+/* CainiaoCloudprintStdtemplatesGetResponse 获取菜鸟标准电子面单模板 */
 type CainiaoCloudprintStdtemplatesGetResponse struct {
     
     /* result Object结果集 */
@@ -15088,7 +15088,7 @@ type CainiaoCloudprintStdtemplatesGetResponse struct {
     
 }
 
-// TaobaoWangwangClientidBindRequest 绑定nick和客户端id
+/* TaobaoWangwangClientidBindRequest 绑定nick和客户端id */
 type TaobaoWangwangClientidBindRequest struct {
     
     /* app_name required应用名 */
@@ -15103,7 +15103,7 @@ func (req *TaobaoWangwangClientidBindRequest) GetAPIName() string {
 	return "taobao.wangwang.clientid.bind"
 }
 
-// TaobaoWangwangClientidBindResponse 绑定nick和客户端id
+/* TaobaoWangwangClientidBindResponse 绑定nick和客户端id */
 type TaobaoWangwangClientidBindResponse struct {
     
     /* result Basic0:表示成功
@@ -15112,7 +15112,7 @@ type TaobaoWangwangClientidBindResponse struct {
     
 }
 
-// TaobaoWangwangClientidUnbindRequest 解除账号和客户端Id的绑定
+/* TaobaoWangwangClientidUnbindRequest 解除账号和客户端Id的绑定 */
 type TaobaoWangwangClientidUnbindRequest struct {
     
     /* app_name required应用名 */
@@ -15127,7 +15127,7 @@ func (req *TaobaoWangwangClientidUnbindRequest) GetAPIName() string {
 	return "taobao.wangwang.clientid.unbind"
 }
 
-// TaobaoWangwangClientidUnbindResponse 解除账号和客户端Id的绑定
+/* TaobaoWangwangClientidUnbindResponse 解除账号和客户端Id的绑定 */
 type TaobaoWangwangClientidUnbindResponse struct {
     
     /* result Basic返回0表示成功， 其他值为错误 */
@@ -15135,7 +15135,7 @@ type TaobaoWangwangClientidUnbindResponse struct {
     
 }
 
-// TaobaoWlbWmsStockInOrderNotifyRequest 入库通知单
+/* TaobaoWlbWmsStockInOrderNotifyRequest 入库通知单 */
 type TaobaoWlbWmsStockInOrderNotifyRequest struct {
     
     /* expect_end_time optional预期送达结束时间 */
@@ -15204,7 +15204,7 @@ func (req *TaobaoWlbWmsStockInOrderNotifyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.stock.in.order.notify"
 }
 
-// TaobaoWlbWmsStockInOrderNotifyResponse 入库通知单
+/* TaobaoWlbWmsStockInOrderNotifyResponse 入库通知单 */
 type TaobaoWlbWmsStockInOrderNotifyResponse struct {
     
     /* order_code Basic仓储订单编码 */
@@ -15221,7 +15221,7 @@ type TaobaoWlbWmsStockInOrderNotifyResponse struct {
     
 }
 
-// TaobaoWlbWmsInventoryCountRequest 损益单回传
+/* TaobaoWlbWmsInventoryCountRequest 损益单回传 */
 type TaobaoWlbWmsInventoryCountRequest struct {
     
     /* content optional损益单回传信息 */
@@ -15233,7 +15233,7 @@ func (req *TaobaoWlbWmsInventoryCountRequest) GetAPIName() string {
 	return "taobao.wlb.wms.inventory.count"
 }
 
-// TaobaoWlbWmsInventoryCountResponse 损益单回传
+/* TaobaoWlbWmsInventoryCountResponse 损益单回传 */
 type TaobaoWlbWmsInventoryCountResponse struct {
     
     /* result Objectresult */
@@ -15241,7 +15241,7 @@ type TaobaoWlbWmsInventoryCountResponse struct {
     
 }
 
-// AlipaySystemOauthTokenRequest OAuth2.0 授权的第二步，换取访问令牌。
+/* AlipaySystemOauthTokenRequest OAuth2.0 授权的第二步，换取访问令牌。 */
 type AlipaySystemOauthTokenRequest struct {
     
     /* code optional授权码，用户对应用授权后得到。 */
@@ -15259,7 +15259,7 @@ func (req *AlipaySystemOauthTokenRequest) GetAPIName() string {
 	return "alipay.system.oauth.token"
 }
 
-// AlipaySystemOauthTokenResponse OAuth2.0 授权的第二步，换取访问令牌。
+/* AlipaySystemOauthTokenResponse OAuth2.0 授权的第二步，换取访问令牌。 */
 type AlipaySystemOauthTokenResponse struct {
     
     /* access_token Basic访问令牌 */
@@ -15279,7 +15279,7 @@ type AlipaySystemOauthTokenResponse struct {
     
 }
 
-// TaobaoOmniorderStoreDeliverconfigUpdateRequest 修改门店发货配置内容
+/* TaobaoOmniorderStoreDeliverconfigUpdateRequest 修改门店发货配置内容 */
 type TaobaoOmniorderStoreDeliverconfigUpdateRequest struct {
     
     /* store_deliver_config required卖家发货配置 */
@@ -15294,7 +15294,7 @@ func (req *TaobaoOmniorderStoreDeliverconfigUpdateRequest) GetAPIName() string {
 	return "taobao.omniorder.store.deliverconfig.update"
 }
 
-// TaobaoOmniorderStoreDeliverconfigUpdateResponse 修改门店发货配置内容
+/* TaobaoOmniorderStoreDeliverconfigUpdateResponse 修改门店发货配置内容 */
 type TaobaoOmniorderStoreDeliverconfigUpdateResponse struct {
     
     /* result Objectresult */
@@ -15302,7 +15302,7 @@ type TaobaoOmniorderStoreDeliverconfigUpdateResponse struct {
     
 }
 
-// QimenTaobaoUopTobDeliveryorderConfirmRequest 2B订单出库确认回传
+/* QimenTaobaoUopTobDeliveryorderConfirmRequest 2B订单出库确认回传 */
 type QimenTaobaoUopTobDeliveryorderConfirmRequest struct {
     
     /* customerId requiredcustomerId */
@@ -15317,7 +15317,7 @@ func (req *QimenTaobaoUopTobDeliveryorderConfirmRequest) GetAPIName() string {
 	return "qimen.taobao.uop.tob.deliveryorder.confirm"
 }
 
-// QimenTaobaoUopTobDeliveryorderConfirmResponse 2B订单出库确认回传
+/* QimenTaobaoUopTobDeliveryorderConfirmResponse 2B订单出库确认回传 */
 type QimenTaobaoUopTobDeliveryorderConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -15331,7 +15331,7 @@ type QimenTaobaoUopTobDeliveryorderConfirmResponse struct {
     
 }
 
-// TaobaoOmniorderStoreCollectconfigUpdateRequest 修改门店自提配置内容
+/* TaobaoOmniorderStoreCollectconfigUpdateRequest 修改门店自提配置内容 */
 type TaobaoOmniorderStoreCollectconfigUpdateRequest struct {
     
     /* store_collect_config required门店自提配置 */
@@ -15346,7 +15346,7 @@ func (req *TaobaoOmniorderStoreCollectconfigUpdateRequest) GetAPIName() string {
 	return "taobao.omniorder.store.collectconfig.update"
 }
 
-// TaobaoOmniorderStoreCollectconfigUpdateResponse 修改门店自提配置内容
+/* TaobaoOmniorderStoreCollectconfigUpdateResponse 修改门店自提配置内容 */
 type TaobaoOmniorderStoreCollectconfigUpdateResponse struct {
     
     /* result Objectresult */
@@ -15354,7 +15354,7 @@ type TaobaoOmniorderStoreCollectconfigUpdateResponse struct {
     
 }
 
-// TaobaoOmniorderStoreDeliverconfigGetRequest 查询门店发货配置内容
+/* TaobaoOmniorderStoreDeliverconfigGetRequest 查询门店发货配置内容 */
 type TaobaoOmniorderStoreDeliverconfigGetRequest struct {
     
     /* activity optional是否是活动期 */
@@ -15369,7 +15369,7 @@ func (req *TaobaoOmniorderStoreDeliverconfigGetRequest) GetAPIName() string {
 	return "taobao.omniorder.store.deliverconfig.get"
 }
 
-// TaobaoOmniorderStoreDeliverconfigGetResponse 查询门店发货配置内容
+/* TaobaoOmniorderStoreDeliverconfigGetResponse 查询门店发货配置内容 */
 type TaobaoOmniorderStoreDeliverconfigGetResponse struct {
     
     /* result Objectresult */
@@ -15377,7 +15377,7 @@ type TaobaoOmniorderStoreDeliverconfigGetResponse struct {
     
 }
 
-// CainiaoCloudprintCustomaresGetRequest 供isv使用，获取商家的自定义区的模板信息
+/* CainiaoCloudprintCustomaresGetRequest 供isv使用，获取商家的自定义区的模板信息 */
 type CainiaoCloudprintCustomaresGetRequest struct {
     
     /* template_id required用户使用的标准模板id */
@@ -15389,7 +15389,7 @@ func (req *CainiaoCloudprintCustomaresGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.customares.get"
 }
 
-// CainiaoCloudprintCustomaresGetResponse 供isv使用，获取商家的自定义区的模板信息
+/* CainiaoCloudprintCustomaresGetResponse 供isv使用，获取商家的自定义区的模板信息 */
 type CainiaoCloudprintCustomaresGetResponse struct {
     
     /* result Object结果 */
@@ -15397,7 +15397,7 @@ type CainiaoCloudprintCustomaresGetResponse struct {
     
 }
 
-// TaobaoWlbWmsInventoryLackUploadRequest 缺货通知
+/* TaobaoWlbWmsInventoryLackUploadRequest 缺货通知 */
 type TaobaoWlbWmsInventoryLackUploadRequest struct {
     
     /* content optional缺货通知信息 */
@@ -15409,7 +15409,7 @@ func (req *TaobaoWlbWmsInventoryLackUploadRequest) GetAPIName() string {
 	return "taobao.wlb.wms.inventory.lack.upload"
 }
 
-// TaobaoWlbWmsInventoryLackUploadResponse 缺货通知
+/* TaobaoWlbWmsInventoryLackUploadResponse 缺货通知 */
 type TaobaoWlbWmsInventoryLackUploadResponse struct {
     
     /* result Object缺货回告 */
@@ -15417,7 +15417,7 @@ type TaobaoWlbWmsInventoryLackUploadResponse struct {
     
 }
 
-// TaobaoOmniorderStoreCollectconfigGetRequest 查询门店自提配置内容
+/* TaobaoOmniorderStoreCollectconfigGetRequest 查询门店自提配置内容 */
 type TaobaoOmniorderStoreCollectconfigGetRequest struct {
     
     /* activity optional是否是活动期 */
@@ -15432,7 +15432,7 @@ func (req *TaobaoOmniorderStoreCollectconfigGetRequest) GetAPIName() string {
 	return "taobao.omniorder.store.collectconfig.get"
 }
 
-// TaobaoOmniorderStoreCollectconfigGetResponse 查询门店自提配置内容
+/* TaobaoOmniorderStoreCollectconfigGetResponse 查询门店自提配置内容 */
 type TaobaoOmniorderStoreCollectconfigGetResponse struct {
     
     /* result Objectresult */
@@ -15440,7 +15440,7 @@ type TaobaoOmniorderStoreCollectconfigGetResponse struct {
     
 }
 
-// TaobaoUserSellerGetRequest 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。
+/* TaobaoUserSellerGetRequest 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。 */
 type TaobaoUserSellerGetRequest struct {
     
     /* fields required需要返回的字段列表，可选值为返回示例值中的可以看到的字段 */
@@ -15452,7 +15452,7 @@ func (req *TaobaoUserSellerGetRequest) GetAPIName() string {
 	return "taobao.user.seller.get"
 }
 
-// TaobaoUserSellerGetResponse 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。
+/* TaobaoUserSellerGetResponse 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。 */
 type TaobaoUserSellerGetResponse struct {
     
     /* user Object用户信息 */
@@ -15460,7 +15460,7 @@ type TaobaoUserSellerGetResponse struct {
     
 }
 
-// TaobaoWlbWmsInventoryQueryRequest 支持按汇总（不分批次和渠道的总的库存数量）、渠道、批次三类方式查询商品实时库存
+/* TaobaoWlbWmsInventoryQueryRequest 支持按汇总（不分批次和渠道的总的库存数量）、渠道、批次三类方式查询商品实时库存 */
 type TaobaoWlbWmsInventoryQueryRequest struct {
     
     /* batch_code optional库存批次号，type=2时字段传值有效。 商品设置为批次管理时，商品产生批次库存。当商品为批次管理时，此字段不传值，返回所有批次库存信息。 */
@@ -15499,7 +15499,7 @@ func (req *TaobaoWlbWmsInventoryQueryRequest) GetAPIName() string {
 	return "taobao.wlb.wms.inventory.query"
 }
 
-// TaobaoWlbWmsInventoryQueryResponse 支持按汇总（不分批次和渠道的总的库存数量）、渠道、批次三类方式查询商品实时库存
+/* TaobaoWlbWmsInventoryQueryResponse 支持按汇总（不分批次和渠道的总的库存数量）、渠道、批次三类方式查询商品实时库存 */
 type TaobaoWlbWmsInventoryQueryResponse struct {
     
     /* item_list Object Array商品详情列表 */
@@ -15519,7 +15519,7 @@ type TaobaoWlbWmsInventoryQueryResponse struct {
     
 }
 
-// AlibabaEinvoicePaperPrintRequest 打印一张已开具成功的纸票
+/* AlibabaEinvoicePaperPrintRequest 打印一张已开具成功的纸票 */
 type AlibabaEinvoicePaperPrintRequest struct {
     
     /* dialog_setting_flag required打印框设置，0=不弹打印设置框，1=弹出打印设置框 */
@@ -15543,7 +15543,7 @@ func (req *AlibabaEinvoicePaperPrintRequest) GetAPIName() string {
 	return "alibaba.einvoice.paper.print"
 }
 
-// AlibabaEinvoicePaperPrintResponse 打印一张已开具成功的纸票
+/* AlibabaEinvoicePaperPrintResponse 打印一张已开具成功的纸票 */
 type AlibabaEinvoicePaperPrintResponse struct {
     
     /* is_success Basic调用结果，打印结果tmc消息alibaba_invoice_PaperOpsReturn异步通知 */
@@ -15551,7 +15551,7 @@ type AlibabaEinvoicePaperPrintResponse struct {
     
 }
 
-// TaobaoItemSellerGetRequest 获取单个商品的全部信息
+/* TaobaoItemSellerGetRequest 获取单个商品的全部信息 */
 type TaobaoItemSellerGetRequest struct {
     
     /* fields required需要返回的商品字段列表。可选值：Item商品结构体中所有字段均可返回，多个字段用“,”分隔。 */
@@ -15566,7 +15566,7 @@ func (req *TaobaoItemSellerGetRequest) GetAPIName() string {
 	return "taobao.item.seller.get"
 }
 
-// TaobaoItemSellerGetResponse 获取单个商品的全部信息
+/* TaobaoItemSellerGetResponse 获取单个商品的全部信息 */
 type TaobaoItemSellerGetResponse struct {
     
     /* item Object商品详细信息 */
@@ -15574,7 +15574,7 @@ type TaobaoItemSellerGetResponse struct {
     
 }
 
-// AlibabaEinvoicePaperInvalidRequest 作废一张已开具的纸票，开票日期在当月，产生逆向时作废即可，开票日期跨月则冲红蓝票
+/* AlibabaEinvoicePaperInvalidRequest 作废一张已开具的纸票，开票日期在当月，产生逆向时作废即可，开票日期跨月则冲红蓝票 */
 type AlibabaEinvoicePaperInvalidRequest struct {
     
     /* invalid_operator required作废操作人 */
@@ -15601,7 +15601,7 @@ func (req *AlibabaEinvoicePaperInvalidRequest) GetAPIName() string {
 	return "alibaba.einvoice.paper.invalid"
 }
 
-// AlibabaEinvoicePaperInvalidResponse 作废一张已开具的纸票，开票日期在当月，产生逆向时作废即可，开票日期跨月则冲红蓝票
+/* AlibabaEinvoicePaperInvalidResponse 作废一张已开具的纸票，开票日期在当月，产生逆向时作废即可，开票日期跨月则冲红蓝票 */
 type AlibabaEinvoicePaperInvalidResponse struct {
     
     /* is_success Basic接口调用是否成功，操作结果tmc异步返回alibaba_invoice_PaperOpsReturn */
@@ -15609,7 +15609,7 @@ type AlibabaEinvoicePaperInvalidResponse struct {
     
 }
 
-// TaobaoItemsSellerListGetRequest 批量获取商品详细信息
+/* TaobaoItemsSellerListGetRequest 批量获取商品详细信息 */
 type TaobaoItemsSellerListGetRequest struct {
     
     /* fields required需要返回的商品字段列表。可选值：点击返回结果中的Item结构体中能展示出来的所有字段，多个字段用“,”分隔。注：返回所有sku信息的字段名称是sku而不是skus。 */
@@ -15624,7 +15624,7 @@ func (req *TaobaoItemsSellerListGetRequest) GetAPIName() string {
 	return "taobao.items.seller.list.get"
 }
 
-// TaobaoItemsSellerListGetResponse 批量获取商品详细信息
+/* TaobaoItemsSellerListGetResponse 批量获取商品详细信息 */
 type TaobaoItemsSellerListGetResponse struct {
     
     /* items Object Array商品详细信息列表 */
@@ -15632,7 +15632,7 @@ type TaobaoItemsSellerListGetResponse struct {
     
 }
 
-// TaobaoQimenSnReportRequest WMS调用奇门的接口,在仓库出库单后, 把SN信息回传给ERP
+/* TaobaoQimenSnReportRequest WMS调用奇门的接口,在仓库出库单后, 把SN信息回传给ERP */
 type TaobaoQimenSnReportRequest struct {
     
     /* currentPage required当前页(从1开始) */
@@ -15659,7 +15659,7 @@ func (req *TaobaoQimenSnReportRequest) GetAPIName() string {
 	return "taobao.qimen.sn.report"
 }
 
-// TaobaoQimenSnReportResponse WMS调用奇门的接口,在仓库出库单后, 把SN信息回传给ERP
+/* TaobaoQimenSnReportResponse WMS调用奇门的接口,在仓库出库单后, 把SN信息回传给ERP */
 type TaobaoQimenSnReportResponse struct {
     
     /* code Basic响应码 */
@@ -15673,7 +15673,7 @@ type TaobaoQimenSnReportResponse struct {
     
 }
 
-// TaobaoTaeBookBillGetRequest tae查询单笔虚拟账户明细
+/* TaobaoTaeBookBillGetRequest tae查询单笔虚拟账户明细 */
 type TaobaoTaeBookBillGetRequest struct {
     
     /* account_id required虚拟账户科目编号 */
@@ -15694,7 +15694,7 @@ func (req *TaobaoTaeBookBillGetRequest) GetAPIName() string {
 	return "taobao.tae.book.bill.get"
 }
 
-// TaobaoTaeBookBillGetResponse tae查询单笔虚拟账户明细
+/* TaobaoTaeBookBillGetResponse tae查询单笔虚拟账户明细 */
 type TaobaoTaeBookBillGetResponse struct {
     
     /* bookbill Object虚拟账户账单 */
@@ -15702,7 +15702,7 @@ type TaobaoTaeBookBillGetResponse struct {
     
 }
 
-// TaobaoTaeBookBillsGetRequest tae查询虚拟账户明细数据
+/* TaobaoTaeBookBillsGetRequest tae查询虚拟账户明细数据 */
 type TaobaoTaeBookBillsGetRequest struct {
     
     /* account_id optional虚拟账户科目编号 */
@@ -15732,7 +15732,7 @@ func (req *TaobaoTaeBookBillsGetRequest) GetAPIName() string {
 	return "taobao.tae.book.bills.get"
 }
 
-// TaobaoTaeBookBillsGetResponse tae查询虚拟账户明细数据
+/* TaobaoTaeBookBillsGetResponse tae查询虚拟账户明细数据 */
 type TaobaoTaeBookBillsGetResponse struct {
     
     /* bills Object Array虚拟账户账单列表 */
@@ -15746,7 +15746,7 @@ type TaobaoTaeBookBillsGetResponse struct {
     
 }
 
-// TaobaoWlbOrderJzQueryRequest 家装业务查询物流公司api
+/* TaobaoWlbOrderJzQueryRequest 家装业务查询物流公司api */
 type TaobaoWlbOrderJzQueryRequest struct {
     
     /* ins_jz_receiver_t_o optional家装安装服务收货人信息 */
@@ -15767,7 +15767,7 @@ func (req *TaobaoWlbOrderJzQueryRequest) GetAPIName() string {
 	return "taobao.wlb.order.jz.query"
 }
 
-// TaobaoWlbOrderJzQueryResponse 家装业务查询物流公司api
+/* TaobaoWlbOrderJzQueryResponse 家装业务查询物流公司api */
 type TaobaoWlbOrderJzQueryResponse struct {
     
     /* result Object结果信息 */
@@ -15784,7 +15784,7 @@ type TaobaoWlbOrderJzQueryResponse struct {
     
 }
 
-// TaobaoRdcAligeniusWarehouseResendUpdateRequest 补发单状态回传接口
+/* TaobaoRdcAligeniusWarehouseResendUpdateRequest 补发单状态回传接口 */
 type TaobaoRdcAligeniusWarehouseResendUpdateRequest struct {
     
     /* param0 required参数 */
@@ -15796,7 +15796,7 @@ func (req *TaobaoRdcAligeniusWarehouseResendUpdateRequest) GetAPIName() string {
 	return "taobao.rdc.aligenius.warehouse.resend.update"
 }
 
-// TaobaoRdcAligeniusWarehouseResendUpdateResponse 补发单状态回传接口
+/* TaobaoRdcAligeniusWarehouseResendUpdateResponse 补发单状态回传接口 */
 type TaobaoRdcAligeniusWarehouseResendUpdateResponse struct {
     
     /* result Objectresult */
@@ -15804,7 +15804,7 @@ type TaobaoRdcAligeniusWarehouseResendUpdateResponse struct {
     
 }
 
-// TaobaoQimenOrderCancelRequest ERP调用奇门的接口,取消创建单据操作。场景介绍：ERP主动发起取消某些创建的单据。如入库单、出库单、退货单等；所有的场景
+/* TaobaoQimenOrderCancelRequest ERP调用奇门的接口,取消创建单据操作。场景介绍：ERP主动发起取消某些创建的单据。如入库单、出库单、退货单等；所有的场景 */
 type TaobaoQimenOrderCancelRequest struct {
     
     /* cancelReason optional取消原因 */
@@ -15837,7 +15837,7 @@ func (req *TaobaoQimenOrderCancelRequest) GetAPIName() string {
 	return "taobao.qimen.order.cancel"
 }
 
-// TaobaoQimenOrderCancelResponse ERP调用奇门的接口,取消创建单据操作。场景介绍：ERP主动发起取消某些创建的单据。如入库单、出库单、退货单等；所有的场景
+/* TaobaoQimenOrderCancelResponse ERP调用奇门的接口,取消创建单据操作。场景介绍：ERP主动发起取消某些创建的单据。如入库单、出库单、退货单等；所有的场景 */
 type TaobaoQimenOrderCancelResponse struct {
     
     /* code Basic响应码 */
@@ -15851,7 +15851,7 @@ type TaobaoQimenOrderCancelResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderConfirmRequest taobao.qimen.deliveryorder.confirm
+/* TaobaoQimenDeliveryorderConfirmRequest taobao.qimen.deliveryorder.confirm */
 type TaobaoQimenDeliveryorderConfirmRequest struct {
     
     /* deliveryOrder optional发货单信息 */
@@ -15872,7 +15872,7 @@ func (req *TaobaoQimenDeliveryorderConfirmRequest) GetAPIName() string {
 	return "taobao.qimen.deliveryorder.confirm"
 }
 
-// TaobaoQimenDeliveryorderConfirmResponse taobao.qimen.deliveryorder.confirm
+/* TaobaoQimenDeliveryorderConfirmResponse taobao.qimen.deliveryorder.confirm */
 type TaobaoQimenDeliveryorderConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -15886,7 +15886,7 @@ type TaobaoQimenDeliveryorderConfirmResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderCreateRequest taobao.qimen.deliveryorder.create
+/* TaobaoQimenDeliveryorderCreateRequest taobao.qimen.deliveryorder.create */
 type TaobaoQimenDeliveryorderCreateRequest struct {
     
     /* deliveryOrder optional发货单信息 */
@@ -15907,7 +15907,7 @@ func (req *TaobaoQimenDeliveryorderCreateRequest) GetAPIName() string {
 	return "taobao.qimen.deliveryorder.create"
 }
 
-// TaobaoQimenDeliveryorderCreateResponse taobao.qimen.deliveryorder.create
+/* TaobaoQimenDeliveryorderCreateResponse taobao.qimen.deliveryorder.create */
 type TaobaoQimenDeliveryorderCreateResponse struct {
     
     /* code Basic响应码 */
@@ -15936,7 +15936,7 @@ type TaobaoQimenDeliveryorderCreateResponse struct {
     
 }
 
-// TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostRequest 补发单erp物流信息回传平台
+/* TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostRequest 补发单erp物流信息回传平台 */
 type TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostRequest struct {
     
     /* param0 required参数 */
@@ -15948,7 +15948,7 @@ func (req *TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostRequest) GetAPIName(
 	return "taobao.rdc.aligenius.warehouse.resend.logistics.msg.post"
 }
 
-// TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostResponse 补发单erp物流信息回传平台
+/* TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostResponse 补发单erp物流信息回传平台 */
 type TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostResponse struct {
     
     /* result Objectresult */
@@ -15956,7 +15956,7 @@ type TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostResponse struct {
     
 }
 
-// TaobaoQimenOrderprocessReportRequest WMS调用奇门的接口,将订单在仓库的状态回传给ERP；场景说明：仓库仓内操作状态回传给ERP, 比如打包操作完成时, 回传一个打 包完成的状态给到ERP, ERP自行决定如何处理。
+/* TaobaoQimenOrderprocessReportRequest WMS调用奇门的接口,将订单在仓库的状态回传给ERP；场景说明：仓库仓内操作状态回传给ERP, 比如打包操作完成时, 回传一个打 包完成的状态给到ERP, ERP自行决定如何处理。 */
 type TaobaoQimenOrderprocessReportRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -15977,7 +15977,7 @@ func (req *TaobaoQimenOrderprocessReportRequest) GetAPIName() string {
 	return "taobao.qimen.orderprocess.report"
 }
 
-// TaobaoQimenOrderprocessReportResponse WMS调用奇门的接口,将订单在仓库的状态回传给ERP；场景说明：仓库仓内操作状态回传给ERP, 比如打包操作完成时, 回传一个打 包完成的状态给到ERP, ERP自行决定如何处理。
+/* TaobaoQimenOrderprocessReportResponse WMS调用奇门的接口,将订单在仓库的状态回传给ERP；场景说明：仓库仓内操作状态回传给ERP, 比如打包操作完成时, 回传一个打 包完成的状态给到ERP, ERP自行决定如何处理。 */
 type TaobaoQimenOrderprocessReportResponse struct {
     
     /* code Basic响应码 */
@@ -15991,7 +15991,7 @@ type TaobaoQimenOrderprocessReportResponse struct {
     
 }
 
-// TaobaoFenxiaoDistributorItemsGetRequest 供应商查询分销商商品下载记录。
+/* TaobaoFenxiaoDistributorItemsGetRequest 供应商查询分销商商品下载记录。 */
 type TaobaoFenxiaoDistributorItemsGetRequest struct {
     
     /* distributor_id special分销商ID 。 */
@@ -16018,7 +16018,7 @@ func (req *TaobaoFenxiaoDistributorItemsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.distributor.items.get"
 }
 
-// TaobaoFenxiaoDistributorItemsGetResponse 供应商查询分销商商品下载记录。
+/* TaobaoFenxiaoDistributorItemsGetResponse 供应商查询分销商商品下载记录。 */
 type TaobaoFenxiaoDistributorItemsGetResponse struct {
     
     /* records Object Array下载记录对象 */
@@ -16029,7 +16029,7 @@ type TaobaoFenxiaoDistributorItemsGetResponse struct {
     
 }
 
-// TaobaoFenxiaoOrderConfirmPaidRequest 供应商确认收款（非支付宝交易）。
+/* TaobaoFenxiaoOrderConfirmPaidRequest 供应商确认收款（非支付宝交易）。 */
 type TaobaoFenxiaoOrderConfirmPaidRequest struct {
     
     /* confirm_remark optional确认支付信息（字数小于100） */
@@ -16044,7 +16044,7 @@ func (req *TaobaoFenxiaoOrderConfirmPaidRequest) GetAPIName() string {
 	return "taobao.fenxiao.order.confirm.paid"
 }
 
-// TaobaoFenxiaoOrderConfirmPaidResponse 供应商确认收款（非支付宝交易）。
+/* TaobaoFenxiaoOrderConfirmPaidResponse 供应商确认收款（非支付宝交易）。 */
 type TaobaoFenxiaoOrderConfirmPaidResponse struct {
     
     /* is_success Basic确认结果成功与否 */
@@ -16052,7 +16052,7 @@ type TaobaoFenxiaoOrderConfirmPaidResponse struct {
     
 }
 
-// TaobaoFenxiaoCooperationGetRequest 获取供应商的合作关系信息
+/* TaobaoFenxiaoCooperationGetRequest 获取供应商的合作关系信息 */
 type TaobaoFenxiaoCooperationGetRequest struct {
     
     /* end_date optional合作结束时间yyyy-MM-dd HH:mm:ss */
@@ -16079,7 +16079,7 @@ func (req *TaobaoFenxiaoCooperationGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.cooperation.get"
 }
 
-// TaobaoFenxiaoCooperationGetResponse 获取供应商的合作关系信息
+/* TaobaoFenxiaoCooperationGetResponse 获取供应商的合作关系信息 */
 type TaobaoFenxiaoCooperationGetResponse struct {
     
     /* cooperations Object Array合作分销关系 */
@@ -16090,7 +16090,7 @@ type TaobaoFenxiaoCooperationGetResponse struct {
     
 }
 
-// TaobaoQianniuCloudkefuStatuslogGetRequest 查询客服账号的操作记录。如：登录，下线，挂起等。接口即将下线，请ISV切换到taobao.qianniu.cloudkefu.onlinestatuslog.get接口上
+/* TaobaoQianniuCloudkefuStatuslogGetRequest 查询客服账号的操作记录。如：登录，下线，挂起等。接口即将下线，请ISV切换到taobao.qianniu.cloudkefu.onlinestatuslog.get接口上 */
 type TaobaoQianniuCloudkefuStatuslogGetRequest struct {
     
     /* account_ids required子帐号列表，最多10个 */
@@ -16123,7 +16123,7 @@ func (req *TaobaoQianniuCloudkefuStatuslogGetRequest) GetAPIName() string {
 	return "taobao.qianniu.cloudkefu.statuslog.get"
 }
 
-// TaobaoQianniuCloudkefuStatuslogGetResponse 查询客服账号的操作记录。如：登录，下线，挂起等。接口即将下线，请ISV切换到taobao.qianniu.cloudkefu.onlinestatuslog.get接口上
+/* TaobaoQianniuCloudkefuStatuslogGetResponse 查询客服账号的操作记录。如：登录，下线，挂起等。接口即将下线，请ISV切换到taobao.qianniu.cloudkefu.onlinestatuslog.get接口上 */
 type TaobaoQianniuCloudkefuStatuslogGetResponse struct {
     
     /* result Objectresult */
@@ -16131,8 +16131,8 @@ type TaobaoQianniuCloudkefuStatuslogGetResponse struct {
     
 }
 
-// TaobaoLogisticsOnlineConfirmRequest <br><font color='red'>仅使用taobao.logistics.online.send 发货时，未输入运单号的情况下，需要使用该接口确认发货。发货接口主要有taobao.logistics.offline.send 和taobao.logistics.online.send <br>
-确认发货的目的是让交易流程继承走下去，确认发货后交易状态会由【买家已付款】变为【卖家已发货】，然后买家才可以确认收货，货款打入卖家账号。货到付款的订单除外
+/* TaobaoLogisticsOnlineConfirmRequest <br><font color='red'>仅使用taobao.logistics.online.send 发货时，未输入运单号的情况下，需要使用该接口确认发货。发货接口主要有taobao.logistics.offline.send 和taobao.logistics.online.send <br>
+确认发货的目的是让交易流程继承走下去，确认发货后交易状态会由【买家已付款】变为【卖家已发货】，然后买家才可以确认收货，货款打入卖家账号。货到付款的订单除外 */
 type TaobaoLogisticsOnlineConfirmRequest struct {
     
     /* is_split optional表明是否是拆单，默认值0，1表示拆单 */
@@ -16156,8 +16156,8 @@ func (req *TaobaoLogisticsOnlineConfirmRequest) GetAPIName() string {
 	return "taobao.logistics.online.confirm"
 }
 
-// TaobaoLogisticsOnlineConfirmResponse <br><font color='red'>仅使用taobao.logistics.online.send 发货时，未输入运单号的情况下，需要使用该接口确认发货。发货接口主要有taobao.logistics.offline.send 和taobao.logistics.online.send <br>
-确认发货的目的是让交易流程继承走下去，确认发货后交易状态会由【买家已付款】变为【卖家已发货】，然后买家才可以确认收货，货款打入卖家账号。货到付款的订单除外
+/* TaobaoLogisticsOnlineConfirmResponse <br><font color='red'>仅使用taobao.logistics.online.send 发货时，未输入运单号的情况下，需要使用该接口确认发货。发货接口主要有taobao.logistics.offline.send 和taobao.logistics.online.send <br>
+确认发货的目的是让交易流程继承走下去，确认发货后交易状态会由【买家已付款】变为【卖家已发货】，然后买家才可以确认收货，货款打入卖家账号。货到付款的订单除外 */
 type TaobaoLogisticsOnlineConfirmResponse struct {
     
     /* shipping Object只返回is_success：是否成功。 */
@@ -16165,7 +16165,7 @@ type TaobaoLogisticsOnlineConfirmResponse struct {
     
 }
 
-// TaobaoWlbOrderJzConsignRequest 家装类订单使用该接口发货
+/* TaobaoWlbOrderJzConsignRequest 家装类订单使用该接口发货 */
 type TaobaoWlbOrderJzConsignRequest struct {
     
     /* ins_receiver_to optional安装收货人信息,如果为空,则取默认收货人信息 */
@@ -16195,7 +16195,7 @@ func (req *TaobaoWlbOrderJzConsignRequest) GetAPIName() string {
 	return "taobao.wlb.order.jz.consign"
 }
 
-// TaobaoWlbOrderJzConsignResponse 家装类订单使用该接口发货
+/* TaobaoWlbOrderJzConsignResponse 家装类订单使用该接口发货 */
 type TaobaoWlbOrderJzConsignResponse struct {
     
     /* result_error_code Basic错误码 */
@@ -16209,7 +16209,7 @@ type TaobaoWlbOrderJzConsignResponse struct {
     
 }
 
-// TaobaoLogisticsOnlineCancelRequest 调此接口取消发货的订单，重新选择物流公司发货。前提是物流公司未揽收货物。对未发货和已经被物流公司揽收的物流订单，是不能取消的。
+/* TaobaoLogisticsOnlineCancelRequest 调此接口取消发货的订单，重新选择物流公司发货。前提是物流公司未揽收货物。对未发货和已经被物流公司揽收的物流订单，是不能取消的。 */
 type TaobaoLogisticsOnlineCancelRequest struct {
     
     /* tid required淘宝交易ID */
@@ -16221,7 +16221,7 @@ func (req *TaobaoLogisticsOnlineCancelRequest) GetAPIName() string {
 	return "taobao.logistics.online.cancel"
 }
 
-// TaobaoLogisticsOnlineCancelResponse 调此接口取消发货的订单，重新选择物流公司发货。前提是物流公司未揽收货物。对未发货和已经被物流公司揽收的物流订单，是不能取消的。
+/* TaobaoLogisticsOnlineCancelResponse 调此接口取消发货的订单，重新选择物流公司发货。前提是物流公司未揽收货物。对未发货和已经被物流公司揽收的物流订单，是不能取消的。 */
 type TaobaoLogisticsOnlineCancelResponse struct {
     
     /* is_success Basic成功与失败 */
@@ -16235,7 +16235,7 @@ type TaobaoLogisticsOnlineCancelResponse struct {
     
 }
 
-// AlibabaEinvoiceApplyTestRequest 开票申请消息测试接口
+/* AlibabaEinvoiceApplyTestRequest 开票申请消息测试接口 */
 type AlibabaEinvoiceApplyTestRequest struct {
     
     /* business_type required0=个人，1=企业 */
@@ -16256,7 +16256,7 @@ func (req *AlibabaEinvoiceApplyTestRequest) GetAPIName() string {
 	return "alibaba.einvoice.apply.test"
 }
 
-// AlibabaEinvoiceApplyTestResponse 开票申请消息测试接口
+/* AlibabaEinvoiceApplyTestResponse 开票申请消息测试接口 */
 type AlibabaEinvoiceApplyTestResponse struct {
     
     /* is_success Basic消息是否发送成功 */
@@ -16264,7 +16264,7 @@ type AlibabaEinvoiceApplyTestResponse struct {
     
 }
 
-// TaobaoLogisticsDummySendRequest 用户调用该接口可实现无需物流（虚拟）发货,使用该接口发货，交易订单状态会直接变成卖家已发货
+/* TaobaoLogisticsDummySendRequest 用户调用该接口可实现无需物流（虚拟）发货,使用该接口发货，交易订单状态会直接变成卖家已发货 */
 type TaobaoLogisticsDummySendRequest struct {
     
     /* feature optionalfeature参数格式<br>范例: identCode=tid1:识别码1,识别码2|tid2:识别码3;machineCode=tid3:3C机器号A,3C机器号B<br>identCode为识别码的KEY,machineCode为3C的KEY,多个key之间用”;”分隔<br>“tid1:识别码1,识别码2|tid2:识别码3”为identCode对应的value。"|"不同商品间的分隔符。<br>例1商品和2商品，之间就用"|"分开。<br>TID就是商品代表的子订单号，对应taobao.trade.fullinfo.get 接口获得的oid字段。(通过OID可以唯一定位到当前商品上)<br>":"TID和具体传入参数间的分隔符。冒号前表示TID,之后代表该商品的参数属性。<br>"," 属性间分隔符。（对应商品数量，当存在一个商品的数量超过1个时，用逗号分开）。<br>具体:当订单中A商品的数量为2个，其中手机串号分别为"12345","67890"。<br>参数格式：identCode=TIDA:12345,67890。TIDA对应了A宝贝，冒号后用逗号分隔的"12345","67890".说明本订单A宝贝的数量为2，值分别为"12345","67890"。<br>当存在"|"时，就说明订单中存在多个商品，商品间用"|"分隔了开来。|"之后的内容含义同上。 */
@@ -16282,7 +16282,7 @@ func (req *TaobaoLogisticsDummySendRequest) GetAPIName() string {
 	return "taobao.logistics.dummy.send"
 }
 
-// TaobaoLogisticsDummySendResponse 用户调用该接口可实现无需物流（虚拟）发货,使用该接口发货，交易订单状态会直接变成卖家已发货
+/* TaobaoLogisticsDummySendResponse 用户调用该接口可实现无需物流（虚拟）发货,使用该接口发货，交易订单状态会直接变成卖家已发货 */
 type TaobaoLogisticsDummySendResponse struct {
     
     /* shipping Object返回发货是否成功is_success */
@@ -16290,7 +16290,7 @@ type TaobaoLogisticsDummySendResponse struct {
     
 }
 
-// TaobaoLogisticsOfflineSendRequest 用户调用该接口可实现自己联系发货（线下物流），使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。
+/* TaobaoLogisticsOfflineSendRequest 用户调用该接口可实现自己联系发货（线下物流），使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。 */
 type TaobaoLogisticsOfflineSendRequest struct {
     
     /* cancel_id optional卖家联系人地址库ID，可以通过taobao.logistics.address.search接口查询到地址库ID。 如果为空，取的卖家的默认退货地址 */
@@ -16326,7 +16326,7 @@ func (req *TaobaoLogisticsOfflineSendRequest) GetAPIName() string {
 	return "taobao.logistics.offline.send"
 }
 
-// TaobaoLogisticsOfflineSendResponse 用户调用该接口可实现自己联系发货（线下物流），使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。
+/* TaobaoLogisticsOfflineSendResponse 用户调用该接口可实现自己联系发货（线下物流），使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。 */
 type TaobaoLogisticsOfflineSendResponse struct {
     
     /* shipping Object自己联系的调用结果 */
@@ -16334,7 +16334,7 @@ type TaobaoLogisticsOfflineSendResponse struct {
     
 }
 
-// TaobaoQimenReturnorderCreateRequest ERP调用奇门的接口,创建退货单信息;该接口和入库单的区别就是该接口是从入库单接口中单独剥离出来的，专门处理退货引起的入 库操作
+/* TaobaoQimenReturnorderCreateRequest ERP调用奇门的接口,创建退货单信息;该接口和入库单的区别就是该接口是从入库单接口中单独剥离出来的，专门处理退货引起的入 库操作 */
 type TaobaoQimenReturnorderCreateRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -16355,7 +16355,7 @@ func (req *TaobaoQimenReturnorderCreateRequest) GetAPIName() string {
 	return "taobao.qimen.returnorder.create"
 }
 
-// TaobaoQimenReturnorderCreateResponse ERP调用奇门的接口,创建退货单信息;该接口和入库单的区别就是该接口是从入库单接口中单独剥离出来的，专门处理退货引起的入 库操作
+/* TaobaoQimenReturnorderCreateResponse ERP调用奇门的接口,创建退货单信息;该接口和入库单的区别就是该接口是从入库单接口中单独剥离出来的，专门处理退货引起的入 库操作 */
 type TaobaoQimenReturnorderCreateResponse struct {
     
     /* code Basic响应码 */
@@ -16372,7 +16372,7 @@ type TaobaoQimenReturnorderCreateResponse struct {
     
 }
 
-// TaobaoWlbStoresBaseinfoGetRequest 通过USERID和仓库类型，获取商家自有仓库或菜鸟仓库或全部仓库
+/* TaobaoWlbStoresBaseinfoGetRequest 通过USERID和仓库类型，获取商家自有仓库或菜鸟仓库或全部仓库 */
 type TaobaoWlbStoresBaseinfoGetRequest struct {
     
     /* _type optional0.商家仓库.1.菜鸟仓库.2全部被划分的仓库 */
@@ -16384,7 +16384,7 @@ func (req *TaobaoWlbStoresBaseinfoGetRequest) GetAPIName() string {
 	return "taobao.wlb.stores.baseinfo.get"
 }
 
-// TaobaoWlbStoresBaseinfoGetResponse 通过USERID和仓库类型，获取商家自有仓库或菜鸟仓库或全部仓库
+/* TaobaoWlbStoresBaseinfoGetResponse 通过USERID和仓库类型，获取商家自有仓库或菜鸟仓库或全部仓库 */
 type TaobaoWlbStoresBaseinfoGetResponse struct {
     
     /* store_info_list Object Array仓库列表 */
@@ -16395,7 +16395,7 @@ type TaobaoWlbStoresBaseinfoGetResponse struct {
     
 }
 
-// TaobaoQimenEntryorderCreateRequest ERP调用接口，创建入库单;
+/* TaobaoQimenEntryorderCreateRequest ERP调用接口，创建入库单; */
 type TaobaoQimenEntryorderCreateRequest struct {
     
     /* entryOrder optional入库单信息 */
@@ -16416,7 +16416,7 @@ func (req *TaobaoQimenEntryorderCreateRequest) GetAPIName() string {
 	return "taobao.qimen.entryorder.create"
 }
 
-// TaobaoQimenEntryorderCreateResponse ERP调用接口，创建入库单;
+/* TaobaoQimenEntryorderCreateResponse ERP调用接口，创建入库单; */
 type TaobaoQimenEntryorderCreateResponse struct {
     
     /* code Basic响应码 */
@@ -16433,7 +16433,7 @@ type TaobaoQimenEntryorderCreateResponse struct {
     
 }
 
-// TaobaoQimenReturnorderConfirmRequest taobao.qimen.returnorder.confirm
+/* TaobaoQimenReturnorderConfirmRequest taobao.qimen.returnorder.confirm */
 type TaobaoQimenReturnorderConfirmRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -16451,7 +16451,7 @@ func (req *TaobaoQimenReturnorderConfirmRequest) GetAPIName() string {
 	return "taobao.qimen.returnorder.confirm"
 }
 
-// TaobaoQimenReturnorderConfirmResponse taobao.qimen.returnorder.confirm
+/* TaobaoQimenReturnorderConfirmResponse taobao.qimen.returnorder.confirm */
 type TaobaoQimenReturnorderConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -16465,7 +16465,7 @@ type TaobaoQimenReturnorderConfirmResponse struct {
     
 }
 
-// TaobaoQimenStockchangeReportRequest WMS调用奇门的接口,将库存异动信息信息回传给ERP
+/* TaobaoQimenStockchangeReportRequest WMS调用奇门的接口,将库存异动信息信息回传给ERP */
 type TaobaoQimenStockchangeReportRequest struct {
     
     /* currentPage optional奇门仓储字段,说明,string(50),, */
@@ -16504,7 +16504,7 @@ func (req *TaobaoQimenStockchangeReportRequest) GetAPIName() string {
 	return "taobao.qimen.stockchange.report"
 }
 
-// TaobaoQimenStockchangeReportResponse WMS调用奇门的接口,将库存异动信息信息回传给ERP
+/* TaobaoQimenStockchangeReportResponse WMS调用奇门的接口,将库存异动信息信息回传给ERP */
 type TaobaoQimenStockchangeReportResponse struct {
     
     /* code Basic响应码 */
@@ -16518,7 +16518,7 @@ type TaobaoQimenStockchangeReportResponse struct {
     
 }
 
-// TaobaoQimenInventoryQueryRequest ERP调用奇门的接口,查询商品的库存量
+/* TaobaoQimenInventoryQueryRequest ERP调用奇门的接口,查询商品的库存量 */
 type TaobaoQimenInventoryQueryRequest struct {
     
     /* criteriaList optional查询准则 */
@@ -16536,7 +16536,7 @@ func (req *TaobaoQimenInventoryQueryRequest) GetAPIName() string {
 	return "taobao.qimen.inventory.query"
 }
 
-// TaobaoQimenInventoryQueryResponse ERP调用奇门的接口,查询商品的库存量
+/* TaobaoQimenInventoryQueryResponse ERP调用奇门的接口,查询商品的库存量 */
 type TaobaoQimenInventoryQueryResponse struct {
     
     /* code Basic响应码 */
@@ -16553,7 +16553,7 @@ type TaobaoQimenInventoryQueryResponse struct {
     
 }
 
-// TaobaoQimenSingleitemSynchronizeRequest ERP调用奇门的接口,同步商品信息给WMS
+/* TaobaoQimenSingleitemSynchronizeRequest ERP调用奇门的接口,同步商品信息给WMS */
 type TaobaoQimenSingleitemSynchronizeRequest struct {
     
     /* actionType required操作类型(两种类型：add|update) */
@@ -16583,7 +16583,7 @@ func (req *TaobaoQimenSingleitemSynchronizeRequest) GetAPIName() string {
 	return "taobao.qimen.singleitem.synchronize"
 }
 
-// TaobaoQimenSingleitemSynchronizeResponse ERP调用奇门的接口,同步商品信息给WMS
+/* TaobaoQimenSingleitemSynchronizeResponse ERP调用奇门的接口,同步商品信息给WMS */
 type TaobaoQimenSingleitemSynchronizeResponse struct {
     
     /* code Basic响应码 */
@@ -16600,7 +16600,7 @@ type TaobaoQimenSingleitemSynchronizeResponse struct {
     
 }
 
-// TaobaoItemTemplatesGetRequest 查询当前登录用户的店铺的宝贝详情页的模板名称
+/* TaobaoItemTemplatesGetRequest 查询当前登录用户的店铺的宝贝详情页的模板名称 */
 type TaobaoItemTemplatesGetRequest struct {
     
 }
@@ -16609,7 +16609,7 @@ func (req *TaobaoItemTemplatesGetRequest) GetAPIName() string {
 	return "taobao.item.templates.get"
 }
 
-// TaobaoItemTemplatesGetResponse 查询当前登录用户的店铺的宝贝详情页的模板名称
+/* TaobaoItemTemplatesGetResponse 查询当前登录用户的店铺的宝贝详情页的模板名称 */
 type TaobaoItemTemplatesGetResponse struct {
     
     /* item_template_list Object Array返回宝贝模板对象。包含模板id，模板name，还有模板的类别（0表示外店，1表示内店） */
@@ -16617,7 +16617,7 @@ type TaobaoItemTemplatesGetResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderBatchconfirmRequest taobao.qimen.deliveryorder.batchconfirm
+/* TaobaoQimenDeliveryorderBatchconfirmRequest taobao.qimen.deliveryorder.batchconfirm */
 type TaobaoQimenDeliveryorderBatchconfirmRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -16632,7 +16632,7 @@ func (req *TaobaoQimenDeliveryorderBatchconfirmRequest) GetAPIName() string {
 	return "taobao.qimen.deliveryorder.batchconfirm"
 }
 
-// TaobaoQimenDeliveryorderBatchconfirmResponse taobao.qimen.deliveryorder.batchconfirm
+/* TaobaoQimenDeliveryorderBatchconfirmResponse taobao.qimen.deliveryorder.batchconfirm */
 type TaobaoQimenDeliveryorderBatchconfirmResponse struct {
     
     /* code Basic响应码 */
@@ -16646,7 +16646,7 @@ type TaobaoQimenDeliveryorderBatchconfirmResponse struct {
     
 }
 
-// TaobaoQimenStockoutCreateRequest ERP调用奇门接口，创建出库单信息
+/* TaobaoQimenStockoutCreateRequest ERP调用奇门接口，创建出库单信息 */
 type TaobaoQimenStockoutCreateRequest struct {
     
     /* deliveryOrder optional出库单信息 */
@@ -16667,7 +16667,7 @@ func (req *TaobaoQimenStockoutCreateRequest) GetAPIName() string {
 	return "taobao.qimen.stockout.create"
 }
 
-// TaobaoQimenStockoutCreateResponse ERP调用奇门接口，创建出库单信息
+/* TaobaoQimenStockoutCreateResponse ERP调用奇门接口，创建出库单信息 */
 type TaobaoQimenStockoutCreateResponse struct {
     
     /* code Basic响应码 */
@@ -16687,7 +16687,7 @@ type TaobaoQimenStockoutCreateResponse struct {
     
 }
 
-// TaobaoQimenEntryorderConfirmRequest WMS调用接口，回传入库单信息;
+/* TaobaoQimenEntryorderConfirmRequest WMS调用接口，回传入库单信息; */
 type TaobaoQimenEntryorderConfirmRequest struct {
     
     /* entryOrder optional入库单信息 */
@@ -16708,7 +16708,7 @@ func (req *TaobaoQimenEntryorderConfirmRequest) GetAPIName() string {
 	return "taobao.qimen.entryorder.confirm"
 }
 
-// TaobaoQimenEntryorderConfirmResponse WMS调用接口，回传入库单信息;
+/* TaobaoQimenEntryorderConfirmResponse WMS调用接口，回传入库单信息; */
 type TaobaoQimenEntryorderConfirmResponse struct {
     
     /* code Basic响应码 */
@@ -16722,7 +16722,7 @@ type TaobaoQimenEntryorderConfirmResponse struct {
     
 }
 
-// TaobaoQimenDeliveryorderBatchcreateRequest ERP调用接口，将发货信息批量推送给WMS
+/* TaobaoQimenDeliveryorderBatchcreateRequest ERP调用接口，将发货信息批量推送给WMS */
 type TaobaoQimenDeliveryorderBatchcreateRequest struct {
     
     /* extendProps optional扩展属性 */
@@ -16737,7 +16737,7 @@ func (req *TaobaoQimenDeliveryorderBatchcreateRequest) GetAPIName() string {
 	return "taobao.qimen.deliveryorder.batchcreate"
 }
 
-// TaobaoQimenDeliveryorderBatchcreateResponse ERP调用接口，将发货信息批量推送给WMS
+/* TaobaoQimenDeliveryorderBatchcreateResponse ERP调用接口，将发货信息批量推送给WMS */
 type TaobaoQimenDeliveryorderBatchcreateResponse struct {
     
     /* code Basic响应码 */
@@ -16754,7 +16754,7 @@ type TaobaoQimenDeliveryorderBatchcreateResponse struct {
     
 }
 
-// TaobaoWlbImportThreeplResourceGetRequest 获取3pl直邮的发货可用资源
+/* TaobaoWlbImportThreeplResourceGetRequest 获取3pl直邮的发货可用资源 */
 type TaobaoWlbImportThreeplResourceGetRequest struct {
     
     /* from_id required发货地区域id */
@@ -16772,7 +16772,7 @@ func (req *TaobaoWlbImportThreeplResourceGetRequest) GetAPIName() string {
 	return "taobao.wlb.import.threepl.resource.get"
 }
 
-// TaobaoWlbImportThreeplResourceGetResponse 获取3pl直邮的发货可用资源
+/* TaobaoWlbImportThreeplResourceGetResponse 获取3pl直邮的发货可用资源 */
 type TaobaoWlbImportThreeplResourceGetResponse struct {
     
     /* result Objectresult */
@@ -16780,7 +16780,7 @@ type TaobaoWlbImportThreeplResourceGetResponse struct {
     
 }
 
-// TaobaoWlbImportThreeplOfflineConsignRequest 菜鸟认证直邮线下发货
+/* TaobaoWlbImportThreeplOfflineConsignRequest 菜鸟认证直邮线下发货 */
 type TaobaoWlbImportThreeplOfflineConsignRequest struct {
     
     /* from_id optional发件人地址库id */
@@ -16804,7 +16804,7 @@ func (req *TaobaoWlbImportThreeplOfflineConsignRequest) GetAPIName() string {
 	return "taobao.wlb.import.threepl.offline.consign"
 }
 
-// TaobaoWlbImportThreeplOfflineConsignResponse 菜鸟认证直邮线下发货
+/* TaobaoWlbImportThreeplOfflineConsignResponse 菜鸟认证直邮线下发货 */
 type TaobaoWlbImportThreeplOfflineConsignResponse struct {
     
     /* result Objectresult */
@@ -16812,7 +16812,7 @@ type TaobaoWlbImportThreeplOfflineConsignResponse struct {
     
 }
 
-// TmallItemOuteridUpdateRequest 天猫商品/SKU商家编码更新接口；支持商品、SKU的商家编码同时更新；支持同一商品下的SKU批量更新。（感谢sample小雨提供接口命名）
+/* TmallItemOuteridUpdateRequest 天猫商品/SKU商家编码更新接口；支持商品、SKU的商家编码同时更新；支持同一商品下的SKU批量更新。（感谢sample小雨提供接口命名） */
 type TmallItemOuteridUpdateRequest struct {
     
     /* item_id required商品ID */
@@ -16830,7 +16830,7 @@ func (req *TmallItemOuteridUpdateRequest) GetAPIName() string {
 	return "tmall.item.outerid.update"
 }
 
-// TmallItemOuteridUpdateResponse 天猫商品/SKU商家编码更新接口；支持商品、SKU的商家编码同时更新；支持同一商品下的SKU批量更新。（感谢sample小雨提供接口命名）
+/* TmallItemOuteridUpdateResponse 天猫商品/SKU商家编码更新接口；支持商品、SKU的商家编码同时更新；支持同一商品下的SKU批量更新。（感谢sample小雨提供接口命名） */
 type TmallItemOuteridUpdateResponse struct {
     
     /* outerid_update_result Basic商家编码更新结果 */
@@ -16838,7 +16838,7 @@ type TmallItemOuteridUpdateResponse struct {
     
 }
 
-// TaobaoQimenOrderSnReportRequest WMS调用奇门的接口,在出库、发货、入库等场景下，ERP和WMS之间同步操作的SN列表
+/* TaobaoQimenOrderSnReportRequest WMS调用奇门的接口,在出库、发货、入库等场景下，ERP和WMS之间同步操作的SN列表 */
 type TaobaoQimenOrderSnReportRequest struct {
     
     /* currentPage required当前页(从1开始) */
@@ -16865,7 +16865,7 @@ func (req *TaobaoQimenOrderSnReportRequest) GetAPIName() string {
 	return "taobao.qimen.order.sn.report"
 }
 
-// TaobaoQimenOrderSnReportResponse WMS调用奇门的接口,在出库、发货、入库等场景下，ERP和WMS之间同步操作的SN列表
+/* TaobaoQimenOrderSnReportResponse WMS调用奇门的接口,在出库、发货、入库等场景下，ERP和WMS之间同步操作的SN列表 */
 type TaobaoQimenOrderSnReportResponse struct {
     
     /* code Basic响应码 */
@@ -16879,7 +16879,7 @@ type TaobaoQimenOrderSnReportResponse struct {
     
 }
 
-// QimenTaobaoAlphaxOpenJxtExpressRequest isv 接入指定快递api
+/* QimenTaobaoAlphaxOpenJxtExpressRequest isv 接入指定快递api */
 type QimenTaobaoAlphaxOpenJxtExpressRequest struct {
     
     /* cap required快递公司名称 */
@@ -16900,7 +16900,7 @@ func (req *QimenTaobaoAlphaxOpenJxtExpressRequest) GetAPIName() string {
 	return "qimen.taobao.alphax.open.jxt.express"
 }
 
-// QimenTaobaoAlphaxOpenJxtExpressResponse isv 接入指定快递api
+/* QimenTaobaoAlphaxOpenJxtExpressResponse isv 接入指定快递api */
 type QimenTaobaoAlphaxOpenJxtExpressResponse struct {
     
     /* result Object返回值 */
@@ -16908,7 +16908,7 @@ type QimenTaobaoAlphaxOpenJxtExpressResponse struct {
     
 }
 
-// QimenTaobaoAlphaxOpenJxtDelivergoodsRequest isv 接入催发货接口api
+/* QimenTaobaoAlphaxOpenJxtDelivergoodsRequest isv 接入催发货接口api */
 type QimenTaobaoAlphaxOpenJxtDelivergoodsRequest struct {
     
     /* order_id required主订单id */
@@ -16926,7 +16926,7 @@ func (req *QimenTaobaoAlphaxOpenJxtDelivergoodsRequest) GetAPIName() string {
 	return "qimen.taobao.alphax.open.jxt.delivergoods"
 }
 
-// QimenTaobaoAlphaxOpenJxtDelivergoodsResponse isv 接入催发货接口api
+/* QimenTaobaoAlphaxOpenJxtDelivergoodsResponse isv 接入催发货接口api */
 type QimenTaobaoAlphaxOpenJxtDelivergoodsResponse struct {
     
     /* result Object返回值 */
@@ -16934,7 +16934,7 @@ type QimenTaobaoAlphaxOpenJxtDelivergoodsResponse struct {
     
 }
 
-// TaobaoSkusQuantityUpdateRequest 提供按照全量/增量的方式批量修改SKU库存的功能
+/* TaobaoSkusQuantityUpdateRequest 提供按照全量/增量的方式批量修改SKU库存的功能 */
 type TaobaoSkusQuantityUpdateRequest struct {
     
     /* num_iid required商品数字ID，必填参数 */
@@ -16955,7 +16955,7 @@ func (req *TaobaoSkusQuantityUpdateRequest) GetAPIName() string {
 	return "taobao.skus.quantity.update"
 }
 
-// TaobaoSkusQuantityUpdateResponse 提供按照全量/增量的方式批量修改SKU库存的功能
+/* TaobaoSkusQuantityUpdateResponse 提供按照全量/增量的方式批量修改SKU库存的功能 */
 type TaobaoSkusQuantityUpdateResponse struct {
     
     /* item Objectiid、numIid、num和modified，skus中每个sku的skuId、quantity和modified */
@@ -16963,7 +16963,7 @@ type TaobaoSkusQuantityUpdateResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopWithholdQueryRequest 查询是否有代扣欠款，是否签署代扣协议。
+/* CainiaoEndpointLockerTopWithholdQueryRequest 查询是否有代扣欠款，是否签署代扣协议。 */
 type CainiaoEndpointLockerTopWithholdQueryRequest struct {
     
     /* company_code required柜子公司编码 */
@@ -16981,7 +16981,7 @@ func (req *CainiaoEndpointLockerTopWithholdQueryRequest) GetAPIName() string {
 	return "cainiao.endpoint.locker.top.withhold.query"
 }
 
-// CainiaoEndpointLockerTopWithholdQueryResponse 查询是否有代扣欠款，是否签署代扣协议。
+/* CainiaoEndpointLockerTopWithholdQueryResponse 查询是否有代扣欠款，是否签署代扣协议。 */
 type CainiaoEndpointLockerTopWithholdQueryResponse struct {
     
     /* result Objectresponse */
@@ -16989,10 +16989,10 @@ type CainiaoEndpointLockerTopWithholdQueryResponse struct {
     
 }
 
-// TaobaoWangwangEserviceChatrelationGetRequest 获取指定时间区间内的聊天关系（查询账号，和谁，在哪天说过话）。如：
+/* TaobaoWangwangEserviceChatrelationGetRequest 获取指定时间区间内的聊天关系（查询账号，和谁，在哪天说过话）。如：
 A 和 B 在2016-09-01 和 2016-09-02 都说过话。以A为查询账号，则该接口将返回：
 2016-09-01， B
-2016-09-02， B
+2016-09-02， B */
 type TaobaoWangwangEserviceChatrelationGetRequest struct {
     
     /* chat_relation_request required请求参数 */
@@ -17004,10 +17004,10 @@ func (req *TaobaoWangwangEserviceChatrelationGetRequest) GetAPIName() string {
 	return "taobao.wangwang.eservice.chatrelation.get"
 }
 
-// TaobaoWangwangEserviceChatrelationGetResponse 获取指定时间区间内的聊天关系（查询账号，和谁，在哪天说过话）。如：
+/* TaobaoWangwangEserviceChatrelationGetResponse 获取指定时间区间内的聊天关系（查询账号，和谁，在哪天说过话）。如：
 A 和 B 在2016-09-01 和 2016-09-02 都说过话。以A为查询账号，则该接口将返回：
 2016-09-01， B
-2016-09-02， B
+2016-09-02， B */
 type TaobaoWangwangEserviceChatrelationGetResponse struct {
     
     /* result Objectresult */
@@ -17015,7 +17015,7 @@ type TaobaoWangwangEserviceChatrelationGetResponse struct {
     
 }
 
-// CainiaoEndpointLockerTopOrderWithholdRequest 提供代扣，允许有一笔欠款。
+/* CainiaoEndpointLockerTopOrderWithholdRequest 提供代扣，允许有一笔欠款。 */
 type CainiaoEndpointLockerTopOrderWithholdRequest struct {
     
     /* company_code required柜子公司编码 */
@@ -17048,7 +17048,7 @@ func (req *CainiaoEndpointLockerTopOrderWithholdRequest) GetAPIName() string {
 	return "cainiao.endpoint.locker.top.order.withhold"
 }
 
-// CainiaoEndpointLockerTopOrderWithholdResponse 提供代扣，允许有一笔欠款。
+/* CainiaoEndpointLockerTopOrderWithholdResponse 提供代扣，允许有一笔欠款。 */
 type CainiaoEndpointLockerTopOrderWithholdResponse struct {
     
     /* result Objectresult */
@@ -17056,7 +17056,7 @@ type CainiaoEndpointLockerTopOrderWithholdResponse struct {
     
 }
 
-// TaobaoWlbItemAddRequest 添加物流宝商品，支持物流宝子商品和属性添加
+/* TaobaoWlbItemAddRequest 添加物流宝商品，支持物流宝子商品和属性添加 */
 type TaobaoWlbItemAddRequest struct {
     
     /* color optional商品颜色 */
@@ -17139,7 +17139,7 @@ func (req *TaobaoWlbItemAddRequest) GetAPIName() string {
 	return "taobao.wlb.item.add"
 }
 
-// TaobaoWlbItemAddResponse 添加物流宝商品，支持物流宝子商品和属性添加
+/* TaobaoWlbItemAddResponse 添加物流宝商品，支持物流宝子商品和属性添加 */
 type TaobaoWlbItemAddResponse struct {
     
     /* item_id Basic新增的商品 */
@@ -17147,7 +17147,7 @@ type TaobaoWlbItemAddResponse struct {
     
 }
 
-// TaobaoWlbWlborderGetRequest 根据物流宝订单编号查询物流宝订单概要信息
+/* TaobaoWlbWlborderGetRequest 根据物流宝订单编号查询物流宝订单概要信息 */
 type TaobaoWlbWlborderGetRequest struct {
     
     /* wlb_order_code required物流宝订单编码 */
@@ -17159,7 +17159,7 @@ func (req *TaobaoWlbWlborderGetRequest) GetAPIName() string {
 	return "taobao.wlb.wlborder.get"
 }
 
-// TaobaoWlbWlborderGetResponse 根据物流宝订单编号查询物流宝订单概要信息
+/* TaobaoWlbWlborderGetResponse 根据物流宝订单编号查询物流宝订单概要信息 */
 type TaobaoWlbWlborderGetResponse struct {
     
     /* wlb_order Object物流宝订单对象 */
@@ -17167,7 +17167,7 @@ type TaobaoWlbWlborderGetResponse struct {
     
 }
 
-// CainiaoNbaddAppointdeliverGetconsigninfoRequest 获取支持定时派送服务发货信息
+/* CainiaoNbaddAppointdeliverGetconsigninfoRequest 获取支持定时派送服务发货信息 */
 type CainiaoNbaddAppointdeliverGetconsigninfoRequest struct {
     
     /* trade_order_id required淘宝交易订单id */
@@ -17179,7 +17179,7 @@ func (req *CainiaoNbaddAppointdeliverGetconsigninfoRequest) GetAPIName() string 
 	return "cainiao.nbadd.appointdeliver.getconsigninfo"
 }
 
-// CainiaoNbaddAppointdeliverGetconsigninfoResponse 获取支持定时派送服务发货信息
+/* CainiaoNbaddAppointdeliverGetconsigninfoResponse 获取支持定时派送服务发货信息 */
 type CainiaoNbaddAppointdeliverGetconsigninfoResponse struct {
     
     /* is_success Basic调用是否成功，正常情况下都会成功 */
@@ -17196,7 +17196,7 @@ type CainiaoNbaddAppointdeliverGetconsigninfoResponse struct {
     
 }
 
-// TaobaoOmniorderDtdResendRequest 该接口触发对门店自送发码短信进行重发，码内容不变，接受码的手机号也不变。每个码限制每日重发一次，总共重发5次
+/* TaobaoOmniorderDtdResendRequest 该接口触发对门店自送发码短信进行重发，码内容不变，接受码的手机号也不变。每个码限制每日重发一次，总共重发5次 */
 type TaobaoOmniorderDtdResendRequest struct {
     
     /* main_order_id required淘宝主订单ID */
@@ -17208,7 +17208,7 @@ func (req *TaobaoOmniorderDtdResendRequest) GetAPIName() string {
 	return "taobao.omniorder.dtd.resend"
 }
 
-// TaobaoOmniorderDtdResendResponse 该接口触发对门店自送发码短信进行重发，码内容不变，接受码的手机号也不变。每个码限制每日重发一次，总共重发5次
+/* TaobaoOmniorderDtdResendResponse 该接口触发对门店自送发码短信进行重发，码内容不变，接受码的手机号也不变。每个码限制每日重发一次，总共重发5次 */
 type TaobaoOmniorderDtdResendResponse struct {
     
     /* message Basic错误信息 */
@@ -17219,7 +17219,7 @@ type TaobaoOmniorderDtdResendResponse struct {
     
 }
 
-// TaobaoOmniorderDtdConsignRequest 该接口触发门店自送发货，推进淘系订单状态为发货，为消费者发送核销码短信，并将物流信息写入订单
+/* TaobaoOmniorderDtdConsignRequest 该接口触发门店自送发货，推进淘系订单状态为发货，为消费者发送核销码短信，并将物流信息写入订单 */
 type TaobaoOmniorderDtdConsignRequest struct {
     
     /* main_order_id required淘宝订单主订单号 */
@@ -17234,7 +17234,7 @@ func (req *TaobaoOmniorderDtdConsignRequest) GetAPIName() string {
 	return "taobao.omniorder.dtd.consign"
 }
 
-// TaobaoOmniorderDtdConsignResponse 该接口触发门店自送发货，推进淘系订单状态为发货，为消费者发送核销码短信，并将物流信息写入订单
+/* TaobaoOmniorderDtdConsignResponse 该接口触发门店自送发货，推进淘系订单状态为发货，为消费者发送核销码短信，并将物流信息写入订单 */
 type TaobaoOmniorderDtdConsignResponse struct {
     
     /* message Basic错误信息 */
@@ -17245,7 +17245,7 @@ type TaobaoOmniorderDtdConsignResponse struct {
     
 }
 
-// TaobaoOmniorderDtdConsumeRequest 该接口根据传入的码及订单信息，如果码与订单一致，则对门店自送服务进行核销。
+/* TaobaoOmniorderDtdConsumeRequest 该接口根据传入的码及订单信息，如果码与订单一致，则对门店自送服务进行核销。 */
 type TaobaoOmniorderDtdConsumeRequest struct {
     
     /* param_door2door_consume_request optional核销信息 */
@@ -17257,7 +17257,7 @@ func (req *TaobaoOmniorderDtdConsumeRequest) GetAPIName() string {
 	return "taobao.omniorder.dtd.consume"
 }
 
-// TaobaoOmniorderDtdConsumeResponse 该接口根据传入的码及订单信息，如果码与订单一致，则对门店自送服务进行核销。
+/* TaobaoOmniorderDtdConsumeResponse 该接口根据传入的码及订单信息，如果码与订单一致，则对门店自送服务进行核销。 */
 type TaobaoOmniorderDtdConsumeResponse struct {
     
     /* message Basic错误西溪 */
@@ -17268,7 +17268,7 @@ type TaobaoOmniorderDtdConsumeResponse struct {
     
 }
 
-// TaobaoOmniorderDtdQueryRequest 门店自送根据核销码码查询订单信息
+/* TaobaoOmniorderDtdQueryRequest 门店自送根据核销码码查询订单信息 */
 type TaobaoOmniorderDtdQueryRequest struct {
     
     /* code required核销码 */
@@ -17280,7 +17280,7 @@ func (req *TaobaoOmniorderDtdQueryRequest) GetAPIName() string {
 	return "taobao.omniorder.dtd.query"
 }
 
-// TaobaoOmniorderDtdQueryResponse 门店自送根据核销码码查询订单信息
+/* TaobaoOmniorderDtdQueryResponse 门店自送根据核销码码查询订单信息 */
 type TaobaoOmniorderDtdQueryResponse struct {
     
     /* data Objectdata */
@@ -17294,7 +17294,7 @@ type TaobaoOmniorderDtdQueryResponse struct {
     
 }
 
-// TaobaoWlbOrderstatusGetRequest 根据物流宝订单号查询物流宝订单至目前为止的流转状态列表
+/* TaobaoWlbOrderstatusGetRequest 根据物流宝订单号查询物流宝订单至目前为止的流转状态列表 */
 type TaobaoWlbOrderstatusGetRequest struct {
     
     /* order_code required物流宝订单编码 */
@@ -17306,7 +17306,7 @@ func (req *TaobaoWlbOrderstatusGetRequest) GetAPIName() string {
 	return "taobao.wlb.orderstatus.get"
 }
 
-// TaobaoWlbOrderstatusGetResponse 根据物流宝订单号查询物流宝订单至目前为止的流转状态列表
+/* TaobaoWlbOrderstatusGetResponse 根据物流宝订单号查询物流宝订单至目前为止的流转状态列表 */
 type TaobaoWlbOrderstatusGetResponse struct {
     
     /* wlb_order_status Object Array订单流转信息状态列表 */
@@ -17314,7 +17314,7 @@ type TaobaoWlbOrderstatusGetResponse struct {
     
 }
 
-// TmallItemSimpleschemaUpdateRequest 国外大商家天猫简化编辑商品
+/* TmallItemSimpleschemaUpdateRequest 国外大商家天猫简化编辑商品 */
 type TmallItemSimpleschemaUpdateRequest struct {
     
     /* item_id required商品id */
@@ -17329,7 +17329,7 @@ func (req *TmallItemSimpleschemaUpdateRequest) GetAPIName() string {
 	return "tmall.item.simpleschema.update"
 }
 
-// TmallItemSimpleschemaUpdateResponse 国外大商家天猫简化编辑商品
+/* TmallItemSimpleschemaUpdateResponse 国外大商家天猫简化编辑商品 */
 type TmallItemSimpleschemaUpdateResponse struct {
     
     /* gmt_modified Basic编辑商品操作成功时间 */
@@ -17343,7 +17343,7 @@ type TmallItemSimpleschemaUpdateResponse struct {
     
 }
 
-// TaobaoWlbItemGetRequest 根据商品ID获取商品信息,除了获取商品信息外还可获取商品属性信息和库存信息。
+/* TaobaoWlbItemGetRequest 根据商品ID获取商品信息,除了获取商品信息外还可获取商品属性信息和库存信息。 */
 type TaobaoWlbItemGetRequest struct {
     
     /* item_id required商品ID */
@@ -17355,7 +17355,7 @@ func (req *TaobaoWlbItemGetRequest) GetAPIName() string {
 	return "taobao.wlb.item.get"
 }
 
-// TaobaoWlbItemGetResponse 根据商品ID获取商品信息,除了获取商品信息外还可获取商品属性信息和库存信息。
+/* TaobaoWlbItemGetResponse 根据商品ID获取商品信息,除了获取商品信息外还可获取商品属性信息和库存信息。 */
 type TaobaoWlbItemGetResponse struct {
     
     /* item Object商品信息 */
@@ -17363,7 +17363,7 @@ type TaobaoWlbItemGetResponse struct {
     
 }
 
-// TaobaoWlbOrderCancelRequest 取消物流宝订单
+/* TaobaoWlbOrderCancelRequest 取消物流宝订单 */
 type TaobaoWlbOrderCancelRequest struct {
     
     /* wlb_order_code required物流宝订单编号 */
@@ -17375,7 +17375,7 @@ func (req *TaobaoWlbOrderCancelRequest) GetAPIName() string {
 	return "taobao.wlb.order.cancel"
 }
 
-// TaobaoWlbOrderCancelResponse 取消物流宝订单
+/* TaobaoWlbOrderCancelResponse 取消物流宝订单 */
 type TaobaoWlbOrderCancelResponse struct {
     
     /* error_code_list Basic错误编码列表 */
@@ -17386,7 +17386,7 @@ type TaobaoWlbOrderCancelResponse struct {
     
 }
 
-// TaobaoWlbInventoryDetailGetRequest 查询库存详情，通过商品ID获取发送请求的卖家的库存详情
+/* TaobaoWlbInventoryDetailGetRequest 查询库存详情，通过商品ID获取发送请求的卖家的库存详情 */
 type TaobaoWlbInventoryDetailGetRequest struct {
     
     /* inventory_type_list optional库存类型列表，值包括：
@@ -17411,7 +17411,7 @@ func (req *TaobaoWlbInventoryDetailGetRequest) GetAPIName() string {
 	return "taobao.wlb.inventory.detail.get"
 }
 
-// TaobaoWlbInventoryDetailGetResponse 查询库存详情，通过商品ID获取发送请求的卖家的库存详情
+/* TaobaoWlbInventoryDetailGetResponse 查询库存详情，通过商品ID获取发送请求的卖家的库存详情 */
 type TaobaoWlbInventoryDetailGetResponse struct {
     
     /* inventory_list Object Array库存详情对象。其中包括货主ID，仓库编码，库存，库存类型等属性 */
@@ -17422,7 +17422,7 @@ type TaobaoWlbInventoryDetailGetResponse struct {
     
 }
 
-// TaobaoWlbTradeorderGetRequest 根据交易类型和交易id查询物流宝订单详情
+/* TaobaoWlbTradeorderGetRequest 根据交易类型和交易id查询物流宝订单详情 */
 type TaobaoWlbTradeorderGetRequest struct {
     
     /* sub_trade_id optional子交易号 */
@@ -17440,7 +17440,7 @@ func (req *TaobaoWlbTradeorderGetRequest) GetAPIName() string {
 	return "taobao.wlb.tradeorder.get"
 }
 
-// TaobaoWlbTradeorderGetResponse 根据交易类型和交易id查询物流宝订单详情
+/* TaobaoWlbTradeorderGetResponse 根据交易类型和交易id查询物流宝订单详情 */
 type TaobaoWlbTradeorderGetResponse struct {
     
     /* wlb_order_list Object Array物流宝订单对象 */
@@ -17448,7 +17448,7 @@ type TaobaoWlbTradeorderGetResponse struct {
     
 }
 
-// TaobaoWlbItemQueryRequest 根据状态、卖家、SKU等信息查询商品列表
+/* TaobaoWlbItemQueryRequest 根据状态、卖家、SKU等信息查询商品列表 */
 type TaobaoWlbItemQueryRequest struct {
     
     /* is_sku optional是否是最小库存单元，只有最小库存单元的商品才可以有库存,值只能给"true","false"来表示;  若值不在范围内，则按true处理 */
@@ -17484,7 +17484,7 @@ func (req *TaobaoWlbItemQueryRequest) GetAPIName() string {
 	return "taobao.wlb.item.query"
 }
 
-// TaobaoWlbItemQueryResponse 根据状态、卖家、SKU等信息查询商品列表
+/* TaobaoWlbItemQueryResponse 根据状态、卖家、SKU等信息查询商品列表 */
 type TaobaoWlbItemQueryResponse struct {
     
     /* item_list Object Array商品信息列表 */
@@ -17495,7 +17495,7 @@ type TaobaoWlbItemQueryResponse struct {
     
 }
 
-// TaobaoWlbOrderCreateRequest 创建物流宝订单，由外部ISV或者ERP，Elink，淘宝交易产生
+/* TaobaoWlbOrderCreateRequest 创建物流宝订单，由外部ISV或者ERP，Elink，淘宝交易产生 */
 type TaobaoWlbOrderCreateRequest struct {
     
     /* alipay_no optional支付宝交易号 */
@@ -17602,7 +17602,7 @@ func (req *TaobaoWlbOrderCreateRequest) GetAPIName() string {
 	return "taobao.wlb.order.create"
 }
 
-// TaobaoWlbOrderCreateResponse 创建物流宝订单，由外部ISV或者ERP，Elink，淘宝交易产生
+/* TaobaoWlbOrderCreateResponse 创建物流宝订单，由外部ISV或者ERP，Elink，淘宝交易产生 */
 type TaobaoWlbOrderCreateResponse struct {
     
     /* create_time Basic订单创建时间 */
@@ -17613,7 +17613,7 @@ type TaobaoWlbOrderCreateResponse struct {
     
 }
 
-// QimenTaobaoIcpOrderStockoutordecanceltoerpRequest 出入库单取消推送接口
+/* QimenTaobaoIcpOrderStockoutordecanceltoerpRequest 出入库单取消推送接口 */
 type QimenTaobaoIcpOrderStockoutordecanceltoerpRequest struct {
     
     /* customerId required出库单所属货主ID */
@@ -17628,7 +17628,7 @@ func (req *QimenTaobaoIcpOrderStockoutordecanceltoerpRequest) GetAPIName() strin
 	return "qimen.taobao.icp.order.stockoutordecanceltoerp"
 }
 
-// QimenTaobaoIcpOrderStockoutordecanceltoerpResponse 出入库单取消推送接口
+/* QimenTaobaoIcpOrderStockoutordecanceltoerpResponse 出入库单取消推送接口 */
 type QimenTaobaoIcpOrderStockoutordecanceltoerpResponse struct {
     
     /* response Object */
@@ -17636,7 +17636,7 @@ type QimenTaobaoIcpOrderStockoutordecanceltoerpResponse struct {
     
 }
 
-// TmallItemDescModulesGetRequest 商品描述模块信息获取，包括运营设定的类目级别的模块信息以及用户自定义模块数量约束。
+/* TmallItemDescModulesGetRequest 商品描述模块信息获取，包括运营设定的类目级别的模块信息以及用户自定义模块数量约束。 */
 type TmallItemDescModulesGetRequest struct {
     
     /* cat_id required淘宝后台发布商品的叶子类目id，可通过taobao.itemcats.get查到。api 访问地址http://api.taobao.com/apidoc/api.htm?spm=0.0.0.0.CFhhk4&path=cid:3-apiId:122 */
@@ -17651,7 +17651,7 @@ func (req *TmallItemDescModulesGetRequest) GetAPIName() string {
 	return "tmall.item.desc.modules.get"
 }
 
-// TmallItemDescModulesGetResponse 商品描述模块信息获取，包括运营设定的类目级别的模块信息以及用户自定义模块数量约束。
+/* TmallItemDescModulesGetResponse 商品描述模块信息获取，包括运营设定的类目级别的模块信息以及用户自定义模块数量约束。 */
 type TmallItemDescModulesGetResponse struct {
     
     /* modular_desc_info Object返回描述模块信息 */
@@ -17659,7 +17659,7 @@ type TmallItemDescModulesGetResponse struct {
     
 }
 
-// TaobaoLogisticsConsignOrderCreateandsendRequest 创建物流订单，并发货。
+/* TaobaoLogisticsConsignOrderCreateandsendRequest 创建物流订单，并发货。 */
 type TaobaoLogisticsConsignOrderCreateandsendRequest struct {
     
     /* company_id required物流公司ID */
@@ -17749,7 +17749,7 @@ func (req *TaobaoLogisticsConsignOrderCreateandsendRequest) GetAPIName() string 
 	return "taobao.logistics.consign.order.createandsend"
 }
 
-// TaobaoLogisticsConsignOrderCreateandsendResponse 创建物流订单，并发货。
+/* TaobaoLogisticsConsignOrderCreateandsendResponse 创建物流订单，并发货。 */
 type TaobaoLogisticsConsignOrderCreateandsendResponse struct {
     
     /* is_success Basic是否成功 */
@@ -17763,7 +17763,7 @@ type TaobaoLogisticsConsignOrderCreateandsendResponse struct {
     
 }
 
-// TaobaoInventoryIpcInventorydetailGetRequest 查询库存明细
+/* TaobaoInventoryIpcInventorydetailGetRequest 查询库存明细 */
 type TaobaoInventoryIpcInventorydetailGetRequest struct {
     
     /* biz_order_id optional主订单号，可选 */
@@ -17790,7 +17790,7 @@ func (req *TaobaoInventoryIpcInventorydetailGetRequest) GetAPIName() string {
 	return "taobao.inventory.ipc.inventorydetail.get"
 }
 
-// TaobaoInventoryIpcInventorydetailGetResponse 查询库存明细
+/* TaobaoInventoryIpcInventorydetailGetResponse 查询库存明细 */
 type TaobaoInventoryIpcInventorydetailGetResponse struct {
     
     /* inventory_details Object Array库存明细列表 */
@@ -17798,7 +17798,7 @@ type TaobaoInventoryIpcInventorydetailGetResponse struct {
     
 }
 
-// TaobaoWlbWmsConsignInventoryReleaseRequest ERP释放预占用库存
+/* TaobaoWlbWmsConsignInventoryReleaseRequest ERP释放预占用库存 */
 type TaobaoWlbWmsConsignInventoryReleaseRequest struct {
     
     /* content optional库存释放 */
@@ -17810,7 +17810,7 @@ func (req *TaobaoWlbWmsConsignInventoryReleaseRequest) GetAPIName() string {
 	return "taobao.wlb.wms.consign.inventory.release"
 }
 
-// TaobaoWlbWmsConsignInventoryReleaseResponse ERP释放预占用库存
+/* TaobaoWlbWmsConsignInventoryReleaseResponse ERP释放预占用库存 */
 type TaobaoWlbWmsConsignInventoryReleaseResponse struct {
     
     /* result Object接口返回model */
@@ -17818,7 +17818,7 @@ type TaobaoWlbWmsConsignInventoryReleaseResponse struct {
     
 }
 
-// TaobaoWlbWmsConsignInventoryOccupancyRequest ERP发货库存预占用
+/* TaobaoWlbWmsConsignInventoryOccupancyRequest ERP发货库存预占用 */
 type TaobaoWlbWmsConsignInventoryOccupancyRequest struct {
     
     /* content optional库存占用 */
@@ -17830,7 +17830,7 @@ func (req *TaobaoWlbWmsConsignInventoryOccupancyRequest) GetAPIName() string {
 	return "taobao.wlb.wms.consign.inventory.occupancy"
 }
 
-// TaobaoWlbWmsConsignInventoryOccupancyResponse ERP发货库存预占用
+/* TaobaoWlbWmsConsignInventoryOccupancyResponse ERP发货库存预占用 */
 type TaobaoWlbWmsConsignInventoryOccupancyResponse struct {
     
     /* is_retry Basic返回失败时，是否需求重试，为true时，建议系统自动重试 */
@@ -17853,7 +17853,7 @@ type TaobaoWlbWmsConsignInventoryOccupancyResponse struct {
     
 }
 
-// TaobaoLogisticsAddressSearchRequest 通过此接口查询卖家地址库，
+/* TaobaoLogisticsAddressSearchRequest 通过此接口查询卖家地址库， */
 type TaobaoLogisticsAddressSearchRequest struct {
     
     /* rdef optional可选，参数列表如下：<br><font color='red'>no_def:查询非默认地址<br>get_def:查询默认取货地址，也即对应卖家后台地址库中发货地址（send_def暂不起作用）<br>cancel_def:查询默认退货地址<br>缺省此参数时，查询所有当前用户的地址库</font> */
@@ -17865,7 +17865,7 @@ func (req *TaobaoLogisticsAddressSearchRequest) GetAPIName() string {
 	return "taobao.logistics.address.search"
 }
 
-// TaobaoLogisticsAddressSearchResponse 通过此接口查询卖家地址库，
+/* TaobaoLogisticsAddressSearchResponse 通过此接口查询卖家地址库， */
 type TaobaoLogisticsAddressSearchResponse struct {
     
     /* addresses Object Array一组地址库数据， */
@@ -17873,7 +17873,7 @@ type TaobaoLogisticsAddressSearchResponse struct {
     
 }
 
-// TaobaoLogisticsAddressAddRequest 通过此接口新增卖家地址库,卖家最多可添加5条地址库,新增第一条卖家地址，将会自动设为默认地址库
+/* TaobaoLogisticsAddressAddRequest 通过此接口新增卖家地址库,卖家最多可添加5条地址库,新增第一条卖家地址，将会自动设为默认地址库 */
 type TaobaoLogisticsAddressAddRequest struct {
     
     /* addr required详细街道地址，不需要重复填写省/市/区 */
@@ -17927,7 +17927,7 @@ func (req *TaobaoLogisticsAddressAddRequest) GetAPIName() string {
 	return "taobao.logistics.address.add"
 }
 
-// TaobaoLogisticsAddressAddResponse 通过此接口新增卖家地址库,卖家最多可添加5条地址库,新增第一条卖家地址，将会自动设为默认地址库
+/* TaobaoLogisticsAddressAddResponse 通过此接口新增卖家地址库,卖家最多可添加5条地址库,新增第一条卖家地址，将会自动设为默认地址库 */
 type TaobaoLogisticsAddressAddResponse struct {
     
     /* address_result Object只返回修改日期modify_date */
@@ -17935,10 +17935,10 @@ type TaobaoLogisticsAddressAddResponse struct {
     
 }
 
-// TaobaoLogisticsOnlineSendRequest 用户调用该接口可实现在线订单发货（支持货到付款）
+/* TaobaoLogisticsOnlineSendRequest 用户调用该接口可实现在线订单发货（支持货到付款）
 调用该接口实现在线下单发货，有两种情况：<br>
 <font color='red'>如果不输入运单号的情况：交易状态不会改变，需要调用taobao.logistics.online.confirm确认发货后交易状态才会变成卖家已发货。<br>
-如果输入运单号的情况发货：交易订单状态会直接变成卖家已发货 。</font>
+如果输入运单号的情况发货：交易订单状态会直接变成卖家已发货 。</font> */
 type TaobaoLogisticsOnlineSendRequest struct {
     
     /* cancel_id optional卖家联系人地址库ID，可以通过taobao.logistics.address.search接口查询到地址库ID。 如果为空，取的卖家的默认退货地址 */
@@ -17974,10 +17974,10 @@ func (req *TaobaoLogisticsOnlineSendRequest) GetAPIName() string {
 	return "taobao.logistics.online.send"
 }
 
-// TaobaoLogisticsOnlineSendResponse 用户调用该接口可实现在线订单发货（支持货到付款）
+/* TaobaoLogisticsOnlineSendResponse 用户调用该接口可实现在线订单发货（支持货到付款）
 调用该接口实现在线下单发货，有两种情况：<br>
 <font color='red'>如果不输入运单号的情况：交易状态不会改变，需要调用taobao.logistics.online.confirm确认发货后交易状态才会变成卖家已发货。<br>
-如果输入运单号的情况发货：交易订单状态会直接变成卖家已发货 。</font>
+如果输入运单号的情况发货：交易订单状态会直接变成卖家已发货 。</font> */
 type TaobaoLogisticsOnlineSendResponse struct {
     
     /* shipping Objectde */
@@ -17985,7 +17985,7 @@ type TaobaoLogisticsOnlineSendResponse struct {
     
 }
 
-// TaobaoLogisticsAddressRemoveRequest 用此接口删除卖家地址库
+/* TaobaoLogisticsAddressRemoveRequest 用此接口删除卖家地址库 */
 type TaobaoLogisticsAddressRemoveRequest struct {
     
     /* contact_id required地址库ID */
@@ -17997,7 +17997,7 @@ func (req *TaobaoLogisticsAddressRemoveRequest) GetAPIName() string {
 	return "taobao.logistics.address.remove"
 }
 
-// TaobaoLogisticsAddressRemoveResponse 用此接口删除卖家地址库
+/* TaobaoLogisticsAddressRemoveResponse 用此接口删除卖家地址库 */
 type TaobaoLogisticsAddressRemoveResponse struct {
     
     /* address_result Object只返回修改日期modify_date */
@@ -18005,7 +18005,7 @@ type TaobaoLogisticsAddressRemoveResponse struct {
     
 }
 
-// TaobaoLogisticsAddressModifyRequest 卖家地址库修改
+/* TaobaoLogisticsAddressModifyRequest 卖家地址库修改 */
 type TaobaoLogisticsAddressModifyRequest struct {
     
     /* addr required详细街道地址，不需要重复填写省/市/区 */
@@ -18063,7 +18063,7 @@ func (req *TaobaoLogisticsAddressModifyRequest) GetAPIName() string {
 	return "taobao.logistics.address.modify"
 }
 
-// TaobaoLogisticsAddressModifyResponse 卖家地址库修改
+/* TaobaoLogisticsAddressModifyResponse 卖家地址库修改 */
 type TaobaoLogisticsAddressModifyResponse struct {
     
     /* address_result Object只返回修改时间modify_date */
@@ -18071,7 +18071,7 @@ type TaobaoLogisticsAddressModifyResponse struct {
     
 }
 
-// TaobaoWlbWmsUnknownPackageUploadRequest 有货无单销退入库单消息回传
+/* TaobaoWlbWmsUnknownPackageUploadRequest 有货无单销退入库单消息回传 */
 type TaobaoWlbWmsUnknownPackageUploadRequest struct {
     
     /* content requiredWlbWmsUnknownPackageUpload */
@@ -18083,7 +18083,7 @@ func (req *TaobaoWlbWmsUnknownPackageUploadRequest) GetAPIName() string {
 	return "taobao.wlb.wms.unknown.package.upload"
 }
 
-// TaobaoWlbWmsUnknownPackageUploadResponse 有货无单销退入库单消息回传
+/* TaobaoWlbWmsUnknownPackageUploadResponse 有货无单销退入库单消息回传 */
 type TaobaoWlbWmsUnknownPackageUploadResponse struct {
     
     /* response ObjectWlbWmsUnknownPackageUploadResp */
@@ -18091,7 +18091,7 @@ type TaobaoWlbWmsUnknownPackageUploadResponse struct {
     
 }
 
-// TaobaoTradeReceivetimeDelayRequest 延长交易收货时间
+/* TaobaoTradeReceivetimeDelayRequest 延长交易收货时间 */
 type TaobaoTradeReceivetimeDelayRequest struct {
     
     /* days required延长收货的天数，可选值为：3, 5, 7, 10。 */
@@ -18106,7 +18106,7 @@ func (req *TaobaoTradeReceivetimeDelayRequest) GetAPIName() string {
 	return "taobao.trade.receivetime.delay"
 }
 
-// TaobaoTradeReceivetimeDelayResponse 延长交易收货时间
+/* TaobaoTradeReceivetimeDelayResponse 延长交易收货时间 */
 type TaobaoTradeReceivetimeDelayResponse struct {
     
     /* trade Object更新后的交易数据，只包括tid和modified两个字段。 */
@@ -18114,7 +18114,7 @@ type TaobaoTradeReceivetimeDelayResponse struct {
     
 }
 
-// TaobaoFenxiaoCooperationUpdateRequest 供应商更新合作的分销商等级
+/* TaobaoFenxiaoCooperationUpdateRequest 供应商更新合作的分销商等级 */
 type TaobaoFenxiaoCooperationUpdateRequest struct {
     
     /* distributor_id required分销商ID */
@@ -18132,7 +18132,7 @@ func (req *TaobaoFenxiaoCooperationUpdateRequest) GetAPIName() string {
 	return "taobao.fenxiao.cooperation.update"
 }
 
-// TaobaoFenxiaoCooperationUpdateResponse 供应商更新合作的分销商等级
+/* TaobaoFenxiaoCooperationUpdateResponse 供应商更新合作的分销商等级 */
 type TaobaoFenxiaoCooperationUpdateResponse struct {
     
     /* is_success Basic更新结果成功失败 */
@@ -18140,7 +18140,7 @@ type TaobaoFenxiaoCooperationUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoGradesGetRequest 根据供应商ID，查询他的分销商等级信息
+/* TaobaoFenxiaoGradesGetRequest 根据供应商ID，查询他的分销商等级信息 */
 type TaobaoFenxiaoGradesGetRequest struct {
     
 }
@@ -18149,7 +18149,7 @@ func (req *TaobaoFenxiaoGradesGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.grades.get"
 }
 
-// TaobaoFenxiaoGradesGetResponse 根据供应商ID，查询他的分销商等级信息
+/* TaobaoFenxiaoGradesGetResponse 根据供应商ID，查询他的分销商等级信息 */
 type TaobaoFenxiaoGradesGetResponse struct {
     
     /* fenxiao_grades Object Array分销商等级信息 */
@@ -18157,7 +18157,7 @@ type TaobaoFenxiaoGradesGetResponse struct {
     
 }
 
-// TaobaoFenxiaoDiscountsGetRequest 查询折扣信息
+/* TaobaoFenxiaoDiscountsGetRequest 查询折扣信息 */
 type TaobaoFenxiaoDiscountsGetRequest struct {
     
     /* discount_id optional折扣ID */
@@ -18172,7 +18172,7 @@ func (req *TaobaoFenxiaoDiscountsGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.discounts.get"
 }
 
-// TaobaoFenxiaoDiscountsGetResponse 查询折扣信息
+/* TaobaoFenxiaoDiscountsGetResponse 查询折扣信息 */
 type TaobaoFenxiaoDiscountsGetResponse struct {
     
     /* discounts Object Array折扣数据结构 */
@@ -18183,7 +18183,7 @@ type TaobaoFenxiaoDiscountsGetResponse struct {
     
 }
 
-// QimenTaobaoAlphaxOpenJxtInvoiceRequest isv 开发票接口api
+/* QimenTaobaoAlphaxOpenJxtInvoiceRequest isv 开发票接口api */
 type QimenTaobaoAlphaxOpenJxtInvoiceRequest struct {
     
     /* company_title optional公司抬头 */
@@ -18219,7 +18219,7 @@ func (req *QimenTaobaoAlphaxOpenJxtInvoiceRequest) GetAPIName() string {
 	return "qimen.taobao.alphax.open.jxt.invoice"
 }
 
-// QimenTaobaoAlphaxOpenJxtInvoiceResponse isv 开发票接口api
+/* QimenTaobaoAlphaxOpenJxtInvoiceResponse isv 开发票接口api */
 type QimenTaobaoAlphaxOpenJxtInvoiceResponse struct {
     
     /* result Object返回值 */
@@ -18227,7 +18227,7 @@ type QimenTaobaoAlphaxOpenJxtInvoiceResponse struct {
     
 }
 
-// TaobaoFuwuScoresGetRequest 根据日期、查询appkey对应服务评价，每次调用只能查询某一天服务评价信息，可设置分页查询，页大小最大为100，非实时接口，延迟时间为30分钟
+/* TaobaoFuwuScoresGetRequest 根据日期、查询appkey对应服务评价，每次调用只能查询某一天服务评价信息，可设置分页查询，页大小最大为100，非实时接口，延迟时间为30分钟 */
 type TaobaoFuwuScoresGetRequest struct {
     
     /* current_page required当前页 */
@@ -18245,7 +18245,7 @@ func (req *TaobaoFuwuScoresGetRequest) GetAPIName() string {
 	return "taobao.fuwu.scores.get"
 }
 
-// TaobaoFuwuScoresGetResponse 根据日期、查询appkey对应服务评价，每次调用只能查询某一天服务评价信息，可设置分页查询，页大小最大为100，非实时接口，延迟时间为30分钟
+/* TaobaoFuwuScoresGetResponse 根据日期、查询appkey对应服务评价，每次调用只能查询某一天服务评价信息，可设置分页查询，页大小最大为100，非实时接口，延迟时间为30分钟 */
 type TaobaoFuwuScoresGetResponse struct {
     
     /* score_result Object Array评价流水记录 */
@@ -18253,7 +18253,7 @@ type TaobaoFuwuScoresGetResponse struct {
     
 }
 
-// TaobaoItemSchemaIncrementUpdateRequest 根据schema规则增量修改宝贝信息
+/* TaobaoItemSchemaIncrementUpdateRequest 根据schema规则增量修改宝贝信息 */
 type TaobaoItemSchemaIncrementUpdateRequest struct {
     
     /* category_id optional商品类目id */
@@ -18271,7 +18271,7 @@ func (req *TaobaoItemSchemaIncrementUpdateRequest) GetAPIName() string {
 	return "taobao.item.schema.increment.update"
 }
 
-// TaobaoItemSchemaIncrementUpdateResponse 根据schema规则增量修改宝贝信息
+/* TaobaoItemSchemaIncrementUpdateResponse 根据schema规则增量修改宝贝信息 */
 type TaobaoItemSchemaIncrementUpdateResponse struct {
     
     /* item_id Basic商品id */
@@ -18279,7 +18279,7 @@ type TaobaoItemSchemaIncrementUpdateResponse struct {
     
 }
 
-// TaobaoVasSubscSearchRequest 用于ISV查询自己名下的应用及收费项目的订购记录
+/* TaobaoVasSubscSearchRequest 用于ISV查询自己名下的应用及收费项目的订购记录 */
 type TaobaoVasSubscSearchRequest struct {
     
     /* article_code required应用收费代码，从合作伙伴后台（my.open.taobao.com）-收费管理-收费项目列表 能够获得该应用的收费代码 */
@@ -18318,7 +18318,7 @@ func (req *TaobaoVasSubscSearchRequest) GetAPIName() string {
 	return "taobao.vas.subsc.search"
 }
 
-// TaobaoVasSubscSearchResponse 用于ISV查询自己名下的应用及收费项目的订购记录
+/* TaobaoVasSubscSearchResponse 用于ISV查询自己名下的应用及收费项目的订购记录 */
 type TaobaoVasSubscSearchResponse struct {
     
     /* article_subs Object Array订购关系对象 */
@@ -18329,7 +18329,7 @@ type TaobaoVasSubscSearchResponse struct {
     
 }
 
-// TaobaoItemQuantityUpdateRequest 提供按照全量或增量形式修改宝贝/SKU库存的功能
+/* TaobaoItemQuantityUpdateRequest 提供按照全量或增量形式修改宝贝/SKU库存的功能 */
 type TaobaoItemQuantityUpdateRequest struct {
     
     /* num_iid required商品数字ID，必填参数 */
@@ -18353,7 +18353,7 @@ func (req *TaobaoItemQuantityUpdateRequest) GetAPIName() string {
 	return "taobao.item.quantity.update"
 }
 
-// TaobaoItemQuantityUpdateResponse 提供按照全量或增量形式修改宝贝/SKU库存的功能
+/* TaobaoItemQuantityUpdateResponse 提供按照全量或增量形式修改宝贝/SKU库存的功能 */
 type TaobaoItemQuantityUpdateResponse struct {
     
     /* item Objectiid、numIid、num和modified，skus中每个sku的skuId、quantity和modified */
@@ -18361,10 +18361,10 @@ type TaobaoItemQuantityUpdateResponse struct {
     
 }
 
-// TaobaoVasOrderSearchRequest 用于ISV查询自己名下的应用及收费项目的订单记录（已付款订单）。
+/* TaobaoVasOrderSearchRequest 用于ISV查询自己名下的应用及收费项目的订单记录（已付款订单）。
 建议用于查询前一日的历史记录，不适合用作实时数据查询。
 现在只能查询90天以内的数据
-该接口限制每分钟所有appkey调用总和只能有800次。
+该接口限制每分钟所有appkey调用总和只能有800次。 */
 type TaobaoVasOrderSearchRequest struct {
     
     /* article_code required应用收费代码，从合作伙伴后台（my.open.taobao.com）-收费管理-收费项目列表 能够获得该应用的收费代码 */
@@ -18403,10 +18403,10 @@ func (req *TaobaoVasOrderSearchRequest) GetAPIName() string {
 	return "taobao.vas.order.search"
 }
 
-// TaobaoVasOrderSearchResponse 用于ISV查询自己名下的应用及收费项目的订单记录（已付款订单）。
+/* TaobaoVasOrderSearchResponse 用于ISV查询自己名下的应用及收费项目的订单记录（已付款订单）。
 建议用于查询前一日的历史记录，不适合用作实时数据查询。
 现在只能查询90天以内的数据
-该接口限制每分钟所有appkey调用总和只能有800次。
+该接口限制每分钟所有appkey调用总和只能有800次。 */
 type TaobaoVasOrderSearchResponse struct {
     
     /* article_biz_orders Object Array商品订单对象 */
@@ -18417,7 +18417,7 @@ type TaobaoVasOrderSearchResponse struct {
     
 }
 
-// TaobaoVasSubscribeGetRequest 用于ISV根据登录进来的淘宝会员名查询该为该会员开通哪些收费项目，ISV只能查询自己名下的应用及收费项目的订购情况
+/* TaobaoVasSubscribeGetRequest 用于ISV根据登录进来的淘宝会员名查询该为该会员开通哪些收费项目，ISV只能查询自己名下的应用及收费项目的订购情况 */
 type TaobaoVasSubscribeGetRequest struct {
     
     /* article_code required商品编码，从合作伙伴后台（my.open.taobao.com）-收费管理-收费项目列表 能够获得该应用的商品代码 */
@@ -18432,7 +18432,7 @@ func (req *TaobaoVasSubscribeGetRequest) GetAPIName() string {
 	return "taobao.vas.subscribe.get"
 }
 
-// TaobaoVasSubscribeGetResponse 用于ISV根据登录进来的淘宝会员名查询该为该会员开通哪些收费项目，ISV只能查询自己名下的应用及收费项目的订购情况
+/* TaobaoVasSubscribeGetResponse 用于ISV根据登录进来的淘宝会员名查询该为该会员开通哪些收费项目，ISV只能查询自己名下的应用及收费项目的订购情况 */
 type TaobaoVasSubscribeGetResponse struct {
     
     /* article_user_subscribes Object Array用户订购信息 */
@@ -18440,7 +18440,7 @@ type TaobaoVasSubscribeGetResponse struct {
     
 }
 
-// CainiaoWaybillIiQueryByWaybillcodeRequest 通过面单号查看面单号的当前状态，如签收、发货、失效等。
+/* CainiaoWaybillIiQueryByWaybillcodeRequest 通过面单号查看面单号的当前状态，如签收、发货、失效等。 */
 type CainiaoWaybillIiQueryByWaybillcodeRequest struct {
     
     /* param_list optional系统自动生成 */
@@ -18452,7 +18452,7 @@ func (req *CainiaoWaybillIiQueryByWaybillcodeRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.query.by.waybillcode"
 }
 
-// CainiaoWaybillIiQueryByWaybillcodeResponse 通过面单号查看面单号的当前状态，如签收、发货、失效等。
+/* CainiaoWaybillIiQueryByWaybillcodeResponse 通过面单号查看面单号的当前状态，如签收、发货、失效等。 */
 type CainiaoWaybillIiQueryByWaybillcodeResponse struct {
     
     /* modules Object Array查询返回值 */
@@ -18460,7 +18460,7 @@ type CainiaoWaybillIiQueryByWaybillcodeResponse struct {
     
 }
 
-// CainiaoWaybillIiQueryByTradecodeRequest 通过订单号查看面单的信息
+/* CainiaoWaybillIiQueryByTradecodeRequest 通过订单号查看面单的信息 */
 type CainiaoWaybillIiQueryByTradecodeRequest struct {
     
     /* param_list optional订单号列表 */
@@ -18472,7 +18472,7 @@ func (req *CainiaoWaybillIiQueryByTradecodeRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.query.by.tradecode"
 }
 
-// CainiaoWaybillIiQueryByTradecodeResponse 通过订单号查看面单的信息
+/* CainiaoWaybillIiQueryByTradecodeResponse 通过订单号查看面单的信息 */
 type CainiaoWaybillIiQueryByTradecodeResponse struct {
     
     /* modules Object Array查询返回值 */
@@ -18480,7 +18480,7 @@ type CainiaoWaybillIiQueryByTradecodeResponse struct {
     
 }
 
-// TaobaoWlbOrderConsignRequest 如果erp导入淘宝交易订单到物流宝，当物流宝订单已发货的时候，erp需要调用该接口来通知物流订单和淘宝交易订单已发货
+/* TaobaoWlbOrderConsignRequest 如果erp导入淘宝交易订单到物流宝，当物流宝订单已发货的时候，erp需要调用该接口来通知物流订单和淘宝交易订单已发货 */
 type TaobaoWlbOrderConsignRequest struct {
     
     /* wlb_order_code required物流宝订单编号 */
@@ -18492,7 +18492,7 @@ func (req *TaobaoWlbOrderConsignRequest) GetAPIName() string {
 	return "taobao.wlb.order.consign"
 }
 
-// TaobaoWlbOrderConsignResponse 如果erp导入淘宝交易订单到物流宝，当物流宝订单已发货的时候，erp需要调用该接口来通知物流订单和淘宝交易订单已发货
+/* TaobaoWlbOrderConsignResponse 如果erp导入淘宝交易订单到物流宝，当物流宝订单已发货的时候，erp需要调用该接口来通知物流订单和淘宝交易订单已发货 */
 type TaobaoWlbOrderConsignResponse struct {
     
     /* modify_time Basic修改时间 */
@@ -18500,7 +18500,7 @@ type TaobaoWlbOrderConsignResponse struct {
     
 }
 
-// CainiaoCloudprintSingleCustomareaGetRequest 商家所有快递公司模板只有一个自定义区
+/* CainiaoCloudprintSingleCustomareaGetRequest 商家所有快递公司模板只有一个自定义区 */
 type CainiaoCloudprintSingleCustomareaGetRequest struct {
     
     /* seller_id optional这是商家用户id */
@@ -18512,7 +18512,7 @@ func (req *CainiaoCloudprintSingleCustomareaGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.single.customarea.get"
 }
 
-// CainiaoCloudprintSingleCustomareaGetResponse 商家所有快递公司模板只有一个自定义区
+/* CainiaoCloudprintSingleCustomareaGetResponse 商家所有快递公司模板只有一个自定义区 */
 type CainiaoCloudprintSingleCustomareaGetResponse struct {
     
     /* result Objectresult */
@@ -18520,7 +18520,7 @@ type CainiaoCloudprintSingleCustomareaGetResponse struct {
     
 }
 
-// TaobaoQimenShopSynchronizeRequest 店铺同步接口描述
+/* TaobaoQimenShopSynchronizeRequest 店铺同步接口描述 */
 type TaobaoQimenShopSynchronizeRequest struct {
     
     /* request optional请求 */
@@ -18532,7 +18532,7 @@ func (req *TaobaoQimenShopSynchronizeRequest) GetAPIName() string {
 	return "taobao.qimen.shop.synchronize"
 }
 
-// TaobaoQimenShopSynchronizeResponse 店铺同步接口描述
+/* TaobaoQimenShopSynchronizeResponse 店铺同步接口描述 */
 type TaobaoQimenShopSynchronizeResponse struct {
     
     /* response ObjectResponse */
@@ -18540,7 +18540,7 @@ type TaobaoQimenShopSynchronizeResponse struct {
     
 }
 
-// CainiaoCloudprintIsvtemplatesGetRequest 获取商家使用的标准模板
+/* CainiaoCloudprintIsvtemplatesGetRequest 获取商家使用的标准模板 */
 type CainiaoCloudprintIsvtemplatesGetRequest struct {
     
 }
@@ -18549,7 +18549,7 @@ func (req *CainiaoCloudprintIsvtemplatesGetRequest) GetAPIName() string {
 	return "cainiao.cloudprint.isvtemplates.get"
 }
 
-// CainiaoCloudprintIsvtemplatesGetResponse 获取商家使用的标准模板
+/* CainiaoCloudprintIsvtemplatesGetResponse 获取商家使用的标准模板 */
 type CainiaoCloudprintIsvtemplatesGetResponse struct {
     
     /* result Objectresult */
@@ -18557,7 +18557,7 @@ type CainiaoCloudprintIsvtemplatesGetResponse struct {
     
 }
 
-// AlibabaEinvoiceApplyGetRequest ERP获取开票申请数据
+/* AlibabaEinvoiceApplyGetRequest ERP获取开票申请数据 */
 type AlibabaEinvoiceApplyGetRequest struct {
     
     /* apply_id optional开票申请ID，跟消息中的apply_id对应，传入applyId后，只会返回一条开票申请消息 */
@@ -18572,7 +18572,7 @@ func (req *AlibabaEinvoiceApplyGetRequest) GetAPIName() string {
 	return "alibaba.einvoice.apply.get"
 }
 
-// AlibabaEinvoiceApplyGetResponse ERP获取开票申请数据
+/* AlibabaEinvoiceApplyGetResponse ERP获取开票申请数据 */
 type AlibabaEinvoiceApplyGetResponse struct {
     
     /* apply_list Object Array开票明细 */
@@ -18583,7 +18583,7 @@ type AlibabaEinvoiceApplyGetResponse struct {
     
 }
 
-// TaobaoWlbNotifyMessagePageGetRequest 物流宝提供的消息通知查询接口，消息内容包括;出入库单不一致消息，取消订单成功消息，盘点单消息
+/* TaobaoWlbNotifyMessagePageGetRequest 物流宝提供的消息通知查询接口，消息内容包括;出入库单不一致消息，取消订单成功消息，盘点单消息 */
 type TaobaoWlbNotifyMessagePageGetRequest struct {
     
     /* end_date optional记录截至时间 */
@@ -18610,7 +18610,7 @@ func (req *TaobaoWlbNotifyMessagePageGetRequest) GetAPIName() string {
 	return "taobao.wlb.notify.message.page.get"
 }
 
-// TaobaoWlbNotifyMessagePageGetResponse 物流宝提供的消息通知查询接口，消息内容包括;出入库单不一致消息，取消订单成功消息，盘点单消息
+/* TaobaoWlbNotifyMessagePageGetResponse 物流宝提供的消息通知查询接口，消息内容包括;出入库单不一致消息，取消订单成功消息，盘点单消息 */
 type TaobaoWlbNotifyMessagePageGetResponse struct {
     
     /* total_count Basic2000-01-01 00:00:00 */
@@ -18621,7 +18621,7 @@ type TaobaoWlbNotifyMessagePageGetResponse struct {
     
 }
 
-// CainiaoCloudprintClientinfoPutRequest 云打印客户端监控信息收集
+/* CainiaoCloudprintClientinfoPutRequest 云打印客户端监控信息收集 */
 type CainiaoCloudprintClientinfoPutRequest struct {
     
     /* json_data required客户端上传json数据 */
@@ -18633,7 +18633,7 @@ func (req *CainiaoCloudprintClientinfoPutRequest) GetAPIName() string {
 	return "cainiao.cloudprint.clientinfo.put"
 }
 
-// CainiaoCloudprintClientinfoPutResponse 云打印客户端监控信息收集
+/* CainiaoCloudprintClientinfoPutResponse 云打印客户端监控信息收集 */
 type CainiaoCloudprintClientinfoPutResponse struct {
     
     /* result Objectresult */
@@ -18641,7 +18641,7 @@ type CainiaoCloudprintClientinfoPutResponse struct {
     
 }
 
-// TaobaoWlbNotifyMessageConfirmRequest 确认物流宝可执行消息
+/* TaobaoWlbNotifyMessageConfirmRequest 确认物流宝可执行消息 */
 type TaobaoWlbNotifyMessageConfirmRequest struct {
     
     /* message_id required物流宝通知消息的id，通过taobao.wlb.notify.message.page.get接口得到的WlbMessage数据结构中的id字段 */
@@ -18653,7 +18653,7 @@ func (req *TaobaoWlbNotifyMessageConfirmRequest) GetAPIName() string {
 	return "taobao.wlb.notify.message.confirm"
 }
 
-// TaobaoWlbNotifyMessageConfirmResponse 确认物流宝可执行消息
+/* TaobaoWlbNotifyMessageConfirmResponse 确认物流宝可执行消息 */
 type TaobaoWlbNotifyMessageConfirmResponse struct {
     
     /* gmt_modified Basic物流宝消息确认时间 */
@@ -18661,7 +18661,7 @@ type TaobaoWlbNotifyMessageConfirmResponse struct {
     
 }
 
-// TaobaoWlbItemCombinationGetRequest 根据商品id查询商品组合关系
+/* TaobaoWlbItemCombinationGetRequest 根据商品id查询商品组合关系 */
 type TaobaoWlbItemCombinationGetRequest struct {
     
     /* item_id required要查询的组合商品id */
@@ -18673,7 +18673,7 @@ func (req *TaobaoWlbItemCombinationGetRequest) GetAPIName() string {
 	return "taobao.wlb.item.combination.get"
 }
 
-// TaobaoWlbItemCombinationGetResponse 根据商品id查询商品组合关系
+/* TaobaoWlbItemCombinationGetResponse 根据商品id查询商品组合关系 */
 type TaobaoWlbItemCombinationGetResponse struct {
     
     /* item_id_list Basic Array组合子商品id列表 */
@@ -18681,7 +18681,7 @@ type TaobaoWlbItemCombinationGetResponse struct {
     
 }
 
-// TaobaoWlbItemMapGetRequest 根据物流宝商品ID查询商品映射关系
+/* TaobaoWlbItemMapGetRequest 根据物流宝商品ID查询商品映射关系 */
 type TaobaoWlbItemMapGetRequest struct {
     
     /* item_id required要查询映射关系的物流宝商品id */
@@ -18693,7 +18693,7 @@ func (req *TaobaoWlbItemMapGetRequest) GetAPIName() string {
 	return "taobao.wlb.item.map.get"
 }
 
-// TaobaoWlbItemMapGetResponse 根据物流宝商品ID查询商品映射关系
+/* TaobaoWlbItemMapGetResponse 根据物流宝商品ID查询商品映射关系 */
 type TaobaoWlbItemMapGetResponse struct {
     
     /* is_success Basic是否成功 */
@@ -18704,7 +18704,7 @@ type TaobaoWlbItemMapGetResponse struct {
     
 }
 
-// TaobaoWlbItemMapGetByExtentityRequest 根据外部实体类型和实体id查询映射的物流宝商品id
+/* TaobaoWlbItemMapGetByExtentityRequest 根据外部实体类型和实体id查询映射的物流宝商品id */
 type TaobaoWlbItemMapGetByExtentityRequest struct {
     
     /* ext_entity_id required外部实体类型对应的商品id */
@@ -18719,7 +18719,7 @@ func (req *TaobaoWlbItemMapGetByExtentityRequest) GetAPIName() string {
 	return "taobao.wlb.item.map.get.by.extentity"
 }
 
-// TaobaoWlbItemMapGetByExtentityResponse 根据外部实体类型和实体id查询映射的物流宝商品id
+/* TaobaoWlbItemMapGetByExtentityResponse 根据外部实体类型和实体id查询映射的物流宝商品id */
 type TaobaoWlbItemMapGetByExtentityResponse struct {
     
     /* is_success Basic是否成功 */
@@ -18730,7 +18730,7 @@ type TaobaoWlbItemMapGetByExtentityResponse struct {
     
 }
 
-// TaobaoWlbTmsorderQueryRequest 通过物流订单编号分页查询物流信息
+/* TaobaoWlbTmsorderQueryRequest 通过物流订单编号分页查询物流信息 */
 type TaobaoWlbTmsorderQueryRequest struct {
     
     /* order_code required物流订单编号 */
@@ -18748,7 +18748,7 @@ func (req *TaobaoWlbTmsorderQueryRequest) GetAPIName() string {
 	return "taobao.wlb.tmsorder.query"
 }
 
-// TaobaoWlbTmsorderQueryResponse 通过物流订单编号分页查询物流信息
+/* TaobaoWlbTmsorderQueryResponse 通过物流订单编号分页查询物流信息 */
 type TaobaoWlbTmsorderQueryResponse struct {
     
     /* tms_order_list Object Array物流订单运单信息列表 */
@@ -18759,7 +18759,7 @@ type TaobaoWlbTmsorderQueryResponse struct {
     
 }
 
-// TaobaoItemIncrementUpdateSchemaGetRequest 获取增量更新规则，目前开发的字段有title, subTitle, description, wl_description
+/* TaobaoItemIncrementUpdateSchemaGetRequest 获取增量更新规则，目前开发的字段有title, subTitle, description, wl_description */
 type TaobaoItemIncrementUpdateSchemaGetRequest struct {
     
     /* category_id optional宝贝类目id */
@@ -18777,7 +18777,7 @@ func (req *TaobaoItemIncrementUpdateSchemaGetRequest) GetAPIName() string {
 	return "taobao.item.increment.update.schema.get"
 }
 
-// TaobaoItemIncrementUpdateSchemaGetResponse 获取增量更新规则，目前开发的字段有title, subTitle, description, wl_description
+/* TaobaoItemIncrementUpdateSchemaGetResponse 获取增量更新规则，目前开发的字段有title, subTitle, description, wl_description */
 type TaobaoItemIncrementUpdateSchemaGetResponse struct {
     
     /* update_rules Basic返回的结果集 */
@@ -18785,7 +18785,7 @@ type TaobaoItemIncrementUpdateSchemaGetResponse struct {
     
 }
 
-// TaobaoWlbOrderPageGetRequest 分页查询物流宝订单
+/* TaobaoWlbOrderPageGetRequest 分页查询物流宝订单 */
 type TaobaoWlbOrderPageGetRequest struct {
     
     /* end_time optional查询截止时间 */
@@ -18818,7 +18818,7 @@ func (req *TaobaoWlbOrderPageGetRequest) GetAPIName() string {
 	return "taobao.wlb.order.page.get"
 }
 
-// TaobaoWlbOrderPageGetResponse 分页查询物流宝订单
+/* TaobaoWlbOrderPageGetResponse 分页查询物流宝订单 */
 type TaobaoWlbOrderPageGetResponse struct {
     
     /* order_list Object Array物流宝订单对象 */
@@ -18829,7 +18829,7 @@ type TaobaoWlbOrderPageGetResponse struct {
     
 }
 
-// TaobaoWlbSubscriptionQueryRequest 查询商家定购的所有服务,可通过入参状态来筛选
+/* TaobaoWlbSubscriptionQueryRequest 查询商家定购的所有服务,可通过入参状态来筛选 */
 type TaobaoWlbSubscriptionQueryRequest struct {
     
     /* page_no optional当前页 */
@@ -18853,7 +18853,7 @@ func (req *TaobaoWlbSubscriptionQueryRequest) GetAPIName() string {
 	return "taobao.wlb.subscription.query"
 }
 
-// TaobaoWlbSubscriptionQueryResponse 查询商家定购的所有服务,可通过入参状态来筛选
+/* TaobaoWlbSubscriptionQueryResponse 查询商家定购的所有服务,可通过入参状态来筛选 */
 type TaobaoWlbSubscriptionQueryResponse struct {
     
     /* seller_subscription_list Object Array卖家定购的服务列表 */
@@ -18864,7 +18864,7 @@ type TaobaoWlbSubscriptionQueryResponse struct {
     
 }
 
-// TaobaoWlbItemUpdateRequest 修改物流宝商品信息
+/* TaobaoWlbItemUpdateRequest 修改物流宝商品信息 */
 type TaobaoWlbItemUpdateRequest struct {
     
     /* color optional商品颜色 */
@@ -18927,7 +18927,7 @@ func (req *TaobaoWlbItemUpdateRequest) GetAPIName() string {
 	return "taobao.wlb.item.update"
 }
 
-// TaobaoWlbItemUpdateResponse 修改物流宝商品信息
+/* TaobaoWlbItemUpdateResponse 修改物流宝商品信息 */
 type TaobaoWlbItemUpdateResponse struct {
     
     /* gmt_modified Basic修改时间 */
@@ -18935,7 +18935,7 @@ type TaobaoWlbItemUpdateResponse struct {
     
 }
 
-// TaobaoWlbInventorylogQueryRequest 通过商品ID等几个条件来分页查询库存变更记录
+/* TaobaoWlbInventorylogQueryRequest 通过商品ID等几个条件来分页查询库存变更记录 */
 type TaobaoWlbInventorylogQueryRequest struct {
     
     /* gmt_end optional结束修改时间,小于等于该时间 */
@@ -18971,7 +18971,7 @@ func (req *TaobaoWlbInventorylogQueryRequest) GetAPIName() string {
 	return "taobao.wlb.inventorylog.query"
 }
 
-// TaobaoWlbInventorylogQueryResponse 通过商品ID等几个条件来分页查询库存变更记录
+/* TaobaoWlbInventorylogQueryResponse 通过商品ID等几个条件来分页查询库存变更记录 */
 type TaobaoWlbInventorylogQueryResponse struct {
     
     /* inventory_log_list Object Array库存变更记录 */
@@ -18982,7 +18982,7 @@ type TaobaoWlbInventorylogQueryResponse struct {
     
 }
 
-// TaobaoTopatsJushitaJdpDatadeleteRequest 异步删除rds库数据推送表的数据
+/* TaobaoTopatsJushitaJdpDatadeleteRequest 异步删除rds库数据推送表的数据 */
 type TaobaoTopatsJushitaJdpDatadeleteRequest struct {
     
     /* end_date required删除数据时间段的结束修改时间，格式为：yyyy-MM-dd HH:mm:ss，结束时间必须为前天的23:59:59秒以前，根据是业务的modified时间 */
@@ -19006,7 +19006,7 @@ func (req *TaobaoTopatsJushitaJdpDatadeleteRequest) GetAPIName() string {
 	return "taobao.topats.jushita.jdp.datadelete"
 }
 
-// TaobaoTopatsJushitaJdpDatadeleteResponse 异步删除rds库数据推送表的数据
+/* TaobaoTopatsJushitaJdpDatadeleteResponse 异步删除rds库数据推送表的数据 */
 type TaobaoTopatsJushitaJdpDatadeleteResponse struct {
     
     /* result Objectresult */
@@ -19014,7 +19014,7 @@ type TaobaoTopatsJushitaJdpDatadeleteResponse struct {
     
 }
 
-// CainiaoWaybillIiSearchRequest 获取发货地&CP开通状态&账户的使用情况
+/* CainiaoWaybillIiSearchRequest 获取发货地&CP开通状态&账户的使用情况 */
 type CainiaoWaybillIiSearchRequest struct {
     
     /* cp_code optional物流公司code */
@@ -19026,7 +19026,7 @@ func (req *CainiaoWaybillIiSearchRequest) GetAPIName() string {
 	return "cainiao.waybill.ii.search"
 }
 
-// CainiaoWaybillIiSearchResponse 获取发货地&CP开通状态&账户的使用情况
+/* CainiaoWaybillIiSearchResponse 获取发货地&CP开通状态&账户的使用情况 */
 type CainiaoWaybillIiSearchResponse struct {
     
     /* waybill_apply_subscription_cols Object ArrayCP网点信息及对应的商家的发货信息 */
@@ -19034,7 +19034,7 @@ type CainiaoWaybillIiSearchResponse struct {
     
 }
 
-// TaobaoJushitaJdpUsersGetRequest 获取开通的订单同步服务的用户，含有rds的路由关系
+/* TaobaoJushitaJdpUsersGetRequest 获取开通的订单同步服务的用户，含有rds的路由关系 */
 type TaobaoJushitaJdpUsersGetRequest struct {
     
     /* end_modified optional此参数一般不用传，用于查询最后更改时间在某个时间段内的用户 */
@@ -19061,7 +19061,7 @@ func (req *TaobaoJushitaJdpUsersGetRequest) GetAPIName() string {
 	return "taobao.jushita.jdp.users.get"
 }
 
-// TaobaoJushitaJdpUsersGetResponse 获取开通的订单同步服务的用户，含有rds的路由关系
+/* TaobaoJushitaJdpUsersGetResponse 获取开通的订单同步服务的用户，含有rds的路由关系 */
 type TaobaoJushitaJdpUsersGetResponse struct {
     
     /* total_results Basic总记录数 */
@@ -19072,7 +19072,7 @@ type TaobaoJushitaJdpUsersGetResponse struct {
     
 }
 
-// TaobaoShopGetbytitleRequest 根据店铺名称获取店铺信息
+/* TaobaoShopGetbytitleRequest 根据店铺名称获取店铺信息 */
 type TaobaoShopGetbytitleRequest struct {
     
     /* fields optional代表需要获取的店铺信息：sid,cid,title,nick,desc,bulletin,pic_path,created,modified,shop_score */
@@ -19087,7 +19087,7 @@ func (req *TaobaoShopGetbytitleRequest) GetAPIName() string {
 	return "taobao.shop.getbytitle"
 }
 
-// TaobaoShopGetbytitleResponse 根据店铺名称获取店铺信息
+/* TaobaoShopGetbytitleResponse 根据店铺名称获取店铺信息 */
 type TaobaoShopGetbytitleResponse struct {
     
     /* err_code Basic错误码 */
@@ -19104,7 +19104,7 @@ type TaobaoShopGetbytitleResponse struct {
     
 }
 
-// TmallProductSchemaAddRequest Schema体系发布一个产品
+/* TmallProductSchemaAddRequest Schema体系发布一个产品 */
 type TmallProductSchemaAddRequest struct {
     
     /* brand_id special品牌ID */
@@ -19122,7 +19122,7 @@ func (req *TmallProductSchemaAddRequest) GetAPIName() string {
 	return "tmall.product.schema.add"
 }
 
-// TmallProductSchemaAddResponse Schema体系发布一个产品
+/* TmallProductSchemaAddResponse Schema体系发布一个产品 */
 type TmallProductSchemaAddResponse struct {
     
     /* add_product_result Basic新发产品结果 */
@@ -19130,7 +19130,7 @@ type TmallProductSchemaAddResponse struct {
     
 }
 
-// TmallProductAddSchemaGetRequest 获取用户发布产品的规则
+/* TmallProductAddSchemaGetRequest 获取用户发布产品的规则 */
 type TmallProductAddSchemaGetRequest struct {
     
     /* brand_id special品牌ID */
@@ -19145,7 +19145,7 @@ func (req *TmallProductAddSchemaGetRequest) GetAPIName() string {
 	return "tmall.product.add.schema.get"
 }
 
-// TmallProductAddSchemaGetResponse 获取用户发布产品的规则
+/* TmallProductAddSchemaGetResponse 获取用户发布产品的规则 */
 type TmallProductAddSchemaGetResponse struct {
     
     /* add_product_rule Basic返回发布产品的规则文档 */
@@ -19153,7 +19153,7 @@ type TmallProductAddSchemaGetResponse struct {
     
 }
 
-// TaobaoQimenReturnapplyReportRequest 退货异常包裹单通知接口
+/* TaobaoQimenReturnapplyReportRequest 退货异常包裹单通知接口 */
 type TaobaoQimenReturnapplyReportRequest struct {
     
     /* request optional */
@@ -19165,7 +19165,7 @@ func (req *TaobaoQimenReturnapplyReportRequest) GetAPIName() string {
 	return "taobao.qimen.returnapply.report"
 }
 
-// TaobaoQimenReturnapplyReportResponse 退货异常包裹单通知接口
+/* TaobaoQimenReturnapplyReportResponse 退货异常包裹单通知接口 */
 type TaobaoQimenReturnapplyReportResponse struct {
     
     /* response Object */
@@ -19173,7 +19173,7 @@ type TaobaoQimenReturnapplyReportResponse struct {
     
 }
 
-// QimenTaobaoAlphaxOpenGetExpressRequest 调用接口 从isv获取  商家配置物流公司名单
+/* QimenTaobaoAlphaxOpenGetExpressRequest 调用接口 从isv获取  商家配置物流公司名单 */
 type QimenTaobaoAlphaxOpenGetExpressRequest struct {
     
     /* seller_id required卖家id */
@@ -19188,7 +19188,7 @@ func (req *QimenTaobaoAlphaxOpenGetExpressRequest) GetAPIName() string {
 	return "qimen.taobao.alphax.open.get.express"
 }
 
-// QimenTaobaoAlphaxOpenGetExpressResponse 调用接口 从isv获取  商家配置物流公司名单
+/* QimenTaobaoAlphaxOpenGetExpressResponse 调用接口 从isv获取  商家配置物流公司名单 */
 type QimenTaobaoAlphaxOpenGetExpressResponse struct {
     
     /* result Object返回值 */
@@ -19196,7 +19196,7 @@ type QimenTaobaoAlphaxOpenGetExpressResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderCloseRequest 供应商或分销商关闭采购申请/经销采购单
+/* TaobaoFenxiaoDealerRequisitionorderCloseRequest 供应商或分销商关闭采购申请/经销采购单 */
 type TaobaoFenxiaoDealerRequisitionorderCloseRequest struct {
     
     /* dealer_order_id required经销采购单编号 */
@@ -19219,7 +19219,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderCloseRequest) GetAPIName() string 
 	return "taobao.fenxiao.dealer.requisitionorder.close"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderCloseResponse 供应商或分销商关闭采购申请/经销采购单
+/* TaobaoFenxiaoDealerRequisitionorderCloseResponse 供应商或分销商关闭采购申请/经销采购单 */
 type TaobaoFenxiaoDealerRequisitionorderCloseResponse struct {
     
     /* is_success Basic操作是否成功。true：成功；false：失败。 */
@@ -19227,7 +19227,7 @@ type TaobaoFenxiaoDealerRequisitionorderCloseResponse struct {
     
 }
 
-// TmallItemAddSchemaGetRequest 通过类目以及productId获取商品发布规则；
+/* TmallItemAddSchemaGetRequest 通过类目以及productId获取商品发布规则； */
 type TmallItemAddSchemaGetRequest struct {
     
     /* category_id required商品发布的目标类目，必须是叶子类目 */
@@ -19248,7 +19248,7 @@ func (req *TmallItemAddSchemaGetRequest) GetAPIName() string {
 	return "tmall.item.add.schema.get"
 }
 
-// TmallItemAddSchemaGetResponse 通过类目以及productId获取商品发布规则；
+/* TmallItemAddSchemaGetResponse 通过类目以及productId获取商品发布规则； */
 type TmallItemAddSchemaGetResponse struct {
     
     /* add_item_result Basic返回发布商品的规则文档 */
@@ -19256,7 +19256,7 @@ type TmallItemAddSchemaGetResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderAgreeRequest 供应商或分销商通过采购申请/经销采购单审核
+/* TaobaoFenxiaoDealerRequisitionorderAgreeRequest 供应商或分销商通过采购申请/经销采购单审核 */
 type TaobaoFenxiaoDealerRequisitionorderAgreeRequest struct {
     
     /* dealer_order_id required采购申请/经销采购单编号 */
@@ -19268,7 +19268,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderAgreeRequest) GetAPIName() string 
 	return "taobao.fenxiao.dealer.requisitionorder.agree"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderAgreeResponse 供应商或分销商通过采购申请/经销采购单审核
+/* TaobaoFenxiaoDealerRequisitionorderAgreeResponse 供应商或分销商通过采购申请/经销采购单审核 */
 type TaobaoFenxiaoDealerRequisitionorderAgreeResponse struct {
     
     /* is_success Basic操作是否成功。true：成功；false：失败。 */
@@ -19276,7 +19276,7 @@ type TaobaoFenxiaoDealerRequisitionorderAgreeResponse struct {
     
 }
 
-// TmallProductSchemaMatchRequest 根据tmall.product.match.schema.get获取到的规则，填充相应地的字段值以及类目，匹配符合条件的产品，返回匹配product结果，注意，有可能返回多个产品ID，以逗号分隔（尤其是图书类目）；
+/* TmallProductSchemaMatchRequest 根据tmall.product.match.schema.get获取到的规则，填充相应地的字段值以及类目，匹配符合条件的产品，返回匹配product结果，注意，有可能返回多个产品ID，以逗号分隔（尤其是图书类目）； */
 type TmallProductSchemaMatchRequest struct {
     
     /* category_id required商品发布的目标类目，必须是叶子类目 */
@@ -19291,7 +19291,7 @@ func (req *TmallProductSchemaMatchRequest) GetAPIName() string {
 	return "tmall.product.schema.match"
 }
 
-// TmallProductSchemaMatchResponse 根据tmall.product.match.schema.get获取到的规则，填充相应地的字段值以及类目，匹配符合条件的产品，返回匹配product结果，注意，有可能返回多个产品ID，以逗号分隔（尤其是图书类目）；
+/* TmallProductSchemaMatchResponse 根据tmall.product.match.schema.get获取到的规则，填充相应地的字段值以及类目，匹配符合条件的产品，返回匹配product结果，注意，有可能返回多个产品ID，以逗号分隔（尤其是图书类目）； */
 type TmallProductSchemaMatchResponse struct {
     
     /* match_result Basic返回匹配产品ID，部分类目可能返回多个产品ID，以逗号分隔。 */
@@ -19299,7 +19299,7 @@ type TmallProductSchemaMatchResponse struct {
     
 }
 
-// TmallProductMatchSchemaGetRequest ISV发布商品前，需要先查找到产品ID，这个接口返回查找产品规则入参规则
+/* TmallProductMatchSchemaGetRequest ISV发布商品前，需要先查找到产品ID，这个接口返回查找产品规则入参规则 */
 type TmallProductMatchSchemaGetRequest struct {
     
     /* category_id required商品发布的目标类目，必须是叶子类目 */
@@ -19311,7 +19311,7 @@ func (req *TmallProductMatchSchemaGetRequest) GetAPIName() string {
 	return "tmall.product.match.schema.get"
 }
 
-// TmallProductMatchSchemaGetResponse ISV发布商品前，需要先查找到产品ID，这个接口返回查找产品规则入参规则
+/* TmallProductMatchSchemaGetResponse ISV发布商品前，需要先查找到产品ID，这个接口返回查找产品规则入参规则 */
 type TmallProductMatchSchemaGetResponse struct {
     
     /* match_result Basic返回匹配product的规则文档 */
@@ -19319,7 +19319,7 @@ type TmallProductMatchSchemaGetResponse struct {
     
 }
 
-// TmallItemSchemaAddRequest 天猫TopSchema发布商品。
+/* TmallItemSchemaAddRequest 天猫TopSchema发布商品。 */
 type TmallItemSchemaAddRequest struct {
     
     /* category_id required商品发布的目标类目，必须是叶子类目 */
@@ -19337,7 +19337,7 @@ func (req *TmallItemSchemaAddRequest) GetAPIName() string {
 	return "tmall.item.schema.add"
 }
 
-// TmallItemSchemaAddResponse 天猫TopSchema发布商品。
+/* TmallItemSchemaAddResponse 天猫TopSchema发布商品。 */
 type TmallItemSchemaAddResponse struct {
     
     /* add_item_result Basic返回商品发布结果 */
@@ -19348,7 +19348,7 @@ type TmallItemSchemaAddResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderGetRequest 批量查询采购申请/经销采购单，目前支持供应商和分销商查询
+/* TaobaoFenxiaoDealerRequisitionorderGetRequest 批量查询采购申请/经销采购单，目前支持供应商和分销商查询 */
 type TaobaoFenxiaoDealerRequisitionorderGetRequest struct {
     
     /* end_date required采购申请/经销采购单最迟修改时间。与start_date字段的最大时间间隔不能超过30天 */
@@ -19393,7 +19393,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderGetRequest) GetAPIName() string {
 	return "taobao.fenxiao.dealer.requisitionorder.get"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderGetResponse 批量查询采购申请/经销采购单，目前支持供应商和分销商查询
+/* TaobaoFenxiaoDealerRequisitionorderGetResponse 批量查询采购申请/经销采购单，目前支持供应商和分销商查询 */
 type TaobaoFenxiaoDealerRequisitionorderGetResponse struct {
     
     /* dealer_orders Object Array采购申请/经销采购单结果列表 */
@@ -19404,7 +19404,7 @@ type TaobaoFenxiaoDealerRequisitionorderGetResponse struct {
     
 }
 
-// TaobaoQimenOrderstatusUpdateRequest 星盘和ISV，可以通过此接口，来更新订单状态。此接口应用于使用阿里星盘分单，且使用商家系统（非阿里掌柜）接单/拒单的模式下更新订单状态。
+/* TaobaoQimenOrderstatusUpdateRequest 星盘和ISV，可以通过此接口，来更新订单状态。此接口应用于使用阿里星盘分单，且使用商家系统（非阿里掌柜）接单/拒单的模式下更新订单状态。 */
 type TaobaoQimenOrderstatusUpdateRequest struct {
     
     /* action_time optional事件发生时间 */
@@ -19434,7 +19434,7 @@ func (req *TaobaoQimenOrderstatusUpdateRequest) GetAPIName() string {
 	return "taobao.qimen.orderstatus.update"
 }
 
-// TaobaoQimenOrderstatusUpdateResponse 星盘和ISV，可以通过此接口，来更新订单状态。此接口应用于使用阿里星盘分单，且使用商家系统（非阿里掌柜）接单/拒单的模式下更新订单状态。
+/* TaobaoQimenOrderstatusUpdateResponse 星盘和ISV，可以通过此接口，来更新订单状态。此接口应用于使用阿里星盘分单，且使用商家系统（非阿里掌柜）接单/拒单的模式下更新订单状态。 */
 type TaobaoQimenOrderstatusUpdateResponse struct {
     
     /* is_success Basicsuccess */
@@ -19448,7 +19448,7 @@ type TaobaoQimenOrderstatusUpdateResponse struct {
     
 }
 
-// TaobaoFenxiaoDealerRequisitionorderQueryRequest 按编号查询采购申请/经销采购单，目前支持供应商和分销商查询。
+/* TaobaoFenxiaoDealerRequisitionorderQueryRequest 按编号查询采购申请/经销采购单，目前支持供应商和分销商查询。 */
 type TaobaoFenxiaoDealerRequisitionorderQueryRequest struct {
     
     /* dealer_order_ids required经销采购单编号。
@@ -19464,7 +19464,7 @@ func (req *TaobaoFenxiaoDealerRequisitionorderQueryRequest) GetAPIName() string 
 	return "taobao.fenxiao.dealer.requisitionorder.query"
 }
 
-// TaobaoFenxiaoDealerRequisitionorderQueryResponse 按编号查询采购申请/经销采购单，目前支持供应商和分销商查询。
+/* TaobaoFenxiaoDealerRequisitionorderQueryResponse 按编号查询采购申请/经销采购单，目前支持供应商和分销商查询。 */
 type TaobaoFenxiaoDealerRequisitionorderQueryResponse struct {
     
     /* dealer_orders Object Array经销采购单结果列表 */
@@ -19472,7 +19472,7 @@ type TaobaoFenxiaoDealerRequisitionorderQueryResponse struct {
     
 }
 
-// TaobaoQimenEventProduceRequest 当订单被处理时，用于通知奇门系统。
+/* TaobaoQimenEventProduceRequest 当订单被处理时，用于通知奇门系统。 */
 type TaobaoQimenEventProduceRequest struct {
     
     /* create optional订单创建时间,数字 */
@@ -19499,7 +19499,7 @@ func (req *TaobaoQimenEventProduceRequest) GetAPIName() string {
 	return "taobao.qimen.event.produce"
 }
 
-// TaobaoQimenEventProduceResponse 当订单被处理时，用于通知奇门系统。
+/* TaobaoQimenEventProduceResponse 当订单被处理时，用于通知奇门系统。 */
 type TaobaoQimenEventProduceResponse struct {
     
     /* is_success Basic是否成功 */
@@ -19507,7 +19507,7 @@ type TaobaoQimenEventProduceResponse struct {
     
 }
 
-// TaobaoQimenEventsProduceRequest 批量发送消息
+/* TaobaoQimenEventsProduceRequest 批量发送消息 */
 type TaobaoQimenEventsProduceRequest struct {
     
     /* messages required奇门事件列表, 最多50条 */
@@ -19519,7 +19519,7 @@ func (req *TaobaoQimenEventsProduceRequest) GetAPIName() string {
 	return "taobao.qimen.events.produce"
 }
 
-// TaobaoQimenEventsProduceResponse 批量发送消息
+/* TaobaoQimenEventsProduceResponse 批量发送消息 */
 type TaobaoQimenEventsProduceResponse struct {
     
     /* is_all_success Basic是否全部成功 */
@@ -19530,7 +19530,7 @@ type TaobaoQimenEventsProduceResponse struct {
     
 }
 
-// TaobaoFenxiaoTradePrepayOfflineReduceRequest 渠道分销供应商上传线下流水预存款（减少）
+/* TaobaoFenxiaoTradePrepayOfflineReduceRequest 渠道分销供应商上传线下流水预存款（减少） */
 type TaobaoFenxiaoTradePrepayOfflineReduceRequest struct {
     
     /* offline_reduce_prepay_param required减少流水 */
@@ -19542,7 +19542,7 @@ func (req *TaobaoFenxiaoTradePrepayOfflineReduceRequest) GetAPIName() string {
 	return "taobao.fenxiao.trade.prepay.offline.reduce"
 }
 
-// TaobaoFenxiaoTradePrepayOfflineReduceResponse 渠道分销供应商上传线下流水预存款（减少）
+/* TaobaoFenxiaoTradePrepayOfflineReduceResponse 渠道分销供应商上传线下流水预存款（减少） */
 type TaobaoFenxiaoTradePrepayOfflineReduceResponse struct {
     
     /* result Objectresult */
@@ -19550,7 +19550,7 @@ type TaobaoFenxiaoTradePrepayOfflineReduceResponse struct {
     
 }
 
-// TaobaoQimenTradeUserAddRequest 添加奇门订单链路用户
+/* TaobaoQimenTradeUserAddRequest 添加奇门订单链路用户 */
 type TaobaoQimenTradeUserAddRequest struct {
     
     /* memo optional商家备注 */
@@ -19562,7 +19562,7 @@ func (req *TaobaoQimenTradeUserAddRequest) GetAPIName() string {
 	return "taobao.qimen.trade.user.add"
 }
 
-// TaobaoQimenTradeUserAddResponse 添加奇门订单链路用户
+/* TaobaoQimenTradeUserAddResponse 添加奇门订单链路用户 */
 type TaobaoQimenTradeUserAddResponse struct {
     
     /* appkey Basicappkey */
@@ -19576,7 +19576,7 @@ type TaobaoQimenTradeUserAddResponse struct {
     
 }
 
-// TaobaoFenxiaoTradePrepayOfflineAddRequest 渠道分销供应商上传线下流水预存款（增加）
+/* TaobaoFenxiaoTradePrepayOfflineAddRequest 渠道分销供应商上传线下流水预存款（增加） */
 type TaobaoFenxiaoTradePrepayOfflineAddRequest struct {
     
     /* offline_add_prepay_param required增加流水 */
@@ -19588,7 +19588,7 @@ func (req *TaobaoFenxiaoTradePrepayOfflineAddRequest) GetAPIName() string {
 	return "taobao.fenxiao.trade.prepay.offline.add"
 }
 
-// TaobaoFenxiaoTradePrepayOfflineAddResponse 渠道分销供应商上传线下流水预存款（增加）
+/* TaobaoFenxiaoTradePrepayOfflineAddResponse 渠道分销供应商上传线下流水预存款（增加） */
 type TaobaoFenxiaoTradePrepayOfflineAddResponse struct {
     
     /* result Objectresult */
@@ -19596,7 +19596,7 @@ type TaobaoFenxiaoTradePrepayOfflineAddResponse struct {
     
 }
 
-// TaobaoQimenTradeUserDeleteRequest 删除奇门订单链路用户
+/* TaobaoQimenTradeUserDeleteRequest 删除奇门订单链路用户 */
 type TaobaoQimenTradeUserDeleteRequest struct {
     
 }
@@ -19605,7 +19605,7 @@ func (req *TaobaoQimenTradeUserDeleteRequest) GetAPIName() string {
 	return "taobao.qimen.trade.user.delete"
 }
 
-// TaobaoQimenTradeUserDeleteResponse 删除奇门订单链路用户
+/* TaobaoQimenTradeUserDeleteResponse 删除奇门订单链路用户 */
 type TaobaoQimenTradeUserDeleteResponse struct {
     
     /* modal Basicmodal */
@@ -19613,7 +19613,7 @@ type TaobaoQimenTradeUserDeleteResponse struct {
     
 }
 
-// TaobaoQimenTradeUsersGetRequest 获取已开通奇门订单服务的用户列表
+/* TaobaoQimenTradeUsersGetRequest 获取已开通奇门订单服务的用户列表 */
 type TaobaoQimenTradeUsersGetRequest struct {
     
     /* page_index required每页的数量 */
@@ -19628,7 +19628,7 @@ func (req *TaobaoQimenTradeUsersGetRequest) GetAPIName() string {
 	return "taobao.qimen.trade.users.get"
 }
 
-// TaobaoQimenTradeUsersGetResponse 获取已开通奇门订单服务的用户列表
+/* TaobaoQimenTradeUsersGetResponse 获取已开通奇门订单服务的用户列表 */
 type TaobaoQimenTradeUsersGetResponse struct {
     
     /* total_count BasictotalCount */
@@ -19639,7 +19639,7 @@ type TaobaoQimenTradeUsersGetResponse struct {
     
 }
 
-// TaobaoItemSchemaUpdateRequest 新模式下的商品编辑接口，在调用该接口的时候，需要先调用taobao.item.update.rules.get接口获取编辑规则和数据集。然后按照约定的参数传入规则，调用该接口进行编辑商品
+/* TaobaoItemSchemaUpdateRequest 新模式下的商品编辑接口，在调用该接口的时候，需要先调用taobao.item.update.rules.get接口获取编辑规则和数据集。然后按照约定的参数传入规则，调用该接口进行编辑商品 */
 type TaobaoItemSchemaUpdateRequest struct {
     
     /* category_id optional如果重新选择类目后，传入重新选择的叶子类目id */
@@ -19660,7 +19660,7 @@ func (req *TaobaoItemSchemaUpdateRequest) GetAPIName() string {
 	return "taobao.item.schema.update"
 }
 
-// TaobaoItemSchemaUpdateResponse 新模式下的商品编辑接口，在调用该接口的时候，需要先调用taobao.item.update.rules.get接口获取编辑规则和数据集。然后按照约定的参数传入规则，调用该接口进行编辑商品
+/* TaobaoItemSchemaUpdateResponse 新模式下的商品编辑接口，在调用该接口的时候，需要先调用taobao.item.update.rules.get接口获取编辑规则和数据集。然后按照约定的参数传入规则，调用该接口进行编辑商品 */
 type TaobaoItemSchemaUpdateResponse struct {
     
     /* update_result Basic编辑商品返回的结果信息，暂时只返回 itemId */
@@ -19668,7 +19668,7 @@ type TaobaoItemSchemaUpdateResponse struct {
     
 }
 
-// TaobaoItemAddSchemaGetRequest 在新的发布模式下，isv需要先获取一份发布规则，然后根据规则传入数据。该接口提供规则查询功能
+/* TaobaoItemAddSchemaGetRequest 在新的发布模式下，isv需要先获取一份发布规则，然后根据规则传入数据。该接口提供规则查询功能 */
 type TaobaoItemAddSchemaGetRequest struct {
     
     /* category_id required发布宝贝的叶子类目id */
@@ -19680,7 +19680,7 @@ func (req *TaobaoItemAddSchemaGetRequest) GetAPIName() string {
 	return "taobao.item.add.schema.get"
 }
 
-// TaobaoItemAddSchemaGetResponse 在新的发布模式下，isv需要先获取一份发布规则，然后根据规则传入数据。该接口提供规则查询功能
+/* TaobaoItemAddSchemaGetResponse 在新的发布模式下，isv需要先获取一份发布规则，然后根据规则传入数据。该接口提供规则查询功能 */
 type TaobaoItemAddSchemaGetResponse struct {
     
     /* add_rules Basic返回结果的集合 */
@@ -19688,7 +19688,7 @@ type TaobaoItemAddSchemaGetResponse struct {
     
 }
 
-// TaobaoItemSchemaAddRequest isv将宝贝信息，组装成特定格式的xml数据作为参数，进行发布商品
+/* TaobaoItemSchemaAddRequest isv将宝贝信息，组装成特定格式的xml数据作为参数，进行发布商品 */
 type TaobaoItemSchemaAddRequest struct {
     
     /* category_id required当前发布的叶子类目 */
@@ -19703,7 +19703,7 @@ func (req *TaobaoItemSchemaAddRequest) GetAPIName() string {
 	return "taobao.item.schema.add"
 }
 
-// TaobaoItemSchemaAddResponse isv将宝贝信息，组装成特定格式的xml数据作为参数，进行发布商品
+/* TaobaoItemSchemaAddResponse isv将宝贝信息，组装成特定格式的xml数据作为参数，进行发布商品 */
 type TaobaoItemSchemaAddResponse struct {
     
     /* add_result Basic返回的结果 */
@@ -19711,7 +19711,7 @@ type TaobaoItemSchemaAddResponse struct {
     
 }
 
-// TaobaoItemUpdateSchemaGetRequest 在新的编辑模式下，isv需要先获取一份编辑商品的规则和数据，然后根据规则传入数据。该接口提供编辑规则查询功能
+/* TaobaoItemUpdateSchemaGetRequest 在新的编辑模式下，isv需要先获取一份编辑商品的规则和数据，然后根据规则传入数据。该接口提供编辑规则查询功能 */
 type TaobaoItemUpdateSchemaGetRequest struct {
     
     /* category_id optional商品类目id */
@@ -19726,7 +19726,7 @@ func (req *TaobaoItemUpdateSchemaGetRequest) GetAPIName() string {
 	return "taobao.item.update.schema.get"
 }
 
-// TaobaoItemUpdateSchemaGetResponse 在新的编辑模式下，isv需要先获取一份编辑商品的规则和数据，然后根据规则传入数据。该接口提供编辑规则查询功能
+/* TaobaoItemUpdateSchemaGetResponse 在新的编辑模式下，isv需要先获取一份编辑商品的规则和数据，然后根据规则传入数据。该接口提供编辑规则查询功能 */
 type TaobaoItemUpdateSchemaGetResponse struct {
     
     /* update_rules Basic返回的结果集 */

@@ -3,7 +3,7 @@ package tbsdk
 import "time"
 
 
-// RegionalPriceDto 列表
+/* RegionalPriceDto 列表 */
 type RegionalPriceDto struct{
     
     /* city Basic市 */
@@ -17,7 +17,7 @@ type RegionalPriceDto struct{
     
 }
 
-// TmcQueueInfo 队列详细信息
+/* TmcQueueInfo 队列详细信息 */
 type TmcQueueInfo struct{
     
     /* broker_name Basic消息队列Broker名称 */
@@ -34,7 +34,7 @@ type TmcQueueInfo struct{
     
 }
 
-// RegionalPriceDto 不传则返回所有设置的区域价格
+/* RegionalPriceDto 不传则返回所有设置的区域价格 */
 type RegionalPriceDto struct{
     
     /* city Basic市 */
@@ -51,7 +51,7 @@ type RegionalPriceDto struct{
     
 }
 
-// BaseResult result
+/* BaseResult result */
 type BaseResult struct{
     
     /* data Basicdata */
@@ -68,7 +68,7 @@ type BaseResult struct{
     
 }
 
-// Item 商品库存信息列表
+/* Item 商品库存信息列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -112,7 +112,7 @@ type Item struct{
     
 }
 
-// Item 商品库存列表
+/* Item 商品库存列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -147,7 +147,7 @@ type Item struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -173,7 +173,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -193,7 +193,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 同步的商品信息
+/* Item 同步的商品信息 */
 type Item struct{
     
     /* actualAmount Basictemp */
@@ -501,7 +501,7 @@ type Item struct{
     
 }
 
-// BatchItemSynItem 商品同步批量接口中单商品信息
+/* BatchItemSynItem 商品同步批量接口中单商品信息 */
 type BatchItemSynItem struct{
     
     /* itemCode Basic没有同步成功的商品的编码 */
@@ -512,7 +512,7 @@ type BatchItemSynItem struct{
     
 }
 
-// Order 发货单号
+/* Order 发货单号 */
 type Order struct{
     
     /* deliveryOrderCode Basic出库单号 */
@@ -526,7 +526,7 @@ type Order struct{
     
 }
 
-// TopQueryProductDo top_query_product_d_o
+/* TopQueryProductDo top_query_product_d_o */
 type TopQueryProductDo struct{
     
     /* channel Basic渠道[21 零售plus] */
@@ -555,7 +555,7 @@ type TopQueryProductDo struct{
     
 }
 
-// ProductSkuDo 分销产品SKU列表
+/* ProductSkuDo 分销产品SKU列表 */
 type ProductSkuDo struct{
     
     /* auction_sku_id Basic关联的前端宝贝skuid */
@@ -593,7 +593,7 @@ type ProductSkuDo struct{
     
 }
 
-// TopProductDO 产品对象记录集
+/* TopProductDO 产品对象记录集 */
 type TopProductDO struct{
     
     /* auction_id Basic关联的前台宝贝id */
@@ -685,7 +685,7 @@ type TopProductDO struct{
     
 }
 
-// WaybillApplyCancelRequest 取消接口入参
+/* WaybillApplyCancelRequest 取消接口入参 */
 type WaybillApplyCancelRequest struct{
     
     /* cp_code BasicCP快递公司编码 */
@@ -705,7 +705,7 @@ type WaybillApplyCancelRequest struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -728,7 +728,7 @@ type WaybillAddress struct{
     
 }
 
-// LogisticsService 物流服务能力集合
+/* LogisticsService 物流服务能力集合 */
 type LogisticsService struct{
     
     /* service_code Basic服务编码 */
@@ -739,7 +739,7 @@ type LogisticsService struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -762,7 +762,7 @@ type WaybillAddress struct{
     
 }
 
-// PrintCheckInfo 面单详情信息
+/* PrintCheckInfo 面单详情信息 */
 type PrintCheckInfo struct{
     
     /* consignee_address Object收\发货地址 */
@@ -827,7 +827,7 @@ type PrintCheckInfo struct{
     
 }
 
-// WaybillApplyPrintCheckRequest 打印请求
+/* WaybillApplyPrintCheckRequest 打印请求 */
 type WaybillApplyPrintCheckRequest struct{
     
     /* cp_code Basic物流服务商Code */
@@ -838,7 +838,7 @@ type WaybillApplyPrintCheckRequest struct{
     
 }
 
-// Item demo
+/* Item demo */
 type Item struct{
     
     /* discount_fee Basic子单优惠金额，单位分 */
@@ -864,7 +864,7 @@ type Item struct{
     
 }
 
-// Items demo
+/* Items demo */
 type Items struct{
     
     /* item Objectdemo */
@@ -872,7 +872,7 @@ type Items struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic余杭区 */
@@ -913,7 +913,7 @@ type SenderInfo struct{
     
 }
 
-// Batchs 批次信息
+/* Batchs 批次信息 */
 type Batchs struct{
     
     /* actualQty Basic2 */
@@ -936,7 +936,7 @@ type Batchs struct{
     
 }
 
-// OrderItems 订单明细行
+/* OrderItems 订单明细行 */
 type OrderItems struct{
     
     /* actualQty Basic2 */
@@ -986,7 +986,7 @@ type OrderItems struct{
     
 }
 
-// AutoReturnInOrderConfirmRequest 
+/* AutoReturnInOrderConfirmRequest  */
 type AutoReturnInOrderConfirmRequest struct{
     
     /* expressCode Basic12233344 */
@@ -1030,7 +1030,7 @@ type AutoReturnInOrderConfirmRequest struct{
     
 }
 
-// Response response
+/* Response response */
 type Response struct{
     
     /* code Basic响应码 */
@@ -1044,7 +1044,7 @@ type Response struct{
     
 }
 
-// WaybillProductTypeRequest 查询物流商电子面单产品类型入参
+/* WaybillProductTypeRequest 查询物流商电子面单产品类型入参 */
 type WaybillProductTypeRequest struct{
     
     /* cp_code Basic物流商编码CODE */
@@ -1052,7 +1052,7 @@ type WaybillProductTypeRequest struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -1072,7 +1072,7 @@ type WaybillAddress struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -1092,7 +1092,7 @@ type WaybillAddress struct{
     
 }
 
-// PackageItem 包裹里面的商品名称
+/* PackageItem 包裹里面的商品名称 */
 type PackageItem struct{
     
     /* count Basic商品数量 */
@@ -1103,7 +1103,7 @@ type PackageItem struct{
     
 }
 
-// LogisticsService 物流服务能力集合
+/* LogisticsService 物流服务能力集合 */
 type LogisticsService struct{
     
     /* service_code Basic服务编码 */
@@ -1114,7 +1114,7 @@ type LogisticsService struct{
     
 }
 
-// TradeOrderInfo 订单数据
+/* TradeOrderInfo 订单数据 */
 type TradeOrderInfo struct{
     
     /* consignee_address Object收\发货地址 */
@@ -1161,7 +1161,7 @@ type TradeOrderInfo struct{
     
 }
 
-// WaybillApplyNewRequest 面单申请
+/* WaybillApplyNewRequest 面单申请 */
 type WaybillApplyNewRequest struct{
     
     /* cp_code Basic物流服务商编码 */
@@ -1175,7 +1175,7 @@ type WaybillApplyNewRequest struct{
     
 }
 
-// BaseResult 返回结果
+/* BaseResult 返回结果 */
 type BaseResult struct{
     
     /* data Basictrue/false */
@@ -1192,7 +1192,7 @@ type BaseResult struct{
     
 }
 
-// PackageItem 包裹里面的商品名称
+/* PackageItem 包裹里面的商品名称 */
 type PackageItem struct{
     
     /* count Basic商品数量 */
@@ -1203,7 +1203,7 @@ type PackageItem struct{
     
 }
 
-// LogisticsService 物流服务能力集合
+/* LogisticsService 物流服务能力集合 */
 type LogisticsService struct{
     
     /* service_code Basic服务编码 */
@@ -1214,7 +1214,7 @@ type LogisticsService struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -1234,7 +1234,7 @@ type WaybillAddress struct{
     
 }
 
-// WaybillApplyFullUpdateRequest 更新面单信息请求
+/* WaybillApplyFullUpdateRequest 更新面单信息请求 */
 type WaybillApplyFullUpdateRequest struct{
     
     /* consignee_address Object收\发货地址 */
@@ -1287,7 +1287,7 @@ type WaybillApplyFullUpdateRequest struct{
     
 }
 
-// BaseResult result
+/* BaseResult result */
 type BaseResult struct{
     
     /* data Basicdata */
@@ -1304,7 +1304,7 @@ type BaseResult struct{
     
 }
 
-// BaseResult result
+/* BaseResult result */
 type BaseResult struct{
     
     /* data Basic返回覆盖地址信息 */
@@ -1321,7 +1321,7 @@ type BaseResult struct{
     
 }
 
-// SdtStatusResponse data
+/* SdtStatusResponse data */
 type SdtStatusResponse struct{
     
     /* order_id BasicpackageId */
@@ -1338,7 +1338,7 @@ type SdtStatusResponse struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* data Objectdata */
@@ -1352,7 +1352,7 @@ type Result struct{
     
 }
 
-// ItemTag itemTags
+/* ItemTag itemTags */
 type ItemTag struct{
     
     /* item_id BasicitemId */
@@ -1363,7 +1363,7 @@ type ItemTag struct{
     
 }
 
-// WareHouseDto 仓库信息
+/* WareHouseDto 仓库信息 */
 type WareHouseDto struct{
     
     /* address Basic详细地址描述 */
@@ -1395,7 +1395,7 @@ type WareHouseDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* data Basicdata */
@@ -1412,7 +1412,7 @@ type Result struct{
     
 }
 
-// WareHouseDto 仓传输值
+/* WareHouseDto 仓传输值 */
 type WareHouseDto struct{
     
     /* address Basic详细地址 */
@@ -1441,7 +1441,7 @@ type WareHouseDto struct{
     
 }
 
-// BaseResult result
+/* BaseResult result */
 type BaseResult struct{
     
     /* data Object仓传输值 */
@@ -1458,7 +1458,7 @@ type BaseResult struct{
     
 }
 
-// PaginationResult result
+/* PaginationResult result */
 type PaginationResult struct{
     
     /* data Basic仓库信息数组 */
@@ -1484,7 +1484,7 @@ type PaginationResult struct{
     
 }
 
-// DeliveryRequirements deliveryRequirements
+/* DeliveryRequirements deliveryRequirements */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -1507,7 +1507,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo senderInfo
+/* SenderInfo senderInfo */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -1584,7 +1584,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo receiverInfo
+/* ReceiverInfo receiverInfo */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -1661,7 +1661,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -1690,7 +1690,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -1713,7 +1713,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item items
+/* Item items */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -2009,7 +2009,7 @@ type Item struct{
     
 }
 
-// Detail detail
+/* Detail detail */
 type Detail struct{
     
     /* items Object Arrayitems */
@@ -2017,7 +2017,7 @@ type Detail struct{
     
 }
 
-// Invoice invoices
+/* Invoice invoices */
 type Invoice struct{
     
     /* amount Basic奇门仓储字段,说明,string(50),, */
@@ -2046,7 +2046,7 @@ type Invoice struct{
     
 }
 
-// PickerInfo pickerInfo
+/* PickerInfo pickerInfo */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -2123,7 +2123,7 @@ type PickerInfo struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -2152,7 +2152,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -2160,7 +2160,7 @@ type SnList struct{
     
 }
 
-// OrderLine orderLines
+/* OrderLine orderLines */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -2315,7 +2315,7 @@ type OrderLine struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -2344,7 +2344,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -2367,7 +2367,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item items
+/* Item items */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -2663,7 +2663,7 @@ type Item struct{
     
 }
 
-// PackageMaterial packageMaterialList
+/* PackageMaterial packageMaterialList */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -2677,7 +2677,7 @@ type PackageMaterial struct{
     
 }
 
-// Item items
+/* Item items */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -2727,7 +2727,7 @@ type Item struct{
     
 }
 
-// Package packages
+/* Package packages */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -2774,7 +2774,7 @@ type Package struct{
     
 }
 
-// RelatedOrder relatedOrders
+/* RelatedOrder relatedOrders */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -2788,7 +2788,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder deliveryOrder
+/* DeliveryOrder deliveryOrder */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -3102,7 +3102,7 @@ type DeliveryOrder struct{
     
 }
 
-// PackageMaterial packageMaterialList
+/* PackageMaterial packageMaterialList */
 type PackageMaterial struct{
     
     /* quantity Basic包材的数量 */
@@ -3116,7 +3116,7 @@ type PackageMaterial struct{
     
 }
 
-// Item items
+/* Item items */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -3166,7 +3166,7 @@ type Item struct{
     
 }
 
-// Package packages
+/* Package packages */
 type Package struct{
     
     /* expressCode Basic运单号 */
@@ -3213,7 +3213,7 @@ type Package struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic实发数量 */
@@ -3242,7 +3242,7 @@ type Batch struct{
     
 }
 
-// SnList snList
+/* SnList snList */
 type SnList struct{
     
     /* sn Basic Arraysn */
@@ -3250,7 +3250,7 @@ type SnList struct{
     
 }
 
-// OrderLine orderLines
+/* OrderLine orderLines */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -3408,7 +3408,7 @@ type OrderLine struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3428,7 +3428,7 @@ type Address struct{
     
 }
 
-// CpInfo 合作物流公司信息
+/* CpInfo 合作物流公司信息 */
 type CpInfo struct{
     
     /* cloud_template_id Basic云打印模板id */
@@ -3442,7 +3442,7 @@ type CpInfo struct{
     
 }
 
-// AddressArea 特殊路线到货区域
+/* AddressArea 特殊路线到货区域 */
 type AddressArea struct{
     
     /* city Basic特殊路线到货市 */
@@ -3453,7 +3453,7 @@ type AddressArea struct{
     
 }
 
-// SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线
+/* SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线 */
 type SpecialRouteInfo struct{
     
     /* cp_code Basic特殊路线设置的物流公司，目前支持5家物流公司的特殊路线设置顺丰(SF)、EMS经济快递(EYB)、EMS标准快递(EMS)、邮政小包(POSTB)、邮政标准快递(5000000007756),特殊路线的设置必须要求特殊路线的cp在启用的物流公司中 */
@@ -3464,7 +3464,7 @@ type SpecialRouteInfo struct{
     
 }
 
-// DeliveryStrategyInfo 发货策略信息
+/* DeliveryStrategyInfo 发货策略信息 */
 type DeliveryStrategyInfo struct{
     
     /* buyer_message_rule Basic识别买家备注: 0-忽略, 1-识别, 2-仅识别合作cp */
@@ -3484,7 +3484,7 @@ type DeliveryStrategyInfo struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3504,7 +3504,7 @@ type Address struct{
     
 }
 
-// QueryCpPriceInfoRequest 请求参数
+/* QueryCpPriceInfoRequest 请求参数 */
 type QueryCpPriceInfoRequest struct{
     
     /* cp_code Basic物流公司编码 */
@@ -3518,7 +3518,7 @@ type QueryCpPriceInfoRequest struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3538,7 +3538,7 @@ type Address struct{
     
 }
 
-// CostPrice 成本价格
+/* CostPrice 成本价格 */
 type CostPrice struct{
     
     /* continus_measure_price Basic续重价格，单位分 */
@@ -3555,7 +3555,7 @@ type CostPrice struct{
     
 }
 
-// WeightRange 适用重量范围
+/* WeightRange 适用重量范围 */
 type WeightRange struct{
     
     /* lower_limit_weight Basic最小下线重量，单位g */
@@ -3566,7 +3566,7 @@ type WeightRange struct{
     
 }
 
-// PriceRule 报价规则
+/* PriceRule 报价规则 */
 type PriceRule struct{
     
     /* cost_price Object成本价格 */
@@ -3577,7 +3577,7 @@ type PriceRule struct{
     
 }
 
-// AddressArea 到货区
+/* AddressArea 到货区 */
 type AddressArea struct{
     
     /* city Basic市 */
@@ -3594,7 +3594,7 @@ type AddressArea struct{
     
 }
 
-// PriceOffer 报价列表
+/* PriceOffer 报价列表 */
 type PriceOffer struct{
     
     /* price_rule_list Object Array报价规则 */
@@ -3605,7 +3605,7 @@ type PriceOffer struct{
     
 }
 
-// CpPriceInfo 返回结果列表
+/* CpPriceInfo 返回结果列表 */
 type CpPriceInfo struct{
     
     /* cp_code Basic物流公司编码 */
@@ -3622,7 +3622,7 @@ type CpPriceInfo struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3642,7 +3642,7 @@ type Address struct{
     
 }
 
-// CostPrice 成本报价
+/* CostPrice 成本报价 */
 type CostPrice struct{
     
     /* continus_measure_price Basic续重价格，单位分 */
@@ -3659,7 +3659,7 @@ type CostPrice struct{
     
 }
 
-// WeightRange 适用重量范围
+/* WeightRange 适用重量范围 */
 type WeightRange struct{
     
     /* lower_limit_weight Basic最小限制重量 */
@@ -3670,7 +3670,7 @@ type WeightRange struct{
     
 }
 
-// PriceRule 报价规则
+/* PriceRule 报价规则 */
 type PriceRule struct{
     
     /* cost_price Object成本报价 */
@@ -3681,7 +3681,7 @@ type PriceRule struct{
     
 }
 
-// AddressArea 到货地区
+/* AddressArea 到货地区 */
 type AddressArea struct{
     
     /* city Basic市 */
@@ -3698,7 +3698,7 @@ type AddressArea struct{
     
 }
 
-// PriceOffer 报价列表
+/* PriceOffer 报价列表 */
 type PriceOffer struct{
     
     /* price_rule_list Object Array报价规则 */
@@ -3709,7 +3709,7 @@ type PriceOffer struct{
     
 }
 
-// CpPriceInfo 物流公司价格信息
+/* CpPriceInfo 物流公司价格信息 */
 type CpPriceInfo struct{
     
     /* cp_code Basic物流公司编码 */
@@ -3726,7 +3726,7 @@ type CpPriceInfo struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3746,7 +3746,7 @@ type Address struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basiccity */
@@ -3766,7 +3766,7 @@ type Address struct{
     
 }
 
-// SmartDeliveryCpInfo 电子面单中智能发货引擎支持的合作物流公司信息
+/* SmartDeliveryCpInfo 电子面单中智能发货引擎支持的合作物流公司信息 */
 type SmartDeliveryCpInfo struct{
     
     /* branch_code Basic网店code */
@@ -3780,7 +3780,7 @@ type SmartDeliveryCpInfo struct{
     
 }
 
-// SmartDeliveryCollaborateCpsInfo 返回结果
+/* SmartDeliveryCollaborateCpsInfo 返回结果 */
 type SmartDeliveryCollaborateCpsInfo struct{
     
     /* send_address Object发货地址 */
@@ -3791,7 +3791,7 @@ type SmartDeliveryCollaborateCpsInfo struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3811,7 +3811,7 @@ type Address struct{
     
 }
 
-// CpInfo 合作cp信息
+/* CpInfo 合作cp信息 */
 type CpInfo struct{
     
     /* cloud_template_id Basic电子面单云打印模板id */
@@ -3825,7 +3825,7 @@ type CpInfo struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -3845,7 +3845,7 @@ type Address struct{
     
 }
 
-// AddressArea 特殊路线到货区域
+/* AddressArea 特殊路线到货区域 */
 type AddressArea struct{
     
     /* city Basic特殊路线到货市 */
@@ -3856,7 +3856,7 @@ type AddressArea struct{
     
 }
 
-// SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线
+/* SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线 */
 type SpecialRouteInfo struct{
     
     /* cp_code Basic特殊路线设置的物流公司，目前支持5家物流公司的特殊路线设置顺丰(SF)、EMS经济快递(EYB)、EMS标准快递(EMS)、邮政小包(POSTB)、邮政标准快递(5000000007756) */
@@ -3867,7 +3867,7 @@ type SpecialRouteInfo struct{
     
 }
 
-// DeliveryStrategyInfo 返回结果列表
+/* DeliveryStrategyInfo 返回结果列表 */
 type DeliveryStrategyInfo struct{
     
     /* buyer_message_rule Basic识别买家备注: 0-忽略, 1-识别, 2-仅识别合作cp */
@@ -3887,7 +3887,7 @@ type DeliveryStrategyInfo struct{
     
 }
 
-// StoreAcceptedResult 子订单列表
+/* StoreAcceptedResult 子订单列表 */
 type StoreAcceptedResult struct{
     
     /* attributes Basic扩展字段 */
@@ -3919,7 +3919,7 @@ type StoreAcceptedResult struct{
     
 }
 
-// SubOrder 子订单列表
+/* SubOrder 子订单列表 */
 type SubOrder struct{
     
     /* attributes Basic扩展字段 */
@@ -3951,7 +3951,7 @@ type SubOrder struct{
     
 }
 
-// StoreConsignedResult 子订单列表
+/* StoreConsignedResult 子订单列表 */
 type StoreConsignedResult struct{
     
     /* attributes Basic扩展字段 */
@@ -3998,7 +3998,7 @@ type StoreConsignedResult struct{
     
 }
 
-// StoreConsignedResponse data
+/* StoreConsignedResponse data */
 type StoreConsignedResponse struct{
     
     /* got_code BasicgotCode */
@@ -4012,7 +4012,7 @@ type StoreConsignedResponse struct{
     
 }
 
-// StoreAllocatedResult 门店的分单列表
+/* StoreAllocatedResult 门店的分单列表 */
 type StoreAllocatedResult struct{
     
     /* attributes Basic扩展字段 */
@@ -4044,7 +4044,7 @@ type StoreAllocatedResult struct{
     
 }
 
-// Batch 奇门仓储字段
+/* Batch 奇门仓储字段 */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段 */
@@ -4070,7 +4070,7 @@ type Batch struct{
     
 }
 
-// OrderLine 奇门仓储字段
+/* OrderLine 奇门仓储字段 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段 */
@@ -4219,7 +4219,7 @@ type OrderLine struct{
     
 }
 
-// BuyerRefund 下游买家的退款信息
+/* BuyerRefund 下游买家的退款信息 */
 type BuyerRefund struct{
     
     /* biz_order_id Basic订单id */
@@ -4266,7 +4266,7 @@ type BuyerRefund struct{
     
 }
 
-// RefundDetail 退款详情
+/* RefundDetail 退款详情 */
 type RefundDetail struct{
     
     /* buyer_refund Object下游买家的退款信息 */
@@ -4333,7 +4333,7 @@ type RefundDetail struct{
     
 }
 
-// ItemInventory 奇门仓储字段
+/* ItemInventory 奇门仓储字段 */
 type ItemInventory struct{
     
     /* itemCode Basic奇门仓储字段 */
@@ -4350,7 +4350,7 @@ type ItemInventory struct{
     
 }
 
-// ItemInventory 奇门仓储字段
+/* ItemInventory 奇门仓储字段 */
 type ItemInventory struct{
     
     /* code Basic响应码 */
@@ -4385,7 +4385,7 @@ type ItemInventory struct{
     
 }
 
-// ReceiverInfo 收件者信息
+/* ReceiverInfo 收件者信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域 */
@@ -4405,7 +4405,7 @@ type ReceiverInfo struct{
     
 }
 
-// ItemInventory 交易订单信息
+/* ItemInventory 交易订单信息 */
 type ItemInventory struct{
     
     /* itemCode Basic菜鸟商品编码 */
@@ -4425,7 +4425,7 @@ type ItemInventory struct{
     
 }
 
-// ItemInventory 
+/* ItemInventory  */
 type ItemInventory struct{
     
     /* combItemId Basic菜鸟组合货品ID */
@@ -4451,7 +4451,7 @@ type ItemInventory struct{
     
 }
 
-// SkuList sku列表
+/* SkuList sku列表 */
 type SkuList struct{
     
     /* cost_price Basic代销采购价，单位：元 */
@@ -4483,7 +4483,7 @@ type SkuList struct{
     
 }
 
-// PduList 产品分销商信息
+/* PduList 产品分销商信息 */
 type PduList struct{
     
     /* distributor_id Basic分销商ID */
@@ -4503,7 +4503,7 @@ type PduList struct{
     
 }
 
-// ProductImageList 产品图片
+/* ProductImageList 产品图片 */
 type ProductImageList struct{
     
     /* image_id Basic图片id */
@@ -4523,7 +4523,7 @@ type ProductImageList struct{
     
 }
 
-// FenxiaoProduct 产品对象记录集。返回 FenxiaoProduct 包含的字段信息。
+/* FenxiaoProduct 产品对象记录集。返回 FenxiaoProduct 包含的字段信息。 */
 type FenxiaoProduct struct{
     
     /* category_id Basic类目id */
@@ -4656,7 +4656,7 @@ no:不需要授权 */
     
 }
 
-// ModifySmartDeliveryCpRequest 修改智选CP请求
+/* ModifySmartDeliveryCpRequest 修改智选CP请求 */
 type ModifySmartDeliveryCpRequest struct{
     
     /* modified_cp_code Basic修改的物流公司编码 */
@@ -4670,7 +4670,7 @@ type ModifySmartDeliveryCpRequest struct{
     
 }
 
-// SmartDeliveryCpInfo 更改的发货cp信息
+/* SmartDeliveryCpInfo 更改的发货cp信息 */
 type SmartDeliveryCpInfo struct{
     
     /* cp_code Basic物流公司编码 */
@@ -4678,7 +4678,7 @@ type SmartDeliveryCpInfo struct{
     
 }
 
-// WaybillCloudPrintInfo 电子面单云打印信息
+/* WaybillCloudPrintInfo 电子面单云打印信息 */
 type WaybillCloudPrintInfo struct{
     
     /* print_data Basic模板信息 */
@@ -4689,7 +4689,7 @@ type WaybillCloudPrintInfo struct{
     
 }
 
-// ModifySmartDeliveryCpResponse 更新智能发货智选cp返回结果
+/* ModifySmartDeliveryCpResponse 更新智能发货智选cp返回结果 */
 type ModifySmartDeliveryCpResponse struct{
     
     /* modified_delivery_cp_info Object更改的发货cp信息 */
@@ -4700,7 +4700,7 @@ type ModifySmartDeliveryCpResponse struct{
     
 }
 
-// TmcPublishMessage tmc消息列表, 最多50条，元素结构与taobao.tmc.message.produce一致，用json表示的消息列表。例如：[{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"},{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"}]
+/* TmcPublishMessage tmc消息列表, 最多50条，元素结构与taobao.tmc.message.produce一致，用json表示的消息列表。例如：[{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"},{"content": "{\"tid\":1234554321,\"status\":\"X_LOGISTICS_PRINTED\",\"action_time\":\"2014-08-08 18:24:00\",\"seller_nick\": \"向阳aa\",\"operator\":\"小张\"}","topic": "taobao_jds_TradeTrace"}] */
 type TmcPublishMessage struct{
     
     /* content Basic消息内容的JSON表述，必须按照topic的定义来填充 */
@@ -4720,7 +4720,7 @@ type TmcPublishMessage struct{
     
 }
 
-// Address 发货地址信息
+/* Address 发货地址信息 */
 type Address struct{
     
     /* city Basic市 */
@@ -4740,7 +4740,7 @@ type Address struct{
     
 }
 
-// UserInfo 用户信息
+/* UserInfo 用户信息 */
 type UserInfo struct{
     
     /* address Object发货地址信息 */
@@ -4760,7 +4760,7 @@ type UserInfo struct{
     
 }
 
-// TradeOrder 订单信息，数量限制100
+/* TradeOrder 订单信息，数量限制100 */
 type TradeOrder struct{
     
     /* buyer_message Basic买家留言 */
@@ -4774,7 +4774,7 @@ type TradeOrder struct{
     
 }
 
-// OrderInfo 订单信息
+/* OrderInfo 订单信息 */
 type OrderInfo struct{
     
     /* order_channel_type Basic<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.8cf9Nj&treeId=17&articleId=105085&docType=1#2">订单渠道平台编码</a> */
@@ -4785,7 +4785,7 @@ type OrderInfo struct{
     
 }
 
-// Item 商品信息,数量限制为100
+/* Item 商品信息,数量限制为100 */
 type Item struct{
     
     /* code Basic商品编码 */
@@ -4799,7 +4799,7 @@ type Item struct{
     
 }
 
-// PackageInfo 包裹信息
+/* PackageInfo 包裹信息 */
 type PackageInfo struct{
     
     /* id Basic包裹id,拆合单使用，<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.8cf9Nj&treeId=17&articleId=105085&docType=1#10">使用方式</a> */
@@ -4816,7 +4816,7 @@ type PackageInfo struct{
     
 }
 
-// Address 收货地址
+/* Address 收货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -4836,7 +4836,7 @@ type Address struct{
     
 }
 
-// UserInfo 收件人信息
+/* UserInfo 收件人信息 */
 type UserInfo struct{
     
     /* address Object收货地址 */
@@ -4853,7 +4853,7 @@ type UserInfo struct{
     
 }
 
-// TradeOrderInfo 交易订单信息，数量限制为10
+/* TradeOrderInfo 交易订单信息，数量限制为10 */
 type TradeOrderInfo struct{
     
     /* object_id Basic<a href="http://open.taobao.com/docs/doc.htm?docType=1&articleId=105086&treeId=17&platformId=17#6">请求ID</a> */
@@ -4873,7 +4873,7 @@ type TradeOrderInfo struct{
     
 }
 
-// SmartDeliveryBatchRequest <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>批量请求参数
+/* SmartDeliveryBatchRequest <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>批量请求参数 */
 type SmartDeliveryBatchRequest struct{
     
     /* sender Object用户信息 */
@@ -4884,7 +4884,7 @@ type SmartDeliveryBatchRequest struct{
     
 }
 
-// SubErrorInfo 如果是电子面单错误，会返回电子面单错误信息列表。没有错误不返回
+/* SubErrorInfo 如果是电子面单错误，会返回电子面单错误信息列表。没有错误不返回 */
 type SubErrorInfo struct{
     
     /* error_code Basic电子面单错误码 */
@@ -4895,7 +4895,7 @@ type SubErrorInfo struct{
     
 }
 
-// WaybillCloudPrintInfo 电子面单云打印信息
+/* WaybillCloudPrintInfo 电子面单云打印信息 */
 type WaybillCloudPrintInfo struct{
     
     /* print_data Basic模板内容,具体解释见<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.8cf9Nj&treeId=17&articleId=105085&docType=1#12">链接</a> */
@@ -4906,7 +4906,7 @@ type WaybillCloudPrintInfo struct{
     
 }
 
-// SmartDeliveryCpInfo <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>推荐物流公司
+/* SmartDeliveryCpInfo <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>推荐物流公司 */
 type SmartDeliveryCpInfo struct{
     
     /* cp_code Basic物流公司编码 */
@@ -4917,7 +4917,7 @@ type SmartDeliveryCpInfo struct{
     
 }
 
-// SmartDeliveryResponse 智能发货引擎结果
+/* SmartDeliveryResponse 智能发货引擎结果 */
 type SmartDeliveryResponse struct{
     
     /* object_id Basic请求Id */
@@ -4931,7 +4931,7 @@ type SmartDeliveryResponse struct{
     
 }
 
-// SmartDeliveryResponseWrapper <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>结果包装类
+/* SmartDeliveryResponseWrapper <a href="http://open.taobao.com/docs/doc.htm?treeId=319&articleId=106295&docType=1">智能发货引擎</a>结果包装类 */
 type SmartDeliveryResponseWrapper struct{
     
     /* error_code Basic<a href="http://open.taobao.com/docs/doc.htm?spm=a219a.7629140.0.0.9mPrfc&treeId=319&articleId=106307&docType=1">错误码</a> */
@@ -4951,7 +4951,7 @@ type SmartDeliveryResponseWrapper struct{
     
 }
 
-// TopReceiverDo 买家详细信息
+/* TopReceiverDo 买家详细信息 */
 type TopReceiverDo struct{
     
     /* address Basic收货人的详细地址信息 */
@@ -4980,7 +4980,7 @@ type TopReceiverDo struct{
     
 }
 
-// OrderMessages 采购单留言列表
+/* OrderMessages 采购单留言列表 */
 type OrderMessages struct{
     
     /* message_content Basic留言内容 */
@@ -4997,7 +4997,7 @@ type OrderMessages struct{
     
 }
 
-// FeatureDo Feature对象列表目前已有的属性：attr_key为 www，attr_value为1 表示是www子订单；attr_key为 wwwStoreCode，attr_value是www子订单发货的仓库编码；attr_key为 isWt，attr_value为1 表示是网厅子订单；attr_key为wtInfo,attr_value为网厅相关合约信息；attr_key为shipper,attr_value为cn表示菜鸟发货；attr_key为 storeCode，attr_value为仓库信息； attr_key为 erpHold，attr_value为1表示强管控中， attr_value为2表示分单完成；
+/* FeatureDo Feature对象列表目前已有的属性：attr_key为 www，attr_value为1 表示是www子订单；attr_key为 wwwStoreCode，attr_value是www子订单发货的仓库编码；attr_key为 isWt，attr_value为1 表示是网厅子订单；attr_key为wtInfo,attr_value为网厅相关合约信息；attr_key为shipper,attr_value为cn表示菜鸟发货；attr_key为 storeCode，attr_value为仓库信息； attr_key为 erpHold，attr_value为1表示强管控中， attr_value为2表示分单完成； */
 type FeatureDo struct{
     
     /* attr_key Basic属性键 */
@@ -5008,7 +5008,7 @@ type FeatureDo struct{
     
 }
 
-// TopMemoAttachment attachments
+/* TopMemoAttachment attachments */
 type TopMemoAttachment struct{
     
     /* name Basicname */
@@ -5019,7 +5019,7 @@ type TopMemoAttachment struct{
     
 }
 
-// TopMemoDto topMemoDTO
+/* TopMemoDto topMemoDTO */
 type TopMemoDto struct{
     
     /* attachments Object Arrayattachments */
@@ -5033,7 +5033,7 @@ type TopMemoDto struct{
     
 }
 
-// SubOrderDetail 子订单的详细信息列表。
+/* SubOrderDetail 子订单的详细信息列表。 */
 type SubOrderDetail struct{
     
     /* auction_id Basic前台分销商品的宝贝ID，不存在时为0。2015年4月15日之前创建的采购单该字段都是0。 */
@@ -5134,9 +5134,9 @@ type SubOrderDetail struct{
     
 }
 
-// FeatureDo 主订单属性信息，key-value形式：
+/* FeatureDo 主订单属性信息，key-value形式：
 orderNovice ：订单发票抬头；
-orderNoviceContent ：代表发票明细
+orderNoviceContent ：代表发票明细 */
 type FeatureDo struct{
     
     /* attr_key Basic属性键 */
@@ -5147,7 +5147,7 @@ type FeatureDo struct{
     
 }
 
-// ErpLogisticsInfo 子单物流发货信息
+/* ErpLogisticsInfo 子单物流发货信息 */
 type ErpLogisticsInfo struct{
     
     /* combine_item_code Basic组合商品Code */
@@ -5191,7 +5191,7 @@ type ErpLogisticsInfo struct{
     
 }
 
-// TopDpOrderDo 采购单及子采购单信息。返回 PurchaseOrder 包含的字段信息。
+/* TopDpOrderDo 采购单及子采购单信息。返回 PurchaseOrder 包含的字段信息。 */
 type TopDpOrderDo struct{
     
     /* alipay_no Basic支付宝交易号。 */
@@ -5306,7 +5306,7 @@ orderNoviceContent ：代表发票明细 */
     
 }
 
-// Struct 货品明细列表
+/* Struct 货品明细列表 */
 type Struct struct{
     
     /* actualQty Basic实际出库数量 */
@@ -5320,7 +5320,7 @@ type Struct struct{
     
 }
 
-// Struct 货品明细列表
+/* Struct 货品明细列表 */
 type Struct struct{
     
     /* orderLineitem Object货品明细列表 */
@@ -5328,7 +5328,7 @@ type Struct struct{
     
 }
 
-// Struct 入库单子信息
+/* Struct 入库单子信息 */
 type Struct struct{
     
     /* cnOrderCode Basic菜鸟LBX单号 */
@@ -5348,7 +5348,7 @@ type Struct struct{
     
 }
 
-// Struct 入库单信息列表
+/* Struct 入库单信息列表 */
 type Struct struct{
     
     /* entryorderitem Object入库单子信息 */
@@ -5356,7 +5356,7 @@ type Struct struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -5373,7 +5373,7 @@ type Result struct{
     
 }
 
-// UpdateSkuQuantity 更新SKU库存时候的SKU库存对象；如果没有SKU或者不更新SKU库存，可以不填;查找SKU目前支持ID，属性串和商家编码三种模式，建议选用一种最合适的，切勿滥用，一次调用中如果混合使用，更新结果不可预期！
+/* UpdateSkuQuantity 更新SKU库存时候的SKU库存对象；如果没有SKU或者不更新SKU库存，可以不填;查找SKU目前支持ID，属性串和商家编码三种模式，建议选用一种最合适的，切勿滥用，一次调用中如果混合使用，更新结果不可预期！ */
 type UpdateSkuQuantity struct{
     
     /* outer_id BasicSku的商家外部id，用于指定被修改库存的SKU */
@@ -5390,7 +5390,7 @@ type UpdateSkuQuantity struct{
     
 }
 
-// UpdateItemQuantityOption 商品库存更新时候的可选参数
+/* UpdateItemQuantityOption 商品库存更新时候的可选参数 */
 type UpdateItemQuantityOption struct{
     
     /* outer_biz_key Basic增量幂等外部编码 */
@@ -5401,7 +5401,7 @@ type UpdateItemQuantityOption struct{
     
 }
 
-// BaseResult result
+/* BaseResult result */
 type BaseResult struct{
     
     /* error_code BasicerrorCode */
@@ -5415,7 +5415,7 @@ type BaseResult struct{
     
 }
 
-// Item 缺货商品列表
+/* Item 缺货商品列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -5453,7 +5453,7 @@ type Item struct{
     
 }
 
-// Process 处理流程
+/* Process 处理流程 */
 type Process struct{
     
     /* operateInfo Basic操作内容 */
@@ -5476,7 +5476,7 @@ type Process struct{
     
 }
 
-// OrderProcess 订单处理流程
+/* OrderProcess 订单处理流程 */
 type OrderProcess struct{
     
     /* orderCode Basic单据号 */
@@ -5496,7 +5496,7 @@ type OrderProcess struct{
     
 }
 
-// BuyerRefund 下游买家的退款信息
+/* BuyerRefund 下游买家的退款信息 */
 type BuyerRefund struct{
     
     /* biz_order_id Basic订单id */
@@ -5543,7 +5543,7 @@ type BuyerRefund struct{
     
 }
 
-// RefundDetail 代销采购退款列表
+/* RefundDetail 代销采购退款列表 */
 type RefundDetail struct{
     
     /* buyer_refund Object下游买家的退款信息 */
@@ -5610,7 +5610,7 @@ type RefundDetail struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -5651,7 +5651,7 @@ type SenderInfo struct{
     
 }
 
-// ReturnOrder 退货单信息
+/* ReturnOrder 退货单信息 */
 type ReturnOrder struct{
     
     /* expressCode Basic运单号 */
@@ -5689,7 +5689,7 @@ type ReturnOrder struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* actualQty Basic实收商品数量 */
@@ -5733,7 +5733,7 @@ type OrderLine struct{
     
 }
 
-// OrderSourceCodes 交易单号信息（目前只支持一个交易单号）
+/* OrderSourceCodes 交易单号信息（目前只支持一个交易单号） */
 type OrderSourceCodes struct{
     
     /* orderSourceCode Basic交易单号 */
@@ -5741,7 +5741,7 @@ type OrderSourceCodes struct{
     
 }
 
-// Order 单据信息
+/* Order 单据信息 */
 type Order struct{
     
     /* operateInfo Basic操作内容 */
@@ -5776,7 +5776,7 @@ type Order struct{
     
 }
 
-// Item 缺货商品列表
+/* Item 缺货商品列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -5811,7 +5811,7 @@ type Item struct{
     
 }
 
-// OrderInfo 单据详情
+/* OrderInfo 单据详情 */
 type OrderInfo struct{
     
     /* createTime Basic订单创建时间(YYYY-MM-DD HH:MM:SS) */
@@ -5828,7 +5828,7 @@ type OrderInfo struct{
     
 }
 
-// OrderLine 单据列表
+/* OrderLine 单据列表 */
 type OrderLine struct{
     
     /* itemCode BasicERP商品编码 */
@@ -5845,7 +5845,7 @@ type OrderLine struct{
     
 }
 
-// DeliveryOrder 拆单情况
+/* DeliveryOrder 拆单情况 */
 type DeliveryOrder struct{
     
     /* createTime Basic订单创建时间(YYYY-MM-DD HH:MM:SS) */
@@ -5865,7 +5865,7 @@ type DeliveryOrder struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -5885,7 +5885,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -5959,7 +5959,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -6033,7 +6033,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -6059,7 +6059,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -6079,7 +6079,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -6372,7 +6372,7 @@ type Item struct{
     
 }
 
-// Detail 
+/* Detail  */
 type Detail struct{
     
     /* items Object Array */
@@ -6380,7 +6380,7 @@ type Detail struct{
     
 }
 
-// Invoice 
+/* Invoice  */
 type Invoice struct{
     
     /* amount Basic奇门仓储字段,说明,string(50),, */
@@ -6406,7 +6406,7 @@ type Invoice struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -6480,7 +6480,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -6506,7 +6506,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -6655,7 +6655,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -6681,7 +6681,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -6701,7 +6701,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -6994,7 +6994,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -7005,7 +7005,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -7052,7 +7052,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -7096,7 +7096,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -7107,7 +7107,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 
+/* DeliveryOrder  */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -7409,7 +7409,7 @@ type DeliveryOrder struct{
     
 }
 
-// OrderInfo 
+/* OrderInfo  */
 type OrderInfo struct{
     
     /* change Basic奇门仓储字段,说明,string(50),, */
@@ -7543,7 +7543,7 @@ type OrderInfo struct{
     
 }
 
-// Order 
+/* Order  */
 type Order struct{
     
     /* code Basic奇门仓储字段,说明,string(50),, */
@@ -7566,7 +7566,7 @@ type Order struct{
     
 }
 
-// Order 发货单列表
+/* Order 发货单列表 */
 type Order struct{
     
     /* code Basic响应码 */
@@ -7592,7 +7592,7 @@ type Order struct{
     
 }
 
-// PriceAdjustment test
+/* PriceAdjustment test */
 type PriceAdjustment struct{
     
     /* discount Basictest */
@@ -7612,7 +7612,7 @@ type PriceAdjustment struct{
     
 }
 
-// Batch test
+/* Batch test */
 type Batch struct{
     
     /* actualQty Basictest */
@@ -7638,7 +7638,7 @@ type Batch struct{
     
 }
 
-// Item 组合商品接口中的单商品信息
+/* Item 组合商品接口中的单商品信息 */
 type Item struct{
     
     /* actualAmount Basictest */
@@ -7931,7 +7931,7 @@ type Item struct{
     
 }
 
-// Item 商品的库存信息列表
+/* Item 商品的库存信息列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -7969,7 +7969,7 @@ type Item struct{
     
 }
 
-// MaterialItem 加工商品列表
+/* MaterialItem 加工商品列表 */
 type MaterialItem struct{
     
     /* batchCode Basic批次编码 */
@@ -8007,7 +8007,7 @@ type MaterialItem struct{
     
 }
 
-// ProductItem 加工商品列表
+/* ProductItem 加工商品列表 */
 type ProductItem struct{
     
     /* batchCode Basic批次编码 */
@@ -8045,7 +8045,7 @@ type ProductItem struct{
     
 }
 
-// MaterialItem 加工商品列表
+/* MaterialItem 加工商品列表 */
 type MaterialItem struct{
     
     /* batchCode Basic奇门仓储字段,说明,string(50),, */
@@ -8083,7 +8083,7 @@ type MaterialItem struct{
     
 }
 
-// ProductItem 商品列表
+/* ProductItem 商品列表 */
 type ProductItem struct{
     
     /* batchCode BasicbatchCode */
@@ -8121,7 +8121,7 @@ type ProductItem struct{
     
 }
 
-// DeliveryOrder 出库单信息
+/* DeliveryOrder 出库单信息 */
 type DeliveryOrder struct{
     
     /* deliveryOrderCode Basic出库单号 */
@@ -8153,7 +8153,7 @@ type DeliveryOrder struct{
     
 }
 
-// PackageMaterial 包材信息
+/* PackageMaterial 包材信息 */
 type PackageMaterial struct{
     
     /* quantity Basic包材的数量 */
@@ -8164,7 +8164,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 商品信息列表
+/* Item 商品信息列表 */
 type Item struct{
     
     /* itemCode Basic商品编码 */
@@ -8178,7 +8178,7 @@ type Item struct{
     
 }
 
-// Package 包裹信息
+/* Package 包裹信息 */
 type Package struct{
     
     /* expressCode Basic运单号 */
@@ -8213,7 +8213,7 @@ type Package struct{
     
 }
 
-// OrderLine 单据信息列表
+/* OrderLine 单据信息列表 */
 type OrderLine struct{
     
     /* actualQty Basic实发商品数量 */
@@ -8248,7 +8248,7 @@ type OrderLine struct{
     
 }
 
-// KeyResult 变量
+/* KeyResult 变量 */
 type KeyResult struct{
     
     /* key_name Basic变量名称 */
@@ -8256,7 +8256,7 @@ type KeyResult struct{
     
 }
 
-// CustomAreaResult data
+/* CustomAreaResult data */
 type CustomAreaResult struct{
     
     /* custom_area_id Basic自定义区id */
@@ -8282,7 +8282,7 @@ type CustomAreaResult struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -8299,7 +8299,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// ReplenishplanCreateItem 单据信息
+/* ReplenishplanCreateItem 单据信息 */
 type ReplenishplanCreateItem struct{
     
     /* itemId Basic后端商品编码 */
@@ -8310,7 +8310,7 @@ type ReplenishplanCreateItem struct{
     
 }
 
-// Dispute results
+/* Dispute results */
 type Dispute struct{
     
     /* address Basic卖家收货地址 */
@@ -8405,7 +8405,7 @@ type Dispute struct{
     
 }
 
-// ResultSet result
+/* ResultSet result */
 type ResultSet struct{
     
     /* error_code Basic错误码 */
@@ -8431,7 +8431,7 @@ type ResultSet struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* batch_code Basic批次编码 */
@@ -8472,7 +8472,7 @@ type OrderLine struct{
     
 }
 
-// ReceiverInfo 收货人信息
+/* ReceiverInfo 收货人信息 */
 type ReceiverInfo struct{
     
     /* area Basic收货人区 */
@@ -8498,7 +8498,7 @@ type ReceiverInfo struct{
     
 }
 
-// DeliveryOrder ERP出库对象
+/* DeliveryOrder ERP出库对象 */
 type DeliveryOrder struct{
     
     /* arrive_channel_type Basic到货渠道类型，VIP＝1、门店＝2、经销商＝3 */
@@ -8539,7 +8539,7 @@ type DeliveryOrder struct{
     
 }
 
-// Orderline 订单行
+/* Orderline 订单行 */
 type Orderline struct{
     
     /* amount Basic数量 */
@@ -8556,7 +8556,7 @@ type Orderline struct{
     
 }
 
-// Deliveryorder 订单
+/* Deliveryorder 订单 */
 type Deliveryorder struct{
     
     /* cn_order_code Basic物流单号 */
@@ -8573,7 +8573,7 @@ type Deliveryorder struct{
     
 }
 
-// PackageMaterial 包裹材料
+/* PackageMaterial 包裹材料 */
 type PackageMaterial struct{
     
     /* materialQuantity Basic包材的数量 */
@@ -8584,7 +8584,7 @@ type PackageMaterial struct{
     
 }
 
-// PackageMaterialList 包裹材料列表
+/* PackageMaterialList 包裹材料列表 */
 type PackageMaterialList struct{
     
     /* packageMaterial Object包裹材料 */
@@ -8592,7 +8592,7 @@ type PackageMaterialList struct{
     
 }
 
-// TmsItem 配明细列表
+/* TmsItem 配明细列表 */
 type TmsItem struct{
     
     /* actualItemQuantity Basic出库数量 */
@@ -8630,7 +8630,7 @@ type TmsItem struct{
     
 }
 
-// TmsOrder 配送订单
+/* TmsOrder 配送订单 */
 type TmsOrder struct{
     
     /* cpCode Basic物流商编码 */
@@ -8680,7 +8680,7 @@ type TmsOrder struct{
     
 }
 
-// Struct 
+/* Struct  */
 type Struct struct{
     
     /* cnOrderCode Basic菜鸟订单编码 */
@@ -8715,7 +8715,7 @@ type Struct struct{
     
 }
 
-// Response response
+/* Response response */
 type Response struct{
     
     /* code Basic失败响应码 */
@@ -8729,7 +8729,7 @@ type Response struct{
     
 }
 
-// PickerInfo 提货人信息
+/* PickerInfo 提货人信息 */
 type PickerInfo struct{
     
     /* carNo Basic车牌号，string(50) */
@@ -8752,7 +8752,7 @@ type PickerInfo struct{
     
 }
 
-// SenderInfo 送货人信息
+/* SenderInfo 送货人信息 */
 type SenderInfo struct{
     
     /* senderInfoarea Basic区域, string (50) */
@@ -8796,7 +8796,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收货人信息
+/* ReceiverInfo 收货人信息 */
 type ReceiverInfo struct{
     
     /* receiverInfoarea Basic区域, string (50) */
@@ -8840,7 +8840,7 @@ type ReceiverInfo struct{
     
 }
 
-// DeliveryOrder 出库单记录
+/* DeliveryOrder 出库单记录 */
 type DeliveryOrder struct{
     
     /* buyOrderCode Basic交易订单号, string (50) */
@@ -8908,7 +8908,7 @@ type DeliveryOrder struct{
     
 }
 
-// OrderLines 出库单明细信息
+/* OrderLines 出库单明细信息 */
 type OrderLines struct{
     
     /* batchCode Basic（无）批次编码 */
@@ -8949,7 +8949,7 @@ type OrderLines struct{
     
 }
 
-// EntryOutOrderlist 出库单记录集
+/* EntryOutOrderlist 出库单记录集 */
 type EntryOutOrderlist struct{
     
     /* deliveryOrder Object出库单记录 */
@@ -8960,7 +8960,7 @@ type EntryOutOrderlist struct{
     
 }
 
-// Result 返回结果
+/* Result 返回结果 */
 type Result struct{
     
     /* errorcode Basic错误码 */
@@ -8974,7 +8974,7 @@ type Result struct{
     
 }
 
-// InvoiceProvider 开票商列表
+/* InvoiceProvider 开票商列表 */
 type InvoiceProvider struct{
     
     /* app_key Basic开票商的appkey */
@@ -8985,7 +8985,7 @@ type InvoiceProvider struct{
     
 }
 
-// ResultSet 查询结果集
+/* ResultSet 查询结果集 */
 type ResultSet struct{
     
     /* provider_list Object Array开票商列表 */
@@ -8996,7 +8996,7 @@ type ResultSet struct{
     
 }
 
-// UpdateConfigActInfo update
+/* UpdateConfigActInfo update */
 type UpdateConfigActInfo struct{
     
     /* url Basicurl */
@@ -9007,7 +9007,7 @@ type UpdateConfigActInfo struct{
     
 }
 
-// UpdateConfigActInfo rollback
+/* UpdateConfigActInfo rollback */
 type UpdateConfigActInfo struct{
     
     /* url Basicurl */
@@ -9018,7 +9018,7 @@ type UpdateConfigActInfo struct{
     
 }
 
-// UpdateConfigActInfo grayCtrl
+/* UpdateConfigActInfo grayCtrl */
 type UpdateConfigActInfo struct{
     
     /* url Basicurl */
@@ -9029,7 +9029,7 @@ type UpdateConfigActInfo struct{
     
 }
 
-// UpdateConfigMsgInfo notice
+/* UpdateConfigMsgInfo notice */
 type UpdateConfigMsgInfo struct{
     
     /* msg Basicmsg */
@@ -9040,7 +9040,7 @@ type UpdateConfigMsgInfo struct{
     
 }
 
-// UpdateConfigActInfo enforceUpdate
+/* UpdateConfigActInfo enforceUpdate */
 type UpdateConfigActInfo struct{
     
     /* url Basicurl */
@@ -9051,7 +9051,7 @@ type UpdateConfigActInfo struct{
     
 }
 
-// UpdateConfigTopResult result
+/* UpdateConfigTopResult result */
 type UpdateConfigTopResult struct{
     
     /* act_description BasicactDescription */
@@ -9098,7 +9098,7 @@ type UpdateConfigTopResult struct{
     
 }
 
-// TopDownloadRecordDo results
+/* TopDownloadRecordDo results */
 type TopDownloadRecordDo struct{
     
     /* created Basic文件创建时间 */
@@ -9112,7 +9112,7 @@ type TopDownloadRecordDo struct{
     
 }
 
-// CreateSellerResourceRequest 商家创建资源参数
+/* CreateSellerResourceRequest 商家创建资源参数 */
 type CreateSellerResourceRequest struct{
     
     /* parent_resource_id Basic父资源id，商家资源只能从isv模板或菜鸟标准模板继承修改，不能单独创建 */
@@ -9129,7 +9129,7 @@ type CreateSellerResourceRequest struct{
     
 }
 
-// SellerResourceMetaInfo sellerResourceMetaInfo
+/* SellerResourceMetaInfo sellerResourceMetaInfo */
 type SellerResourceMetaInfo struct{
     
     /* need_publish BasicneedPublish */
@@ -9149,7 +9149,7 @@ type SellerResourceMetaInfo struct{
     
 }
 
-// SellerResourceResponse data
+/* SellerResourceResponse data */
 type SellerResourceResponse struct{
     
     /* editing_resource_data Basic待发布的内容 */
@@ -9163,7 +9163,7 @@ type SellerResourceResponse struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -9180,7 +9180,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// PublishResourceRequest 资源发布参数
+/* PublishResourceRequest 资源发布参数 */
 type PublishResourceRequest struct{
     
     /* resource_id Basic要发布的资源id */
@@ -9191,7 +9191,7 @@ type PublishResourceRequest struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Basicdata */
@@ -9208,7 +9208,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// UpdateResourceRequest 入参
+/* UpdateResourceRequest 入参 */
 type UpdateResourceRequest struct{
     
     /* resource_data Basic要更新的资源内容 */
@@ -9225,7 +9225,7 @@ type UpdateResourceRequest struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Basicdata */
@@ -9242,7 +9242,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// IsvResourceMetaInfo data
+/* IsvResourceMetaInfo data */
 type IsvResourceMetaInfo struct{
     
     /* need_publish Basic是否需要发布 */
@@ -9259,7 +9259,7 @@ type IsvResourceMetaInfo struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* error_code Basic错误码 */
@@ -9276,7 +9276,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// SkuList sku列表
+/* SkuList sku列表 */
 type SkuList struct{
     
     /* cost_price Basic代销采购价，单位：元 */
@@ -9314,7 +9314,7 @@ type SkuList struct{
     
 }
 
-// PduList 产品分销商信息
+/* PduList 产品分销商信息 */
 type PduList struct{
     
     /* distributor_id Basic分销商ID */
@@ -9334,7 +9334,7 @@ type PduList struct{
     
 }
 
-// FenxiaoProduct 产品对象记录集。返回 FenxiaoProduct 包含的字段信息。
+/* FenxiaoProduct 产品对象记录集。返回 FenxiaoProduct 包含的字段信息。 */
 type FenxiaoProduct struct{
     
     /* category_id Basic类目id */
@@ -9470,7 +9470,7 @@ no:不需要授权 */
     
 }
 
-// IsvResourceDo data
+/* IsvResourceDo data */
 type IsvResourceDo struct{
     
     /* resource_content Basic资源内容（当资源类型为TEMPLATE时，为空） */
@@ -9490,7 +9490,7 @@ type IsvResourceDo struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* error_code Basic错误码 */
@@ -9507,7 +9507,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// CreateIsvResourceRequest isv创建资源的参数
+/* CreateIsvResourceRequest isv创建资源的参数 */
 type CreateIsvResourceRequest struct{
     
     /* isv_resource_type Basicisv资源类型，"TEMPLATE"表示模板资源，"PRINT_ITEM"表示打印项 */
@@ -9521,7 +9521,7 @@ type CreateIsvResourceRequest struct{
     
 }
 
-// AddressReachable 筛单用户输入地址结构
+/* AddressReachable 筛单用户输入地址结构 */
 type AddressReachable struct{
     
     /* address Basic详细地址 */
@@ -9541,7 +9541,7 @@ type AddressReachable struct{
     
 }
 
-// AddressReachableResult 筛单结果l列表
+/* AddressReachableResult 筛单结果l列表 */
 type AddressReachableResult struct{
     
     /* division_id Basic区域编码 */
@@ -9570,7 +9570,7 @@ type AddressReachableResult struct{
     
 }
 
-// AddressReachableTopResult 物流是否可达结果列表
+/* AddressReachableTopResult 物流是否可达结果列表 */
 type AddressReachableTopResult struct{
     
     /* reachable_result_list Object Array筛单结果l列表 */
@@ -9578,7 +9578,7 @@ type AddressReachableTopResult struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* code Basiccode */
@@ -9592,7 +9592,7 @@ type Result struct{
     
 }
 
-// Item item
+/* Item item */
 type Item struct{
     
     /* adventLifecycle Basic奇门仓储字段,H123,string(50),必填, */
@@ -9762,7 +9762,7 @@ type Item struct{
     
 }
 
-// ChannelRatioRule channelRatioRules
+/* ChannelRatioRule channelRatioRules */
 type ChannelRatioRule struct{
     
     /* channelCode Basic奇门仓储字段,C1223,string(50),, */
@@ -9773,7 +9773,7 @@ type ChannelRatioRule struct{
     
 }
 
-// InventoryRule inventoryRules
+/* InventoryRule inventoryRules */
 type InventoryRule struct{
     
     /* actionType Basic奇门仓储字段,C1223,string(50),, */
@@ -9787,7 +9787,7 @@ type InventoryRule struct{
     
 }
 
-// ItemInventory itemInventories
+/* ItemInventory itemInventories */
 type ItemInventory struct{
     
     /* channelCode Basic奇门仓储字段,C123,string(50),, */
@@ -9807,7 +9807,7 @@ type ItemInventory struct{
     
 }
 
-// StoreCollectQueryOrderResponse data
+/* StoreCollectQueryOrderResponse data */
 type StoreCollectQueryOrderResponse struct{
     
     /* main_order_id Basic主订单ID */
@@ -9815,7 +9815,7 @@ type StoreCollectQueryOrderResponse struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* data Objectdata */
@@ -9829,7 +9829,7 @@ type Result struct{
     
 }
 
-// EvalDetail staffEvalDetails
+/* EvalDetail staffEvalDetails */
 type EvalDetail struct{
     
     /* eval_code BasicevalCode */
@@ -9849,7 +9849,7 @@ type EvalDetail struct{
     
 }
 
-// Address 发货地址
+/* Address 发货地址 */
 type Address struct{
     
     /* city Basic市 */
@@ -9869,7 +9869,7 @@ type Address struct{
     
 }
 
-// QueryDeliveryStrategyRequest 查询请求参数
+/* QueryDeliveryStrategyRequest 查询请求参数 */
 type QueryDeliveryStrategyRequest struct{
     
     /* send_address Object发货地址 */
@@ -9880,7 +9880,7 @@ type QueryDeliveryStrategyRequest struct{
     
 }
 
-// Address address
+/* Address address */
 type Address struct{
     
     /* city Basic市 */
@@ -9900,7 +9900,7 @@ type Address struct{
     
 }
 
-// CpInfo 合作cp
+/* CpInfo 合作cp */
 type CpInfo struct{
     
     /* address Objectaddress */
@@ -9920,7 +9920,7 @@ type CpInfo struct{
     
 }
 
-// AddressArea 特殊路线到货区域
+/* AddressArea 特殊路线到货区域 */
 type AddressArea struct{
     
     /* city Basic特殊路线到货市 */
@@ -9931,7 +9931,7 @@ type AddressArea struct{
     
 }
 
-// SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线
+/* SpecialRouteInfo 特殊路线设置信息，如果特殊路线设置传空，表名需要删除之前设置的特殊路线。最多设置10条特殊路线 */
 type SpecialRouteInfo struct{
     
     /* cp_code Basic特殊路线设置的物流公司，目前支持5家物流公司的特殊路线设置顺丰(SF)、EMS经济快递(EYB)、EMS标准快递(EMS)、邮政小包(POSTB)、邮政标准快递(5000000007756) */
@@ -9942,7 +9942,7 @@ type SpecialRouteInfo struct{
     
 }
 
-// DeliveryStrategyInfo 返回结果列表
+/* DeliveryStrategyInfo 返回结果列表 */
 type DeliveryStrategyInfo struct{
     
     /* buyer_message_rule Basic识别买家备注: 0-忽略, 1-识别, 2-仅识别合作cp */
@@ -9965,7 +9965,7 @@ type DeliveryStrategyInfo struct{
     
 }
 
-// Address 地址信息
+/* Address 地址信息 */
 type Address struct{
     
     /* city Basic市 */
@@ -9985,7 +9985,7 @@ type Address struct{
     
 }
 
-// CpInfo 合作CP信息
+/* CpInfo 合作CP信息 */
 type CpInfo struct{
     
     /* address Object地址信息 */
@@ -10002,7 +10002,7 @@ type CpInfo struct{
     
 }
 
-// AddressArea 到货区域
+/* AddressArea 到货区域 */
 type AddressArea struct{
     
     /* city Basic市 */
@@ -10013,7 +10013,7 @@ type AddressArea struct{
     
 }
 
-// SpecialRouteInfo 特殊线路
+/* SpecialRouteInfo 特殊线路 */
 type SpecialRouteInfo struct{
     
     /* cp_code Basic快递公司code */
@@ -10024,7 +10024,7 @@ type SpecialRouteInfo struct{
     
 }
 
-// DeliveryStrategyInfo 策略信息对象
+/* DeliveryStrategyInfo 策略信息对象 */
 type DeliveryStrategyInfo struct{
     
     /* buyer_message_rule Basic识别买家备注: 0-忽略, 1-识别, 2-仅识别合作cp */
@@ -10044,7 +10044,7 @@ type DeliveryStrategyInfo struct{
     
 }
 
-// DeliveryStrategySetRequest 智能发货设置请求参数
+/* DeliveryStrategySetRequest 智能发货设置请求参数 */
 type DeliveryStrategySetRequest struct{
     
     /* delivery_strategy_info Object策略信息对象 */
@@ -10052,7 +10052,7 @@ type DeliveryStrategySetRequest struct{
     
 }
 
-// WarehouseDto 仓信息
+/* WarehouseDto 仓信息 */
 type WarehouseDto struct{
     
     /* warehouse_id Basic仓id */
@@ -10063,7 +10063,7 @@ type WarehouseDto struct{
     
 }
 
-// CancelGoodsDto 请求参数
+/* CancelGoodsDto 请求参数 */
 type CancelGoodsDto struct{
     
     /* auction_id Basic商品ID */
@@ -10098,7 +10098,7 @@ type CancelGoodsDto struct{
     
 }
 
-// Resultdata resultData
+/* Resultdata resultData */
 type Resultdata struct{
     
     /* refund_id Basic退款单号 */
@@ -10106,7 +10106,7 @@ type Resultdata struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code Basic异常编码 */
@@ -10123,7 +10123,7 @@ type Result struct{
     
 }
 
-// UpdateSkuShipTime 被更新SKU的发货时间，后台会根据三个子属性去查找匹配的sku，如果找到就默认对sku进行更新，当无匹配sku且更新类型针对sku，会报错。
+/* UpdateSkuShipTime 被更新SKU的发货时间，后台会根据三个子属性去查找匹配的sku，如果找到就默认对sku进行更新，当无匹配sku且更新类型针对sku，会报错。 */
 type UpdateSkuShipTime struct{
     
     /* outer_id BasicSku的商家外部id；如：2015_07_23_D_123 */
@@ -10140,7 +10140,7 @@ type UpdateSkuShipTime struct{
     
 }
 
-// UpdateItemShipTimeOption 批量更新商品/SKU发货时间的备选项
+/* UpdateItemShipTimeOption 批量更新商品/SKU发货时间的备选项 */
 type UpdateItemShipTimeOption struct{
     
     /* ship_time_type Basic0代表清空匹配的SKU发货时间数据或者商品发货时间数据；1代表：固定发货时间；2代表：相对发货时间 */
@@ -10151,7 +10151,7 @@ type UpdateItemShipTimeOption struct{
     
 }
 
-// InventoryQueryForStoreRequest 查询列表
+/* InventoryQueryForStoreRequest 查询列表 */
 type InventoryQueryForStoreRequest struct{
     
     /* inv_store_type Basic实体类型  2：仓库类型， 6：门店类型 */
@@ -10168,7 +10168,7 @@ type InventoryQueryForStoreRequest struct{
     
 }
 
-// InventorySubDetailDto subList
+/* InventorySubDetailDto subList */
 type InventorySubDetailDto struct{
     
     /* inv_biz_code BasicONLINE_INVENTORY:线上可售卖库存。SHARE_INVENTORY：线下独享库存，门店自提可用 */
@@ -10185,7 +10185,7 @@ type InventorySubDetailDto struct{
     
 }
 
-// InventoryInfoDetailDto 查询成功列表
+/* InventoryInfoDetailDto 查询成功列表 */
 type InventoryInfoDetailDto struct{
     
     /* inv_store_type BasicdistType */
@@ -10214,7 +10214,7 @@ type InventoryInfoDetailDto struct{
     
 }
 
-// TipInfo tipInfos
+/* TipInfo tipInfos */
 type TipInfo struct{
     
     /* errorcode BasicerrorCode */
@@ -10237,7 +10237,7 @@ type TipInfo struct{
     
 }
 
-// InventoryQueryResult 查询结果
+/* InventoryQueryResult 查询结果 */
 type InventoryQueryResult struct{
     
     /* item_inventorys Object Array查询成功列表 */
@@ -10248,7 +10248,7 @@ type InventoryQueryResult struct{
     
 }
 
-// WarehouseInfo 奇门仓储字段
+/* WarehouseInfo 奇门仓储字段 */
 type WarehouseInfo struct{
     
     /* area Basic奇门仓储字段 */
@@ -10286,7 +10286,7 @@ type WarehouseInfo struct{
     
 }
 
-// ExpressInfo 奇门仓储字段
+/* ExpressInfo 奇门仓储字段 */
 type ExpressInfo struct{
     
     /* brandCode Basic奇门仓储字段 */
@@ -10306,7 +10306,7 @@ type ExpressInfo struct{
     
 }
 
-// Sninfo SN信息
+/* Sninfo SN信息 */
 type Sninfo struct{
     
     /* inventory_type Basic库存类型（1 可销售库存(正品) 101 残次 102 机损 103 箱损201 冻结库存） */
@@ -10323,7 +10323,7 @@ type Sninfo struct{
     
 }
 
-// Sninfolist SN信息列表
+/* Sninfolist SN信息列表 */
 type Sninfolist struct{
     
     /* sn_info ObjectSN信息 */
@@ -10331,7 +10331,7 @@ type Sninfolist struct{
     
 }
 
-// Result 接口返回
+/* Result 接口返回 */
 type Result struct{
     
     /* error_code Basic错误码 */
@@ -10351,7 +10351,7 @@ type Result struct{
     
 }
 
-// KeyResult keys
+/* KeyResult keys */
 type KeyResult struct{
     
     /* key_name BasickeyName */
@@ -10359,7 +10359,7 @@ type KeyResult struct{
     
 }
 
-// CustomAreaResult data
+/* CustomAreaResult data */
 type CustomAreaResult struct{
     
     /* custom_area_id BasiccustomAreaId */
@@ -10373,7 +10373,7 @@ type CustomAreaResult struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -10390,7 +10390,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// Item 调拨单货品明细记录集
+/* Item 调拨单货品明细记录集 */
 type Item struct{
     
     /* inCount Basic实际入库数量,Item1234,string(50),, */
@@ -10410,7 +10410,7 @@ type Item struct{
     
 }
 
-// TransferOrderDetail 调拨单细节
+/* TransferOrderDetail 调拨单细节 */
 type TransferOrderDetail struct{
     
     /* confirmInTime Basic确认入库时间 */
@@ -10451,7 +10451,7 @@ type TransferOrderDetail struct{
     
 }
 
-// Item 项目
+/* Item 项目 */
 type Item struct{
     
     /* inCount Basic实际入库数量,Item1234,string(50),, */
@@ -10471,7 +10471,7 @@ type Item struct{
     
 }
 
-// Items 项目集
+/* Items 项目集 */
 type Items struct{
     
     /* item Object项目 */
@@ -10479,7 +10479,7 @@ type Items struct{
     
 }
 
-// ProductSkuTopDto sku列表
+/* ProductSkuTopDto sku列表 */
 type ProductSkuTopDto struct{
     
     /* bar_code Basic条形码 */
@@ -10502,7 +10502,7 @@ type ProductSkuTopDto struct{
     
 }
 
-// ProductTopDto 产品信息
+/* ProductTopDto 产品信息 */
 type ProductTopDto struct{
     
     /* category_id Basic类目Id */
@@ -10540,7 +10540,7 @@ type ProductTopDto struct{
     
 }
 
-// PageResultDto result
+/* PageResultDto result */
 type PageResultDto struct{
     
     /* error_code Basic错误码 */
@@ -10563,7 +10563,7 @@ type PageResultDto struct{
     
 }
 
-// TransferItem 项目
+/* TransferItem 项目 */
 type TransferItem struct{
     
     /* count Basic数量,Item1234,string(50),必填, */
@@ -10577,7 +10577,7 @@ type TransferItem struct{
     
 }
 
-// TransferItems 项目集
+/* TransferItems 项目集 */
 type TransferItems struct{
     
     /* transferItem Object项目 */
@@ -10585,7 +10585,7 @@ type TransferItems struct{
     
 }
 
-// TransferExecuteInfo 调拨单信息
+/* TransferExecuteInfo 调拨单信息 */
 type TransferExecuteInfo struct{
     
     /* expectInStoreTime Basic预计入库时间,0,string(50),, */
@@ -10599,7 +10599,7 @@ type TransferExecuteInfo struct{
     
 }
 
-// SellerResourceMetaInfo sellerResourceMetaInfo
+/* SellerResourceMetaInfo sellerResourceMetaInfo */
 type SellerResourceMetaInfo struct{
     
     /* need_publish Basic是否需要发布 */
@@ -10619,7 +10619,7 @@ type SellerResourceMetaInfo struct{
     
 }
 
-// SellerResourceResponse data
+/* SellerResourceResponse data */
 type SellerResourceResponse struct{
     
     /* editing_resource_data Basic正在编辑的资源内容 */
@@ -10633,7 +10633,7 @@ type SellerResourceResponse struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -10650,7 +10650,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// IsvResourceMetaInfo isvResourceMetaInfo
+/* IsvResourceMetaInfo isvResourceMetaInfo */
 type IsvResourceMetaInfo struct{
     
     /* need_publish Basic是否需要发布，如果online_resource_data中没有值，则为true，表示需要发布 */
@@ -10667,7 +10667,7 @@ type IsvResourceMetaInfo struct{
     
 }
 
-// IsvResourceResponse data
+/* IsvResourceResponse data */
 type IsvResourceResponse struct{
     
     /* editing_resource_data Basic编辑版本的内容 */
@@ -10681,7 +10681,7 @@ type IsvResourceResponse struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -10698,7 +10698,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// SenderInfo 送货人信息
+/* SenderInfo 送货人信息 */
 type SenderInfo struct{
     
     /* senderInfoarea Basic区域, string (50) */
@@ -10742,7 +10742,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收货人信息
+/* ReceiverInfo 收货人信息 */
 type ReceiverInfo struct{
     
     /* receiverInfoarea Basic区域, string (50) */
@@ -10786,7 +10786,7 @@ type ReceiverInfo struct{
     
 }
 
-// EntryOrder 入库单信息
+/* EntryOrder 入库单信息 */
 type EntryOrder struct{
     
     /* buyOrderCode Basic交易单号 */
@@ -10845,7 +10845,7 @@ type EntryOrder struct{
     
 }
 
-// OrderLines 入库单明细list
+/* OrderLines 入库单明细list */
 type OrderLines struct{
     
     /* batchCode Basic（无）批次编码 */
@@ -10892,7 +10892,7 @@ type OrderLines struct{
     
 }
 
-// EntryOrderlist 入库单记录集
+/* EntryOrderlist 入库单记录集 */
 type EntryOrderlist struct{
     
     /* entryOrder Object入库单信息 */
@@ -10903,7 +10903,7 @@ type EntryOrderlist struct{
     
 }
 
-// Result 返回结果
+/* Result 返回结果 */
 type Result struct{
     
     /* code Basic响应码:CD001 */
@@ -10917,7 +10917,7 @@ type Result struct{
     
 }
 
-// CancelDistributionDto 参数
+/* CancelDistributionDto 参数 */
 type CancelDistributionDto struct{
     
     /* logistics_company_code Basic物流公司编码 */
@@ -10952,7 +10952,7 @@ type CancelDistributionDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -10966,7 +10966,7 @@ type Result struct{
     
 }
 
-// EntryOrder 订单
+/* EntryOrder 订单 */
 type EntryOrder struct{
     
     /* entryOrderCode Basic入库单号 */
@@ -10980,7 +10980,7 @@ type EntryOrder struct{
     
 }
 
-// EntryOrderlist 订单列表
+/* EntryOrderlist 订单列表 */
 type EntryOrderlist struct{
     
     /* entryOrder Object订单 */
@@ -10988,7 +10988,7 @@ type EntryOrderlist struct{
     
 }
 
-// Response 
+/* Response  */
 type Response struct{
     
     /* code Basic响应码,,string (50), */
@@ -11002,7 +11002,7 @@ type Response struct{
     
 }
 
-// StationInfo 站点信息
+/* StationInfo 站点信息 */
 type StationInfo struct{
     
     /* city Basic城市 */
@@ -11061,7 +11061,7 @@ type StationInfo struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* error_code Basic错误编码，见白皮书 */
@@ -11075,7 +11075,7 @@ type SingleResult struct{
     
 }
 
-// UpdateReverseStatusDto 参数
+/* UpdateReverseStatusDto 参数 */
 type UpdateReverseStatusDto struct{
     
     /* msg Basic描述信息 */
@@ -11098,7 +11098,7 @@ type UpdateReverseStatusDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -11112,7 +11112,7 @@ type Result struct{
     
 }
 
-// InvoiceItem 电子发票明细
+/* InvoiceItem 电子发票明细 */
 type InvoiceItem struct{
     
     /* amount Basic价税合计。(等于sumPrice和tax之和) */
@@ -11153,7 +11153,7 @@ type InvoiceItem struct{
     
 }
 
-// RefundCheckDto 入参
+/* RefundCheckDto 入参 */
 type RefundCheckDto struct{
     
     /* msg Basic审核描述 */
@@ -11179,7 +11179,7 @@ type RefundCheckDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -11193,7 +11193,7 @@ type Result struct{
     
 }
 
-// RefundJobQueryBO list
+/* RefundJobQueryBO list */
 type RefundJobQueryBO struct{
     
     /* dealer_nick BasicdealerNick */
@@ -11213,7 +11213,7 @@ type RefundJobQueryBO struct{
     
 }
 
-// Resultdata resultData
+/* Resultdata resultData */
 type Resultdata struct{
     
     /* list Object Arraylist */
@@ -11224,7 +11224,7 @@ type Resultdata struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -11241,7 +11241,7 @@ type Result struct{
     
 }
 
-// SubItem 子货品
+/* SubItem 子货品 */
 type SubItem struct{
     
     /* count Basic子货品数量 */
@@ -11252,7 +11252,7 @@ type SubItem struct{
     
 }
 
-// SubItemList 子货品列表
+/* SubItemList 子货品列表 */
 type SubItemList struct{
     
     /* sub_item Object子货品 */
@@ -11260,7 +11260,7 @@ type SubItemList struct{
     
 }
 
-// SubItem 子货品
+/* SubItem 子货品 */
 type SubItem struct{
     
     /* count Basic子货品数量 */
@@ -11271,7 +11271,7 @@ type SubItem struct{
     
 }
 
-// SubItemList 子货品列表
+/* SubItemList 子货品列表 */
 type SubItemList struct{
     
     /* sub_item Object子货品 */
@@ -11279,7 +11279,7 @@ type SubItemList struct{
     
 }
 
-// Result 接口返回结果
+/* Result 接口返回结果 */
 type Result struct{
     
     /* sub_item_list Object Array子货品列表 */
@@ -11296,7 +11296,7 @@ type Result struct{
     
 }
 
-// RefundReturnNotes 退货单创建结果列表
+/* RefundReturnNotes 退货单创建结果列表 */
 type RefundReturnNotes struct{
     
     /* is_return_notes_created Basic退款对应退货单创建是否完成 */
@@ -11307,7 +11307,7 @@ type RefundReturnNotes struct{
     
 }
 
-// Result 返回结果
+/* Result 返回结果 */
 type Result struct{
     
     /* err_code Basic错误码 */
@@ -11318,7 +11318,7 @@ type Result struct{
     
 }
 
-// SdtStationDto 站点信息
+/* SdtStationDto 站点信息 */
 type SdtStationDto struct{
     
     /* action_time Basic站点操作时间 */
@@ -11347,7 +11347,7 @@ type SdtStationDto struct{
     
 }
 
-// SdtQueryPackageResponse data
+/* SdtQueryPackageResponse data */
 type SdtQueryPackageResponse struct{
     
     /* stations Object Array站点信息 */
@@ -11355,7 +11355,7 @@ type SdtQueryPackageResponse struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* data Objectdata */
@@ -11369,7 +11369,7 @@ type Result struct{
     
 }
 
-// ModifiedAddress 要修改的地址信息
+/* ModifiedAddress 要修改的地址信息 */
 type ModifiedAddress struct{
     
     /* addressDetail Basic详细地址，不带town信息，非必须有可能为空 */
@@ -11401,7 +11401,7 @@ type ModifiedAddress struct{
     
 }
 
-// OriginalAddress 订单原始收货地址信息
+/* OriginalAddress 订单原始收货地址信息 */
 type OriginalAddress struct{
     
     /* addressDetail Basic详细地址，不带town信息，非必须有可能为空 */
@@ -11433,7 +11433,7 @@ type OriginalAddress struct{
     
 }
 
-// ResultDO 修改地址返回结果
+/* ResultDO 修改地址返回结果 */
 type ResultDO struct{
     
     /* errorCode Basic错误码 */
@@ -11447,7 +11447,7 @@ type ResultDO struct{
     
 }
 
-// SizeMappingTemplateDo 尺码表模板
+/* SizeMappingTemplateDo 尺码表模板 */
 type SizeMappingTemplateDo struct{
     
     /* template_content Basic尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。 */
@@ -11461,7 +11461,7 @@ type SizeMappingTemplateDo struct{
     
 }
 
-// TradeItemInfoDto 商品信息，非淘及散件必填，淘系订单以订单在淘宝系统内容为准
+/* TradeItemInfoDto 商品信息，非淘及散件必填，淘系订单以订单在淘宝系统内容为准 */
 type TradeItemInfoDto struct{
     
     /* amount Basic商品单价，单位为分 */
@@ -11484,7 +11484,7 @@ type TradeItemInfoDto struct{
     
 }
 
-// TradeOrderDetailDto 子订单信息
+/* TradeOrderDetailDto 子订单信息 */
 type TradeOrderDetailDto struct{
     
     /* items Object Array商品信息，非淘及散件必填，淘系订单以订单在淘宝系统内容为准 */
@@ -11495,7 +11495,7 @@ type TradeOrderDetailDto struct{
     
 }
 
-// TradeOrderInfoDto 订单信息，目前一次请求只支持一个主订单
+/* TradeOrderInfoDto 订单信息，目前一次请求只支持一个主订单 */
 type TradeOrderInfoDto struct{
     
     /* main_order_id Basic主订单ID */
@@ -11506,7 +11506,7 @@ type TradeOrderInfoDto struct{
     
 }
 
-// ReceiverDto 收件人信息
+/* ReceiverDto 收件人信息 */
 type ReceiverDto struct{
     
     /* address Basic收件人详细地址 */
@@ -11535,7 +11535,7 @@ type ReceiverDto struct{
     
 }
 
-// SdtExtendInfoDto 扩展信息
+/* SdtExtendInfoDto 扩展信息 */
 type SdtExtendInfoDto struct{
     
     /* waybill_print_address Basic电子面单上打印的发件地址 */
@@ -11543,7 +11543,7 @@ type SdtExtendInfoDto struct{
     
 }
 
-// GetStoreConsignCodeResponse 发货信息
+/* GetStoreConsignCodeResponse 发货信息 */
 type GetStoreConsignCodeResponse struct{
     
     /* mail_no Basic面单号 */
@@ -11560,7 +11560,7 @@ type GetStoreConsignCodeResponse struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* data Object发货信息 */
@@ -11574,7 +11574,7 @@ type Result struct{
     
 }
 
-// InvoiceItem 电子发票明细
+/* InvoiceItem 电子发票明细 */
 type InvoiceItem struct{
     
     /* amount Basic价税合计。(等于sumPrice和tax之和) <span style="color:red;font-weight: bold;">当开红票时，该字段为负数</span> */
@@ -11618,7 +11618,7 @@ type InvoiceItem struct{
     
 }
 
-// SizeMappingTemplateDo 尺码表模板
+/* SizeMappingTemplateDo 尺码表模板 */
 type SizeMappingTemplateDo struct{
     
     /* template_content Basic尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。 */
@@ -11632,7 +11632,7 @@ type SizeMappingTemplateDo struct{
     
 }
 
-// Model 尺码表模板
+/* Model 尺码表模板 */
 type Model struct{
     
     /* template_content Basic尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。 */
@@ -11646,7 +11646,7 @@ type Model struct{
     
 }
 
-// SdtConsignResponse data
+/* SdtConsignResponse data */
 type SdtConsignResponse struct{
     
     /* company_name Basic接单公司 */
@@ -11672,7 +11672,7 @@ type SdtConsignResponse struct{
     
 }
 
-// CombItem 奇门仓储字段
+/* CombItem 奇门仓储字段 */
 type CombItem struct{
     
     /* count Basic奇门仓储字段 */
@@ -11683,7 +11683,7 @@ type CombItem struct{
     
 }
 
-// SizeMappingTemplate 尺码表模板列表
+/* SizeMappingTemplate 尺码表模板列表 */
 type SizeMappingTemplate struct{
     
     /* template_content Basic尺码表模板内容，格式为"尺码值:维度名称:数值,尺码值:维度名称:数值"。其中，数值的单位，长度单位为厘米（cm），体重单位为公斤（kg）。 */
@@ -11697,7 +11697,7 @@ type SizeMappingTemplate struct{
     
 }
 
-// TopChannelSubPurchaseOrderCreateParam 采购明细
+/* TopChannelSubPurchaseOrderCreateParam 采购明细 */
 type TopChannelSubPurchaseOrderCreateParam struct{
     
     /* buy_quantity Basic采购数量 */
@@ -11711,7 +11711,7 @@ type TopChannelSubPurchaseOrderCreateParam struct{
     
 }
 
-// TopChannelPurchaseOrderCreateParam 入参
+/* TopChannelPurchaseOrderCreateParam 入参 */
 type TopChannelPurchaseOrderCreateParam struct{
     
     /* auto_audit Basic是否自动审批 */
@@ -11743,7 +11743,7 @@ type TopChannelPurchaseOrderCreateParam struct{
     
 }
 
-// OrderItems 订单详情
+/* OrderItems 订单详情 */
 type OrderItems struct{
     
     /* itemCode Basic货品编码 */
@@ -11766,7 +11766,7 @@ type OrderItems struct{
     
 }
 
-// ErpBmsOrderGiftCancelRequest 请求
+/* ErpBmsOrderGiftCancelRequest 请求 */
 type ErpBmsOrderGiftCancelRequest struct{
     
     /* orderItems Object Array订单详情 */
@@ -11786,7 +11786,7 @@ type ErpBmsOrderGiftCancelRequest struct{
     
 }
 
-// Response response
+/* Response response */
 type Response struct{
     
     /* code Basic成功 */
@@ -11800,7 +11800,7 @@ type Response struct{
     
 }
 
-// OrderItems 明细
+/* OrderItems 明细 */
 type OrderItems struct{
     
     /* itemGiftType Basic明细类型( 1.交易赠品 ;2.促销赠品; 3.手工录入赠品 ;4.交易正品; 5.手工录入正品) */
@@ -11823,7 +11823,7 @@ type OrderItems struct{
     
 }
 
-// BmsTaobaoOrderIntercepteRequest 请求主体
+/* BmsTaobaoOrderIntercepteRequest 请求主体 */
 type BmsTaobaoOrderIntercepteRequest struct{
     
     /* orderItems Object Array明细 */
@@ -11849,7 +11849,7 @@ type BmsTaobaoOrderIntercepteRequest struct{
     
 }
 
-// Response Response
+/* Response Response */
 type Response struct{
     
     /* code Basic错误码 */
@@ -11866,7 +11866,7 @@ type Response struct{
     
 }
 
-// OrderItems 明细信息
+/* OrderItems 明细信息 */
 type OrderItems struct{
     
     /* consignType BasicSC:商家仓；CN：菜鸟仓 */
@@ -11904,7 +11904,7 @@ type OrderItems struct{
     
 }
 
-// BmsErptradeTransferConsignRequest 请求体
+/* BmsErptradeTransferConsignRequest 请求体 */
 type BmsErptradeTransferConsignRequest struct{
     
     /* operateType Basic操作类型(1、商家仓转菜鸟，2、菜鸟仓转商家仓) */
@@ -11927,7 +11927,7 @@ type BmsErptradeTransferConsignRequest struct{
     
 }
 
-// Response 
+/* Response  */
 type Response struct{
     
     /* code Basic响应码, （100:成功） */
@@ -11941,7 +11941,7 @@ type Response struct{
     
 }
 
-// OrderItems 明细
+/* OrderItems 明细 */
 type OrderItems struct{
     
     /* consignNum Basic应发数量 */
@@ -11982,7 +11982,7 @@ type OrderItems struct{
     
 }
 
-// BmsTradeConsignRequest 请求实体
+/* BmsTradeConsignRequest 请求实体 */
 type BmsTradeConsignRequest struct{
     
     /* orderItems Object Array明细 */
@@ -12008,7 +12008,7 @@ type BmsTradeConsignRequest struct{
     
 }
 
-// Response 
+/* Response  */
 type Response struct{
     
     /* code Basic响应码, （100:成功） */
@@ -12022,7 +12022,7 @@ type Response struct{
     
 }
 
-// ExpressModifyAppointTopRequestDto 改约请求对象
+/* ExpressModifyAppointTopRequestDto 改约请求对象 */
 type ExpressModifyAppointTopRequestDto struct{
     
     /* feature Basic扩展字段 */
@@ -12057,7 +12057,7 @@ type ExpressModifyAppointTopRequestDto struct{
     
 }
 
-// ExpressModifyAppointTopResponseDto 业务返回结果
+/* ExpressModifyAppointTopResponseDto 业务返回结果 */
 type ExpressModifyAppointTopResponseDto struct{
     
     /* order_code Basic订单号 */
@@ -12068,7 +12068,7 @@ type ExpressModifyAppointTopResponseDto struct{
     
 }
 
-// SingleResultDto 调用结果
+/* SingleResultDto 调用结果 */
 type SingleResultDto struct{
     
     /* error_code Basic错误编码 */
@@ -12094,7 +12094,7 @@ type SingleResultDto struct{
     
 }
 
-// OrderEventDto 参数
+/* OrderEventDto 参数 */
 type OrderEventDto struct{
     
     /* extra Basic扩展信息 */
@@ -12117,7 +12117,7 @@ type OrderEventDto struct{
     
 }
 
-// Reason 拒绝原因列表
+/* Reason 拒绝原因列表 */
 type Reason struct{
     
     /* reason_id Basic拒绝原因ID */
@@ -12128,7 +12128,7 @@ type Reason struct{
     
 }
 
-// ResultSet 返回结果
+/* ResultSet 返回结果 */
 type ResultSet struct{
     
     /* error_code Basic错误码 */
@@ -12148,7 +12148,7 @@ type ResultSet struct{
     
 }
 
-// OmniSettingDto 分单&接单设置
+/* OmniSettingDto 分单&接单设置 */
 type OmniSettingDto struct{
     
     /* accepted_system Basic接单系统，填 0 代表店掌柜，填 1 代表 POS */
@@ -12159,7 +12159,7 @@ type OmniSettingDto struct{
     
 }
 
-// Exchange 换货单信息
+/* Exchange 换货单信息 */
 type Exchange struct{
     
     /* biz_order_id Basic正向交易单号ID */
@@ -12176,7 +12176,7 @@ type Exchange struct{
     
 }
 
-// ExchangeBaseResponse 返回结果
+/* ExchangeBaseResponse 返回结果 */
 type ExchangeBaseResponse struct{
     
     /* exchange Object换货单信息 */
@@ -12193,7 +12193,7 @@ type ExchangeBaseResponse struct{
     
 }
 
-// Exchange 换货单基本信息
+/* Exchange 换货单基本信息 */
 type Exchange struct{
     
     /* biz_order_id Basic正向交易单号ID */
@@ -12210,7 +12210,7 @@ type Exchange struct{
     
 }
 
-// ExchangeBaseResponse 返回结果
+/* ExchangeBaseResponse 返回结果 */
 type ExchangeBaseResponse struct{
     
     /* exchange Object换货单基本信息 */
@@ -12227,7 +12227,7 @@ type ExchangeBaseResponse struct{
     
 }
 
-// PicUrl 凭证信息
+/* PicUrl 凭证信息 */
 type PicUrl struct{
     
     /* url Basic图片url */
@@ -12235,7 +12235,7 @@ type PicUrl struct{
     
 }
 
-// RefundMessage 留言信息
+/* RefundMessage 留言信息 */
 type RefundMessage struct{
     
     /* content Basic留言内容 */
@@ -12267,7 +12267,7 @@ type RefundMessage struct{
     
 }
 
-// ResultSet 返回结果
+/* ResultSet 返回结果 */
 type ResultSet struct{
     
     /* error_code Basic错误码 */
@@ -12284,7 +12284,7 @@ type ResultSet struct{
     
 }
 
-// PicUrl 凭证信息
+/* PicUrl 凭证信息 */
 type PicUrl struct{
     
     /* url Basic凭证图片url */
@@ -12292,7 +12292,7 @@ type PicUrl struct{
     
 }
 
-// RefundMessage 留言记录
+/* RefundMessage 留言记录 */
 type RefundMessage struct{
     
     /* content Basic留言内容 */
@@ -12324,7 +12324,7 @@ type RefundMessage struct{
     
 }
 
-// RefundMessageResult 返回结果
+/* RefundMessageResult 返回结果 */
 type RefundMessageResult struct{
     
     /* error_code Basic错误码 */
@@ -12350,7 +12350,7 @@ type RefundMessageResult struct{
     
 }
 
-// Exchange 换货单号基本信息
+/* Exchange 换货单号基本信息 */
 type Exchange struct{
     
     /* biz_order_id Basic正向交易单号ID */
@@ -12367,7 +12367,7 @@ type Exchange struct{
     
 }
 
-// ExchangeBaseResponse 返回结果
+/* ExchangeBaseResponse 返回结果 */
 type ExchangeBaseResponse struct{
     
     /* exchange Object换货单号基本信息 */
@@ -12384,7 +12384,7 @@ type ExchangeBaseResponse struct{
     
 }
 
-// ReceiverInfo 收货人信息
+/* ReceiverInfo 收货人信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域, string (50) */
@@ -12419,7 +12419,7 @@ type ReceiverInfo struct{
     
 }
 
-// Item 商品详情
+/* Item 商品详情 */
 type Item struct{
     
     /* batchCode Basic批次编码, string (50) */
@@ -12448,7 +12448,7 @@ type Item struct{
     
 }
 
-// Items 商品列表
+/* Items 商品列表 */
 type Items struct{
     
     /* item Object商品详情 */
@@ -12456,7 +12456,7 @@ type Items struct{
     
 }
 
-// Request 请求对象
+/* Request 请求对象 */
 type Request struct{
     
     /* createDate Basic缺货回告创建时间, string (19) , 必填 */
@@ -12494,7 +12494,7 @@ type Request struct{
     
 }
 
-// Response 响应对象
+/* Response 响应对象 */
 type Response struct{
     
     /* code Basic响应码 */
@@ -12508,7 +12508,7 @@ type Response struct{
     
 }
 
-// SellerStatus 商家状态
+/* SellerStatus 商家状态 */
 type SellerStatus struct{
     
     /* status Basic状态：NO_SUBSCRIBE:未订购；NO_SETTING:订购未设置;NO_USING:订购未使用；USING:已使用;LOST:已流失； */
@@ -12519,7 +12519,7 @@ type SellerStatus struct{
     
 }
 
-// Exchange exchange
+/* Exchange exchange */
 type Exchange struct{
     
     /* biz_order_id BasicbizOrderId */
@@ -12536,7 +12536,7 @@ type Exchange struct{
     
 }
 
-// RefundBaseResponse result
+/* RefundBaseResponse result */
 type RefundBaseResponse struct{
     
     /* exchange Objectexchange */
@@ -12553,7 +12553,7 @@ type RefundBaseResponse struct{
     
 }
 
-// InventoryCheckDetailDto 调整明细
+/* InventoryCheckDetailDto 调整明细 */
 type InventoryCheckDetailDto struct{
     
     /* inv_biz_code Basic如果是门店类型,则为必填。 ONLINE_INVENTORY  线上可售库存，  SHARE_INVENTORY 线下可售库存 */
@@ -12570,7 +12570,7 @@ type InventoryCheckDetailDto struct{
     
 }
 
-// InventoryCheckDto 调整库存对象
+/* InventoryCheckDto 调整库存对象 */
 type InventoryCheckDto struct{
     
     /* check_mode Basic2: 出入库盘盈盘亏 */
@@ -12590,7 +12590,7 @@ type InventoryCheckDto struct{
     
 }
 
-// InventoryCheckResultDto data
+/* InventoryCheckResultDto data */
 type InventoryCheckResultDto struct{
     
     /* error_code Basic错误码 */
@@ -12607,7 +12607,7 @@ type InventoryCheckResultDto struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* adjust_results Object Arraydata */
@@ -12624,7 +12624,7 @@ type SingleResult struct{
     
 }
 
-// AddressDto 发货地址需要通过<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.3OFCPk&treeId=17&articleId=104860&docType=1">search接口</a>
+/* AddressDto 发货地址需要通过<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.3OFCPk&treeId=17&articleId=104860&docType=1">search接口</a> */
 type AddressDto struct{
     
     /* city Basic城市 */
@@ -12644,7 +12644,7 @@ type AddressDto struct{
     
 }
 
-// UserInfoDto 发货人信息
+/* UserInfoDto 发货人信息 */
 type UserInfoDto struct{
     
     /* address Object发货地址需要通过<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.3OFCPk&treeId=17&articleId=104860&docType=1">search接口</a> */
@@ -12661,7 +12661,7 @@ type UserInfoDto struct{
     
 }
 
-// OrderInfoDto 订单信息
+/* OrderInfoDto 订单信息 */
 type OrderInfoDto struct{
     
     /* order_channels_type Basic<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.8cf9Nj&treeId=17&articleId=105085&docType=1#2">订单渠道平台编码</a> */
@@ -12672,7 +12672,7 @@ type OrderInfoDto struct{
     
 }
 
-// Item 商品信息,数量限制为100
+/* Item 商品信息,数量限制为100 */
 type Item struct{
     
     /* count Basic数量 */
@@ -12683,7 +12683,7 @@ type Item struct{
     
 }
 
-// PackageInfoDto 包裹信息
+/* PackageInfoDto 包裹信息 */
 type PackageInfoDto struct{
     
     /* goods_description Basic大件快运中的货品描述，比如服装，家具 */
@@ -12709,7 +12709,7 @@ type PackageInfoDto struct{
     
 }
 
-// AddressDto 地址
+/* AddressDto 地址 */
 type AddressDto struct{
     
     /* city Basic城市 */
@@ -12729,7 +12729,7 @@ type AddressDto struct{
     
 }
 
-// UserInfoDto 收件人信息
+/* UserInfoDto 收件人信息 */
 type UserInfoDto struct{
     
     /* address Object地址 */
@@ -12746,7 +12746,7 @@ type UserInfoDto struct{
     
 }
 
-// TradeOrderInfoDto 请求面单信息，数量限制为10
+/* TradeOrderInfoDto 请求面单信息，数量限制为10 */
 type TradeOrderInfoDto struct{
     
     /* logistics_services Basic服务值,传值方式见<a href="http://open.taobao.com/docs/doc.htm?spm=a219a.7629140.0.0.seE3Yp&treeId=17&articleId=106156&docType=1">链接</a> */
@@ -12772,7 +12772,7 @@ type TradeOrderInfoDto struct{
     
 }
 
-// WaybillCloudPrintApplyNewRequest 入参信息
+/* WaybillCloudPrintApplyNewRequest 入参信息 */
 type WaybillCloudPrintApplyNewRequest struct{
     
     /* cp_code Basic<a href="http://open.taobao.com/doc2/detail.htm?spm=a219a.7629140.0.0.8cf9Nj&treeId=17&articleId=105085&docType=1#1">物流公司Code</a> */
@@ -12801,7 +12801,7 @@ type WaybillCloudPrintApplyNewRequest struct{
     
 }
 
-// WaybillCloudPrintResponse 系统自动生成
+/* WaybillCloudPrintResponse 系统自动生成 */
 type WaybillCloudPrintResponse struct{
     
     /* object_id Basic请求id */
@@ -12818,7 +12818,7 @@ type WaybillCloudPrintResponse struct{
     
 }
 
-// Deliverrequirementswlbwmsconsignordernotify 配送要求
+/* Deliverrequirementswlbwmsconsignordernotify 配送要求 */
 type Deliverrequirementswlbwmsconsignordernotify struct{
     
     /* delivery_type Basic配送类型： PTPS-常温配送 LLPS-冷链配送 */
@@ -12838,7 +12838,7 @@ type Deliverrequirementswlbwmsconsignordernotify struct{
     
 }
 
-// Receiverwlbwmsconsignordernotify 收件人信息
+/* Receiverwlbwmsconsignordernotify 收件人信息 */
 type Receiverwlbwmsconsignordernotify struct{
     
     /* receiver_address Basic收件方地址 */
@@ -12873,7 +12873,7 @@ type Receiverwlbwmsconsignordernotify struct{
     
 }
 
-// Senderwlbwmsconsignordernotify 发货方信息
+/* Senderwlbwmsconsignordernotify 发货方信息 */
 type Senderwlbwmsconsignordernotify struct{
     
     /* sender_address Basic发件方地址 */
@@ -12905,7 +12905,7 @@ type Senderwlbwmsconsignordernotify struct{
     
 }
 
-// Orderitemwlbwmsconsignordernotify 订单商品信息
+/* Orderitemwlbwmsconsignordernotify 订单商品信息 */
 type Orderitemwlbwmsconsignordernotify struct{
     
     /* actual_price Basic商品成交价格=销售价格-优惠金额 */
@@ -12961,7 +12961,7 @@ type Orderitemwlbwmsconsignordernotify struct{
     
 }
 
-// Orderitemlistwlbwmsconsignordernotify 订单商品信息列表
+/* Orderitemlistwlbwmsconsignordernotify 订单商品信息列表 */
 type Orderitemlistwlbwmsconsignordernotify struct{
     
     /* order_item Object订单商品信息 */
@@ -12969,7 +12969,7 @@ type Orderitemlistwlbwmsconsignordernotify struct{
     
 }
 
-// Itemdetailwlbwmsconsignordernotify 发票信息
+/* Itemdetailwlbwmsconsignordernotify 发票信息 */
 type Itemdetailwlbwmsconsignordernotify struct{
     
     /* amount Basic金额 */
@@ -12989,7 +12989,7 @@ type Itemdetailwlbwmsconsignordernotify struct{
     
 }
 
-// Detaillistwlbwmsconsignordernotify 发票明细列表
+/* Detaillistwlbwmsconsignordernotify 发票明细列表 */
 type Detaillistwlbwmsconsignordernotify struct{
     
     /* item_detail Object发票信息 */
@@ -12997,7 +12997,7 @@ type Detaillistwlbwmsconsignordernotify struct{
     
 }
 
-// Invoicewlbwmsconsignordernotify 发票信息
+/* Invoicewlbwmsconsignordernotify 发票信息 */
 type Invoicewlbwmsconsignordernotify struct{
     
     /* bill_account Basic发票金额 */
@@ -13020,7 +13020,7 @@ type Invoicewlbwmsconsignordernotify struct{
     
 }
 
-// Invoicelistwlbwmsconsignordernotify 发票信息列表
+/* Invoicelistwlbwmsconsignordernotify 发票信息列表 */
 type Invoicelistwlbwmsconsignordernotify struct{
     
     /* invoice_info Object发票信息 */
@@ -13028,7 +13028,7 @@ type Invoicelistwlbwmsconsignordernotify struct{
     
 }
 
-// Consignorderitem 仓库物流订单信息列表
+/* Consignorderitem 仓库物流订单信息列表 */
 type Consignorderitem struct{
     
     /* item_code Basic商品编码 */
@@ -13045,7 +13045,7 @@ type Consignorderitem struct{
     
 }
 
-// Consignorderitemlist 仓库物流订单信息列表
+/* Consignorderitemlist 仓库物流订单信息列表 */
 type Consignorderitemlist struct{
     
     /* consign_order_item Object仓库物流订单信息列表 */
@@ -13053,7 +13053,7 @@ type Consignorderitemlist struct{
     
 }
 
-// Consignorder 发货订单信息
+/* Consignorder 发货订单信息 */
 type Consignorder struct{
     
     /* consign_order_item_list Object Array仓库物流订单信息列表 */
@@ -13079,7 +13079,7 @@ type Consignorder struct{
     
 }
 
-// Consignorderlist 系统自动生成
+/* Consignorderlist 系统自动生成 */
 type Consignorderlist struct{
     
     /* consign_order Object发货订单信息 */
@@ -13087,7 +13087,7 @@ type Consignorderlist struct{
     
 }
 
-// Item 商品
+/* Item 商品 */
 type Item struct{
     
     /* count Basic数量 */
@@ -13098,7 +13098,7 @@ type Item struct{
     
 }
 
-// PackageInfoDto 包裹信息
+/* PackageInfoDto 包裹信息 */
 type PackageInfoDto struct{
     
     /* items Object Array商品 */
@@ -13112,7 +13112,7 @@ type PackageInfoDto struct{
     
 }
 
-// AddressDto 地址
+/* AddressDto 地址 */
 type AddressDto struct{
     
     /* city Basic城市 */
@@ -13132,7 +13132,7 @@ type AddressDto struct{
     
 }
 
-// UserInfoDto 收件信息
+/* UserInfoDto 收件信息 */
 type UserInfoDto struct{
     
     /* address Object地址 */
@@ -13149,7 +13149,7 @@ type UserInfoDto struct{
     
 }
 
-// UserInfoDto 发件信息
+/* UserInfoDto 发件信息 */
 type UserInfoDto struct{
     
     /* mobile Basic手机号码 */
@@ -13163,7 +13163,7 @@ type UserInfoDto struct{
     
 }
 
-// WaybillCloudPrintUpdateRequest 更新请求信息
+/* WaybillCloudPrintUpdateRequest 更新请求信息 */
 type WaybillCloudPrintUpdateRequest struct{
     
     /* cp_code Basic物流公司CODE */
@@ -13192,7 +13192,7 @@ type WaybillCloudPrintUpdateRequest struct{
     
 }
 
-// CollectTrackingInfo 回传信息
+/* CollectTrackingInfo 回传信息 */
 type CollectTrackingInfo struct{
     
     /* action_code Basic动作编码 */
@@ -13230,7 +13230,7 @@ type CollectTrackingInfo struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* error_code Basic参照返回码定义 */
@@ -13244,7 +13244,7 @@ type SingleResult struct{
     
 }
 
-// EntryOrder 入库单信息
+/* EntryOrder 入库单信息 */
 type EntryOrder struct{
     
     /* entryOrderCode Basic入库单号 */
@@ -13270,7 +13270,7 @@ type EntryOrder struct{
     
 }
 
-// OrderLine 入库单单据信息
+/* OrderLine 入库单单据信息 */
 type OrderLine struct{
     
     /* actualQty Basic实收数量 */
@@ -13311,7 +13311,7 @@ type OrderLine struct{
     
 }
 
-// Exchange 换货单详情
+/* Exchange 换货单详情 */
 type Exchange struct{
     
     /* address Basic卖家换货地址 */
@@ -13409,7 +13409,7 @@ type Exchange struct{
     
 }
 
-// ExchangeBaseResponse 返回结果
+/* ExchangeBaseResponse 返回结果 */
 type ExchangeBaseResponse struct{
     
     /* exchange Object换货单详情 */
@@ -13426,7 +13426,7 @@ type ExchangeBaseResponse struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* amount Basic金额 */
@@ -13446,7 +13446,7 @@ type Item struct{
     
 }
 
-// Detail 发货详情
+/* Detail 发货详情 */
 type Detail struct{
     
     /* items Object Array商品列表 */
@@ -13454,7 +13454,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* amount Basic发票金额 */
@@ -13477,7 +13477,7 @@ type Invoice struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* confirmType Basic支持出库单多次发货(多次发货后确认时;0表示发货单最终状态确认;1表示发货单中间状态确 认) */
@@ -13521,7 +13521,7 @@ type DeliveryOrder struct{
     
 }
 
-// PackageMaterial 包材信息
+/* PackageMaterial 包材信息 */
 type PackageMaterial struct{
     
     /* quantity Basic包材的数量 */
@@ -13532,7 +13532,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* itemCode Basic商品编码 */
@@ -13546,7 +13546,7 @@ type Item struct{
     
 }
 
-// Package 包裹信息
+/* Package 包裹信息 */
 type Package struct{
     
     /* expressCode Basic运单号 */
@@ -13590,7 +13590,7 @@ type Package struct{
     
 }
 
-// Batch 批次列表
+/* Batch 批次列表 */
 type Batch struct{
     
     /* actualQty Basic实发数量(要求batchs节点下所有的实发数量之和等于orderline中的实发数量) */
@@ -13613,7 +13613,7 @@ type Batch struct{
     
 }
 
-// OrderLine 单据列表
+/* OrderLine 单据列表 */
 type OrderLine struct{
     
     /* actualQty Basic实发商品数量 */
@@ -13669,7 +13669,7 @@ type OrderLine struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* error_code Basic参照返回码定义列表 */
@@ -13683,7 +13683,7 @@ type SingleResult struct{
     
 }
 
-// Data data
+/* Data data */
 type Data struct{
     
     /* cp_code Basic快递公司编码 */
@@ -13703,7 +13703,7 @@ type Data struct{
     
 }
 
-// SingleResult 返回结果
+/* SingleResult 返回结果 */
 type SingleResult struct{
     
     /* data Objectdata */
@@ -13720,7 +13720,7 @@ type SingleResult struct{
     
 }
 
-// Exchange 换货单号基本信息
+/* Exchange 换货单号基本信息 */
 type Exchange struct{
     
     /* biz_order_id Basic正向交易单号ID */
@@ -13737,7 +13737,7 @@ type Exchange struct{
     
 }
 
-// ExchangeBaseResponse 返回结果
+/* ExchangeBaseResponse 返回结果 */
 type ExchangeBaseResponse struct{
     
     /* exchange Object换货单号基本信息 */
@@ -13754,7 +13754,7 @@ type ExchangeBaseResponse struct{
     
 }
 
-// CnTmsLogisticsOrderReceiverInfo 配送发货单收件人信息
+/* CnTmsLogisticsOrderReceiverInfo 配送发货单收件人信息 */
 type CnTmsLogisticsOrderReceiverInfo struct{
     
     /* receiver_address Basic收件人区县 */
@@ -13786,7 +13786,7 @@ type CnTmsLogisticsOrderReceiverInfo struct{
     
 }
 
-// CnTmsLogisticsOrderSenderinfo 配送发货单发件人信息
+/* CnTmsLogisticsOrderSenderinfo 配送发货单发件人信息 */
 type CnTmsLogisticsOrderSenderinfo struct{
     
     /* sender_address Basic发件人地址 */
@@ -13815,7 +13815,7 @@ type CnTmsLogisticsOrderSenderinfo struct{
     
 }
 
-// CnTmsLogisticsOrderItem 发货商品信息，最大50条记录
+/* CnTmsLogisticsOrderItem 发货商品信息，最大50条记录 */
 type CnTmsLogisticsOrderItem struct{
     
     /* extend_fields Basic扩展字段 K:V; */
@@ -13841,7 +13841,7 @@ type CnTmsLogisticsOrderItem struct{
     
 }
 
-// CnTmsLogisticsOrderDeliverRequirements 配送要求信息（当前业务暂不支持）
+/* CnTmsLogisticsOrderDeliverRequirements 配送要求信息（当前业务暂不支持） */
 type CnTmsLogisticsOrderDeliverRequirements struct{
     
     /* delivery_type Basic配送类型： PTPS-普通配送 LLPS-冷链配送 */
@@ -13861,7 +13861,7 @@ type CnTmsLogisticsOrderDeliverRequirements struct{
     
 }
 
-// CnTmsLogisticsOrderGotService 要求菜鸟上门揽货服务，当pick_up_Type=2且需求指定时做揽收时，此字段需要传值（当前业务暂不支持）
+/* CnTmsLogisticsOrderGotService 要求菜鸟上门揽货服务，当pick_up_Type=2且需求指定时做揽收时，此字段需要传值（当前业务暂不支持） */
 type CnTmsLogisticsOrderGotService struct{
     
     /* got_date Basic揽收日期yyyyMMdd */
@@ -13872,7 +13872,7 @@ type CnTmsLogisticsOrderGotService struct{
     
 }
 
-// CnTmsLogisticsOrderItem 发货商品信息，最大50条记录
+/* CnTmsLogisticsOrderItem 发货商品信息，最大50条记录 */
 type CnTmsLogisticsOrderItem struct{
     
     /* extend_fields Basic扩展字段 K:V; */
@@ -13898,7 +13898,7 @@ type CnTmsLogisticsOrderItem struct{
     
 }
 
-// CnTmsLogisticsOrderItemPackageInfo 包裹列表，支持一单多包裹
+/* CnTmsLogisticsOrderItemPackageInfo 包裹列表，支持一单多包裹 */
 type CnTmsLogisticsOrderItemPackageInfo struct{
     
     /* items Object Array发货商品信息，最大50条记录 */
@@ -13924,7 +13924,7 @@ type CnTmsLogisticsOrderItemPackageInfo struct{
     
 }
 
-// CnTmsLogisticsOrderConsignContent 配送发货信息
+/* CnTmsLogisticsOrderConsignContent 配送发货信息 */
 type CnTmsLogisticsOrderConsignContent struct{
     
     /* deliver_requirements Object配送要求信息（当前业务暂不支持） */
@@ -14001,7 +14001,7 @@ type CnTmsLogisticsOrderConsignContent struct{
     
 }
 
-// Exchange 返回结果
+/* Exchange 返回结果 */
 type Exchange struct{
     
     /* address Basic卖家换货地址 */
@@ -14081,7 +14081,7 @@ type Exchange struct{
     
 }
 
-// CnTmsMailnoReceiverinfo 收件人信息
+/* CnTmsMailnoReceiverinfo 收件人信息 */
 type CnTmsMailnoReceiverinfo struct{
     
     /* receiver_address Basic收件人地址 */
@@ -14113,7 +14113,7 @@ type CnTmsMailnoReceiverinfo struct{
     
 }
 
-// CnTmsMailnoSenderinfo 发件人信息
+/* CnTmsMailnoSenderinfo 发件人信息 */
 type CnTmsMailnoSenderinfo struct{
     
     /* sender_address Basic发件人地址 */
@@ -14142,7 +14142,7 @@ type CnTmsMailnoSenderinfo struct{
     
 }
 
-// CnTmsMailnoItem 发货商品信息
+/* CnTmsMailnoItem 发货商品信息 */
 type CnTmsMailnoItem struct{
     
     /* item_name Basic发货商品名称 */
@@ -14153,7 +14153,7 @@ type CnTmsMailnoItem struct{
     
 }
 
-// CnTmsMailnoGetContent 获取菜鸟配送电子面单请求参数
+/* CnTmsMailnoGetContent 获取菜鸟配送电子面单请求参数 */
 type CnTmsMailnoGetContent struct{
     
     /* cncpcode Basic菜鸟配指定CPCode */
@@ -14191,7 +14191,7 @@ type CnTmsMailnoGetContent struct{
     
 }
 
-// LocationRelationDto 关系查询
+/* LocationRelationDto 关系查询 */
 type LocationRelationDto struct{
     
     /* source_inv_store_type Basic实体类型 2：仓库  6：门店 */
@@ -14208,7 +14208,7 @@ type LocationRelationDto struct{
     
 }
 
-// LocationRelationDto 地点关系
+/* LocationRelationDto 地点关系 */
 type LocationRelationDto struct{
     
     /* source_inv_store_type Basic实体类型 2：仓库  6：门店 */
@@ -14228,7 +14228,7 @@ type LocationRelationDto struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* error_code Basic错误码 */
@@ -14245,7 +14245,7 @@ type SingleResult struct{
     
 }
 
-// LocationRelationDto 关系对象列表
+/* LocationRelationDto 关系对象列表 */
 type LocationRelationDto struct{
     
     /* source_inv_store_type Basic实体类型 2：仓库 6：门店 */
@@ -14265,7 +14265,7 @@ type LocationRelationDto struct{
     
 }
 
-// RenderContent 包含的区域列表。对于有自定义区的文档，content会包含两条，即第一条是标准模板区域内容、第二条是自定义区域内容
+/* RenderContent 包含的区域列表。对于有自定义区的文档，content会包含两条，即第一条是标准模板区域内容、第二条是自定义区域内容 */
 type RenderContent struct{
     
     /* print_data Basic打印数据 */
@@ -14276,7 +14276,7 @@ type RenderContent struct{
     
 }
 
-// RenderDocument 需要打印的文档，包括模板地址、打印数据
+/* RenderDocument 需要打印的文档，包括模板地址、打印数据 */
 type RenderDocument struct{
     
     /* contents Object Array包含的区域列表。对于有自定义区的文档，content会包含两条，即第一条是标准模板区域内容、第二条是自定义区域内容 */
@@ -14284,7 +14284,7 @@ type RenderDocument struct{
     
 }
 
-// RenderConfig 打印配置
+/* RenderConfig 打印配置 */
 type RenderConfig struct{
     
     /* need_bottom_logo Basic下联logo */
@@ -14301,7 +14301,7 @@ type RenderConfig struct{
     
 }
 
-// CmdRenderParams 参数对象
+/* CmdRenderParams 参数对象 */
 type CmdRenderParams struct{
     
     /* client_id Basic客户端ID */
@@ -14321,7 +14321,7 @@ type CmdRenderParams struct{
     
 }
 
-// PromotionDetails 优惠详情
+/* PromotionDetails 优惠详情 */
 type PromotionDetails struct{
     
     /* gift_item_id Basic如果赠品则为赠品商品ID */
@@ -14353,7 +14353,7 @@ type PromotionDetails struct{
     
 }
 
-// OrdersItems 订单商品详情
+/* OrdersItems 订单商品详情 */
 type OrdersItems struct{
     
     /* bn Basic货品编码 */
@@ -14409,7 +14409,7 @@ type OrdersItems struct{
     
 }
 
-// Orders 订单列表
+/* Orders 订单列表 */
 type Orders struct{
     
     /* consign_time Basic订单发货时间 */
@@ -14462,7 +14462,7 @@ type Orders struct{
     
 }
 
-// PaymentLists 订单支付信息列表
+/* PaymentLists 订单支付信息列表 */
 type PaymentLists struct{
     
     /* buy_name Basic买家会员名 */
@@ -14521,7 +14521,7 @@ type PaymentLists struct{
     
 }
 
-// Data 订单数据
+/* Data 订单数据 */
 type Data struct{
     
     /* agent_address Basic代销人区域 */
@@ -14805,7 +14805,7 @@ type Data struct{
     
 }
 
-// MerStoreInvAdjustDto 商家仓编辑库存
+/* MerStoreInvAdjustDto 商家仓编辑库存 */
 type MerStoreInvAdjustDto struct{
     
     /* attribute Basic扩展属性 */
@@ -14828,7 +14828,7 @@ type MerStoreInvAdjustDto struct{
     
 }
 
-// SingleResultDto result
+/* SingleResultDto result */
 type SingleResultDto struct{
     
     /* error_code BasicerrorCode */
@@ -14842,7 +14842,7 @@ type SingleResultDto struct{
     
 }
 
-// WaybillServiceType 物流服务
+/* WaybillServiceType 物流服务 */
 type WaybillServiceType struct{
     
     /* code Basiccode */
@@ -14853,7 +14853,7 @@ type WaybillServiceType struct{
     
 }
 
-// WaybillProductType 返回值
+/* WaybillProductType 返回值 */
 type WaybillProductType struct{
     
     /* code Basic产品code */
@@ -14867,7 +14867,7 @@ type WaybillProductType struct{
     
 }
 
-// Resultdata resultData
+/* Resultdata resultData */
 type Resultdata struct{
     
     /* ag_account Basic1=是AG用户，0=非AG用户 */
@@ -14875,7 +14875,7 @@ type Resultdata struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* error_code BasicerrorCode */
@@ -14892,7 +14892,7 @@ type Result struct{
     
 }
 
-// KeyResult keys
+/* KeyResult keys */
 type KeyResult struct{
     
     /* key_name Basickey的名称 */
@@ -14900,7 +14900,7 @@ type KeyResult struct{
     
 }
 
-// UserTemplateDo 用户使用的模板数据
+/* UserTemplateDo 用户使用的模板数据 */
 type UserTemplateDo struct{
     
     /* keys Object Arraykeys */
@@ -14917,7 +14917,7 @@ type UserTemplateDo struct{
     
 }
 
-// UserTemplateResult 所有cp的数据
+/* UserTemplateResult 所有cp的数据 */
 type UserTemplateResult struct{
     
     /* cp_code Basiccp编码 */
@@ -14928,7 +14928,7 @@ type UserTemplateResult struct{
     
 }
 
-// CloudPrintBaseResult 返回结果
+/* CloudPrintBaseResult 返回结果 */
 type CloudPrintBaseResult struct{
     
     /* datas Object Array所有cp的数据 */
@@ -14945,7 +14945,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// Inventoryitem 商品属性列表
+/* Inventoryitem 商品属性列表 */
 type Inventoryitem struct{
     
     /* batch_code Basic批次号 */
@@ -14971,7 +14971,7 @@ type Inventoryitem struct{
     
 }
 
-// Inventoryitemlist 商品属性列表
+/* Inventoryitemlist 商品属性列表 */
 type Inventoryitemlist struct{
     
     /* inventory_item Object商品属性列表 */
@@ -14979,7 +14979,7 @@ type Inventoryitemlist struct{
     
 }
 
-// Orderitem 订单商品信息
+/* Orderitem 订单商品信息 */
 type Orderitem struct{
     
     /* inventory_item_list Object Array商品属性列表 */
@@ -14999,7 +14999,7 @@ type Orderitem struct{
     
 }
 
-// Orderitemlist 订单信息
+/* Orderitemlist 订单信息 */
 type Orderitemlist struct{
     
     /* order_item Object订单商品信息 */
@@ -15007,7 +15007,7 @@ type Orderitemlist struct{
     
 }
 
-// Packagematerial 包裹包材信息
+/* Packagematerial 包裹包材信息 */
 type Packagematerial struct{
     
     /* material_quantity Basic包材的数量 */
@@ -15018,7 +15018,7 @@ type Packagematerial struct{
     
 }
 
-// Packagemateriallist 包材信息
+/* Packagemateriallist 包材信息 */
 type Packagemateriallist struct{
     
     /* package_material Object包裹包材信息 */
@@ -15026,7 +15026,7 @@ type Packagemateriallist struct{
     
 }
 
-// Tmsitem 包裹里面商品
+/* Tmsitem 包裹里面商品 */
 type Tmsitem struct{
     
     /* item_code Basic商家编码 */
@@ -15040,7 +15040,7 @@ type Tmsitem struct{
     
 }
 
-// Tmsitemlist 包裹里面的商品信息列表
+/* Tmsitemlist 包裹里面的商品信息列表 */
 type Tmsitemlist struct{
     
     /* tms_item Object包裹里面商品 */
@@ -15048,7 +15048,7 @@ type Tmsitemlist struct{
     
 }
 
-// Tmsorder 运单信息列表
+/* Tmsorder 运单信息列表 */
 type Tmsorder struct{
     
     /* package_code Basic包裹号 */
@@ -15080,7 +15080,7 @@ type Tmsorder struct{
     
 }
 
-// Tmsorderlist 运单信息
+/* Tmsorderlist 运单信息 */
 type Tmsorderlist struct{
     
     /* tms_order Object运单信息列表 */
@@ -15088,7 +15088,7 @@ type Tmsorderlist struct{
     
 }
 
-// Invoinceconfirm 发票确认信息
+/* Invoinceconfirm 发票确认信息 */
 type Invoinceconfirm struct{
     
     /* bill_id BasicErp发票ID */
@@ -15102,7 +15102,7 @@ type Invoinceconfirm struct{
     
 }
 
-// Invoinceconfirmlist 发票确认信息列表
+/* Invoinceconfirmlist 发票确认信息列表 */
 type Invoinceconfirmlist struct{
     
     /* invoince_confirm Object发票确认信息 */
@@ -15110,7 +15110,7 @@ type Invoinceconfirmlist struct{
     
 }
 
-// Consignsendinfo 物流订单发货信息
+/* Consignsendinfo 物流订单发货信息 */
 type Consignsendinfo struct{
     
     /* cn_order_code Basic菜鸟订单编码 */
@@ -15142,7 +15142,7 @@ type Consignsendinfo struct{
     
 }
 
-// Consignsendinfolist 商品信息列表
+/* Consignsendinfolist 商品信息列表 */
 type Consignsendinfolist struct{
     
     /* consign_send_info Object物流订单发货信息 */
@@ -15150,7 +15150,7 @@ type Consignsendinfolist struct{
     
 }
 
-// StandardTemplateDo 该cp的所有标准模板
+/* StandardTemplateDo 该cp的所有标准模板 */
 type StandardTemplateDo struct{
     
     /* standard_template_id Basic模板id */
@@ -15167,7 +15167,7 @@ type StandardTemplateDo struct{
     
 }
 
-// StandardTemplateResult 所有cp的标准模板
+/* StandardTemplateResult 所有cp的标准模板 */
 type StandardTemplateResult struct{
     
     /* cp_code Basiccp编码 */
@@ -15178,7 +15178,7 @@ type StandardTemplateResult struct{
     
 }
 
-// CloudPrintBaseResult 结果集
+/* CloudPrintBaseResult 结果集 */
 type CloudPrintBaseResult struct{
     
     /* datas Object Array所有cp的标准模板 */
@@ -15195,7 +15195,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// ItemListWlbWmsInventoryCount 订单商品信息列表
+/* ItemListWlbWmsInventoryCount 订单商品信息列表 */
 type ItemListWlbWmsInventoryCount struct{
     
     /* batch_code BasicWMS批次号 */
@@ -15221,7 +15221,7 @@ type ItemListWlbWmsInventoryCount struct{
     
 }
 
-// WlbWmsInventoryCount 损益单回传信息
+/* WlbWmsInventoryCount 损益单回传信息 */
 type WlbWmsInventoryCount struct{
     
     /* adjust_biz_key Basic移库单对应的业务单据号 */
@@ -15259,7 +15259,7 @@ type WlbWmsInventoryCount struct{
     
 }
 
-// StoreDeliverConfig 卖家发货配置
+/* StoreDeliverConfig 卖家发货配置 */
 type StoreDeliverConfig struct{
     
     /* activity Basic是否是活动期 */
@@ -15285,7 +15285,7 @@ type StoreDeliverConfig struct{
     
 }
 
-// Batch 批次信息列表
+/* Batch 批次信息列表 */
 type Batch struct{
     
     /* batchCode Basic批次编码 */
@@ -15323,7 +15323,7 @@ type Batch struct{
     
 }
 
-// OrderLine 订单明细列表
+/* OrderLine 订单明细列表 */
 type OrderLine struct{
     
     /* actualQty Basic实际出库数量 */
@@ -15376,7 +15376,7 @@ type OrderLine struct{
     
 }
 
-// PackageMaterial 包材列表
+/* PackageMaterial 包材列表 */
 type PackageMaterial struct{
     
     /* materialQuantity Basic包材数量 */
@@ -15387,7 +15387,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 包裹明细列表
+/* Item 包裹明细列表 */
 type Item struct{
     
     /* batchCode Basic批次 */
@@ -15413,7 +15413,7 @@ type Item struct{
     
 }
 
-// Package 包裹列表
+/* Package 包裹列表 */
 type Package struct{
     
     /* expressCode Basic物流公司运单号 */
@@ -15448,7 +15448,7 @@ type Package struct{
     
 }
 
-// InvoinceConfirm 发票信息
+/* InvoinceConfirm 发票信息 */
 type InvoinceConfirm struct{
     
     /* billId BasicERP发票ID */
@@ -15465,7 +15465,7 @@ type InvoinceConfirm struct{
     
 }
 
-// DeliveryRequirement 发货要求
+/* DeliveryRequirement 发货要求 */
 type DeliveryRequirement struct{
     
     /* scheduleEstimateDate Basic预计送达时间 */
@@ -15473,7 +15473,7 @@ type DeliveryRequirement struct{
     
 }
 
-// ToBDeliveryOrderConfirmRequest tob出库确认对象
+/* ToBDeliveryOrderConfirmRequest tob出库确认对象 */
 type ToBDeliveryOrderConfirmRequest struct{
     
     /* arriveChannelType Basic到货渠道类型，VIP＝1、门店＝2、经销商＝3 */
@@ -15538,7 +15538,7 @@ type ToBDeliveryOrderConfirmRequest struct{
     
 }
 
-// StoreCollectConfig 门店自提配置
+/* StoreCollectConfig 门店自提配置 */
 type StoreCollectConfig struct{
     
     /* activity Basic是否是活动期 */
@@ -15558,7 +15558,7 @@ type StoreCollectConfig struct{
     
 }
 
-// StoreDeliverConfig data
+/* StoreDeliverConfig data */
 type StoreDeliverConfig struct{
     
     /* activity Basic是否是活动期 */
@@ -15584,7 +15584,7 @@ type StoreDeliverConfig struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* code Basiccode */
@@ -15598,7 +15598,7 @@ type Result struct{
     
 }
 
-// KeyResult keys
+/* KeyResult keys */
 type KeyResult struct{
     
     /* key_name Basickey名称 */
@@ -15606,7 +15606,7 @@ type KeyResult struct{
     
 }
 
-// CustomAreaResult 数据
+/* CustomAreaResult 数据 */
 type CustomAreaResult struct{
     
     /* custom_area_id Basic自定义区id */
@@ -15620,7 +15620,7 @@ type CustomAreaResult struct{
     
 }
 
-// CloudPrintBaseResult 结果
+/* CloudPrintBaseResult 结果 */
 type CloudPrintBaseResult struct{
     
     /* datas Object Array数据 */
@@ -15637,7 +15637,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// StoreCollectConfig data
+/* StoreCollectConfig data */
 type StoreCollectConfig struct{
     
     /* activity Basic是否是活动期 */
@@ -15657,7 +15657,7 @@ type StoreCollectConfig struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* code Basiccode */
@@ -15671,7 +15671,7 @@ type Result struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic */
@@ -15691,7 +15691,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic */
@@ -15765,7 +15765,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic */
@@ -15839,7 +15839,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic */
@@ -15865,7 +15865,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic */
@@ -15885,7 +15885,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic */
@@ -16178,7 +16178,7 @@ type Item struct{
     
 }
 
-// Detail 
+/* Detail  */
 type Detail struct{
     
     /* items Object Array */
@@ -16186,7 +16186,7 @@ type Detail struct{
     
 }
 
-// Invoice 
+/* Invoice  */
 type Invoice struct{
     
     /* amount Basic */
@@ -16212,7 +16212,7 @@ type Invoice struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic */
@@ -16286,7 +16286,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic */
@@ -16312,7 +16312,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic */
@@ -16461,7 +16461,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic */
@@ -16487,7 +16487,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic */
@@ -16507,7 +16507,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic */
@@ -16800,7 +16800,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic */
@@ -16811,7 +16811,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic */
@@ -16858,7 +16858,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic */
@@ -16902,7 +16902,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic */
@@ -16913,7 +16913,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic */
@@ -17227,7 +17227,7 @@ type DeliveryOrder struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic */
@@ -17253,7 +17253,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic */
@@ -17273,7 +17273,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualAmount Basic */
@@ -17566,7 +17566,7 @@ type Item struct{
     
 }
 
-// UpdateResendStatusDto 参数
+/* UpdateResendStatusDto 参数 */
 type UpdateResendStatusDto struct{
     
     /* msg Basic描述 */
@@ -17586,7 +17586,7 @@ type UpdateResendStatusDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* fail_code BasicerrorCode */
@@ -17600,7 +17600,7 @@ type Result struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -17629,7 +17629,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -17652,7 +17652,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -17948,7 +17948,7 @@ type Item struct{
     
 }
 
-// Detail 发货详情
+/* Detail 发货详情 */
 type Detail struct{
     
     /* items Object Array商品列表 */
@@ -17956,7 +17956,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* amount Basic发票金额 */
@@ -17985,7 +17985,7 @@ type Invoice struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -18008,7 +18008,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -18085,7 +18085,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -18162,7 +18162,7 @@ type ReceiverInfo struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -18239,7 +18239,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -18271,7 +18271,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -18279,7 +18279,7 @@ type SnList struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -18437,7 +18437,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -18466,7 +18466,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -18489,7 +18489,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -18785,7 +18785,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -18799,7 +18799,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -18849,7 +18849,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -18896,7 +18896,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -18910,7 +18910,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -19224,7 +19224,7 @@ type DeliveryOrder struct{
     
 }
 
-// PackageMaterial 包材信息
+/* PackageMaterial 包材信息 */
 type PackageMaterial struct{
     
     /* quantity Basic包材的数量 */
@@ -19238,7 +19238,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -19288,7 +19288,7 @@ type Item struct{
     
 }
 
-// Package 包裹信息
+/* Package 包裹信息 */
 type Package struct{
     
     /* expressCode Basic运单号 */
@@ -19335,7 +19335,7 @@ type Package struct{
     
 }
 
-// Batch 批次列表
+/* Batch 批次列表 */
 type Batch struct{
     
     /* actualQty Basic实发数量(要求batchs节点下所有的实发数量之和等于orderline中的实发数量) */
@@ -19367,7 +19367,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn */
@@ -19375,7 +19375,7 @@ type SnList struct{
     
 }
 
-// OrderLine 单据列表
+/* OrderLine 单据列表 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -19533,7 +19533,7 @@ type OrderLine struct{
     
 }
 
-// DeliveryRequirements 发货要求列表
+/* DeliveryRequirements 发货要求列表 */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic发货服务类型(PTPS:普通配送;LLPS:冷链配送;HBP:环保配) */
@@ -19556,7 +19556,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -19645,7 +19645,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收件人信息
+/* ReceiverInfo 收件人信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域 */
@@ -19734,7 +19734,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -19763,7 +19763,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -19786,7 +19786,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -20082,7 +20082,7 @@ type Item struct{
     
 }
 
-// Detail 当content和detail同时存在时，优先处理detail的信息
+/* Detail 当content和detail同时存在时，优先处理detail的信息 */
 type Detail struct{
     
     /* items Object Array商品列表 */
@@ -20090,7 +20090,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* amount Basic发票总金额(填写的条件是:invoiceFlag为Y) */
@@ -20131,7 +20131,7 @@ type Invoice struct{
     
 }
 
-// Insurance 保险信息
+/* Insurance 保险信息 */
 type Insurance struct{
     
     /* amount Basic保险金额 */
@@ -20142,7 +20142,7 @@ type Insurance struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -20219,7 +20219,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -20248,7 +20248,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -20400,7 +20400,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -20429,7 +20429,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -20452,7 +20452,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -20748,7 +20748,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -20762,7 +20762,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -20812,7 +20812,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -20859,7 +20859,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -20873,7 +20873,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -21190,7 +21190,7 @@ type DeliveryOrder struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -21219,7 +21219,7 @@ type Batch struct{
     
 }
 
-// OrderLine 订单列表
+/* OrderLine 订单列表 */
 type OrderLine struct{
     
     /* actualPrice Basic实际成交价 */
@@ -21371,7 +21371,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -21400,7 +21400,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -21423,7 +21423,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -21719,7 +21719,7 @@ type Item struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* itemCode BasicERP商品编码 */
@@ -21736,7 +21736,7 @@ type OrderLine struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* createTime Basic订单创建时间(YYYY-MM-DD HH:MM:SS) */
@@ -21756,7 +21756,7 @@ type DeliveryOrder struct{
     
 }
 
-// GoodsItem 该运单所包含的货品列表
+/* GoodsItem 该运单所包含的货品列表 */
 type GoodsItem struct{
     
     /* goods_id Basic货品ID */
@@ -21770,7 +21770,7 @@ type GoodsItem struct{
     
 }
 
-// SendResendLogisticsMsgDto 参数
+/* SendResendLogisticsMsgDto 参数 */
 type SendResendLogisticsMsgDto struct{
     
     /* biz_id Basic发货单唯一标识 */
@@ -21802,7 +21802,7 @@ type SendResendLogisticsMsgDto struct{
     
 }
 
-// Result result
+/* Result result */
 type Result struct{
     
     /* fail_code Basic错误code */
@@ -21816,7 +21816,7 @@ type Result struct{
     
 }
 
-// OrderInfo orderInfo
+/* OrderInfo orderInfo */
 type OrderInfo struct{
     
     /* VIPCardNo Basic奇门仓储字段,说明,string(50),, */
@@ -21953,7 +21953,7 @@ type OrderInfo struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -21982,7 +21982,7 @@ type Batch struct{
     
 }
 
-// OrderLine orderLines
+/* OrderLine orderLines */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -22134,7 +22134,7 @@ type OrderLine struct{
     
 }
 
-// Order 订单信息
+/* Order 订单信息 */
 type Order struct{
     
     /* orderCode Basic单据号 */
@@ -22163,7 +22163,7 @@ type Order struct{
     
 }
 
-// Process 订单处理信息
+/* Process 订单处理信息 */
 type Process struct{
     
     /* expressCode Basic运单号 */
@@ -22189,7 +22189,7 @@ type Process struct{
     
 }
 
-// RecordList module
+/* RecordList module */
 type RecordList struct{
     
     /* account_id Basic查询记录的帐号ID */
@@ -22215,7 +22215,7 @@ type RecordList struct{
     
 }
 
-// ResultTo result
+/* ResultTo result */
 type ResultTo struct{
     
     /* attachment Basicattachment */
@@ -22247,7 +22247,7 @@ type ResultTo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -22273,7 +22273,7 @@ type Batch struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -22305,7 +22305,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -22328,7 +22328,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item itemList
+/* Item itemList */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -22624,7 +22624,7 @@ type Item struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -22701,7 +22701,7 @@ type SenderInfo struct{
     
 }
 
-// ReturnOrder 退货单信息
+/* ReturnOrder 退货单信息 */
 type ReturnOrder struct{
     
     /* actionType Basic奇门仓储字段,说明,string(50),, */
@@ -22781,7 +22781,7 @@ type ReturnOrder struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -22810,7 +22810,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -22818,7 +22818,7 @@ type SnList struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -22973,7 +22973,7 @@ type OrderLine struct{
     
 }
 
-// RelatedOrder 关联订单信息
+/* RelatedOrder 关联订单信息 */
 type RelatedOrder struct{
     
     /* orderCode Basic关联的订单编号 */
@@ -22987,7 +22987,7 @@ type RelatedOrder struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -23064,7 +23064,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收件人信息
+/* ReceiverInfo 收件人信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域 */
@@ -23141,7 +23141,7 @@ type ReceiverInfo struct{
     
 }
 
-// EntryOrder 入库单信息
+/* EntryOrder 入库单信息 */
 type EntryOrder struct{
     
     /* businessId Basictemp */
@@ -23281,7 +23281,7 @@ type EntryOrder struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -23310,7 +23310,7 @@ type Batch struct{
     
 }
 
-// SnList sn编码列表
+/* SnList sn编码列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -23318,7 +23318,7 @@ type SnList struct{
     
 }
 
-// OrderLine 入库单详情
+/* OrderLine 入库单详情 */
 type OrderLine struct{
     
     /* actualPrice Basictemp */
@@ -23476,7 +23476,7 @@ type OrderLine struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -23505,7 +23505,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -23528,7 +23528,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品信息
+/* Item 商品信息 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -23824,7 +23824,7 @@ type Item struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -23901,7 +23901,7 @@ type SenderInfo struct{
     
 }
 
-// ReturnOrder 退货单信息
+/* ReturnOrder 退货单信息 */
 type ReturnOrder struct{
     
     /* actionType Basic奇门仓储字段,说明,string(50),, */
@@ -23981,7 +23981,7 @@ type ReturnOrder struct{
     
 }
 
-// Batch 批次信息
+/* Batch 批次信息 */
 type Batch struct{
     
     /* actualQty Basic实收数量(要求batchs节点下所有的实收数量之和等于orderline中的实收数量) */
@@ -24010,7 +24010,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -24018,7 +24018,7 @@ type SnList struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -24173,7 +24173,7 @@ type OrderLine struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -24193,7 +24193,7 @@ type PriceAdjustment struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* batchCode Basic批次编号 */
@@ -24216,7 +24216,7 @@ type Batch struct{
     
 }
 
-// Item item
+/* Item item */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -24515,7 +24515,7 @@ type Item struct{
     
 }
 
-// Criteria 查询准则
+/* Criteria 查询准则 */
 type Criteria struct{
     
     /* inventoryType Basic库存类型(ZP=正品;CC=残次;JS=机损;XS=箱损;ZT=在途库存;默认为查所有类型的库存) */
@@ -24538,7 +24538,7 @@ type Criteria struct{
     
 }
 
-// Item 商品的库存信息列表
+/* Item 商品的库存信息列表 */
 type Item struct{
     
     /* batchCode Basic批次编码 */
@@ -24573,7 +24573,7 @@ type Item struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -24602,7 +24602,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -24625,7 +24625,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品信息
+/* Item 商品信息 */
 type Item struct{
     
     /* actualAmount Basictemp */
@@ -24933,7 +24933,7 @@ type Item struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -24962,7 +24962,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -24985,7 +24985,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 订单商品列表
+/* Item 订单商品列表 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -25281,7 +25281,7 @@ type Item struct{
     
 }
 
-// Detail 订单详情
+/* Detail 订单详情 */
 type Detail struct{
     
     /* items Object Array订单商品列表 */
@@ -25289,7 +25289,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* amount Basic发票金额 */
@@ -25318,7 +25318,7 @@ type Invoice struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -25341,7 +25341,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -25418,7 +25418,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -25495,7 +25495,7 @@ type ReceiverInfo struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -25572,7 +25572,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -25601,7 +25601,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -25609,7 +25609,7 @@ type SnList struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -25764,7 +25764,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -25793,7 +25793,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -25816,7 +25816,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -26112,7 +26112,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -26126,7 +26126,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -26176,7 +26176,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -26223,7 +26223,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -26237,7 +26237,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -26551,7 +26551,7 @@ type DeliveryOrder struct{
     
 }
 
-// PackageMaterial 包材信息
+/* PackageMaterial 包材信息 */
 type PackageMaterial struct{
     
     /* quantity Basic包材的数量 */
@@ -26565,7 +26565,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -26615,7 +26615,7 @@ type Item struct{
     
 }
 
-// Package 订单包裹信息
+/* Package 订单包裹信息 */
 type Package struct{
     
     /* expressCode Basic运单号 */
@@ -26662,7 +26662,7 @@ type Package struct{
     
 }
 
-// Batch 批次列表
+/* Batch 批次列表 */
 type Batch struct{
     
     /* actualQty Basic实发数量(要求batchs节点下所有的实发数量之和等于orderline中的实发数量) */
@@ -26691,7 +26691,7 @@ type Batch struct{
     
 }
 
-// SnList snList
+/* SnList snList */
 type SnList struct{
     
     /* sn Basic Arraysn */
@@ -26699,7 +26699,7 @@ type SnList struct{
     
 }
 
-// OrderLine 单据列表
+/* OrderLine 单据列表 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -26854,7 +26854,7 @@ type OrderLine struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -26874,7 +26874,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -26948,7 +26948,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -27022,7 +27022,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -27048,7 +27048,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -27068,7 +27068,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -27361,7 +27361,7 @@ type Item struct{
     
 }
 
-// Detail 
+/* Detail  */
 type Detail struct{
     
     /* items Object Array */
@@ -27369,7 +27369,7 @@ type Detail struct{
     
 }
 
-// Invoice 
+/* Invoice  */
 type Invoice struct{
     
     /* amount Basic奇门仓储字段,说明,string(50),, */
@@ -27395,7 +27395,7 @@ type Invoice struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -27469,7 +27469,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -27495,7 +27495,7 @@ type Batch struct{
     
 }
 
-// SnList snList
+/* SnList snList */
 type SnList struct{
     
     /* sn Basic Arraysn */
@@ -27503,7 +27503,7 @@ type SnList struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -27655,7 +27655,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -27681,7 +27681,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -27701,7 +27701,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -27994,7 +27994,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -28005,7 +28005,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -28052,7 +28052,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -28096,7 +28096,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -28107,7 +28107,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 
+/* DeliveryOrder  */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -28409,7 +28409,7 @@ type DeliveryOrder struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -28435,7 +28435,7 @@ type Batch struct{
     
 }
 
-// SnList snList
+/* SnList snList */
 type SnList struct{
     
     /* sn Basic Arraysn */
@@ -28443,7 +28443,7 @@ type SnList struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -28595,7 +28595,7 @@ type OrderLine struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -28606,7 +28606,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -28653,7 +28653,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -28697,7 +28697,7 @@ type Package struct{
     
 }
 
-// Order 
+/* Order  */
 type Order struct{
     
     /* deliveryOrder Object */
@@ -28717,7 +28717,7 @@ type Order struct{
     
 }
 
-// Order 发货单列表
+/* Order 发货单列表 */
 type Order struct{
     
     /* deliveryOrder Object发货单信息 */
@@ -28740,7 +28740,7 @@ type Order struct{
     
 }
 
-// Batch 批次信息
+/* Batch 批次信息 */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -28769,7 +28769,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 价格信息
+/* PriceAdjustment 价格信息 */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -28792,7 +28792,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 订单项目
+/* Item 订单项目 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -29088,7 +29088,7 @@ type Item struct{
     
 }
 
-// Detail 订单细节
+/* Detail 订单细节 */
 type Detail struct{
     
     /* items Object Array订单项目 */
@@ -29096,7 +29096,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* code Basic奇门仓储字段,说明,string(50),, */
@@ -29125,7 +29125,7 @@ type Invoice struct{
     
 }
 
-// Batch pici xinxi
+/* Batch pici xinxi */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -29154,7 +29154,7 @@ type Batch struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -29306,7 +29306,7 @@ type OrderLine struct{
     
 }
 
-// Batch 批次信息
+/* Batch 批次信息 */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -29335,7 +29335,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -29358,7 +29358,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品
+/* Item 商品 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -29654,7 +29654,7 @@ type Item struct{
     
 }
 
-// RelatedOrder 关联单据信息
+/* RelatedOrder 关联单据信息 */
 type RelatedOrder struct{
     
     /* orderCode Basic关联的订单编号 */
@@ -29668,7 +29668,7 @@ type RelatedOrder struct{
     
 }
 
-// PickerInfo 提货人信息
+/* PickerInfo 提货人信息 */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -29754,7 +29754,7 @@ type PickerInfo struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -29843,7 +29843,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收件人信息
+/* ReceiverInfo 收件人信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域 */
@@ -29932,7 +29932,7 @@ type ReceiverInfo struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -29955,7 +29955,7 @@ type DeliveryRequirements struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -29969,7 +29969,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -30019,7 +30019,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -30066,7 +30066,7 @@ type Package struct{
     
 }
 
-// DeliveryOrder 出库单信息
+/* DeliveryOrder 出库单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -30386,7 +30386,7 @@ type DeliveryOrder struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -30415,7 +30415,7 @@ type Batch struct{
     
 }
 
-// OrderLine 单据信息
+/* OrderLine 单据信息 */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -30573,7 +30573,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -30602,7 +30602,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -30625,7 +30625,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -30921,7 +30921,7 @@ type Item struct{
     
 }
 
-// SenderInfo senderInfo
+/* SenderInfo senderInfo */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -30998,7 +30998,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo receiverInfo
+/* ReceiverInfo receiverInfo */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -31075,7 +31075,7 @@ type ReceiverInfo struct{
     
 }
 
-// RelatedOrder relatedOrders
+/* RelatedOrder relatedOrders */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -31089,7 +31089,7 @@ type RelatedOrder struct{
     
 }
 
-// EntryOrder 入库单信息
+/* EntryOrder 入库单信息 */
 type EntryOrder struct{
     
     /* businessId Basic奇门仓储字段,说明,string(50),, */
@@ -31247,7 +31247,7 @@ type EntryOrder struct{
     
 }
 
-// Batch 批次信息
+/* Batch 批次信息 */
 type Batch struct{
     
     /* actualQty Basic实收数量(要求batchs节点下所有的实收数量之和等于orderline中的实收数量) */
@@ -31276,7 +31276,7 @@ type Batch struct{
     
 }
 
-// SnList sn列表
+/* SnList sn列表 */
 type SnList struct{
     
     /* sn Basic Arraysn编码 */
@@ -31284,7 +31284,7 @@ type SnList struct{
     
 }
 
-// OrderLine 订单信息
+/* OrderLine 订单信息 */
 type OrderLine struct{
     
     /* actualPrice Basictemp */
@@ -31442,7 +31442,7 @@ type OrderLine struct{
     
 }
 
-// Batch batchs
+/* Batch batchs */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -31471,7 +31471,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment priceAdjustment
+/* PriceAdjustment priceAdjustment */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -31494,7 +31494,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品信息列表
+/* Item 商品信息列表 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -31790,7 +31790,7 @@ type Item struct{
     
 }
 
-// DeliveryRequirements 发货要求
+/* DeliveryRequirements 发货要求 */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic发货服务类型(PTPS:普通配送;LLPS:冷链配送;HBP:环保配) */
@@ -31813,7 +31813,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 发件人信息
+/* SenderInfo 发件人信息 */
 type SenderInfo struct{
     
     /* area Basic区域 */
@@ -31902,7 +31902,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 收件人信息
+/* ReceiverInfo 收件人信息 */
 type ReceiverInfo struct{
     
     /* area Basic区域 */
@@ -31991,7 +31991,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -32020,7 +32020,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -32043,7 +32043,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 商品列表
+/* Item 商品列表 */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -32339,7 +32339,7 @@ type Item struct{
     
 }
 
-// Detail 订单详情
+/* Detail 订单详情 */
 type Detail struct{
     
     /* items Object Array商品列表 */
@@ -32347,7 +32347,7 @@ type Detail struct{
     
 }
 
-// Invoice 发票信息
+/* Invoice 发票信息 */
 type Invoice struct{
     
     /* amount Basic发票总金额(填写的条件是:invoiceFlag为Y) */
@@ -32388,7 +32388,7 @@ type Invoice struct{
     
 }
 
-// Insurance 保险信息
+/* Insurance 保险信息 */
 type Insurance struct{
     
     /* amount Basic保险金额 */
@@ -32399,7 +32399,7 @@ type Insurance struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -32476,7 +32476,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -32505,7 +32505,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -32657,7 +32657,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -32686,7 +32686,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -32709,7 +32709,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -33005,7 +33005,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -33019,7 +33019,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -33069,7 +33069,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -33116,7 +33116,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -33130,7 +33130,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 发货单信息
+/* DeliveryOrder 发货单信息 */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -33447,7 +33447,7 @@ type DeliveryOrder struct{
     
 }
 
-// OrderLine 单据列表
+/* OrderLine 单据列表 */
 type OrderLine struct{
     
     /* actualPrice Basic实际成交价 */
@@ -33503,7 +33503,7 @@ type OrderLine struct{
     
 }
 
-// DeliveryRequirements 
+/* DeliveryRequirements  */
 type DeliveryRequirements struct{
     
     /* deliveryType Basic奇门仓储字段,说明,string(50),, */
@@ -33523,7 +33523,7 @@ type DeliveryRequirements struct{
     
 }
 
-// SenderInfo 
+/* SenderInfo  */
 type SenderInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -33597,7 +33597,7 @@ type SenderInfo struct{
     
 }
 
-// ReceiverInfo 
+/* ReceiverInfo  */
 type ReceiverInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -33671,7 +33671,7 @@ type ReceiverInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -33697,7 +33697,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -33717,7 +33717,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -34010,7 +34010,7 @@ type Item struct{
     
 }
 
-// Detail 
+/* Detail  */
 type Detail struct{
     
     /* items Object Array */
@@ -34018,7 +34018,7 @@ type Detail struct{
     
 }
 
-// Invoice 
+/* Invoice  */
 type Invoice struct{
     
     /* code Basic奇门仓储字段,说明,string(50),, */
@@ -34044,7 +34044,7 @@ type Invoice struct{
     
 }
 
-// PickerInfo 
+/* PickerInfo  */
 type PickerInfo struct{
     
     /* area Basic奇门仓储字段,说明,string(50),, */
@@ -34118,7 +34118,7 @@ type PickerInfo struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -34144,7 +34144,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -34293,7 +34293,7 @@ type OrderLine struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -34319,7 +34319,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -34339,7 +34339,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -34632,7 +34632,7 @@ type Item struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -34643,7 +34643,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -34690,7 +34690,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -34734,7 +34734,7 @@ type Package struct{
     
 }
 
-// RelatedOrder 
+/* RelatedOrder  */
 type RelatedOrder struct{
     
     /* orderCode Basic奇门仓储字段,说明,string(50),, */
@@ -34745,7 +34745,7 @@ type RelatedOrder struct{
     
 }
 
-// DeliveryOrder 
+/* DeliveryOrder  */
 type DeliveryOrder struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -35047,7 +35047,7 @@ type DeliveryOrder struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -35076,7 +35076,7 @@ type Batch struct{
     
 }
 
-// PriceAdjustment 
+/* PriceAdjustment  */
 type PriceAdjustment struct{
     
     /* discount Basic奇门仓储字段,说明,string(50),, */
@@ -35099,7 +35099,7 @@ type PriceAdjustment struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualAmount Basic奇门仓储字段,说明,string(50),, */
@@ -35395,7 +35395,7 @@ type Item struct{
     
 }
 
-// Batch 
+/* Batch  */
 type Batch struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -35421,7 +35421,7 @@ type Batch struct{
     
 }
 
-// OrderLine 
+/* OrderLine  */
 type OrderLine struct{
     
     /* actualPrice Basic奇门仓储字段,说明,string(50),, */
@@ -35570,7 +35570,7 @@ type OrderLine struct{
     
 }
 
-// PackageMaterial 
+/* PackageMaterial  */
 type PackageMaterial struct{
     
     /* quantity Basic奇门仓储字段,说明,string(50),, */
@@ -35581,7 +35581,7 @@ type PackageMaterial struct{
     
 }
 
-// Item 
+/* Item  */
 type Item struct{
     
     /* actualQty Basic奇门仓储字段,说明,string(50),, */
@@ -35628,7 +35628,7 @@ type Item struct{
     
 }
 
-// Package 
+/* Package  */
 type Package struct{
     
     /* expressCode Basic奇门仓储字段,说明,string(50),, */
@@ -35672,7 +35672,7 @@ type Package struct{
     
 }
 
-// Order 
+/* Order  */
 type Order struct{
     
     /* deliveryOrder Object */
@@ -35695,7 +35695,7 @@ type Order struct{
     
 }
 
-// Order 订单信息
+/* Order 订单信息 */
 type Order struct{
     
     /* deliveryOrder Object发货单信息 */
@@ -35709,7 +35709,7 @@ type Order struct{
     
 }
 
-// Order 订单详情
+/* Order 订单详情 */
 type Order struct{
     
     /* deliveryOrderCode Basic出错的出库单号 */
@@ -35720,7 +35720,7 @@ type Order struct{
     
 }
 
-// AddressDto 收件人地址
+/* AddressDto 收件人地址 */
 type AddressDto struct{
     
     /* city Basic市级地址 */
@@ -35743,7 +35743,7 @@ type AddressDto struct{
     
 }
 
-// ThreePlConsignResourceDto 资源列表
+/* ThreePlConsignResourceDto 资源列表 */
 type ThreePlConsignResourceDto struct{
     
     /* achieving_rate Basic达成率 */
@@ -35781,7 +35781,7 @@ type ThreePlConsignResourceDto struct{
     
 }
 
-// TopResult result
+/* TopResult result */
 type TopResult struct{
     
     /* error_code Basic错误代码 */
@@ -35804,7 +35804,7 @@ type TopResult struct{
     
 }
 
-// TopResult result
+/* TopResult result */
 type TopResult struct{
     
     /* error_code Basic错误code */
@@ -35827,7 +35827,7 @@ type TopResult struct{
     
 }
 
-// UpdateSkuOuterId 商品SKU更新OuterId时候用的数据
+/* UpdateSkuOuterId 商品SKU更新OuterId时候用的数据 */
 type UpdateSkuOuterId struct{
     
     /* outer_id Basic被更新的Sku的商家外部id */
@@ -35841,7 +35841,7 @@ type UpdateSkuOuterId struct{
     
 }
 
-// Order 单据列表
+/* Order 单据列表 */
 type Order struct{
     
     /* orderCode Basic单据编号 */
@@ -35861,7 +35861,7 @@ type Order struct{
     
 }
 
-// Item 商品信息
+/* Item 商品信息 */
 type Item struct{
     
     /* itemCode Basic商品编码 */
@@ -35875,7 +35875,7 @@ type Item struct{
     
 }
 
-// Items 商品列表
+/* Items 商品列表 */
 type Items struct{
     
     /* item Object商品信息 */
@@ -35883,7 +35883,7 @@ type Items struct{
     
 }
 
-// ResultDO 返回值
+/* ResultDO 返回值 */
 type ResultDO struct{
     
     /* data Basic返回值 */
@@ -35900,7 +35900,7 @@ type ResultDO struct{
     
 }
 
-// ResultDO 返回值
+/* ResultDO 返回值 */
 type ResultDO struct{
     
     /* data Basic返回数据 */
@@ -35917,7 +35917,7 @@ type ResultDO struct{
     
 }
 
-// SingleResult response
+/* SingleResult response */
 type SingleResult struct{
     
     /* error_code BasicerrorCode */
@@ -35931,7 +35931,7 @@ type SingleResult struct{
     
 }
 
-// ChatRelationRequest 请求参数
+/* ChatRelationRequest 请求参数 */
 type ChatRelationRequest struct{
     
     /* beg Basic查询起始时间（精度到天） */
@@ -35954,7 +35954,7 @@ type ChatRelationRequest struct{
     
 }
 
-// ChatPeer 关系列表
+/* ChatPeer 关系列表 */
 type ChatPeer struct{
     
     /* date Basic时间 */
@@ -35965,7 +35965,7 @@ type ChatPeer struct{
     
 }
 
-// ChatRelationResult result
+/* ChatRelationResult result */
 type ChatRelationResult struct{
     
     /* code Basic返回码 */
@@ -35985,7 +35985,7 @@ type ChatRelationResult struct{
     
 }
 
-// SingleResult result
+/* SingleResult result */
 type SingleResult struct{
     
     /* error_code BasicerrorCode */
@@ -35999,7 +35999,7 @@ type SingleResult struct{
     
 }
 
-// ConsignSupportInfoDTO 发货信息
+/* ConsignSupportInfoDTO 发货信息 */
 type ConsignSupportInfoDTO struct{
     
     /* support_cp_list Basic Array支持CP的code列表 */
@@ -36007,7 +36007,7 @@ type ConsignSupportInfoDTO struct{
     
 }
 
-// Door2doorConsumeRequest 核销信息
+/* Door2doorConsumeRequest 核销信息 */
 type Door2doorConsumeRequest struct{
     
     /* code Basic核销码 */
@@ -36021,7 +36021,7 @@ type Door2doorConsumeRequest struct{
     
 }
 
-// Door2doorQueryResult data
+/* Door2doorQueryResult data */
 type Door2doorQueryResult struct{
     
     /* main_order_id Basic码对应的淘宝主订单ID */
@@ -36029,7 +36029,7 @@ type Door2doorQueryResult struct{
     
 }
 
-// WlbProcessStatus 订单流转信息状态列表
+/* WlbProcessStatus 订单流转信息状态列表 */
 type WlbProcessStatus struct{
     
     /* content Basic状态内容 */
@@ -36064,7 +36064,7 @@ type WlbProcessStatus struct{
     
 }
 
-// EntryOrder 出入库单信息（一单）
+/* EntryOrder 出入库单信息（一单） */
 type EntryOrder struct{
     
     /* entryOrderId Basic物流单号 */
@@ -36087,7 +36087,7 @@ type EntryOrder struct{
     
 }
 
-// EntryOrderlist 出入库单信息（一单）
+/* EntryOrderlist 出入库单信息（一单） */
 type EntryOrderlist struct{
     
     /* entryOrder Object出入库单信息（一单） */
@@ -36095,7 +36095,7 @@ type EntryOrderlist struct{
     
 }
 
-// Response 
+/* Response  */
 type Response struct{
     
     /* code Basic响应码,,string (50), */
@@ -36109,7 +36109,7 @@ type Response struct{
     
 }
 
-// Iteminventory 订单商品
+/* Iteminventory 订单商品 */
 type Iteminventory struct{
     
     /* item_code Basic菜鸟商品编码 */
@@ -36126,7 +36126,7 @@ type Iteminventory struct{
     
 }
 
-// Iteminventorylist 订单商品列表
+/* Iteminventorylist 订单商品列表 */
 type Iteminventorylist struct{
     
     /* item_inventory Object订单商品 */
@@ -36134,7 +36134,7 @@ type Iteminventorylist struct{
     
 }
 
-// Content 库存释放
+/* Content 库存释放 */
 type Content struct{
     
     /* item_inventory_list Object Array订单商品列表 */
@@ -36148,7 +36148,7 @@ type Content struct{
     
 }
 
-// Iteminventory 库存占用明细
+/* Iteminventory 库存占用明细 */
 type Iteminventory struct{
     
     /* comb_item_id Basic菜鸟组合货品ID */
@@ -36183,7 +36183,7 @@ type Iteminventory struct{
     
 }
 
-// Iteminventorylist 库存占用明细列表
+/* Iteminventorylist 库存占用明细列表 */
 type Iteminventorylist struct{
     
     /* item_inventory Object库存占用明细 */
@@ -36191,7 +36191,7 @@ type Iteminventorylist struct{
     
 }
 
-// Result 接口返回model
+/* Result 接口返回model */
 type Result struct{
     
     /* is_retry Basic返回失败时，是否需求重试，为true时，建议系统自动重试 */
@@ -36214,7 +36214,7 @@ type Result struct{
     
 }
 
-// Receiverinfo 收件人信息
+/* Receiverinfo 收件人信息 */
 type Receiverinfo struct{
     
     /* receiver_area Basic收件方区县 */
@@ -36234,7 +36234,7 @@ type Receiverinfo struct{
     
 }
 
-// Iteminventory 商品信息
+/* Iteminventory 商品信息 */
 type Iteminventory struct{
     
     /* item_code Basic菜鸟商品编码 */
@@ -36254,7 +36254,7 @@ type Iteminventory struct{
     
 }
 
-// Iteminventorylist 商品信息列表
+/* Iteminventorylist 商品信息列表 */
 type Iteminventorylist struct{
     
     /* item_inventory Object商品信息 */
@@ -36262,7 +36262,7 @@ type Iteminventorylist struct{
     
 }
 
-// Content 库存占用
+/* Content 库存占用 */
 type Content struct{
     
     /* item_inventory_list Object Array商品信息列表 */
@@ -36285,7 +36285,7 @@ type Content struct{
     
 }
 
-// Iteminventory 库存占用明细
+/* Iteminventory 库存占用明细 */
 type Iteminventory struct{
     
     /* comb_item_id Basic菜鸟组合货品ID */
@@ -36320,7 +36320,7 @@ type Iteminventory struct{
     
 }
 
-// Iteminventorylist 库存占用明细列表
+/* Iteminventorylist 库存占用明细列表 */
 type Iteminventorylist struct{
     
     /* item_inventory Object库存占用明细 */
@@ -36328,7 +36328,7 @@ type Iteminventorylist struct{
     
 }
 
-// Iteminventory 库存占用明细
+/* Iteminventory 库存占用明细 */
 type Iteminventory struct{
     
     /* comb_item_id Basic菜鸟组合货品ID */
@@ -36363,7 +36363,7 @@ type Iteminventory struct{
     
 }
 
-// Iteminventorylist 库存占用明细列表
+/* Iteminventorylist 库存占用明细列表 */
 type Iteminventorylist struct{
     
     /* item_inventory Object库存占用明细 */
@@ -36371,7 +36371,7 @@ type Iteminventorylist struct{
     
 }
 
-// PackageItem 包裹商品列表
+/* PackageItem 包裹商品列表 */
 type PackageItem struct{
     
     /* item_code Basic商家商品编码 */
@@ -36385,7 +36385,7 @@ type PackageItem struct{
     
 }
 
-// WlbWmsUnknownPackageUpload WlbWmsUnknownPackageUpload
+/* WlbWmsUnknownPackageUpload WlbWmsUnknownPackageUpload */
 type WlbWmsUnknownPackageUpload struct{
     
     /* create_time Basic创建时间 */
@@ -36414,7 +36414,7 @@ type WlbWmsUnknownPackageUpload struct{
     
 }
 
-// WlbWmsUnknownPackageUploadResp WlbWmsUnknownPackageUploadResp
+/* WlbWmsUnknownPackageUploadResp WlbWmsUnknownPackageUploadResp */
 type WlbWmsUnknownPackageUploadResp struct{
     
     /* error_code Basic错误码 */
@@ -36428,7 +36428,7 @@ type WlbWmsUnknownPackageUploadResp struct{
     
 }
 
-// Data 返回值
+/* Data 返回值 */
 type Data struct{
     
     /* data Basic具体描述 */
@@ -36445,7 +36445,7 @@ type Data struct{
     
 }
 
-// WaybillDetailQueryByWaybillCodeRequest 系统自动生成
+/* WaybillDetailQueryByWaybillCodeRequest 系统自动生成 */
 type WaybillDetailQueryByWaybillCodeRequest struct{
     
     /* cp_code Basic快递公司code */
@@ -36459,7 +36459,7 @@ type WaybillDetailQueryByWaybillCodeRequest struct{
     
 }
 
-// WaybillCloudPrintResponse 面单查询结构体
+/* WaybillCloudPrintResponse 面单查询结构体 */
 type WaybillCloudPrintResponse struct{
     
     /* parent_waybill_code Basic快运子母件中的母单号 */
@@ -36473,7 +36473,7 @@ type WaybillCloudPrintResponse struct{
     
 }
 
-// WaybillCloudPrintWithResultDescResponse 查询返回值
+/* WaybillCloudPrintWithResultDescResponse 查询返回值 */
 type WaybillCloudPrintWithResultDescResponse struct{
     
     /* error_code Basic错误码 */
@@ -36493,7 +36493,7 @@ type WaybillCloudPrintWithResultDescResponse struct{
     
 }
 
-// WaybillDetailQueryByBizSubCodeRequest 订单号列表
+/* WaybillDetailQueryByBizSubCodeRequest 订单号列表 */
 type WaybillDetailQueryByBizSubCodeRequest struct{
     
     /* biz_sub_code Basic订单号 */
@@ -36504,7 +36504,7 @@ type WaybillDetailQueryByBizSubCodeRequest struct{
     
 }
 
-// WaybillCloudPrintResponse 面单信息
+/* WaybillCloudPrintResponse 面单信息 */
 type WaybillCloudPrintResponse struct{
     
     /* print_data Basic面单信息 */
@@ -36515,7 +36515,7 @@ type WaybillCloudPrintResponse struct{
     
 }
 
-// WaybillCloudPrintWithResultDescResponse 查询返回值
+/* WaybillCloudPrintWithResultDescResponse 查询返回值 */
 type WaybillCloudPrintWithResultDescResponse struct{
     
     /* error_code Basic单查询错误code */
@@ -36535,7 +36535,7 @@ type WaybillCloudPrintWithResultDescResponse struct{
     
 }
 
-// KeyResult keys
+/* KeyResult keys */
 type KeyResult struct{
     
     /* key_name Basic动态key的名称 */
@@ -36543,7 +36543,7 @@ type KeyResult struct{
     
 }
 
-// CustomAreaSingleResult data
+/* CustomAreaSingleResult data */
 type CustomAreaSingleResult struct{
     
     /* custom_area_id Basic自定义区id */
@@ -36557,7 +36557,7 @@ type CustomAreaSingleResult struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Objectdata */
@@ -36574,7 +36574,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// ShopAddress 店铺地址
+/* ShopAddress 店铺地址 */
 type ShopAddress struct{
     
     /* area Basic区域, string (50) */
@@ -36597,7 +36597,7 @@ type ShopAddress struct{
     
 }
 
-// Shop 店铺
+/* Shop 店铺 */
 type Shop struct{
     
     /* ownerCode Basic货主编码, string (50) , 必填 */
@@ -36626,7 +36626,7 @@ type Shop struct{
     
 }
 
-// Request 请求
+/* Request 请求 */
 type Request struct{
     
     /* actionType Basicadd,update, 必填 */
@@ -36637,7 +36637,7 @@ type Request struct{
     
 }
 
-// Response Response
+/* Response Response */
 type Response struct{
     
     /* code Basic响应码 */
@@ -36651,7 +36651,7 @@ type Response struct{
     
 }
 
-// KeyResult 模板的keys
+/* KeyResult 模板的keys */
 type KeyResult struct{
     
     /* key_name Basickey名称 */
@@ -36659,7 +36659,7 @@ type KeyResult struct{
     
 }
 
-// CustomTemplateResult data
+/* CustomTemplateResult data */
 type CustomTemplateResult struct{
     
     /* isv_template_id Basicisv模板的id */
@@ -36679,7 +36679,7 @@ type CustomTemplateResult struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* datas Object Arraydata */
@@ -36696,7 +36696,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// KeyResult 模板的keys
+/* KeyResult 模板的keys */
 type KeyResult struct{
     
     /* key_name Basickey名称 */
@@ -36704,7 +36704,7 @@ type KeyResult struct{
     
 }
 
-// CustomTemplateResult data
+/* CustomTemplateResult data */
 type CustomTemplateResult struct{
     
     /* isv_template_id Basicisv模板的id */
@@ -36724,7 +36724,7 @@ type CustomTemplateResult struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* datas Object Arraydata */
@@ -36741,7 +36741,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// InvoiceItem 发票明细
+/* InvoiceItem 发票明细 */
 type InvoiceItem struct{
     
     /* amount Basic价税合计。(等于sumPrice和tax之和) */
@@ -36782,7 +36782,7 @@ type InvoiceItem struct{
     
 }
 
-// Apply 开票明细
+/* Apply 开票明细 */
 type Apply struct{
     
     /* business_type Basic抬头类型，0=个人，1=企业 */
@@ -36847,7 +36847,7 @@ type Apply struct{
     
 }
 
-// CloudPrintBaseResult result
+/* CloudPrintBaseResult result */
 type CloudPrintBaseResult struct{
     
     /* data Basicdata */
@@ -36864,7 +36864,7 @@ type CloudPrintBaseResult struct{
     
 }
 
-// ResultDo result
+/* ResultDo result */
 type ResultDo struct{
     
     /* err_code BasicerrCode */
@@ -36878,7 +36878,7 @@ type ResultDo struct{
     
 }
 
-// AddressDto 当前网点下的发货地址
+/* AddressDto 当前网点下的发货地址 */
 type AddressDto struct{
     
     /* city Basic市名称（二级地址） */
@@ -36898,7 +36898,7 @@ type AddressDto struct{
     
 }
 
-// ServiceAttributeDto 服务属性定义
+/* ServiceAttributeDto 服务属性定义 */
 type ServiceAttributeDto struct{
     
     /* attribute_code Basic属性的值，用户实际传入的值 */
@@ -36915,7 +36915,7 @@ type ServiceAttributeDto struct{
     
 }
 
-// ServiceInfoDto 可用的服务信息列表
+/* ServiceInfoDto 可用的服务信息列表 */
 type ServiceInfoDto struct{
     
     /* required Basic该服务是否为必选服务 */
@@ -36935,7 +36935,7 @@ type ServiceInfoDto struct{
     
 }
 
-// WaybillBranchAccount CP网点信息及对应的商家的发货信息
+/* WaybillBranchAccount CP网点信息及对应的商家的发货信息 */
 type WaybillBranchAccount struct{
     
     /* allocated_quantity Basic已用面单数量 */
@@ -36970,7 +36970,7 @@ type WaybillBranchAccount struct{
     
 }
 
-// WaybillApplySubscriptionInfo CP网点信息及对应的商家的发货信息
+/* WaybillApplySubscriptionInfo CP网点信息及对应的商家的发货信息 */
 type WaybillApplySubscriptionInfo struct{
     
     /* branch_account_cols Object ArrayCP网点信息及对应的商家的发货信息 */
@@ -36984,7 +36984,7 @@ type WaybillApplySubscriptionInfo struct{
     
 }
 
-// ReceiverInfo receiverInfo
+/* ReceiverInfo receiverInfo */
 type ReceiverInfo struct{
     
     /* area Basic区域, ,string (50) ,, */
@@ -37019,7 +37019,7 @@ type ReceiverInfo struct{
     
 }
 
-// Item items
+/* Item items */
 type Item struct{
     
     /* batchCode Basic批次编码, ,string (50) ,, */
@@ -37048,7 +37048,7 @@ type Item struct{
     
 }
 
-// Request 
+/* Request  */
 type Request struct{
     
     /* createDate Basic缺货回告创建时间,,string (19),必填, */
@@ -37086,7 +37086,7 @@ type Request struct{
     
 }
 
-// Response 
+/* Response  */
 type Response struct{
     
     /* code Basic响应码,,string (50), */
@@ -37100,7 +37100,7 @@ type Response struct{
     
 }
 
-// ResultDO 返回值
+/* ResultDO 返回值 */
 type ResultDO struct{
     
     /* data Basic返回数据 */
@@ -37117,7 +37117,7 @@ type ResultDO struct{
     
 }
 
-// Event 奇门事件对象
+/* Event 奇门事件对象 */
 type Event struct{
     
     /* create Basic订单创建时间,数字 */
@@ -37140,7 +37140,7 @@ type Event struct{
     
 }
 
-// QimenEvent 奇门事件列表, 最多50条
+/* QimenEvent 奇门事件列表, 最多50条 */
 type QimenEvent struct{
     
     /* event Object奇门事件对象 */
@@ -37148,7 +37148,7 @@ type QimenEvent struct{
     
 }
 
-// QimenResult 发送结果，与发送时的参数顺序一致。如果is_all_success为true时，不用校验result是否成功
+/* QimenResult 发送结果，与发送时的参数顺序一致。如果is_all_success为true时，不用校验result是否成功 */
 type QimenResult struct{
     
     /* error_code Basic错误码 */
@@ -37162,7 +37162,7 @@ type QimenResult struct{
     
 }
 
-// TopOfflineReducePrepayDto 减少流水
+/* TopOfflineReducePrepayDto 减少流水 */
 type TopOfflineReducePrepayDto struct{
     
     /* accept_date Basic汇票到期日期 */
@@ -37215,7 +37215,7 @@ type TopOfflineReducePrepayDto struct{
     
 }
 
-// ResultTopDo result
+/* ResultTopDo result */
 type ResultTopDo struct{
     
     /* success Basicsuccess */
@@ -37223,7 +37223,7 @@ type ResultTopDo struct{
     
 }
 
-// TopOfflineAddPrepayDto 增加流水
+/* TopOfflineAddPrepayDto 增加流水 */
 type TopOfflineAddPrepayDto struct{
     
     /* accept_date Basic汇票到期日期 */
@@ -37273,7 +37273,7 @@ type TopOfflineAddPrepayDto struct{
     
 }
 
-// ResultTopDo result
+/* ResultTopDo result */
 type ResultTopDo struct{
     
     /* success Basicsuccess */
@@ -37281,7 +37281,7 @@ type ResultTopDo struct{
     
 }
 
-// QimenUser modal
+/* QimenUser modal */
 type QimenUser struct{
     
     /* gmt_create BasicgmtCreate */
@@ -37295,7 +37295,7 @@ type QimenUser struct{
     
 }
 
-// ItemDescModule 商品详情模块
+/* ItemDescModule 商品详情模块 */
 type ItemDescModule struct{
     
     /* content Basic描述具体内容 */
@@ -37321,7 +37321,7 @@ type ItemDescModule struct{
     
 }
 
-// User 用户
+/* User 用户 */
 type User struct{
     
     /* age Basic年龄 */
@@ -37455,7 +37455,7 @@ type User struct{
     
 }
 
-// ArticleSub 应用订购信息
+/* ArticleSub 应用订购信息 */
 type ArticleSub struct{
     
     /* article_code Basic应用收费代码，从合作伙伴后台（my.open.taobao.com）-收费管理-收费项目列表 能够获得该应用的收费代码 */
@@ -37487,7 +37487,7 @@ type ArticleSub struct{
     
 }
 
-// OrderAmount 子订单的帐务数据结构
+/* OrderAmount 子订单的帐务数据结构 */
 type OrderAmount struct{
     
     /* adjust_fee Basic卖家手工调整的子订单的优惠金额.格式为:1.01;单位:元;精确到小数点后两位. */
@@ -37531,7 +37531,7 @@ type OrderAmount struct{
     
 }
 
-// Trade 交易详细信息
+/* Trade 交易详细信息 */
 type Trade struct{
     
     /* acookie_id BasicAcookie订单唯一ID。 */
@@ -38220,7 +38220,7 @@ type Trade struct{
     
 }
 
-// PromotionDetail 交易的优惠信息详情
+/* PromotionDetail 交易的优惠信息详情 */
 type PromotionDetail struct{
     
     /* discount_fee Basic优惠金额（免运费、限时打折时为空）,单位：元 */
@@ -38249,7 +38249,7 @@ type PromotionDetail struct{
     
 }
 
-// Receiverwlbwmsstockoutordernotify 收件人信息
+/* Receiverwlbwmsstockoutordernotify 收件人信息 */
 type Receiverwlbwmsstockoutordernotify struct{
     
     /* receiver_address Basic收件方地址 */
@@ -38281,7 +38281,7 @@ type Receiverwlbwmsstockoutordernotify struct{
     
 }
 
-// CarriageDetail 物流公司资费相关信息
+/* CarriageDetail 物流公司资费相关信息 */
 type CarriageDetail struct{
     
     /* add_fee Basic续费（单位：元） */
@@ -38310,7 +38310,7 @@ type CarriageDetail struct{
     
 }
 
-// TradeExt 交易扩展表信息
+/* TradeExt 交易扩展表信息 */
 type TradeExt struct{
     
     /* before_close_flag Basic关闭订单前扩展标识位 */
@@ -38348,7 +38348,7 @@ type TradeExt struct{
     
 }
 
-// CainiaoStockOutBillOrderitem 订单商品信息
+/* CainiaoStockOutBillOrderitem 订单商品信息 */
 type CainiaoStockOutBillOrderitem struct{
     
     /* apply_qty Basic通知数量 */
@@ -38368,7 +38368,7 @@ type CainiaoStockOutBillOrderitem struct{
     
 }
 
-// TopFee 运费模板中运费信息对象
+/* TopFee 运费模板中运费信息对象 */
 type TopFee struct{
     
     /* add_fee Basic增费：输入0.00-999.99（最多包含两位小数） 不能为空不输入运费时必须输入0 */
@@ -38391,7 +38391,7 @@ type TopFee struct{
     
 }
 
-// DeliveryTemplate 运费模板对象
+/* DeliveryTemplate 运费模板对象 */
 type DeliveryTemplate struct{
     
     /* address Basic运费模板上设置的发货地址 */
@@ -38441,7 +38441,7 @@ type DeliveryTemplate struct{
     
 }
 
-// TradeRecord 支付宝交易明细
+/* TradeRecord 支付宝交易明细 */
 type TradeRecord struct{
     
     /* alipay_order_no Basic支付宝订单号 */
@@ -38497,7 +38497,7 @@ type TradeRecord struct{
     
 }
 
-// Orderitemwlbwmsstockoutordernotify 订单商品信息
+/* Orderitemwlbwmsstockoutordernotify 订单商品信息 */
 type Orderitemwlbwmsstockoutordernotify struct{
     
     /* batch_code Basic批次号 */
@@ -38529,7 +38529,7 @@ type Orderitemwlbwmsstockoutordernotify struct{
     
 }
 
-// Item Item(商品)结构
+/* Item Item(商品)结构 */
 type Item struct{
     
     /* after_sale_id Basic售后服务ID,该字段仅在taobao.item.get接口中返回 */
@@ -38872,7 +38872,7 @@ taobao.items.search和taobao.items.vip.search专用 */
     
 }
 
-// JdpUser 使用数据推送的用户信息
+/* JdpUser 使用数据推送的用户信息 */
 type JdpUser struct{
     
     /* hl_appkey Basic和数据回流绑定的appkey，用户的数据推到此appkey对应的rds后，会回传X_DOWNLOADED消息 */
@@ -38901,7 +38901,7 @@ type JdpUser struct{
     
 }
 
-// CainiaoStockOutBillStockoutinfo 出库单信息
+/* CainiaoStockOutBillStockoutinfo 出库单信息 */
 type CainiaoStockOutBillStockoutinfo struct{
     
     /* cn_order_code Basic仓库订单编码，LBX号 */
@@ -38927,7 +38927,7 @@ type CainiaoStockOutBillStockoutinfo struct{
     
 }
 
-// PartnerNew 物流服务商信息
+/* PartnerNew 物流服务商信息 */
 type PartnerNew struct{
     
     /* is_virtual_tp Basic是否虚拟物流商 */
@@ -38944,7 +38944,7 @@ type PartnerNew struct{
     
 }
 
-// CainiaoStockOutBillInventoryitem 商品属性
+/* CainiaoStockOutBillInventoryitem 商品属性 */
 type CainiaoStockOutBillInventoryitem struct{
     
     /* batch_code Basic批次号 */
@@ -38970,7 +38970,7 @@ type CainiaoStockOutBillInventoryitem struct{
     
 }
 
-// ShipFresh 发货后返回给仓库的名称中转仓信息
+/* ShipFresh 发货后返回给仓库的名称中转仓信息 */
 type ShipFresh struct{
     
     /* delivery_name Basic物流公司名称 */
@@ -38987,7 +38987,7 @@ type ShipFresh struct{
     
 }
 
-// LogisticsTag 物流的服务标签
+/* LogisticsTag 物流的服务标签 */
 type LogisticsTag struct{
     
     /* logistic_service_tag_list Object Array服务标签 */
@@ -38998,7 +38998,7 @@ type LogisticsTag struct{
     
 }
 
-// ItemCat 商品类目结构
+/* ItemCat 商品类目结构 */
 type ItemCat struct{
     
     /* cid Basic商品所属类目ID */
@@ -39029,7 +39029,7 @@ type ItemCat struct{
     
 }
 
-// SubUserFullInfo 子账号详细信息，其中包括账号基本信息、员工信息和部门职务信息
+/* SubUserFullInfo 子账号详细信息，其中包括账号基本信息、员工信息和部门职务信息 */
 type SubUserFullInfo struct{
     
     /* department_id Basic部门Id */
@@ -39106,7 +39106,7 @@ type SubUserFullInfo struct{
     
 }
 
-// Instps 家装安装公司信息
+/* Instps 家装安装公司信息 */
 type Instps struct{
     
     /* code Basic公司编码 */
@@ -39120,7 +39120,7 @@ type Instps struct{
     
 }
 
-// WlbOrder 物流宝订单对象
+/* WlbOrder 物流宝订单对象 */
 type WlbOrder struct{
     
     /* buyer_nick Basic买家nick */
@@ -39317,7 +39317,7 @@ OTHER-其他 */
     
 }
 
-// SubUserInfo 子账号基本信息
+/* SubUserInfo 子账号基本信息 */
 type SubUserInfo struct{
     
     /* full_name Basic子账号姓名 */
@@ -39343,7 +39343,7 @@ type SubUserInfo struct{
     
 }
 
-// Distributor 分销API返回数据结构
+/* Distributor 分销API返回数据结构 */
 type Distributor struct{
     
     /* alipay_account Basic分销商的支付宝帐户 */
@@ -39393,7 +39393,7 @@ type Distributor struct{
     
 }
 
-// TopAcctCashJourDto 虚拟账户账单结构
+/* TopAcctCashJourDto 虚拟账户账单结构 */
 type TopAcctCashJourDto struct{
     
     /* account_id Basic虚拟账户科目编号 */
@@ -39425,7 +39425,7 @@ type TopAcctCashJourDto struct{
     
 }
 
-// ModularDescInfo 商品描述模块化信息，包含类目级别的模块信息以及用户自定义模块约束等其他信息
+/* ModularDescInfo 商品描述模块化信息，包含类目级别的模块信息以及用户自定义模块约束等其他信息 */
 type ModularDescInfo struct{
     
     /* dead_line Basic旧描述与新描述共存时间（切换时间）。 */
@@ -39442,7 +39442,7 @@ type ModularDescInfo struct{
     
 }
 
-// LogisticsInfo 子单物流发货信息
+/* LogisticsInfo 子单物流发货信息 */
 type LogisticsInfo struct{
     
     /* combine_item_code Basic组合商品编码code */
@@ -39486,7 +39486,7 @@ type LogisticsInfo struct{
     
 }
 
-// IdsModule 用于保存宝贝描述规范化模块信息
+/* IdsModule 用于保存宝贝描述规范化模块信息 */
 type IdsModule struct{
     
     /* id Basic宝贝描述规范化模块id */
@@ -39501,7 +39501,7 @@ type IdsModule struct{
     
 }
 
-// Sku Sku结构
+/* Sku Sku结构 */
 type Sku struct{
     
     /* barcode Basic商品级别的条形码 */
@@ -39572,7 +39572,7 @@ type Sku struct{
     
 }
 
-// DiscountDetail 折扣详情信息
+/* DiscountDetail 折扣详情信息 */
 type DiscountDetail struct{
     
     /* created Basic创建时间 */
@@ -39601,7 +39601,7 @@ type DiscountDetail struct{
     
 }
 
-// TmcUser 消息通道的用户结构
+/* TmcUser 消息通道的用户结构 */
 type TmcUser struct{
     
     /* created Basic用户首次开通时间 */
@@ -39630,7 +39630,7 @@ type TmcUser struct{
     
 }
 
-// InventorySum 商品库存对象
+/* InventorySum 商品库存对象 */
 type InventorySum struct{
     
     /* inventory_type Basic库存类型：
@@ -39664,7 +39664,7 @@ type InventorySum struct{
     
 }
 
-// RefundTrace 订单全链路退款追踪详情
+/* RefundTrace 订单全链路退款追踪详情 */
 type RefundTrace struct{
     
     /* action_time Basic动作发生的时间 */
@@ -39690,7 +39690,7 @@ type RefundTrace struct{
     
 }
 
-// Receiver 接收者
+/* Receiver 接收者 */
 type Receiver struct{
     
     /* address Basic收货人的详细地址信息 */
@@ -39722,7 +39722,7 @@ type Receiver struct{
     
 }
 
-// CainiaoStockInBillOrderitem 入库单信息
+/* CainiaoStockInBillOrderitem 入库单信息 */
 type CainiaoStockInBillOrderitem struct{
     
     /* apply_qty Basic通知数量 */
@@ -39742,7 +39742,7 @@ type CainiaoStockInBillOrderitem struct{
     
 }
 
-// InvoiceResult 发票返回数据对象
+/* InvoiceResult 发票返回数据对象 */
 type InvoiceResult struct{
     
     /* anti_fake_code Basic防伪码 */
@@ -39816,7 +39816,7 @@ type InvoiceResult struct{
     
 }
 
-// WaybillApplyRequest 面单申请
+/* WaybillApplyRequest 面单申请 */
 type WaybillApplyRequest struct{
     
     /* app_key BasicTOP平台请求的ISV APPKEY */
@@ -39833,7 +39833,7 @@ type WaybillApplyRequest struct{
     
 }
 
-// WaybillProductType 物流产品类型
+/* WaybillProductType 物流产品类型 */
 type WaybillProductType struct{
     
     /* code Basic物流产品类型编码 */
@@ -39847,7 +39847,7 @@ type WaybillProductType struct{
     
 }
 
-// UserSubscribe 用户订购信息
+/* UserSubscribe 用户订购信息 */
 type UserSubscribe struct{
     
     /* end_date Basic订购结束时间。格式:yyyy-MM-dd HH:mm:ss */
@@ -39864,7 +39864,7 @@ type UserSubscribe struct{
     
 }
 
-// ProductCat 产品线
+/* ProductCat 产品线 */
 type ProductCat struct{
     
     /* cost_percent Basic产品代销采购价 */
@@ -39905,7 +39905,7 @@ type ProductCat struct{
     
 }
 
-// ScItemMap 后端商品映射关系对象
+/* ScItemMap 后端商品映射关系对象 */
 type ScItemMap struct{
     
     /* item_id Basicmap_type=1时，item_id为IC商品id
@@ -39940,7 +39940,7 @@ map_type=7时，item_id为分销商品id */
     
 }
 
-// ItemTemplate 宝贝详情页面信息
+/* ItemTemplate 宝贝详情页面信息 */
 type ItemTemplate struct{
     
     /* shop_type Basic用于区分宝贝模板属于内店和外店 */
@@ -39954,7 +39954,7 @@ type ItemTemplate struct{
     
 }
 
-// SubUserPermission 子账号所拥有的权限对象(直接赋予的权限和通过角色赋予的权限的总和对象)
+/* SubUserPermission 子账号所拥有的权限对象(直接赋予的权限和通过角色赋予的权限的总和对象) */
 type SubUserPermission struct{
     
     /* permissions Object Array子账号被直接赋予的权限点列表 */
@@ -39965,7 +39965,7 @@ type SubUserPermission struct{
     
 }
 
-// ItemMateriaValueDO 类目材质DO数据结构
+/* ItemMateriaValueDO 类目材质DO数据结构 */
 type ItemMateriaValueDO struct{
     
     /* name Basic材质值名称 */
@@ -39976,7 +39976,7 @@ type ItemMateriaValueDO struct{
     
 }
 
-// WlbItem 物流宝商品
+/* WlbItem 物流宝商品 */
 type WlbItem struct{
     
     /* brand_id Basic品牌ID */
@@ -40083,7 +40083,7 @@ DISTRIBUTION--分销商品;
     
 }
 
-// HistoryTradeRelationDo 历史标签记录
+/* HistoryTradeRelationDo 历史标签记录 */
 type HistoryTradeRelationDo struct{
     
     /* gmt_created Basic记录的创建时间 */
@@ -40112,7 +40112,7 @@ type HistoryTradeRelationDo struct{
     
 }
 
-// PropValue 属性值
+/* PropValue 属性值 */
 type PropValue struct{
     
     /* cid Basic类目ID */
@@ -40153,7 +40153,7 @@ type PropValue struct{
     
 }
 
-// CainiaoStockInBillOrderitemlist 入库单信息
+/* CainiaoStockInBillOrderitemlist 入库单信息 */
 type CainiaoStockInBillOrderitemlist struct{
     
     /* order_item Object入库单信息 */
@@ -40161,7 +40161,7 @@ type CainiaoStockInBillOrderitemlist struct{
     
 }
 
-// ScItem 后端商品
+/* ScItem 后端商品 */
 type ScItem struct{
     
     /* bar_code Basic条形码 */
@@ -40235,7 +40235,7 @@ type ScItem struct{
     
 }
 
-// TmallRateTag 天猫评价标签对象
+/* TmallRateTag 天猫评价标签对象 */
 type TmallRateTag struct{
     
     /* posi Basic表示标签的极性，正极true，负极false */
@@ -40246,7 +40246,7 @@ type TmallRateTag struct{
     
 }
 
-// SubAccountInfo 子账号基本信息
+/* SubAccountInfo 子账号基本信息 */
 type SubAccountInfo struct{
     
     /* open_auto_reply BasicopenAutoReply */
@@ -40278,7 +40278,7 @@ type SubAccountInfo struct{
     
 }
 
-// SkusDeliveryTime sku物流信息
+/* SkusDeliveryTime sku物流信息 */
 type SkusDeliveryTime struct{
     
     /* sku_delivery_time Basicsku时间 */
@@ -40289,7 +40289,7 @@ type SkusDeliveryTime struct{
     
 }
 
-// Picture 图片
+/* Picture 图片 */
 type Picture struct{
     
     /* client_type Basic图片上传的来源，有电脑版本宝贝发布，手机版本宝贝发布 */
@@ -40348,7 +40348,7 @@ type Picture struct{
     
 }
 
-// WaybillApplyUpdateInfo 更新面单数据
+/* WaybillApplyUpdateInfo 更新面单数据 */
 type WaybillApplyUpdateInfo struct{
     
     /* consignee_branch_code Basic收货网点信息 */
@@ -40380,7 +40380,7 @@ type WaybillApplyUpdateInfo struct{
     
 }
 
-// ItemTaosirDO 类目属性度量衡相关数据
+/* ItemTaosirDO 类目属性度量衡相关数据 */
 type ItemTaosirDO struct{
     
     /* expr_el_list Object Array表达式元素list */
@@ -40397,7 +40397,7 @@ type ItemTaosirDO struct{
     
 }
 
-// CainiaoBillQueryOrderinfolist 订单信息列表
+/* CainiaoBillQueryOrderinfolist 订单信息列表 */
 type CainiaoBillQueryOrderinfolist struct{
     
     /* order_info Object订单信息 */
@@ -40405,7 +40405,7 @@ type CainiaoBillQueryOrderinfolist struct{
     
 }
 
-// TradeRate 评价列表
+/* TradeRate 评价列表 */
 type TradeRate struct{
     
     /* content Basic评价内容,最大长度:500个汉字 */
@@ -40450,7 +40450,7 @@ type TradeRate struct{
     
 }
 
-// UserInfo 图片空间的用户信息获取，包括订购容量等
+/* UserInfo 图片空间的用户信息获取，包括订购容量等 */
 type UserInfo struct{
     
     /* available_space Basic用户的可用容量，即订购量与免费量之和 */
@@ -40477,7 +40477,7 @@ type UserInfo struct{
     
 }
 
-// Role 子账号角色
+/* Role 子账号角色 */
 type Role struct{
     
     /* create_time Basic创建时间 */
@@ -40503,7 +40503,7 @@ type Role struct{
     
 }
 
-// LogisticsService 物流服务能力集合
+/* LogisticsService 物流服务能力集合 */
 type LogisticsService struct{
     
     /* service_code Basic服务编码 */
@@ -40517,7 +40517,7 @@ type LogisticsService struct{
     
 }
 
-// Refund 退款详情
+/* Refund 退款详情 */
 type Refund struct{
     
     /* address Basic卖家收货地址 */
@@ -40645,8 +40645,8 @@ type Refund struct{
     
 }
 
-// FoodSecurity 食品安全信息，包括：
-生产许可证号、产品标准号、厂名、厂址等
+/* FoodSecurity 食品安全信息，包括：
+生产许可证号、产品标准号、厂名、厂址等 */
 type FoodSecurity struct{
     
     /* contact Basic厂家联系方式 */
@@ -40696,7 +40696,7 @@ type FoodSecurity struct{
     
 }
 
-// AddressResult 地址库返回数据信息
+/* AddressResult 地址库返回数据信息 */
 type AddressResult struct{
     
     /* addr Basic详细街道地址，不需要重复填写省/市/区 */
@@ -40750,7 +40750,7 @@ type AddressResult struct{
     
 }
 
-// Brand 品牌
+/* Brand 品牌 */
 type Brand struct{
     
     /* name Basicvid的值 */
@@ -40767,7 +40767,7 @@ type Brand struct{
     
 }
 
-// WaybillServiceType 物流服务类型
+/* WaybillServiceType 物流服务类型 */
 type WaybillServiceType struct{
     
     /* code Basic物流服务能力编码 */
@@ -40778,7 +40778,7 @@ type WaybillServiceType struct{
     
 }
 
-// LogisticsPartner 查询揽送范围之内的物流公司信息
+/* LogisticsPartner 查询揽送范围之内的物流公司信息 */
 type LogisticsPartner struct{
     
     /* carriage Object物流公司揽收和资费详细信息 */
@@ -40795,7 +40795,7 @@ type LogisticsPartner struct{
     
 }
 
-// CainiaoInventoryProfitlossOrderitemlist 商品信息列表
+/* CainiaoInventoryProfitlossOrderitemlist 商品信息列表 */
 type CainiaoInventoryProfitlossOrderitemlist struct{
     
     /* order_item Object损益详情 */
@@ -40803,7 +40803,7 @@ type CainiaoInventoryProfitlossOrderitemlist struct{
     
 }
 
-// Senderinfowlbwmsstockinordernotifywl 系统自动生成
+/* Senderinfowlbwmsstockinordernotifywl 系统自动生成 */
 type Senderinfowlbwmsstockinordernotifywl struct{
     
     /* sender_address Basic发件方地址 */
@@ -40838,7 +40838,7 @@ type Senderinfowlbwmsstockinordernotifywl struct{
     
 }
 
-// CainiaoStockOutBillPackageitem 包裹里面的商品信息
+/* CainiaoStockOutBillPackageitem 包裹里面的商品信息 */
 type CainiaoStockOutBillPackageitem struct{
     
     /* inventory_type Basic库存类型1 可销售库存 101残次品 */
@@ -40858,7 +40858,7 @@ type CainiaoStockOutBillPackageitem struct{
     
 }
 
-// PicUrl 图片链接
+/* PicUrl 图片链接 */
 type PicUrl struct{
     
     /* url Basic图片链接地址 */
@@ -40866,7 +40866,7 @@ type PicUrl struct{
     
 }
 
-// WlbMessage 通道消息
+/* WlbMessage 通道消息 */
 type WlbMessage struct{
     
     /* gmt_create Basic创建时间 */
@@ -40894,7 +40894,7 @@ msg_code为CANCEL_ORDER_SUCCESS及其它时,msg_content为：orderCode:code; msg
     
 }
 
-// LocalityLife 本地生活垂直市场数据结构，修改宝贝时在参数empty_fields里设置locality_life可删除所有电子凭证信息
+/* LocalityLife 本地生活垂直市场数据结构，修改宝贝时在参数empty_fields里设置locality_life可删除所有电子凭证信息 */
 type LocalityLife struct{
     
     /* choose_logis Basic表示是否使用邮寄 0: 代表不使用邮寄； 1：代表使用邮寄；如果不设置这个值，代表不使用邮寄 */
@@ -40935,7 +40935,7 @@ type LocalityLife struct{
     
 }
 
-// Orderitemlistwlbwmsreturnordernotify 商品信息列表
+/* Orderitemlistwlbwmsreturnordernotify 商品信息列表 */
 type Orderitemlistwlbwmsreturnordernotify struct{
     
     /* extend_fields Basic扩展字段 */
@@ -40964,7 +40964,7 @@ type Orderitemlistwlbwmsreturnordernotify struct{
     
 }
 
-// Tpdto 物流公司信息
+/* Tpdto 物流公司信息 */
 type Tpdto struct{
     
     /* code Basic公司编码 */
@@ -40978,7 +40978,7 @@ type Tpdto struct{
     
 }
 
-// JzTopDto 家装返回的数据信息
+/* JzTopDto 家装返回的数据信息 */
 type JzTopDto struct{
     
     /* expresses Object Array快递公司列表 */
@@ -41004,7 +41004,7 @@ type JzTopDto struct{
     
 }
 
-// WmsInventoryQueryItem 商品详情
+/* WmsInventoryQueryItem 商品详情 */
 type WmsInventoryQueryItem struct{
     
     /* batch_code Basic库存批次号，type=2时字段有返回值。 */
@@ -41036,7 +41036,7 @@ type WmsInventoryQueryItem struct{
     
 }
 
-// ItemTaoSirElDO 度量衡表达式DO数据结构
+/* ItemTaoSirElDO 度量衡表达式DO数据结构 */
 type ItemTaoSirElDO struct{
     
     /* is_input Basic是否输入框 */
@@ -41058,7 +41058,7 @@ type ItemTaoSirElDO struct{
     
 }
 
-// RefundMappingResult 同意退款返回值中一部分，退款编号与结果信息映射类
+/* RefundMappingResult 同意退款返回值中一部分，退款编号与结果信息映射类 */
 type RefundMappingResult struct{
     
     /* message Basic结果信息 */
@@ -41072,7 +41072,7 @@ type RefundMappingResult struct{
     
 }
 
-// Discount 折扣信息
+/* Discount 折扣信息 */
 type Discount struct{
     
     /* created Basic创建时间 */
@@ -41092,7 +41092,7 @@ type Discount struct{
     
 }
 
-// WlbItemInventory 物流宝商品库存
+/* WlbItemInventory 物流宝商品库存 */
 type WlbItemInventory struct{
     
     /* item_id Basic商品id */
@@ -41117,7 +41117,7 @@ ONROAD 在途库存 */
     
 }
 
-// CainiaoReturnBillReturnorderinfo 销退订单信息
+/* CainiaoReturnBillReturnorderinfo 销退订单信息 */
 type CainiaoReturnBillReturnorderinfo struct{
     
     /* cn_order_code Basic仓库订单编码，LBX号 */
@@ -41140,7 +41140,7 @@ type CainiaoReturnBillReturnorderinfo struct{
     
 }
 
-// JzReceiverTo 家装收货人信息
+/* JzReceiverTo 家装收货人信息 */
 type JzReceiverTo struct{
     
     /* address Basic详细地址 */
@@ -41175,7 +41175,7 @@ type JzReceiverTo struct{
     
 }
 
-// WordCountList 关键词统计
+/* WordCountList 关键词统计 */
 type WordCountList struct{
     
     /* count Basic关键词数量 */
@@ -41186,7 +41186,7 @@ type WordCountList struct{
     
 }
 
-// CainiaoStockOutBillInventoryitemlist 商品属性列表
+/* CainiaoStockOutBillInventoryitemlist 商品属性列表 */
 type CainiaoStockOutBillInventoryitemlist struct{
     
     /* inventory_item Object商品属性 */
@@ -41194,7 +41194,7 @@ type CainiaoStockOutBillInventoryitemlist struct{
     
 }
 
-// WlbTmsOrder 物流订单运单信息
+/* WlbTmsOrder 物流订单运单信息 */
 type WlbTmsOrder struct{
     
     /* code Basic运单号 */
@@ -41211,7 +41211,7 @@ type WlbTmsOrder struct{
     
 }
 
-// OutEntityItem 外部商品实体
+/* OutEntityItem 外部商品实体 */
 type OutEntityItem struct{
     
     /* entity_id Basicentity_type对应的实体类型的id：
@@ -41225,7 +41225,7 @@ IC_SKU--ic销售单元 */
     
 }
 
-// Chatpeer 聊天对象ID列表
+/* Chatpeer 聊天对象ID列表 */
 type Chatpeer struct{
     
     /* date Basic聊天日期 */
@@ -41236,7 +41236,7 @@ type Chatpeer struct{
     
 }
 
-// QueryPagination 查询分页结构
+/* QueryPagination 查询分页结构 */
 type QueryPagination struct{
     
     /* page_index Basic当前页码数 */
@@ -41247,7 +41247,7 @@ type QueryPagination struct{
     
 }
 
-// Video 商品视频关联记录
+/* Video 商品视频关联记录 */
 type Video struct{
     
     /* created Basic视频关联记录创建时间（格式：yyyy-MM-dd HH:mm:ss） */
@@ -41273,7 +41273,7 @@ type Video struct{
     
 }
 
-// WlbOrderDetail 物流宝订单，并且包含订单详情
+/* WlbOrderDetail 物流宝订单，并且包含订单详情 */
 type WlbOrderDetail struct{
     
     /* buyer_nick Basic如果是交易单，则显示交易中买家昵称 */
@@ -41343,7 +41343,7 @@ type WlbOrderDetail struct{
     
 }
 
-// SellerCat 店铺内卖家自定义类目
+/* SellerCat 店铺内卖家自定义类目 */
 type SellerCat struct{
     
     /* cid Basic卖家自定义类目编号 */
@@ -41372,7 +41372,7 @@ type SellerCat struct{
     
 }
 
-// LoginUser 登录分销用户信息
+/* LoginUser 登录分销用户信息 */
 type LoginUser struct{
     
     /* create_time Basic入驻时间 */
@@ -41389,7 +41389,7 @@ type LoginUser struct{
     
 }
 
-// TransitStepInfo 物流跟踪信息的一条
+/* TransitStepInfo 物流跟踪信息的一条 */
 type TransitStepInfo struct{
     
     /* action Basic节点说明 ，指明当前节点揽收、派送，签收。 */
@@ -41412,7 +41412,7 @@ type TransitStepInfo struct{
     
 }
 
-// WlbItemInventoryLog 库存变更记录
+/* WlbItemInventoryLog 库存变更记录 */
 type WlbItemInventoryLog struct{
     
     /* batch_code Basic批次号 */
@@ -41462,7 +41462,7 @@ type WlbItemInventoryLog struct{
     
 }
 
-// DeliveryTime 发货时间数据结构
+/* DeliveryTime 发货时间数据结构 */
 type DeliveryTime struct{
     
     /* delivery_time Basic商品级别设置的发货时间。设置了商品级别的发货时间，相对发货时间，则填写相对发货时间的天数（大于3）；绝对发货时间，则填写yyyy-mm-dd格式，如2013-11-11 */
@@ -41482,7 +41482,7 @@ type DeliveryTime struct{
     
 }
 
-// CainiaoReturnBillInventoryitem 商品信息
+/* CainiaoReturnBillInventoryitem 商品信息 */
 type CainiaoReturnBillInventoryitem struct{
     
     /* batch_code Basic批次号 */
@@ -41508,7 +41508,7 @@ type CainiaoReturnBillInventoryitem struct{
     
 }
 
-// WaybillDetailQueryRequest 面单查询请求
+/* WaybillDetailQueryRequest 面单查询请求 */
 type WaybillDetailQueryRequest struct{
     
     /* app_key BasicTOP平台请求的ISV APPKEY */
@@ -41531,7 +41531,7 @@ type WaybillDetailQueryRequest struct{
     
 }
 
-// Department 部门信息
+/* Department 部门信息 */
 type Department struct{
     
     /* department_id Basic部门ID */
@@ -41548,7 +41548,7 @@ type Department struct{
     
 }
 
-// ServiceOrder 商城虚拟服务子订单数据结构
+/* ServiceOrder 商城虚拟服务子订单数据结构 */
 type ServiceOrder struct{
     
     /* apple_care_email BasicappleCareEmail */
@@ -41616,7 +41616,7 @@ type ServiceOrder struct{
     
 }
 
-// TradeTrace 交易回流信息
+/* TradeTrace 交易回流信息 */
 type TradeTrace struct{
     
     /* action_time Basic动作发生的时间 */
@@ -41642,7 +41642,7 @@ type TradeTrace struct{
     
 }
 
-// WlbOrderItem 物流宝订单商品
+/* WlbOrderItem 物流宝订单商品 */
 type WlbOrderItem struct{
     
     /* batch_remark Basic批次号备注 */
@@ -41733,7 +41733,7 @@ INVENTORY_TYPE_BOX_DAMAGE 箱损 */
     
 }
 
-// ItemListWlbWmsInventoryLackUpload 商品信息列表
+/* ItemListWlbWmsInventoryLackUpload 商品信息列表 */
 type ItemListWlbWmsInventoryLackUpload struct{
     
     /* item_id Basic后端商品ID */
@@ -41750,7 +41750,7 @@ type ItemListWlbWmsInventoryLackUpload struct{
     
 }
 
-// CainiaoStockInBillInventoryitemlist 仓库收货商品信息
+/* CainiaoStockInBillInventoryitemlist 仓库收货商品信息 */
 type CainiaoStockInBillInventoryitemlist struct{
     
     /* inventory_item Object仓库收货商品信息 */
@@ -41758,7 +41758,7 @@ type CainiaoStockInBillInventoryitemlist struct{
     
 }
 
-// CainiaoStockOutBillPackageinfo 包裹信息
+/* CainiaoStockOutBillPackageinfo 包裹信息 */
 type CainiaoStockOutBillPackageinfo struct{
     
     /* package_code Basic包裹号 */
@@ -41787,7 +41787,7 @@ type CainiaoStockOutBillPackageinfo struct{
     
 }
 
-// WlbSellerSubscription 卖家定购的服务
+/* WlbSellerSubscription 卖家定购的服务 */
 type WlbSellerSubscription struct{
     
     /* end_date Basic定购有效结束日期 */
@@ -41863,7 +41863,7 @@ SYNCHRONIZING 5-同步中 */
     
 }
 
-// ImprFeedInfoDO 大家印象标签对应评价信息对象
+/* ImprFeedInfoDO 大家印象标签对应评价信息对象 */
 type ImprFeedInfoDO struct{
     
     /* biz_type Basic1:主评  2:追评 */
@@ -41883,7 +41883,7 @@ type ImprFeedInfoDO struct{
     
 }
 
-// FreshWaybill 生鲜电子面单返回信息
+/* FreshWaybill 生鲜电子面单返回信息 */
 type FreshWaybill struct{
     
     /* alias Basic简称 */
@@ -41906,7 +41906,7 @@ type FreshWaybill struct{
     
 }
 
-// StoreInfo 商家的仓库信息详情
+/* StoreInfo 商家的仓库信息详情 */
 type StoreInfo struct{
     
     /* address Basic详细地址 */
@@ -41923,7 +41923,7 @@ type StoreInfo struct{
     
 }
 
-// WlbItemBatchInventory 商品的库存信息和批次信息
+/* WlbItemBatchInventory 商品的库存信息和批次信息 */
 type WlbItemBatchInventory struct{
     
     /* item_batch Object Array批次库存查询结果 */
@@ -41940,7 +41940,7 @@ type WlbItemBatchInventory struct{
     
 }
 
-// Feature 类目属性
+/* Feature 类目属性 */
 type Feature struct{
     
     /* attr_key Basic属性键 */
@@ -41951,7 +41951,7 @@ type Feature struct{
     
 }
 
-// WlbInventory 库存详情对象。其中包括货主ID，仓库编码，库存，库存类型等属性
+/* WlbInventory 库存详情对象。其中包括货主ID，仓库编码，库存，库存类型等属性 */
 type WlbInventory struct{
     
     /* item_id Basic商品ID */
@@ -41987,7 +41987,7 @@ DEFECT--残次品库存 */
     
 }
 
-// ItemMaterialProp 材质属性数据结构
+/* ItemMaterialProp 材质属性数据结构 */
 type ItemMaterialProp struct{
     
     /* materials Object Array材质值列表 */
@@ -41995,7 +41995,7 @@ type ItemMaterialProp struct{
     
 }
 
-// CainiaoBillQueryOrderinfo 订单信息
+/* CainiaoBillQueryOrderinfo 订单信息 */
 type CainiaoBillQueryOrderinfo struct{
     
     /* cn_order_code Basic菜鸟订单编码 */
@@ -42027,7 +42027,7 @@ type CainiaoBillQueryOrderinfo struct{
     
 }
 
-// WaybillAddress 收\发货地址
+/* WaybillAddress 收\发货地址 */
 type WaybillAddress struct{
     
     /* address_detail Basic详细地址 */
@@ -42068,7 +42068,7 @@ type WaybillAddress struct{
     
 }
 
-// TipInfo 提示信息对象
+/* TipInfo 提示信息对象 */
 type TipInfo struct{
     
     /* error_code Basic错误码 */
@@ -42088,7 +42088,7 @@ type TipInfo struct{
     
 }
 
-// CainiaoStockOutBillPackageinfolist 包裹信息
+/* CainiaoStockOutBillPackageinfolist 包裹信息 */
 type CainiaoStockOutBillPackageinfolist struct{
     
     /* package_info Object包裹信息 */
@@ -42096,7 +42096,7 @@ type CainiaoStockOutBillPackageinfolist struct{
     
 }
 
-// CainiaoReturnBillOrderitemlist 订单商品信息
+/* CainiaoReturnBillOrderitemlist 订单商品信息 */
 type CainiaoReturnBillOrderitemlist struct{
     
     /* order_item Object订单商品信息 */
@@ -42104,7 +42104,7 @@ type CainiaoReturnBillOrderitemlist struct{
     
 }
 
-// Shipping 获取的物流订单详情列表 返回的Shipping包含的具体信息为入参fields请求的字段信息
+/* Shipping 获取的物流订单详情列表 返回的Shipping包含的具体信息为入参fields请求的字段信息 */
 type Shipping struct{
     
     /* buyer_nick Basic买家昵称 */
@@ -42181,7 +42181,7 @@ type Shipping struct{
     
 }
 
-// WaybillApplyNewInfo 申请面单返回数据
+/* WaybillApplyNewInfo 申请面单返回数据 */
 type WaybillApplyNewInfo struct{
     
     /* consignee_branch_code Basic包裹对应的派件（收件）物流服务商网点（分支机构）代码 */
@@ -42222,7 +42222,7 @@ type WaybillApplyNewInfo struct{
     
 }
 
-// WlbPartnerContact 联系人联系详情
+/* WlbPartnerContact 联系人联系详情 */
 type WlbPartnerContact struct{
     
     /* name Basic仓库联系人姓名 */
@@ -42233,7 +42233,7 @@ type WlbPartnerContact struct{
     
 }
 
-// TmallRateTagDetail 天猫评价标签详细信息
+/* TmallRateTagDetail 天猫评价标签详细信息 */
 type TmallRateTagDetail struct{
     
     /* count Basic反应该标签的评价数量 */
@@ -42247,7 +42247,7 @@ type TmallRateTagDetail struct{
     
 }
 
-// Result 接口返回model
+/* Result 接口返回model */
 type Result struct{
     
     /* code Basiccode */
@@ -42276,7 +42276,7 @@ type Result struct{
     
 }
 
-// WordList 关键词列表
+/* WordList 关键词列表 */
 type WordList struct{
     
     /* word Basic关键词 */
@@ -42284,7 +42284,7 @@ type WordList struct{
     
 }
 
-// WaybillBranchAccount CP下的网点信息
+/* WaybillBranchAccount CP下的网点信息 */
 type WaybillBranchAccount struct{
     
     /* allocated_quantity Basic已用单数 */
@@ -42316,7 +42316,7 @@ type WaybillBranchAccount struct{
     
 }
 
-// WlbWmsInventoryLackUploadResp 缺货通知返回
+/* WlbWmsInventoryLackUploadResp 缺货通知返回 */
 type WlbWmsInventoryLackUploadResp struct{
     
     /* error_code Basic错误编码 */
@@ -42330,7 +42330,7 @@ type WlbWmsInventoryLackUploadResp struct{
     
 }
 
-// RefundRemindTimeout 退款超时
+/* RefundRemindTimeout 退款超时 */
 type RefundRemindTimeout struct{
     
     /* exist_timeout Basic是否存在超时。可选值:true(是),false(否) */
@@ -42344,7 +42344,7 @@ type RefundRemindTimeout struct{
     
 }
 
-// TmcProduceResult 消息批量发送结果
+/* TmcProduceResult 消息批量发送结果 */
 type TmcProduceResult struct{
     
     /* error_code Basic错误码 */
@@ -42358,7 +42358,7 @@ type TmcProduceResult struct{
     
 }
 
-// ItemProp 商品属性
+/* ItemProp 商品属性 */
 type ItemProp struct{
     
     /* child_template Basic子属性的模板（卖家自行输入属性时需要用到） */
@@ -42449,7 +42449,7 @@ text(非枚举可输入) */
     
 }
 
-// FenxiaoSku 分销产品SKU
+/* FenxiaoSku 分销产品SKU */
 type FenxiaoSku struct{
     
     /* auction_sku_id Basic关联的前端商品skuid */
@@ -42490,7 +42490,7 @@ type FenxiaoSku struct{
     
 }
 
-// Expresses 家装快递公司信息
+/* Expresses 家装快递公司信息 */
 type Expresses struct{
     
     /* code Basic公司编码 */
@@ -42501,7 +42501,7 @@ type Expresses struct{
     
 }
 
-// AddressReachableResult 判定服务是否可达的返回结果
+/* AddressReachableResult 判定服务是否可达的返回结果 */
 type AddressReachableResult struct{
     
     /* division_id Basic区域编码 */
@@ -42533,7 +42533,7 @@ type AddressReachableResult struct{
     
 }
 
-// Receiverinfowlbwmsstockinordernotifywl 系统自动生成
+/* Receiverinfowlbwmsstockinordernotifywl 系统自动生成 */
 type Receiverinfowlbwmsstockinordernotifywl struct{
     
     /* receiver_address Basic收件方地址 */
@@ -42565,7 +42565,7 @@ type Receiverinfowlbwmsstockinordernotifywl struct{
     
 }
 
-// Shop 店铺信息
+/* Shop 店铺信息 */
 type Shop struct{
     
     /* all_count Basic总橱窗数量，对于C卖家返回总橱窗数，对于B卖家返回0（只有taobao.shop.remainshowcase.get可以返回） */
@@ -42609,7 +42609,7 @@ type Shop struct{
     
 }
 
-// CainiaoStockOutBillPackageitemlist 包裹内物品
+/* CainiaoStockOutBillPackageitemlist 包裹内物品 */
 type CainiaoStockOutBillPackageitemlist struct{
     
     /* package_item Object1 */
@@ -42617,7 +42617,7 @@ type CainiaoStockOutBillPackageitemlist struct{
     
 }
 
-// IpcInventoryDetailDo 库存明细
+/* IpcInventoryDetailDo 库存明细 */
 type IpcInventoryDetailDo struct{
     
     /* biz_order_id Basic主订单号 */
@@ -42646,7 +42646,7 @@ type IpcInventoryDetailDo struct{
     
 }
 
-// UrlList url列表
+/* UrlList url列表 */
 type UrlList struct{
     
     /* url Basicurl列表 */
@@ -42654,7 +42654,7 @@ type UrlList struct{
     
 }
 
-// Lgcps 家装物流公司信息
+/* Lgcps 家装物流公司信息 */
 type Lgcps struct{
     
     /* code Basic公司编码 */
@@ -42665,7 +42665,7 @@ type Lgcps struct{
     
 }
 
-// Orderitemwlbwmsreturnordernotify 商品信息
+/* Orderitemwlbwmsreturnordernotify 商品信息 */
 type Orderitemwlbwmsreturnordernotify struct{
     
     /* extend_fields Basic扩展属性, key-value结构，格式要求： 以英文分号“;”分隔每组key-value，以英文冒号“:”分隔key与value。如果value中带有分号，需要转成下划线“_”，如果带有冒号，需要转成中划线“-” */
@@ -42691,7 +42691,7 @@ type Orderitemwlbwmsreturnordernotify struct{
     
 }
 
-// TmcMessage 消息通道的通用消息结构
+/* TmcMessage 消息通道的通用消息结构 */
 type TmcMessage struct{
     
     /* content Basic消息详细内容，格式为JSON/XML */
@@ -42717,7 +42717,7 @@ type TmcMessage struct{
     
 }
 
-// CainiaoStockInBillStockininfo 入库单商品信息
+/* CainiaoStockInBillStockininfo 入库单商品信息 */
 type CainiaoStockInBillStockininfo struct{
     
     /* cn_order_code Basic菜鸟订单编码 */
@@ -42740,7 +42740,7 @@ type CainiaoStockInBillStockininfo struct{
     
 }
 
-// PackageItem 包裹里面的商品类型
+/* PackageItem 包裹里面的商品类型 */
 type PackageItem struct{
     
     /* count Basic商品数量 */
@@ -42751,7 +42751,7 @@ type PackageItem struct{
     
 }
 
-// BillDto 账单结构
+/* BillDto 账单结构 */
 type BillDto struct{
     
     /* account_id Basic科目编号 */
@@ -42816,7 +42816,7 @@ type BillDto struct{
     
 }
 
-// PartnerDetail 物流公司详细信息
+/* PartnerDetail 物流公司详细信息 */
 type PartnerDetail struct{
     
     /* account_no Basic物流公司支付宝账号 */
@@ -42842,7 +42842,7 @@ type PartnerDetail struct{
     
 }
 
-// WlbPartnerAddress 联系人地址信息
+/* WlbPartnerAddress 联系人地址信息 */
 type WlbPartnerAddress struct{
     
     /* address Basic详细地址 */
@@ -42862,7 +42862,7 @@ type WlbPartnerAddress struct{
     
 }
 
-// DescModuleInfo 该数据结构保存宝贝描述对应的规范化信息
+/* DescModuleInfo 该数据结构保存宝贝描述对应的规范化信息 */
 type DescModuleInfo struct{
     
     /* anchor_module_ids Basic代表宝贝描述中规范化打标使用到的模块id列表，以逗号分隔。 */
@@ -42876,7 +42876,7 @@ type DescModuleInfo struct{
     
 }
 
-// Cooperation 合作分销关系
+/* Cooperation 合作分销关系 */
 type Cooperation struct{
     
     /* auth_payway Basic Array供应商授权的支付方式：ALIPAY(支付宝)、OFFPREPAY(预付款)、OFFTRANSFER(转帐)、OFFSETTLEMENT(后期结算) */
@@ -42920,7 +42920,7 @@ type Cooperation struct{
     
 }
 
-// PropImg 商品属性图片结构
+/* PropImg 商品属性图片结构 */
 type PropImg struct{
     
     /* created Basic图片创建时间 时间格式：yyyy-MM-dd HH:mm:ss */
@@ -42940,7 +42940,7 @@ type PropImg struct{
     
 }
 
-// WlbWmsInventoryLackUpload 缺货通知信息
+/* WlbWmsInventoryLackUpload 缺货通知信息 */
 type WlbWmsInventoryLackUpload struct{
     
     /* create_time Basic创建时间 */
@@ -42966,7 +42966,7 @@ type WlbWmsInventoryLackUpload struct{
     
 }
 
-// WaybillApplyPrintCheckInfo 打印返回信息
+/* WaybillApplyPrintCheckInfo 打印返回信息 */
 type WaybillApplyPrintCheckInfo struct{
     
     /* notice_code Basic打印提示信息编码 */
@@ -42983,7 +42983,7 @@ type WaybillApplyPrintCheckInfo struct{
     
 }
 
-// CainiaoReturnBillInventoryitemlist 销退订单信息
+/* CainiaoReturnBillInventoryitemlist 销退订单信息 */
 type CainiaoReturnBillInventoryitemlist struct{
     
     /* inventory_item Object订单详情 */
@@ -42991,7 +42991,7 @@ type CainiaoReturnBillInventoryitemlist struct{
     
 }
 
-// PaimaiInfo 拍卖商品相关信息
+/* PaimaiInfo 拍卖商品相关信息 */
 type PaimaiInfo struct{
     
     /* deposit Basic用户自定义的固定保证金。如果用户未传则说明用户选择使用淘宝默认的保证金模式10%，此时deposit等于0. */
@@ -43014,7 +43014,7 @@ type PaimaiInfo struct{
     
 }
 
-// TradeStat 订单全链路中的订单状态统计
+/* TradeStat 订单全链路中的订单状态统计 */
 type TradeStat struct{
     
     /* count Basic数量 */
@@ -43025,7 +43025,7 @@ type TradeStat struct{
     
 }
 
-// Duty 子账号职务信息
+/* Duty 子账号职务信息 */
 type Duty struct{
     
     /* duty_id Basic职务ID */
@@ -43039,7 +43039,7 @@ type Duty struct{
     
 }
 
-// TmcGroup 消息通道的分组结构
+/* TmcGroup 消息通道的分组结构 */
 type TmcGroup struct{
     
     /* name Basic分组名称 */
@@ -43050,7 +43050,7 @@ type TmcGroup struct{
     
 }
 
-// Senderwlbwmsstockoutordernotify 发货方信息
+/* Senderwlbwmsstockoutordernotify 发货方信息 */
 type Senderwlbwmsstockoutordernotify struct{
     
     /* sender_address Basic发件方地址 */
@@ -43082,7 +43082,7 @@ type Senderwlbwmsstockoutordernotify struct{
     
 }
 
-// CainiaoReturnBillOrderitem 销退订单信息
+/* CainiaoReturnBillOrderitem 销退订单信息 */
 type CainiaoReturnBillOrderitem struct{
     
     /* inventory_item_list Object Array商品信息 */
@@ -43099,7 +43099,7 @@ type CainiaoReturnBillOrderitem struct{
     
 }
 
-// Orderitemwlbwmsstockinordernotifywl 系统自动生成
+/* Orderitemwlbwmsstockinordernotifywl 系统自动生成 */
 type Orderitemwlbwmsstockinordernotifywl struct{
     
     /* batch_code Basic批次编号 */
@@ -43134,7 +43134,7 @@ type Orderitemwlbwmsstockinordernotifywl struct{
     
 }
 
-// MpicVideo 宝贝主图视频数据结构
+/* MpicVideo 宝贝主图视频数据结构 */
 type MpicVideo struct{
     
     /* num_iid Basic主图视频记录所关联的商品的数字id */
@@ -43154,7 +43154,7 @@ type MpicVideo struct{
     
 }
 
-// WmsInventoryQueryItemlist 商品详情
+/* WmsInventoryQueryItemlist 商品详情 */
 type WmsInventoryQueryItemlist struct{
     
     /* item Object商品详情 */
@@ -43162,7 +43162,7 @@ type WmsInventoryQueryItemlist struct{
     
 }
 
-// GradeDiscount 等级折扣数据结构
+/* GradeDiscount 等级折扣数据结构 */
 type GradeDiscount struct{
     
     /* discount_id Basic等级ID或分销商ID */
@@ -43182,7 +43182,7 @@ type GradeDiscount struct{
     
 }
 
-// Requisition 合作申请
+/* Requisition 合作申请 */
 type Requisition struct{
     
     /* dist_appraise Basic好评率 */
@@ -43226,7 +43226,7 @@ type Requisition struct{
     
 }
 
-// TradeAmount 交易订单的帐务信息详情
+/* TradeAmount 交易订单的帐务信息详情 */
 type TradeAmount struct{
     
     /* alipay_no Basic支付宝交易号，如：2009112081173831 */
@@ -43279,7 +43279,7 @@ type TradeAmount struct{
     
 }
 
-// FenxiaoGrade 分销商等级
+/* FenxiaoGrade 分销商等级 */
 type FenxiaoGrade struct{
     
     /* created Basic记录创建时间 */
@@ -43296,7 +43296,7 @@ type FenxiaoGrade struct{
     
 }
 
-// RefundMessage 退款留言
+/* RefundMessage 退款留言 */
 type RefundMessage struct{
     
     /* content Basic留言内容。最大长度: 400个字节 */
@@ -43331,7 +43331,7 @@ type RefundMessage struct{
     
 }
 
-// LogisticServiceTag 物流服务标签
+/* LogisticServiceTag 物流服务标签 */
 type LogisticServiceTag struct{
     
     /* service_tag Basic物流服务下的标签属性,多个标签之间有";"分隔 */
@@ -43342,7 +43342,7 @@ type LogisticServiceTag struct{
     
 }
 
-// Area 地址区域结构
+/* Area 地址区域结构 */
 type Area struct{
     
     /* id Basic标准行政区域代码.参考:http://www.stats.gov.cn/tjbz/xzqhdm/t20120105_402777427.htm */
@@ -43362,7 +43362,7 @@ type Area struct{
     
 }
 
-// CainiaoInventoryProfitlossOrderitem 商品信息
+/* CainiaoInventoryProfitlossOrderitem 商品信息 */
 type CainiaoInventoryProfitlossOrderitem struct{
     
     /* batch_code Basic批次号 */
@@ -43394,7 +43394,7 @@ type CainiaoInventoryProfitlossOrderitem struct{
     
 }
 
-// ShopCat 店铺类目
+/* ShopCat 店铺类目 */
 type ShopCat struct{
     
     /* cid Basic类目编号 */
@@ -43411,7 +43411,7 @@ type ShopCat struct{
     
 }
 
-// AlipayAccount 支付宝用户账户信息
+/* AlipayAccount 支付宝用户账户信息 */
 type AlipayAccount struct{
     
     /* alipay_user_id Basic支付宝用户ID */
@@ -43428,7 +43428,7 @@ type AlipayAccount struct{
     
 }
 
-// Orderitemlistwlbwmsstockinordernotifywl 系统自动生成
+/* Orderitemlistwlbwmsstockinordernotifywl 系统自动生成 */
 type Orderitemlistwlbwmsstockinordernotifywl struct{
     
     /* order_item Object订单商品 */
@@ -43436,7 +43436,7 @@ type Orderitemlistwlbwmsstockinordernotifywl struct{
     
 }
 
-// WlbWmsInventoryCountResp 系统自动生成
+/* WlbWmsInventoryCountResp 系统自动生成 */
 type WlbWmsInventoryCountResp struct{
     
     /* error_code Basic错误编码 */
@@ -43450,7 +43450,7 @@ type WlbWmsInventoryCountResp struct{
     
 }
 
-// LogisticsCompany 物流公司基础数据结构
+/* LogisticsCompany 物流公司基础数据结构 */
 type LogisticsCompany struct{
     
     /* code Basic物流公司代码 */
@@ -43467,7 +43467,7 @@ type LogisticsCompany struct{
     
 }
 
-// ProviderEinvoice 电子发票对象
+/* ProviderEinvoice 电子发票对象 */
 type ProviderEinvoice struct{
     
     /* anti_fake_code Basic防伪码 */
@@ -43508,7 +43508,7 @@ type ProviderEinvoice struct{
     
 }
 
-// ItemImg ItemImg结构
+/* ItemImg ItemImg结构 */
 type ItemImg struct{
     
     /* created Basic图片创建时间 时间格式：yyyy-MM-dd HH:mm:ss */
@@ -43525,7 +43525,7 @@ type ItemImg struct{
     
 }
 
-// ScoreResult 服务平台评价流水对象
+/* ScoreResult 服务平台评价流水对象 */
 type ScoreResult struct{
     
     /* attitude_score Basic服务态度评分 */
@@ -43578,7 +43578,7 @@ type ScoreResult struct{
     
 }
 
-// ArticleBizOrder 应用订单信息
+/* ArticleBizOrder 应用订单信息 */
 type ArticleBizOrder struct{
     
     /* activity_code BasicactivityCode */
@@ -43637,7 +43637,7 @@ type ArticleBizOrder struct{
     
 }
 
-// FenxiaoItemRecord 分销商品下载记录
+/* FenxiaoItemRecord 分销商品下载记录 */
 type FenxiaoItemRecord struct{
     
     /* created Basic下载时间 */
@@ -43660,7 +43660,7 @@ type FenxiaoItemRecord struct{
     
 }
 
-// JzPartnerNew 物流服务商信息
+/* JzPartnerNew 物流服务商信息 */
 type JzPartnerNew struct{
     
     /* is_virtual_tp Basic是否是虚拟服务商（家装-商家自有物流） */
@@ -43677,7 +43677,7 @@ type JzPartnerNew struct{
     
 }
 
-// TradeTagRelationDo 订单标签关联关系。tag_type的值有1,2,3,1为官方标，2为自定义标，3为主站只读标签。当标签为主站只读标签时，只有tag_name和tag_value信息，不含id和gmt_modified等信息
+/* TradeTagRelationDo 订单标签关联关系。tag_type的值有1,2,3,1为官方标，2为自定义标，3为主站只读标签。当标签为主站只读标签时，只有tag_name和tag_value信息，不含id和gmt_modified等信息 */
 type TradeTagRelationDo struct{
     
     /* gmt_created Basic记录的创建时间 */
@@ -43709,7 +43709,7 @@ type TradeTagRelationDo struct{
     
 }
 
-// ImprFeedIdDO 单条交易子订单语义标签对象
+/* ImprFeedIdDO 单条交易子订单语义标签对象 */
 type ImprFeedIdDO struct{
     
     /* feed_info_list Object Array存放主评和追评的评价标签信息
@@ -43724,7 +43724,7 @@ biz_type(1:主评 2:追评) */
     
 }
 
-// TmallRateInfo 评价信息包括标签信息
+/* TmallRateInfo 评价信息包括标签信息 */
 type TmallRateInfo struct{
     
     /* append_content Basic追加评价内容 */
@@ -43756,7 +43756,7 @@ type TmallRateInfo struct{
     
 }
 
-// TradeMonitor 经销订单监控记录信息
+/* TradeMonitor 经销订单监控记录信息 */
 type TradeMonitor struct{
     
     /* area Basic地区 */
@@ -43853,7 +43853,7 @@ TRADE_CLOSED(交易关闭)<br>TRADE_REFUNDING（退款中） */
     
 }
 
-// TopAccountDto 费用科目
+/* TopAccountDto 费用科目 */
 type TopAccountDto struct{
     
     /* account_code Basic费用科目编码 */
@@ -43882,7 +43882,7 @@ type TopAccountDto struct{
     
 }
 
-// ConfirmConsignGoodsDto 发货的包裹
+/* ConfirmConsignGoodsDto 发货的包裹 */
 type ConfirmConsignGoodsDto struct{
     
     /* item_id Basic待发货商品的前端宝贝id */
@@ -43896,7 +43896,7 @@ type ConfirmConsignGoodsDto struct{
     
 }
 
-// HlUserDO 订单全链路用户信息
+/* HlUserDO 订单全链路用户信息 */
 type HlUserDO struct{
     
     /* open_for_buyer Basic回流信息是否开通买家端展示 */
@@ -43907,7 +43907,7 @@ type HlUserDO struct{
     
 }
 
-// CainiaoInventoryProfitlossProfitlossinfo 损益信息
+/* CainiaoInventoryProfitlossProfitlossinfo 损益信息 */
 type CainiaoInventoryProfitlossProfitlossinfo struct{
     
     /* cn_order_code Basic仓库订单编码 */
@@ -43930,7 +43930,7 @@ type CainiaoInventoryProfitlossProfitlossinfo struct{
     
 }
 
-// ElectronicInvoiceDetail 电子发票详情
+/* ElectronicInvoiceDetail 电子发票详情 */
 type ElectronicInvoiceDetail struct{
     
     /* electronic_invoice_no Basic电子发票号 */
@@ -43962,7 +43962,7 @@ type ElectronicInvoiceDetail struct{
     
 }
 
-// JzTopArgs 发货参数
+/* JzTopArgs 发货参数 */
 type JzTopArgs struct{
     
     /* mail_no Basic运单号 */
@@ -43991,7 +43991,7 @@ type JzTopArgs struct{
     
 }
 
-// PictureCategory 图片分类
+/* PictureCategory 图片分类 */
 type PictureCategory struct{
     
     /* created Basic图片类目的创建时间 */
@@ -44021,7 +44021,7 @@ type PictureCategory struct{
     
 }
 
-// Senderinfowlbwmsreturnordernotify 发件人信息
+/* Senderinfowlbwmsreturnordernotify 发件人信息 */
 type Senderinfowlbwmsreturnordernotify struct{
     
     /* sender_address Basic发件人地址 */
@@ -44053,7 +44053,7 @@ type Senderinfowlbwmsreturnordernotify struct{
     
 }
 
-// Order 订单结构
+/* Order 订单结构 */
 type Order struct{
     
     /* adjust_fee Basic手工调整金额.格式为:1.01;单位:元;精确到小数点后两位. */
@@ -44439,7 +44439,7 @@ type Order struct{
     
 }
 
-// Orderitemlistwlbwmsstockoutordernotify 订单商品信息列表
+/* Orderitemlistwlbwmsstockoutordernotify 订单商品信息列表 */
 type Orderitemlistwlbwmsstockoutordernotify struct{
     
     /* order_item Object订单商品信息 */
@@ -44447,7 +44447,7 @@ type Orderitemlistwlbwmsstockoutordernotify struct{
     
 }
 
-// TradeConfirmFee 确认收货费用结构
+/* TradeConfirmFee 确认收货费用结构 */
 type TradeConfirmFee struct{
     
     /* confirm_fee Basic确认收货的金额(不包含邮费)。精确到2位小数;单位:元。如:200.07，表示:200元7分 */
@@ -44461,7 +44461,7 @@ type TradeConfirmFee struct{
     
 }
 
-// WaybillApplySubscriptionInfo 商家与CP的订购关系
+/* WaybillApplySubscriptionInfo 商家与CP的订购关系 */
 type WaybillApplySubscriptionInfo struct{
     
     /* branch_account_cols Object ArrayCP网点信息及对应的商家的发货信息 */
@@ -44478,7 +44478,7 @@ type WaybillApplySubscriptionInfo struct{
     
 }
 
-// CainiaoStockOutBillOrderitemlist 订单商品信息
+/* CainiaoStockOutBillOrderitemlist 订单商品信息 */
 type CainiaoStockOutBillOrderitemlist struct{
     
     /* order_item Object订单商品信息 */
@@ -44486,7 +44486,7 @@ type CainiaoStockOutBillOrderitemlist struct{
     
 }
 
-// UserCredit 用户信用
+/* UserCredit 用户信用 */
 type UserCredit struct{
     
     /* good_num Basic收到的好评总条数。取值范围:大于零的整数 */
@@ -44503,7 +44503,7 @@ type UserCredit struct{
     
 }
 
-// CainiaoStockInBillInventoryitem 仓库收货商品信息
+/* CainiaoStockInBillInventoryitem 仓库收货商品信息 */
 type CainiaoStockInBillInventoryitem struct{
     
     /* batch_code Basic批次号 */
@@ -44529,7 +44529,7 @@ type CainiaoStockInBillInventoryitem struct{
     
 }
 
-// DealerOrderDetail 采购申请/经销采购单中的商品明细
+/* DealerOrderDetail 采购申请/经销采购单中的商品明细 */
 type DealerOrderDetail struct{
     
     /* dealer_detail_id Basic经销采购单明细id */
@@ -44576,7 +44576,7 @@ type DealerOrderDetail struct{
     
 }
 
-// CuntaoItemSpecific 村淘特有商品级数据结构
+/* CuntaoItemSpecific 村淘特有商品级数据结构 */
 type CuntaoItemSpecific struct{
     
     /* kick_back_rate Basic村淘商品级佣金率 */
@@ -44584,7 +44584,7 @@ type CuntaoItemSpecific struct{
     
 }
 
-// Reason 卖家拒绝原因对象
+/* Reason 卖家拒绝原因对象 */
 type Reason struct{
     
     /* reason_id Basic */
@@ -44598,7 +44598,7 @@ type Reason struct{
     
 }
 
-// Receiverinfowlbwmsreturnordernotify 收件人信息
+/* Receiverinfowlbwmsreturnordernotify 收件人信息 */
 type Receiverinfowlbwmsreturnordernotify struct{
     
     /* receiver_address Basic收件人地址 */
@@ -44633,7 +44633,7 @@ type Receiverinfowlbwmsreturnordernotify struct{
     
 }
 
-// Permission 权限信息
+/* Permission 权限信息 */
 type Permission struct{
     
     /* is_authorize Basic1 :允许授权  2：不允许授权 6：不允许授权但默认已有权限 */
@@ -44650,7 +44650,7 @@ type Permission struct{
     
 }
 
-// SellerAuthorize 授权
+/* SellerAuthorize 授权 */
 type SellerAuthorize struct{
     
     /* brands Object Array品牌列表 */
@@ -44664,7 +44664,7 @@ type SellerAuthorize struct{
     
 }
 
-// JzConsignArgsNew 家装物流发货参数
+/* JzConsignArgsNew 家装物流发货参数 */
 type JzConsignArgsNew struct{
     
     /* mail_no Basic快递运单号，serviceType=20 和serviceType=21时必填 */
@@ -44696,7 +44696,7 @@ type JzConsignArgsNew struct{
     
 }
 
-// TradeOrderInfo 订单数据
+/* TradeOrderInfo 订单数据 */
 type TradeOrderInfo struct{
     
     /* ali_order Basic是否阿里系订单 */
@@ -44758,7 +44758,7 @@ type TradeOrderInfo struct{
     
 }
 
-// WlbItemBatch 批次库存查询结果记录
+/* WlbItemBatch 批次库存查询结果记录 */
 type WlbItemBatch struct{
     
     /* batch_code Basic批次编号 */
@@ -44829,7 +44829,7 @@ type WlbItemBatch struct{
     
 }
 
-// ArticleUserSubscribe 用户订购信息
+/* ArticleUserSubscribe 用户订购信息 */
 type ArticleUserSubscribe struct{
     
     /* deadline Basic订购关系到期时间 */
@@ -44840,7 +44840,7 @@ type ArticleUserSubscribe struct{
     
 }
 
-// Location 用户地址
+/* Location 用户地址 */
 type Location struct{
     
     /* address Basic详细地址，最大256个字节（128个中文） */
@@ -44863,7 +44863,7 @@ type Location struct{
     
 }
 
-// DealerOrder 采购申请/经销采购单
+/* DealerOrder 采购申请/经销采购单 */
 type DealerOrder struct{
     
     /* alipay_no Basic支付宝交易号 */
@@ -44946,7 +44946,7 @@ type DealerOrder struct{
     
 }
 
-// AlipayRecord 支付宝交易记录明细
+/* AlipayRecord 支付宝交易记录明细 */
 type AlipayRecord struct{
     
     /* alipay_order_no Basic支付宝订单号 */
@@ -44984,7 +44984,7 @@ type AlipayRecord struct{
     
 }
 
-// WaybillDetailQueryInfo 面单详情
+/* WaybillDetailQueryInfo 面单详情 */
 type WaybillDetailQueryInfo struct{
     
     /* consignee_address Object收货人地址 */
@@ -45079,7 +45079,7 @@ type WaybillDetailQueryInfo struct{
     
 }
 
-// AccountFreeze 支付宝用户冻结明细信息
+/* AccountFreeze 支付宝用户冻结明细信息 */
 type AccountFreeze struct{
     
     /* freeze_amount Basic冻结金额 */
@@ -45093,7 +45093,7 @@ type AccountFreeze struct{
     
 }
 
-// ShopScore 店铺动态评分信息
+/* ShopScore 店铺动态评分信息 */
 type ShopScore struct{
     
     /* delivery_score Basic发货速度评分 */
@@ -45107,7 +45107,7 @@ type ShopScore struct{
     
 }
 
-// KfcSearchResult KFC 关键词过滤匹配结果
+/* KfcSearchResult KFC 关键词过滤匹配结果 */
 type KfcSearchResult struct{
     
     /* content Basic过滤后的文本：
