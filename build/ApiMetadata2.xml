@@ -1,4 +1,4 @@
-<metadata versionNo="20181218">
+<Metadata versionNo="20181218">
  <structs>
   <struct>
    <name>RegionalPriceDto</name>
@@ -111904,4 +111904,4 @@
    </response>
   </api>
  </apis>
-</metadata>
+</Metadata>

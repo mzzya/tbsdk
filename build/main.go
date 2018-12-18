@@ -11,8 +11,8 @@ import (
 	"text/template"
 )
 
-//metadata xml主数据结构
-type metadata struct {
+//Metadata xml主数据结构
+type Metadata struct {
 	// VersionNo 版本
 	VersionNo string   `xml:"versionNo,attr"`
 	Structs   []Struct `xml:"structs>struct"`
@@ -64,6 +64,7 @@ type ResponseParam struct {
 	GoName string `xml:"-"`
 }
 
+// ScatteredAPIModel APIStrandardModel扩展对象
 type ScatteredAPIModel struct {
 	StructNamePrefix  string
 	APIStrandardModel API
@@ -71,6 +72,7 @@ type ScatteredAPIModel struct {
 	ImportName        string
 }
 
+// APIModel apis数据
 type APIModel struct {
 	PackageName       string
 	ScatteredAPIModel []*ScatteredAPIModel
@@ -84,7 +86,7 @@ func main() {
 }
 
 //Create tbmodel.go tbapi.go
-func Create(data *metadata) {
+func Create(data *Metadata) {
 	//结果结构生成
 	structTmpl, err := template.ParseFiles("./struct.tmpl")
 	ErrHandler(err)
@@ -121,7 +123,7 @@ func Create(data *metadata) {
 }
 
 //ScatteredCreate model类一个文件 api类多个文件 且使用不同的报名
-func ScatteredCreate(data *metadata) {
+func ScatteredCreate(data *Metadata) {
 	//结果结构生成
 	structTmpl, err := template.ParseFiles("./struct.tmpl")
 	ErrHandler(err)
@@ -153,7 +155,9 @@ func ScatteredCreate(data *metadata) {
 		ErrHandler(err)
 	}
 }
-func GetMetadata() *metadata {
+
+// GetMetadata 获取Metadata对象
+func GetMetadata() *Metadata {
 	// file, err := os.Open("./ApiMetadata.xml")
 	// ErrHandler(err)
 	fmt.Printf("%v|%v|%v|%v\n", '\r', '\n', '\t', ' ')
@@ -161,7 +165,7 @@ func GetMetadata() *metadata {
 	ErrHandler(err)
 	_, count := GetCount(fileBytes)
 	fmt.Println("读取到文件字节数：", count)
-	metadata := &metadata{}
+	metadata := &Metadata{}
 	err = xml.Unmarshal(fileBytes, metadata)
 	ErrHandler(err)
 
@@ -184,8 +188,10 @@ func GetMetadata() *metadata {
 	ErrHandler(err)
 
 	for i, item := range metadata.APIS {
+		metadata.APIS[i].Desc = strings.Replace(metadata.APIS[i].Desc, "\n", "\n//", -1)
 		for j, api := range item.Request {
 			metadata.APIS[i].Request[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			metadata.APIS[i].Request[j].Desc = strings.Replace(metadata.APIS[i].Request[j].Desc, "\n", "\n    // ", -1)
 			// if api.GoName != api.Name {
 			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
 			// }
@@ -195,6 +201,7 @@ func GetMetadata() *metadata {
 		}
 		for j, api := range item.Response {
 			metadata.APIS[i].Response[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			metadata.APIS[i].Response[j].Desc = strings.Replace(metadata.APIS[i].Response[j].Desc, "\n", "\n    // ", -1)
 			// if api.GoName != api.Name {
 			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
 			// }
@@ -214,12 +221,16 @@ func GetMetadata() *metadata {
 		if structs[item.Name] > 0 {
 			metadata.Structs[i].Name = metadata.Structs[i].Name + strconv.Itoa(structs[item.Name])
 		}
+		metadata.Structs[i].Desc = strings.Replace(metadata.Structs[i].Desc, "\n", "\n//", -1)
 		for j, prop := range item.Props {
 			metadata.Structs[i].Props[j].GoName = strings.Replace(prop.Name, ".", "_", -1)
+			metadata.Structs[i].Props[j].Desc = strings.Replace(prop.Desc, "\n", "\n    // ", -1)
 		}
 	}
 	return metadata
 }
+
+// GetCount 获取字节数组长度
 func GetCount(inBytes []byte) ([]byte, int) {
 	var count int
 	var bf bytes.Buffer
@@ -241,6 +252,7 @@ func GetCount(inBytes []byte) ([]byte, int) {
 	return bf.Bytes(), count
 }
 
+//ErrHandler 异常处理
 func ErrHandler(err error) {
 	if err != nil {
 		panic(err)
