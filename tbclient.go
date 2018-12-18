@@ -1,12 +1,14 @@
 package tbsdk
 
 import (
+	"crypto/hmac"
 	"crypto/md5"
 	"encoding/hex"
 	"encoding/json"
 	"encoding/xml"
 	"io/ioutil"
 	"net/http"
+	"sort"
 	"strings"
 	"time"
 )
@@ -84,14 +86,31 @@ func (cli *Client) DoPost(req BaseRequest, session string) ([]byte, error) {
 	defer resp.Body.Close()
 	return ioutil.ReadAll(resp.Body)
 }
-
+func SignStringMap(params map[string]string, appSecret string, signMethod string) string {
+	var keys = make([]string, 0, len(params))
+	for k, _ := range params {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	var sb strings.Builder
+	for _, key := range keys {
+		sb.WriteString(key)
+		sb.WriteString(params[key])
+	}
+	return SignString(sb.String(), appSecret, signMethod)
+}
 func SignString(params string, appSecret string, signMethod string) string {
-	h := md5.New()
-	h.Write([]byte(appSecret))
-	h.Write([]byte(params)) // 需要加密的字符串为 123456
-	h.Write([]byte(appSecret))
-	cipherStr := h.Sum(nil)
-	return hex.EncodeToString(cipherStr)
+	if signMethod == SignMethod_MD5 {
+		h := md5.New()
+		h.Write([]byte(appSecret))
+		h.Write([]byte(params))
+		h.Write([]byte(appSecret))
+		return strings.ToUpper(hex.EncodeToString(h.Sum(nil)))
+	} else {
+		h := hmac.New(md5.New, []byte(appSecret))
+		h.Write([]byte(params))
+		return strings.ToUpper(hex.EncodeToString(h.Sum(nil)))
+	}
 }
 
 func GetResonseString(bytes []byte, err error) (string, error) {
