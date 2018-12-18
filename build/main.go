@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strconv"
 	"strings"
 	"text/template"
 )
@@ -202,7 +203,17 @@ func GetMetadata() *metadata {
 			// }
 		}
 	}
+
+	structs := make(map[string]int, 0)
 	for i, item := range metadata.Structs {
+		if _, ok := structs[item.Name]; !ok {
+			structs[item.Name] = 0
+		} else {
+			structs[item.Name]++
+		}
+		if structs[item.Name] > 0 {
+			metadata.Structs[i].Name = metadata.Structs[i].Name + strconv.Itoa(structs[item.Name])
+		}
 		for j, prop := range item.Props {
 			metadata.Structs[i].Props[j].GoName = strings.Replace(prop.Name, ".", "_", -1)
 		}

@@ -375,7 +375,7 @@ type TaobaoQimenInventoryReportRequest struct {
     currentPage int64 `json:"currentPage";xml:"currentPage"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional商品库存信息列表 */
     items Item `json:"items";xml:"items"`
@@ -431,7 +431,7 @@ type TaobaoQimenInventorycheckQueryRequest struct {
     checkOrderId string `json:"checkOrderId";xml:"checkOrderId"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional货主编码 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -496,7 +496,7 @@ type TaobaoQimenItemsSynchronizeRequest struct {
     actionType string `json:"actionType";xml:"actionType"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional同步的商品信息 */
     items Item `json:"items";xml:"items"`
@@ -534,7 +534,7 @@ type TaobaoQimenItemsSynchronizeResponse struct {
 type TaobaoQimenWavenumReportRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orders optional发货单号 */
     orders Order `json:"orders";xml:"orders"`
@@ -955,10 +955,10 @@ type TaobaoItemUpdateRequest struct {
     empty_fields string `json:"empty_fields";xml:"empty_fields"`
     
     /* ems_fee optionalems费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:25.07，表示:25元7分 */
-    ems_fee Price `json:"ems_fee";xml:"ems_fee"`
+    ems_fee float32 `json:"ems_fee";xml:"ems_fee"`
     
     /* express_fee optional快递费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:15.07，表示:15元7分 */
-    express_fee Price `json:"express_fee";xml:"express_fee"`
+    express_fee float32 `json:"express_fee";xml:"express_fee"`
     
     /* features optional宝贝特征值，格式为：【key1:value1;key2:value2;key3:value3;】，key和value用【:】分隔，key&value之间用【;】分隔，只有在Top支持的特征值才能保存到宝贝上，目前支持的Key列表为：mysize_tp */
     features string `json:"features";xml:"features"`
@@ -1042,7 +1042,7 @@ type TaobaoItemUpdateRequest struct {
     image []byte `json:"image";xml:"image"`
     
     /* increment optional加价(降价)幅度。如果为0，代表系统代理幅度。对于增价拍和荷兰拍来说是加价幅度，对于降价拍来说是降价幅度。 */
-    increment Price `json:"increment";xml:"increment"`
+    increment float32 `json:"increment";xml:"increment"`
     
     /* input_custom_cpv optional针对当前商品的自定义属性值 */
     input_custom_cpv string `json:"input_custom_cpv";xml:"input_custom_cpv"`
@@ -1168,7 +1168,7 @@ type TaobaoItemUpdateRequest struct {
     paimai_info_mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
     
     /* paimai_info_reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
-    paimai_info_reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
+    paimai_info_reserve float32 `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
     
     /* paimai_info_valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
     paimai_info_valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
@@ -1180,13 +1180,13 @@ type TaobaoItemUpdateRequest struct {
     pic_path string `json:"pic_path";xml:"pic_path"`
     
     /* post_fee optional平邮费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:5.07，表示:5元7分, 注:post_fee,express_fee,ems_fee需一起填写 */
-    post_fee Price `json:"post_fee";xml:"post_fee"`
+    post_fee float32 `json:"post_fee";xml:"post_fee"`
     
     /* postage_id optional宝贝所属的运费模板ID。取值范围：整数且必须是该卖家的运费模板的ID（可通过taobao.delivery.templates.get获得当前会话用户的所有邮费模板） */
     postage_id int64 `json:"postage_id";xml:"postage_id"`
     
     /* price optional商品价格。取值范围:0-100000000;精确到2位小数;单位:元。如:200.07，表示:200元7分。需要在正确的价格区间内。 拍卖商品对应的起拍价。 */
-    price Price `json:"price";xml:"price"`
+    price float32 `json:"price";xml:"price"`
     
     /* product_id optional商品所属的产品ID(B商家发布商品需要用) */
     product_id int64 `json:"product_id";xml:"product_id"`
@@ -1507,10 +1507,10 @@ type TaobaoItemAddRequest struct {
     desc_modules string `json:"desc_modules";xml:"desc_modules"`
     
     /* ems_fee optionalems费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:25.07，表示:25元7分 */
-    ems_fee Price `json:"ems_fee";xml:"ems_fee"`
+    ems_fee float32 `json:"ems_fee";xml:"ems_fee"`
     
     /* express_fee optional快递费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:15.07，表示:15元7分 */
-    express_fee Price `json:"express_fee";xml:"express_fee"`
+    express_fee float32 `json:"express_fee";xml:"express_fee"`
     
     /* features optional宝贝特征值，格式为：【key1:value1;key2:value2;key3:value3;】，key和value用【:】分隔，key&value之间用【;】分隔，只有在Top支持的特征值才能保存到宝贝上，目前支持的Key列表为：mysize_tp */
     features string `json:"features";xml:"features"`
@@ -1594,7 +1594,7 @@ type TaobaoItemAddRequest struct {
     image []byte `json:"image";xml:"image"`
     
     /* increment optional加价(降价)幅度。如果为0，代表系统代理幅度。对于增价拍和荷兰拍来说是加价幅度，对于降价拍来说是降价幅度。 */
-    increment Price `json:"increment";xml:"increment"`
+    increment float32 `json:"increment";xml:"increment"`
     
     /* input_custom_cpv optional针对当前商品的自定义属性值，目前是针对销售属性值自定义的，所以调用方需要把自定义属性值对应的虚拟属性值ID（负整数，例如例子中的 -1和-2）像标准属性值值的id一样设置到SKU上，如果自定义属性值有属性值图片，也要设置到属性图片上 */
     input_custom_cpv string `json:"input_custom_cpv";xml:"input_custom_cpv"`
@@ -1714,7 +1714,7 @@ type TaobaoItemAddRequest struct {
     paimai_info_mode int64 `json:"paimai_info.mode";xml:"paimai_info.mode"`
     
     /* paimai_info_reserve optional降价拍宝贝的保留价。对于降价拍来说，paimai_info.reserve必须大于0，且小于price-increment，而且（price-paimai_info.reserve）/increment的计算结果必须为整数 */
-    paimai_info_reserve Price `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
+    paimai_info_reserve float32 `json:"paimai_info.reserve";xml:"paimai_info.reserve"`
     
     /* paimai_info_valid_hour optional自定义销售周期的小时数。拍卖宝贝可以自定义销售周期，这里指定销售周期的小时数。注意，该参数只作为输入参数，不能通过taobao.item.get接口获取。 */
     paimai_info_valid_hour int64 `json:"paimai_info.valid_hour";xml:"paimai_info.valid_hour"`
@@ -1726,13 +1726,13 @@ type TaobaoItemAddRequest struct {
     pic_path string `json:"pic_path";xml:"pic_path"`
     
     /* post_fee optional平邮费用。取值范围:0.01-999.00;精确到2位小数;单位:元。如:5.07，表示:5元7分. 注:post_fee,express_fee,ems_fee需要一起填写 */
-    post_fee Price `json:"post_fee";xml:"post_fee"`
+    post_fee float32 `json:"post_fee";xml:"post_fee"`
     
     /* postage_id optional宝贝所属的运费模板ID。取值范围：整数且必须是该卖家的运费模板的ID（可通过taobao.delivery.template.get获得当前会话用户的所有邮费模板） */
     postage_id int64 `json:"postage_id";xml:"postage_id"`
     
     /* price optional商品价格。取值范围:0-100000000;精确到2位小数;单位:元。如:200.07，表示:200元7分。需要在正确的价格区间内。拍卖商品对应的起拍价。 */
-    price Price `json:"price";xml:"price"`
+    price float32 `json:"price";xml:"price"`
     
     /* product_id optional商品所属的产品ID(B商家发布商品需要用) */
     product_id int64 `json:"product_id";xml:"product_id"`
@@ -1904,7 +1904,7 @@ type TaobaoItemSkuAddRequest struct {
     ignorewarning string `json:"ignorewarning";xml:"ignorewarning"`
     
     /* item_price optionalsku所属商品的价格。当用户新增sku，使商品价格不属于sku价格之间的时候，用于修改商品的价格，使sku能够添加成功 */
-    item_price Price `json:"item_price";xml:"item_price"`
+    item_price float32 `json:"item_price";xml:"item_price"`
     
     /* lang optionalSku文字的版本。可选值:zh_HK(繁体),zh_CN(简体);默认值:zh_CN */
     lang string `json:"lang";xml:"lang"`
@@ -1916,7 +1916,7 @@ type TaobaoItemSkuAddRequest struct {
     outer_id string `json:"outer_id";xml:"outer_id"`
     
     /* price requiredSku的销售价格。商品的价格要在商品所有的sku的价格之间。精确到2位小数;单位:元。如:200.07，表示:200元7分 */
-    price Price `json:"price";xml:"price"`
+    price float32 `json:"price";xml:"price"`
     
     /* properties requiredSku属性串。格式:pid:vid;pid:vid,如:1627207:3232483;1630696:3284570,表示:机身颜色:军绿色;手机套餐:一电一充。 */
     properties string `json:"properties";xml:"properties"`
@@ -1990,7 +1990,7 @@ type TaobaoItemSkuUpdateRequest struct {
     ignorewarning string `json:"ignorewarning";xml:"ignorewarning"`
     
     /* item_price optionalsku所属商品的价格。当用户更新sku，使商品价格不属于sku价格之间的时候，用于修改商品的价格，使sku能够更新成功 */
-    item_price Price `json:"item_price";xml:"item_price"`
+    item_price float32 `json:"item_price";xml:"item_price"`
     
     /* lang optionalSku文字的版本。可选值:zh_HK(繁体),zh_CN(简体);默认值:zh_CN */
     lang string `json:"lang";xml:"lang"`
@@ -2002,7 +2002,7 @@ type TaobaoItemSkuUpdateRequest struct {
     outer_id string `json:"outer_id";xml:"outer_id"`
     
     /* price optionalSku的销售价格。精确到2位小数;单位:元。如:200.07，表示:200元7分。修改后的sku价格要保证商品的价格在所有sku价格所形成的价格区间内（例如：商品价格为6元，sku价格有5元、10元两种，如果要修改5元sku的价格，那么修改的范围只能是0-6元之间；如果要修改10元的sku，那么修改的范围只能是6到无穷大的区间中） */
-    price Price `json:"price";xml:"price"`
+    price float32 `json:"price";xml:"price"`
     
     /* properties requiredSku属性串。格式:pid:vid;pid:vid,如: 1627207:3232483;1630696:3284570,表示机身颜色:军绿色;手机套餐:一电一充。
 如果包含自定义属性，则格式为pid:vid;pid2:vid2;$pText:vText , 其中$pText:vText为自定义属性。限制：其中$pText的’$’前缀不能少，且pText和vText文本中不可以存在 冒号:和分号;以及逗号， */
@@ -3400,7 +3400,7 @@ type TaobaoItemSkuPriceUpdateRequest struct {
     ignorewarning string `json:"ignorewarning";xml:"ignorewarning"`
     
     /* item_price optionalsku所属商品的价格。当用户更新sku，使商品价格不属于sku价格之间的时候，用于修改商品的价格，使sku能够更新成功 */
-    item_price Price `json:"item_price";xml:"item_price"`
+    item_price float32 `json:"item_price";xml:"item_price"`
     
     /* lang optionalSku文字的版本。可选值:zh_HK(繁体),zh_CN(简体);默认值:zh_CN */
     lang string `json:"lang";xml:"lang"`
@@ -3412,7 +3412,7 @@ type TaobaoItemSkuPriceUpdateRequest struct {
     outer_id string `json:"outer_id";xml:"outer_id"`
     
     /* price optionalSku的销售价格。精确到2位小数;单位:元。如:200.07，表示:200元7分。修改后的sku价格要保证商品的价格在所有sku价格所形成的价格区间内（例如：商品价格为6元，sku价格有5元、10元两种，如果要修改5元sku的价格，那么修改的范围只能是0-6元之间；如果要修改10元的sku，那么修改的范围只能是6到无穷大的区间中） */
-    price Price `json:"price";xml:"price"`
+    price float32 `json:"price";xml:"price"`
     
     /* properties requiredSku属性串。格式:pid:vid;pid:vid,如: 1627207:3232483;1630696:3284570,表示机身颜色:军绿色;手机套餐:一电一充 */
     properties string `json:"properties";xml:"properties"`
@@ -4311,7 +4311,7 @@ type TaobaoQimenStockoutConfirmRequest struct {
     deliveryOrder DeliveryOrder `json:"deliveryOrder";xml:"deliveryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderLines optionalorderLines */
     orderLines OrderLine `json:"orderLines";xml:"orderLines"`
@@ -5095,7 +5095,7 @@ type TaobaoQimenOrderexceptionReportRequest struct {
     expressCode string `json:"expressCode";xml:"expressCode"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* logisticsCode optional奇门仓储字段 */
     logisticsCode string `json:"logisticsCode";xml:"logisticsCode"`
@@ -5237,7 +5237,7 @@ type TaobaoFenxiaoRefundGetResponse struct {
 type TaobaoQimenInventoryreserveCancelRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* itemInventories optional奇门仓储字段 */
     itemInventories ItemInventory `json:"itemInventories";xml:"itemInventories"`
@@ -5284,7 +5284,7 @@ type TaobaoQimenInventoryreserveCancelResponse struct {
 type TaobaoQimenInventoryreserveCreateRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* itemInventories optional交易订单信息 */
     itemInventories ItemInventory `json:"itemInventories";xml:"itemInventories"`
@@ -6657,7 +6657,7 @@ type TaobaoQimenItemlackReportRequest struct {
     deliveryOrderId string `json:"deliveryOrderId";xml:"deliveryOrderId"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional缺货商品列表 */
     items Item `json:"items";xml:"items"`
@@ -6695,7 +6695,7 @@ type TaobaoQimenItemlackReportResponse struct {
 type TaobaoQimenOrderprocessQueryRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderCode required单据号 */
     orderCode string `json:"orderCode";xml:"orderCode"`
@@ -6812,7 +6812,7 @@ type TaobaoRefundRefusereasonGetResponse struct {
 type TaobaoQimenReturnorderQueryRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional货主编码 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -6868,7 +6868,7 @@ type TaobaoQimenOrderstatusBatchqueryRequest struct {
     endTime string `json:"endTime";xml:"endTime"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderType optional单据类型(JYCK=一般交易出库单;HHCK=换货出库;BFCK=补发出库;PTCK=普通出库单;DBCK=调拨出库;QTCK=其他出库;B2BRK=B2B入库;B2BCK=B2B出库;CGRK=采购入库;DBRK=调拨入库;QTRK=其他入库;XTRK=销退入库;HHRK= 换货入库;CNJG= 仓内加工单) */
     orderType string `json:"orderType";xml:"orderType"`
@@ -6921,7 +6921,7 @@ type TaobaoQimenItemlackQueryRequest struct {
     deliveryOrderId string `json:"deliveryOrderId";xml:"deliveryOrderId"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional货主编码 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -6980,7 +6980,7 @@ type TaobaoQimenOrderPendingRequest struct {
     actionType string `json:"actionType";xml:"actionType"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderCode required单据编码 */
     orderCode string `json:"orderCode";xml:"orderCode"`
@@ -7024,7 +7024,7 @@ type TaobaoQimenOrderPendingResponse struct {
 type TaobaoQimenDeliveryorderBatchcreateAnswerRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orders optional发货单列表 */
     orders Order `json:"orders";xml:"orders"`
@@ -7053,7 +7053,7 @@ type TaobaoQimenDeliveryorderBatchcreateAnswerResponse struct {
 type TaobaoQimenCombineitemSynchronizeRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* itemCode required组合商品的ERP编码 */
     itemCode string `json:"itemCode";xml:"itemCode"`
@@ -7120,7 +7120,7 @@ type TaobaoQimenStockQueryRequest struct {
     expireDate string `json:"expireDate";xml:"expireDate"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* inventoryType optional库存类型(ZP=正品;CC=残次;JS=机损;XS=箱损;ZT=在途库存;默认为查所有类型的库存) */
     inventoryType string `json:"inventoryType";xml:"inventoryType"`
@@ -7202,7 +7202,7 @@ type TaobaoQimenStoreprocessConfirmRequest struct {
     actualQty int64 `json:"actualQty";xml:"actualQty"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* materialitems optional加工商品列表 */
     materialitems MaterialItem `json:"materialitems";xml:"materialitems"`
@@ -7285,7 +7285,7 @@ type TaobaoTradeOrderskuUpdateResponse struct {
 type TaobaoQimenStoreprocessCreateRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* materialitems optional加工商品列表 */
     materialitems MaterialItem `json:"materialitems";xml:"materialitems"`
@@ -7400,7 +7400,7 @@ type TaobaoQimenStockoutQueryRequest struct {
     deliveryOrderId string `json:"deliveryOrderId";xml:"deliveryOrderId"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional货主编码 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -7694,7 +7694,7 @@ type TaobaoAppstoreSubscribeGetResponse struct {
 type TaobaoQimenReplenishplanCreateRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* gmtDeadTime required最晚入库时间(YYYY-MM-DD HH:MM:SS) */
     gmtDeadTime string `json:"gmtDeadTime";xml:"gmtDeadTime"`
@@ -8038,7 +8038,7 @@ type TaobaoItemSkuDeleteRequest struct {
     item_num int64 `json:"item_num";xml:"item_num"`
     
     /* item_price optionalsku所属商品的价格。当用户删除sku，使商品价格不属于sku价格之间的时候，用于修改商品的价格，使sku能够删除成功 */
-    item_price Price `json:"item_price";xml:"item_price"`
+    item_price float32 `json:"item_price";xml:"item_price"`
     
     /* lang optionalSku文字的版本。可选值:zh_HK(繁体),zh_CN(简体);默认值:zh_CN */
     lang string `json:"lang";xml:"lang"`
@@ -10828,7 +10828,7 @@ type TaobaoQimenOrderCallbackResponse struct {
 type TaobaoQimenWarehouseinfoQueryRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional奇门仓储字段 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -10869,7 +10869,7 @@ type TaobaoQimenExpressinfoQueryRequest struct {
     expressCode string `json:"expressCode";xml:"expressCode"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* ownerCode optional奇门仓储字段 */
     ownerCode string `json:"ownerCode";xml:"ownerCode"`
@@ -12675,7 +12675,7 @@ type TaobaoKfcKeywordSearchResponse struct {
 type TaobaoQimenCombineitemQueryRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* itemId optional奇门仓储字段 */
     itemId string `json:"itemId";xml:"itemId"`
@@ -14198,7 +14198,7 @@ type TaobaoQimenEntryorderQueryRequest struct {
     extOrderCode string `json:"extOrderCode";xml:"extOrderCode"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderType optionalorderType */
     orderType string `json:"orderType";xml:"orderType"`
@@ -14280,7 +14280,7 @@ type TaobaoQimenDeliveryorderQueryRequest struct {
     deliveryOrderId string `json:"deliveryOrderId";xml:"deliveryOrderId"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderCode required发库单号 */
     orderCode string `json:"orderCode";xml:"orderCode"`
@@ -15642,7 +15642,7 @@ type TaobaoQimenSnReportRequest struct {
     deliveryOrder DeliveryOrder `json:"deliveryOrder";xml:"deliveryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional商品列表 */
     items Item `json:"items";xml:"items"`
@@ -15811,7 +15811,7 @@ type TaobaoQimenOrderCancelRequest struct {
     cancelReason string `json:"cancelReason";xml:"cancelReason"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderCode required单据编码 */
     orderCode string `json:"orderCode";xml:"orderCode"`
@@ -15858,7 +15858,7 @@ type TaobaoQimenDeliveryorderConfirmRequest struct {
     deliveryOrder DeliveryOrder `json:"deliveryOrder";xml:"deliveryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderLines optional单据列表 */
     orderLines OrderLine `json:"orderLines";xml:"orderLines"`
@@ -15893,7 +15893,7 @@ type TaobaoQimenDeliveryorderCreateRequest struct {
     deliveryOrder DeliveryOrder `json:"deliveryOrder";xml:"deliveryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional */
     items Item `json:"items";xml:"items"`
@@ -15960,7 +15960,7 @@ type TaobaoRdcAligeniusWarehouseResendLogisticsMsgPostResponse struct {
 type TaobaoQimenOrderprocessReportRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* order optional订单信息 */
     order Order `json:"order";xml:"order"`
@@ -16338,7 +16338,7 @@ type TaobaoLogisticsOfflineSendResponse struct {
 type TaobaoQimenReturnorderCreateRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* itemList optionalitemList */
     itemList Item `json:"itemList";xml:"itemList"`
@@ -16402,7 +16402,7 @@ type TaobaoQimenEntryorderCreateRequest struct {
     entryOrder EntryOrder `json:"entryOrder";xml:"entryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional商品信息 */
     items Item `json:"items";xml:"items"`
@@ -16437,7 +16437,7 @@ type TaobaoQimenEntryorderCreateResponse struct {
 type TaobaoQimenReturnorderConfirmRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orderLines optional订单信息 */
     orderLines OrderLine `json:"orderLines";xml:"orderLines"`
@@ -16472,7 +16472,7 @@ type TaobaoQimenStockchangeReportRequest struct {
     currentPage string `json:"currentPage";xml:"currentPage"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optionalitem */
     items Item `json:"items";xml:"items"`
@@ -16525,7 +16525,7 @@ type TaobaoQimenInventoryQueryRequest struct {
     criteriaList Criteria `json:"criteriaList";xml:"criteriaList"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* remark optional备注 */
     remark string `json:"remark";xml:"remark"`
@@ -16560,7 +16560,7 @@ type TaobaoQimenSingleitemSynchronizeRequest struct {
     actionType string `json:"actionType";xml:"actionType"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* item optional商品信息 */
     item Item `json:"item";xml:"item"`
@@ -16621,7 +16621,7 @@ type TaobaoItemTemplatesGetResponse struct {
 type TaobaoQimenDeliveryorderBatchconfirmRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orders optional发货单列表 */
     orders Order `json:"orders";xml:"orders"`
@@ -16653,7 +16653,7 @@ type TaobaoQimenStockoutCreateRequest struct {
     deliveryOrder DeliveryOrder `json:"deliveryOrder";xml:"deliveryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional */
     items Item `json:"items";xml:"items"`
@@ -16694,7 +16694,7 @@ type TaobaoQimenEntryorderConfirmRequest struct {
     entryOrder EntryOrder `json:"entryOrder";xml:"entryOrder"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional商品信息列表 */
     items Item `json:"items";xml:"items"`
@@ -16726,7 +16726,7 @@ type TaobaoQimenEntryorderConfirmResponse struct {
 type TaobaoQimenDeliveryorderBatchcreateRequest struct {
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* orders optional订单信息 */
     orders Order `json:"orders";xml:"orders"`
@@ -16845,7 +16845,7 @@ type TaobaoQimenOrderSnReportRequest struct {
     currentPage int64 `json:"currentPage";xml:"currentPage"`
     
     /* extendProps optional扩展属性 */
-    extendProps Map `json:"extendProps";xml:"extendProps"`
+    extendProps map[string]interface{} `json:"extendProps";xml:"extendProps"`
     
     /* items optional商品列表 */
     items Items `json:"items";xml:"items"`

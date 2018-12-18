@@ -1,0 +1,5 @@
+package tbsdk
+
+func sign() {
+
+}
