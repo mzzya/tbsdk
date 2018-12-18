@@ -1,7 +1,5 @@
 package tbmodel
 
-import "github.com/smgqk/tbmodel"
-
 
 // RegionalPriceDto 列表
 type RegionalPriceDto struct{

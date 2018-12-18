@@ -16,6 +16,8 @@ type metadata struct {
 	VersionNo string   `xml:"versionNo,attr"`
 	Structs   []Struct `xml:"structs>struct"`
 	APIS      []API    `xml:"apis>api"`
+
+	PackageName string `xml:"-"`
 }
 
 //Struct 淘宝object结构
@@ -60,15 +62,28 @@ type ResponseParam struct {
 type APIModel struct {
 	StructNamePrefix  string
 	APIStrandardModel API
+	PackageName       string
+	ImportName        string
 }
 
 func main() {
 	var data = GetMetadata()
+	ScatteredCreate(data)
+	Create(data)
+}
+
+func Create(data *metadata) {
+
+}
+
+//ScatteredCreate model类一个文件 api类多个文件 且使用不同的报名
+func ScatteredCreate(data *metadata) {
 	//结果结构生成
 	structTmpl, err := template.ParseFiles("./struct.tmpl")
 	ErrHandler(err)
 	f, err := os.Create("../tbmodel/tbmodel.go")
 	ErrHandler(err)
+	data.PackageName = "tbmodel"
 	err = structTmpl.Execute(f, data)
 	ErrHandler(err)
 	f.Close()
@@ -84,6 +99,8 @@ func main() {
 			sb.WriteString(item[1:])
 		}
 		var apiModel = new(APIModel)
+		apiModel.PackageName = "tbapi"
+		apiModel.ImportName = "github.com/smgqk/tbsdk/tbmodel"
 		apiModel.StructNamePrefix = sb.String()
 		apiModel.APIStrandardModel = item
 		f, err := os.Create("../tbapi/" + apiModel.StructNamePrefix + ".go")
