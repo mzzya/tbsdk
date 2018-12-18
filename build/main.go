@@ -59,21 +59,60 @@ type ResponseParam struct {
 	Desc  string `xml:"desc"`
 }
 
-type APIModel struct {
+type ScatteredAPIModel struct {
 	StructNamePrefix  string
 	APIStrandardModel API
 	PackageName       string
 	ImportName        string
 }
 
-func main() {
-	var data = GetMetadata()
-	ScatteredCreate(data)
-	Create(data)
+type APIModel struct {
+	PackageName       string
+	ScatteredAPIModel []*ScatteredAPIModel
 }
 
-func Create(data *metadata) {
+func main() {
+	var data = GetMetadata()
+	//以下Create方法二选一
+	Create(data)
+	//ScatteredCreate(data)
+}
 
+//Create tbmodel.go tbapi.go
+func Create(data *metadata) {
+	//结果结构生成
+	structTmpl, err := template.ParseFiles("./struct.tmpl")
+	ErrHandler(err)
+	tbmodelFile, err := os.Create("../tbmodel.go")
+	ErrHandler(err)
+	data.PackageName = "tbsdk"
+	err = structTmpl.Execute(tbmodelFile, data)
+	ErrHandler(err)
+	tbmodelFile.Close()
+
+	apiTmpl, err := template.ParseFiles("./api.tmpl")
+	ErrHandler(err)
+
+	tbapiFile, err := os.Create("../tbapi.go")
+	apiModel := new(APIModel)
+	apiModel.PackageName = "tbsdk"
+	apiModel.ScatteredAPIModel = make([]*ScatteredAPIModel, len(data.APIS))
+	for i, item := range data.APIS {
+		names := strings.Split(item.Name, ".")
+		sb := &strings.Builder{}
+		for _, item := range names {
+			sb.WriteString(strings.ToUpper(string(item[0])))
+			sb.WriteString(item[1:])
+		}
+		var ScatteredAPIModel = new(ScatteredAPIModel)
+		ScatteredAPIModel.PackageName = "tbsdk"
+		ScatteredAPIModel.StructNamePrefix = sb.String()
+		ScatteredAPIModel.APIStrandardModel = item
+		apiModel.ScatteredAPIModel[i] = ScatteredAPIModel
+	}
+	ErrHandler(err)
+	err = apiTmpl.Execute(tbapiFile, apiModel)
+	ErrHandler(err)
 }
 
 //ScatteredCreate model类一个文件 api类多个文件 且使用不同的报名
@@ -81,14 +120,14 @@ func ScatteredCreate(data *metadata) {
 	//结果结构生成
 	structTmpl, err := template.ParseFiles("./struct.tmpl")
 	ErrHandler(err)
-	f, err := os.Create("../tbmodel/tbmodel.go")
+	tbmodelFile, err := os.Create("../tbmodel/tbmodel.go")
 	ErrHandler(err)
 	data.PackageName = "tbmodel"
-	err = structTmpl.Execute(f, data)
+	err = structTmpl.Execute(tbmodelFile, data)
 	ErrHandler(err)
-	f.Close()
+	tbmodelFile.Close()
 
-	apiTmpl, err := template.ParseFiles("./api.tmpl")
+	apiTmpl, err := template.ParseFiles("./scattered_api.tmpl")
 	ErrHandler(err)
 
 	for _, item := range data.APIS {
@@ -98,14 +137,14 @@ func ScatteredCreate(data *metadata) {
 			sb.WriteString(strings.ToUpper(string(item[0])))
 			sb.WriteString(item[1:])
 		}
-		var apiModel = new(APIModel)
-		apiModel.PackageName = "tbapi"
-		apiModel.ImportName = "github.com/smgqk/tbsdk/tbmodel"
-		apiModel.StructNamePrefix = sb.String()
-		apiModel.APIStrandardModel = item
-		f, err := os.Create("../tbapi/" + apiModel.StructNamePrefix + ".go")
+		var ScatteredAPIModel = new(ScatteredAPIModel)
+		ScatteredAPIModel.PackageName = "tbapi"
+		ScatteredAPIModel.ImportName = "github.com/smgqk/tbsdk/tbmodel"
+		ScatteredAPIModel.StructNamePrefix = sb.String()
+		ScatteredAPIModel.APIStrandardModel = item
+		f, err := os.Create("../tbapi/" + ScatteredAPIModel.StructNamePrefix + ".go")
 		ErrHandler(err)
-		err = apiTmpl.Execute(f, apiModel)
+		err = apiTmpl.Execute(f, ScatteredAPIModel)
 		ErrHandler(err)
 	}
 }
