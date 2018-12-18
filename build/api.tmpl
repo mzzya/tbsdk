@@ -1,2 +1,21 @@
 package tbsdk
 
+// {{.StructNamePrefix}}Request {{.APIStrandardModel.Desc}}
+type {{.StructNamePrefix}}Request struct {
+    {{ range $j,$prop := .APIStrandardModel.Request}}
+    /* {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{$prop.Required}}{{$prop.Desc}} */
+    {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    {{end}}
+}
+
+func (req *{{.StructNamePrefix}}Request) GetAPIName() string {
+	return "{{.APIStrandardModel.Name}}"
+}
+
+// {{.StructNamePrefix}}Response {{.APIStrandardModel.Desc}}
+type {{.StructNamePrefix}}Response struct {
+    {{ range $j,$prop := .APIStrandardModel.Response}}
+    /* {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{$prop.Level}}{{$prop.Desc}} */
+    {{if eq $prop.Name "type"}}_type{{else}}{{$prop.Name}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    {{end}}
+}

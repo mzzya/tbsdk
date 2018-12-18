@@ -1,4 +1,6 @@
-package tbsdk
+package tbmodel
+
+import "github.com/smgqk/tbmodel"
 
 
 // RegionalPriceDto 列表
@@ -186,7 +188,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -1706,7 +1708,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -2039,7 +2041,7 @@ type Invoice struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -2360,7 +2362,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -2670,7 +2672,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -3109,7 +3111,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic包材型号 */
+    /* _type Basic包材型号 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -4516,7 +4518,7 @@ type ProductImageList struct{
     /* properties Basic当图片类型为属性图片时，表示图片对应的属性pv对。 */
     properties string `json:"properties";xml:"properties"`
     
-    /* type Basic图片类型（PRODUCT：产品图片  EXTPRODUCT：产品辅图  PROPERTIES：产品属性图片 ） */
+    /* _type Basic图片类型（PRODUCT：产品图片  EXTPRODUCT：产品辅图  PROPERTIES：产品属性图片 ） */
     _type string `json:"type";xml:"type"`
     
 }
@@ -5184,7 +5186,7 @@ type ErpLogisticsInfo struct{
     /* sub_order_id Basic采购单子单号 */
     sub_order_id int64 `json:"sub_order_id";xml:"sub_order_id"`
     
-    /* type Basic子订单类型:标示该子交易单来源交易，还是BMS增加的，枚举值(00=交易，10=BMS绑定) */
+    /* _type Basic子订单类型:标示该子交易单来源交易，还是BMS增加的，枚举值(00=交易，10=BMS绑定) */
     _type string `json:"type";xml:"type"`
     
 }
@@ -5394,7 +5396,7 @@ type UpdateItemQuantityOption struct{
     /* outer_biz_key Basic增量幂等外部编码 */
     outer_biz_key string `json:"outer_biz_key";xml:"outer_biz_key"`
     
-    /* type Basic库存更新方式: 1是全量更新 2是增量更新；默认是1。 */
+    /* _type Basic库存更新方式: 1是全量更新 2是增量更新；默认是1。 */
     _type int64 `json:"type";xml:"type"`
     
 }
@@ -6072,7 +6074,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -6399,7 +6401,7 @@ type Invoice struct{
     /* number Basic奇门仓储字段,说明,string(50),, */
     number string `json:"number";xml:"number"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -6694,7 +6696,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -6998,7 +7000,7 @@ type PackageMaterial struct{
     /* quantity Basic奇门仓储字段,说明,string(50),, */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -7605,7 +7607,7 @@ type PriceAdjustment struct{
     /* startDate Basictest */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basictest */
+    /* _type Basictest */
     _type string `json:"type";xml:"type"`
     
 }
@@ -8157,7 +8159,7 @@ type PackageMaterial struct{
     /* quantity Basic包材的数量 */
     quantity int64 `json:"quantity";xml:"quantity"`
     
-    /* type Basic包材型号 */
+    /* _type Basic包材型号 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -11340,7 +11342,7 @@ type SdtStationDto struct{
     /* station_name Basic站点名 */
     station_name string `json:"station_name";xml:"station_name"`
     
-    /* type Basic站点类别（推荐站点、派送站点、揽收站点） */
+    /* _type Basic站点类别（推荐站点、派送站点、揽收站点） */
     _type string `json:"type";xml:"type"`
     
 }
@@ -11839,7 +11841,7 @@ type BmsTaobaoOrderIntercepteRequest struct{
     /* tradeId Basic交易号 */
     tradeId string `json:"tradeId";xml:"tradeId"`
     
-    /* type Basic拦截类型 */
+    /* _type Basic拦截类型 */
     _type string `json:"type";xml:"type"`
     
     /* userId Basic店铺ID */
@@ -12107,7 +12109,7 @@ type OrderEventDto struct{
     /* tid Basic主订单编号 */
     tid int64 `json:"tid";xml:"tid"`
     
-    /* type Basic类型（1=创建销退单结果，2=作废销退单结果，3=入仓结果） */
+    /* _type Basic类型（1=创建销退单结果，2=作废销退单结果，3=入仓结果） */
     _type int64 `json:"type";xml:"type"`
     
     /* value Basic变更值（当type=1时value可选值：1=成功，2=失败； 当type=2时value可选值：1=成功，2=失败； 当type=3时value可选值：1=成功） */
@@ -13525,7 +13527,7 @@ type PackageMaterial struct{
     /* quantity Basic包材的数量 */
     quantity int64 `json:"quantity";xml:"quantity"`
     
-    /* type Basic包材型号 */
+    /* _type Basic包材型号 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -14449,7 +14451,7 @@ type Orders struct{
     /* total_order_fee Basic订单金额 */
     total_order_fee string `json:"total_order_fee";xml:"total_order_fee"`
     
-    /* type Basic订单类型（goods商品;gift赠品） */
+    /* _type Basic订单类型（goods商品;gift赠品） */
     _type string `json:"type";xml:"type"`
     
     /* type_alias Basic订单类型别名 */
@@ -15878,7 +15880,7 @@ type PriceAdjustment struct{
     /* startDate Basic */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic */
+    /* _type Basic */
     _type string `json:"type";xml:"type"`
     
 }
@@ -16205,7 +16207,7 @@ type Invoice struct{
     /* number Basic */
     number string `json:"number";xml:"number"`
     
-    /* type Basic */
+    /* _type Basic */
     _type string `json:"type";xml:"type"`
     
 }
@@ -16500,7 +16502,7 @@ type PriceAdjustment struct{
     /* startDate Basic */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic */
+    /* _type Basic */
     _type string `json:"type";xml:"type"`
     
 }
@@ -16804,7 +16806,7 @@ type PackageMaterial struct{
     /* quantity Basic */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic */
+    /* _type Basic */
     _type string `json:"type";xml:"type"`
     
 }
@@ -17266,7 +17268,7 @@ type PriceAdjustment struct{
     /* startDate Basic */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic */
+    /* _type Basic */
     _type string `json:"type";xml:"type"`
     
 }
@@ -17645,7 +17647,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -17978,7 +17980,7 @@ type Invoice struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -18482,7 +18484,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -18792,7 +18794,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -19231,7 +19233,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic包材型号 */
+    /* _type Basic包材型号 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -19779,7 +19781,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -20124,7 +20126,7 @@ type Invoice struct{
     /* taxNumber Basic税号 */
     taxNumber string `json:"taxNumber";xml:"taxNumber"`
     
-    /* type Basic发票类型(INVOICE=普通发票;VINVOICE=增值税普通发票;EVINVOICE=电子增票;填写的 条件 是:invoiceFlag为Y) */
+    /* _type Basic发票类型(INVOICE=普通发票;VINVOICE=增值税普通发票;EVINVOICE=电子增票;填写的 条件 是:invoiceFlag为Y) */
     _type string `json:"type";xml:"type"`
     
 }
@@ -20135,7 +20137,7 @@ type Insurance struct{
     /* amount Basic保险金额 */
     amount string `json:"amount";xml:"amount"`
     
-    /* type Basic保险类型 */
+    /* _type Basic保险类型 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -20445,7 +20447,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -20755,7 +20757,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -21416,7 +21418,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -22208,7 +22210,7 @@ type RecordList struct{
     /* status Basic操作记录，1在线，-1离线，2挂起，3解挂 */
     status int64 `json:"status";xml:"status"`
     
-    /* type Basic记录类型，PC上下线：8；移动上下线：4；挂起类型：5 */
+    /* _type Basic记录类型，PC上下线：8；移动上下线：4；挂起类型：5 */
     _type int64 `json:"type";xml:"type"`
     
 }
@@ -22321,7 +22323,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -23521,7 +23523,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -24186,7 +24188,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -24618,7 +24620,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -24978,7 +24980,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -25311,7 +25313,7 @@ type Invoice struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -25809,7 +25811,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -26119,7 +26121,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -26558,7 +26560,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic包材型号 */
+    /* _type Basic包材型号 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -27061,7 +27063,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -27388,7 +27390,7 @@ type Invoice struct{
     /* number Basic奇门仓储字段,说明,string(50),, */
     number string `json:"number";xml:"number"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -27694,7 +27696,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -27998,7 +28000,7 @@ type PackageMaterial struct{
     /* quantity Basic奇门仓储字段,说明,string(50),, */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -28599,7 +28601,7 @@ type PackageMaterial struct{
     /* quantity Basic奇门仓储字段,说明,string(50),, */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -28785,7 +28787,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -29118,7 +29120,7 @@ type Invoice struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -29351,7 +29353,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -29962,7 +29964,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -30618,7 +30620,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -31487,7 +31489,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -32036,7 +32038,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -32381,7 +32383,7 @@ type Invoice struct{
     /* taxNumber Basic税号 */
     taxNumber string `json:"taxNumber";xml:"taxNumber"`
     
-    /* type Basic发票类型(INVOICE=普通发票;VINVOICE=增值税普通发票;EVINVOICE=电子增票;填写的 条件 是:invoiceFlag为Y) */
+    /* _type Basic发票类型(INVOICE=普通发票;VINVOICE=增值税普通发票;EVINVOICE=电子增票;填写的 条件 是:invoiceFlag为Y) */
     _type string `json:"type";xml:"type"`
     
 }
@@ -32392,7 +32394,7 @@ type Insurance struct{
     /* amount Basic保险金额 */
     amount string `json:"amount";xml:"amount"`
     
-    /* type Basic保险类型 */
+    /* _type Basic保险类型 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -32702,7 +32704,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -33012,7 +33014,7 @@ type PackageMaterial struct{
     /* remark Basic备注 */
     remark string `json:"remark";xml:"remark"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -33710,7 +33712,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -34037,7 +34039,7 @@ type Invoice struct{
     /* number Basic奇门仓储字段,说明,string(50),, */
     number string `json:"number";xml:"number"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -34332,7 +34334,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -34636,7 +34638,7 @@ type PackageMaterial struct{
     /* quantity Basic奇门仓储字段,说明,string(50),, */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -35092,7 +35094,7 @@ type PriceAdjustment struct{
     /* startDate Basic奇门仓储字段,说明,string(50),, */
     startDate string `json:"startDate";xml:"startDate"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -35574,7 +35576,7 @@ type PackageMaterial struct{
     /* quantity Basic奇门仓储字段,说明,string(50),, */
     quantity string `json:"quantity";xml:"quantity"`
     
-    /* type Basic奇门仓储字段,说明,string(50),, */
+    /* _type Basic奇门仓储字段,说明,string(50),, */
     _type string `json:"type";xml:"type"`
     
 }
@@ -37314,7 +37316,7 @@ type ItemDescModule struct{
     /* tpl_urls Basic淘宝图片空间的地址链接，示例模板，最多不超过三个（isv提交时可忽略不传） */
     tpl_urls string `json:"tpl_urls";xml:"tpl_urls"`
     
-    /* type Basiccat_mod:表示是运营设置的类目维度模块，usr_mod表示的是商家自定义模块。 */
+    /* _type Basiccat_mod:表示是运营设置的类目维度模块，usr_mod表示的是商家自定义模块。 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -37433,7 +37435,7 @@ type User struct{
     /* status Basic状态。可选值:normal(正常),inactive(未激活),delete(删除),reeze(冻结),supervise(监管) */
     status string `json:"status";xml:"status"`
     
-    /* type Basic用户类型。可选值:B(B商家),C(C商家) */
+    /* _type Basic用户类型。可选值:B(B商家),C(C商家) */
     _type string `json:"type";xml:"type"`
     
     /* uid Basic用户字符串ID */
@@ -38192,7 +38194,7 @@ type Trade struct{
     /* trade_source Basic交易外部来源：ownshop(商家官网) */
     trade_source string `json:"trade_source";xml:"trade_source"`
     
-    /* type Basic交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    /* _type Basic交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
     _type string `json:"type";xml:"type"`
     
     /* ua Basicua */
@@ -38833,7 +38835,7 @@ web_and_wap(既能通过web秒杀也能通过wap秒杀) */
     /* title Basic商品标题,不能超过60字节 */
     title string `json:"title";xml:"title"`
     
-    /* type Basic商品类型(fixed:一口价;auction:拍卖)注：取消团购 */
+    /* _type Basic商品类型(fixed:一口价;auction:拍卖)注：取消团购 */
     _type string `json:"type";xml:"type"`
     
     /* valid_thru Basic有效期,7或者14（默认是14天） */
@@ -39479,7 +39481,7 @@ type LogisticsInfo struct{
     /* trade_id Basic交易号 */
     trade_id int64 `json:"trade_id";xml:"trade_id"`
     
-    /* type Basic子订单类型:标示该子交易单来源交易，还是BMS增加的，枚举值(00=交易，10=BMS绑定) */
+    /* _type Basic子订单类型:标示该子交易单来源交易，还是BMS增加的，枚举值(00=交易，10=BMS绑定) */
     _type string `json:"type";xml:"type"`
     
 }
@@ -39493,7 +39495,7 @@ type IdsModule struct{
     /* name Basic宝贝描述规范化模块名 */
     name string `json:"name";xml:"name"`
     
-    /* type Basic0为自动打标；
+    /* _type Basic0为自动打标；
 1为人工打标； */
     _type int64 `json:"type";xml:"type"`
     
@@ -40057,7 +40059,7 @@ SYNCHRONIZATION 第3位 是否有同步规则。 */
     /* title Basic前台商品名称 */
     title string `json:"title";xml:"title"`
     
-    /* type Basic商品类型：
+    /* _type Basic商品类型：
 NORMAL--普通类型;
 COMBINE--组合商品;
 DISTRIBUTION--分销商品;
@@ -40390,7 +40392,7 @@ type ItemTaosirDO struct{
     /* std_unit_list Object Array卖家可选单位List<单位id，单位名> */
     std_unit_list Feature `json:"std_unit_list";xml:"std_unit_list"`
     
-    /* type Basic时间类型：0表示非时间，1表示时间点，2表示时间范围 */
+    /* _type Basic时间类型：0表示非时间，1表示时间点，2表示时间范围 */
     _type int64 `json:"type";xml:"type"`
     
 }
@@ -41049,7 +41051,7 @@ type ItemTaoSirElDO struct{
     /* text Basic显示文本 */
     text string `json:"text";xml:"text"`
     
-    /* type Basic0 - 类型为label元素，只用于展示，不用于组装value_name；
+    /* _type Basic0 - 类型为label元素，只用于展示，不用于组装value_name；
 1 - 类型为label元素，用于展示，用于组装value_name；
 2 - 类型为输入狂元素，主要用于卖家输入数据. 卖家填写完后需要重新设置该元素的文本数据； */
     _type int64 `json:"type";xml:"type"`
@@ -41105,7 +41107,7 @@ type WlbItemInventory struct{
     /* store_code Basic仓库编码 */
     store_code string `json:"store_code";xml:"store_code"`
     
-    /* type BasicSELLALBE 可销售库存
+    /* _type BasicSELLALBE 可销售库存
 DEFECTIVE 残次
 JISHUN 机损
 XIANGSHUN 箱损
@@ -41365,7 +41367,7 @@ type SellerCat struct{
     /* sort_order Basic该类目在页面上的排序位置 */
     sort_order int64 `json:"sort_order";xml:"sort_order"`
     
-    /* type Basic店铺类目类型：可选值：manual_type：手动分类，new_type：新品上价， tree_type：二三级类目树 ，property_type：属性叶子类目树， brand_type：品牌推广 */
+    /* _type Basic店铺类目类型：可选值：manual_type：手动分类，new_type：新品上价， tree_type：二三级类目树 ，property_type：属性叶子类目树， brand_type：品牌推广 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -41974,7 +41976,7 @@ type WlbInventory struct{
     /* store_code Basic仓库编码，关联到仓库类型服务的编码非托管库存(卖家自己管理的库存，物流宝不可见又称自有库存)的所在仓库编码: STORE_SYS_PRIVATE */
     store_code string `json:"store_code";xml:"store_code"`
     
-    /* type BasicVENDIBLE--可销售库存
+    /* _type BasicVENDIBLE--可销售库存
 FREEZE--冻结库存
 ONWAY--在途库存
 DEFECT--残次品库存 */
@@ -42174,7 +42176,7 @@ type Shipping struct{
     /* tid Basic交易ID */
     tid int64 `json:"tid";xml:"tid"`
     
-    /* type Basic物流方式.可选值:free(卖家包邮),post(平邮),express(快递),ems(EMS). */
+    /* _type Basic物流方式.可选值:free(卖家包邮),post(平邮),express(快递),ems(EMS). */
     _type string `json:"type";xml:"type"`
     
 }
@@ -42437,7 +42439,7 @@ type ItemProp struct{
     /* taosir_do Object度量衡相关信息 */
     taosir_do ItemTaosirDO `json:"taosir_do";xml:"taosir_do"`
     
-    /* type Basic属性值类型。可选值：
+    /* _type Basic属性值类型。可选值：
 multiCheck(枚举多选)
 optional(枚举单选)
 multiCheckText(枚举可输入多选)
@@ -42869,7 +42871,7 @@ type DescModuleInfo struct{
     /* ids_module_ids Basic宝贝模块id */
     ids_module_ids string `json:"ids_module_ids";xml:"ids_module_ids"`
     
-    /* type Basic类型代表规范化打标的类型：人工或自动化 */
+    /* _type Basic类型代表规范化打标的类型：人工或自动化 */
     _type int64 `json:"type";xml:"type"`
     
 }
@@ -43352,7 +43354,7 @@ type Area struct{
     /* parent_id Basic父节点区域标识.如北京市的area_id是110100,朝阳区是北京市的一个区,所以朝阳区的parent_id就是北京市的area_id. */
     parent_id int64 `json:"parent_id";xml:"parent_id"`
     
-    /* type Basic区域类型.area区域 1:country/国家;2:province/省/自治区/直辖市;3:city/地区(省下面的地级市);4:district/县/市(县级市)/区;abroad:海外. 比如北京市的area_type = 2,朝阳区是北京市的一个区,所以朝阳区的area_type = 4. */
+    /* _type Basic区域类型.area区域 1:country/国家;2:province/省/自治区/直辖市;3:city/地区(省下面的地级市);4:district/县/市(县级市)/区;abroad:海外. 比如北京市的area_type = 2,朝阳区是北京市的一个区,所以朝阳区的area_type = 4. */
     _type int64 `json:"type";xml:"type"`
     
     /* zip Basic具体一个地区的邮编 */
@@ -44014,7 +44016,7 @@ type PictureCategory struct{
     /* total Basic分类下的图片数 */
     total int64 `json:"total";xml:"total"`
     
-    /* type Basic图片分类型别，sys-fixture代表店铺装修分类(系统分类)，sys-auction代表宝贝图片分类(系统分类)，user-define代表用户自定义分类 */
+    /* _type Basic图片分类型别，sys-fixture代表店铺装修分类(系统分类)，sys-auction代表宝贝图片分类(系统分类)，user-define代表用户自定义分类 */
     _type string `json:"type";xml:"type"`
     
 }
@@ -44423,7 +44425,7 @@ type Order struct{
     /* total_fee Basic应付金额（商品价格 * 商品数量 + 手工调整金额 - 子订单级订单优惠金额）。精确到2位小数;单位:元。如:200.07，表示:200元7分 */
     total_fee string `json:"total_fee";xml:"total_fee"`
     
-    /* type Basic交易类型 */
+    /* _type Basic交易类型 */
     _type string `json:"type";xml:"type"`
     
     /* ws_bank_apply_no BasicwsBankApplyNo */
@@ -44977,7 +44979,7 @@ type AlipayRecord struct{
     /* self_user_id Basic自己的支付宝ID */
     self_user_id string `json:"self_user_id";xml:"self_user_id"`
     
-    /* type Basic账务类型 */
+    /* _type Basic账务类型 */
     _type string `json:"type";xml:"type"`
     
 }

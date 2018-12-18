@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strings"
 	"text/template"
 )
 
+//metadata xml主数据结构
 type metadata struct {
 	// VersionNo 版本
 	VersionNo string   `xml:"versionNo,attr"`
@@ -16,12 +18,14 @@ type metadata struct {
 	APIS      []API    `xml:"apis>api"`
 }
 
+//Struct 淘宝object结构
 type Struct struct {
 	Name  string `xml:"name"`
 	Desc  string `xml:"desc"`
 	Props []Prop `xml:"props>prop"`
 }
 
+//Prop 淘宝属性结构
 type Prop struct {
 	Name  string `xml:"name"`
 	Type  string `xml:"type"`
@@ -29,6 +33,7 @@ type Prop struct {
 	Desc  string `xml:"desc"`
 }
 
+//API 淘宝api结构
 type API struct {
 	Name     string          `xml:"name"`
 	Desc     string          `xml:"desc"`
@@ -36,6 +41,7 @@ type API struct {
 	Response []ResponseParam `xml:"response>param"`
 }
 
+//RequestParam 淘宝api请求参数结构
 type RequestParam struct {
 	Name     string `xml:"name"`
 	Type     string `xml:"type"`
@@ -43,6 +49,7 @@ type RequestParam struct {
 	Desc     string `xml:"desc"`
 }
 
+//ResponseParam 淘宝api返回结果结构
 type ResponseParam struct {
 	Name  string `xml:"name"`
 	Type  string `xml:"type"`
@@ -50,15 +57,40 @@ type ResponseParam struct {
 	Desc  string `xml:"desc"`
 }
 
+type APIModel struct {
+	StructNamePrefix  string
+	APIStrandardModel API
+}
+
 func main() {
 	var data = GetMetadata()
+	//结果结构生成
 	structTmpl, err := template.ParseFiles("./struct.tmpl")
 	ErrHandler(err)
-	f, err := os.Create("../tbmodel.go")
+	f, err := os.Create("../tbmodel/tbmodel.go")
 	ErrHandler(err)
 	err = structTmpl.Execute(f, data)
 	ErrHandler(err)
 	f.Close()
+
+	apiTmpl, err := template.ParseFiles("./api.tmpl")
+	ErrHandler(err)
+
+	for _, item := range data.APIS {
+		names := strings.Split(item.Name, ".")
+		sb := &strings.Builder{}
+		for _, item := range names {
+			sb.WriteString(strings.ToUpper(string(item[0])))
+			sb.WriteString(item[1:])
+		}
+		var apiModel = new(APIModel)
+		apiModel.StructNamePrefix = sb.String()
+		apiModel.APIStrandardModel = item
+		f, err := os.Create("../tbapi/" + apiModel.StructNamePrefix + ".go")
+		ErrHandler(err)
+		err = apiTmpl.Execute(f, apiModel)
+		ErrHandler(err)
+	}
 }
 func GetMetadata() *metadata {
 	// file, err := os.Open("./ApiMetadata.xml")
