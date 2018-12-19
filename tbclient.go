@@ -7,6 +7,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"sort"
 	"strings"
@@ -83,14 +84,18 @@ func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]
 
 	var reqParam = req.GetParams()
 	for k, v := range reqParam {
-		param[k] = fmt.Sprint(v)
+		param[k] = GetValueStr(v)
 	}
 
 	param["sign"] = SignStringMap(param, cli.appSecret, cli.SignMethod)
 
 	var postData = GetParamStr(param)
-	// log.Println("postData:", postData)
+	// log.Printf("postData\t%s\n\n", postData)
 	httpReq, err := http.NewRequest("POST", cli.APIAddr, strings.NewReader(postData))
+	if err != nil {
+		return nil, err
+	}
+	err = httpReq.ParseForm()
 	if err != nil {
 		return nil, err
 	}
@@ -105,7 +110,7 @@ func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]
 	if v == nil || err != nil {
 		return byteResult, err
 	}
-	// log.Printf("byteResult:%s\n", byteResult)
+	log.Printf("byteResult:%s\n", byteResult)
 
 	firstStrIndex := 0
 	for _, bt := range byteResult {
@@ -118,8 +123,14 @@ func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]
 			return nil, err
 		}
 	}
-	// log.Printf("Response Str:%s\n", byteResult)
 	return byteResult, err
+}
+
+func GetValueStr(v interface{}) string {
+	if t, ok := v.(time.Time); ok {
+		return t.Format("2006-01-02 15:04:05")
+	}
+	return fmt.Sprint(v)
 }
 
 func GetParamStr(params map[string]string) string {
@@ -130,7 +141,7 @@ func GetParamStr(params map[string]string) string {
 		sb.WriteString(v)
 		sb.WriteString("&")
 	}
-	return sb.String()
+	return sb.String()[0 : sb.Len()-1]
 }
 
 func SignStringMap(params map[string]string, appSecret string, signMethod string) string {
@@ -139,11 +150,13 @@ func SignStringMap(params map[string]string, appSecret string, signMethod string
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
+	// log.Printf("SignStringKeys\t%+v\n\n", keys)
 	var sb strings.Builder
 	for _, key := range keys {
 		sb.WriteString(key)
 		sb.WriteString(params[key])
 	}
+	// log.Printf("SignString\t%s\n\n", sb.String())
 	return SignString(sb.String(), appSecret, signMethod)
 }
 func SignString(params string, appSecret string, signMethod string) string {

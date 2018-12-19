@@ -2,6 +2,10 @@ package {{.PackageName}}
 
 import "time"
 
+type BaseResponse struct{
+    RequestId string `json:"request_id",xml:"request_id"`
+}
+
 type ErrorResponse struct{
     SubMsg string `json:"sub_msg",xml:"sub_msg"`
     Code int `json:"code",xml:"code"`
@@ -14,7 +18,9 @@ type ErrorResponse struct{
 // {{$item.StructNamePrefix}}Request {{$item.APIStrandardModel.Desc}}
 type {{$item.StructNamePrefix}}Request struct {
     {{ range $j,$prop := $item.APIStrandardModel.Request}}
-    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Required}}{{$prop.Desc}}
+    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}
+    // Required:{{$prop.Required}}
+    // Desc:{{$prop.Desc}}
     {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
@@ -26,17 +32,20 @@ func (req *{{$item.StructNamePrefix}}Request) GetAPIName() string {
 func (req *{{$item.StructNamePrefix}}Request) GetParams() map[string]interface{} {
 	params := make(map[string]interface{}, {{len $item.APIStrandardModel.Request}})
     {{ range $j,$prop := $item.APIStrandardModel.Request}}
-    params["{{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}"] = req.{{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}
+    params["{{$prop.Name}}"] = req.{{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}
     {{end}}
     return params
 }
 
 // {{$item.StructNamePrefix}}Response {{$item.APIStrandardModel.Desc}}
 type {{$item.StructNamePrefix}}Response struct {
+    BaseResponse
     ErrorResponse ErrorResponse `json:"error_response",xml:"error_response"`
     {{ range $j,$prop := $item.APIStrandardModel.Response}}
-    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Level}}{{$prop.Desc}}
-    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} 
+    // Level:{{$prop.Level}}
+    // Desc:{{$prop.Desc}}
+    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Level "Object Array"}}[]{{end}}{{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
 {{end}}

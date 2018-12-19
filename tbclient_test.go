@@ -1,6 +1,7 @@
 package tbsdk_test
 
 import (
+	"log"
 	"testing"
 
 	"github.com/smgqk/tbsdk"
@@ -19,8 +20,8 @@ func TestSignStringMap(t *testing.T) {
 	param["num_iid"] = "11223344"
 	var signResult = "66987CB115214E59E6EC978214934FB8"
 	var signStr = tbsdk.SignStringMap(param, "helloworld", "md5")
-	t.Logf("%s---true\n", signResult)
-	t.Logf("%s---false\n", signStr)
+	log.Printf("%s---true\n", signResult)
+	log.Printf("%s---false\n", signStr)
 	if signStr != signResult {
 		t.FailNow()
 	}
@@ -29,8 +30,8 @@ func TestSignString(t *testing.T) {
 	var param = "app_key12345678fieldsnum_iid,title,nick,price,numformatjsonmethodtaobao.item.seller.getnum_iid11223344sessiontestsign_methodmd5timestamp2016-01-01 12:00:00v2.0"
 	var signResult = "66987CB115214E59E6EC978214934FB8"
 	var signStr = tbsdk.SignString(param, "helloworld", "md5")
-	t.Logf("%s---true\n", signResult)
-	t.Logf("%s---false\n", signStr)
+	log.Printf("%s---true\n", signResult)
+	log.Printf("%s---false\n", signStr)
 	if signStr != signResult {
 		t.FailNow()
 	}

@@ -5,7 +5,9 @@ package {{.PackageName}}
 // {{.StructNamePrefix}}Request {{.APIStrandardModel.Desc}}
 type {{.StructNamePrefix}}Request struct {
     {{ range $j,$prop := .APIStrandardModel.Request}}
-    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Required}}{{$prop.Desc}}
+    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}
+    // Required:{{$prop.Required}}
+    // Desc:{{$prop.Desc}}
     {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
@@ -25,7 +27,9 @@ func (req *{{.StructNamePrefix}}Request) GetParams() map[string]interface{} {
 // {{.StructNamePrefix}}Response {{.APIStrandardModel.Desc}}
 type {{.StructNamePrefix}}Response struct {
     {{ range $j,$prop := .APIStrandardModel.Response}}
-    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Level}}{{$prop.Desc}}
-    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
+    // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}}
+    // Level:{{$prop.Level}}
+    // Desc:{{$prop.Desc}}
+    {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Level "Object Array"}}[]{{end}}{{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`
     {{end}}
 }
