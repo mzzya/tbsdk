@@ -2,6 +2,14 @@ package {{.PackageName}}
 
 import "time"
 
+type ErrorResponse struct{
+    SubMsg string `json:"sub_msg",xml:"sub_msg"`
+    Code int `json:"code",xml:"code"`
+    SubCode string `json:"sub_code",xml:"sub_code"`
+    Msg string `json:"msg",xml:"msg"`
+    RequestId string `json:"request_id",xml:"request_id"`
+}
+
 {{ range $j,$item := .ScatteredAPIModel}}
 // {{$item.StructNamePrefix}}Request {{$item.APIStrandardModel.Desc}}
 type {{$item.StructNamePrefix}}Request struct {
@@ -25,6 +33,7 @@ func (req *{{$item.StructNamePrefix}}Request) GetParams() map[string]interface{}
 
 // {{$item.StructNamePrefix}}Response {{$item.APIStrandardModel.Desc}}
 type {{$item.StructNamePrefix}}Response struct {
+    ErrorResponse ErrorResponse `json:"error_response",xml:"error_response"`
     {{ range $j,$prop := $item.APIStrandardModel.Response}}
     // {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{$prop.Level}}{{$prop.Desc}}
     {{if eq $prop.GoName "type"}}_type{{else}}{{$prop.GoName}}{{end}} {{if eq $prop.Type "String"}}string{{else if eq $prop.Type "Json" "Detail"}}map[string]interface{}{{else if eq $prop.Type "Boolean"}}bool{{else if eq $prop.Type "Number"}}int64{{else if eq $prop.Type "Number"}}int{{else if eq $prop.Type "Date"}}time.Time{{else if eq $prop.Type "byte[]"}}[]byte{{else if eq $prop.Type "Map"}}map[string]interface{}{{else if eq $prop.Type "Price"}}float32{{else}}{{$prop.Type}}{{end}} `json:"{{$prop.Name}}";xml:"{{$prop.Name}}"`

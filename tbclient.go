@@ -4,14 +4,18 @@ import (
 	"crypto/hmac"
 	"crypto/md5"
 	"encoding/hex"
-	"encoding/json"
 	"encoding/xml"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"sort"
 	"strings"
 	"time"
+
+	jsoniter "github.com/json-iterator/go"
 )
+
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 type Client struct {
 	appKey     string
@@ -52,19 +56,21 @@ func NewClient(appkey, appsecret string) *Client {
 }
 
 func (cli *Client) DoPost(req BaseRequest, session string) ([]byte, error) {
+	return cli.DoPostObj(req, session, nil)
+}
+
+func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]byte, error) {
 	tr := &http.Transport{
 		DisableCompression: true,
 	}
 	httpCli := http.Client{Transport: tr, Timeout: cli.Timeout}
 
-	httpReq, err := http.NewRequest("POST", cli.APIAddr, strings.NewReader("name=cjb"))
-	if err != nil {
-		return nil, err
-	}
 	var param = make(map[string]string, 10)
 	param["method"] = req.GetAPIName()
 	param["app_key"] = cli.appKey
+	// if session != "" {
 	param["session"] = session
+	// }
 	param["timestamp"] = time.Now().Format("2006-01-02 15:04:05")
 	param["format"] = cli.Formart
 	param["v"] = "2.0"
@@ -73,19 +79,60 @@ func (cli *Client) DoPost(req BaseRequest, session string) ([]byte, error) {
 	if cli.Formart == Formart_Json {
 		param["simplify"] = "true"
 	}
-
 	param["sign_method"] = cli.SignMethod
-	param["sign"] = ""
-	httpReq.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	httpReq.Header.Set("Cookie", "name=anny")
 
+	var reqParam = req.GetParams()
+	for k, v := range reqParam {
+		param[k] = fmt.Sprint(v)
+	}
+
+	param["sign"] = SignStringMap(param, cli.appSecret, cli.SignMethod)
+
+	var postData = GetParamStr(param)
+	// log.Println("postData:", postData)
+	httpReq, err := http.NewRequest("POST", cli.APIAddr, strings.NewReader(postData))
+	if err != nil {
+		return nil, err
+	}
+
+	httpReq.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	resp, err := httpCli.Do(httpReq)
 	if err != nil {
 		return nil, err
 	}
 	defer resp.Body.Close()
-	return ioutil.ReadAll(resp.Body)
+	byteResult, err := ioutil.ReadAll(resp.Body)
+	if v == nil || err != nil {
+		return byteResult, err
+	}
+	// log.Printf("byteResult:%s\n", byteResult)
+
+	firstStrIndex := 0
+	for _, bt := range byteResult {
+		if bt != ' ' && firstStrIndex == 0 {
+			if bt == '{' {
+				err = json.Unmarshal(byteResult, v)
+			} else {
+				err = xml.Unmarshal(byteResult, v)
+			}
+			return nil, err
+		}
+	}
+	// log.Printf("Response Str:%s\n", byteResult)
+	return byteResult, err
 }
+
+func GetParamStr(params map[string]string) string {
+	var sb strings.Builder
+	for k, v := range params {
+		sb.WriteString(k)
+		sb.WriteString("=")
+		sb.WriteString(v)
+		sb.WriteString("&")
+	}
+	return sb.String()
+}
+
 func SignStringMap(params map[string]string, appSecret string, signMethod string) string {
 	var keys = make([]string, 0, len(params))
 	for k, _ := range params {
@@ -113,27 +160,27 @@ func SignString(params string, appSecret string, signMethod string) string {
 	}
 }
 
-func GetResonseString(bytes []byte, err error) (string, error) {
-	if err != nil {
-		return "", err
-	}
-	return string(bytes), err
-}
+// func GetResonseString(bytes []byte, err error) (string, error) {
+// 	if err != nil {
+// 		return "", err
+// 	}
+// 	return string(bytes), err
+// }
 
-func GetResonseObject(bytes []byte, err error, v interface{}) error {
-	if err != nil {
-		return err
-	}
-	firstStrIndex := 0
-	for _, bt := range bytes {
-		if bt != ' ' && firstStrIndex == 0 {
-			if bt == '{' {
-				err = json.Unmarshal(bytes, v)
-			} else {
-				err = xml.Unmarshal(bytes, v)
-			}
-			return err
-		}
-	}
-	return nil
-}
+// func GetResonseObject(v interface{}, bytes []byte, err error) error {
+// 	if err != nil {
+// 		return err
+// 	}
+// 	firstStrIndex := 0
+// 	for _, bt := range bytes {
+// 		if bt != ' ' && firstStrIndex == 0 {
+// 			if bt == '{' {
+// 				err = json.Unmarshal(bytes, v)
+// 			} else {
+// 				err = xml.Unmarshal(bytes, v)
+// 			}
+// 			return err
+// 		}
+// 	}
+// 	return nil
+// }

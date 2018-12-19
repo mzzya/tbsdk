@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"strings"
 	"text/template"
+	"unicode"
 )
 
 //Metadata xml主数据结构
@@ -141,7 +142,7 @@ func ScatteredCreate(data *Metadata) {
 		names := strings.Split(item.Name, ".")
 		sb := &strings.Builder{}
 		for _, item := range names {
-			sb.WriteString(strings.ToUpper(string(item[0])))
+			sb.WriteByte(ByteUpper(item[0]))
 			sb.WriteString(item[1:])
 		}
 		var ScatteredAPIModel = new(ScatteredAPIModel)
@@ -190,7 +191,7 @@ func GetMetadata() *Metadata {
 	for i, item := range metadata.APIS {
 		metadata.APIS[i].Desc = strings.Replace(metadata.APIS[i].Desc, "\n", "\n//", -1)
 		for j, api := range item.Request {
-			metadata.APIS[i].Request[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			metadata.APIS[i].Request[j].GoName = GetGoName(api.Name)
 			metadata.APIS[i].Request[j].Desc = strings.Replace(metadata.APIS[i].Request[j].Desc, "\n", "\n    // ", -1)
 			// if api.GoName != api.Name {
 			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
@@ -200,7 +201,7 @@ func GetMetadata() *Metadata {
 			// }
 		}
 		for j, api := range item.Response {
-			metadata.APIS[i].Response[j].GoName = strings.Replace(api.Name, ".", "_", -1)
+			metadata.APIS[i].Response[j].GoName = GetGoName(api.Name)
 			metadata.APIS[i].Response[j].Desc = strings.Replace(metadata.APIS[i].Response[j].Desc, "\n", "\n    // ", -1)
 			// if api.GoName != api.Name {
 			// 	fmt.Printf("Source:[%s]\tTarget:[%s]\n", api.GoName, api.Name)
@@ -223,11 +224,34 @@ func GetMetadata() *Metadata {
 		}
 		metadata.Structs[i].Desc = strings.Replace(metadata.Structs[i].Desc, "\n", "\n//", -1)
 		for j, prop := range item.Props {
-			metadata.Structs[i].Props[j].GoName = strings.Replace(prop.Name, ".", "_", -1)
+			metadata.Structs[i].Props[j].GoName = GetGoName(prop.Name)
 			metadata.Structs[i].Props[j].Desc = strings.Replace(prop.Desc, "\n", "\n    // ", -1)
 		}
 	}
 	return metadata
+}
+
+func GetGoName(sourceStr string) string {
+	var bf bytes.Buffer
+	bf.WriteByte(ByteUpper(sourceStr[0]))
+	for i := 1; i < len(sourceStr); i++ {
+		if sourceStr[i] == '_' || sourceStr[i] == '-' || sourceStr[i] == '.' {
+			i++
+			bf.WriteByte(ByteUpper(sourceStr[i]))
+		} else {
+			bf.WriteByte(sourceStr[i])
+		}
+	}
+	return bf.String()
+}
+
+func ByteUpper(r byte) byte {
+	if r <= unicode.MaxASCII {
+		if 'a' <= r && r <= 'z' {
+			r -= 'a' - 'A'
+		}
+	}
+	return r
 }
 
 // GetCount 获取字节数组长度
