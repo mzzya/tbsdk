@@ -2,6 +2,10 @@
 基于淘宝官方ApiMetadata.xml接口文件生成
 
 #### 使用方法
+淘宝接口众多，使用前请测试，建议将生成文件复制至现有项目中使用。
+默认生成 ./tbapi.go 为接口request与response结构
+./tbmodel.go 为接口共用数据结构
+
 ```
 const (
 	appKey    = ""

@@ -18,30 +18,33 @@ import (
 
 var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
+// Client 客户端对象
 type Client struct {
-	appKey     string
-	appSecret  string
-	APIAddr    string
-	Timeout    time.Duration
-	Formart    string
-	SignMethod string
+	appKey     string        //key
+	appSecret  string        //secret
+	APIAddr    string        //接口地址
+	Timeout    time.Duration //请求超时时间
+	Formart    string        //返回数据结构
+	SignMethod string        //签名方法
 }
 
+// BaseRequest 基础请求接口
 type BaseRequest interface {
 	GetAPIName() string
 	GetParams() map[string]interface{}
 }
 
 const (
-	APIAddr         = "http://gw.api.taobao.com/router/rest"
-	APIAddrTest     = "http://gw.api.tbsandbox.com/router/rest"
-	Formart_Json    = "json"
-	Formart_XML     = "xml"
-	SignMethod_HMAC = "hmac"
-	SignMethod_MD5  = "md5"
+	APIAddr         = "http://gw.api.taobao.com/router/rest"    //正式服务器地址
+	APIAddrTest     = "http://gw.api.tbsandbox.com/router/rest" //沙箱服务器地址
+	Formart_Json    = "json"                                    //返回数据类型
+	Formart_XML     = "xml"                                     //返回数据类型
+	SignMethod_HMAC = "hmac"                                    //请求签名方法
+	SignMethod_MD5  = "md5"                                     //请求签名方法
 )
 
-func NewClientWithProxy(appkey, appsecret, apiAddr string) *Client {
+// NewClientWithAddr 创建自定义地址客户端
+func NewClientWithAddr(appkey, appsecret, apiAddr string) *Client {
 	client := new(Client)
 	client.appKey = appkey
 	client.appSecret = appsecret
@@ -52,14 +55,17 @@ func NewClientWithProxy(appkey, appsecret, apiAddr string) *Client {
 	return client
 }
 
+// NewClient 创建淘宝客户端
 func NewClient(appkey, appsecret string) *Client {
-	return NewClientWithProxy(appkey, appsecret, APIAddr)
+	return NewClientWithAddr(appkey, appsecret, APIAddr)
 }
 
+// DoPost post数据
 func (cli *Client) DoPost(req BaseRequest, session string) ([]byte, error) {
 	return cli.DoPostObj(req, session, nil)
 }
 
+// DoPostObj 请求方法
 func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]byte, error) {
 	tr := &http.Transport{
 		DisableCompression: true,
@@ -126,6 +132,7 @@ func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]
 	return byteResult, err
 }
 
+// GetValueStr 将interface{}数据转换成string
 func GetValueStr(v interface{}) string {
 	if t, ok := v.(time.Time); ok {
 		return t.Format("2006-01-02 15:04:05")
@@ -133,6 +140,7 @@ func GetValueStr(v interface{}) string {
 	return fmt.Sprint(v)
 }
 
+// GetParamStr 将map[string]string数据转换成string
 func GetParamStr(params map[string]string) string {
 	var sb strings.Builder
 	for k, v := range params {
@@ -144,6 +152,7 @@ func GetParamStr(params map[string]string) string {
 	return sb.String()[0 : sb.Len()-1]
 }
 
+// SignStringMap 对map进行淘宝签名
 func SignStringMap(params map[string]string, appSecret string, signMethod string) string {
 	var keys = make([]string, 0, len(params))
 	for k, _ := range params {
@@ -159,6 +168,8 @@ func SignStringMap(params map[string]string, appSecret string, signMethod string
 	// log.Printf("SignString\t%s\n\n", sb.String())
 	return SignString(sb.String(), appSecret, signMethod)
 }
+
+// SignString 字符串签名发放
 func SignString(params string, appSecret string, signMethod string) string {
 	if signMethod == SignMethod_MD5 {
 		h := md5.New()

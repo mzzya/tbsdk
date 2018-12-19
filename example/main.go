@@ -20,7 +20,7 @@ const (
 )
 
 func main() {
-	var client = tbsdk.NewClientWithProxy(appKey, appSecret, tbsdk.APIAddrTest)
+	var client = tbsdk.NewClientWithAddr(appKey, appSecret, tbsdk.APIAddrTest)
 	var session = "test"
 	var req = new(tbsdk.TaobaoItemcatsGetRequest)
 	var resp = new(tbsdk.TaobaoItemcatsGetResponse)
