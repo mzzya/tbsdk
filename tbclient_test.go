@@ -36,3 +36,30 @@ func TestSignString(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func BenchmarkDoPostObj(b *testing.B) {
+	var client = tbsdk.NewClientWithAddr("appKey", "appSecret", "tbsdk.APIAddrTest")
+	var session = "test"
+	var req = new(tbsdk.TaobaoItemcatsGetRequest)
+	var resp = new(tbsdk.TaobaoItemcatsGetResponse)
+	b.ResetTimer()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			client.DoPostObjPool(req, session, resp)
+		}
+	})
+}
+
+//go tool pprof -http=localhost:8888 cpu.out
+func BenchmarkDoPostObjPool(b *testing.B) {
+	b.ResetTimer()
+	var client = tbsdk.NewClientWithAddr("appKey", "appSecret", "tbsdk.APIAddrTest")
+	var session = "test"
+	var req = new(tbsdk.TaobaoItemcatsGetRequest)
+	var resp = new(tbsdk.TaobaoItemcatsGetResponse)
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			client.DoPostObjPool(req, session, resp)
+		}
+	})
+}

@@ -6,11 +6,11 @@ import (
 	"encoding/hex"
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
-	"log"
+	"hash"
 	"net/http"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
@@ -65,12 +65,37 @@ func (cli *Client) DoPost(req BaseRequest, session string) ([]byte, error) {
 	return cli.DoPostObj(req, session, nil)
 }
 
+var clientPool = sync.Pool{New: func() interface{} {
+	return interface{}(&http.Client{})
+}}
+
+func ClientPoolPut(c *http.Client) {
+	c.Transport = nil
+	c.Timeout = 0
+	clientPool.Put(c)
+}
+
+// var paramPool = sync.Pool{New: func() interface{} {
+// 	m := make(map[string]string, 20)
+// 	return interface{}(m)
+// }}
+
+// func ParamPoolPut(m map[string]string) {
+// 	for k := range m {
+// 		delete(m, k)
+// 	}
+// 	paramPool.Put(m)
+// }
+
 // DoPostObj 请求方法
 func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]byte, error) {
 	tr := &http.Transport{
 		DisableCompression: true,
 	}
-	httpCli := http.Client{Transport: tr, Timeout: cli.Timeout}
+
+	httpCli := http.Client{}
+	httpCli.Transport = tr
+	httpCli.Timeout = cli.Timeout
 
 	var param = make(map[string]string, 10)
 	param["method"] = req.GetAPIName()
@@ -107,17 +132,90 @@ func (cli *Client) DoPostObj(req BaseRequest, session string, v interface{}) ([]
 	}
 
 	httpReq.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	resp, err := httpCli.Do(httpReq)
+	// resp, err := httpCli.Do(httpReq)
+	// if err != nil {
+	// 	return nil, err
+	// }
+	// defer resp.Body.Close()
+	// byteResult, err := ioutil.ReadAll(resp.Body)
+	// if v == nil || err != nil {
+	// 	return byteResult, err
+	// }
+	// log.Printf("byteResult:%s\n", byteResult)
+	byteResult := make([]byte, 2000)
+	byteResult[0] = '{'
+	firstStrIndex := 0
+	for _, bt := range byteResult {
+		if bt != ' ' && firstStrIndex == 0 {
+			if bt == '{' {
+				err = json.Unmarshal(byteResult, v)
+			} else {
+				err = xml.Unmarshal(byteResult, v)
+			}
+			return nil, err
+		}
+	}
+	return byteResult, err
+}
+
+func (cli *Client) DoPostObjPool(req BaseRequest, session string, v interface{}) ([]byte, error) {
+	tr := &http.Transport{
+		DisableCompression: true,
+	}
+	httpCli := clientPool.Get().(*http.Client)
+	httpCli.Transport = tr
+	httpCli.Timeout = cli.Timeout
+	defer ClientPoolPut(httpCli)
+
+	// param := paramPool.Get().(map[string]string)
+	// defer ParamPoolPut(param)
+	var param = make(map[string]string, 10)
+	param["method"] = req.GetAPIName()
+	param["app_key"] = cli.appKey
+	// if session != "" {
+	param["session"] = session
+	// }
+	param["timestamp"] = time.Now().Format("2006-01-02 15:04:05")
+	param["format"] = cli.Formart
+	param["v"] = "2.0"
+	// partner_id	String	否	合作伙伴身份标识。
+	// target_app_key	String	否	被调用的目标AppKey，仅当被调用的API为第三方ISV提供时有效。
+	if cli.Formart == Formart_Json {
+		param["simplify"] = "true"
+	}
+	param["sign_method"] = cli.SignMethod
+
+	var reqParam = req.GetParams()
+	for k, v := range reqParam {
+		param[k] = GetValueStr(v)
+	}
+
+	param["sign"] = SignStringMapPool(param, cli.appSecret, cli.SignMethod)
+
+	var postData = GetParamStr(param)
+	// log.Printf("postData\t%s\n\n", postData)
+	httpReq, err := http.NewRequest("POST", cli.APIAddr, strings.NewReader(postData))
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
-	byteResult, err := ioutil.ReadAll(resp.Body)
-	if v == nil || err != nil {
-		return byteResult, err
+	err = httpReq.ParseForm()
+	if err != nil {
+		return nil, err
 	}
-	log.Printf("byteResult:%s\n", byteResult)
 
+	httpReq.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	// resp, err := httpCli.Do(httpReq)
+	// if err != nil {
+	// 	return nil, err
+	// }
+	// defer resp.Body.Close()
+	// byteResult, err := ioutil.ReadAll(resp.Body)
+	// if v == nil || err != nil {
+	// 	return byteResult, err
+	// }
+	// log.Printf("byteResult:%s\n", byteResult)
+	byteResult := make([]byte, 2000)
+	byteResult[0] = '{'
 	firstStrIndex := 0
 	for _, bt := range byteResult {
 		if bt != ' ' && firstStrIndex == 0 {
@@ -169,10 +267,51 @@ func SignStringMap(params map[string]string, appSecret string, signMethod string
 	return SignString(sb.String(), appSecret, signMethod)
 }
 
+// SignStringMap 对map进行淘宝签名
+func SignStringMapPool(params map[string]string, appSecret string, signMethod string) string {
+	var keys = make([]string, 0, 20)
+	for k, _ := range params {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	// log.Printf("SignStringKeys\t%+v\n\n", keys)
+	var sb strings.Builder
+	for _, key := range keys {
+		sb.WriteString(key)
+		sb.WriteString(params[key])
+	}
+	// log.Printf("SignString\t%s\n\n", sb.String())
+	return SignStringPool(sb.String(), appSecret, signMethod)
+}
+
 // SignString 字符串签名发放
 func SignString(params string, appSecret string, signMethod string) string {
 	if signMethod == SignMethod_MD5 {
 		h := md5.New()
+		h.Write([]byte(appSecret))
+		h.Write([]byte(params))
+		h.Write([]byte(appSecret))
+		return strings.ToUpper(hex.EncodeToString(h.Sum(nil)))
+	} else {
+		h := hmac.New(md5.New, []byte(appSecret))
+		h.Write([]byte(params))
+		return strings.ToUpper(hex.EncodeToString(h.Sum(nil)))
+	}
+}
+
+var md5Pool = sync.Pool{
+	New: func() interface{} {
+		return interface{}(md5.New())
+	}}
+
+func SignStringPool(params string, appSecret string, signMethod string) string {
+
+	if signMethod == SignMethod_MD5 {
+		h := md5Pool.Get().(hash.Hash)
+		defer func() {
+			h.Reset()
+			md5Pool.Put(h)
+		}()
 		h.Write([]byte(appSecret))
 		h.Write([]byte(params))
 		h.Write([]byte(appSecret))
